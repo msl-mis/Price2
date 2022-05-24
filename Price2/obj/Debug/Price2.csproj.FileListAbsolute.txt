@@ -36,3 +36,28 @@ C:\Users\thomas\Desktop\Price2\Price2\obj\Debug\Price2.frmTelephone_RenameType.r
 C:\Users\thomas\Desktop\Price2\Price2\obj\Debug\Price2.frmTelephone_Inq.resources
 C:\Users\thomas\Desktop\Price2\Price2\obj\Debug\Interop.FAXCOMEXLib.dll
 C:\Users\thomas\Desktop\Price2\Price2\obj\Debug\Price2.csproj.ResolveComReference.cache
+D:\Source Code\Price2\Price2\obj\Debug\Price2.csproj.AssemblyReference.cache
+D:\Source Code\Price2\Price2\obj\Debug\Price2.csproj.SuggestedBindingRedirects.cache
+D:\Source Code\Price2\Price2\obj\Debug\Price2.csproj.ResolveComReference.cache
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTelephone_Inq.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTelephone_RenameType.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmUserStatus.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.InputBox.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmUserChangePassword.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmUserManagement.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmLogin.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmMain.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmUserLoginChange.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTelephone.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.Properties.Resources.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.csproj.GenerateResource.cache
+D:\Source Code\Price2\Price2\obj\Debug\Price2.csproj.CoreCompileInputs.cache
+D:\Source Code\Price2\Price2\bin\Debug\Price2.exe.config
+D:\Source Code\Price2\Price2\bin\Debug\Price2.exe.manifest
+D:\Source Code\Price2\Price2\bin\Debug\Price2.application
+D:\Source Code\Price2\Price2\bin\Debug\Price2.exe
+D:\Source Code\Price2\Price2\bin\Debug\Price2.pdb
+D:\Source Code\Price2\Price2\obj\Debug\Price2.exe.manifest
+D:\Source Code\Price2\Price2\obj\Debug\Price2.application
+D:\Source Code\Price2\Price2\obj\Debug\Price2.exe
+D:\Source Code\Price2\Price2\obj\Debug\Price2.pdb

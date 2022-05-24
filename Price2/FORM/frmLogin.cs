@@ -51,10 +51,10 @@ namespace Price2
                 if (cboArea.Text=="正式區")
                 {
                     //clsDB._ServerName = "192.168.10.122";
-                    clsDB._ServerName = "MIS-PC02";
+                    clsDB._ServerName = "msl-price";
                     clsDB._DB_id = "sa";
                     clsDB._DB_password = "yzf";
-                    clsDB._DB_name = "Price";
+                    clsDB._DB_name = "Test";
     }
                 else
                 {
