@@ -61,3 +61,27 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.exe.manifest
 D:\Source Code\Price2\Price2\obj\Debug\Price2.application
 D:\Source Code\Price2\Price2\obj\Debug\Price2.exe
 D:\Source Code\Price2\Price2\obj\Debug\Price2.pdb
+D:\Price2\Price2\bin\Debug\Price2.exe.config
+D:\Price2\Price2\bin\Debug\Price2.exe.manifest
+D:\Price2\Price2\bin\Debug\Price2.application
+D:\Price2\Price2\bin\Debug\Price2.exe
+D:\Price2\Price2\bin\Debug\Price2.pdb
+D:\Price2\Price2\obj\Debug\Price2.csprojAssemblyReference.cache
+D:\Price2\Price2\obj\Debug\Price2.csproj.ResolveComReference.cache
+D:\Price2\Price2\obj\Debug\Price2.frmTelephone_Inq.resources
+D:\Price2\Price2\obj\Debug\Price2.frmTelephone_RenameType.resources
+D:\Price2\Price2\obj\Debug\Price2.frmUserStatus.resources
+D:\Price2\Price2\obj\Debug\Price2.InputBox.resources
+D:\Price2\Price2\obj\Debug\Price2.frmUserChangePassword.resources
+D:\Price2\Price2\obj\Debug\Price2.frmUserManagement.resources
+D:\Price2\Price2\obj\Debug\Price2.frmLogin.resources
+D:\Price2\Price2\obj\Debug\Price2.frmMain.resources
+D:\Price2\Price2\obj\Debug\Price2.frmUserLoginChange.resources
+D:\Price2\Price2\obj\Debug\Price2.frmTelephone.resources
+D:\Price2\Price2\obj\Debug\Price2.Properties.Resources.resources
+D:\Price2\Price2\obj\Debug\Price2.csproj.GenerateResource.cache
+D:\Price2\Price2\obj\Debug\Price2.csproj.CoreCompileInputs.cache
+D:\Price2\Price2\obj\Debug\Price2.exe.manifest
+D:\Price2\Price2\obj\Debug\Price2.application
+D:\Price2\Price2\obj\Debug\Price2.exe
+D:\Price2\Price2\obj\Debug\Price2.pdb

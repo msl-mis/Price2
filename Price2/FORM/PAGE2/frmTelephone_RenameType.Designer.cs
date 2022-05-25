@@ -38,12 +38,13 @@
             // 
             // btnOK
             // 
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOK.Location = new System.Drawing.Point(136, 167);
+            this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOK.Location = new System.Drawing.Point(80, 134);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 32);
+            this.btnOK.Size = new System.Drawing.Size(68, 33);
             this.btnOK.TabIndex = 5;
             this.btnOK.Text = "確認";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -52,27 +53,30 @@
             // txtItem
             // 
             this.txtItem.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtItem.Location = new System.Drawing.Point(136, 100);
+            this.txtItem.Location = new System.Drawing.Point(105, 80);
+            this.txtItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(255, 34);
+            this.txtItem.Size = new System.Drawing.Size(170, 29);
             this.txtItem.TabIndex = 4;
             // 
             // lblInfo
             // 
-            this.lblInfo.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblInfo.Location = new System.Drawing.Point(8, 103);
+            this.lblInfo.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblInfo.Location = new System.Drawing.Point(11, 82);
+            this.lblInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(122, 25);
+            this.lblInfo.Size = new System.Drawing.Size(92, 20);
             this.lblInfo.TabIndex = 3;
             this.lblInfo.Text = "更名為：";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(15, 40);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(11, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 25);
+            this.label1.Size = new System.Drawing.Size(92, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "分類：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -81,19 +85,21 @@
             // 
             this.cboType.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(136, 37);
+            this.cboType.Location = new System.Drawing.Point(105, 30);
+            this.cboType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(255, 33);
+            this.cboType.Size = new System.Drawing.Size(170, 28);
             this.cboType.TabIndex = 7;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCancel.Location = new System.Drawing.Point(316, 167);
+            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCancel.Location = new System.Drawing.Point(175, 134);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 32);
+            this.btnCancel.Size = new System.Drawing.Size(68, 33);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -101,9 +107,9 @@
             // 
             // frmTelephone_RenameType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 246);
+            this.ClientSize = new System.Drawing.Size(337, 197);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cboType);
@@ -111,6 +117,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtItem);
             this.Controls.Add(this.lblInfo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTelephone_RenameType";
             this.Text = "分類更名";
             this.Activated += new System.EventHandler(this.frmTelephone_RenameType_Activated);

@@ -30,14 +30,6 @@
         {
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.cboType = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnInq = new System.Windows.Forms.Button();
-            this.txtKey = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tel_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_twphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_dlphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +38,14 @@
             this.tel_dlfax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_dlmobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.cboType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnInq = new System.Windows.Forms.Button();
+            this.txtKey = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             // groupBox
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox.Controls.Add(this.dgvData);
             this.groupBox.Controls.Add(this.btnPrint);
             this.groupBox.Controls.Add(this.btnClear);
@@ -64,9 +64,11 @@
             this.groupBox.Controls.Add(this.txtKey);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox.Location = new System.Drawing.Point(0, 0);
+            this.groupBox.Location = new System.Drawing.Point(1, 14);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(1045, 571);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Size = new System.Drawing.Size(784, 433);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
             // 
@@ -85,95 +87,15 @@
             this.tel_dlfax,
             this.tel_dlmobile,
             this.tel_type});
-            this.dgvData.Location = new System.Drawing.Point(13, 85);
+            this.dgvData.Location = new System.Drawing.Point(10, 68);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 27;
-            this.dgvData.Size = new System.Drawing.Size(1014, 467);
+            this.dgvData.Size = new System.Drawing.Size(758, 338);
             this.dgvData.TabIndex = 49;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnPrint.Location = new System.Drawing.Point(793, 33);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(64, 36);
-            this.btnPrint.TabIndex = 48;
-            this.btnPrint.Text = "列印";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnClear.Location = new System.Drawing.Point(873, 33);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(64, 36);
-            this.btnClear.TabIndex = 44;
-            this.btnClear.Text = "清除";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // cboType
-            // 
-            this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(414, 33);
-            this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(193, 33);
-            this.cboType.TabIndex = 21;
-            this.cboType.Text = "(ALL)";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(308, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 34);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "分類：";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnClose.Location = new System.Drawing.Point(953, 33);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(64, 36);
-            this.btnClose.TabIndex = 18;
-            this.btnClose.Text = "結束";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnInq
-            // 
-            this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnInq.Location = new System.Drawing.Point(713, 33);
-            this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(64, 36);
-            this.btnInq.TabIndex = 14;
-            this.btnInq.Text = "搜尋";
-            this.btnInq.UseVisualStyleBackColor = false;
-            this.btnInq.Click += new System.EventHandler(this.btnInq_Click);
-            // 
-            // txtKey
-            // 
-            this.txtKey.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtKey.Location = new System.Drawing.Point(115, 32);
-            this.txtKey.Name = "txtKey";
-            this.txtKey.Size = new System.Drawing.Size(193, 34);
-            this.txtKey.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(9, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "關鍵字：";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tel_name
             // 
@@ -247,15 +169,105 @@
             this.tel_type.ReadOnly = true;
             this.tel_type.Width = 125;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPrint.Location = new System.Drawing.Point(543, 23);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(52, 29);
+            this.btnPrint.TabIndex = 48;
+            this.btnPrint.Text = "列印";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnClear.Location = new System.Drawing.Point(603, 23);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(52, 29);
+            this.btnClear.TabIndex = 44;
+            this.btnClear.Text = "清除";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // cboType
+            // 
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Location = new System.Drawing.Point(310, 23);
+            this.cboType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(146, 28);
+            this.cboType.TabIndex = 21;
+            this.cboType.Text = "(ALL)";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(231, 24);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 27);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "分類：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnClose.Location = new System.Drawing.Point(663, 23);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(52, 29);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "結束";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnInq
+            // 
+            this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnInq.Location = new System.Drawing.Point(483, 23);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Name = "btnInq";
+            this.btnInq.Size = new System.Drawing.Size(52, 29);
+            this.btnInq.TabIndex = 14;
+            this.btnInq.Text = "搜尋";
+            this.btnInq.UseVisualStyleBackColor = false;
+            this.btnInq.Click += new System.EventHandler(this.btnInq_Click);
+            // 
+            // txtKey
+            // 
+            this.txtKey.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtKey.Location = new System.Drawing.Point(81, 23);
+            this.txtKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKey.Name = "txtKey";
+            this.txtKey.Size = new System.Drawing.Size(146, 29);
+            this.txtKey.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(7, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 27);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "關鍵字：";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmTelephone_Inq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1039, 564);
+            this.ClientSize = new System.Drawing.Size(779, 449);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTelephone_Inq";
             this.Text = "私人電話簿用戶查詢";
             this.Activated += new System.EventHandler(this.frmTelephone_Inq_Activated);

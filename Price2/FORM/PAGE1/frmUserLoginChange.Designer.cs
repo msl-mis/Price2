@@ -42,7 +42,7 @@
             // groupBox
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox.Controls.Add(this.cboArea);
             this.groupBox.Controls.Add(this.btnClose);
             this.groupBox.Controls.Add(this.btnOK);
@@ -51,9 +51,11 @@
             this.groupBox.Controls.Add(this.txtUser);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox.Location = new System.Drawing.Point(0, 0);
+            this.groupBox.Location = new System.Drawing.Point(0, -14);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(640, 360);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Size = new System.Drawing.Size(480, 242);
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             // 
@@ -66,20 +68,18 @@
             this.cboArea.Items.AddRange(new object[] {
             "正式區",
             "測試區"});
-            this.cboArea.Location = new System.Drawing.Point(216, 277);
-            this.cboArea.Margin = new System.Windows.Forms.Padding(4);
+            this.cboArea.Location = new System.Drawing.Point(187, 199);
             this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(280, 33);
+            this.cboArea.Size = new System.Drawing.Size(105, 28);
             this.cboArea.TabIndex = 13;
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnClose.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(408, 191);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnClose.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(269, 149);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(90, 55);
+            this.btnClose.Size = new System.Drawing.Size(68, 34);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -87,12 +87,11 @@
             // 
             // btnOK
             // 
-            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOK.Location = new System.Drawing.Point(217, 191);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOK.Location = new System.Drawing.Point(126, 149);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(90, 55);
+            this.btnOK.Size = new System.Drawing.Size(68, 34);
             this.btnOK.TabIndex = 11;
             this.btnOK.Text = "登入";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -100,51 +99,49 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(217, 123);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(187, 98);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(280, 34);
+            this.txtPassword.Size = new System.Drawing.Size(129, 29);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(96, 123);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(95, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 39);
+            this.label2.Size = new System.Drawing.Size(86, 31);
             this.label2.TabIndex = 9;
             this.label2.Text = "密    碼 :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(217, 51);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Location = new System.Drawing.Point(187, 41);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(280, 34);
+            this.txtUser.Size = new System.Drawing.Size(129, 29);
             this.txtUser.TabIndex = 8;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(96, 51);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(95, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 39);
+            this.label1.Size = new System.Drawing.Size(86, 31);
             this.label1.TabIndex = 7;
             this.label1.Text = "用戶名 :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmUserLoginChange
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 360);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(480, 225);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmUserLoginChange";
             this.Text = "其他用戶登入系統";
             this.Activated += new System.EventHandler(this.frmUserLoginChange_Activated);
