@@ -51,33 +51,33 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn1_6 = new System.Windows.Forms.Button();
+            this.btn1_5 = new System.Windows.Forms.Button();
+            this.btn1_4 = new System.Windows.Forms.Button();
+            this.btn1_3 = new System.Windows.Forms.Button();
+            this.btn1_2 = new System.Windows.Forms.Button();
+            this.btn1_1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gb2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn2_3 = new System.Windows.Forms.Button();
+            this.btn2_2 = new System.Windows.Forms.Button();
+            this.btn2_1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.gb3 = new System.Windows.Forms.GroupBox();
             this.lblBOM_Unlock = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btn1_3 = new System.Windows.Forms.Button();
-            this.btn1_6 = new System.Windows.Forms.Button();
-            this.btn1_5 = new System.Windows.Forms.Button();
-            this.btn1_4 = new System.Windows.Forms.Button();
-            this.btn1_2 = new System.Windows.Forms.Button();
-            this.btn1_1 = new System.Windows.Forms.Button();
-            this.btn2_3 = new System.Windows.Forms.Button();
-            this.btn2_2 = new System.Windows.Forms.Button();
-            this.btn2_1 = new System.Windows.Forms.Button();
             this.btn3_6 = new System.Windows.Forms.Button();
             this.btn3_5 = new System.Windows.Forms.Button();
             this.btn3_4 = new System.Windows.Forms.Button();
             this.btn3_3 = new System.Windows.Forms.Button();
             this.btn3_2 = new System.Windows.Forms.Button();
             this.btn3_1 = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -307,6 +307,103 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "系統管理";
             // 
+            // btn1_6
+            // 
+            this.btn1_6.FlatAppearance.BorderSize = 0;
+            this.btn1_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1_6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1_6.Image = global::Price2.Properties.Resources.computeruser;
+            this.btn1_6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn1_6.Location = new System.Drawing.Point(520, 207);
+            this.btn1_6.Name = "btn1_6";
+            this.btn1_6.Size = new System.Drawing.Size(194, 112);
+            this.btn1_6.TabIndex = 12;
+            this.btn1_6.Text = "6.當前系統用戶狀況";
+            this.btn1_6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1_6.UseVisualStyleBackColor = true;
+            this.btn1_6.Click += new System.EventHandler(this.btn1_6_Click);
+            // 
+            // btn1_5
+            // 
+            this.btn1_5.FlatAppearance.BorderSize = 0;
+            this.btn1_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1_5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1_5.Image = global::Price2.Properties.Resources.Refresh;
+            this.btn1_5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn1_5.Location = new System.Drawing.Point(293, 209);
+            this.btn1_5.Name = "btn1_5";
+            this.btn1_5.Size = new System.Drawing.Size(154, 112);
+            this.btn1_5.TabIndex = 11;
+            this.btn1_5.Text = "5.系統更新資料";
+            this.btn1_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1_5.UseVisualStyleBackColor = true;
+            this.btn1_5.Click += new System.EventHandler(this.btn1_5_Click);
+            // 
+            // btn1_4
+            // 
+            this.btn1_4.FlatAppearance.BorderSize = 0;
+            this.btn1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1_4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1_4.Image = global::Price2.Properties.Resources.massage;
+            this.btn1_4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn1_4.Location = new System.Drawing.Point(79, 206);
+            this.btn1_4.Name = "btn1_4";
+            this.btn1_4.Size = new System.Drawing.Size(141, 112);
+            this.btn1_4.TabIndex = 10;
+            this.btn1_4.Text = "4.發送消息";
+            this.btn1_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1_4.UseVisualStyleBackColor = true;
+            this.btn1_4.Click += new System.EventHandler(this.btn1_4_Click);
+            // 
+            // btn1_3
+            // 
+            this.btn1_3.FlatAppearance.BorderSize = 0;
+            this.btn1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1_3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1_3.Image = global::Price2.Properties.Resources.Login;
+            this.btn1_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn1_3.Location = new System.Drawing.Point(520, 65);
+            this.btn1_3.Name = "btn1_3";
+            this.btn1_3.Size = new System.Drawing.Size(194, 101);
+            this.btn1_3.TabIndex = 9;
+            this.btn1_3.Text = "3.其他用戶登入系統";
+            this.btn1_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1_3.UseVisualStyleBackColor = true;
+            this.btn1_3.Click += new System.EventHandler(this.btn1_3_Click);
+            // 
+            // btn1_2
+            // 
+            this.btn1_2.FlatAppearance.BorderSize = 0;
+            this.btn1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1_2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1_2.Image = global::Price2.Properties.Resources.pwchange;
+            this.btn1_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn1_2.Location = new System.Drawing.Point(285, 65);
+            this.btn1_2.Name = "btn1_2";
+            this.btn1_2.Size = new System.Drawing.Size(154, 101);
+            this.btn1_2.TabIndex = 8;
+            this.btn1_2.Text = "2.用戶密碼修改";
+            this.btn1_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1_2.UseVisualStyleBackColor = true;
+            this.btn1_2.Click += new System.EventHandler(this.btn1_2_Click);
+            // 
+            // btn1_1
+            // 
+            this.btn1_1.AutoSize = true;
+            this.btn1_1.FlatAppearance.BorderSize = 0;
+            this.btn1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1_1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn1_1.Image = global::Price2.Properties.Resources.Usersfile;
+            this.btn1_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn1_1.Location = new System.Drawing.Point(79, 65);
+            this.btn1_1.Name = "btn1_1";
+            this.btn1_1.Size = new System.Drawing.Size(141, 101);
+            this.btn1_1.TabIndex = 7;
+            this.btn1_1.Text = "1.用戶管理";
+            this.btn1_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn1_1.UseVisualStyleBackColor = true;
+            this.btn1_1.Click += new System.EventHandler(this.btn1_1_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.gb2);
@@ -347,6 +444,52 @@
             this.label3.Size = new System.Drawing.Size(138, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "基本資料建立";
+            // 
+            // btn2_3
+            // 
+            this.btn2_3.FlatAppearance.BorderSize = 0;
+            this.btn2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2_3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn2_3.Image = global::Price2.Properties.Resources.firmadd;
+            this.btn2_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn2_3.Location = new System.Drawing.Point(504, 65);
+            this.btn2_3.Name = "btn2_3";
+            this.btn2_3.Size = new System.Drawing.Size(158, 109);
+            this.btn2_3.TabIndex = 9;
+            this.btn2_3.Text = "3.廠商資料建立";
+            this.btn2_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn2_3.UseVisualStyleBackColor = true;
+            // 
+            // btn2_2
+            // 
+            this.btn2_2.FlatAppearance.BorderSize = 0;
+            this.btn2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2_2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn2_2.Image = global::Price2.Properties.Resources.customeradd;
+            this.btn2_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn2_2.Location = new System.Drawing.Point(285, 65);
+            this.btn2_2.Name = "btn2_2";
+            this.btn2_2.Size = new System.Drawing.Size(147, 109);
+            this.btn2_2.TabIndex = 8;
+            this.btn2_2.Text = "2.客戶資料建立";
+            this.btn2_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn2_2.UseVisualStyleBackColor = true;
+            // 
+            // btn2_1
+            // 
+            this.btn2_1.FlatAppearance.BorderSize = 0;
+            this.btn2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2_1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn2_1.Image = global::Price2.Properties.Resources.phonebook;
+            this.btn2_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn2_1.Location = new System.Drawing.Point(79, 65);
+            this.btn2_1.Name = "btn2_1";
+            this.btn2_1.Size = new System.Drawing.Size(159, 109);
+            this.btn2_1.TabIndex = 7;
+            this.btn2_1.Text = "1.電話簿";
+            this.btn2_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn2_1.UseVisualStyleBackColor = true;
+            this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
             // 
             // tabPage3
             // 
@@ -404,194 +547,6 @@
             this.label2.Size = new System.Drawing.Size(171, 24);
             this.label2.TabIndex = 14;
             this.label2.Text = "報價BOM資料創建";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(788, 382);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "4.報價";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage5.Location = new System.Drawing.Point(4, 34);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(788, 382);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "5.設定";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage6.Location = new System.Drawing.Point(4, 34);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(788, 382);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "6.公用資料";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // toolTip
-            // 
-            this.toolTip.ShowAlways = true;
-            this.toolTip.Tag = "";
-            this.toolTip.ToolTipTitle = "xji6";
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 10000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // btn1_3
-            // 
-            this.btn1_3.FlatAppearance.BorderSize = 0;
-            this.btn1_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn1_3.Image = global::Price2.Properties.Resources.Login;
-            this.btn1_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_3.Location = new System.Drawing.Point(520, 65);
-            this.btn1_3.Name = "btn1_3";
-            this.btn1_3.Size = new System.Drawing.Size(194, 101);
-            this.btn1_3.TabIndex = 9;
-            this.btn1_3.Text = "3.其他用戶登入系統";
-            this.btn1_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn1_3.UseVisualStyleBackColor = true;
-            this.btn1_3.Click += new System.EventHandler(this.btn1_3_Click);
-            // 
-            // btn1_6
-            // 
-            this.btn1_6.FlatAppearance.BorderSize = 0;
-            this.btn1_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn1_6.Image = global::Price2.Properties.Resources.computeruser;
-            this.btn1_6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_6.Location = new System.Drawing.Point(520, 207);
-            this.btn1_6.Name = "btn1_6";
-            this.btn1_6.Size = new System.Drawing.Size(194, 112);
-            this.btn1_6.TabIndex = 12;
-            this.btn1_6.Text = "6.當前系統用戶狀況";
-            this.btn1_6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn1_6.UseVisualStyleBackColor = true;
-            this.btn1_6.Click += new System.EventHandler(this.btn1_6_Click);
-            // 
-            // btn1_5
-            // 
-            this.btn1_5.FlatAppearance.BorderSize = 0;
-            this.btn1_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn1_5.Image = global::Price2.Properties.Resources.Refresh;
-            this.btn1_5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_5.Location = new System.Drawing.Point(293, 209);
-            this.btn1_5.Name = "btn1_5";
-            this.btn1_5.Size = new System.Drawing.Size(154, 112);
-            this.btn1_5.TabIndex = 11;
-            this.btn1_5.Text = "5.系統更新資料";
-            this.btn1_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn1_5.UseVisualStyleBackColor = true;
-            this.btn1_5.Click += new System.EventHandler(this.btn1_5_Click);
-            // 
-            // btn1_4
-            // 
-            this.btn1_4.FlatAppearance.BorderSize = 0;
-            this.btn1_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn1_4.Image = global::Price2.Properties.Resources.massage;
-            this.btn1_4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_4.Location = new System.Drawing.Point(79, 206);
-            this.btn1_4.Name = "btn1_4";
-            this.btn1_4.Size = new System.Drawing.Size(141, 112);
-            this.btn1_4.TabIndex = 10;
-            this.btn1_4.Text = "4.發送消息";
-            this.btn1_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn1_4.UseVisualStyleBackColor = true;
-            this.btn1_4.Click += new System.EventHandler(this.btn1_4_Click);
-            // 
-            // btn1_2
-            // 
-            this.btn1_2.FlatAppearance.BorderSize = 0;
-            this.btn1_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn1_2.Image = global::Price2.Properties.Resources.pwchange;
-            this.btn1_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_2.Location = new System.Drawing.Point(285, 65);
-            this.btn1_2.Name = "btn1_2";
-            this.btn1_2.Size = new System.Drawing.Size(154, 101);
-            this.btn1_2.TabIndex = 8;
-            this.btn1_2.Text = "2.用戶密碼修改";
-            this.btn1_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn1_2.UseVisualStyleBackColor = true;
-            this.btn1_2.Click += new System.EventHandler(this.btn1_2_Click);
-            // 
-            // btn1_1
-            // 
-            this.btn1_1.AutoSize = true;
-            this.btn1_1.FlatAppearance.BorderSize = 0;
-            this.btn1_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1_1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn1_1.Image = global::Price2.Properties.Resources.Usersfile;
-            this.btn1_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_1.Location = new System.Drawing.Point(79, 65);
-            this.btn1_1.Name = "btn1_1";
-            this.btn1_1.Size = new System.Drawing.Size(141, 101);
-            this.btn1_1.TabIndex = 7;
-            this.btn1_1.Text = "1.用戶管理";
-            this.btn1_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn1_1.UseVisualStyleBackColor = true;
-            this.btn1_1.Click += new System.EventHandler(this.btn1_1_Click);
-            // 
-            // btn2_3
-            // 
-            this.btn2_3.FlatAppearance.BorderSize = 0;
-            this.btn2_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn2_3.Image = global::Price2.Properties.Resources.firmadd;
-            this.btn2_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_3.Location = new System.Drawing.Point(504, 65);
-            this.btn2_3.Name = "btn2_3";
-            this.btn2_3.Size = new System.Drawing.Size(158, 109);
-            this.btn2_3.TabIndex = 9;
-            this.btn2_3.Text = "3.廠商資料建立";
-            this.btn2_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn2_3.UseVisualStyleBackColor = true;
-            // 
-            // btn2_2
-            // 
-            this.btn2_2.FlatAppearance.BorderSize = 0;
-            this.btn2_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn2_2.Image = global::Price2.Properties.Resources.customeradd;
-            this.btn2_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_2.Location = new System.Drawing.Point(285, 65);
-            this.btn2_2.Name = "btn2_2";
-            this.btn2_2.Size = new System.Drawing.Size(147, 109);
-            this.btn2_2.TabIndex = 8;
-            this.btn2_2.Text = "2.客戶資料建立";
-            this.btn2_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn2_2.UseVisualStyleBackColor = true;
-            // 
-            // btn2_1
-            // 
-            this.btn2_1.FlatAppearance.BorderSize = 0;
-            this.btn2_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2_1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn2_1.Image = global::Price2.Properties.Resources.phonebook;
-            this.btn2_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_1.Location = new System.Drawing.Point(79, 65);
-            this.btn2_1.Name = "btn2_1";
-            this.btn2_1.Size = new System.Drawing.Size(159, 109);
-            this.btn2_1.TabIndex = 7;
-            this.btn2_1.Text = "1.電話簿";
-            this.btn2_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn2_1.UseVisualStyleBackColor = true;
-            this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
             // 
             // btn3_6
             // 
@@ -682,6 +637,51 @@
             this.btn3_1.Text = "1.火車頭資料建立";
             this.btn3_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(788, 382);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "4.報價";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(788, 382);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "5.設定";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage6.Location = new System.Drawing.Point(4, 34);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(788, 382);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "6.公用資料";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // toolTip
+            // 
+            this.toolTip.ShowAlways = true;
+            this.toolTip.Tag = "";
+            this.toolTip.ToolTipTitle = "xji6";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 10000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmMain
             // 

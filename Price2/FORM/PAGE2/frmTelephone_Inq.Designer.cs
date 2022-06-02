@@ -53,7 +53,7 @@
             // groupBox
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox.Controls.Add(this.dgvData);
             this.groupBox.Controls.Add(this.btnPrint);
             this.groupBox.Controls.Add(this.btnClear);
@@ -63,11 +63,11 @@
             this.groupBox.Controls.Add(this.btnInq);
             this.groupBox.Controls.Add(this.txtKey);
             this.groupBox.Controls.Add(this.label1);
-            this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(1, 14);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(784, 433);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
@@ -88,7 +88,7 @@
             this.tel_dlmobile,
             this.tel_type});
             this.dgvData.Location = new System.Drawing.Point(10, 68);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
@@ -173,7 +173,7 @@
             // 
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPrint.Location = new System.Drawing.Point(543, 23);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(52, 29);
             this.btnPrint.TabIndex = 48;
@@ -185,7 +185,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnClear.Location = new System.Drawing.Point(603, 23);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(52, 29);
             this.btnClear.TabIndex = 44;
@@ -197,9 +197,9 @@
             // 
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(310, 23);
-            this.cboType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboType.Margin = new System.Windows.Forms.Padding(2);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(146, 28);
+            this.cboType.Size = new System.Drawing.Size(146, 24);
             this.cboType.TabIndex = 21;
             this.cboType.Text = "(ALL)";
             // 
@@ -218,7 +218,7 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnClose.Location = new System.Drawing.Point(663, 23);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(52, 29);
             this.btnClose.TabIndex = 18;
@@ -230,7 +230,7 @@
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInq.Location = new System.Drawing.Point(483, 23);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(52, 29);
             this.btnInq.TabIndex = 14;
@@ -242,7 +242,7 @@
             // 
             this.txtKey.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtKey.Location = new System.Drawing.Point(81, 23);
-            this.txtKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKey.Margin = new System.Windows.Forms.Padding(2);
             this.txtKey.Name = "txtKey";
             this.txtKey.Size = new System.Drawing.Size(146, 29);
             this.txtKey.TabIndex = 3;
@@ -267,7 +267,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTelephone_Inq";
             this.Text = "私人電話簿用戶查詢";
             this.Activated += new System.EventHandler(this.frmTelephone_Inq_Activated);
