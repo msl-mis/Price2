@@ -54,7 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPipeline = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnInq_Country = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cboCountryCode = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -123,7 +123,7 @@
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Controls.Add(this.txtPipeline);
             this.groupBox.Controls.Add(this.label2);
-            this.groupBox.Controls.Add(this.button3);
+            this.groupBox.Controls.Add(this.btnInq_Country);
             this.groupBox.Controls.Add(this.label8);
             this.groupBox.Controls.Add(this.cboCountryCode);
             this.groupBox.Controls.Add(this.label6);
@@ -433,16 +433,17 @@
             this.label2.Text = "認識管道：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button3
+            // btnInq_Country
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.Location = new System.Drawing.Point(277, 398);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(43, 36);
-            this.button3.TabIndex = 63;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnInq_Country.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnInq_Country.Location = new System.Drawing.Point(277, 398);
+            this.btnInq_Country.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInq_Country.Name = "btnInq_Country";
+            this.btnInq_Country.Size = new System.Drawing.Size(43, 36);
+            this.btnInq_Country.TabIndex = 63;
+            this.btnInq_Country.Text = "...";
+            this.btnInq_Country.UseVisualStyleBackColor = false;
+            this.btnInq_Country.Click += new System.EventHandler(this.btnInq_Country_Click);
             // 
             // label8
             // 
@@ -517,6 +518,7 @@
             this.btnInq_Tel.TabIndex = 59;
             this.btnInq_Tel.Text = "...";
             this.btnInq_Tel.UseVisualStyleBackColor = false;
+            this.btnInq_Tel.Click += new System.EventHandler(this.btnInq_Tel_Click);
             // 
             // txtEmail
             // 
@@ -928,7 +930,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPipeline;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnInq_Country;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboCountryCode;
         private System.Windows.Forms.Label label6;

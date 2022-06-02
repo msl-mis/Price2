@@ -92,3 +92,6 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Customer.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_BankInfo.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_ShortName.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Country.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Tel.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVendor.resources

@@ -86,34 +86,46 @@
   <ItemGroup>
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmCustomer_Inq_Tel.cs">
+    <Compile Include="frmVendor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer_Inq_Tel.Designer.cs">
+    <Compile Include="frmVendor.Designer.cs">
+      <DependentUpon>frmVendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Country.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Country.Designer.cs">
+      <DependentUpon>frmCustomer_Inq_Country.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Tel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Tel.Designer.cs">
       <DependentUpon>frmCustomer_Inq_Tel.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer_Inq_ShortName.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_ShortName.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer_Inq_ShortName.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_ShortName.Designer.cs">
       <DependentUpon>frmCustomer_Inq_ShortName.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer_BankInfo.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer_BankInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer_BankInfo.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer_BankInfo.Designer.cs">
       <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer_Inq_Customer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer_Inq_Customer.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Customer.Designer.cs">
       <DependentUpon>frmCustomer_Inq_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomer.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE2\frmTelephone_Inq.cs">
@@ -178,10 +190,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCustomer_BankInfo.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_BankInfo.resx">
       <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomer_Inq_Customer.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Country.resx">
+      <DependentUpon>frmCustomer_Inq_Country.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Customer.resx">
       <DependentUpon>frmCustomer_Inq_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE2\frmTelephone_Inq.resx">
@@ -214,11 +229,17 @@
     <EmbeddedResource Include="FORM\PAGE2\frmTelephone.resx">
       <DependentUpon>frmTelephone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomer.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomer_Inq_ShortName.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_ShortName.resx">
       <DependentUpon>frmCustomer_Inq_ShortName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Tel.resx">
+      <DependentUpon>frmCustomer_Inq_Tel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendor.resx">
+      <DependentUpon>frmVendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

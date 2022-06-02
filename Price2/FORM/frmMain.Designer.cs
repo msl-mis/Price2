@@ -51,33 +51,35 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gb1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gb2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.gb3 = new System.Windows.Forms.GroupBox();
+            this.lblBOM_Unlock = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.menu2_4 = new System.Windows.Forms.ToolStripMenuItem();
             this.btn1_6 = new System.Windows.Forms.Button();
             this.btn1_5 = new System.Windows.Forms.Button();
             this.btn1_4 = new System.Windows.Forms.Button();
             this.btn1_3 = new System.Windows.Forms.Button();
             this.btn1_2 = new System.Windows.Forms.Button();
             this.btn1_1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.gb2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btn2_4 = new System.Windows.Forms.Button();
             this.btn2_3 = new System.Windows.Forms.Button();
             this.btn2_2 = new System.Windows.Forms.Button();
             this.btn2_1 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.gb3 = new System.Windows.Forms.GroupBox();
-            this.lblBOM_Unlock = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn3_6 = new System.Windows.Forms.Button();
             this.btn3_5 = new System.Windows.Forms.Button();
             this.btn3_4 = new System.Windows.Forms.Button();
             this.btn3_3 = new System.Windows.Forms.Button();
             this.btn3_2 = new System.Windows.Forms.Button();
             this.btn3_1 = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -169,7 +171,8 @@
             this.menu2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu2_1,
             this.menu2_2,
-            this.menu2_3});
+            this.menu2_3,
+            this.menu2_4});
             this.menu2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu2.Name = "menu2";
             this.menu2.Size = new System.Drawing.Size(77, 28);
@@ -178,22 +181,23 @@
             // menu2_1
             // 
             this.menu2_1.Name = "menu2_1";
-            this.menu2_1.Size = new System.Drawing.Size(223, 28);
+            this.menu2_1.Size = new System.Drawing.Size(280, 28);
             this.menu2_1.Text = "&1.電話簿";
             this.menu2_1.Click += new System.EventHandler(this.menu2_1_Click);
             // 
             // menu2_2
             // 
             this.menu2_2.Name = "menu2_2";
-            this.menu2_2.Size = new System.Drawing.Size(223, 28);
+            this.menu2_2.Size = new System.Drawing.Size(280, 28);
             this.menu2_2.Text = "&2.客戶資料建立";
             this.menu2_2.Click += new System.EventHandler(this.menu2_2_Click);
             // 
             // menu2_3
             // 
             this.menu2_3.Name = "menu2_3";
-            this.menu2_3.Size = new System.Drawing.Size(223, 28);
+            this.menu2_3.Size = new System.Drawing.Size(280, 28);
             this.menu2_3.Text = "&3.廠商資料建立";
+            this.menu2_3.Click += new System.EventHandler(this.menu2_3_Click);
             // 
             // menu3
             // 
@@ -308,6 +312,156 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "系統管理";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.gb2);
+            this.tabPage2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(987, 487);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "2.基礎";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // gb2
+            // 
+            this.gb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(192)))));
+            this.gb2.Controls.Add(this.btn2_4);
+            this.gb2.Controls.Add(this.label3);
+            this.gb2.Controls.Add(this.btn2_3);
+            this.gb2.Controls.Add(this.btn2_2);
+            this.gb2.Controls.Add(this.btn2_1);
+            this.gb2.Location = new System.Drawing.Point(0, 0);
+            this.gb2.Margin = new System.Windows.Forms.Padding(0);
+            this.gb2.Name = "gb2";
+            this.gb2.Padding = new System.Windows.Forms.Padding(2);
+            this.gb2.Size = new System.Drawing.Size(990, 478);
+            this.gb2.TabIndex = 4;
+            this.gb2.TabStop = false;
+            this.gb2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(19, 21);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 35);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "基本資料建立";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.gb3);
+            this.tabPage3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(987, 487);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "3.BOM";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // gb3
+            // 
+            this.gb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gb3.Controls.Add(this.lblBOM_Unlock);
+            this.gb3.Controls.Add(this.label2);
+            this.gb3.Controls.Add(this.btn3_6);
+            this.gb3.Controls.Add(this.btn3_5);
+            this.gb3.Controls.Add(this.btn3_4);
+            this.gb3.Controls.Add(this.btn3_3);
+            this.gb3.Controls.Add(this.btn3_2);
+            this.gb3.Controls.Add(this.btn3_1);
+            this.gb3.Location = new System.Drawing.Point(0, 0);
+            this.gb3.Margin = new System.Windows.Forms.Padding(2);
+            this.gb3.Name = "gb3";
+            this.gb3.Padding = new System.Windows.Forms.Padding(2);
+            this.gb3.Size = new System.Drawing.Size(985, 475);
+            this.gb3.TabIndex = 5;
+            this.gb3.TabStop = false;
+            this.gb3.Visible = false;
+            // 
+            // lblBOM_Unlock
+            // 
+            this.lblBOM_Unlock.AutoSize = true;
+            this.lblBOM_Unlock.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblBOM_Unlock.ForeColor = System.Drawing.Color.Red;
+            this.lblBOM_Unlock.Location = new System.Drawing.Point(432, 204);
+            this.lblBOM_Unlock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBOM_Unlock.Name = "lblBOM_Unlock";
+            this.lblBOM_Unlock.Size = new System.Drawing.Size(101, 25);
+            this.lblBOM_Unlock.TabIndex = 15;
+            this.lblBOM_Unlock.Text = "BOM解鎖";
+            this.lblBOM_Unlock.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(19, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 31);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "報價BOM資料創建";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(987, 487);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "4.報價";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(987, 487);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "5.設定";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tabPage6.Location = new System.Drawing.Point(4, 34);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(987, 487);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "6.公用資料";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // toolTip
+            // 
+            this.toolTip.ShowAlways = true;
+            this.toolTip.Tag = "";
+            this.toolTip.ToolTipTitle = "xji6";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 10000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // menu2_4
+            // 
+            this.menu2_4.Name = "menu2_4";
+            this.menu2_4.Size = new System.Drawing.Size(280, 28);
+            this.menu2_4.Text = "&4.產品資料清單明細表";
+            // 
             // btn1_6
             // 
             this.btn1_6.FlatAppearance.BorderSize = 0;
@@ -411,46 +565,21 @@
             this.btn1_1.UseVisualStyleBackColor = true;
             this.btn1_1.Click += new System.EventHandler(this.btn1_1_Click);
             // 
-            // tabPage2
+            // btn2_4
             // 
-            this.tabPage2.Controls.Add(this.gb2);
-            this.tabPage2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(987, 487);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "2.基礎";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // gb2
-            // 
-            this.gb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(192)))));
-            this.gb2.Controls.Add(this.label3);
-            this.gb2.Controls.Add(this.btn2_3);
-            this.gb2.Controls.Add(this.btn2_2);
-            this.gb2.Controls.Add(this.btn2_1);
-            this.gb2.Location = new System.Drawing.Point(0, 0);
-            this.gb2.Margin = new System.Windows.Forms.Padding(0);
-            this.gb2.Name = "gb2";
-            this.gb2.Padding = new System.Windows.Forms.Padding(2);
-            this.gb2.Size = new System.Drawing.Size(990, 478);
-            this.gb2.TabIndex = 4;
-            this.gb2.TabStop = false;
-            this.gb2.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 35);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "基本資料建立";
+            this.btn2_4.FlatAppearance.BorderSize = 0;
+            this.btn2_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2_4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn2_4.Image = global::Price2.Properties.Resources.firmadd;
+            this.btn2_4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn2_4.Location = new System.Drawing.Point(100, 284);
+            this.btn2_4.Margin = new System.Windows.Forms.Padding(4);
+            this.btn2_4.Name = "btn2_4";
+            this.btn2_4.Size = new System.Drawing.Size(200, 136);
+            this.btn2_4.TabIndex = 14;
+            this.btn2_4.Text = "4.產品資料清單明細表";
+            this.btn2_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn2_4.UseVisualStyleBackColor = true;
             // 
             // btn2_3
             // 
@@ -467,6 +596,7 @@
             this.btn2_3.Text = "3.廠商資料建立";
             this.btn2_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn2_3.UseVisualStyleBackColor = true;
+            this.btn2_3.Click += new System.EventHandler(this.btn2_3_Click);
             // 
             // btn2_2
             // 
@@ -501,63 +631,6 @@
             this.btn2_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn2_1.UseVisualStyleBackColor = true;
             this.btn2_1.Click += new System.EventHandler(this.btn2_1_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.gb3);
-            this.tabPage3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(987, 487);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "3.BOM";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // gb3
-            // 
-            this.gb3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gb3.Controls.Add(this.lblBOM_Unlock);
-            this.gb3.Controls.Add(this.label2);
-            this.gb3.Controls.Add(this.btn3_6);
-            this.gb3.Controls.Add(this.btn3_5);
-            this.gb3.Controls.Add(this.btn3_4);
-            this.gb3.Controls.Add(this.btn3_3);
-            this.gb3.Controls.Add(this.btn3_2);
-            this.gb3.Controls.Add(this.btn3_1);
-            this.gb3.Location = new System.Drawing.Point(0, 0);
-            this.gb3.Margin = new System.Windows.Forms.Padding(2);
-            this.gb3.Name = "gb3";
-            this.gb3.Padding = new System.Windows.Forms.Padding(2);
-            this.gb3.Size = new System.Drawing.Size(985, 475);
-            this.gb3.TabIndex = 5;
-            this.gb3.TabStop = false;
-            this.gb3.Visible = false;
-            // 
-            // lblBOM_Unlock
-            // 
-            this.lblBOM_Unlock.AutoSize = true;
-            this.lblBOM_Unlock.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblBOM_Unlock.ForeColor = System.Drawing.Color.Red;
-            this.lblBOM_Unlock.Location = new System.Drawing.Point(432, 204);
-            this.lblBOM_Unlock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBOM_Unlock.Name = "lblBOM_Unlock";
-            this.lblBOM_Unlock.Size = new System.Drawing.Size(101, 25);
-            this.lblBOM_Unlock.TabIndex = 15;
-            this.lblBOM_Unlock.Text = "BOM解鎖";
-            this.lblBOM_Unlock.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 31);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "報價BOM資料創建";
             // 
             // btn3_6
             // 
@@ -655,51 +728,6 @@
             this.btn3_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_1.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(987, 487);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "4.報價";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage5.Location = new System.Drawing.Point(4, 34);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(987, 487);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "5.設定";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tabPage6.Location = new System.Drawing.Point(4, 34);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(987, 487);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "6.公用資料";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // toolTip
-            // 
-            this.toolTip.ShowAlways = true;
-            this.toolTip.Tag = "";
-            this.toolTip.ToolTipTitle = "xji6";
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 10000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -786,6 +814,8 @@
         private System.Windows.Forms.ToolStripMenuItem menu2_1;
         private System.Windows.Forms.ToolStripMenuItem menu2_2;
         private System.Windows.Forms.ToolStripMenuItem menu2_3;
+        private System.Windows.Forms.ToolStripMenuItem menu2_4;
+        private System.Windows.Forms.Button btn2_4;
     }
 }
 

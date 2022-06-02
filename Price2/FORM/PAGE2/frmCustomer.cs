@@ -208,7 +208,7 @@ namespace Price2
                     lblSaveDate.Text = dt.Rows[0]["cus_adddate"].ToString();
                     lblUser.Text = dt.Rows[0]["cus_user"].ToString();
                     txtPipeline.Text = dt.Rows[0]["cus_lsgd"].ToString();
-                    txtStartDate.Text = dt.Rows[0]["cus_begindate"].ToString();
+                    txtStartDate.Text = Convert.ToDateTime(dt.Rows[0]["cus_begindate"].ToString()).ToString("yyyy/MM/dd");
                     if (dt.Rows[0]["cus_zmtype"].ToString() == "")
                     {
                         cboCode.Text = "A";
@@ -540,6 +540,38 @@ namespace Price2
         {
             frmCustomer_Inq_ShortName frmCustomer_Inq_ShortName = new frmCustomer_Inq_ShortName();
             frmCustomer_Inq_ShortName.ShowDialog();
+            if (strCustomerID != "")
+            {
+                txtCustomerID.Text = strCustomerID;
+                getData();
+                strCustomerID = "";
+            }
+            else
+            {
+                btnClear_Click(null, null);
+            }
+        }
+
+        private void btnInq_Tel_Click(object sender, EventArgs e)
+        {
+            frmCustomer_Inq_Tel frmCustomer_Inq_Tel = new frmCustomer_Inq_Tel();
+            frmCustomer_Inq_Tel.ShowDialog();
+            if (strCustomerID != "")
+            {
+                txtCustomerID.Text = strCustomerID;
+                getData();
+                strCustomerID = "";
+            }
+            else
+            {
+                btnClear_Click(null, null);
+            }
+        }
+
+        private void btnInq_Country_Click(object sender, EventArgs e)
+        {
+            frmCustomer_Inq_Country frmCustomer_Inq_Country = new frmCustomer_Inq_Country();
+            frmCustomer_Inq_Country.ShowDialog();
             if (strCustomerID != "")
             {
                 txtCustomerID.Text = strCustomerID;

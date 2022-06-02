@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Price2
 {
-    public partial class frmCustomer_Inq_Tel : Form
+    public partial class frmVendor : Form
     {
-        public frmCustomer_Inq_Tel()
+        public frmVendor()
         {
             InitializeComponent();
         }

@@ -393,6 +393,44 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu2_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void menu2_3_Click(object sender, EventArgs e)
+        {
+            //2_3廠商資料建立
+            try
+            {
+                string[] strModule = menu2_3.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                frmVendor frmVendor = new frmVendor();
+                frmVendor.MdiParent = this;
+                frmVendor.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmVendor.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu2_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Page1(系統)
@@ -431,10 +469,17 @@ namespace Price2
             //2_1.電話簿
             menu2_1.PerformClick();
         }
+        
         private void btn2_2_Click(object sender, EventArgs e)
         {
             //2_2.客戶資料建立
             menu2_2.PerformClick();
+        }
+
+        private void btn2_3_Click(object sender, EventArgs e)
+        {
+            //2_3.廠商資料建立
+            menu2_3.PerformClick();
         }
         #endregion
         private void startSocket()
@@ -589,5 +634,7 @@ namespace Price2
             }
 
         }
+
+        
     }
 }

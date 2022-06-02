@@ -17,7 +17,7 @@ namespace Price2
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e) //結束
         {
             //結束
             try
@@ -30,7 +30,7 @@ namespace Price2
             }
         }
 
-        private void btnInq_Click(object sender, EventArgs e)
+        private void btnInq_Click(object sender, EventArgs e)   //搜尋
         {
             //搜尋
             try
