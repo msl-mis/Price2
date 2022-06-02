@@ -26,7 +26,7 @@
     <InstallUrl>http://192.168.10.205:8083/</InstallUrl>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>12</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.0.12</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -69,7 +69,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,6 +86,36 @@
   <ItemGroup>
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
+    <Compile Include="frmCustomer_Inq_Tel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer_Inq_Tel.Designer.cs">
+      <DependentUpon>frmCustomer_Inq_Tel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer_Inq_ShortName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer_Inq_ShortName.Designer.cs">
+      <DependentUpon>frmCustomer_Inq_ShortName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer_BankInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer_BankInfo.Designer.cs">
+      <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer_Inq_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer_Inq_Customer.Designer.cs">
+      <DependentUpon>frmCustomer_Inq_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\PAGE2\frmTelephone_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +178,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCustomer_BankInfo.resx">
+      <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer_Inq_Customer.resx">
+      <DependentUpon>frmCustomer_Inq_Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE2\frmTelephone_Inq.resx">
       <DependentUpon>frmTelephone_Inq.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +213,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE2\frmTelephone.resx">
       <DependentUpon>frmTelephone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer_Inq_ShortName.resx">
+      <DependentUpon>frmCustomer_Inq_ShortName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

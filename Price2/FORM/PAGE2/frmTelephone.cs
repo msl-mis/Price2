@@ -13,42 +13,48 @@ namespace Price2
 {
     public partial class frmTelephone : Form
     {
+        public static string strName = "";
         public frmTelephone()
         {
             InitializeComponent();
         }
-
         private void frmTelephone_Activated(object sender, EventArgs e)
         {
             //要加入初始化的東西
             try
-            { 
+            {
+                List<string> sList = new List<string>();
+
                 String strSQL = $@"select distinct pas_username from pas where pas_username<>'' order by pas_username";
                 DataTable dt = clsDB.sql_select_dt(strSQL);
                 //清除
-                cboUser.Items.Clear();
+                //cboUser.Items.Clear();
                 //使用者加入
-                for(int i = 0; i < dt.Rows.Count; i++)
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    cboUser.Items.Add(dt.Rows[i]["pas_username"]);
+                    sList.Add(dt.Rows[i]["pas_username"].ToString());
                 }
+                cboUser.AutoCompleteCustomSource.AddRange(sList.ToArray());
+                cboUser.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cboUser.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cboUser.DataSource = sList.ToArray();
                 //先設為clsGlobal.strG_User
                 cboUser.Text = clsGlobal.strG_User;
                 addItem();
+                btnClear.PerformClick();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-frmTelephone_Activated" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnSave_Click(object sender, EventArgs e)  //儲存
         {
             //儲存
             try
             {
                 //檢查欄位
-                if (txtName.TextLength>50)  //姓名
+                if (cboName.SelectionLength>50)  //姓名
                 {
                     MessageBox.Show("姓名長度超過,限制為50個英文字元<25個中文字>", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -108,14 +114,10 @@ namespace Price2
                     MessageBox.Show("大陸e-mail長度超過,限制為40個英文字元<20個中文字>", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                
-                    
-
-
                 //儲存資料到Tel
                 String strSQL = $@"exec Tel_save
                                       '{cboUser.Text}',
-                                      '{txtName.Text}',
+                                      '{cboName.Text}',
                                       '{cboType.Text}',
                                       '{txtCellphone_TW.Text}',
                                       '{txtCompany_TW.Text}',
@@ -139,14 +141,13 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnSave_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void addItem()  //將子項加回
         {
             //將子項加回
             try
             {
                 string strItem = "";
-                if (txtName.Text!="")
+                if (cboName.Text!="")
                 {
                     strItem = cboType.Text;
                 }
@@ -180,14 +181,13 @@ namespace Price2
                 MessageBox.Show(this.Name + "-addItem" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnClear_Click(object sender, EventArgs e) //清除
         {
             //清除
             try
             {
                 cboType.Text = "(ALL)";         //子項
-                txtName.Text = "";              //姓名
+                cboName.Text = "";              //姓名
                 txtCellphone_TW.Text = "";      //台灣手機
                 txtCompany_TW.Text = "";        //台灣公司電話
                 txtHome_TW.Text = "";           //台灣住家電話
@@ -208,13 +208,12 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnClear_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnRename_Click(object sender, EventArgs e)    //更名
         {
             //更名
             try
             {
-                if(txtName.Text==""||cboUser.Text=="")
+                if(cboName.Text==""||cboUser.Text=="")
                 {
                     return;
                 }
@@ -236,10 +235,10 @@ namespace Price2
                         String strSQL = $@"update tel
                                            set    tel_name = '{input.GetMsg()}'
                                            where  tel_username = '{cboUser.Text.Trim()}'
-                                                  and tel_name = '{txtName.Text.Trim()}' ";
+                                                  and tel_name = '{cboName.Text.Trim()}' ";
                         clsDB.Execute(strSQL);
-                        txtName.Text = input.GetMsg();
-                        txtName.Focus();
+                        cboName.Text = input.GetMsg();
+                        cboName.Focus();
                     }
                 }
             }
@@ -248,13 +247,12 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnRename_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnCopy_Click(object sender, EventArgs e)  //複製
         {
             //複製
             try
             {
-                if (txtName.Text == "" || cboUser.Text == "")
+                if (cboName.Text == "" || cboUser.Text == "")
                 {
                     return;
                 }
@@ -316,11 +314,11 @@ namespace Price2
                                                tel_dlemail
                                         from   tel
                                         where  tel_username = '{cboUser.Text.Trim()}'
-                                               and tel_name = '{txtName.Text.Trim()}' ";
+                                               and tel_name = '{cboName.Text.Trim()}' ";
                             clsDB.Execute(strSQL);
                         }
-                        txtName.Text = input.GetMsg();
-                        txtName.Focus();
+                        cboName.Text = input.GetMsg();
+                        cboName.Focus();
                         MessageBox.Show("已經複製完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -336,7 +334,7 @@ namespace Price2
             //刪除
             try
             {
-                if (txtName.Text == "" )
+                if (cboName.Text == "" )
                 {
                     return;
                 }
@@ -344,12 +342,11 @@ namespace Price2
                 {
                     string strSQL = $@"delete tel
                                        where  tel_username = '{cboUser.Text.Trim()}'
-                                              and tel_name = '{txtName.Text.Trim()}' ";
+                                              and tel_name = '{cboName.Text.Trim()}' ";
                     clsDB.Execute(strSQL);
                     btnClear.PerformClick();
                     MessageBox.Show("刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             }
             catch (Exception ex)
             {
@@ -389,7 +386,6 @@ namespace Price2
 	        Point p = new Point(100, 100);
             e.Graphics.DrawImage(img, p); 
 	    }
-
         private void btnClose_Click(object sender, EventArgs e) //結束
         {
             //結束
@@ -404,50 +400,124 @@ namespace Price2
                 MessageBox.Show(this.Name + "-_btnClose_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnItemRename_Click(object sender, EventArgs e)    //子項更名
+        private void cboUser_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //子項更名
+            btnClear.PerformClick();
+            addItem();
+            string strSQL = $@"select tel_name
+                                    from   tel
+                                    where  tel_username = '{cboUser.Text.Trim()}' ";
+            DataTable dt = clsDB.sql_select_dt(strSQL);
+            //cboName.Items.Clear();
+            List<string> sList = new List<string>();
+            if (dt.Rows.Count > 0)
+            {
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    //cboNameListOld.Add(dt.Rows[i]["tel_name"].ToString());
+                    sList.Add(dt.Rows[i]["tel_name"].ToString());
+                }
+                //cboName.Items.AddRange(cboNameListOld.ToArray());
+                cboName.AutoCompleteCustomSource.AddRange(sList.ToArray());
+                cboName.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cboName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cboName.DataSource = sList.ToArray();
+                //cboName.DisplayMember = "";
+                cboName.Text = "";
+                btnClear.PerformClick();
+            }
+            cboName.Focus();
+        }
+        private void btnInq_Click(object sender, EventArgs e)
+        {
+            frmTelephone_Inq frmTelephone_Inq = new frmTelephone_Inq();
+            frmTelephone_Inq.strUserName = cboUser.Text;
+            frmTelephone_Inq.ShowDialog();
+            if(strName!="")
+            {
+                cboName.Text=strName;
+                getData();  //取得與姓名相關資料
+                strName = "";
+            }
+        }
+        private void cboName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getData();  //取得與姓名相關資料
+        }
+        private void btnTypeRename_Click(object sender, EventArgs e)    //分類更名
+        {
+            //分類更名
             try
             {
                 frmTelephone_RenameType frmTelephone_RenameType = new frmTelephone_RenameType();
-                frmTelephone_RenameType.strUser=cboUser.Text;
-                frmTelephone_RenameType.strItem=cboType.Text;
+                frmTelephone_RenameType.strUser = cboUser.Text;
+                frmTelephone_RenameType.strItem = cboType.Text;
                 frmTelephone_RenameType.ShowDialog();
                 cboType.Text = frmTelephone_RenameType.strItem;
                 addItem();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-_btnClose_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-btnTypeRename_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        private void cboType_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 13)
+            if(e.KeyChar == (char)Keys.Enter)
             {
-                cboType.Focus();
+                txtCellphone_TW.Focus();
             }
         }
 
-        private void txtName_Validated(object sender, EventArgs e)
+        private void txtCellphone_TW_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtCellphone_CN.Focus();
+            }
+        }
+        private void txtCellphone_CN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtCompany_TW.Focus();
+            }
+        }
+        private void txtCompany_TW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                
+            }
+        }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        private void getData()  //取得與姓名相關資料
+        {
+            //取得與姓名相關資料
             try
             {
-                if (txtName.Text == "" || cboUser.Text == "")
+                if (cboName.Text == "" || cboUser.Text == "")
                 {
                     return;
                 }
                 string strSQL = $@"select *
                                     from   tel
                                     where  tel_username = '{cboUser.Text.Trim()}'
-                                           and tel_name = '{txtName.Text.Trim()}' ";
+                                           and tel_name = '{cboName.Text.Trim()}' ";
                 DataTable dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count >0)
+                if (dt.Rows.Count > 0)
                 {
-                    cboType.Text = dt.Rows[0]["tel_type"].ToString();         //子項
-                                                                              //txtName.Text = "";              //姓名
+                    cboType.Text = dt.Rows[0]["tel_type"].ToString();         //分類
+                                                                              //cboName.Text = "";              //姓名
                     txtCellphone_TW.Text = dt.Rows[0]["tel_twphone"].ToString();      //台灣手機
                     txtCompany_TW.Text = dt.Rows[0]["tel_twfax"].ToString();       //台灣公司電話
                     txtHome_TW.Text = dt.Rows[0]["tel_twmobile"].ToString();           //台灣住家電話
@@ -464,10 +534,10 @@ namespace Price2
                 {
                     if (MessageBox.Show(this, "沒有找到這個姓名的電話簿,要創建嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                     {
-                        txtName.Text = "";              //姓名
+                        cboName.Text = "";              //姓名
                     }
-                    cboType.Text = "(ALL)";         //子項
-                    
+                    cboType.Text = "(ALL)";         //分類
+
                     txtCellphone_TW.Text = "";      //台灣手機
                     txtCompany_TW.Text = "";        //台灣公司電話
                     txtHome_TW.Text = "";           //台灣住家電話
@@ -480,31 +550,12 @@ namespace Price2
                     txtEmail_TW.Text = "";          //台灣e-mail
                     txtEmail_CN.Text = "";          //大陸e-mail
                 }
-
-
+                txtCellphone_TW.Focus();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-btnRename_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-cboName_SelectedIndexChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void cboUser_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cboUser_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            btnClear.PerformClick();
-            addItem();
-        }
-
-        private void btnInq_Click(object sender, EventArgs e)
-        {
-            frmTelephone_Inq frmTelephone_Inq = new frmTelephone_Inq();
-            frmTelephone_Inq.strUserName = cboUser.Text;
-            frmTelephone_Inq.ShowDialog();
         }
     }
 }

@@ -85,3 +85,10 @@ D:\Price2\Price2\obj\Debug\Price2.exe.manifest
 D:\Price2\Price2\obj\Debug\Price2.application
 D:\Price2\Price2\obj\Debug\Price2.exe
 D:\Price2\Price2\obj\Debug\Price2.pdb
+D:\Source Code\Price2\Price2\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Source Code\Price2\Price2\bin\Debug\stdole.dll
+D:\Source Code\Price2\Price2\obj\Debug\Price2.csproj.CopyComplete
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Customer.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_BankInfo.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_ShortName.resources

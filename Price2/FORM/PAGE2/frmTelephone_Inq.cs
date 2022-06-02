@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.IO;
 using Excel = Microsoft.Office.Interop.Excel;
 
+
 namespace Price2
 {
     public partial class frmTelephone_Inq : Form
@@ -247,6 +248,20 @@ namespace Price2
                 MessageBox.Show("沒資料，請先查詢後再匯出資料!", "系統訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            clsGlobal clsGlobal = new clsGlobal();
+
+            clsGlobal.ExportExcel("私人電話簿", dgvData);
+
+        }
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //frmTelephone frmTelephone ;
+            frmTelephone.strName = dgvData.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.Close();
         }
     }
 }

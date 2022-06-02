@@ -38,7 +38,7 @@
             this.tel_dlfax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_dlmobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,9 +53,9 @@
             // groupBox
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox.Controls.Add(this.dgvData);
-            this.groupBox.Controls.Add(this.btnPrint);
+            this.groupBox.Controls.Add(this.btnExport);
             this.groupBox.Controls.Add(this.btnClear);
             this.groupBox.Controls.Add(this.cboType);
             this.groupBox.Controls.Add(this.label3);
@@ -63,12 +63,12 @@
             this.groupBox.Controls.Add(this.btnInq);
             this.groupBox.Controls.Add(this.txtKey);
             this.groupBox.Controls.Add(this.label1);
-            this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox.Location = new System.Drawing.Point(1, 14);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox.Location = new System.Drawing.Point(1, 18);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(784, 433);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Size = new System.Drawing.Size(1045, 541);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
             // 
@@ -87,15 +87,17 @@
             this.tel_dlfax,
             this.tel_dlmobile,
             this.tel_type});
-            this.dgvData.Location = new System.Drawing.Point(10, 68);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvData.Location = new System.Drawing.Point(13, 85);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 27;
-            this.dgvData.Size = new System.Drawing.Size(758, 338);
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvData.Size = new System.Drawing.Size(1011, 422);
             this.dgvData.TabIndex = 49;
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // tel_name
             // 
@@ -169,25 +171,25 @@
             this.tel_type.ReadOnly = true;
             this.tel_type.Width = 125;
             // 
-            // btnPrint
+            // btnExport
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPrint.Location = new System.Drawing.Point(543, 23);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(52, 29);
-            this.btnPrint.TabIndex = 48;
-            this.btnPrint.Text = "列印";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnExport.Location = new System.Drawing.Point(724, 29);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(69, 36);
+            this.btnExport.TabIndex = 48;
+            this.btnExport.Text = "匯出";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClear.Location = new System.Drawing.Point(603, 23);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Location = new System.Drawing.Point(804, 29);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(52, 29);
+            this.btnClear.Size = new System.Drawing.Size(69, 36);
             this.btnClear.TabIndex = 44;
             this.btnClear.Text = "清除";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -196,20 +198,19 @@
             // cboType
             // 
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(310, 23);
-            this.cboType.Margin = new System.Windows.Forms.Padding(2);
+            this.cboType.Location = new System.Drawing.Point(413, 29);
+            this.cboType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(146, 24);
+            this.cboType.Size = new System.Drawing.Size(193, 33);
             this.cboType.TabIndex = 21;
             this.cboType.Text = "(ALL)";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(231, 24);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(308, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 27);
+            this.label3.Size = new System.Drawing.Size(100, 34);
             this.label3.TabIndex = 20;
             this.label3.Text = "分類：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -217,10 +218,10 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(663, 23);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(884, 29);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(52, 29);
+            this.btnClose.Size = new System.Drawing.Size(69, 36);
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -229,10 +230,10 @@
             // btnInq
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq.Location = new System.Drawing.Point(483, 23);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq.Location = new System.Drawing.Point(644, 29);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(52, 29);
+            this.btnInq.Size = new System.Drawing.Size(69, 36);
             this.btnInq.TabIndex = 14;
             this.btnInq.Text = "搜尋";
             this.btnInq.UseVisualStyleBackColor = false;
@@ -241,34 +242,34 @@
             // txtKey
             // 
             this.txtKey.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtKey.Location = new System.Drawing.Point(81, 23);
-            this.txtKey.Margin = new System.Windows.Forms.Padding(2);
+            this.txtKey.Location = new System.Drawing.Point(108, 29);
+            this.txtKey.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKey.Name = "txtKey";
-            this.txtKey.Size = new System.Drawing.Size(146, 29);
+            this.txtKey.Size = new System.Drawing.Size(193, 34);
             this.txtKey.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(7, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(9, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 27);
+            this.label1.Size = new System.Drawing.Size(100, 34);
             this.label1.TabIndex = 2;
             this.label1.Text = "關鍵字：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmTelephone_Inq
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(779, 449);
+            this.ClientSize = new System.Drawing.Size(1039, 561);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTelephone_Inq";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "私人電話簿用戶查詢";
             this.Activated += new System.EventHandler(this.frmTelephone_Inq_Activated);
             this.groupBox.ResumeLayout(false);
@@ -281,7 +282,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.Label label3;

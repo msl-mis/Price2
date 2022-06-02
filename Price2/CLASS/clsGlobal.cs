@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace Price2
 {
@@ -16,10 +18,7 @@ namespace Price2
         public static string strG_Area;     //紀錄正式區或測試區
         public static string strG_LocalIP;  //紀錄LocalIP
 
-        public void export_csv(DataGridView DG)
-        {
 
-        }
         public static bool checkRightFlag(string strModuleName) //確認權限
         {
             String strSQL = $@"select mod_flag from mod where mod_username='{clsGlobal.strG_User}' and mod_modulename='{strModuleName}'";
@@ -194,6 +193,182 @@ namespace Price2
                 return true;
             else
                 return false;
+        }
+        public void ExportCsv(DataGridView DG)
+        {
+            //export EXcel=new excel 
+            if (DG.Rows.Count > 200000)
+            {
+                MessageBox.Show("資料超過20萬筆會出現超過記憶體限制錯誤，請查詢小於20萬筆的資料！！", "系統警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            FileStream output = default(FileStream);
+            StreamWriter writer = default(StreamWriter);
+            SaveFileDialog file = new SaveFileDialog();
+            file.Filter = "Excel Files(*.csv)|*.csv";
+            file.Title = "儲存CSV檔(Excel)";
+            DialogResult result = file.ShowDialog();
+            string filename = null;
+            string FileText = null;
+            int i = 0;
+            int j = 0;
+
+            if (!DG.Rows.Count.Equals(0))
+            {
+                file.CheckFileExists = false;
+                if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+                filename = file.FileName;
+                if ((string.IsNullOrEmpty(filename) || filename == null))
+                {
+                    MessageBox.Show("錯誤名稱檔案!!", "系統訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    try
+                    {
+                        output = new FileStream(filename, FileMode.Create, FileAccess.Write);
+                        writer = new StreamWriter(output, System.Text.Encoding.Unicode);
+                        //DataGridView行開頭名稱
+                        //FileText="";
+                        //FileText= "報表查詢區間 ："+ _TimeS + " ~ " + _TimeE + "\r\n\r\n";
+                        for (j = 0; j < DG.Columns.Count; j++)
+                        {
+                            FileText += DG.Columns[j].HeaderText.ToString() + char.ConvertFromUtf32((int)9);
+                        }
+                        writer.WriteLine(FileText);
+                        for (i = 0; i < DG.Rows.Count; i++)
+                        {
+                            FileText = "";
+                            for (j = 0; j < DG.Columns.Count; j++)
+                            {
+                                FileText += DG[j, i].Value + char.ConvertFromUtf32((int)9);
+                            }
+                            writer.WriteLine(FileText);
+                        }
+                        MessageBox.Show("Excel輸出已完畢!!", "系統訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (FileNotFoundException ex)
+                    {
+                        MessageBox.Show("檔案沒有儲存" + Environment.NewLine + ex.ToString(), "系統訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    writer.Flush();
+                    writer.Close();
+                    file.Dispose();
+                    System.Diagnostics.Process.Start(filename);
+                }
+            }
+            else
+            {
+                MessageBox.Show("沒資料，請先查詢後再匯出資料!", "系統訊息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+        }
+        public void ExportExcel(string strCaption, DataGridView myDGV)
+        {
+            
+            int ColIndex = 0;
+            int RowIndex = 0;
+            int ColCount = myDGV.ColumnCount;
+            int RowCount = myDGV.RowCount;
+            
+            // 建立Excel物件
+            Excel.Application excelApp = new Excel.ApplicationClass();
+            //在建立excel workbook之前，檢查系統是否安裝excel
+            if (excelApp == null)
+            {
+                // if equal null means EXCEL is not installed.
+                MessageBox.Show("Excel is not properly installed!");
+                return;
+            }
+            try
+            {
+                //Excel.Workbook workBook;
+                //workBook = excelApp.Workbooks.Add(true);    //新建一個
+                // 建立Excel工作薄
+                Excel.Workbook workBook = excelApp.Workbooks.Add(true);
+                Excel.Worksheet workSheet = workBook.ActiveSheet as Excel.Worksheet;    //new a worksheet
+                workSheet = (Excel.Worksheet)workBook.Worksheets.get_Item(1);   //獲得第i個sheet，準備寫入
+                //Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
+                // 設定標題
+                Excel.Range range = workSheet.get_Range(excelApp.Cells[1, 1], excelApp.Cells[1, ColCount]); //標題所佔的單元格數與DataGridView中的列數相同
+                range.MergeCells = true;
+                excelApp.ActiveCell.FormulaR1C1 = strCaption;
+                excelApp.ActiveCell.Font.Size = 14;
+                excelApp.ActiveCell.Font.Bold = true;
+                excelApp.ActiveCell.HorizontalAlignment = Excel.Constants.xlCenter;
+                // 建立快取資料
+                object[,] objData = new object[RowCount  + 1, ColCount];
+                //獲取列標題
+                foreach (DataGridViewColumn col in myDGV.Columns)
+                {
+                    objData[RowIndex, ColIndex] = col.HeaderText;
+                    ColIndex++;
+                }
+                // 獲取資料
+                for (RowIndex = 1; RowIndex <= RowCount; RowIndex++)
+                {
+                    for (ColIndex = 0; ColIndex < ColCount; ColIndex++)
+                    {
+                        if (myDGV[ColIndex, RowIndex - 1].ValueType == typeof(string)
+                        || myDGV[ColIndex, RowIndex - 1].ValueType == typeof(DateTime))//這裡就是驗證DataGridView單元格中的型別,如果是string或是DataTime型別,則在放入快取時在該內容前加入" ";
+                        {
+                            objData[RowIndex, ColIndex] = "" + myDGV[ColIndex, RowIndex - 1].Value;
+                        }
+                        else
+                        {
+                            objData[RowIndex, ColIndex] = myDGV[ColIndex, RowIndex - 1].Value;
+                        }
+                    }
+                    //System.Windows.Forms.Application.DoEvents();
+                }
+                // 寫入Excel
+                range = workSheet.get_Range(excelApp.Cells[3, 1], excelApp.Cells[RowCount+3, ColCount]);
+                range.Value2 = objData;
+
+                workSheet.get_Range(excelApp.Cells[3, 1], excelApp.Cells[3+RowCount, ColCount]).Borders.LineStyle = Excel.XlLineStyle.xlContinuous; //外框
+
+                //workSheet.Range["A3:H8"].HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;   //對齊
+                
+                workSheet.Columns.EntireColumn.AutoFit();   //自動調整欄寬
+                //檢查資料夾；沒有就新增一個
+                if (Directory.Exists(@"C:\\temp"))
+                {
+                    //資料夾存在
+                }
+                else
+                {
+                    //新增資料夾
+                    Directory.CreateDirectory(@"C:\temp\");
+                }
+                string temp;
+                if (Convert.ToDouble(excelApp.Version.ToString()) > 11)
+                {
+                    temp = "C:\\temp\\" + strCaption + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xlsx";
+                }
+                else
+                {
+                    temp = "C:\\temp\\" + strCaption + DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+                }
+
+                workBook.SaveCopyAs(temp);    //另存新檔
+                                              //把執行的Excel資源釋放
+                workBook.Close(false, Missing.Value, Missing.Value);
+                excelApp.Quit();
+                workSheet = null;
+                workBook = null;
+                excelApp = null;
+                GC.Collect(); //強制回收
+                System.Diagnostics.Process.Start(temp); //開啟檔案
+
+                MessageBox.Show("查詢結果存放在:" + temp, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("clsGlobal-ExportExcel" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

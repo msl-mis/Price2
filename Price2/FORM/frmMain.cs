@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Diagnostics;
+using System.Reflection;
 
 
 
@@ -30,11 +32,11 @@ namespace Price2
             {
                 if (clsGlobal.strG_Area == "正式區")
                 {
-                    this.Text = ("(正式區)報價系統--" + clsGlobal.strG_User);
+                    this.Text = ("(正式區)報價系統--" + "Ver：" + FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion.ToString() + " ；使用者：" + clsGlobal.strG_User);
                 }
                 else
                 {
-                    this.Text = ("(測試區)報價系統--" + clsGlobal.strG_User);
+                    this.Text = ("(測試區)報價系統--" + "Ver：" + FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion.ToString() + " ；使用者：" + clsGlobal.strG_User);
                 }
                 startSocket();
             }
@@ -126,9 +128,9 @@ namespace Price2
             //離開
             this.Close();
         }
-        public void menu1_1_Click(object sender, EventArgs e)   //1.用戶管理
+        public void menu1_1_Click(object sender, EventArgs e)   //1_1.用戶管理
         {
-            //1.用戶管理
+            //1_1.用戶管理
             try
             {
                 string[] strModule=menu1_1.Text.Split('.');
@@ -162,9 +164,9 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu1_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void menu1_2_Click(object sender, EventArgs e)  //2.用戶密碼修改
+        private void menu1_2_Click(object sender, EventArgs e)  //1_2.用戶密碼修改
         {
-            //2.用戶密碼修改
+            //1_2.用戶密碼修改
             try
             {
                 string[] strModule = menu1_2.Text.Split('.');
@@ -199,9 +201,9 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu1_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void menu1_3_Click(object sender, EventArgs e)  //3.其他用戶登入系統
+        private void menu1_3_Click(object sender, EventArgs e)  //1_3.其他用戶登入系統
         {
-            //3.其他用戶登入系統
+            //1_3.其他用戶登入系統
             try
             {
                 string[] strModule = menu1_3.Text.Split('.');
@@ -236,9 +238,9 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu1_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void menu1_4_Click(object sender, EventArgs e)  //4.發送消息
+        private void menu1_4_Click(object sender, EventArgs e)  //1_4.發送消息
         {
-            //4.發送消息
+            //1_4.發送消息
             try
             {
                 string[] strModule = menu1_4.Text.Split('.');
@@ -279,9 +281,9 @@ namespace Price2
             }
         }
 
-        private void menu1_6_Click(object sender, EventArgs e)  //6.當前系統用戶狀況
+        private void menu1_6_Click(object sender, EventArgs e)  //1_6.當前系統用戶狀況
         {
-            //6.當前系統用戶狀況
+            //1_6.當前系統用戶狀況
             try
             {
                 string[] strModule = menu1_6.Text.Split('.');
@@ -317,9 +319,9 @@ namespace Price2
             }
         }
 
-        private void menu2_1_Click(object sender, EventArgs e)
+        private void menu2_1_Click(object sender, EventArgs e)  //2_1.電話簿
         {
-            //6.當前系統用戶狀況
+            //2_1.電話簿
             try
             {
                 string[] strModule = menu2_1.Text.Split('.');
@@ -352,6 +354,43 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-menu2_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void menu2_2_Click(object sender, EventArgs e)
+        {
+            //2_2客戶資料建立
+            try
+            {
+                string[] strModule = menu2_2.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                frmCustomer frmCustomer = new frmCustomer();
+                frmCustomer.MdiParent = this;
+                frmCustomer.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmCustomer.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu2_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -387,11 +426,16 @@ namespace Price2
 
         #endregion
         #region Page2(基礎)
-        private void btn2_1_Click(object sender, EventArgs e)   //1.電話簿
+        private void btn2_1_Click(object sender, EventArgs e)   //2_1.電話簿
         {
-            //1.電話簿
+            //2_1.電話簿
             menu2_1.PerformClick();
-        } 
+        }
+        private void btn2_2_Click(object sender, EventArgs e)
+        {
+            //2_2.客戶資料建立
+            menu2_2.PerformClick();
+        }
         #endregion
         private void startSocket()
         {
@@ -545,7 +589,5 @@ namespace Price2
             }
 
         }
-
-       
     }
 }

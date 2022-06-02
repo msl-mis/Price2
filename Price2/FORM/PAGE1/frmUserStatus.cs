@@ -106,7 +106,7 @@ namespace Price2
                         }
                     }
                     
-                    await Task.Delay(5000); //延遲10秒
+                    await Task.Delay(10000); //延遲10秒
                     this.Cursor = Cursors.Default;//還原預設
                     btnRefresh.PerformClick();
                     MessageBox.Show("删除使用者成功!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

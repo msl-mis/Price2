@@ -159,20 +159,28 @@ namespace Price2
                 //取得Local IP
                 System.Net.IPAddress SvrIP = new System.Net.IPAddress(Dns.GetHostByName(Dns.GetHostName()).AddressList[0].Address);
                 clsGlobal.strG_LocalIP = SvrIP.ToString();
+                txtUser.Focus();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-frmLogin_Activated" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
             {
-                //clsDB.Close();
+                txtPassword.Focus();
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnOK.PerformClick();
+            }
         }
     }
 }

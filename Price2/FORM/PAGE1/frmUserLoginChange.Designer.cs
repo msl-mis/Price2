@@ -42,7 +42,7 @@
             // groupBox
             // 
             this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox.Controls.Add(this.cboArea);
             this.groupBox.Controls.Add(this.btnClose);
             this.groupBox.Controls.Add(this.btnOK);
@@ -51,11 +51,11 @@
             this.groupBox.Controls.Add(this.txtUser);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox.Location = new System.Drawing.Point(0, -14);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox.Location = new System.Drawing.Point(0, -18);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(480, 242);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Size = new System.Drawing.Size(640, 302);
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             // 
@@ -68,18 +68,20 @@
             this.cboArea.Items.AddRange(new object[] {
             "正式區",
             "測試區"});
-            this.cboArea.Location = new System.Drawing.Point(187, 199);
+            this.cboArea.Location = new System.Drawing.Point(249, 249);
+            this.cboArea.Margin = new System.Windows.Forms.Padding(4);
             this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(105, 28);
+            this.cboArea.Size = new System.Drawing.Size(139, 33);
             this.cboArea.TabIndex = 13;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(269, 149);
+            this.btnClose.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(359, 186);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(68, 34);
+            this.btnClose.Size = new System.Drawing.Size(91, 42);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -88,10 +90,11 @@
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnOK.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOK.Location = new System.Drawing.Point(126, 149);
+            this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOK.Location = new System.Drawing.Point(168, 186);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(68, 34);
+            this.btnOK.Size = new System.Drawing.Size(91, 42);
             this.btnOK.TabIndex = 11;
             this.btnOK.Text = "登入";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -99,50 +102,55 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(187, 98);
+            this.txtPassword.Location = new System.Drawing.Point(249, 122);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(129, 29);
+            this.txtPassword.Size = new System.Drawing.Size(171, 34);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(95, 98);
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(127, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 31);
+            this.label2.Size = new System.Drawing.Size(115, 39);
             this.label2.TabIndex = 9;
             this.label2.Text = "密    碼 :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(187, 41);
+            this.txtUser.Location = new System.Drawing.Point(249, 51);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(129, 29);
+            this.txtUser.Size = new System.Drawing.Size(171, 34);
             this.txtUser.TabIndex = 8;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(95, 39);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(127, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 31);
+            this.label1.Size = new System.Drawing.Size(115, 39);
             this.label1.TabIndex = 7;
             this.label1.Text = "用戶名 :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmUserLoginChange
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(480, 225);
+            this.ClientSize = new System.Drawing.Size(640, 281);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmUserLoginChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "其他用戶登入系統";
             this.Activated += new System.EventHandler(this.frmUserLoginChange_Activated);
             this.groupBox.ResumeLayout(false);
