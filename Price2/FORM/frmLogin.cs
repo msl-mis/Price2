@@ -182,5 +182,10 @@ namespace Price2
                 btnOK.PerformClick();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

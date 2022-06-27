@@ -51,21 +51,22 @@
             this.groupBox.Controls.Add(this.btnClose);
             this.groupBox.Controls.Add(this.btnRefresh);
             this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox.Location = new System.Drawing.Point(15, 6);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Location = new System.Drawing.Point(12, 5);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(927, 418);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Size = new System.Drawing.Size(742, 334);
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             // 
             // btnDeleteUser
             // 
             this.btnDeleteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDeleteUser.Location = new System.Drawing.Point(352, 362);
-            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteUser.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDeleteUser.Location = new System.Drawing.Point(282, 290);
+            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(132, 42);
+            this.btnDeleteUser.Size = new System.Drawing.Size(106, 34);
             this.btnDeleteUser.TabIndex = 20;
             this.btnDeleteUser.Text = "刪除使用者";
             this.btnDeleteUser.UseVisualStyleBackColor = false;
@@ -84,14 +85,14 @@
             this.wus_username,
             this.wus_name,
             this.wus_using});
-            this.dgvUser.Location = new System.Drawing.Point(11, 32);
-            this.dgvUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUser.Location = new System.Drawing.Point(9, 26);
+            this.dgvUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersVisible = false;
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 27;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(896, 315);
+            this.dgvUser.Size = new System.Drawing.Size(717, 252);
             this.dgvUser.TabIndex = 19;
             // 
             // chk
@@ -146,10 +147,11 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.Location = new System.Drawing.Point(529, 362);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(423, 290);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(93, 42);
+            this.btnClose.Size = new System.Drawing.Size(74, 34);
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -158,10 +160,11 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnRefresh.Location = new System.Drawing.Point(175, 362);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRefresh.Location = new System.Drawing.Point(140, 290);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(132, 42);
+            this.btnRefresh.Size = new System.Drawing.Size(106, 34);
             this.btnRefresh.TabIndex = 14;
             this.btnRefresh.Text = "重新整理";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -169,14 +172,14 @@
             // 
             // frmUserStatus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(956, 424);
+            this.ClientSize = new System.Drawing.Size(765, 339);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmUserStatus";
             this.Text = "當前系統用戶狀況";
             this.Activated += new System.EventHandler(this.frmUserStatus_Activated);

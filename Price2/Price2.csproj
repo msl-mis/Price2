@@ -286,23 +286,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Aha-Soft-Standard-Portfolio-Price.ico" />
-    <None Include="Resources\Login.png" />
-    <None Include="Resources\otheruser.png" />
-    <None Include="Resources\pwchange.png" />
+    <None Include="Resources\computeruser.png" />
     <None Include="Resources\Usersfile.png" />
-    <None Include="Resources\3-3.png" />
-    <None Include="Resources\3-5.png" />
-    <None Include="Resources\3-1data.png" />
-    <None Include="Resources\3-2BOM.png" />
-    <None Include="Resources\3-3list.png" />
-    <None Include="Resources\3-4use.png" />
-    <None Include="Resources\pwchange1.png" />
+    <None Include="Resources\Refresh.png" />
+    <None Include="Resources\pwchange.png" />
+    <None Include="Resources\otheruser.png" />
+    <None Include="Resources\massage.png" />
+    <None Include="Resources\Login.png" />
+    <None Include="Resources\phonebook.png" />
     <None Include="Resources\firmadd.png" />
     <None Include="Resources\customeradd.png" />
-    <None Include="Resources\phonebook.png" />
-    <None Include="Resources\Refresh.png" />
-    <None Include="Resources\massage.png" />
-    <None Include="Resources\computeruser.png" />
+    <None Include="Resources\3-5.png" />
+    <None Include="Resources\3-4use.png" />
+    <None Include="Resources\3-3list.png" />
+    <None Include="Resources\3-3.png" />
+    <None Include="Resources\3-2BOM.png" />
+    <None Include="Resources\3-1data.png" />
+    <None Include="Resources\pwchange1.png" />
     <None Include="Resources\password2.png" />
     <None Include="Resources\password1.png" />
     <None Include="Resources\user.png" />

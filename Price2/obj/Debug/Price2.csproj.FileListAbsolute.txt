@@ -95,3 +95,13 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_ShortName.resource
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Country.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Tel.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVendor.resources
+D:\Price2\Price2\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Price2\Price2\bin\Debug\stdole.dll
+D:\Price2\Price2\obj\Debug\Price2.frmCustomer_BankInfo.resources
+D:\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Country.resources
+D:\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Customer.resources
+D:\Price2\Price2\obj\Debug\Price2.frmCustomer.resources
+D:\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_ShortName.resources
+D:\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Tel.resources
+D:\Price2\Price2\obj\Debug\Price2.frmVendor.resources
+D:\Price2\Price2\obj\Debug\Price2.csproj.CopyComplete
