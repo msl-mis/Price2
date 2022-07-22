@@ -181,10 +181,7 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
+                
                 frmUserChangePassword frmUserChangePassword = new frmUserChangePassword();
                 frmUserChangePassword.MdiParent = this;
                 frmUserChangePassword.StartPosition = FormStartPosition.CenterScreen;
@@ -218,10 +215,6 @@ namespace Price2
                     ActiveMdiChild.Close();
                 }
 
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
                 frmUserLoginChange frmUserLoginChange = new frmUserLoginChange();
                 frmUserLoginChange.MdiParent = this;
                 frmUserLoginChange.StartPosition = FormStartPosition.CenterScreen;
@@ -298,10 +291,6 @@ namespace Price2
                     ActiveMdiChild.Close();
                 }
 
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
                 frmUserStatus frmUserStatus = new frmUserStatus();
                 frmUserStatus.MdiParent = this;
                 frmUserStatus.StartPosition = FormStartPosition.CenterScreen;
@@ -336,10 +325,6 @@ namespace Price2
                     ActiveMdiChild.Close();
                 }
 
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
                 frmTelephone frmTelephone = new frmTelephone();
                 frmTelephone.MdiParent = this;
                 frmTelephone.StartPosition = FormStartPosition.CenterScreen;
@@ -356,7 +341,7 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu2_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void menu2_2_Click(object sender, EventArgs e)
+        private void menu2_2_Click(object sender, EventArgs e)  //2_2客戶資料建立
         {
             //2_2客戶資料建立
             try
@@ -373,10 +358,6 @@ namespace Price2
                     ActiveMdiChild.Close();
                 }
 
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
                 frmCustomer frmCustomer = new frmCustomer();
                 frmCustomer.MdiParent = this;
                 frmCustomer.StartPosition = FormStartPosition.CenterScreen;
@@ -394,7 +375,7 @@ namespace Price2
             }
         }
 
-        private void menu2_3_Click(object sender, EventArgs e)
+        private void menu2_3_Click(object sender, EventArgs e)  //2_3廠商資料建立
         {
             //2_3廠商資料建立
             try
@@ -411,10 +392,6 @@ namespace Price2
                     ActiveMdiChild.Close();
                 }
 
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
                 frmVendor frmVendor = new frmVendor();
                 frmVendor.MdiParent = this;
                 frmVendor.StartPosition = FormStartPosition.CenterScreen;
@@ -429,6 +406,104 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-menu2_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu3_1_Click(object sender, EventArgs e)  //3_1火車頭資料建立
+        {
+            //3_1火車頭資料建立
+            try
+            {
+                string[] strModule = menu3_1.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmProduct frmProduct = new frmProduct();
+                frmProduct.MdiParent = this;
+                frmProduct.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmProduct.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu3_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu3_2_Click(object sender, EventArgs e)
+        {
+            //3_2 BOM產品結構建立
+            try
+            {
+                Boolean blnHighlight = false;
+                string[] strModule = menu3_2.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                string strSQL = "";
+                DataTable dt;
+                strSQL = $@"select pub_bomuse from pub ";
+                dt = clsDB.sql_select_dt(strSQL);
+                string pub_bomuse = dt.Rows[0]["pub_bomuse"].ToString();
+                if (pub_bomuse != "")
+                {
+                    strSQL = $@"select pas_name from pas where pas_username='{ clsGlobal.strG_User}' ";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows[0]["pas_name"].ToString() != pub_bomuse )
+                    {
+                        if (MessageBox.Show(this, "BOM產品結構建立[" + pub_bomuse + "] 正在使用, " + "\n" + "您要用唯讀模式進入嗎 ? ", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            blnHighlight = true;
+                        }
+                    }
+                }
+                frmBOM frmBOM = new frmBOM();
+                frmBOM.MdiParent = this;
+                frmBOM.StartPosition = FormStartPosition.CenterScreen;
+                
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                if(blnHighlight==true)
+                {
+                    frmBOM.blnHighlight = true;
+                }
+                else
+                {
+                    frmBOM.blnHighlight = false;
+                }
+                frmBOM.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu3_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -463,6 +538,7 @@ namespace Price2
         }
 
         #endregion
+
         #region Page2(基礎)
         private void btn2_1_Click(object sender, EventArgs e)   //2_1.電話簿
         {
@@ -470,16 +546,30 @@ namespace Price2
             menu2_1.PerformClick();
         }
         
-        private void btn2_2_Click(object sender, EventArgs e)
+        private void btn2_2_Click(object sender, EventArgs e)   //2_2.客戶資料建立
         {
             //2_2.客戶資料建立
             menu2_2.PerformClick();
         }
 
-        private void btn2_3_Click(object sender, EventArgs e)
+        private void btn2_3_Click(object sender, EventArgs e)   //2_3.廠商資料建立
         {
             //2_3.廠商資料建立
             menu2_3.PerformClick();
+        }
+        #endregion
+
+        #region Page3(BOM)
+        private void btn3_1_Click(object sender, EventArgs e)   //3_1.火車頭資料建立
+        {
+            //3_1.火車頭資料建立
+            menu3_1.PerformClick();
+        }
+
+        private void btn3_2_Click(object sender, EventArgs e)   //3_2.BOM產品結構建立
+        {
+            //3_2.BOM產品結構建立
+            menu3_2.PerformClick();
         }
         #endregion
         private void startSocket()
@@ -635,6 +725,51 @@ namespace Price2
 
         }
 
-        
+        private void lblBOM_Unlock_Click(object sender, EventArgs e)
+        {
+            //BOM解鎖
+            try
+            {
+                string strSQL = "";
+                DataTable dt;
+                strSQL = $@"select pub_bomuse from pub ";
+                dt = clsDB.sql_select_dt(strSQL);
+                string pub_bomuse = dt.Rows[0]["pub_bomuse"].ToString();
+                if (pub_bomuse != "")
+                {
+                    strSQL = $@"select pas_name from pas where pas_username='{clsGlobal.strG_User}' ";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows[0]["pas_name"].ToString() != pub_bomuse)
+                    {
+                        if (MessageBox.Show(this, "BOM產品結構建立[" + pub_bomuse + "] 正在使用, " + "\n" + "請先與使用者確認有無在修改資料中,強制解鎖有可能會造成資料錯亂, " + "\n" + "您要解鎖嗎? ", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            strSQL = $@"update pub set pub_bomuse='' ";
+                            clsDB.Execute(strSQL);
+                            lblBOM_Unlock.Visible = false;
+                            strSQL = $@"insert into bomlog
+                                                    ([b_before],
+                                                     [b_after],
+                                                     [b_date],
+                                                     [b_username],
+                                                     [b_computername])
+                                        values      ('BOM解鎖',
+                                                     '原使用者{pub_bomuse}',
+                                                     '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}',
+                                                     '{clsGlobal.strG_User}',
+                                                     Host_name()) ";
+                            clsDB.Execute(strSQL);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-lblBOM_Unlock_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

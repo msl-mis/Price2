@@ -433,7 +433,7 @@ namespace Price2
             try
             {
                 String strSQL = "";
-                DataTable dt;
+                DataTable dt = new DataTable();
                 if (txtCustomerID.Text == "")
                 {
                     MessageBox.Show("請輸入欲儲存的客戶編號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

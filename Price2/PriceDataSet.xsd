@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PriceDataSet" targetNamespace="http://tempuri.org/PriceDataSet.xsd" xmlns:mstns="http://tempuri.org/PriceDataSet.xsd" xmlns="http://tempuri.org/PriceDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PriceConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PriceConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Price2.Properties.Settings.GlobalReference.Default.PriceConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PriceDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PriceDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PriceDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bomlist" msprop:Generator_RowEvHandlerName="bomlistRowChangeEventHandler" msprop:Generator_RowDeletedName="bomlistRowDeleted" msprop:Generator_RowDeletingName="bomlistRowDeleting" msprop:Generator_RowEvArgName="bomlistRowChangeEvent" msprop:Generator_TablePropName="bomlist" msprop:Generator_RowChangedName="bomlistRowChanged" msprop:Generator_RowChangingName="bomlistRowChanging" msprop:Generator_TableClassName="bomlistDataTable" msprop:Generator_RowClassName="bomlistRow" msprop:Generator_TableVarName="tablebomlist" msprop:Generator_UserTableName="bomlist">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ap3_part" msprop:Generator_ColumnPropNameInRow="ap3_part" msprop:Generator_ColumnPropNameInTable="ap3_partColumn" msprop:Generator_ColumnVarNameInTable="columnap3_part" msprop:Generator_UserColumnName="ap3_part" type="xs:string" minOccurs="0" />
+              <xs:element name="asp_vendormaterialno" msprop:Generator_ColumnPropNameInRow="asp_vendormaterialno" msprop:Generator_ColumnPropNameInTable="asp_vendormaterialnoColumn" msprop:Generator_ColumnVarNameInTable="columnasp_vendormaterialno" msprop:Generator_UserColumnName="asp_vendormaterialno" type="xs:string" minOccurs="0" />
+              <xs:element name="ap3_purprice" msprop:Generator_ColumnPropNameInRow="ap3_purprice" msprop:Generator_ColumnPropNameInTable="ap3_purpriceColumn" msprop:Generator_ColumnVarNameInTable="columnap3_purprice" msprop:Generator_UserColumnName="ap3_purprice" type="xs:string" minOccurs="0" />
+              <xs:element name="ap3_currency" msprop:Generator_ColumnPropNameInRow="ap3_currency" msprop:Generator_ColumnPropNameInTable="ap3_currencyColumn" msprop:Generator_ColumnVarNameInTable="columnap3_currency" msprop:Generator_UserColumnName="ap3_currency" type="xs:string" minOccurs="0" />
+              <xs:element name="ap3_tbprice" msprop:Generator_ColumnPropNameInRow="ap3_tbprice" msprop:Generator_ColumnPropNameInTable="ap3_tbpriceColumn" msprop:Generator_ColumnVarNameInTable="columnap3_tbprice" msprop:Generator_UserColumnName="ap3_tbprice" type="xs:string" minOccurs="0" />
+              <xs:element name="ap3_vendorid" msprop:Generator_ColumnPropNameInRow="ap3_vendorid" msprop:Generator_ColumnPropNameInTable="ap3_vendoridColumn" msprop:Generator_ColumnVarNameInTable="columnap3_vendorid" msprop:Generator_UserColumnName="ap3_vendorid" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

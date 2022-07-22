@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCapital = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtBankInfo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBankAccount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtPrincipal = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtBankAccount = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtBankInfo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCapital = new System.Windows.Forms.TextBox();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,66 @@
             this.groupBox.TabIndex = 2;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "客戶負責人及銀行資料錄入";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
+            this.label4.Location = new System.Drawing.Point(12, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 34);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "資本額：";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCapital
+            // 
+            this.txtCapital.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtCapital.Location = new System.Drawing.Point(145, 120);
+            this.txtCapital.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCapital.Name = "txtCapital";
+            this.txtCapital.Size = new System.Drawing.Size(275, 34);
+            this.txtCapital.TabIndex = 41;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(12, 180);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 34);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "銀行資料：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtBankInfo
+            // 
+            this.txtBankInfo.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtBankInfo.Location = new System.Drawing.Point(145, 180);
+            this.txtBankInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBankInfo.Name = "txtBankInfo";
+            this.txtBankInfo.Size = new System.Drawing.Size(275, 34);
+            this.txtBankInfo.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(12, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 34);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "銀行帳號：";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtBankAccount
+            // 
+            this.txtBankAccount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtBankAccount.Location = new System.Drawing.Point(145, 240);
+            this.txtBankAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBankAccount.Name = "txtBankAccount";
+            this.txtBankAccount.Size = new System.Drawing.Size(275, 34);
+            this.txtBankAccount.TabIndex = 37;
             // 
             // label2
             // 
@@ -128,74 +188,13 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(12, 240);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 34);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "銀行帳號：";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtBankAccount
-            // 
-            this.txtBankAccount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtBankAccount.Location = new System.Drawing.Point(145, 240);
-            this.txtBankAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBankAccount.Name = "txtBankAccount";
-            this.txtBankAccount.Size = new System.Drawing.Size(275, 34);
-            this.txtBankAccount.TabIndex = 37;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(12, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 34);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "銀行資料：";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtBankInfo
-            // 
-            this.txtBankInfo.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtBankInfo.Location = new System.Drawing.Point(145, 180);
-            this.txtBankInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBankInfo.Name = "txtBankInfo";
-            this.txtBankInfo.Size = new System.Drawing.Size(275, 34);
-            this.txtBankInfo.TabIndex = 39;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(12, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 34);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "資本額：";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtCapital
-            // 
-            this.txtCapital.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCapital.Location = new System.Drawing.Point(145, 120);
-            this.txtCapital.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCapital.Name = "txtCapital";
-            this.txtCapital.Size = new System.Drawing.Size(275, 34);
-            this.txtCapital.TabIndex = 41;
-            // 
             // frmCustomer_BankInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCustomer_BankInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "客戶銀行資料輸入";

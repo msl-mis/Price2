@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.cboCountry = new System.Windows.Forms.ComboBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnInq = new System.Windows.Forms.Button();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.chkDeal = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.cus_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboCountry = new System.Windows.Forms.ComboBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnInq = new System.Windows.Forms.Button();
+            this.lblCount = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -64,17 +65,45 @@
             this.groupBox.TabIndex = 2;
             this.groupBox.TabStop = false;
             // 
+            // chkDeal
+            // 
+            this.chkDeal.Location = new System.Drawing.Point(363, 34);
+            this.chkDeal.Name = "chkDeal";
+            this.chkDeal.Size = new System.Drawing.Size(91, 31);
+            this.chkDeal.TabIndex = 52;
+            this.chkDeal.Text = "成交";
+            this.chkDeal.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(17, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 34);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "搜尋國別：";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // dgvData
             // 
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cus_id,
             this.cus_name,
             this.cus_contact,
             this.cus_tel});
+            this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(22, 77);
             this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
@@ -86,6 +115,42 @@
             this.dgvData.Size = new System.Drawing.Size(702, 416);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            // 
+            // cus_id
+            // 
+            this.cus_id.DataPropertyName = "cus_id";
+            this.cus_id.HeaderText = "客戶編號";
+            this.cus_id.MinimumWidth = 6;
+            this.cus_id.Name = "cus_id";
+            this.cus_id.ReadOnly = true;
+            this.cus_id.Width = 125;
+            // 
+            // cus_name
+            // 
+            this.cus_name.DataPropertyName = "cus_name";
+            this.cus_name.HeaderText = "客戶名稱";
+            this.cus_name.MinimumWidth = 6;
+            this.cus_name.Name = "cus_name";
+            this.cus_name.ReadOnly = true;
+            this.cus_name.Width = 200;
+            // 
+            // cus_contact
+            // 
+            this.cus_contact.DataPropertyName = "cus_contact";
+            this.cus_contact.HeaderText = "聯絡人";
+            this.cus_contact.MinimumWidth = 6;
+            this.cus_contact.Name = "cus_contact";
+            this.cus_contact.ReadOnly = true;
+            this.cus_contact.Width = 125;
+            // 
+            // cus_tel
+            // 
+            this.cus_tel.DataPropertyName = "cus_tel";
+            this.cus_tel.HeaderText = "電話";
+            this.cus_tel.MinimumWidth = 6;
+            this.cus_tel.Name = "cus_tel";
+            this.cus_tel.ReadOnly = true;
+            this.cus_tel.Width = 200;
             // 
             // cboCountry
             // 
@@ -163,69 +228,13 @@
             this.lblCount.Text = "筆數";
             this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(17, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 34);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "搜尋國別：";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // chkDeal
-            // 
-            this.chkDeal.Location = new System.Drawing.Point(363, 34);
-            this.chkDeal.Name = "chkDeal";
-            this.chkDeal.Size = new System.Drawing.Size(91, 31);
-            this.chkDeal.TabIndex = 52;
-            this.chkDeal.Text = "成交";
-            this.chkDeal.UseVisualStyleBackColor = true;
-            // 
-            // cus_id
-            // 
-            this.cus_id.DataPropertyName = "cus_id";
-            this.cus_id.HeaderText = "客戶編號";
-            this.cus_id.MinimumWidth = 6;
-            this.cus_id.Name = "cus_id";
-            this.cus_id.ReadOnly = true;
-            this.cus_id.Width = 125;
-            // 
-            // cus_name
-            // 
-            this.cus_name.DataPropertyName = "cus_name";
-            this.cus_name.HeaderText = "客戶名稱";
-            this.cus_name.MinimumWidth = 6;
-            this.cus_name.Name = "cus_name";
-            this.cus_name.ReadOnly = true;
-            this.cus_name.Width = 200;
-            // 
-            // cus_contact
-            // 
-            this.cus_contact.DataPropertyName = "cus_contact";
-            this.cus_contact.HeaderText = "聯絡人";
-            this.cus_contact.MinimumWidth = 6;
-            this.cus_contact.Name = "cus_contact";
-            this.cus_contact.ReadOnly = true;
-            this.cus_contact.Width = 125;
-            // 
-            // cus_tel
-            // 
-            this.cus_tel.DataPropertyName = "cus_tel";
-            this.cus_tel.HeaderText = "電話";
-            this.cus_tel.MinimumWidth = 6;
-            this.cus_tel.Name = "cus_tel";
-            this.cus_tel.ReadOnly = true;
-            this.cus_tel.Width = 200;
-            // 
             // frmCustomer_Inq_Country
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 516);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCustomer_Inq_Country";
             this.Text = "選擇客戶[國別條件]";
             this.Activated += new System.EventHandler(this.frmCustomer_Inq_Country_Activated);
