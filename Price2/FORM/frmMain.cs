@@ -76,7 +76,9 @@ namespace Price2
                 #region 加入第3頁
                 gb3.Visible = true;
                 #endregion
-
+                #region 加入第4頁
+                gb4.Visible = true;
+                #endregion
 
 
 
@@ -144,8 +146,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage1;
+                gb1.Visible = true;
                 frmUserManagement frmUserManagement = new frmUserManagement(); //宣告newform為FormSub的型態
                 frmUserManagement.MdiParent = this;
+                frmUserManagement.FormClosed += childForm_FormClosed;
                 //frmUserManagement.Anchor = AnchorStyles.None;
                 //frmUserManagement.Dock = DockStyle.Fill;
                 frmUserManagement.StartPosition = FormStartPosition.CenterScreen;
@@ -181,9 +187,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-                
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage1;
+                gb1.Visible = true;
                 frmUserChangePassword frmUserChangePassword = new frmUserChangePassword();
                 frmUserChangePassword.MdiParent = this;
+                frmUserChangePassword.FormClosed += childForm_FormClosed;
                 frmUserChangePassword.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -214,9 +223,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage1;
+                gb1.Visible = true;
                 frmUserLoginChange frmUserLoginChange = new frmUserLoginChange();
                 frmUserLoginChange.MdiParent = this;
+                frmUserLoginChange.FormClosed += childForm_FormClosed;
                 frmUserLoginChange.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -290,9 +302,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage1;
+                gb1.Visible = true;
                 frmUserStatus frmUserStatus = new frmUserStatus();
                 frmUserStatus.MdiParent = this;
+                frmUserStatus.FormClosed += childForm_FormClosed;
                 frmUserStatus.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -324,9 +339,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage2;
+                gb2.Visible = true;
                 frmTelephone frmTelephone = new frmTelephone();
                 frmTelephone.MdiParent = this;
+                frmTelephone.FormClosed += childForm_FormClosed;
                 frmTelephone.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -357,9 +375,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage2;
+                gb2.Visible = true;
                 frmCustomer frmCustomer = new frmCustomer();
                 frmCustomer.MdiParent = this;
+                frmCustomer.FormClosed += childForm_FormClosed;
                 frmCustomer.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -391,9 +412,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage2;
+                gb2.Visible = true;
                 frmVendor frmVendor = new frmVendor();
                 frmVendor.MdiParent = this;
+                frmVendor.FormClosed += childForm_FormClosed;
                 frmVendor.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -425,9 +449,12 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage3;
+                gb3.Visible = true;
                 frmProduct frmProduct = new frmProduct();
                 frmProduct.MdiParent = this;
+                frmProduct.FormClosed += childForm_FormClosed;
                 frmProduct.StartPosition = FormStartPosition.CenterScreen;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -460,7 +487,9 @@ namespace Price2
                 {
                     ActiveMdiChild.Close();
                 }
-
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage3;
+                gb3.Visible = true;
                 string strSQL = "";
                 DataTable dt;
                 strSQL = $@"select pub_bomuse from pub ";
@@ -484,6 +513,7 @@ namespace Price2
                 }
                 frmBOM frmBOM = new frmBOM();
                 frmBOM.MdiParent = this;
+                frmBOM.FormClosed += childForm_FormClosed;
                 frmBOM.StartPosition = FormStartPosition.CenterScreen;
                 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
@@ -504,6 +534,43 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-menu3_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_1_Click(object sender, EventArgs e)  //4_1 參照法資料輸入
+        {
+            //4_1 參照法資料輸入
+            try
+            {
+                string[] strModule = menu3_1.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                tabMain.SelectedTab = tabPage4;
+                gb4.Visible = true;
+                frmRefer frmRefer = new frmRefer();
+                frmRefer.MdiParent = this;
+                frmRefer.FormClosed += childForm_FormClosed;
+                frmRefer.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmRefer.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -572,6 +639,15 @@ namespace Price2
             menu3_2.PerformClick();
         }
         #endregion
+
+        #region Page4(報價管理)
+        private void btn4_1_Click(object sender, EventArgs e)   //4_1.參照法資料輸入
+        {
+            //4_1.參照法資料輸入
+            menu4_1.PerformClick();
+        }
+        #endregion
+
         private void startSocket()
         {
             try
@@ -771,5 +847,11 @@ namespace Price2
                 MessageBox.Show(this.Name + "-lblBOM_Unlock_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        void childForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            gbMain.Visible = true;
+        }
+
     }
 }

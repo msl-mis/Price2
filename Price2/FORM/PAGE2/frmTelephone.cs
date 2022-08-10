@@ -221,6 +221,7 @@ namespace Price2
                 again:
 
                 InputBox input = new InputBox();
+                input.ShowInTaskbar = false;//圖示不顯示在工作列
                 input.lblInfo.Text = "輸入要改成什麼姓名:";
                 DialogResult dr = input.ShowDialog();
                 if (dr == DialogResult.OK)
@@ -260,6 +261,7 @@ namespace Price2
             again:
 
                 InputBox input = new InputBox();
+                input.ShowInTaskbar = false;//圖示不顯示在工作列
                 input.lblInfo.Text = "輸入要複製到的姓名:";
                 DialogResult dr = input.ShowDialog();
                 if (dr == DialogResult.OK)
@@ -391,8 +393,8 @@ namespace Price2
             //結束
             try
             {
-                frmMain frmMain = (frmMain)this.MdiParent;
-                frmMain.gbMain.Visible = true;
+                //frmMain frmMain = (frmMain)this.MdiParent;
+                //frmMain.gbMain.Visible = true;
                 this.Close();
             }
             catch (Exception ex)
@@ -431,6 +433,7 @@ namespace Price2
         private void btnInq_Click(object sender, EventArgs e)
         {
             frmTelephone_Inq frmTelephone_Inq = new frmTelephone_Inq();
+            frmTelephone_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
             frmTelephone_Inq.strUserName = cboUser.Text;
             frmTelephone_Inq.ShowDialog();
             if(strName!="")
@@ -450,6 +453,7 @@ namespace Price2
             try
             {
                 frmTelephone_RenameType frmTelephone_RenameType = new frmTelephone_RenameType();
+                frmTelephone_RenameType.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmTelephone_RenameType.strUser = cboUser.Text;
                 frmTelephone_RenameType.strItem = cboType.Text;
                 frmTelephone_RenameType.ShowDialog();

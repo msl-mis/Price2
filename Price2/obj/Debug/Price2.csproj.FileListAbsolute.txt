@@ -163,3 +163,6 @@ D:\Source Code\Price2\Price2\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.re
 D:\Source Code\Price2\Price2\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmReport.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOM_TrackChanges.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_History.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmRefer.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmRefer_Inq_Customer.resources

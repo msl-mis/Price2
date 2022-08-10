@@ -187,5 +187,28 @@ namespace Price2
         {
 
         }
+
+        private void cboArea_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            ComboBox cbx = sender as ComboBox;
+            if (cbx != null)
+            {
+                e.DrawBackground();
+                if (e.Index >= 0)
+                {
+                    //文字置中
+                    StringFormat sf = new StringFormat();
+                    sf.LineAlignment = StringAlignment.Far;
+                    sf.Alignment = StringAlignment.Near;
+
+                    Brush brush = new SolidBrush(cbx.ForeColor);
+                    if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                        brush = SystemBrushes.HighlightText;
+
+                    //重繪字串
+                    e.Graphics.DrawString(cbx.Items[e.Index].ToString(), cbx.Font, brush, e.Bounds, sf);
+                }
+            }
+        }
     }
 }

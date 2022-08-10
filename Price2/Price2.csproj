@@ -104,46 +104,64 @@
   <ItemGroup>
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmBOM_TrackChanges.cs">
+    <Compile Include="frmRefer_Inq_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOM_TrackChanges.Designer.cs">
+    <Compile Include="frmRefer_Inq_Customer.Designer.cs">
+      <DependentUpon>frmRefer_Inq_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRefer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRefer.Designer.cs">
+      <DependentUpon>frmRefer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct_History.Designer.cs">
+      <DependentUpon>frmProduct_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmBOM_TrackChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmBOM_TrackChanges.Designer.cs">
       <DependentUpon>frmBOM_TrackChanges.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReport.cs">
+    <Compile Include="FORM\frmReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReport.Designer.cs">
+    <Compile Include="FORM\frmReport.Designer.cs">
       <DependentUpon>frmReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOM_Level3.cs">
+    <Compile Include="FORM\PAGE3\frmBOM_Level3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOM_Level3.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM_Level3.Designer.cs">
       <DependentUpon>frmBOM_Level3.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOM_Level2.cs">
+    <Compile Include="FORM\PAGE3\frmBOM_Level2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOM_Level2.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM_Level2.Designer.cs">
       <DependentUpon>frmBOM_Level2.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOM_Level1.cs">
+    <Compile Include="FORM\PAGE3\frmBOM_Level1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOM_Level1.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM_Level1.Designer.cs">
       <DependentUpon>frmBOM_Level1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOM.cs">
+    <Compile Include="FORM\PAGE3\frmBOM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOM.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM.Designer.cs">
       <DependentUpon>frmBOM.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProduct.cs">
+    <Compile Include="FORM\PAGE3\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProduct.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVendor.cs">
@@ -304,27 +322,36 @@
     <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Tel.resx">
       <DependentUpon>frmCustomer_Inq_Tel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOM.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM.resx">
       <DependentUpon>frmBOM.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOM_Level1.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM_Level1.resx">
       <DependentUpon>frmBOM_Level1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOM_Level2.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM_Level2.resx">
       <DependentUpon>frmBOM_Level2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOM_Level3.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM_Level3.resx">
       <DependentUpon>frmBOM_Level3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOM_TrackChanges.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM_TrackChanges.resx">
       <DependentUpon>frmBOM_TrackChanges.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReport.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct_History.resx">
+      <DependentUpon>frmProduct_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProduct.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRefer.resx">
+      <DependentUpon>frmRefer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRefer_Inq_Customer.resx">
+      <DependentUpon>frmRefer_Inq_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendor.resx">
       <DependentUpon>frmVendor.cs</DependentUpon>

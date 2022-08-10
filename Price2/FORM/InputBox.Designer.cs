@@ -31,6 +31,7 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.txtIpnut = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblInfo
@@ -59,7 +60,7 @@
             this.btnOK.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOK.Location = new System.Drawing.Point(289, 129);
+            this.btnOK.Location = new System.Drawing.Point(51, 144);
             this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(92, 40);
@@ -68,6 +69,20 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCancel.Location = new System.Drawing.Point(288, 144);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 40);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "取消";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // InputBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -75,6 +90,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(449, 246);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtIpnut);
             this.Controls.Add(this.lblInfo);
@@ -88,8 +104,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtIpnut;
         private System.Windows.Forms.Button btnOK;
         public System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.TextBox txtIpnut;
     }
 }

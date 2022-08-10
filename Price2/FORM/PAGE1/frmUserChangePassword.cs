@@ -58,8 +58,8 @@ namespace Price2
             //結束
             try
             {
-                frmMain frmMain = (frmMain)this.MdiParent;
-                frmMain.gbMain.Visible = true;
+                //frmMain frmMain = (frmMain)this.MdiParent;
+                //frmMain.gbMain.Visible = true;
                 this.Close();
             }
             catch (Exception ex)

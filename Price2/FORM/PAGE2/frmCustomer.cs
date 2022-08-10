@@ -78,8 +78,8 @@ namespace Price2
             //結束
             try
             {
-                frmMain frmMain = (frmMain)this.MdiParent;
-                frmMain.gbMain.Visible = true;
+                //frmMain frmMain = (frmMain)this.MdiParent;
+                //frmMain.gbMain.Visible = true;
                 this.Close();
             }
             catch (Exception ex)
@@ -271,6 +271,7 @@ namespace Price2
             try
             {
                 InputBox input = new InputBox();
+                input.ShowInTaskbar = false;//圖示不顯示在工作列
                 input.lblInfo.Text = "請輸入你要複製的新客戶編號:";
                 DialogResult dr = input.ShowDialog();
                 if (dr == DialogResult.OK)
@@ -470,7 +471,7 @@ namespace Price2
         private void btnInq_Customer_Click(object sender, EventArgs e)
         {
             frmCustomer_Inq_Customer frmCustomer_Inq_Customer = new frmCustomer_Inq_Customer();
-            //frmCustomer_Inq_Customer.strUserName = cboUser.Text;
+            frmCustomer_Inq_Customer.ShowInTaskbar = false;//圖示不顯示在工作列
             frmCustomer_Inq_Customer.ShowDialog();
             if(strCustomerID!="")
             {
@@ -525,6 +526,7 @@ namespace Price2
             if (dt.Rows.Count > 0)
             {
                 frmCustomer_BankInfo frmCustomer_BankInfo = new frmCustomer_BankInfo();
+                frmCustomer_BankInfo.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmCustomer_BankInfo.strCustomerID = txtCustomerID.Text;
                 frmCustomer_BankInfo.ShowDialog();
             }
@@ -539,6 +541,7 @@ namespace Price2
         private void btnInq_ShortName_Click(object sender, EventArgs e)
         {
             frmCustomer_Inq_ShortName frmCustomer_Inq_ShortName = new frmCustomer_Inq_ShortName();
+            frmCustomer_Inq_ShortName.ShowInTaskbar = false;//圖示不顯示在工作列
             frmCustomer_Inq_ShortName.ShowDialog();
             if (strCustomerID != "")
             {
@@ -555,6 +558,7 @@ namespace Price2
         private void btnInq_Tel_Click(object sender, EventArgs e)
         {
             frmCustomer_Inq_Tel frmCustomer_Inq_Tel = new frmCustomer_Inq_Tel();
+            frmCustomer_Inq_Tel.ShowInTaskbar = false;
             frmCustomer_Inq_Tel.ShowDialog();
             if (strCustomerID != "")
             {
@@ -571,6 +575,7 @@ namespace Price2
         private void btnInq_Country_Click(object sender, EventArgs e)
         {
             frmCustomer_Inq_Country frmCustomer_Inq_Country = new frmCustomer_Inq_Country();
+            frmCustomer_Inq_Country.ShowInTaskbar = false;//圖示不顯示在工作列
             frmCustomer_Inq_Country.ShowDialog();
             if (strCustomerID != "")
             {

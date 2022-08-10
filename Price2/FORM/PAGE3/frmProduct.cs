@@ -70,7 +70,7 @@ namespace Price2
         private String asp_oduser = "";                  // 審核者
         private Double asp_salesprice = 0;               // 
 
-
+        public static string strProductID = "";
 
 
 
@@ -79,13 +79,12 @@ namespace Price2
             InitializeComponent();
         }
 
-        
-
         private void getData()  //搜尋
         {
             //搜尋
             try
             {
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
                 strSQL_0 = "";
                 strSQL_1 = "";
                 strSQL_2 = "";
@@ -426,12 +425,15 @@ namespace Price2
                 dt = clsDB.sql_select_dt(strSQL_1);
                 btnFilter1.Text = "內：" + dt.Rows.Count.ToString();
                 btnFilter1.BackColor = Color.FromArgb(224, 224, 224);
+                this.Cursor = Cursors.Default;//滑鼠還原預設
             }
             catch (Exception ex)
             {
+                this.Cursor = Cursors.Default;//滑鼠還原預設
                 MessageBox.Show(this.Name + "-getData" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private string SplitWhere(string txtField, string txtInput) //切割查詢欄位
         {
             //切割查詢欄位
@@ -507,7 +509,7 @@ namespace Price2
 
         }
 
-        private void getID()
+        public void getID()
         {
             string strSQL = "";
             DataTable dt = new DataTable();
@@ -636,20 +638,30 @@ namespace Price2
                     {
                         chkSafety.Checked = false;
                     }
-
-                    if (dt.Rows[0]["asp_od"].ToString().Substring(0, 1) == "Y")  //審核標記
+                    
+                    if (dt.Rows[0]["asp_od"].ToString().Length>=1)  //審核標記
                     {
-                        chkCheck.Checked = true;
-                        oddate = Convert.ToDateTime(dt.Rows[0]["asp_oddate"].ToString()).ToString("yyyy/MM/dd");
-                        if (string.IsNullOrEmpty(dt.Rows[0]["asp_oduser"].ToString()))
+                        if (dt.Rows[0]["asp_od"].ToString().Substring(0, 1) == "Y")  
                         {
-                            oduser = "";
+                            chkCheck.Checked = true;
+                            oddate = Convert.ToDateTime(dt.Rows[0]["asp_oddate"].ToString()).ToString("yyyy/MM/dd");
+                            if (string.IsNullOrEmpty(dt.Rows[0]["asp_oduser"].ToString()))
+                            {
+                                oduser = "";
+                            }
+                            else
+                            {
+                                oduser = dt.Rows[0]["asp_oduser"].ToString();
+                            }
+                            lblCheckDate.Text = oddate + " " + oduser;
                         }
                         else
                         {
-                            oduser = dt.Rows[0]["asp_oduser"].ToString();
+                            chkCheck.Checked = false;
+                            oddate = "";
+                            oduser = "";
+                            lblCheckDate.Text = "";
                         }
-                        lblCheckDate.Text = oddate + " " + oduser;
                     }
                     else
                     {
@@ -658,14 +670,22 @@ namespace Price2
                         oduser = "";
                         lblCheckDate.Text = "";
                     }
-                    if (dt.Rows[0]["asp_od"].ToString().Substring(1, 1) == "Y")  //越南材料
+                    if (dt.Rows[0]["asp_od"].ToString().Length>=2)  //越南材料
                     {
-                        chkMaterial_VN.Checked = true;
+                        if (dt.Rows[0]["asp_od"].ToString().Substring(1, 1) == "Y")  //越南材料
+                        {
+                            chkMaterial_VN.Checked = true;
+                        }
+                        else
+                        {
+                            chkMaterial_VN.Checked = false;
+                        }
                     }
                     else
                     {
                         chkMaterial_VN.Checked = false;
                     }
+                        
                     if (txtVenderID.Text != "")
                     {
                         lblVender.Text = getVender(txtVenderID.Text);
@@ -801,8 +821,6 @@ namespace Price2
             }
             return tempLen;
         }
-
-        
 
         private string checkPID(string strNo, string strID) // 檢查品號對應多材料名
         {
@@ -2125,13 +2143,13 @@ namespace Price2
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e) //結束
         {
             //結束
             try
             {
-                frmMain frmMain = (frmMain)this.MdiParent;
-                frmMain.gbMain.Visible = true;
+                //frmMain frmMain = (frmMain)this.MdiParent;
+                //frmMain.gbMain.Visible = true;
                 this.Close();
             }
             catch (Exception ex)
@@ -2445,7 +2463,7 @@ namespace Price2
                 btnFilter0.Enabled = false;
                 btnFilter1.Enabled = false;
                 btnFilter2.Enabled = false;
-                btnInq_PositionInBOM.Enabled = false;
+                btnInq_Material_Q.Enabled = false;
 
                 cboBOM_Q.Text = "(ALL)";
                 cboCurrency_Q.Text = "(ALL)";
@@ -2518,8 +2536,10 @@ namespace Price2
             {
                 if (txtID_Q.Text != "")
                 {
+                    this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
                     txtID_Q.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
                     getData();
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
                 }
             }
         }
@@ -2539,8 +2559,10 @@ namespace Price2
             {
                 if (txtVenderID_Q.Text != "")
                 {
+                    this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
                     txtVenderID_Q.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
                     getData();
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
                 }
             }
         }
@@ -2579,6 +2601,32 @@ namespace Price2
             if (txtDate_E.Text == "")
             {
                 txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }
+        }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtID.Text != "")
+                {
+                    txtID.Text = txtID.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                }
+                if (txtID.Text.Length > 30)
+                {
+                    MessageBox.Show("已超過30個字元長度,材料名將儲存在30個字元長度,請注意.!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                getID();
+                txtNo.Focus();
+            }
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 39)
+            {
+                MessageBox.Show("不可輸入特殊字元< ' >!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.KeyChar = (char)0;   //處理非法字符
             }
         }
 
@@ -2714,15 +2762,6 @@ namespace Price2
                     btnClear.PerformClick();
                     txtID.Text = dgvData.Rows[e.RowIndex].Cells["材料名"].Value.ToString();
                     getID();
-
-                    //if (dgvData.Rows[e.RowIndex].Cells["材料名"].Value.ToString() != "")
-                    //{
-                    //    if (dgvData.Rows[e.RowIndex].Cells["材料名"].Value.ToString() != txtID.Text)
-                    //    {
-                    //        txtID.Text = dgvData.Rows[e.RowIndex].Cells["材料名"].Value.ToString();
-                    //        getID();
-                    //    }
-                    //}
                 }
             }
             catch (Exception ex)
@@ -3252,6 +3291,441 @@ namespace Price2
         }
 
         private void btnInq_Material_Q_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInq_PositionInBOM_Click(object sender, EventArgs e) //查詢材料在BOM的位置
+        {
+            //查詢材料在BOM的位置
+            try
+            {
+                if (txtID.Text=="")
+                {
+                    MessageBox.Show("請輸入材料名!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"select ap1_assy,
+                                       ap2_assy,
+                                       ap3_assy
+                                from   ap3
+                                       left join ap2
+                                              on ap2_part = ap3_assy
+                                       left join ap1
+                                              on ap1_part = ap2_assy
+                                where  ap3_part = '{txtID.Text}'";
+                    dt=clsDB.sql_select_dt(strSQL);
+                    if(dt.Rows.Count>0)
+                    {
+                        string strTmp= "第一層: " + dt.Rows[0]["ap1_assy"] + "\n" + "第二層: " + dt.Rows[0]["ap2_assy"] + "\n" + "第三層: " + dt.Rows[0]["ap3_assy"] + "\n" ;
+                        MessageBox.Show(strTmp, "材料在BOM表的位置", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("材料未登錄在BOM表中!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnInq_PositionInBOM_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)    //刪除
+        {
+            //刪除
+            try
+            {
+                if (txtID.Text == "")
+                {
+                    return;
+                }
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                
+                if (clsGlobal.checkRightFlag("火車頭資料刪除權限") == false)
+                {
+                    MessageBox.Show("你沒有火車頭資料刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+               
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select pri_part from pri where pri_part='{txtID.Text.Trim()}' ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if(dt.Rows.Count>0)
+                {
+                    MessageBox.Show("你不能刪除該產品,因為它已經有報價記錄!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+
+                strSQL = $@"select * from bom where bom_part='{txtID.Text.Trim()}' ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("你不能刪除該產品,因為它在採購BOM中有用到!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+
+                if (MessageBox.Show(this, "你確定要刪除該產品嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    
+                    strSQL = $@"delete asp where asp_id = '{txtID.Text.Trim()}' ";
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete aspnum where aspnum_id = '{txtID.Text.Trim()}' ";
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete asb where asb_id = '{txtID.Text.Trim()}' ";
+                    clsDB.Execute(strSQL);
+                    if (strName=="Y")
+                    {
+                        MessageBox.Show("已刪除完成!還有材料單要刪除,請檢查!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("已經刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
+                    btnClear.PerformClick();
+
+                }
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+            }
+            catch (Exception ex)
+            {
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+                MessageBox.Show(this.Name + "-btnDelete_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnInq_HistoryPrice_Click(object sender, EventArgs e)  //查價史
+        {
+            //查價史
+            try
+            {
+                if(txtID.Text == "")
+                {
+                    return;
+                }
+                frmProduct_History frmProduct_History = new frmProduct_History();
+                frmProduct_History.ShowInTaskbar = false;//圖示不顯示在工作列
+                frmProduct_History.strID = txtID.Text;
+                frmProduct_History.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnInq_HistoryPrice_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Q_Click(object sender, EventArgs e)  //全部刪除
+        {
+            //全部刪除
+            try
+            {
+                if(dgvData.Rows.Count==0)
+                {
+                    return;
+                }
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                if (clsGlobal.checkRightFlag("火車頭全部刪除權限") == false)
+                {
+                    MessageBox.Show("你沒有火車頭全部刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+                if (MessageBox.Show(this, "你確定要刪除該產品嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    for (int i=0; i<dgvData.Rows.Count; i++)
+                    {
+                        strSQL = $@"delete ap3 where ap3_part = '{dgvData.Rows[i].Cells["材料名"].Value.ToString()}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"delete aspnum where aspnum_id = '{dgvData.Rows[i].Cells["材料名"].Value.ToString()}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"delete asp where asp_id = '{dgvData.Rows[i].Cells["材料名"].Value.ToString()}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"delete asb where asb_id not in (select asp_id from asp)' ";
+                        clsDB.Execute(strSQL);
+                    }
+                    MessageBox.Show("已經刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnClear.PerformClick();
+                    getData();
+                }
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+            }
+            catch (Exception ex)
+            {
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+                MessageBox.Show(this.Name + "-btnDelete_Q_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBOM_Inq_Click(object sender, EventArgs e)   //查詢BOM產品結構資料
+        {
+            //查詢BOM產品結構資料
+            try
+            {
+                frmBOM frmBOM = new frmBOM();
+                frmBOM.ShowInTaskbar = false;//圖示不顯示在工作列
+                frmBOM.ShowInTaskbar = false;
+                frmBOM.blnInquery = true;
+                frmBOM.ShowDialog();
+                if (strProductID!="")
+                {
+                    txtID.Text = strProductID;
+                    getID();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnBOM_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnChangNo_Click(object sender, EventArgs e)   //更換品號
+        {
+            //更換品號
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                if (clsGlobal.checkRightFlag("火車頭更換品號權限") == false)
+                {
+                    MessageBox.Show("你沒有火車頭更換品號權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select aspnum_id from aspnum where aspnum_id='{txtID.Text.Trim()}' ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 1)
+                {
+                    if (MessageBox.Show(this, "內層有多品號,若新品號前六碼不同請先[更換品號前六碼]!" + "\n" + "您要繼續嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    {
+                        this.Cursor = Cursors.Default;//滑鼠還原預設
+                        return;
+                    }
+                }
+                if(txtNo.Text!="" && txtNo.Text.Length>=6)
+                {
+                    InputBox input = new InputBox();
+                    input.ShowInTaskbar = false;//圖示不顯示在工作列
+                    input.lblInfo.Text = "請輸入新的品號:";
+                    input.Text = "更換品號";
+                    input.txtIpnut.Text = txtNo.Text;
+                    DialogResult dr = input.ShowDialog();
+                    if (dr == DialogResult.OK)
+                    {
+                        if (input.GetMsg() != "")
+                        {
+                            string strNo = input.GetMsg().Trim().ToUpper();
+                            if (strNo != txtNo.Text)
+                            {
+                                //檢查是否有多品號,若有再檢查前六碼是否一致.
+                                strSQL = $@"select aspnum_id,
+                                                    aspnum_num
+                                            from   aspnum
+                                            where  aspnum_id = '{txtID.Text.Trim()}'
+                                                    and aspnum_num<> '{txtNo.Text}' ";
+                                dt = clsDB.sql_select_dt(strSQL);
+                                if (dt.Rows.Count > 0)
+                                {
+                                    if(dt.Rows[0]["aspnum_num"].ToString().Substring(0,6)!= strNo.Substring(0,6))
+                                    {
+                                        MessageBox.Show("新品號前6碼不一致,請檢查!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Cursor = Cursors.Default;//滑鼠還原預設
+                                        return;
+                                    }
+                                }
+
+                                strSQL = $@"select asp_id
+                                            from   asp
+                                            where  asp_vendormaterialno = '{strNo}' ";
+                                dt = clsDB.sql_select_dt(strSQL);
+                                if (dt.Rows.Count > 0)
+                                {
+                                    MessageBox.Show("新品號與下列材料相同!請重新執行!!" + "\n" + dt.Rows[0]["asp_id"].ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                                    return;
+                                }
+
+                                strSQL = $@"update asp
+                                            set    asp_vendormaterialno = '{strNo}',
+                                                    asp_user = Isnull((select wus_name
+                                                                        from wus
+                                                                        where wus_computername = Host_name()),
+                                                                '{clsGlobal.strG_User}'),
+                                                    asp_adddate = Getdate()
+                                            where asp_id = '{txtID.Text.Trim()}' ";
+                                clsDB.Execute(strSQL);
+                                strSQL = $@"update aspnum
+                                            set    aspnum_num = '{strNo}'
+                                            where aspnum_id = '{txtID.Text.Trim()}'
+                                                    and aspnum_num = '{txtNo.Text}' ";
+                                clsDB.Execute(strSQL);
+                                strSQL = $@"update pri
+                                            set    pri_assy = '{strNo}'
+                                            where pri_customerid = '{txtID.Text.Trim()}'
+                                                    and pri_newcostchk like'Y%'
+                                                    and pri_assy = '{txtNo.Text}' ";
+                                clsDB.Execute(strSQL);
+
+                                MessageBox.Show("新品號更換完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                getID();
+                                this.Cursor = Cursors.Default;//滑鼠還原預設
+                            }
+                        }
+                    }
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                }
+                else
+                {
+                    if(txtNo.Text=="")
+                    {
+                        MessageBox.Show("品號欄位空白,請先建立品號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("品號長度錯誤,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+                MessageBox.Show(this.Name + "-btnChangNo_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnChangeNo_6_Click(object sender, EventArgs e)    //更換品號前6碼
+        {
+            //更換品號前6碼
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                if (clsGlobal.checkRightFlag("火車頭更換品號前六碼權限") == false)
+                {
+                    MessageBox.Show("你沒有火車頭更換品號前六碼權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+                if (txtNo.Text != "" && txtNo.Text.Length >= 6)
+                {
+                    InputBox input = new InputBox();
+                    input.ShowInTaskbar = false;//圖示不顯示在工作列
+                    input.lblInfo.Text = "請輸入新的品號前6碼:";
+                    input.Text = "更換品號前6碼";
+                    input.txtIpnut.Text = txtNo.Text.Substring(0, 6);
+                    DialogResult dr = input.ShowDialog();
+                    if (dr == DialogResult.OK)
+                    {
+                        if (input.GetMsg() != "" && input.GetMsg().Length==6)
+                        {
+                            string strNo=input.GetMsg().Trim().ToUpper();
+                            if(strNo!=txtNo.Text.ToUpper().Substring(0, 6))
+                            {
+                                string strSQL = "";
+                                DataTable dt = new DataTable();
+                                strSQL = $@"select asp_id
+                                            from   asp
+                                            where  left(asp_vendormaterialno, 6) = '{strNo}'
+                                                   and asp_id<> '{txtID.Text.Trim()}' ";
+                                dt = clsDB.sql_select_dt(strSQL);
+                                if (dt.Rows.Count > 0)
+                                {
+                                    if (MessageBox.Show(this, "新品號前6碼與下列材料相同!您要繼續嗎?" + "\n" + dt.Rows[0]["asp_id"].ToString(), "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                                    {
+                                        this.Cursor = Cursors.Default;//滑鼠還原預設
+                                        return;
+                                    }
+                                }
+
+                                strSQL = $@"select asp_id
+                                            from   asp
+                                            where  asp_vendormaterialno = '{strNo}{txtNo.Text.Substring(6, txtNo.Text.Length-6)}' ";
+                                dt = clsDB.sql_select_dt(strSQL);
+                                if (dt.Rows.Count > 0)
+                                {
+                                    MessageBox.Show("新品號與下列材料品號相同!請重新檢查!" + "\n" + dt.Rows[0]["asp_id"].ToString(), "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                                    return;
+                                }
+
+                                strSQL = $@"update asp
+                                                set    asp_vendormaterialno = '{strNo}' + right(asp_vendormaterialno,len(asp_vendormaterialno)-6),
+                                                       asp_user = Isnull((select wus_name
+                                                                          from wus
+                                                                          where wus_computername = Host_name()),
+                                                                  '{clsGlobal.strG_User}'),
+                                                       asp_adddate = Getdate()
+                                                where asp_id = '{txtID.Text.Trim()}' ";
+                                clsDB.Execute(strSQL);
+                                strSQL = $@"update aspnum
+                                                set    aspnum_num = '{strNo}' + right(aspnum_num,len(aspnum_num)-6)
+                                                where aspnum_id = '{txtID.Text.Trim()}' ";
+                                clsDB.Execute(strSQL);
+                                strSQL = $@"update pri
+                                                set    pri_assy = '{strNo}' + right(pri_assy,len(pri_assy)-6) 
+                                                where pri_customerid = '{txtID.Text.Trim()}'
+                                                       and pri_newcostchk like'Y%' ";
+
+                                clsDB.Execute(strSQL);
+
+                                MessageBox.Show("品號更換完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                getID();
+                                this.Cursor = Cursors.Default;//滑鼠還原預設
+                            }
+                        }
+                    }
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                }
+                else
+                {
+                    if (txtNo.Text == "")
+                    {
+                        MessageBox.Show("品號欄位空白,請先建立品號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("品號長度錯誤,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnChangeNo_6_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRename_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInq_No_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInq_Vender_Click(object sender, EventArgs e)
         {
 
         }

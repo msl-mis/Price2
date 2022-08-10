@@ -41,8 +41,8 @@ namespace Price2
                     clsDB._DB_name = "Test";
                 }
 
-                frmMain frmMain = (frmMain)this.MdiParent;
-                frmMain.gbMain.Visible = true;
+                //frmMain frmMain = (frmMain)this.MdiParent;
+                //frmMain.gbMain.Visible = true;
                 this.Close();
             }
             catch (Exception ex)

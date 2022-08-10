@@ -106,9 +106,9 @@
             this.btnInq_No = new System.Windows.Forms.Button();
             this.chkControlMeterial = new System.Windows.Forms.CheckBox();
             this.lblLength = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBOM_Inq = new System.Windows.Forms.Button();
             this.lblVender = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInq_Vender = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.cboUnit = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -516,6 +516,7 @@
             this.btnDelete_Q.TabIndex = 98;
             this.btnDelete_Q.Text = "全部刪除";
             this.btnDelete_Q.UseVisualStyleBackColor = false;
+            this.btnDelete_Q.Click += new System.EventHandler(this.btnDelete_Q_Click);
             // 
             // dgvData
             // 
@@ -784,9 +785,9 @@
             this.groupBox.Controls.Add(this.btnInq_No);
             this.groupBox.Controls.Add(this.chkControlMeterial);
             this.groupBox.Controls.Add(this.lblLength);
-            this.groupBox.Controls.Add(this.button2);
+            this.groupBox.Controls.Add(this.btnBOM_Inq);
             this.groupBox.Controls.Add(this.lblVender);
-            this.groupBox.Controls.Add(this.button1);
+            this.groupBox.Controls.Add(this.btnInq_Vender);
             this.groupBox.Controls.Add(this.label10);
             this.groupBox.Controls.Add(this.cboUnit);
             this.groupBox.Controls.Add(this.label1);
@@ -850,6 +851,7 @@
             this.btnChangNo.TabIndex = 93;
             this.btnChangNo.Text = "更換品號";
             this.btnChangNo.UseVisualStyleBackColor = false;
+            this.btnChangNo.Click += new System.EventHandler(this.btnChangNo_Click);
             // 
             // btnInq_PositionInBOM
             // 
@@ -861,6 +863,7 @@
             this.btnInq_PositionInBOM.TabIndex = 90;
             this.btnInq_PositionInBOM.Text = "查詢材料在BOM的位置";
             this.btnInq_PositionInBOM.UseVisualStyleBackColor = false;
+            this.btnInq_PositionInBOM.Click += new System.EventHandler(this.btnInq_PositionInBOM_Click);
             // 
             // btnChangeNo_6
             // 
@@ -872,6 +875,7 @@
             this.btnChangeNo_6.TabIndex = 91;
             this.btnChangeNo_6.Text = "更換品號前六碼";
             this.btnChangeNo_6.UseVisualStyleBackColor = false;
+            this.btnChangeNo_6.Click += new System.EventHandler(this.btnChangeNo_6_Click);
             // 
             // btnRename
             // 
@@ -883,6 +887,7 @@
             this.btnRename.TabIndex = 88;
             this.btnRename.Text = "更名";
             this.btnRename.UseVisualStyleBackColor = false;
+            this.btnRename.Click += new System.EventHandler(this.btnRename_Click);
             // 
             // btnClose
             // 
@@ -906,6 +911,7 @@
             this.btnDelete.TabIndex = 86;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCopy
             // 
@@ -917,6 +923,7 @@
             this.btnCopy.TabIndex = 87;
             this.btnCopy.Text = "複製";
             this.btnCopy.UseVisualStyleBackColor = false;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // btnSave
             // 
@@ -1082,6 +1089,7 @@
             this.btnInq_No.TabIndex = 73;
             this.btnInq_No.Text = "...";
             this.btnInq_No.UseVisualStyleBackColor = false;
+            this.btnInq_No.Click += new System.EventHandler(this.btnInq_No_Click);
             // 
             // chkControlMeterial
             // 
@@ -1106,16 +1114,17 @@
             this.lblLength.Text = "999";
             this.lblLength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // btnBOM_Inq
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.Location = new System.Drawing.Point(535, 58);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 36);
-            this.button2.TabIndex = 70;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBOM_Inq.BackColor = System.Drawing.Color.Lime;
+            this.btnBOM_Inq.Location = new System.Drawing.Point(535, 58);
+            this.btnBOM_Inq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBOM_Inq.Name = "btnBOM_Inq";
+            this.btnBOM_Inq.Size = new System.Drawing.Size(43, 36);
+            this.btnBOM_Inq.TabIndex = 70;
+            this.btnBOM_Inq.Text = "...";
+            this.btnBOM_Inq.UseVisualStyleBackColor = false;
+            this.btnBOM_Inq.Click += new System.EventHandler(this.btnBOM_Inq_Click);
             // 
             // lblVender
             // 
@@ -1128,16 +1137,17 @@
             this.lblVender.Text = "冠志";
             this.lblVender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnInq_Vender
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(221, 211);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 36);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInq_Vender.BackColor = System.Drawing.Color.Lime;
+            this.btnInq_Vender.Location = new System.Drawing.Point(221, 211);
+            this.btnInq_Vender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInq_Vender.Name = "btnInq_Vender";
+            this.btnInq_Vender.Size = new System.Drawing.Size(43, 36);
+            this.btnInq_Vender.TabIndex = 68;
+            this.btnInq_Vender.Text = "...";
+            this.btnInq_Vender.UseVisualStyleBackColor = false;
+            this.btnInq_Vender.Click += new System.EventHandler(this.btnInq_Vender_Click);
             // 
             // label10
             // 
@@ -1272,6 +1282,8 @@
             this.txtID.Size = new System.Drawing.Size(360, 31);
             this.txtID.TabIndex = 56;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // label5
             // 
@@ -1354,6 +1366,7 @@
             this.btnInq_HistoryPrice.TabIndex = 19;
             this.btnInq_HistoryPrice.Text = "查價史";
             this.btnInq_HistoryPrice.UseVisualStyleBackColor = false;
+            this.btnInq_HistoryPrice.Click += new System.EventHandler(this.btnInq_HistoryPrice_Click);
             // 
             // btnForceUpdate
             // 
@@ -1481,9 +1494,9 @@
         private System.Windows.Forms.Button btnInq_No;
         private System.Windows.Forms.CheckBox chkControlMeterial;
         private System.Windows.Forms.Label lblLength;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBOM_Inq;
         private System.Windows.Forms.Label lblVender;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInq_Vender;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboUnit;
         private System.Windows.Forms.Label label1;
@@ -1495,7 +1508,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblDate;
@@ -1505,5 +1517,6 @@
         private System.Windows.Forms.Button btnInq_HistoryPrice;
         private System.Windows.Forms.Button btnForceUpdate;
         private System.Windows.Forms.Button btnCzf;
+        public System.Windows.Forms.TextBox txtID;
     }
 }

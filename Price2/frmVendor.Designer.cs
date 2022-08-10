@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 30;
+            this.comboBox1.Location = new System.Drawing.Point(471, 273);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(214, 36);
+            this.comboBox1.TabIndex = 0;
             // 
             // frmVendor
             // 
@@ -36,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVendor";
             this.Text = "廠商資料建立";
@@ -44,5 +56,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -47,28 +47,31 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(175, 132);
+            this.label1.Location = new System.Drawing.Point(167, 128);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 30);
+            this.label1.Size = new System.Drawing.Size(100, 31);
             this.label1.TabIndex = 5;
             this.label1.Text = "用戶名 :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtUser
             // 
+            this.txtUser.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtUser.Location = new System.Drawing.Point(268, 128);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(134, 34);
+            this.txtUser.Size = new System.Drawing.Size(134, 31);
             this.txtUser.TabIndex = 0;
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtPassword.Location = new System.Drawing.Point(268, 179);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(134, 34);
+            this.txtPassword.Size = new System.Drawing.Size(134, 31);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -76,12 +79,13 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(171, 186);
+            this.label2.Location = new System.Drawing.Point(167, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 29);
+            this.label2.Size = new System.Drawing.Size(100, 31);
             this.label2.TabIndex = 6;
             this.label2.Text = "密   碼 :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnOK
             // 
@@ -112,16 +116,19 @@
             // cboArea
             // 
             this.cboArea.BackColor = System.Drawing.Color.White;
+            this.cboArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboArea.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboArea.FormattingEnabled = true;
+            this.cboArea.ItemHeight = 25;
             this.cboArea.Items.AddRange(new object[] {
             "正式區",
             "測試區"});
             this.cboArea.Location = new System.Drawing.Point(188, 301);
             this.cboArea.Margin = new System.Windows.Forms.Padding(4);
             this.cboArea.Name = "cboArea";
-            this.cboArea.Size = new System.Drawing.Size(134, 28);
+            this.cboArea.Size = new System.Drawing.Size(134, 31);
             this.cboArea.TabIndex = 3;
+            this.cboArea.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cboArea_DrawItem);
             // 
             // tableLayoutPanel1
             // 

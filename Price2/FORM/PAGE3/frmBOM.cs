@@ -12,7 +12,8 @@ namespace Price2
 {
     public partial class frmBOM : Form
     {
-        public static Boolean blnHighlight;
+        public static Boolean blnHighlight; //判斷是否唯讀
+        public static Boolean blnInquery; //判斷是否查詢
         string strUpd01="";    //第一層上傳字串
         Boolean blnUpdchk1=false; //檢查第一層上資料是否有被修改
         Boolean blnDgv1=false;  //資料載入完成
@@ -40,6 +41,38 @@ namespace Price2
                     btnModify_L1.Visible = false;
                     btnModify_L2.Visible = false;
                     btnModify_L3.Visible = false;
+                    label3.Visible = false;
+                    label4.Visible = false;
+                    label5.Visible = false;
+                    label6.Visible = false;
+                    label7.Visible = false;
+                    txtID.Visible = false;
+                    txtPurprice.Visible = false;
+                    txtVendorid.Visible = false;
+                    txtCurrency.Visible = false;
+                    txtTbprice.Visible = false;
+                    
+                }
+                else if(blnInquery)
+                {
+                    btnAdd.Visible = false;
+                    btnDelete.Visible = false;
+                    btnModify_L1.Visible = false;
+                    btnModify_L2.Visible = false;
+                    btnModify_L3.Visible = false;
+                    label3.Visible = false;
+                    label4.Visible = false;
+                    label5.Visible = false;
+                    label6.Visible = false;
+                    label7.Visible = false;
+                    txtID.Visible = false;
+                    txtPurprice.Visible = false;
+                    txtVendorid.Visible = false;
+                    txtCurrency.Visible = false;
+                    txtTbprice.Visible = false;
+                    this.Text = "查詢BOM產品結構資料";
+                    lblHighlight.Visible = false;
+                    btnTrackChanges.Visible = false;
                 }
                 else
                 {
@@ -83,85 +116,6 @@ namespace Price2
             {
                 MessageBox.Show(this.Name + "-frmBOM_Activated" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-  
-
-
-
-        private void dgvLevel1_CellValidated(object sender, DataGridViewCellEventArgs e)
-        {
-            //string strSQL = "";
-            //DataTable dt = new DataTable();
-            //if (dgvLevel1.Rows[e.RowIndex].Cells["na1_assy"].Value.ToString() == "" && strUpd01.Contains("delete") == false)
-            //{
-            //    //清除第二層
-            //dt = (DataTable)dgvLevel2.DataSource;
-            //dt.Rows.Clear();
-            //dgvLevel2.DataSource = dt;
-            //    return;
-            //}
-            //else
-            //{
-            //    blnUpdchk1 = false;
-            //    strSQL = $@"select *
-            //                from   na1
-            //                where  na1_assy <> ''
-            //                       and na1_computername = Host_name()
-            //                       and na1_assy = '{dgvLevel1.Rows[e.RowIndex].Cells["na1_assy"].Value.ToString()}' ";
-            //    dt = clsDB.sql_select_dt(strSQL);
-            //    if(dt.Rows.Count > 0)
-            //    {
-            //        MessageBox.Show("你輸入的名稱有重複!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        dgvLevel1.Rows[e.RowIndex].Cells["na1_assy"].Value = strUpd01;
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        if (dgvLevel1.Rows[e.RowIndex].Cells["na1_assy"].Value.ToString() != strUpd01)
-            //        {
-            //            blnUpdchk1 = true;
-            //            btnDelete.Enabled = true;
-            //        }
-            //strSQL = $@"select na2_assy,
-            //                       na2_nbr
-            //                from   na2
-            //                where  na2_computername = Host_name() ";
-            //dt = clsDB.sql_select_dt(strSQL);
-            //dgvLevel2.DataSource = dt;
-            //    }
-
-            //    if (blnUpdchk1 == true)
-            //    {
-            //        if (strUpd01.Contains("delete") == false)
-            //        {
-            //            strSQL = $@"insert into na64
-            //                                (na64_before,
-            //                                 na64_after,
-            //                                 na64_date,
-            //                                 na64_username)
-            //                    values     ('1:{strUpd01}',
-            //                                '',
-            //                                '{DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss")}',
-            //                                '{clsGlobal.strG_User}') ";
-            //            clsDB.Execute(strSQL);
-            //        }
-            //        else
-            //        {
-            //            strSQL = $@"insert into na64
-            //                    (na64_before,
-            //                     na64_after,
-            //                     na64_date,
-            //                     na64_username)
-            //        values     ('1:{strUpd01}',
-            //                    '{dgvLevel4.Rows[e.RowIndex].Cells["na1_assy"].Value.ToString()}',
-            //                    '{DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss")}',
-            //                    '{clsGlobal.strG_User}') ";
-            //            clsDB.Execute(strSQL);
-            //        }
-            //    }
-            //}
-
         }
 
         private void cboLevel1_TextChanged(object sender, EventArgs e)
@@ -283,15 +237,20 @@ namespace Price2
             //結束
             try
             {
-                frmMain frmMain = (frmMain)this.MdiParent;
-                frmMain.gbMain.Visible = true;
-                if (lblHighlight.Visible==false)    //清除BOM使用旗標
+                if (blnInquery!=true)
                 {
-                    string strSQL = $@"update pub set pub_bomuse='' ";
-                    clsDB.Execute(strSQL);
-                    //BOM解鎖 label隱藏
-                    frmMain.lblBOM_Unlock.Visible = false;
+                    frmMain frmMain = (frmMain)this.MdiParent;
+                    frmMain.gbMain.Visible = true;
+                    if (lblHighlight.Visible == false)    //清除BOM使用旗標
+                    {
+                        string strSQL = $@"update pub set pub_bomuse='' ";
+                        clsDB.Execute(strSQL);
+                        //BOM解鎖 label隱藏
+                        frmMain.lblBOM_Unlock.Visible = false;
+                    }
                 }
+                blnInquery = false;
+                blnHighlight = false;
                 this.Close();
             }
             catch (Exception ex)
@@ -305,6 +264,7 @@ namespace Price2
             try
             {
                 frmBOM_Level1 frmBOM_Level1 = new frmBOM_Level1();
+                frmBOM_Level1.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_Level1.ShowDialog();
                 //item清空,重新查詢
                 cboLevel1.Text = "";
@@ -342,6 +302,7 @@ namespace Price2
             try
             {
                 frmBOM_Level2 frmBOM_Level2 = new frmBOM_Level2();
+                frmBOM_Level2.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_Level2.ShowDialog();
                 //item清空,重新查詢
                 cboLevel2.Items.Clear();
@@ -378,6 +339,7 @@ namespace Price2
             try
             {
                 frmBOM_Level3 frmBOM_Level3 = new frmBOM_Level3();
+                frmBOM_Level3.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_Level3.ShowDialog();
                 //item清空,重新查詢
                 cboLevel3.Items.Clear();
@@ -430,12 +392,20 @@ namespace Price2
             {
                 if (e.RowIndex >= 0)
                 {
-                    txtID.Text = dgvData.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
-                    txtPurprice.Text = dgvData.Rows[e.RowIndex].Cells["ap3_purprice"].Value.ToString();
-                    txtVendorid.Text = dgvData.Rows[e.RowIndex].Cells["ap3_vendorid"].Value.ToString();
-                    txtCurrency.Text = dgvData.Rows[e.RowIndex].Cells["ap3_currency"].Value.ToString();
-                    txtTbprice.Text = dgvData.Rows[e.RowIndex].Cells["ap3_tbprice"].Value.ToString();
-
+                    if(blnInquery)
+                    {
+                        frmProduct.strProductID = dgvData.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
+                        blnInquery = false;
+                        this.Close();
+                    }
+                    else
+                    {
+                        txtID.Text = dgvData.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
+                        txtPurprice.Text = dgvData.Rows[e.RowIndex].Cells["ap3_purprice"].Value.ToString();
+                        txtVendorid.Text = dgvData.Rows[e.RowIndex].Cells["ap3_vendorid"].Value.ToString();
+                        txtCurrency.Text = dgvData.Rows[e.RowIndex].Cells["ap3_currency"].Value.ToString();
+                        txtTbprice.Text = dgvData.Rows[e.RowIndex].Cells["ap3_tbprice"].Value.ToString();
+                    }
                 }
             }
             catch (Exception ex)
@@ -546,6 +516,7 @@ namespace Price2
             try
             {
                 frmBOM_TrackChanges frmBOM_TrackChanges = new frmBOM_TrackChanges();
+                frmBOM_TrackChanges.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_TrackChanges.ShowDialog();
                 
             }
@@ -659,6 +630,10 @@ namespace Price2
             {
                 if (e.KeyCode == Keys.Delete)
                 {
+                    if(blnHighlight|| blnInquery)
+                    {
+                        return;
+                    }
                     if (strID == "")
                     {
                         MessageBox.Show("請選擇要刪除的第四層名稱!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -776,5 +751,7 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnModify_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }

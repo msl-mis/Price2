@@ -47,6 +47,7 @@
             this.menu3_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu3_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu5 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu6 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +80,26 @@
             this.btn3_2 = new System.Windows.Forms.Button();
             this.btn3_1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.gb4 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn4_8 = new System.Windows.Forms.Button();
+            this.btn4_7 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn4_6 = new System.Windows.Forms.Button();
+            this.btn4_5 = new System.Windows.Forms.Button();
+            this.btn4_4 = new System.Windows.Forms.Button();
+            this.btn4_3 = new System.Windows.Forms.Button();
+            this.btn4_2 = new System.Windows.Forms.Button();
+            this.btn4_1 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -92,6 +113,9 @@
             this.gb2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.gb3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.gb4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMain
@@ -109,7 +133,7 @@
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnuMain.Size = new System.Drawing.Size(1780, 27);
+            this.mnuMain.Size = new System.Drawing.Size(1096, 30);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
             // 
@@ -124,7 +148,7 @@
             this.menu1_6});
             this.menu1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(74, 23);
+            this.menu1.Size = new System.Drawing.Size(74, 26);
             this.menu1.Text = "&1.系統";
             // 
             // menu1_1
@@ -178,7 +202,7 @@
             this.menu2_4});
             this.menu2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu2.Name = "menu2";
-            this.menu2.Size = new System.Drawing.Size(74, 23);
+            this.menu2.Size = new System.Drawing.Size(74, 26);
             this.menu2.Text = "&2.基礎";
             // 
             // menu2_1
@@ -215,7 +239,7 @@
             this.menu3_2});
             this.menu3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu3.Name = "menu3";
-            this.menu3.Size = new System.Drawing.Size(77, 23);
+            this.menu3.Size = new System.Drawing.Size(77, 26);
             this.menu3.Text = "&3.BOM";
             // 
             // menu3_1
@@ -234,45 +258,52 @@
             // 
             // menu4
             // 
+            this.menu4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu4_1});
             this.menu4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu4.Name = "menu4";
-            this.menu4.Size = new System.Drawing.Size(74, 23);
+            this.menu4.Size = new System.Drawing.Size(74, 26);
             this.menu4.Text = "&4.報價";
+            // 
+            // menu4_1
+            // 
+            this.menu4_1.Name = "menu4_1";
+            this.menu4_1.Size = new System.Drawing.Size(238, 26);
+            this.menu4_1.Text = "&1.參照法資料輸入";
+            this.menu4_1.Click += new System.EventHandler(this.menu4_1_Click);
             // 
             // menu5
             // 
             this.menu5.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu5.Name = "menu5";
-            this.menu5.Size = new System.Drawing.Size(74, 23);
+            this.menu5.Size = new System.Drawing.Size(74, 26);
             this.menu5.Text = "&5.設定";
             // 
             // menu6
             // 
             this.menu6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu6.Name = "menu6";
-            this.menu6.Size = new System.Drawing.Size(112, 23);
+            this.menu6.Size = new System.Drawing.Size(112, 26);
             this.menu6.Text = "&6.共用資料";
             // 
             // menu_Exit
             // 
             this.menu_Exit.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu_Exit.Name = "menu_Exit";
-            this.menu_Exit.Size = new System.Drawing.Size(78, 23);
+            this.menu_Exit.Size = new System.Drawing.Size(78, 26);
             this.menu_Exit.Text = "&X.結束";
             this.menu_Exit.Click += new System.EventHandler(this.menu_Exit_Click);
             // 
             // gbMain
             // 
-            this.gbMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gbMain.Controls.Add(this.tabMain);
-            this.gbMain.Location = new System.Drawing.Point(0, 31);
+            this.gbMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbMain.Location = new System.Drawing.Point(0, 30);
             this.gbMain.Margin = new System.Windows.Forms.Padding(2);
             this.gbMain.Name = "gbMain";
             this.gbMain.Padding = new System.Windows.Forms.Padding(2);
-            this.gbMain.Size = new System.Drawing.Size(1780, 936);
+            this.gbMain.Size = new System.Drawing.Size(1096, 658);
             this.gbMain.TabIndex = 3;
             this.gbMain.TabStop = false;
             // 
@@ -287,12 +318,11 @@
             this.tabMain.Controls.Add(this.tabPage6);
             this.tabMain.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabMain.ItemSize = new System.Drawing.Size(130, 30);
-            this.tabMain.Location = new System.Drawing.Point(300, 130);
+            this.tabMain.Location = new System.Drawing.Point(50, 24);
             this.tabMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(994, 525);
-            this.tabMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabMain.Size = new System.Drawing.Size(1000, 613);
             this.tabMain.TabIndex = 2;
             // 
             // tabPage1
@@ -303,7 +333,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(986, 487);
+            this.tabPage1.Size = new System.Drawing.Size(992, 575);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "1.系統";
             // 
@@ -317,11 +347,12 @@
             this.gb1.Controls.Add(this.btn1_3);
             this.gb1.Controls.Add(this.btn1_2);
             this.gb1.Controls.Add(this.btn1_1);
+            this.gb1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb1.Location = new System.Drawing.Point(0, 0);
             this.gb1.Margin = new System.Windows.Forms.Padding(0);
             this.gb1.Name = "gb1";
             this.gb1.Padding = new System.Windows.Forms.Padding(2);
-            this.gb1.Size = new System.Drawing.Size(985, 485);
+            this.gb1.Size = new System.Drawing.Size(992, 575);
             this.gb1.TabIndex = 3;
             this.gb1.TabStop = false;
             this.gb1.Visible = false;
@@ -329,12 +360,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Font = new System.Drawing.Font("新細明體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(19, 21);
+            this.label1.Location = new System.Drawing.Point(0, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 27);
+            this.label1.Size = new System.Drawing.Size(106, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "系統管理";
             // 
@@ -345,10 +376,10 @@
             this.btn1_6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn1_6.Image = global::Price2.Properties.Resources.computeruser;
             this.btn1_6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_6.Location = new System.Drawing.Point(650, 242);
+            this.btn1_6.Location = new System.Drawing.Point(620, 230);
             this.btn1_6.Margin = new System.Windows.Forms.Padding(4);
             this.btn1_6.Name = "btn1_6";
-            this.btn1_6.Size = new System.Drawing.Size(229, 139);
+            this.btn1_6.Size = new System.Drawing.Size(240, 110);
             this.btn1_6.TabIndex = 12;
             this.btn1_6.Text = "6.當前系統用戶狀況";
             this.btn1_6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -362,10 +393,10 @@
             this.btn1_5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn1_5.Image = global::Price2.Properties.Resources.Refresh;
             this.btn1_5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_5.Location = new System.Drawing.Point(366, 242);
+            this.btn1_5.Location = new System.Drawing.Point(360, 230);
             this.btn1_5.Margin = new System.Windows.Forms.Padding(4);
             this.btn1_5.Name = "btn1_5";
-            this.btn1_5.Size = new System.Drawing.Size(192, 140);
+            this.btn1_5.Size = new System.Drawing.Size(240, 110);
             this.btn1_5.TabIndex = 11;
             this.btn1_5.Text = "5.系統更新資料";
             this.btn1_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -379,10 +410,10 @@
             this.btn1_4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn1_4.Image = global::Price2.Properties.Resources.massage;
             this.btn1_4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_4.Location = new System.Drawing.Point(99, 242);
+            this.btn1_4.Location = new System.Drawing.Point(100, 230);
             this.btn1_4.Margin = new System.Windows.Forms.Padding(4);
             this.btn1_4.Name = "btn1_4";
-            this.btn1_4.Size = new System.Drawing.Size(176, 140);
+            this.btn1_4.Size = new System.Drawing.Size(240, 110);
             this.btn1_4.TabIndex = 10;
             this.btn1_4.Text = "4.發送消息";
             this.btn1_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -396,10 +427,10 @@
             this.btn1_3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn1_3.Image = global::Price2.Properties.Resources.Login;
             this.btn1_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_3.Location = new System.Drawing.Point(650, 81);
+            this.btn1_3.Location = new System.Drawing.Point(620, 60);
             this.btn1_3.Margin = new System.Windows.Forms.Padding(4);
             this.btn1_3.Name = "btn1_3";
-            this.btn1_3.Size = new System.Drawing.Size(229, 105);
+            this.btn1_3.Size = new System.Drawing.Size(240, 110);
             this.btn1_3.TabIndex = 9;
             this.btn1_3.Text = "3.其他用戶登入系統";
             this.btn1_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -413,10 +444,10 @@
             this.btn1_2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn1_2.Image = global::Price2.Properties.Resources.pwchange;
             this.btn1_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_2.Location = new System.Drawing.Point(366, 81);
+            this.btn1_2.Location = new System.Drawing.Point(360, 60);
             this.btn1_2.Margin = new System.Windows.Forms.Padding(4);
             this.btn1_2.Name = "btn1_2";
-            this.btn1_2.Size = new System.Drawing.Size(192, 105);
+            this.btn1_2.Size = new System.Drawing.Size(240, 110);
             this.btn1_2.TabIndex = 8;
             this.btn1_2.Text = "2.用戶密碼修改";
             this.btn1_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -431,10 +462,10 @@
             this.btn1_1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn1_1.Image = global::Price2.Properties.Resources.Usersfile;
             this.btn1_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn1_1.Location = new System.Drawing.Point(99, 81);
+            this.btn1_1.Location = new System.Drawing.Point(100, 60);
             this.btn1_1.Margin = new System.Windows.Forms.Padding(4);
             this.btn1_1.Name = "btn1_1";
-            this.btn1_1.Size = new System.Drawing.Size(176, 105);
+            this.btn1_1.Size = new System.Drawing.Size(240, 110);
             this.btn1_1.TabIndex = 7;
             this.btn1_1.Text = "1.用戶管理";
             this.btn1_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -450,7 +481,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(986, 487);
+            this.tabPage2.Size = new System.Drawing.Size(992, 575);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "2.基礎";
             // 
@@ -462,11 +493,12 @@
             this.gb2.Controls.Add(this.btn2_3);
             this.gb2.Controls.Add(this.btn2_2);
             this.gb2.Controls.Add(this.btn2_1);
-            this.gb2.Location = new System.Drawing.Point(0, 0);
+            this.gb2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gb2.Location = new System.Drawing.Point(2, 2);
             this.gb2.Margin = new System.Windows.Forms.Padding(0);
             this.gb2.Name = "gb2";
             this.gb2.Padding = new System.Windows.Forms.Padding(2);
-            this.gb2.Size = new System.Drawing.Size(990, 485);
+            this.gb2.Size = new System.Drawing.Size(988, 571);
             this.gb2.TabIndex = 4;
             this.gb2.TabStop = false;
             this.gb2.Visible = false;
@@ -478,10 +510,10 @@
             this.btn2_4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_4.Image = global::Price2.Properties.Resources.firmadd;
             this.btn2_4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_4.Location = new System.Drawing.Point(89, 238);
+            this.btn2_4.Location = new System.Drawing.Point(100, 230);
             this.btn2_4.Margin = new System.Windows.Forms.Padding(4);
             this.btn2_4.Name = "btn2_4";
-            this.btn2_4.Size = new System.Drawing.Size(200, 136);
+            this.btn2_4.Size = new System.Drawing.Size(240, 110);
             this.btn2_4.TabIndex = 14;
             this.btn2_4.Text = "4.產品資料清單明細表";
             this.btn2_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -490,12 +522,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Font = new System.Drawing.Font("新細明體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(19, 21);
+            this.label3.Location = new System.Drawing.Point(0, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(180, 27);
+            this.label3.Size = new System.Drawing.Size(154, 23);
             this.label3.TabIndex = 13;
             this.label3.Text = "基本資料建立";
             // 
@@ -506,10 +538,10 @@
             this.btn2_3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_3.Image = global::Price2.Properties.Resources.firmadd;
             this.btn2_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_3.Location = new System.Drawing.Point(650, 81);
+            this.btn2_3.Location = new System.Drawing.Point(620, 60);
             this.btn2_3.Margin = new System.Windows.Forms.Padding(4);
             this.btn2_3.Name = "btn2_3";
-            this.btn2_3.Size = new System.Drawing.Size(200, 120);
+            this.btn2_3.Size = new System.Drawing.Size(240, 110);
             this.btn2_3.TabIndex = 9;
             this.btn2_3.Text = "3.廠商資料建立";
             this.btn2_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -523,10 +555,10 @@
             this.btn2_2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_2.Image = global::Price2.Properties.Resources.customeradd;
             this.btn2_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_2.Location = new System.Drawing.Point(375, 81);
+            this.btn2_2.Location = new System.Drawing.Point(360, 60);
             this.btn2_2.Margin = new System.Windows.Forms.Padding(4);
             this.btn2_2.Name = "btn2_2";
-            this.btn2_2.Size = new System.Drawing.Size(200, 120);
+            this.btn2_2.Size = new System.Drawing.Size(240, 110);
             this.btn2_2.TabIndex = 8;
             this.btn2_2.Text = "2.客戶資料建立";
             this.btn2_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -540,10 +572,10 @@
             this.btn2_1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn2_1.Image = global::Price2.Properties.Resources.phonebook;
             this.btn2_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn2_1.Location = new System.Drawing.Point(100, 81);
+            this.btn2_1.Location = new System.Drawing.Point(100, 60);
             this.btn2_1.Margin = new System.Windows.Forms.Padding(4);
             this.btn2_1.Name = "btn2_1";
-            this.btn2_1.Size = new System.Drawing.Size(169, 120);
+            this.btn2_1.Size = new System.Drawing.Size(240, 110);
             this.btn2_1.TabIndex = 7;
             this.btn2_1.Text = "1.電話簿";
             this.btn2_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -558,7 +590,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(986, 487);
+            this.tabPage3.Size = new System.Drawing.Size(992, 575);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "3.BOM";
             // 
@@ -573,11 +605,12 @@
             this.gb3.Controls.Add(this.btn3_3);
             this.gb3.Controls.Add(this.btn3_2);
             this.gb3.Controls.Add(this.btn3_1);
+            this.gb3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb3.Location = new System.Drawing.Point(0, 0);
             this.gb3.Margin = new System.Windows.Forms.Padding(2);
             this.gb3.Name = "gb3";
             this.gb3.Padding = new System.Windows.Forms.Padding(2);
-            this.gb3.Size = new System.Drawing.Size(985, 485);
+            this.gb3.Size = new System.Drawing.Size(992, 575);
             this.gb3.TabIndex = 5;
             this.gb3.TabStop = false;
             this.gb3.Visible = false;
@@ -599,12 +632,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Font = new System.Drawing.Font("新細明體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 21);
+            this.label2.Location = new System.Drawing.Point(0, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 24);
+            this.label2.Size = new System.Drawing.Size(206, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "報價BOM資料創建";
             // 
@@ -618,7 +651,7 @@
             this.btn3_6.Location = new System.Drawing.Point(620, 230);
             this.btn3_6.Margin = new System.Windows.Forms.Padding(4);
             this.btn3_6.Name = "btn3_6";
-            this.btn3_6.Size = new System.Drawing.Size(240, 120);
+            this.btn3_6.Size = new System.Drawing.Size(240, 110);
             this.btn3_6.TabIndex = 13;
             this.btn3_6.Text = "6.更名(材料單)";
             this.btn3_6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -634,7 +667,7 @@
             this.btn3_5.Location = new System.Drawing.Point(360, 230);
             this.btn3_5.Margin = new System.Windows.Forms.Padding(4);
             this.btn3_5.Name = "btn3_5";
-            this.btn3_5.Size = new System.Drawing.Size(240, 120);
+            this.btn3_5.Size = new System.Drawing.Size(240, 110);
             this.btn3_5.TabIndex = 12;
             this.btn3_5.Text = "5.更名(報價單)";
             this.btn3_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -650,7 +683,7 @@
             this.btn3_4.Location = new System.Drawing.Point(100, 230);
             this.btn3_4.Margin = new System.Windows.Forms.Padding(4);
             this.btn3_4.Name = "btn3_4";
-            this.btn3_4.Size = new System.Drawing.Size(240, 120);
+            this.btn3_4.Size = new System.Drawing.Size(240, 110);
             this.btn3_4.TabIndex = 11;
             this.btn3_4.Text = "4.查材料名使用情形";
             this.btn3_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -666,7 +699,7 @@
             this.btn3_3.Location = new System.Drawing.Point(620, 60);
             this.btn3_3.Margin = new System.Windows.Forms.Padding(4);
             this.btn3_3.Name = "btn3_3";
-            this.btn3_3.Size = new System.Drawing.Size(240, 120);
+            this.btn3_3.Size = new System.Drawing.Size(240, 110);
             this.btn3_3.TabIndex = 10;
             this.btn3_3.Text = "3.查材料名位置明細表";
             this.btn3_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -682,7 +715,7 @@
             this.btn3_2.Location = new System.Drawing.Point(360, 60);
             this.btn3_2.Margin = new System.Windows.Forms.Padding(4);
             this.btn3_2.Name = "btn3_2";
-            this.btn3_2.Size = new System.Drawing.Size(240, 120);
+            this.btn3_2.Size = new System.Drawing.Size(240, 110);
             this.btn3_2.TabIndex = 9;
             this.btn3_2.Text = "2.BOM產品結構建立";
             this.btn3_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -699,7 +732,7 @@
             this.btn3_1.Location = new System.Drawing.Point(100, 60);
             this.btn3_1.Margin = new System.Windows.Forms.Padding(4);
             this.btn3_1.Name = "btn3_1";
-            this.btn3_1.Size = new System.Drawing.Size(240, 120);
+            this.btn3_1.Size = new System.Drawing.Size(240, 110);
             this.btn3_1.TabIndex = 8;
             this.btn3_1.Text = "1.火車頭資料建立";
             this.btn3_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -709,13 +742,340 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage4.Controls.Add(this.gb4);
             this.tabPage4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(986, 487);
+            this.tabPage4.Size = new System.Drawing.Size(992, 575);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "4.報價";
+            // 
+            // gb4
+            // 
+            this.gb4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gb4.Controls.Add(this.tableLayoutPanel1);
+            this.gb4.Controls.Add(this.btn4_8);
+            this.gb4.Controls.Add(this.btn4_7);
+            this.gb4.Controls.Add(this.label5);
+            this.gb4.Controls.Add(this.btn4_6);
+            this.gb4.Controls.Add(this.btn4_5);
+            this.gb4.Controls.Add(this.btn4_4);
+            this.gb4.Controls.Add(this.btn4_3);
+            this.gb4.Controls.Add(this.btn4_2);
+            this.gb4.Controls.Add(this.btn4_1);
+            this.gb4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gb4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gb4.Location = new System.Drawing.Point(0, 0);
+            this.gb4.Margin = new System.Windows.Forms.Padding(2);
+            this.gb4.Name = "gb4";
+            this.gb4.Padding = new System.Windows.Forms.Padding(2);
+            this.gb4.Size = new System.Drawing.Size(992, 575);
+            this.gb4.TabIndex = 6;
+            this.gb4.TabStop = false;
+            this.gb4.Visible = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.button9, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button8, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button7, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button6, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(101, 351);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(799, 182);
+            this.tableLayoutPanel1.TabIndex = 17;
+            // 
+            // button9
+            // 
+            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button9.Location = new System.Drawing.Point(3, 123);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(193, 56);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "17.備註資料輸入";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button9.UseCompatibleTextRendering = true;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button8.Location = new System.Drawing.Point(600, 63);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(196, 54);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "16.銅價試算";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button8.UseCompatibleTextRendering = true;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button7.Location = new System.Drawing.Point(401, 63);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(193, 54);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "15.特別支出";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button7.UseCompatibleTextRendering = true;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button6.Location = new System.Drawing.Point(202, 63);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(193, 54);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "14.特選材料查詢更名";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button6.UseCompatibleTextRendering = true;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.Location = new System.Drawing.Point(3, 63);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(193, 54);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "13.量大資料查詢";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button5.UseCompatibleTextRendering = true;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button4.Location = new System.Drawing.Point(600, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(196, 54);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "12.調整報價材料";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.UseCompatibleTextRendering = true;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button3.Location = new System.Drawing.Point(401, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(193, 54);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "11.調整報價加工分/不良率";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button3.UseCompatibleTextRendering = true;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button2.Location = new System.Drawing.Point(202, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(193, 54);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "10.客戶客訴查詢";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.UseCompatibleTextRendering = true;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("新細明體", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 54);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "9.客戶成交查詢";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.UseCompatibleTextRendering = true;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btn4_8
+            // 
+            this.btn4_8.FlatAppearance.BorderSize = 0;
+            this.btn4_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_8.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_8.Image = global::Price2.Properties.Resources._3_6;
+            this.btn4_8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_8.Location = new System.Drawing.Point(700, 180);
+            this.btn4_8.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_8.Name = "btn4_8";
+            this.btn4_8.Size = new System.Drawing.Size(200, 110);
+            this.btn4_8.TabIndex = 16;
+            this.btn4_8.Text = "8.導入外部成本";
+            this.btn4_8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_8.UseVisualStyleBackColor = true;
+            // 
+            // btn4_7
+            // 
+            this.btn4_7.FlatAppearance.BorderSize = 0;
+            this.btn4_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_7.Image = global::Price2.Properties.Resources._3_5;
+            this.btn4_7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_7.Location = new System.Drawing.Point(500, 180);
+            this.btn4_7.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_7.Name = "btn4_7";
+            this.btn4_7.Size = new System.Drawing.Size(200, 110);
+            this.btn4_7.TabIndex = 15;
+            this.btn4_7.Text = "7.客戶打樣總檔";
+            this.btn4_7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_7.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(0, 10);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 24);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "報價管理";
+            // 
+            // btn4_6
+            // 
+            this.btn4_6.FlatAppearance.BorderSize = 0;
+            this.btn4_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_6.Image = global::Price2.Properties.Resources._3_6;
+            this.btn4_6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_6.Location = new System.Drawing.Point(300, 180);
+            this.btn4_6.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_6.Name = "btn4_6";
+            this.btn4_6.Size = new System.Drawing.Size(200, 110);
+            this.btn4_6.TabIndex = 13;
+            this.btn4_6.Text = "6.訂單管理";
+            this.btn4_6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_6.UseVisualStyleBackColor = true;
+            // 
+            // btn4_5
+            // 
+            this.btn4_5.FlatAppearance.BorderSize = 0;
+            this.btn4_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_5.Image = global::Price2.Properties.Resources._3_5;
+            this.btn4_5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_5.Location = new System.Drawing.Point(100, 180);
+            this.btn4_5.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_5.Name = "btn4_5";
+            this.btn4_5.Size = new System.Drawing.Size(200, 110);
+            this.btn4_5.TabIndex = 12;
+            this.btn4_5.Text = "5.客戶報價單";
+            this.btn4_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_5.UseVisualStyleBackColor = true;
+            // 
+            // btn4_4
+            // 
+            this.btn4_4.FlatAppearance.BorderSize = 0;
+            this.btn4_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_4.Image = global::Price2.Properties.Resources._3_4use;
+            this.btn4_4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_4.Location = new System.Drawing.Point(700, 60);
+            this.btn4_4.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_4.Name = "btn4_4";
+            this.btn4_4.Size = new System.Drawing.Size(200, 110);
+            this.btn4_4.TabIndex = 11;
+            this.btn4_4.Text = "4.打樣單";
+            this.btn4_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_4.UseVisualStyleBackColor = true;
+            // 
+            // btn4_3
+            // 
+            this.btn4_3.FlatAppearance.BorderSize = 0;
+            this.btn4_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_3.Image = global::Price2.Properties.Resources._3_3;
+            this.btn4_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_3.Location = new System.Drawing.Point(500, 60);
+            this.btn4_3.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_3.Name = "btn4_3";
+            this.btn4_3.Size = new System.Drawing.Size(200, 110);
+            this.btn4_3.TabIndex = 10;
+            this.btn4_3.Text = "3.客人總檔";
+            this.btn4_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_3.UseVisualStyleBackColor = true;
+            // 
+            // btn4_2
+            // 
+            this.btn4_2.FlatAppearance.BorderSize = 0;
+            this.btn4_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_2.Image = global::Price2.Properties.Resources._3_2BOM;
+            this.btn4_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_2.Location = new System.Drawing.Point(300, 60);
+            this.btn4_2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_2.Name = "btn4_2";
+            this.btn4_2.Size = new System.Drawing.Size(200, 110);
+            this.btn4_2.TabIndex = 9;
+            this.btn4_2.Text = "2.報價管理";
+            this.btn4_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_2.UseVisualStyleBackColor = true;
+            // 
+            // btn4_1
+            // 
+            this.btn4_1.FlatAppearance.BorderSize = 0;
+            this.btn4_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_1.Image = global::Price2.Properties.Resources._3_1data;
+            this.btn4_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn4_1.Location = new System.Drawing.Point(100, 60);
+            this.btn4_1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn4_1.Name = "btn4_1";
+            this.btn4_1.Size = new System.Drawing.Size(200, 110);
+            this.btn4_1.TabIndex = 8;
+            this.btn4_1.Text = "1.參照法資料輸入";
+            this.btn4_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn4_1.UseVisualStyleBackColor = true;
+            this.btn4_1.Click += new System.EventHandler(this.btn4_1_Click);
             // 
             // tabPage5
             // 
@@ -724,7 +1084,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(986, 487);
+            this.tabPage5.Size = new System.Drawing.Size(992, 534);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "5.設定";
             // 
@@ -735,7 +1095,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(986, 487);
+            this.tabPage6.Size = new System.Drawing.Size(992, 534);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "6.公用資料";
             // 
@@ -756,7 +1116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1780, 964);
+            this.ClientSize = new System.Drawing.Size(1096, 688);
             this.Controls.Add(this.gbMain);
             this.Controls.Add(this.mnuMain);
             this.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -784,6 +1144,10 @@
             this.tabPage3.ResumeLayout(false);
             this.gb3.ResumeLayout(false);
             this.gb3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.gb4.ResumeLayout(false);
+            this.gb4.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,7 +1161,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu5;
         private System.Windows.Forms.ToolStripMenuItem menu6;
         private System.Windows.Forms.ToolStripMenuItem menu_Exit;
-        public System.Windows.Forms.GroupBox gbMain;
         private System.Windows.Forms.GroupBox gb1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn1_6;
@@ -814,7 +1177,6 @@
         private System.Windows.Forms.Button btn3_3;
         private System.Windows.Forms.Button btn3_2;
         private System.Windows.Forms.Button btn3_1;
-        private System.Windows.Forms.TabControl tabMain;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -843,6 +1205,29 @@
         private System.Windows.Forms.ToolStripMenuItem menu3_1;
         private System.Windows.Forms.ToolStripMenuItem menu3_2;
         public System.Windows.Forms.Label lblBOM_Unlock;
+        private System.Windows.Forms.GroupBox gb4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btn4_8;
+        private System.Windows.Forms.Button btn4_7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn4_6;
+        private System.Windows.Forms.Button btn4_5;
+        private System.Windows.Forms.Button btn4_4;
+        private System.Windows.Forms.Button btn4_3;
+        private System.Windows.Forms.Button btn4_2;
+        private System.Windows.Forms.Button btn4_1;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem menu4_1;
+        private System.Windows.Forms.TabControl tabMain;
+        public System.Windows.Forms.GroupBox gbMain;
     }
 }
 
