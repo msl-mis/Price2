@@ -198,7 +198,7 @@ namespace Price2
             else
                 return false;
         }
-        public void ExportCsv(DataGridView DG)
+        public static void ExportCsv(DataGridView DG)
         {
             //export EXcel=new excel 
             if (DG.Rows.Count > 200000)
@@ -270,7 +270,7 @@ namespace Price2
                 return;
             }
         }
-        public void ExportExcel(string strCaption, DataGridView myDGV)
+        public static void ExportExcel(string strCaption, DataGridView myDGV)
         {
             
             int ColIndex = 0;
@@ -319,12 +319,13 @@ namespace Price2
                         if (myDGV[ColIndex, RowIndex - 1].ValueType == typeof(string)
                         || myDGV[ColIndex, RowIndex - 1].ValueType == typeof(DateTime))//這裡就是驗證DataGridView單元格中的型別,如果是string或是DataTime型別,則在放入快取時在該內容前加入" ";
                         {
-                            objData[RowIndex, ColIndex] = "" + myDGV[ColIndex, RowIndex - 1].Value;
+                            objData[RowIndex, ColIndex] = " " + myDGV[ColIndex, RowIndex - 1].Value;
                         }
                         else
                         {
                             objData[RowIndex, ColIndex] = myDGV[ColIndex, RowIndex - 1].Value;
                         }
+
                     }
                     //System.Windows.Forms.Application.DoEvents();
                 }

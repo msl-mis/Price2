@@ -42,13 +42,15 @@ namespace Price2
                     return;
                 }
                 //限制指定的帳號只能登入測試區
-                if (txtUser.Text== "test" && cboArea.Text=="正式區")
+                //if (txtUser.Text== "test" && cboArea.Text=="正式區")
+                if (txtUser.Text == "test" && radioOffical.Checked == true)
                 {
                     MessageBox.Show("你的帳號只能登入測試區", "系統警告", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 ///判斷區
-                if (cboArea.Text=="正式區")
+                //if (cboArea.Text=="正式區")
+                if (radioOffical.Checked == true)
                 {
                     //clsDB._ServerName = "192.168.10.122";
                     clsDB._ServerName = "msl-price";
@@ -59,24 +61,56 @@ namespace Price2
                 else
                 {
                     //clsDB._ServerName = "192.168.10.122";
-                    clsDB._ServerName = "MIS-PC02";
+                    clsDB._ServerName = "msl-price";
                     clsDB._DB_id = "sa";
                     clsDB._DB_password = "yzf";
                     clsDB._DB_name = "Test";
                 }
                 ///檢查是否已有資料
+                String strSQL = "";
+                DataTable dt = new DataTable();
                 //clsDB.Open();    //SQL連線
-                String strSQL = $@"select dbo.readpwd(pas_password) as pwd,* from pas where pas_username='{txtUser.Text}'";
+                strSQL = $@"select dbo.readpwd(pas_password) as pwd,* from pas where pas_username='{txtUser.Text}'";
                 //string rs= clsDB.sql_select_String(strSQL,"pwd");
-                DataTable dt = clsDB.sql_select_dt(strSQL);
+                dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
                     if (dt.Rows[0]["pwd"].ToString() == txtPassword.Text)    //密碼正確
                     {
                         clsGlobal.strG_User = dt.Rows[0]["pas_username"].ToString();    //記錄登入使用者名稱
                         clsGlobal.strG_Ywcode = dt.Rows[0]["pas_ywcode"].ToString();    //記錄登入使用者的業務代碼
-                        clsGlobal.strG_Area = cboArea.Text;                             //記錄登入區
-                                                                                        //先確認有沒有正在導入系統外部成本
+                        //clsGlobal.strG_Area = cboArea.Text;                           //記錄登入區
+                        if(radioOffical.Checked == true)                                //記錄登入區
+                        {
+                            clsGlobal.strG_Area = "正式區";
+                        }
+                        else
+                        {
+                            clsGlobal.strG_Area = "測試區";
+                        } 
+                        
+                        //記憶密碼處理
+                        if(chkRemember.Checked == true)
+                        {
+                            
+                            string path = System.IO.Directory.GetCurrentDirectory();    //獲取應用程序的當前工作目錄
+                            clsIniManager iniManager = new clsIniManager(path + "/Price2.ini");
+                            iniManager.WriteIniFile("Login", "CHECK", "True");
+                            iniManager.WriteIniFile("Login", "USER", dt.Rows[0]["pas_username"].ToString());
+                            iniManager.WriteIniFile("Login", "PASSWORD", dt.Rows[0]["pwd"].ToString());
+                            iniManager.WriteIniFile("Login", "AREA", radioOffical.Checked.ToString());
+                        }
+                        else
+                        {
+                            
+                            string path = System.IO.Directory.GetCurrentDirectory();
+                            clsIniManager iniManager = new clsIniManager(path + "/Price2.ini");
+                            iniManager.WriteIniFile("Login", "CHECK", "False");
+                            iniManager.WriteIniFile("Login", "USER", "");
+                            iniManager.WriteIniFile("Login", "PASSWORD", "");
+                            iniManager.WriteIniFile("Login", "AREA", "True");
+                        }
+                        //先確認有沒有正在導入系統外部成本
                         strSQL = $@"select pub_impidflag from pub";
                         string rs = clsDB.sql_select_String(strSQL, "pub_impidflag");
                         if (rs == "1")
@@ -155,7 +189,7 @@ namespace Price2
             //要載入很多東西
             try
             {
-                cboArea.SelectedIndex = 0;
+                //cboArea.SelectedIndex = 0;
                 //取得Local IP
                 System.Net.IPAddress SvrIP = new System.Net.IPAddress(Dns.GetHostByName(Dns.GetHostName()).AddressList[0].Address);
                 clsGlobal.strG_LocalIP = SvrIP.ToString();
@@ -185,30 +219,66 @@ namespace Price2
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            //處裡記憶密碼
+            string path = System.IO.Directory.GetCurrentDirectory();    //獲取應用程序的當前工作目錄
+            clsIniManager iniManager = new clsIniManager(path + "/Price2.ini");
+            if (iniManager.ReadIniFile("Login", "CHECK", "False")=="True")
+            {
+                chkRemember.Checked=true;
+                txtUser.Text = iniManager.ReadIniFile("Login", "USER", "");
+                txtPassword.Text = iniManager.ReadIniFile("Login", "PASSWORD", "");
+                if(iniManager.ReadIniFile("Login", "AREA", "True")=="True")
+                {
+                    radioOffical.Checked=true;
+                }
+                else
+                {
+                    radioTest.Checked=true;
+                }
+            } 
         }
 
-        private void cboArea_DrawItem(object sender, DrawItemEventArgs e)
+        private void chkRemember_CheckedChanged(object sender, EventArgs e)
         {
-            ComboBox cbx = sender as ComboBox;
-            if (cbx != null)
+            if (chkRemember.Checked == true)
             {
-                e.DrawBackground();
-                if (e.Index >= 0)
-                {
-                    //文字置中
-                    StringFormat sf = new StringFormat();
-                    sf.LineAlignment = StringAlignment.Far;
-                    sf.Alignment = StringAlignment.Near;
+                string path = System.IO.Directory.GetCurrentDirectory();    //獲取應用程序的當前工作目錄
+                clsIniManager iniManager = new clsIniManager(path + "/Price2.ini");
 
-                    Brush brush = new SolidBrush(cbx.ForeColor);
-                    if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
-                        brush = SystemBrushes.HighlightText;
+                iniManager.WriteIniFile("Login", "CHECK", "True");
+                
+            }
+            else
+            {
+                string path = System.IO.Directory.GetCurrentDirectory();    //獲取應用程序的當前工作目錄
+                clsIniManager iniManager = new clsIniManager(path + "/Price2.ini");
 
-                    //重繪字串
-                    e.Graphics.DrawString(cbx.Items[e.Index].ToString(), cbx.Font, brush, e.Bounds, sf);
-                }
+                iniManager.WriteIniFile("Login", "CHECK", "False");
+                
             }
         }
+
+        //private void cboArea_DrawItem(object sender, DrawItemEventArgs e)
+        //{
+        //    ComboBox cbx = sender as ComboBox;
+        //    if (cbx != null)
+        //    {
+        //        e.DrawBackground();
+        //        if (e.Index >= 0)
+        //        {
+        //            //文字置中
+        //            StringFormat sf = new StringFormat();
+        //            sf.LineAlignment = StringAlignment.Far;
+        //            sf.Alignment = StringAlignment.Near;
+
+        //            Brush brush = new SolidBrush(cbx.ForeColor);
+        //            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+        //                brush = SystemBrushes.HighlightText;
+
+        //            //重繪字串
+        //            e.Graphics.DrawString(cbx.Items[e.Index].ToString(), cbx.Font, brush, e.Bounds, sf);
+        //        }
+        //    }
+        //}
     }
 }

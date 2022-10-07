@@ -24,7 +24,7 @@ namespace Price2
 
         private void frmReport_Load(object sender, EventArgs e)
         {
-            
+            btnClose.Left = 500;
             DataTable dt = new DataTable();
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             LocalReport localReport = reportViewer1.LocalReport;
@@ -48,6 +48,7 @@ namespace Price2
             reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
             this.reportViewer1.RefreshReport();
             this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)

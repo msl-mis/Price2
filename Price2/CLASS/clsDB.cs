@@ -105,6 +105,17 @@ namespace Price2
             Close();
         }
 
+        public static void ExecuteNoClose(string _sqlcommand)
+        {
+            if (_sql_con.State == ConnectionState.Closed)
+            {
+                Open();
+            }
+            SqlCommand MSSqlCmd = new SqlCommand(_sqlcommand, _sql_con, _Transation);
+            MSSqlCmd.ExecuteNonQuery();
+            //Close();
+        }
+
         public static void Close()
         {
             if (_sql_con.State == ConnectionState.Open)

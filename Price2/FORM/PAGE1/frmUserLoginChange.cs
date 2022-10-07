@@ -57,10 +57,11 @@ namespace Price2
             try
             {
                 ///判斷區
-                if (cboArea.Text == "正式區")
+                //if (cboArea.Text == "正式區")
+                if (radioOffical.Checked == true)
                 {
                     //clsDB._ServerName = "192.168.10.122";
-                    clsDB._ServerName = "MIS-PC02";
+                    clsDB._ServerName = "msl-price";
                     clsDB._DB_id = "sa";
                     clsDB._DB_password = "yzf";
                     clsDB._DB_name = "Price";
@@ -68,7 +69,7 @@ namespace Price2
                 else
                 {
                     //clsDB._ServerName = "192.168.10.122";
-                    clsDB._ServerName = "MIS-PC02";
+                    clsDB._ServerName = "msl-price";
                     clsDB._DB_id = "sa";
                     clsDB._DB_password = "yzf";
                     clsDB._DB_name = "Test";
@@ -84,7 +85,15 @@ namespace Price2
                 {
                     clsGlobal.strG_User = dt.Rows[0]["pas_username"].ToString();    //記錄登入使用者名稱
                     clsGlobal.strG_Ywcode = dt.Rows[0]["pas_ywcode"].ToString();    //記錄登入使用者的業務代碼
-                    clsGlobal.strG_Area = cboArea.Text;                             //記錄登入區
+                    //clsGlobal.strG_Area = cboArea.Text;                             //記錄登入區
+                    if (radioOffical.Checked == true)                                //記錄登入區
+                    {
+                        clsGlobal.strG_Area = "正式區";
+                    }
+                    else
+                    {
+                        clsGlobal.strG_Area = "測試區";
+                    }
                     #region 變更登入不用確認
                     ////先確認有沒有正在導入系統外部成本
                     //strSQL = $@"select pub_impidflag from pub";

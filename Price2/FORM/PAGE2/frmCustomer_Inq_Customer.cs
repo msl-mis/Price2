@@ -104,7 +104,7 @@ namespace Price2
         }
         private void btnExport_Click(object sender, EventArgs e)
         {
-            clsGlobal clsGlobal = new clsGlobal();
+            //clsGlobal clsGlobal = new clsGlobal();
 
             clsGlobal.ExportExcel("選擇客戶", dgvData);
         }

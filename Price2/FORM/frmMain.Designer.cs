@@ -104,6 +104,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.menu4_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -133,7 +134,7 @@
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnuMain.Size = new System.Drawing.Size(1096, 30);
+            this.mnuMain.Size = new System.Drawing.Size(1096, 27);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
             // 
@@ -148,7 +149,7 @@
             this.menu1_6});
             this.menu1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(74, 26);
+            this.menu1.Size = new System.Drawing.Size(74, 23);
             this.menu1.Text = "&1.系統";
             // 
             // menu1_1
@@ -202,7 +203,7 @@
             this.menu2_4});
             this.menu2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu2.Name = "menu2";
-            this.menu2.Size = new System.Drawing.Size(74, 26);
+            this.menu2.Size = new System.Drawing.Size(74, 23);
             this.menu2.Text = "&2.基礎";
             // 
             // menu2_1
@@ -239,7 +240,7 @@
             this.menu3_2});
             this.menu3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu3.Name = "menu3";
-            this.menu3.Size = new System.Drawing.Size(77, 26);
+            this.menu3.Size = new System.Drawing.Size(77, 23);
             this.menu3.Text = "&3.BOM";
             // 
             // menu3_1
@@ -259,10 +260,11 @@
             // menu4
             // 
             this.menu4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu4_1});
+            this.menu4_1,
+            this.menu4_2});
             this.menu4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu4.Name = "menu4";
-            this.menu4.Size = new System.Drawing.Size(74, 26);
+            this.menu4.Size = new System.Drawing.Size(74, 23);
             this.menu4.Text = "&4.報價";
             // 
             // menu4_1
@@ -276,21 +278,21 @@
             // 
             this.menu5.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu5.Name = "menu5";
-            this.menu5.Size = new System.Drawing.Size(74, 26);
+            this.menu5.Size = new System.Drawing.Size(74, 23);
             this.menu5.Text = "&5.設定";
             // 
             // menu6
             // 
             this.menu6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu6.Name = "menu6";
-            this.menu6.Size = new System.Drawing.Size(112, 26);
+            this.menu6.Size = new System.Drawing.Size(112, 23);
             this.menu6.Text = "&6.共用資料";
             // 
             // menu_Exit
             // 
             this.menu_Exit.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu_Exit.Name = "menu_Exit";
-            this.menu_Exit.Size = new System.Drawing.Size(78, 26);
+            this.menu_Exit.Size = new System.Drawing.Size(78, 23);
             this.menu_Exit.Text = "&X.結束";
             this.menu_Exit.Click += new System.EventHandler(this.menu_Exit_Click);
             // 
@@ -299,11 +301,11 @@
             this.gbMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gbMain.Controls.Add(this.tabMain);
             this.gbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbMain.Location = new System.Drawing.Point(0, 30);
+            this.gbMain.Location = new System.Drawing.Point(0, 27);
             this.gbMain.Margin = new System.Windows.Forms.Padding(2);
             this.gbMain.Name = "gbMain";
             this.gbMain.Padding = new System.Windows.Forms.Padding(2);
-            this.gbMain.Size = new System.Drawing.Size(1096, 658);
+            this.gbMain.Size = new System.Drawing.Size(1096, 661);
             this.gbMain.TabIndex = 3;
             this.gbMain.TabStop = false;
             // 
@@ -318,7 +320,7 @@
             this.tabMain.Controls.Add(this.tabPage6);
             this.tabMain.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabMain.ItemSize = new System.Drawing.Size(130, 30);
-            this.tabMain.Location = new System.Drawing.Point(50, 24);
+            this.tabMain.Location = new System.Drawing.Point(50, 25);
             this.tabMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -1059,6 +1061,7 @@
             this.btn4_2.Text = "2.報價管理";
             this.btn4_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4_2.UseVisualStyleBackColor = true;
+            this.btn4_2.Click += new System.EventHandler(this.btn4_2_Click);
             // 
             // btn4_1
             // 
@@ -1084,7 +1087,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(992, 534);
+            this.tabPage5.Size = new System.Drawing.Size(992, 575);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "5.設定";
             // 
@@ -1095,7 +1098,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(992, 534);
+            this.tabPage6.Size = new System.Drawing.Size(992, 575);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "6.公用資料";
             // 
@@ -1110,6 +1113,13 @@
             this.timer.Enabled = true;
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // menu4_2
+            // 
+            this.menu4_2.Name = "menu4_2";
+            this.menu4_2.Size = new System.Drawing.Size(238, 26);
+            this.menu4_2.Text = "&2.報價管理";
+            this.menu4_2.Click += new System.EventHandler(this.menu4_2_Click);
             // 
             // frmMain
             // 
@@ -1228,6 +1238,7 @@
         private System.Windows.Forms.ToolStripMenuItem menu4_1;
         private System.Windows.Forms.TabControl tabMain;
         public System.Windows.Forms.GroupBox gbMain;
+        private System.Windows.Forms.ToolStripMenuItem menu4_2;
     }
 }
 

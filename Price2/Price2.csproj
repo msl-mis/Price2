@@ -25,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://192.168.10.205:8083/</InstallUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>12</ApplicationRevision>
-    <ApplicationVersion>1.0.0.12</ApplicationVersion>
+    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationVersion>1.0.0.15</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -102,18 +102,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmRefer_Inq_Customer.cs">
+    <Compile Include="frmBOMPrice_Msgbox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRefer_Inq_Customer.Designer.cs">
+    <Compile Include="frmBOMPrice_Msgbox.Designer.cs">
+      <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE2\frmVender_Inq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE2\frmVender_Inq.Designer.cs">
+      <DependentUpon>frmVender_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct_Inq_No.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct_Inq_No.Designer.cs">
+      <DependentUpon>frmProduct_Inq_No.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct_InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct_InputBox.Designer.cs">
+      <DependentUpon>frmProduct_InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBOMPrice_Grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBOMPrice_Grid.Designer.cs">
+      <DependentUpon>frmBOMPrice_Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBOMPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBOMPrice.Designer.cs">
+      <DependentUpon>frmBOMPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmRefer_Inq_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmRefer_Inq_Material.Designer.cs">
+      <DependentUpon>frmRefer_Inq_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmRefer_Inq_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmRefer_Inq_Customer.Designer.cs">
       <DependentUpon>frmRefer_Inq_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRefer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRefer.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer.Designer.cs">
       <DependentUpon>frmRefer.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE3\frmProduct_History.cs">
@@ -164,11 +207,11 @@
     <Compile Include="FORM\PAGE3\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendor.cs">
+    <Compile Include="FORM\PAGE2\frmVender.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVendor.Designer.cs">
-      <DependentUpon>frmVendor.cs</DependentUpon>
+    <Compile Include="FORM\PAGE2\frmVender.Designer.cs">
+      <DependentUpon>frmVender.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE2\frmCustomer_Inq_Country.cs">
       <SubType>Form</SubType>
@@ -274,6 +317,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmBOMPrice_Grid.resx">
+      <DependentUpon>frmBOMPrice_Grid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE2\frmCustomer_BankInfo.resx">
       <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +352,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE1\frmUserLoginChange.resx">
       <DependentUpon>frmUserLoginChange.cs</DependentUpon>
@@ -347,14 +394,32 @@
     <EmbeddedResource Include="FORM\PAGE3\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRefer.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmRefer.resx">
       <DependentUpon>frmRefer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRefer_Inq_Customer.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmRefer_Inq_Customer.resx">
       <DependentUpon>frmRefer_Inq_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendor.resx">
-      <DependentUpon>frmVendor.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\PAGE4\frmRefer_Inq_Material.resx">
+      <DependentUpon>frmRefer_Inq_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBOMPrice.resx">
+      <DependentUpon>frmBOMPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct_InputBox.resx">
+      <DependentUpon>frmProduct_InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct_Inq_No.resx">
+      <DependentUpon>frmProduct_Inq_No.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE2\frmVender_Inq.resx">
+      <DependentUpon>frmVender_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE2\frmVender.resx">
+      <DependentUpon>frmVender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBOMPrice_Msgbox.resx">
+      <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

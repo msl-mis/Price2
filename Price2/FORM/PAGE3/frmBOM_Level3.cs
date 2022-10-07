@@ -139,7 +139,7 @@ namespace Price2
         {
             try
             {
-                if (e.RowIndex >= 0)
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     txtID.Text = dgvData.Rows[e.RowIndex].Cells["ap2_part"].Value.ToString();
                 }

@@ -288,7 +288,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.15cm</Top>
-            <Left>3.97561cm</Left>
+            <Left>3.90505cm</Left>
             <Height>0.6cm</Height>
             <Width>7.06627cm</Width>
             <ZIndex>2</ZIndex>
@@ -579,7 +579,7 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.317cm</Height>
+        <Height>1.06482cm</Height>
         <Style />
       </Body>
       <Width>29.6cm</Width>

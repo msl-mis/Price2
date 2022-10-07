@@ -94,7 +94,6 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_BankInfo.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_ShortName.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Country.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Tel.resources
-D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVendor.resources
 D:\Price2\Price2\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Price2\Price2\bin\Debug\stdole.dll
 D:\Price2\Price2\obj\Debug\Price2.frmCustomer_BankInfo.resources
@@ -166,3 +165,114 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOM_TrackChanges.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_History.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmRefer.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmRefer_Inq_Customer.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmRefer_Inq_Material.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Grid.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_InputBox.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_Inq_No.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVender_Inq.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVender.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Msgbox.resources
+D:\User\Desktop\Price2\Price2\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Price2.exe.config
+D:\User\Desktop\Price2\Price2\bin\Debug\Price2.exe.manifest
+D:\User\Desktop\Price2\Price2\bin\Debug\Price2.application
+D:\User\Desktop\Price2\Price2\bin\Debug\Price2.exe
+D:\User\Desktop\Price2\Price2\bin\Debug\Price2.pdb
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\EnvDTE.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\stdole.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.AssemblyReference.cache
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.SuggestedBindingRedirects.cache
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.ResolveComReference.cache
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Grid.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmCustomer_BankInfo.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Country.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Customer.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmTelephone_Inq.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmTelephone_RenameType.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmUserStatus.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.InputBox.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmUserChangePassword.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmUserManagement.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmLogin.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmMain.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmUserLoginChange.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmTelephone.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmCustomer.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_ShortName.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmCustomer_Inq_Tel.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOM.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOM_Level1.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOM_Level2.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOM_Level3.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOM_TrackChanges.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmProduct_History.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmReport.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmProduct.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmRefer.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmRefer_Inq_Customer.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmRefer_Inq_Material.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOMPrice.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmProduct_InputBox.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmProduct_Inq_No.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmVender_Inq.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmVender.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Msgbox.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.Properties.Resources.resources
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.GenerateResource.cache
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.CoreCompileInputs.cache
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.exe.manifest
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.application
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.CopyComplete
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.exe
+D:\User\Desktop\Price2\Price2\obj\Debug\Price2.pdb

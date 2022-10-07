@@ -84,33 +84,15 @@ namespace Price2
                     btnModify_L3.Visible = true;
                 }
                 string strSQL = "";
-                DataTable dt;
+                DataTable dt = new DataTable();
                 strSQL = $@"select distinct ap1_assy
                             from   ap1
                             order  by ap1_assy ";
                 dt= clsDB.sql_select_dt(strSQL);
                 if(dt.Rows.Count>0)
                 {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        cboLevel1.Items.Add(dt.Rows[i]["ap1_assy"].ToString());
-                    }
+                    dgvLevel_1.DataSource = dt;
                 }
-                
-                cboLevel2.Enabled = false;
-                cboLevel3.Enabled = false;
-                //清除cboLevel4
-                strSQL = $@"select ap3_part,
-                                   ap3_purprice,
-                                   ap3_vendorid,
-                                   ap3_currency,
-                                   ap3_tbprice,
-                                   ap3_adddate
-                            from   ap3
-                            where  1 != 1 ";
-                dt = clsDB.sql_select_dt(strSQL);
-                dgvData.DataSource = dt;
-                cboLevel1.Focus();
             }
             catch (Exception ex)
             {
@@ -118,83 +100,18 @@ namespace Price2
             }
         }
 
-        private void cboLevel1_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                //打開第二層名稱
-                cboLevel2.Enabled = true;
-                //清除第二層名稱
-                cboLevel2.Items.Clear();
-                //加入第二層名稱
-                string strSQL = "";
-                DataTable dt;
-                strSQL = $@"select ap1_part
-                            from   ap1
-                            where  ap1_assy = '{cboLevel1.Text}'
-                                   and ap1_part != '' 
-                            order  by ap1_part ";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        cboLevel2.Items.Add(dt.Rows[i]["ap1_part"].ToString());
-                    }
-                }
-                //清除第三層名稱
-                cboLevel3.Items.Clear();
-                //關閉第三層名稱
-                cboLevel3.Enabled = false;
-                //清除第四層名稱
-                Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-cboLevel1_TextChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void cboLevel2_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                //打開第三層名稱
-                cboLevel3.Enabled = true;
-                //清除第三層名稱
-                cboLevel3.Items.Clear();
-                //加入第三層名稱
-                string strSQL = "";
-                DataTable dt;
-                strSQL = $@"select distinct ap2_part
-                            from   ap2
-                            where  ap2_assy = '{cboLevel2.Text}'
-                            order  by ap2_part ";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        cboLevel3.Items.Add(dt.Rows[i]["ap2_part"].ToString());
-                    }
-                }
-                //清除第四層名稱
-                Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-cboLevel2_TextChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void Clear()
         {
             try
             {
-                DataTable dt = new DataTable();
-                dt = (DataTable)dgvData.DataSource;
-                dt.Rows.Clear();
-                dgvData.DataSource = dt;
+                if(dgvData.Rows.Count > 0)
+                {
+                    DataTable dt = new DataTable();
+                    dt = (DataTable)dgvData.DataSource;
+                    dt.Rows.Clear();
+                    dgvData.DataSource = dt;
+                }
+                
                 strID = "";
                 txtID.Text = "";
                 txtPurprice.Text = "";
@@ -205,30 +122,6 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-Clear" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void cboLevel3_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                //加入第四層名稱
-                string strSQL = "";
-                DataTable dt;
-                strSQL = $@"select ap3_part,
-                                   ap3_purprice,
-                                   ap3_vendorid,
-                                   ap3_currency,
-                                   ap3_tbprice,
-                                   ap3_adddate
-                            from   ap3
-                            where  ap3_assy = '{cboLevel3.Text}' ";
-                dt = clsDB.sql_select_dt(strSQL);
-                dgvData.DataSource=dt;    
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-cboLevel3_TextChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -267,29 +160,25 @@ namespace Price2
                 frmBOM_Level1.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_Level1.ShowDialog();
                 //item清空,重新查詢
-                cboLevel1.Text = "";
-                cboLevel1.Items.Clear();
+                
+                clear_dgvLevel_1();
                 string strSQL = "";
-                DataTable dt;
+                DataTable dt = new DataTable();
                 strSQL = $@"select distinct ap1_assy
                             from   ap1
                             order  by ap1_assy ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        cboLevel1.Items.Add(dt.Rows[i]["ap1_assy"].ToString());
-                    }
+                    //for (int i = 0; i < dt.Rows.Count; i++)
+                    //{
+                    //    cboLevel1.Items.Add(dt.Rows[i]["ap1_assy"].ToString());
+                    //}
+                    dgvLevel_1.DataSource = dt;
                 }
-
-                cboLevel2.Text = "";
-                cboLevel3.Text = "";
-                cboLevel2.Enabled = false;
-                cboLevel3.Enabled = false;
-                //清除cboLevel4
-                Clear();
-                cboLevel1.Focus();
+                clear_dgvLevel_2();
+                clear_dgvLevel_3();
+                clear_dgvLevel_4();
             }
             catch (Exception ex)
             {
@@ -305,28 +194,11 @@ namespace Price2
                 frmBOM_Level2.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_Level2.ShowDialog();
                 //item清空,重新查詢
-                cboLevel2.Items.Clear();
-                string strSQL = "";
-                DataTable dt;
-                strSQL = $@"select distinct ap1_part
-                            from   ap1
-                            where  ap1_assy = '{cboLevel1.Text}'
-                            order  by ap1_part ";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        cboLevel2.Items.Add(dt.Rows[i]["ap1_part"].ToString());
-                    }
-                }
+                clear_dgvLevel_2();
                 //清除第三層名稱
-                cboLevel3.Items.Clear();
-                //關閉第三層名稱
-                cboLevel3.Enabled = false;
+                clear_dgvLevel_3();
                 //清除第四層名稱
-                Clear();
-                cboLevel2.Focus();
+                clear_dgvLevel_4();
             }
             catch (Exception ex)
             {
@@ -342,28 +214,9 @@ namespace Price2
                 frmBOM_Level3.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM_Level3.ShowDialog();
                 //item清空,重新查詢
-                cboLevel3.Items.Clear();
-                string strSQL = "";
-                DataTable dt;
-                strSQL = $@"select distinct ap2_part
-                            from   ap2
-                            where  ap2_assy = '{cboLevel2.Text}'
-                            order  by ap2_part ";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        cboLevel3.Items.Add(dt.Rows[i]["ap2_part"].ToString());
-                    }
-                }
-                ////清除第三層名稱
-                //cboLevel3.Items.Clear();
-                ////關閉第三層名稱
-                //cboLevel3.Enabled = false;
+                clear_dgvLevel_3();
                 //清除第四層名稱
-                Clear();
-                cboLevel3.Focus();
+                clear_dgvLevel_4();
             }
             catch (Exception ex)
             {
@@ -390,7 +243,7 @@ namespace Price2
         {
             try
             {
-                if (e.RowIndex >= 0)
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     if(blnInquery)
                     {
@@ -418,7 +271,7 @@ namespace Price2
         {
             if(e.KeyCode == Keys.Enter)
             {
-                if(cboLevel3.Text=="")
+                if(dgvLevel_3.RowCount==0)
                 {
                     return;
                 }
@@ -436,7 +289,7 @@ namespace Price2
                 strSQL = $@"select ap3_part
                             from   ap3
                             where  ap3_part = '{txtID.Text.Trim()}'
-                                   and ap3_assy = '{cboLevel3.Text}' ";
+                                   and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -477,9 +330,9 @@ namespace Price2
             try
             {
                 //檢查欄位
-                if(cboLevel3.Text=="")
+                if(dgvData.RowCount==0)
                 {
-                    MessageBox.Show("你不能列印該表,因為你還沒有移到第三層名稱上!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("你不能列印該表,因為你還沒有移到第四層名稱上!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (MessageBox.Show("你確定要列印該BOM資料表嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -489,9 +342,9 @@ namespace Price2
                 frmReport frmReport = new frmReport();
                 //傳入參數
                 frmReport.strReportName = "bomlist";
-                frmReport.strRP[0] = cboLevel1.Text;
-                frmReport.strRP[1] = cboLevel2.Text;
-                frmReport.strRP[2] = cboLevel3.Text;
+                frmReport.strRP[0] = dgvLevel_1.Rows[dgvLevel_1.CurrentCell.RowIndex].Cells["ap1_assy"].Value.ToString();
+                frmReport.strRP[1] = dgvLevel_2.Rows[dgvLevel_2.CurrentCell.RowIndex].Cells["ap1_part"].Value.ToString();
+                frmReport.strRP[2] = dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString();
                 frmReport.strSQL = $@"select ap3_part,
                                              asp_vendormaterialno,
                                              ap3_purprice,
@@ -501,7 +354,7 @@ namespace Price2
                                       from   ap3,
                                              asp
                                       where  ap3_part = asp_id
-                                             and ap3_assy = '{cboLevel3.Text}' ";
+                                             and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                 frmReport.ShowDialog();
 
             }
@@ -540,7 +393,7 @@ namespace Price2
                                    ap3_tbprice,
                                    ap3_adddate
                             from   ap3
-                            where  ap3_assy = '{cboLevel3.Text}' ";
+                            where  ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                 dt = clsDB.sql_select_dt(strSQL);
                 dgvData.DataSource = dt;
             }
@@ -568,7 +421,7 @@ namespace Price2
                 strSQL = $@"select ap3_part
                             from   ap3
                             where  ap3_part = '{txtID.Text.Trim()}'
-                                   and ap3_assy = '{cboLevel3.Text}' ";
+                                   and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -586,7 +439,7 @@ namespace Price2
                                              ap3_currency,
                                              ap3_tbprice,
                                              ap3_adddate)
-                                values      ('{cboLevel3.Text}',
+                                values      ('{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}',
                                              '{txtID.Text}',
                                              {txtPurprice.Text},
                                              '{txtVendorid.Text}',
@@ -605,7 +458,7 @@ namespace Price2
                                 values
                                 (
                                             '4:',
-                                            '{cboLevel3.Text},{txtID.Text},{txtPurprice.Text},{txtVendorid.Text},{txtCurrency.Text},{txtTbprice.Text}',
+                                            '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()},{txtID.Text},{txtPurprice.Text},{txtVendorid.Text},{txtCurrency.Text},{txtTbprice.Text}',
                                             Getdate(),
                                             HOST_NAME(),
                                             '{clsGlobal.strG_User}'
@@ -648,13 +501,13 @@ namespace Price2
                         {
                             strSQL = $@"delete from ap3
                                 where  ap3_part = '{txtID.Text}' 
-                                       and ap3_assy = '{cboLevel3.Text}' ";
+                                       and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                         }
                         else
                         {
                             strSQL = $@"delete from ap3
                                     where  ap3_part = '{strID}' 
-                                           and ap3_assy = '{cboLevel3.Text}' ";
+                                           and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                         }
 
                         clsDB.Execute(strSQL);
@@ -668,7 +521,7 @@ namespace Price2
                                 )
                                 values
                                 (
-                                            '4: delete-{cboLevel3.Text},{strID}',
+                                            '4: delete-{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()},{strID}',
                                             '',
                                             Getdate(),
                                             HOST_NAME(),
@@ -710,13 +563,13 @@ namespace Price2
                     {
                         strSQL = $@"delete from ap3
                                 where  ap3_part = '{txtID.Text}' 
-                                       and ap3_assy = '{cboLevel3.Text}' ";
+                                       and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                     }
                     else
                     {
                         strSQL = $@"delete from ap3
                                     where  ap3_part = '{strID}' 
-                                           and ap3_assy = '{cboLevel3.Text}' ";
+                                           and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
                     }
 
                     clsDB.Execute(strSQL);
@@ -730,7 +583,7 @@ namespace Price2
                                 )
                                 values
                                 (
-                                            '4: delete-{cboLevel3.Text},{strID}',
+                                            '4: delete-{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()},{strID}',
                                             '',
                                             Getdate(),
                                             HOST_NAME(),
@@ -752,6 +605,130 @@ namespace Price2
             }
         }
 
-       
+        private void clear_dgvLevel_1()
+        {
+            if (dgvLevel_1.Rows.Count > 0)
+            {
+                DataTable dt = (DataTable)dgvLevel_1.DataSource;
+                dt.Rows.Clear();
+                dgvLevel_1.DataSource = dt;
+            }
+        }
+
+        private void clear_dgvLevel_2()
+        {
+            if (dgvLevel_2.Rows.Count > 0)
+            {
+                DataTable dt = (DataTable)dgvLevel_2.DataSource;
+                dt.Rows.Clear();
+                dgvLevel_2.DataSource = dt;
+            }
+        }
+
+        private void clear_dgvLevel_3()
+        {
+            if (dgvLevel_3.Rows.Count > 0)
+            {
+                DataTable dt = (DataTable)dgvLevel_3.DataSource;
+                dt.Rows.Clear();
+                dgvLevel_3.DataSource = dt;
+            }
+        }
+
+        private void clear_dgvLevel_4()
+        {
+            if (dgvData.Rows.Count > 0)
+            {
+                DataTable dt = (DataTable)dgvData.DataSource;
+                dt.Rows.Clear();
+                dgvData.DataSource = dt;
+            }
+        }
+
+        private void dgvLevel_1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //加入第二層名稱
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    //先將後面三層清除
+                    clear_dgvLevel_2();
+                    clear_dgvLevel_3();
+                    clear_dgvLevel_4();
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"select ap1_part
+                            from   ap1
+                            where  ap1_assy = '{dgvLevel_1.Rows[e.RowIndex].Cells["ap1_assy"].Value.ToString()}'
+                            order  by ap1_part ";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        dgvLevel_2.DataSource = dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-dgvLevel_1_CellClick" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvLevel_2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //加入第三層名稱
+            try
+            {
+                //先將後面二層清除
+                clear_dgvLevel_3();
+                clear_dgvLevel_4();
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select ap2_part
+                            from   ap2
+                            where  ap2_assy = '{dgvLevel_2.Rows[e.RowIndex].Cells["ap1_part"].Value.ToString()}'
+                            order  by ap2_part ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvLevel_3.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-dgvLevel_2_CellClick" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvLevel_3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //加入第四層名稱
+            try
+            {
+                //先將後面一層清除
+                clear_dgvLevel_4();
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select ap3_part,
+                                   ap3_purprice,   
+                                   ap3_vendorid,
+                                   ap3_currency,
+                                   ap3_tbprice,
+                                   ap3_adddate
+                            from   ap3
+                            where  ap3_assy = '{dgvLevel_3.Rows[e.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
+
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-cboLevel3_TextChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -58,18 +58,19 @@
             this.groupBox.Controls.Add(this.lblCount);
             this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(875, 519);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Size = new System.Drawing.Size(656, 415);
             this.groupBox.TabIndex = 2;
             this.groupBox.TabStop = false;
             // 
             // chkDeal
             // 
-            this.chkDeal.Location = new System.Drawing.Point(363, 34);
+            this.chkDeal.Location = new System.Drawing.Point(272, 27);
+            this.chkDeal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkDeal.Name = "chkDeal";
-            this.chkDeal.Size = new System.Drawing.Size(91, 31);
+            this.chkDeal.Size = new System.Drawing.Size(68, 25);
             this.chkDeal.TabIndex = 52;
             this.chkDeal.Text = "成交";
             this.chkDeal.UseVisualStyleBackColor = true;
@@ -77,9 +78,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(17, 31);
+            this.label2.Location = new System.Drawing.Point(13, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 34);
+            this.label2.Size = new System.Drawing.Size(90, 27);
             this.label2.TabIndex = 51;
             this.label2.Text = "搜尋國別：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -104,15 +106,15 @@
             this.cus_contact,
             this.cus_tel});
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(22, 77);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvData.Location = new System.Drawing.Point(16, 62);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 27;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(702, 416);
+            this.dgvData.Size = new System.Drawing.Size(526, 333);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
@@ -187,19 +189,19 @@
             "UNITED ARAB",
             "USA",
             "VIETNAM"});
-            this.cboCountry.Location = new System.Drawing.Point(138, 32);
-            this.cboCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboCountry.Location = new System.Drawing.Point(104, 26);
+            this.cboCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboCountry.Name = "cboCountry";
-            this.cboCountry.Size = new System.Drawing.Size(200, 33);
+            this.cboCountry.Size = new System.Drawing.Size(151, 28);
             this.cboCountry.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(640, 23);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(480, 18);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(84, 42);
+            this.btnClose.Size = new System.Drawing.Size(63, 34);
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -208,10 +210,10 @@
             // btnInq
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq.Location = new System.Drawing.Point(460, 23);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInq.Location = new System.Drawing.Point(345, 18);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(84, 42);
+            this.btnInq.Size = new System.Drawing.Size(63, 34);
             this.btnInq.TabIndex = 14;
             this.btnInq.Text = "搜尋";
             this.btnInq.UseVisualStyleBackColor = false;
@@ -221,20 +223,22 @@
             // 
             this.lblCount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblCount.ForeColor = System.Drawing.Color.Red;
-            this.lblCount.Location = new System.Drawing.Point(550, 28);
+            this.lblCount.Location = new System.Drawing.Point(412, 22);
+            this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(97, 34);
+            this.lblCount.Size = new System.Drawing.Size(73, 27);
             this.lblCount.TabIndex = 35;
             this.lblCount.Text = "筆數";
             this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmCustomer_Inq_Country
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 516);
+            this.ClientSize = new System.Drawing.Size(656, 413);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCustomer_Inq_Country";
             this.Text = "選擇客戶[國別條件]";
             this.Activated += new System.EventHandler(this.frmCustomer_Inq_Country_Activated);

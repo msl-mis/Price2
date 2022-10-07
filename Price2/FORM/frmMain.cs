@@ -415,7 +415,7 @@ namespace Price2
                 //顯示tabPage
                 tabMain.SelectedTab = tabPage2;
                 gb2.Visible = true;
-                frmVendor frmVendor = new frmVendor();
+                frmVender frmVendor = new frmVender();
                 frmVendor.MdiParent = this;
                 frmVendor.FormClosed += childForm_FormClosed;
                 frmVendor.StartPosition = FormStartPosition.CenterScreen;
@@ -542,7 +542,7 @@ namespace Price2
             //4_1 參照法資料輸入
             try
             {
-                string[] strModule = menu3_1.Text.Split('.');
+                string[] strModule = menu4_1.Text.Split('.');
                 //確認權限
                 if (clsGlobal.checkRightFlag(strModule[1]) == false)
                 {
@@ -567,6 +567,43 @@ namespace Price2
                 }
                 gbMain.Visible = false;
                 frmRefer.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_2_Click(object sender, EventArgs e)  //4_2 報價管理
+        {
+            //4_2 報價管理
+            try
+            {
+                string[] strModule = menu4_2.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                //tabMain.SelectedTab = tabPage4;
+                //gb4.Visible = true;
+                frmBOMPrice frmBOMPrice = new frmBOMPrice();
+                frmBOMPrice.MdiParent = this;
+                frmBOMPrice.FormClosed += childForm_FormClosed;
+                frmBOMPrice.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmBOMPrice.Show();
             }
             catch (Exception ex)
             {
@@ -645,6 +682,12 @@ namespace Price2
         {
             //4_1.參照法資料輸入
             menu4_1.PerformClick();
+        }
+
+        private void btn4_2_Click(object sender, EventArgs e)
+        {
+            //4_2.報價管理
+            menu4_2.PerformClick();
         }
         #endregion
 
@@ -853,5 +896,6 @@ namespace Price2
             gbMain.Visible = true;
         }
 
+        
     }
 }

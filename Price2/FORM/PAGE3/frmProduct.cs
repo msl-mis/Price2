@@ -71,9 +71,10 @@ namespace Price2
         private Double asp_salesprice = 0;               // 
 
         public static string strProductID = "";
-
-
-
+        public static string rstrNo = "";     //回傳的品號
+        public static string rstrVenderID = "";     //回傳的廠號
+        public static string rstrVenderName = "";     //回傳的廠商
+        public static string rstrResult = "";     //回傳的結果
         public frmProduct()
         {
             InitializeComponent();
@@ -265,15 +266,7 @@ namespace Price2
                 strSQL0_where = strSQL0_where + strSQL_tmp;
 
                 strSQL1_where = strSQL1_where + " And aspnum.aspnum_vendorid <> asp_vendorid";
-                if (txtVenderID_Q.Text == "")   //廠號
-                {
-                    strSQL_tmp = "";
-                }
-                else
-                {
-                    strSQL_tmp = " and aspnum_vendorid like '" + txtVenderID_Q.Text.Trim() + "' And aspnum.aspnum_vendorid <> asp_vendorid";
-                }
-                strSQL1_where = strSQL1_where + strSQL_tmp;
+                
 
                 if (txtNo_Q.Text == "")   //品號
                 {
@@ -282,6 +275,16 @@ namespace Price2
                 else
                 {
                     strSQL_tmp = " and " + SplitWhere("asp_vendormaterialno", txtNo_Q.Text) + " and aspnum.aspnum_num <> asp_vendormaterialno";
+                }
+                strSQL1_where = strSQL1_where + strSQL_tmp;
+
+                if (txtVenderID_Q.Text == "")   //廠號
+                {
+                    strSQL_tmp = "";
+                }
+                else
+                {
+                    strSQL_tmp = " and aspnum_vendorid like '" + txtVenderID_Q.Text.Trim() + "' And aspnum.aspnum_vendorid <> asp_vendorid";
                 }
                 strSQL1_where = strSQL1_where + strSQL_tmp;
 
@@ -305,61 +308,36 @@ namespace Price2
                 }
                 strSQL2_where = strSQL2_where + strSQL_tmp;
 
-                strSQL = $@"select distinct asp_id
-                                            '材料名',
-                                            asp_vendormaterialno
-                                            '品號',
+                strSQL = $@"select distinct asp_id                                                      '材料名',
+                                            asp_vendormaterialno                                        '品號',
                                             case
                                               when num.aspnum_count > 1 then 'V'
                                               else ''
-                                            end
-                                            '內層',
+                                            end                                                         '內層',
                                             case left (asp_name, 1)
                                               when 'Y' then 'V'
                                               else ''
-                                            end
-                                            '材料單',
-                                            Isnull(ab.pri_vendorid, '')
-                                            '外購',
-                                            Cast(convert(DECIMAL(18, 6), asp_purprice) as VARCHAR(16))
-                                            '單價',
-                                            asp_pricecal
-                                            '計算式',
-                                            asp_currency
-                                            '幣種',
-                                            Round(asp_purprice * cur_convert, 6)
-                                            '台幣',
-                                            asp_um
-                                            '單位',
-                                            asp_vendorid
-                                            '廠商',
-                                            Isnull(asp_thisstockin, 0)
-                                            '報價單筆數',
-                                            Isnull(asp_thisstockout, 0)
-                                            '已成交筆數',
-                                            Format(Round(Isnull(asp_stock, 0), 0), '#,0')
-                                            '二年內成交金額',
-                                            Isnull(aa01.pcount, 0)
-                                            '材料單筆數',
-                                            left(asp_od, 1)
-                                            '審核',
-                                            asp_oduser
-                                            '審核者',
-                                            Substring(asp_od, 2, 1)
-                                            '越南材料',
-                                            asp_line
-                                            '越南運費',
+                                            end                                                         '材料單',
+                                            Isnull(ab.pri_vendorid, '')                                 '外購',
+                                            Cast(convert(DECIMAL(18, 6), asp_purprice) as VARCHAR(16))  '單價',
+                                            asp_pricecal                                                '計算式',
+                                            asp_currency                                                '幣種',
+                                            Round(asp_purprice * cur_convert, 6)                        '台幣',
+                                            asp_um                                                      '單位',
+                                            asp_vendorid                                                '廠商',
+                                            Isnull(a01.pcount, 0)                                       '報價單筆數',
+                                            Isnull(a02.pcount, 0)                                       '已成交筆數',
+                                            Format(Round(Isnull(asp_stock, 0), 0), '#,0')               '二年內成交金額',
+                                            Isnull(aa01.pcount, 0)                                      '材料單筆數',
+                                            left(asp_od, 1)                                             '審核',
+                                            asp_oduser                                                  '審核者',
+                                            Substring(asp_od, 2, 1)                                     '越南材料',
+                                            asp_line                                                    '越南運費',
                                             case
                                               when ba.acc > 0 then 'V'
                                               else ''
-                                            end
-                                            'BOM登錄',
-                                            convert(VARCHAR(4), Datepart(yyyy, asp_adddate))
-                                            + '/'
-                                            + convert(VARCHAR(2), Datepart(mm, asp_adddate))
-                                            + '/'
-                                            + convert(VARCHAR(2), Datepart(dd, asp_adddate))
-                                            '材料建立日期'
+                                            end                                                         'BOM登錄',
+                                            Format(asp_adddate, 'yyyy/MM/dd')                           '材料建立日期'
                             from   asp
                                    left join aspnum as aspnum
                                           on aspnum.aspnum_id = asp.asp_id
@@ -380,6 +358,23 @@ namespace Price2
                                               where  left(pri_newcostchk, 1) = 'Y'
                                               group  by pri_part) as aa01
                                           on aa01.pri_part = asp_id
+                                   left join (select pri_part,
+                                                     Count(pri_part) as pcount
+                                              from   pri
+                                              where  pri_newcostchk like 'N%'
+                                                     and pri_part in (select asp_id
+                                                                      from   asp)
+                                              group  by pri_part) as a01
+                                          on a01.pri_part = asp_id
+                                   left join (select count(distinct ord_assy) as pcount, pri_part
+												from   ord
+												left join pri
+                                                on ord_assy = pri_customerid
+                                              where  pri_newcostchk like 'N%'
+                                                     and pri_part in (select asp_id
+                                                                      from   asp)
+                                              group  by pri_part) as a02
+                                          on a02.pri_part = asp_id
                                    left join (select distinct pri_part,
                                                               pri_vendorid,
                                                               ac.ven_id
@@ -399,14 +394,20 @@ namespace Price2
                                                      Count(ap3_part) as acc
                                               from   ap3
                                               group  by ap3_part) as ba
-                                          on ba.ap3_part = asp_id";
-                strSQL_2 = strSQL + " where " + strSQL2_where + " order by asp_id";
-                dt = clsDB.sql_select_dt(strSQL_2);
+                                          on ba.ap3_part = asp_id ";
+                //把btnFilter2拿掉
+                //strSQL_2 = strSQL + " where " + strSQL2_where + " order by asp_id";
+                //dt = clsDB.sql_select_dt(strSQL_2);
+                strSQL_0 = strSQL + " where " + strSQL0_where + " order by asp_id";
+                dt = clsDB.sql_select_dt(strSQL_0);
                 dgvData.DataSource = dt;
                 if (dt.Rows.Count > 0)
                 {
-                    btnFilter2.Text = "全：" + dt.Rows.Count.ToString();
-                    btnFilter2.BackColor = Color.FromArgb(255, 224, 192);
+                    //btnFilter2.Text = "全：" + dt.Rows.Count.ToString();
+                    //btnFilter2.BackColor = Color.FromArgb(255, 224, 192);
+
+                    btnFilter0.Text = "外：" + dt.Rows.Count.ToString();
+                    btnFilter0.BackColor = Color.FromArgb(255, 224, 192);
                     btnExport_Q.Enabled = true;
                 }
                 else
@@ -416,10 +417,10 @@ namespace Price2
                     //return;
                 }
 
-                strSQL_0 = strSQL + " where " + strSQL0_where + " order by asp_id";
-                dt = clsDB.sql_select_dt(strSQL_0);
-                btnFilter0.Text = "外：" + dt.Rows.Count.ToString();
-                btnFilter0.BackColor = Color.FromArgb(224, 224, 224);
+                //strSQL_0 = strSQL + " where " + strSQL0_where + " order by asp_id";
+                //dt = clsDB.sql_select_dt(strSQL_0);
+                //btnFilter0.Text = "外：" + dt.Rows.Count.ToString();
+                //btnFilter0.BackColor = Color.FromArgb(224, 224, 224);
 
                 strSQL_1 = strSQL + " where " + strSQL1_where + " order by asp_id";
                 dt = clsDB.sql_select_dt(strSQL_1);
@@ -2484,7 +2485,7 @@ namespace Price2
         private void btnExport_Q_Click(object sender, EventArgs e)  //匯出
         {
             //匯出
-            clsGlobal clsGlobal = new clsGlobal();
+            //clsGlobal clsGlobal = new clsGlobal();
             clsGlobal.ExportExcel("火車頭資料查詢", dgvData);
         }
 
@@ -2818,10 +2819,7 @@ namespace Price2
         {
             if (e.KeyCode == Keys.Enter)
             {
-                strPricecal = txtPurprice.Text;
-                //將計算式轉成結果取到小數點6位
-                DataTable dt = new DataTable();
-                txtPurprice.Text = Convert.ToDouble(dt.Compute(strPricecal, null)).ToString("0.######");
+                txtVenderID.Focus();
             }
         }
 
@@ -2830,6 +2828,77 @@ namespace Price2
             if (txtPurprice.Text != "")
             {
                 MessageBox.Show(" 計算式：  " + strPricecal, "計算式", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtPurprice_TextChanged(object sender, EventArgs e)
+        {
+            //檢查廠商代碼57材料單的單價不可更改
+            if (strName == "Y" && txtPurprice.Text != "" && oldprice != "" && checkBom(txtNo.Text))
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+
+            //檢查"銅桿OD2.6mm/kg"單價不可更改
+            if (txtID.Text == "銅桿OD2.6mm/kg" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            if (txtID.Text == "PVC粉S-60" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            if (txtID.Text == "PVC粉S-65" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            if (txtID.Text == "芯線料/HDPE 9007(3364)/kg" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            if (txtID.Text == "可塑劑 DOTP" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            if (txtID.Text == "可塑劑 TOTM" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            if (txtID.Text == "填充劑活性鈣 HX-CCR 3000" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
             }
         }
 
@@ -3384,15 +3453,10 @@ namespace Price2
                     clsDB.Execute(strSQL);
                     strSQL = $@"delete asb where asb_id = '{txtID.Text.Trim()}' ";
                     clsDB.Execute(strSQL);
-                    if (strName=="Y")
-                    {
-                        MessageBox.Show("已刪除完成!還有材料單要刪除,請檢查!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("已經刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    
+                    strSQL = $@"delete pri where pri_customerid = '{txtID.Text.Trim()}' ";
+                    clsDB.Execute(strSQL);
+
+                    MessageBox.Show("已經刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnClear.PerformClick();
 
                 }
@@ -3455,6 +3519,8 @@ namespace Price2
                         clsDB.Execute(strSQL);
                         strSQL = $@"delete asb where asb_id not in (select asp_id from asp)' ";
                         clsDB.Execute(strSQL);
+                        strSQL = $@"delete pri where pri_customerid = '{dgvData.Rows[i].Cells["材料名"].Value.ToString()}' ";
+                        clsDB.Execute(strSQL);
                     }
                     MessageBox.Show("已經刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnClear.PerformClick();
@@ -3474,6 +3540,7 @@ namespace Price2
             //查詢BOM產品結構資料
             try
             {
+                strProductID = "";
                 frmBOM frmBOM = new frmBOM();
                 frmBOM.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmBOM.ShowInTaskbar = false;
@@ -3517,18 +3584,19 @@ namespace Price2
                 }
                 if(txtNo.Text!="" && txtNo.Text.Length>=6)
                 {
-                    InputBox input = new InputBox();
-                    input.ShowInTaskbar = false;//圖示不顯示在工作列
-                    input.lblInfo.Text = "請輸入新的品號:";
-                    input.Text = "更換品號";
-                    input.txtIpnut.Text = txtNo.Text;
-                    DialogResult dr = input.ShowDialog();
-                    if (dr == DialogResult.OK)
+                    rstrNo = "";
+                    rstrVenderID = "";
+                    frmProduct_InputBox frmProduct_InputBox = new frmProduct_InputBox();
+                    frmProduct_InputBox.ShowInTaskbar = false;//圖示不顯示在工作列
+                    frmProduct_InputBox.txtName.Text = txtNo.Text;
+                    frmProduct_InputBox.ShowDialog();
+                   
+                    if (rstrResult=="OK")
                     {
-                        if (input.GetMsg() != "")
+                        if (rstrNo != "" && rstrVenderID !="")
                         {
-                            string strNo = input.GetMsg().Trim().ToUpper();
-                            if (strNo != txtNo.Text)
+                            //string strNo = input.GetMsg().Trim().ToUpper();
+                            if (rstrNo != txtNo.Text)
                             {
                                 //檢查是否有多品號,若有再檢查前六碼是否一致.
                                 strSQL = $@"select aspnum_id,
@@ -3539,7 +3607,7 @@ namespace Price2
                                 dt = clsDB.sql_select_dt(strSQL);
                                 if (dt.Rows.Count > 0)
                                 {
-                                    if(dt.Rows[0]["aspnum_num"].ToString().Substring(0,6)!= strNo.Substring(0,6))
+                                    if(dt.Rows[0]["aspnum_num"].ToString().Substring(0,6)!= rstrNo.Substring(0,6))
                                     {
                                         MessageBox.Show("新品號前6碼不一致,請檢查!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                         this.Cursor = Cursors.Default;//滑鼠還原預設
@@ -3549,7 +3617,7 @@ namespace Price2
 
                                 strSQL = $@"select asp_id
                                             from   asp
-                                            where  asp_vendormaterialno = '{strNo}' ";
+                                            where  asp_vendormaterialno = '{rstrNo}' ";
                                 dt = clsDB.sql_select_dt(strSQL);
                                 if (dt.Rows.Count > 0)
                                 {
@@ -3558,27 +3626,50 @@ namespace Price2
                                     return;
                                 }
 
+                                strSQL = $@"update ap3
+                                            set    ap3_vendorid = '{rstrVenderID}'
+                                            where  ap3_part = '{txtID.Text.Trim()}' ";
+                                clsDB.Execute(strSQL);
+
+                                strSQL = $@"update avt
+                                            set    avt_vendormaterialno = '{rstrNo}',
+                                                   avt_vendorid = '{rstrVenderID}'
+                                            where  avt_id = '{txtID.Text.Trim()}'
+                                                   and avt_vendormaterialno = '{txtNo.Text.Trim()}' ";
+                                clsDB.Execute(strSQL);
+
                                 strSQL = $@"update asp
-                                            set    asp_vendormaterialno = '{strNo}',
-                                                    asp_user = Isnull((select wus_name
-                                                                        from wus
-                                                                        where wus_computername = Host_name()),
-                                                                '{clsGlobal.strG_User}'),
-                                                    asp_adddate = Getdate()
-                                            where asp_id = '{txtID.Text.Trim()}' ";
+                                            set    asp_vendormaterialno = '{rstrNo}',
+                                                   asp_vendorid = '{rstrVenderID}',
+                                                   asp_user = Isnull((select wus_name
+                                                                       from wus
+                                                                       where wus_computername = Host_name()),
+                                                               '{clsGlobal.strG_User}'),
+                                                   asp_adddate = Getdate()
+                                            where  asp_id = '{txtID.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
+
                                 strSQL = $@"update aspnum
-                                            set    aspnum_num = '{strNo}'
+                                            set    aspnum_num = '{rstrNo}', 
+                                                   asp_vendorid = '{rstrVenderID}'
                                             where aspnum_id = '{txtID.Text.Trim()}'
-                                                    and aspnum_num = '{txtNo.Text}' ";
+                                                    and aspnum_num = '{txtNo.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
+
+                                strSQL = $@"update asm
+                                            set    asm_vendormaterialno = '{rstrNo}',
+                                                   asm_vendorid = '{rstrVenderID}'
+                                            where  asm_id = '{txtID.Text.Trim()}'
+                                                   and asm_vendormaterialno = '{txtNo.Text.Trim()}' ";
+                                clsDB.Execute(strSQL);
+
                                 strSQL = $@"update pri
-                                            set    pri_assy = '{strNo}'
+                                            set    pri_assy = '{rstrNo}'
                                             where pri_customerid = '{txtID.Text.Trim()}'
                                                     and pri_newcostchk like'Y%'
                                                     and pri_assy = '{txtNo.Text}' ";
                                 clsDB.Execute(strSQL);
-
+                                rstrNo = "";
                                 MessageBox.Show("新品號更換完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 getID();
                                 this.Cursor = Cursors.Default;//滑鼠還原預設
@@ -3632,8 +3723,8 @@ namespace Price2
                     {
                         if (input.GetMsg() != "" && input.GetMsg().Length==6)
                         {
-                            string strNo=input.GetMsg().Trim().ToUpper();
-                            if(strNo!=txtNo.Text.ToUpper().Substring(0, 6))
+                            string strNo = input.GetMsg().Trim().ToUpper();
+                            if (strNo!=txtNo.Text.ToUpper().Substring(0, 6))
                             {
                                 string strSQL = "";
                                 DataTable dt = new DataTable();
@@ -3710,24 +3801,536 @@ namespace Price2
             }
         }
 
-        private void btnCopy_Click(object sender, EventArgs e)
+        private void btnCopy_Click(object sender, EventArgs e)  //複製
         {
+            //複製
+            try
+            {
+                if (clsGlobal.checkRightFlag("火車頭複製權限") == false)
+                {
+                    MessageBox.Show("你沒有火車頭複製權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                string strOldID = "";
+                strOldID = txtID.Text;
+                InputBox input = new InputBox();
+                input.ShowInTaskbar = false;//圖示不顯示在工作列
+                input.lblInfo.Text = "原材料名:"+txtID.Text;
+                input.Text = "複製";
+                input.txtIpnut.Text = txtID.Text;
+                DialogResult dr = input.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    if (input.GetMsg() != "")
+                    {
+                        string strNewID = input.GetMsg().Trim();
+                        string strSQL = "";
+                        DataTable dt = new DataTable();
 
+                        //檢查問題字符
+                        strSQL = $@"select Isnull(Charindex('[', '{strNewID}'), 0) as c1,
+                                           Isnull(Charindex(']', '{strNewID}'), 0) as c2,
+                                           Isnull(Charindex('&', '{strNewID}'), 0) as c3 ";
+                        dt=clsDB.sql_select_dt(strSQL);
+                        if(dt.Rows.Count > 0)
+                        {
+                            if (dt.Rows[0]["c1"].ToString()=="0" && dt.Rows[0]["c2"].ToString() == "0" && dt.Rows[0]["c3"].ToString() == "0")
+                            {
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("你輸入的產品編號包括了一些不能用的字符[]&,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+
+                        //檢查重複材料名
+                        strSQL = $@"select * from asp where asp_id='{strNewID}'";
+                        dt = clsDB.sql_select_dt(strSQL);
+                        if (dt.Rows.Count > 0)
+                        {
+                            MessageBox.Show("名稱重覆,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+
+                        //都沒問題就開始複製到asp
+                        //依李先生要求,複製時品號空白.所以先清空品號,並在材料價史記錄此新材料是由複製產生的.
+                        btnInq_No.BackColor = Color.FromArgb(0, 255, 0);    //檢查品號變回綠色
+                        txtID.Text = strNewID;
+                        txtNo.Text = "";    //品號清空
+                        strName = "";   //材料單設定清空
+                        chkCheck.Checked = false;   //審核清空
+                        chkSafety.Checked = false;  //安規清空
+                        //txtCzf.Text = "";   //參照法清空
+                        //txtMultinum.Text = "";   //同品號清空
+                        
+                        DoCopy_asp_save();  //複製到asp
+
+                        strSQL = $@"update asb
+                                    set    asb_memo = N'[複製材料]由此材料複製=>{strOldID}'
+                                    where  asb_id = N'{txtID.Text}'
+                                           and asb_changedate = '{DateTime.Now.ToString("yyyy/MM/dd")}'";
+                        clsDB.Execute(strSQL);
+                        MessageBox.Show("已經複製完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnCopy_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnRename_Click(object sender, EventArgs e)
+        private void btnRename_Click(object sender, EventArgs e)    //更名
         {
+            //更名
+            try
+            {
+                if(txtID.Text=="")
+                {
+                    return;
+                }
+                if (clsGlobal.checkRightFlag("火車頭更名權限") == false)
+                {
+                    MessageBox.Show("你沒有火車頭更名權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select pub_bomuse from pub";
+                string rs = clsDB.sql_select_String(strSQL, "pub_bomuse");
+                if(rs!="")
+                {
+                    MessageBox.Show(rs + "使用者正在BOM產品結構作業,暫停更名.請稍候再試!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                strSQL = $@"select * from asp where asp_id = '{txtID.Text.Trim()}' ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("請先輸入已存在材料名!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtID.Focus();
+                    return;
+                }
 
+                InputBox input = new InputBox();
+                input.ShowInTaskbar = false;//圖示不顯示在工作列
+                input.lblInfo.Text = "原材料名:" + txtID.Text;
+                input.Text = "材料名更名";
+                input.txtIpnut.Text = txtID.Text;
+                DialogResult dr = input.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    if (input.GetMsg() != "")
+                    {
+                        string strOldID= txtID.Text.Trim();
+                        string strNewID = input.GetMsg().Trim();
+                        //檢查字數
+                        if (getStrLength(strNewID) > 30)
+                        {
+                            MessageBox.Show("材料名長度" + getStrLength(txtID.Text).ToString() + ",不可以超過30個英文字元!請重新輸.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                        //檢查特殊字元
+                        if (strNewID.IndexOf("'") >= 0)
+                        {
+                            MessageBox.Show("不可輸入特殊字元< ' >", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                        //檢查問題字符
+                        strSQL = $@"select Isnull(Charindex('[', '{strNewID}'), 0) as c1,
+                                           Isnull(Charindex(']', '{strNewID}'), 0) as c2,
+                                           Isnull(Charindex('&', '{strNewID}'), 0) as c3 ";
+                        dt = clsDB.sql_select_dt(strSQL);
+                        if (dt.Rows.Count > 0)
+                        {
+                            if (dt.Rows[0]["c1"].ToString() == "0" && dt.Rows[0]["c2"].ToString() == "0" && dt.Rows[0]["c3"].ToString() == "0")
+                            {
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("你輸入的產品編號包括了一些不能用的字符[]&,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+
+                        //檢查重複材料名
+                        strSQL = $@"select * from asp where asp_id='{strNewID}'";
+                        dt = clsDB.sql_select_dt(strSQL);
+                        if (dt.Rows.Count > 0)
+                        {
+                            MessageBox.Show("名稱重覆,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+
+                        //都沒問題就開始更名
+                        strSQL = $@"update asp
+                                    set    asp_id = N'{strNewID}',
+                                           asp_user = '{clsGlobal.strG_User}',
+                                           asp_adddate = Getdate()
+                                    where  asp_id = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update ap3
+                                    set    ap3_part = N'{strNewID}'
+                                    where  ap3_part = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update pri
+                                    set    pri_part = N'{strNewID}'
+                                    where  pri_part = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update pri
+                                    set    pri_customerid = N'{strNewID}'
+                                    where  pri_customerid = N'{strOldID}'
+                                           and pri_newcostchk like 'Y%' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"exec cal_parttotalbyname N'{strNewID}'";//組合pri_parttotal
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update avt
+                                    set    avt_id = N'{strNewID}'
+                                    where  avt_id = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update asb
+                                    set    asb_id = N'{strNewID}'
+                                    where  asb_id = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update aspnum
+                                    set    aspnum_id = N'{strNewID}'
+                                    where  aspnum_id = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"update pub
+                                    set    pub_vnfreight = N'{strNewID}'
+                                    where  pub_vnfreight = N'{strOldID}' ";
+                        clsDB.Execute(strSQL);
+                        strSQL = $@"insert asb
+                                           (asb_id,
+                                            asb_changedate,
+                                            asb_price,
+                                            asb_vendorid,
+                                            asb_user,
+                                            asb_currency,
+                                            asb_memo,
+                                            asb_pricecal)
+                                    values (N'{strNewID}',
+                                            Getdate(),
+                                            '{txtPurprice.Text}',
+                                            '{txtVenderID.Text}',
+                                            '{clsGlobal.strG_User}',
+                                            '{cboCurrency.Text}',
+                                            N'[更名] 原材料名->{strOldID}',
+                                            '{strPricecal}') ";
+                        clsDB.Execute(strSQL);
+
+                        //連參照法內的包裝運材料名也要檢查
+                        if(txtID.Text.Substring(0,2)== "包/")
+                        {
+                            strSQL = $@"update odi
+                                        set    odi_pripart02 = '{strNewID}'
+                                        where  odi_pripart02 = '{strOldID}' ";
+                            clsDB.Execute(strSQL);
+                        }
+                        if (txtID.Text.Substring(0, 2) == "裝/")
+                        {
+                            strSQL = $@"update odi
+                                        set    odi_pripart01 = '{strNewID}'
+                                        where  odi_pripart01 = '{strOldID}' ";
+                            clsDB.Execute(strSQL);
+                        }
+                        if (txtID.Text.Substring(0, 2) == "運/")
+                        {
+                            strSQL = $@"update odi
+                                        set    odi_pripart05 = '{strNewID}'
+                                        where  odi_pripart05 = '{strOldID}' ";
+                            clsDB.Execute(strSQL);
+                        }
+                        if (txtID.Text.Substring(0, 2) == "不良")
+                        {
+                            strSQL = $@"update odi
+                                        set    odi_pripart04 = '{strNewID}'
+                                        where  odi_pripart04 = '{strOldID}' ";
+                            clsDB.Execute(strSQL);
+                        }
+                        txtID.Text = strNewID;
+                        MessageBox.Show("已經更名替換完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnRename_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnInq_No_Click(object sender, EventArgs e)
         {
-
+            //查詢品號
+            try
+            {
+                if(txtID.Text=="")
+                {
+                    return;
+                }
+                if (txtNo.Text == "")
+                {
+                    MessageBox.Show("品號欄位空白,請先輸入品號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                String strSQL = "";
+                DataTable dt = new DataTable();
+                //檢查有無aspnum,無則新建aspnum
+                strSQL = $@"select * from aspnum where aspnum_id = '{txtID.Text.Trim()}'";
+                dt = clsDB.sql_select_dt(strSQL);
+                if(dt.Rows.Count==0)
+                {
+                    strSQL = $@"insert into aspnum
+                                            (aspnum_id,
+                                             aspnum_num,
+                                             aspnum_modifydate,
+                                             aspnum_price,
+                                             aspnum_currency,
+                                             aspnum_memo,
+                                             aspnum_pricecal,
+                                             aspnum_vendorid,
+                                             aspnum_spec,
+                                             aspnum_um)
+                                values      ('{txtID.Text.Trim()}',
+                                             '{txtNo.Text.Trim()}',
+                                             '{DateTime.Now.ToString("yyyy/MM/dd")}',
+                                             '{txtPurprice.Text.Trim()}',
+                                             '{cboCurrency.Text.Trim()}',
+                                             '{txtCzf.Text.Trim()}',
+                                             '{strPricecal}',
+                                             '{txtVenderID.Text.Trim()}',
+                                             '{txtSpec.Text.Trim()}',
+                                             '{cboUnit.Text.Trim()}') ";
+                    clsDB.Execute(strSQL);
+                }
+                rstrNo = "";
+                frmProduct_Inq_No frmProduct_Inq_No = new frmProduct_Inq_No();
+                frmProduct_Inq_No.ShowInTaskbar = false;//圖示不顯示在工作列
+                frmProduct_Inq_No.rstrID = txtID.Text.Trim();
+                frmProduct_Inq_No.ShowDialog();
+                //檢查多品號,若是多品號查詢按鈕顯示紅色.
+                checkMultinum(txtID.Text);
+                if(rstrNo!="")
+                {
+                    //品號改變;更新相關資訊
+                    
+                    strSQL = $@"select aspnum_id                                          as 材料名,
+                               aspnum_num                                                 as 品號,
+                               convert (VARCHAR(10), aspnum_modifydate, 120)              as 最後變動日期,
+                               Cast(convert(DECIMAL(18, 6), aspnum_price) as VARCHAR(18)) as 最新價格,
+                               aspnum_vendorid                                            as 廠商,
+                               aspnum_currency                                            as 幣種,
+                               aspnum_um                                                  as 單位,
+                               aspnum_memo                                                as 參照法,
+                               aspnum_spec                                                as 規格,
+                               aspnum_pricecal                                            as 計算式
+                        from   aspnum
+                        where  aspnum_id = '{txtID.Text}' and aspnum_num='{rstrNo}' ";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        txtNo.Text = dt.Rows[0]["品號"].ToString();
+                        txtPurprice.Text = dt.Rows[0]["最新價格"].ToString();
+                        oldprice = txtPurprice.Text;
+                        txtVenderID.Text = dt.Rows[0]["廠商"].ToString();
+                        cboCurrency.Text = dt.Rows[0]["幣種"].ToString();
+                        cboUnit.Text = dt.Rows[0]["單位"].ToString();
+                        txtCzf.Text = dt.Rows[0]["參照法"].ToString();
+                        txtSpec.Text = dt.Rows[0]["規格"].ToString();
+                        strPricecal = dt.Rows[0]["計算式"].ToString();
+                    }
+                }
+                else
+                {
+                    //品號不變更;重新更新相關資訊
+                    strSQL = $@"select aspnum_id                                          as 材料名,
+                               aspnum_num                                                 as 品號,
+                               convert (VARCHAR(10), aspnum_modifydate, 120)              as 最後變動日期,
+                               Cast(convert(DECIMAL(18, 6), aspnum_price) as VARCHAR(18)) as 最新價格,
+                               aspnum_vendorid                                            as 廠商,
+                               aspnum_currency                                            as 幣種,
+                               aspnum_um                                                  as 單位,
+                               aspnum_memo                                                as 參照法,
+                               aspnum_spec                                                as 規格,
+                               aspnum_pricecal                                            as 計算式
+                        from   aspnum
+                        where  aspnum_id = '{txtID.Text}' and aspnum_num='{txtNo.Text}' ";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        txtNo.Text = dt.Rows[0]["品號"].ToString();
+                        txtPurprice.Text = dt.Rows[0]["最新價格"].ToString();
+                        oldprice = txtPurprice.Text;
+                        txtVenderID.Text = dt.Rows[0]["廠商"].ToString();
+                        cboCurrency.Text = dt.Rows[0]["幣種"].ToString();
+                        cboUnit.Text = dt.Rows[0]["單位"].ToString();
+                        txtCzf.Text = dt.Rows[0]["參照法"].ToString();
+                        txtSpec.Text = dt.Rows[0]["規格"].ToString();
+                        strPricecal = dt.Rows[0]["計算式"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnBOM_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void btnInq_Vender_Click(object sender, EventArgs e)
+        private void btnInq_Vender_Click(object sender, EventArgs e)    //呼叫"廠商查詢",並將結果傳入廠號廠商
         {
+            //呼叫"廠商查詢",並將結果傳入廠號廠商
+            try
+            {
+                rstrVenderID = "";
+                rstrVenderName = "";
+                frmVender_Inq frmVender_Inq = new frmVender_Inq();
+                frmVender_Inq.ShowInTaskbar = false;    //圖示不顯示在工作列
+                frmVender_Inq.strWhoCall = "frmProduct";
+                frmVender_Inq.ShowDialog();
 
+                if (rstrVenderID != "")
+                {
+                    txtVenderID.Text = rstrVenderID;
+                    lblVender.Text= rstrVenderName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnInq_Customer_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private Boolean checkBom(string strNo)
+        {
+            //檢查材料單
+            string strSQL = "";
+            DataTable dt = new DataTable();
+            strSQL = $@"select distinct pri_customerid from pri where pri_assy ='{strNo}' and pri_newcostchk like 'Y%'";
+            dt = clsDB.sql_select_dt(strSQL);
+            if(dt.Rows.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void DoCopy_asp_save()
+        {
+            //複製到asp 
+            try
+            {
+                /// 材料名資料儲存
+                if (txtPurprice.Text == "")
+                {
+                    txtPurprice.Text = "0";
+                }
+
+                if (strStandprice == "")
+                {
+                    strStandprice = "0";
+                }
+                if (strSafeqty == "")
+                {
+                    strSafeqty = "0";
+                }
+                if (strWeight == "")
+                {
+                    strWeight = "0";
+                }
+                if (strPurleadtime == "")
+                {
+                    strPurleadtime = "0";
+                }
+                if (strMakeleadtime == "")
+                {
+                    strMakeleadtime = "0";
+                }
+                if (strPurchprice == "")
+                {
+                    strPurchprice = "0";
+                }
+                if (strSalesprice == "")
+                {
+                    strSalesprice = "0";
+                }
+                if (strTjjz == "")
+                {
+                    strTjjz = "0";
+                }
+                asp_multinum = txtMultinum.Text;
+                if (strPricecal == "")
+                {
+                    strPricecal = "0";
+                }
+                if (txtWeight.Text == "")
+                {
+                    txtWeight.Text = "0";
+                }
+                asp_vnweight = Convert.ToDouble(txtWeight.Text);
+                if (txtQuantity.Text == "")
+                {
+                    txtQuantity.Text = "0";
+                }
+                asp_vnpcs = Convert.ToDouble(txtQuantity.Text);
+
+                asp_id = txtID.Text;
+                asp_type = strType;
+                asp_name = strName;
+                asp_um = cboUnit.Text;
+                asp_purprice = Convert.ToDouble(txtPurprice.Text);
+                asp_standprice = Convert.ToDouble(strStandprice);
+                asp_vendorid = txtVenderID.Text;
+                asp_currency = cboCurrency.Text;
+                asp_czf = txtCzf.Text;
+                asp_tjjz = Convert.ToDouble(strTjjz);
+                asp_area = strArea;
+                asp_safeqty = Convert.ToDouble(strSafeqty);
+                asp_weight = Convert.ToDouble(strWeight);
+                asp_purleadtime = Convert.ToDouble(strPurleadtime);
+                asp_makeleadtime = Convert.ToDouble(strMakeleadtime);
+                asp_salesprice = Convert.ToDouble(strSalesprice);
+                asp_purchprice = Convert.ToDouble(strPurchprice);
+                if (chkControlMeterial.Checked == true)
+                {
+                    asp_dummyflag = 1;
+                }
+                else
+                {
+                    asp_dummyflag = 0;
+                }
+                asp_pricecal = strPricecal;
+                asp_vendormaterialno = txtNo.Text;
+                asp_spec = txtSpec.Text;
+                asp_location = strLocation;
+                
+
+                DoUpdate_asp();                     //更新asp資料
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-DoCopy_asp_save" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtPurprice_Enter(object sender, EventArgs e)
+        {
+            if (strPricecal != "")
+            {
+                txtPurprice.Text = strPricecal;
+            }
+        }
+
+        private void txtPurprice_Leave(object sender, EventArgs e)
+        {
+            strPricecal = txtPurprice.Text;
+            //計算式  計算機 引用using System.Data
+            txtPurprice.Text = Convert.ToDouble(new DataTable().Compute(txtPurprice.Text, null)).ToString("0.######");
         }
     }
 }
