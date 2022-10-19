@@ -276,3 +276,7 @@ D:\User\Desktop\Price2\Price2\obj\Debug\Price2.application
 D:\User\Desktop\Price2\Price2\obj\Debug\Price2.csproj.CopyComplete
 D:\User\Desktop\Price2\Price2\obj\Debug\Price2.exe
 D:\User\Desktop\Price2\Price2\obj\Debug\Price2.pdb
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Special.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Class.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Large.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Note.resources

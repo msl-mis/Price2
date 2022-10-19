@@ -837,7 +837,7 @@
             this.label1.Text = "幣種：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // frmVendor
+            // frmVender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -845,7 +845,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmVendor";
+            this.Name = "frmVender";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "廠商資料建立";
             this.Load += new System.EventHandler(this.frmVendor_Load);

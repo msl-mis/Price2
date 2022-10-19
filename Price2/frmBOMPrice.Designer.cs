@@ -64,7 +64,7 @@
             this.radioMeter = new System.Windows.Forms.RadioButton();
             this.radioFeet = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCost = new System.Windows.Forms.TextBox();
+            this.txtTBCost = new System.Windows.Forms.TextBox();
             this.btnGet = new System.Windows.Forms.Button();
             this.chkSpecial = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,6 +81,7 @@
             this.asp_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asp_vnweight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.asp_vnpcs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pri_um = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvLevel_4 = new System.Windows.Forms.DataGridView();
             this.ap3_part = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ap3_tbprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,7 +92,7 @@
             this.dgvLevel_1 = new System.Windows.Forms.DataGridView();
             this.ap1_assy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel = new System.Windows.Forms.Panel();
-            this.lblVender = new System.Windows.Forms.Label();
+            this.txtVender = new System.Windows.Forms.TextBox();
             this.pnlName = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlID = new System.Windows.Forms.Panel();
@@ -113,7 +114,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cboCurrency = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCost_Part = new System.Windows.Forms.TextBox();
+            this.txtCost = new System.Windows.Forms.TextBox();
             this.chkNote = new System.Windows.Forms.CheckBox();
             this.chkClassify = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -228,6 +229,7 @@
             this.chkMaterial.Text = "材料";
             this.chkMaterial.UseVisualStyleBackColor = false;
             this.chkMaterial.CheckedChanged += new System.EventHandler(this.chkMaterial_CheckedChanged);
+            this.chkMaterial.Click += new System.EventHandler(this.chkMaterial_Click);
             // 
             // btnUpLevel
             // 
@@ -344,6 +346,7 @@
             this.btnClear.TabIndex = 92;
             this.btnClear.Text = "清除";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnCFZ
             // 
@@ -363,7 +366,7 @@
             this.panel1.Controls.Add(this.radioMeter);
             this.panel1.Controls.Add(this.radioFeet);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtCost);
+            this.panel1.Controls.Add(this.txtTBCost);
             this.panel1.Controls.Add(this.btnGet);
             this.panel1.Controls.Add(this.chkSpecial);
             this.panel1.Controls.Add(this.label2);
@@ -419,16 +422,17 @@
             this.label1.Text = "成本";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtCost
+            // txtTBCost
             // 
-            this.txtCost.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCost.Location = new System.Drawing.Point(134, 40);
-            this.txtCost.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.ReadOnly = true;
-            this.txtCost.Size = new System.Drawing.Size(126, 27);
-            this.txtCost.TabIndex = 75;
-            this.txtCost.Text = "0";
+            this.txtTBCost.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtTBCost.Location = new System.Drawing.Point(134, 40);
+            this.txtTBCost.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTBCost.Name = "txtTBCost";
+            this.txtTBCost.ReadOnly = true;
+            this.txtTBCost.Size = new System.Drawing.Size(126, 27);
+            this.txtTBCost.TabIndex = 75;
+            this.txtTBCost.Text = "0";
+            this.txtTBCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
             // 
             // btnGet
             // 
@@ -440,6 +444,7 @@
             this.btnGet.TabIndex = 74;
             this.btnGet.Text = "選取";
             this.btnGet.UseVisualStyleBackColor = false;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
             // chkSpecial
             // 
@@ -452,6 +457,7 @@
             this.chkSpecial.TabIndex = 73;
             this.chkSpecial.Text = "特選";
             this.chkSpecial.UseVisualStyleBackColor = false;
+            this.chkSpecial.Click += new System.EventHandler(this.chkSpecial_Click);
             // 
             // label2
             // 
@@ -504,7 +510,8 @@
             this.asp_line,
             this.asp_name,
             this.asp_vnweight,
-            this.asp_vnpcs});
+            this.asp_vnpcs,
+            this.pri_um});
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(10, 256);
             this.dgvData.Margin = new System.Windows.Forms.Padding(2);
@@ -610,6 +617,13 @@
             this.asp_vnpcs.HeaderText = "na5_vnpcs";
             this.asp_vnpcs.Name = "asp_vnpcs";
             // 
+            // pri_um
+            // 
+            this.pri_um.DataPropertyName = "pri_um";
+            this.pri_um.HeaderText = "pri_um";
+            this.pri_um.Name = "pri_um";
+            this.pri_um.Visible = false;
+            // 
             // dgvLevel_4
             // 
             this.dgvLevel_4.AllowUserToAddRows = false;
@@ -656,6 +670,8 @@
             this.dgvLevel_4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLevel_4.Size = new System.Drawing.Size(370, 240);
             this.dgvLevel_4.TabIndex = 57;
+            this.dgvLevel_4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_4_CellClick);
+            this.dgvLevel_4.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_4_CellDoubleClick);
             // 
             // ap3_part
             // 
@@ -846,7 +862,7 @@
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel.Controls.Add(this.lblVender);
+            this.panel.Controls.Add(this.txtVender);
             this.panel.Controls.Add(this.pnlName);
             this.panel.Controls.Add(this.pnlID);
             this.panel.Controls.Add(this.lblCZF);
@@ -866,7 +882,7 @@
             this.panel.Controls.Add(this.label5);
             this.panel.Controls.Add(this.cboCurrency);
             this.panel.Controls.Add(this.label3);
-            this.panel.Controls.Add(this.txtCost_Part);
+            this.panel.Controls.Add(this.txtCost);
             this.panel.Controls.Add(this.chkNote);
             this.panel.Controls.Add(this.chkClassify);
             this.panel.Controls.Add(this.label6);
@@ -879,17 +895,14 @@
             this.panel.Size = new System.Drawing.Size(336, 178);
             this.panel.TabIndex = 100;
             // 
-            // lblVender
+            // txtVender
             // 
-            this.lblVender.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblVender.ForeColor = System.Drawing.Color.Blue;
-            this.lblVender.Location = new System.Drawing.Point(270, 149);
-            this.lblVender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVender.Name = "lblVender";
-            this.lblVender.Size = new System.Drawing.Size(64, 27);
-            this.lblVender.TabIndex = 127;
-            this.lblVender.Text = "Vender";
-            this.lblVender.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtVender.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtVender.Location = new System.Drawing.Point(270, 149);
+            this.txtVender.Margin = new System.Windows.Forms.Padding(2);
+            this.txtVender.Name = "txtVender";
+            this.txtVender.Size = new System.Drawing.Size(58, 27);
+            this.txtVender.TabIndex = 127;
             // 
             // pnlName
             // 
@@ -908,6 +921,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(126, 27);
             this.txtName.TabIndex = 107;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // pnlID
             // 
@@ -1024,6 +1039,7 @@
             this.chkLarge.TabIndex = 114;
             this.chkLarge.Text = "量大";
             this.chkLarge.UseVisualStyleBackColor = false;
+            this.chkLarge.Click += new System.EventHandler(this.chkLarge_Click);
             // 
             // chkOutsourcing
             // 
@@ -1035,6 +1051,7 @@
             this.chkOutsourcing.TabIndex = 113;
             this.chkOutsourcing.Text = "外購";
             this.chkOutsourcing.UseVisualStyleBackColor = false;
+            this.chkOutsourcing.Click += new System.EventHandler(this.chkOutsourcing_Click);
             // 
             // chkPower
             // 
@@ -1046,6 +1063,7 @@
             this.chkPower.TabIndex = 112;
             this.chkPower.Text = "電源";
             this.chkPower.UseVisualStyleBackColor = false;
+            this.chkPower.Click += new System.EventHandler(this.chkPower_Click);
             // 
             // chkCheck
             // 
@@ -1057,6 +1075,7 @@
             this.chkCheck.TabIndex = 111;
             this.chkCheck.Text = "審核";
             this.chkCheck.UseVisualStyleBackColor = false;
+            this.chkCheck.Click += new System.EventHandler(this.chkCheck_Click);
             // 
             // txtCustomer
             // 
@@ -1117,16 +1136,16 @@
             this.label3.Text = "成本";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtCost_Part
+            // txtCost
             // 
-            this.txtCost_Part.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCost_Part.Location = new System.Drawing.Point(114, 5);
-            this.txtCost_Part.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCost_Part.Name = "txtCost_Part";
-            this.txtCost_Part.ReadOnly = true;
-            this.txtCost_Part.Size = new System.Drawing.Size(81, 27);
-            this.txtCost_Part.TabIndex = 101;
-            this.txtCost_Part.Text = "0";
+            this.txtCost.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtCost.Location = new System.Drawing.Point(114, 5);
+            this.txtCost.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.ReadOnly = true;
+            this.txtCost.Size = new System.Drawing.Size(81, 27);
+            this.txtCost.TabIndex = 101;
+            this.txtCost.Text = "0";
             // 
             // chkNote
             // 
@@ -1139,6 +1158,7 @@
             this.chkNote.TabIndex = 100;
             this.chkNote.Text = "備註";
             this.chkNote.UseVisualStyleBackColor = false;
+            this.chkNote.Click += new System.EventHandler(this.chkNote_Click);
             // 
             // chkClassify
             // 
@@ -1151,6 +1171,7 @@
             this.chkClassify.TabIndex = 99;
             this.chkClassify.Text = "分類";
             this.chkClassify.UseVisualStyleBackColor = false;
+            this.chkClassify.Click += new System.EventHandler(this.chkClassify_Click);
             // 
             // label6
             // 
@@ -1379,7 +1400,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboCurrency;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCost_Part;
+        private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.CheckBox chkNote;
         private System.Windows.Forms.CheckBox chkClassify;
         private System.Windows.Forms.Label label6;
@@ -1391,7 +1412,7 @@
         private System.Windows.Forms.RadioButton radioMeter;
         private System.Windows.Forms.RadioButton radioFeet;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCost;
+        private System.Windows.Forms.TextBox txtTBCost;
         private System.Windows.Forms.Button btnGet;
         private System.Windows.Forms.CheckBox chkSpecial;
         private System.Windows.Forms.Label label2;
@@ -1419,7 +1440,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel pnlName_M;
         private System.Windows.Forms.Panel pnlID_M;
-        private System.Windows.Forms.Label lblVender;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_part;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_tbprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_perqty;
@@ -1431,5 +1451,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn asp_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn asp_vnweight;
         private System.Windows.Forms.DataGridViewTextBoxColumn asp_vnpcs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pri_um;
+        private System.Windows.Forms.TextBox txtVender;
     }
 }

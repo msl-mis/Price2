@@ -36,48 +36,76 @@ namespace Price2
 
         private void getExport()
         {
-            
+            try
+            {
+                switch (strWho)
+                {
+                    case "No_id":
+                        
+                        break;
+                    case "C_id":
+                        
+                        break;
+                    case "M_id":
+                        
+                        break;
+                    case "No_name":
+                        frmBOMPrice.rstrID = aspnum_id.Trim();
+                        frmBOMPrice.rstrName = dgvData.Rows[dgvData.CurrentRow.Index].Cells["品號"].Value.ToString();
+                        break;
+                    default:
+
+                        break;
+                }
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-getExport" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmBOMPrice_Grid_Activated(object sender, EventArgs e)
         {
-            string strSQL = "";
-            DataTable dt = new DataTable();
-            switch (strWho)
+            try
             {
-                case "No_id":
-                    this.Text = "選擇讀取產品的報價日期";
-                    strSQL = $@"select distinct pri_date'報價日期'
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                switch (strWho)
+                {
+                    case "No_id":
+                        this.Text = "選擇讀取產品的報價日期";
+                        strSQL = $@"select distinct pri_date'報價日期'
                                 from   pri
                                 where  pri_assy = '{pri_assy.Trim()}'
                                        and pri_customer = '{pri_customer.Trim()}'
                                        and pri_newcostchk like 'N%'
                                        and pri_length = '{pri_length.Trim()}'
                                 order  by pri_date ";
-                    dt = clsDB.sql_select_dt(strSQL);
-                    dgvData.DataSource = dt;
-                    //設置DataGridView的欄位填充整個顯示區
-                    dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    break;
-                case "C_id":
-                    this.Text = "選擇讀取產品的報價日期";
-                    strSQL = $@"select distinct pri_date'報價日期'
+                        dt = clsDB.sql_select_dt(strSQL);
+                        dgvData.DataSource = dt;
+                        //設置DataGridView的欄位填充整個顯示區
+                        dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        break;
+                    case "C_id":
+                        this.Text = "選擇讀取產品的報價日期";
+                        strSQL = $@"select distinct pri_date'報價日期'
                                         from   pri
                                         where  pri_newcostchk like 'N%'
                                                 and pri_customerid = '{pri_customerid.Trim()}'
                                         order  by pri_date ";
-                    dt = clsDB.sql_select_dt(strSQL);
-                    dgvData.DataSource = dt;
-                    //設置DataGridView的欄位填充整個顯示區
-                    dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    break;
-                case "M_id":
-                    this.Text = "選擇材料品號";
-                    strSQL = $@"select aspnum_num '品號',
+                        dt = clsDB.sql_select_dt(strSQL);
+                        dgvData.DataSource = dt;
+                        //設置DataGridView的欄位填充整個顯示區
+                        dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        break;
+                    case "M_id":
+                        this.Text = "選擇材料品號";
+                        strSQL = $@"select aspnum_num '品號',
                                        case
                                          when asp_vendormaterialno = aspnum_num then 'V'
                                          else ''
@@ -97,20 +125,20 @@ namespace Price2
                                                  and aa.pri_assy = aspnum_num
                                 where  aspnum_id = '{aspnum_id.Trim()}'
                                 order  by aspnum_id ";
-                    dt = clsDB.sql_select_dt(strSQL);
-                    dgvData.DataSource = dt;
-                    //設置DataGridView的欄位填充整個顯示區 自動調整欄位
-                    dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    dgvData.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    break;
-                case "No_name":
-                    this.Text = "選擇材料品號";
-                    strSQL = $@"select distinct ab.aspnum_num '品號',
+                        dt = clsDB.sql_select_dt(strSQL);
+                        dgvData.DataSource = dt;
+                        //設置DataGridView的欄位填充整個顯示區 自動調整欄位
+                        dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        dgvData.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        break;
+                    case "No_name":
+                        this.Text = "選擇材料品號";
+                        strSQL = $@"select distinct ab.aspnum_num '品號',
                                                 case
                                                     when asp_vendormaterialno = ab.aspnum_num then 'V'
                                                     else ''
@@ -145,24 +173,36 @@ namespace Price2
                                                     and aa.pri_assy = ab.aspnum_num
                                 where  ab.aspnum_id = '{aspnum_id.Trim()}'
                                 order  by ab.aspnum_num ";
-                    dt = clsDB.sql_select_dt(strSQL);
-                    dgvData.DataSource = dt;
-                    //設置DataGridView的欄位填充整個顯示區 自動調整欄位
-                    dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                    dgvData.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    dgvData.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                    break;
-                default:
+                        dt = clsDB.sql_select_dt(strSQL);
+                        dgvData.DataSource = dt;
+                        //設置DataGridView的欄位填充整個顯示區 自動調整欄位
+                        dgvData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        dgvData.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                        dgvData.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        dgvData.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                        break;
+                    default:
 
-                    break;
+                        break;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-frmBOMPrice_Grid_Activated" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0 && e.ColumnIndex >=0)
+            {
+                getExport();
+            }
         }
     }
 }
