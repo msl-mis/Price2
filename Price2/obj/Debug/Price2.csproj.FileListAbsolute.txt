@@ -280,3 +280,17 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Special.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Class.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Large.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Note.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Find_Quotation.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Find_Material.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_History_Material.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_History_Quotation.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Copy_Material.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Copy_Quotation.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Order.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Inq_Quotation.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Inq_Material.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCustomerFile.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_Inq.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_Note.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_Note_Manage.resources

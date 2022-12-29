@@ -48,6 +48,8 @@
             this.menu3_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu5 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu6 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,7 +106,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.menu4_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -134,7 +136,7 @@
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnuMain.Size = new System.Drawing.Size(1096, 27);
+            this.mnuMain.Size = new System.Drawing.Size(1096, 24);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
             // 
@@ -149,48 +151,48 @@
             this.menu1_6});
             this.menu1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(74, 23);
+            this.menu1.Size = new System.Drawing.Size(60, 20);
             this.menu1.Text = "&1.系統";
             // 
             // menu1_1
             // 
             this.menu1_1.Name = "menu1_1";
-            this.menu1_1.Size = new System.Drawing.Size(276, 26);
+            this.menu1_1.Size = new System.Drawing.Size(220, 22);
             this.menu1_1.Text = "&1.用戶管理";
             this.menu1_1.Click += new System.EventHandler(this.menu1_1_Click);
             // 
             // menu1_2
             // 
             this.menu1_2.Name = "menu1_2";
-            this.menu1_2.Size = new System.Drawing.Size(276, 26);
+            this.menu1_2.Size = new System.Drawing.Size(220, 22);
             this.menu1_2.Text = "&2.用戶密碼修改";
             this.menu1_2.Click += new System.EventHandler(this.menu1_2_Click);
             // 
             // menu1_3
             // 
             this.menu1_3.Name = "menu1_3";
-            this.menu1_3.Size = new System.Drawing.Size(276, 26);
+            this.menu1_3.Size = new System.Drawing.Size(220, 22);
             this.menu1_3.Text = "&3.用其它用戶登入系統";
             this.menu1_3.Click += new System.EventHandler(this.menu1_3_Click);
             // 
             // menu1_4
             // 
             this.menu1_4.Name = "menu1_4";
-            this.menu1_4.Size = new System.Drawing.Size(276, 26);
+            this.menu1_4.Size = new System.Drawing.Size(220, 22);
             this.menu1_4.Text = "4.發送消息";
             this.menu1_4.Click += new System.EventHandler(this.menu1_4_Click);
             // 
             // menu1_5
             // 
             this.menu1_5.Name = "menu1_5";
-            this.menu1_5.Size = new System.Drawing.Size(276, 26);
+            this.menu1_5.Size = new System.Drawing.Size(220, 22);
             this.menu1_5.Text = "&5.系統更新資料";
             this.menu1_5.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // menu1_6
             // 
             this.menu1_6.Name = "menu1_6";
-            this.menu1_6.Size = new System.Drawing.Size(276, 26);
+            this.menu1_6.Size = new System.Drawing.Size(220, 22);
             this.menu1_6.Text = "&6.當前系統用戶狀況";
             this.menu1_6.Click += new System.EventHandler(this.menu1_6_Click);
             // 
@@ -203,34 +205,34 @@
             this.menu2_4});
             this.menu2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu2.Name = "menu2";
-            this.menu2.Size = new System.Drawing.Size(74, 23);
+            this.menu2.Size = new System.Drawing.Size(60, 20);
             this.menu2.Text = "&2.基礎";
             // 
             // menu2_1
             // 
             this.menu2_1.Name = "menu2_1";
-            this.menu2_1.Size = new System.Drawing.Size(276, 26);
+            this.menu2_1.Size = new System.Drawing.Size(220, 22);
             this.menu2_1.Text = "&1.電話簿";
             this.menu2_1.Click += new System.EventHandler(this.menu2_1_Click);
             // 
             // menu2_2
             // 
             this.menu2_2.Name = "menu2_2";
-            this.menu2_2.Size = new System.Drawing.Size(276, 26);
+            this.menu2_2.Size = new System.Drawing.Size(220, 22);
             this.menu2_2.Text = "&2.客戶資料建立";
             this.menu2_2.Click += new System.EventHandler(this.menu2_2_Click);
             // 
             // menu2_3
             // 
             this.menu2_3.Name = "menu2_3";
-            this.menu2_3.Size = new System.Drawing.Size(276, 26);
+            this.menu2_3.Size = new System.Drawing.Size(220, 22);
             this.menu2_3.Text = "&3.廠商資料建立";
             this.menu2_3.Click += new System.EventHandler(this.menu2_3_Click);
             // 
             // menu2_4
             // 
             this.menu2_4.Name = "menu2_4";
-            this.menu2_4.Size = new System.Drawing.Size(276, 26);
+            this.menu2_4.Size = new System.Drawing.Size(220, 22);
             this.menu2_4.Text = "&4.產品資料清單明細表";
             // 
             // menu3
@@ -240,20 +242,20 @@
             this.menu3_2});
             this.menu3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu3.Name = "menu3";
-            this.menu3.Size = new System.Drawing.Size(77, 23);
+            this.menu3.Size = new System.Drawing.Size(62, 20);
             this.menu3.Text = "&3.BOM";
             // 
             // menu3_1
             // 
             this.menu3_1.Name = "menu3_1";
-            this.menu3_1.Size = new System.Drawing.Size(260, 26);
+            this.menu3_1.Size = new System.Drawing.Size(207, 22);
             this.menu3_1.Text = "&1.火車頭資料建立";
             this.menu3_1.Click += new System.EventHandler(this.menu3_1_Click);
             // 
             // menu3_2
             // 
             this.menu3_2.Name = "menu3_2";
-            this.menu3_2.Size = new System.Drawing.Size(260, 26);
+            this.menu3_2.Size = new System.Drawing.Size(207, 22);
             this.menu3_2.Text = "&2.BOM產品結構建立";
             this.menu3_2.Click += new System.EventHandler(this.menu3_2_Click);
             // 
@@ -261,38 +263,54 @@
             // 
             this.menu4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu4_1,
-            this.menu4_2});
+            this.menu4_2,
+            this.menu4_3,
+            this.menu4_4});
             this.menu4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu4.Name = "menu4";
-            this.menu4.Size = new System.Drawing.Size(74, 23);
+            this.menu4.Size = new System.Drawing.Size(60, 20);
             this.menu4.Text = "&4.報價";
             // 
             // menu4_1
             // 
             this.menu4_1.Name = "menu4_1";
-            this.menu4_1.Size = new System.Drawing.Size(238, 26);
+            this.menu4_1.Size = new System.Drawing.Size(190, 22);
             this.menu4_1.Text = "&1.參照法資料輸入";
             this.menu4_1.Click += new System.EventHandler(this.menu4_1_Click);
+            // 
+            // menu4_2
+            // 
+            this.menu4_2.Name = "menu4_2";
+            this.menu4_2.Size = new System.Drawing.Size(190, 22);
+            this.menu4_2.Text = "&2.報價管理";
+            this.menu4_2.Click += new System.EventHandler(this.menu4_2_Click);
+            // 
+            // menu4_3
+            // 
+            this.menu4_3.Name = "menu4_3";
+            this.menu4_3.Size = new System.Drawing.Size(190, 22);
+            this.menu4_3.Text = "&3.客人總檔";
+            this.menu4_3.Click += new System.EventHandler(this.menu4_3_Click);
             // 
             // menu5
             // 
             this.menu5.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu5.Name = "menu5";
-            this.menu5.Size = new System.Drawing.Size(74, 23);
+            this.menu5.Size = new System.Drawing.Size(60, 20);
             this.menu5.Text = "&5.設定";
             // 
             // menu6
             // 
             this.menu6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu6.Name = "menu6";
-            this.menu6.Size = new System.Drawing.Size(112, 23);
+            this.menu6.Size = new System.Drawing.Size(90, 20);
             this.menu6.Text = "&6.共用資料";
             // 
             // menu_Exit
             // 
             this.menu_Exit.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu_Exit.Name = "menu_Exit";
-            this.menu_Exit.Size = new System.Drawing.Size(78, 23);
+            this.menu_Exit.Size = new System.Drawing.Size(63, 20);
             this.menu_Exit.Text = "&X.結束";
             this.menu_Exit.Click += new System.EventHandler(this.menu_Exit_Click);
             // 
@@ -301,11 +319,11 @@
             this.gbMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gbMain.Controls.Add(this.tabMain);
             this.gbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbMain.Location = new System.Drawing.Point(0, 27);
+            this.gbMain.Location = new System.Drawing.Point(0, 24);
             this.gbMain.Margin = new System.Windows.Forms.Padding(2);
             this.gbMain.Name = "gbMain";
             this.gbMain.Padding = new System.Windows.Forms.Padding(2);
-            this.gbMain.Size = new System.Drawing.Size(1096, 661);
+            this.gbMain.Size = new System.Drawing.Size(1096, 664);
             this.gbMain.TabIndex = 3;
             this.gbMain.TabStop = false;
             // 
@@ -320,7 +338,7 @@
             this.tabMain.Controls.Add(this.tabPage6);
             this.tabMain.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabMain.ItemSize = new System.Drawing.Size(130, 30);
-            this.tabMain.Location = new System.Drawing.Point(50, 25);
+            this.tabMain.Location = new System.Drawing.Point(50, 27);
             this.tabMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -367,7 +385,7 @@
             this.label1.Location = new System.Drawing.Point(0, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 23);
+            this.label1.Size = new System.Drawing.Size(89, 19);
             this.label1.TabIndex = 13;
             this.label1.Text = "系統管理";
             // 
@@ -529,7 +547,7 @@
             this.label3.Location = new System.Drawing.Point(0, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 23);
+            this.label3.Size = new System.Drawing.Size(129, 19);
             this.label3.TabIndex = 13;
             this.label3.Text = "基本資料建立";
             // 
@@ -639,7 +657,7 @@
             this.label2.Location = new System.Drawing.Point(0, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 23);
+            this.label2.Size = new System.Drawing.Size(173, 19);
             this.label2.TabIndex = 14;
             this.label2.Text = "報價BOM資料創建";
             // 
@@ -978,7 +996,7 @@
             this.label5.Location = new System.Drawing.Point(0, 10);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 24);
+            this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 14;
             this.label5.Text = "報價管理";
             // 
@@ -1029,6 +1047,7 @@
             this.btn4_4.Text = "4.打樣單";
             this.btn4_4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4_4.UseVisualStyleBackColor = true;
+            this.btn4_4.Click += new System.EventHandler(this.btn4_4_Click);
             // 
             // btn4_3
             // 
@@ -1045,6 +1064,7 @@
             this.btn4_3.Text = "3.客人總檔";
             this.btn4_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4_3.UseVisualStyleBackColor = true;
+            this.btn4_3.Click += new System.EventHandler(this.btn4_3_Click);
             // 
             // btn4_2
             // 
@@ -1114,16 +1134,16 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // menu4_2
+            // menu4_4
             // 
-            this.menu4_2.Name = "menu4_2";
-            this.menu4_2.Size = new System.Drawing.Size(238, 26);
-            this.menu4_2.Text = "&2.報價管理";
-            this.menu4_2.Click += new System.EventHandler(this.menu4_2_Click);
+            this.menu4_4.Name = "menu4_4";
+            this.menu4_4.Size = new System.Drawing.Size(190, 22);
+            this.menu4_4.Text = "&4.打樣單";
+            this.menu4_4.Click += new System.EventHandler(this.menu4_4_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1096, 688);
@@ -1239,6 +1259,8 @@
         private System.Windows.Forms.TabControl tabMain;
         public System.Windows.Forms.GroupBox gbMain;
         private System.Windows.Forms.ToolStripMenuItem menu4_2;
+        private System.Windows.Forms.ToolStripMenuItem menu4_3;
+        private System.Windows.Forms.ToolStripMenuItem menu4_4;
     }
 }
 

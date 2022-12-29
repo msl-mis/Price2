@@ -105,34 +105,118 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmBOMPrice_Large.cs">
+    <Compile Include="frmProofing_Note_Manage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice_Large.Designer.cs">
+    <Compile Include="frmProofing_Note_Manage.Designer.cs">
+      <DependentUpon>frmProofing_Note_Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProofing_Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProofing_Note.Designer.cs">
+      <DependentUpon>frmProofing_Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProofing_Inq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProofing_Inq.Designer.cs">
+      <DependentUpon>frmProofing_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProofing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProofing.Designer.cs">
+      <DependentUpon>frmProofing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerFile.Designer.cs">
+      <DependentUpon>frmCustomerFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Material.Designer.cs">
+      <DependentUpon>frmBOMPrice_Inq_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Quotation.Designer.cs">
+      <DependentUpon>frmBOMPrice_Inq_Quotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Order.Designer.cs">
+      <DependentUpon>frmBOMPrice_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Copy_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Copy_Material.Designer.cs">
+      <DependentUpon>frmBOMPrice_Copy_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Copy_Quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Copy_Quotation.Designer.cs">
+      <DependentUpon>frmBOMPrice_Copy_Quotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_History_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_History_Material.Designer.cs">
+      <DependentUpon>frmBOMPrice_History_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_History_Quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_History_Quotation.Designer.cs">
+      <DependentUpon>frmBOMPrice_History_Quotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Find_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Find_Material.Designer.cs">
+      <DependentUpon>frmBOMPrice_Find_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Find_Quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Find_Quotation.Designer.cs">
+      <DependentUpon>frmBOMPrice_Find_Quotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Large.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Large.Designer.cs">
       <DependentUpon>frmBOMPrice_Large.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMPrice_Note.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Note.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice_Note.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Note.Designer.cs">
       <DependentUpon>frmBOMPrice_Note.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMPrice_Class.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Class.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice_Class.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Class.Designer.cs">
       <DependentUpon>frmBOMPrice_Class.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMPrice_Special.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Special.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice_Special.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Special.Designer.cs">
       <DependentUpon>frmBOMPrice_Special.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMPrice_Msgbox.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice_Msgbox.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.Designer.cs">
       <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE2\frmVender_Inq.cs">
@@ -153,16 +237,16 @@
     <Compile Include="FORM\PAGE3\frmProduct_InputBox.Designer.cs">
       <DependentUpon>frmProduct_InputBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMPrice_Grid.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Grid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice_Grid.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Grid.Designer.cs">
       <DependentUpon>frmBOMPrice_Grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBOMPrice.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBOMPrice.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice.Designer.cs">
       <DependentUpon>frmBOMPrice.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE4\frmRefer_Inq_Material.cs">
@@ -341,19 +425,47 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="frmBOMPrice_Class.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Class.resx">
       <DependentUpon>frmBOMPrice_Class.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMPrice_Large.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Copy_Material.resx">
+      <DependentUpon>frmBOMPrice_Copy_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Copy_Quotation.resx">
+      <DependentUpon>frmBOMPrice_Copy_Quotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Find_Material.resx">
+      <DependentUpon>frmBOMPrice_Find_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Find_Quotation.resx">
+      <DependentUpon>frmBOMPrice_Find_Quotation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_History_Material.resx">
+      <DependentUpon>frmBOMPrice_History_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_History_Quotation.resx">
+      <DependentUpon>frmBOMPrice_History_Quotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Material.resx">
+      <DependentUpon>frmBOMPrice_Inq_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Quotation.resx">
+      <DependentUpon>frmBOMPrice_Inq_Quotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Large.resx">
       <DependentUpon>frmBOMPrice_Large.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMPrice_Note.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Note.resx">
       <DependentUpon>frmBOMPrice_Note.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMPrice_Special.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Order.resx">
+      <DependentUpon>frmBOMPrice_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Special.resx">
       <DependentUpon>frmBOMPrice_Special.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMPrice_Grid.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Grid.resx">
       <DependentUpon>frmBOMPrice_Grid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE2\frmCustomer_BankInfo.resx">
@@ -439,7 +551,7 @@
     <EmbeddedResource Include="FORM\PAGE4\frmRefer_Inq_Material.resx">
       <DependentUpon>frmRefer_Inq_Material.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMPrice.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice.resx">
       <DependentUpon>frmBOMPrice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE3\frmProduct_InputBox.resx">
@@ -454,8 +566,23 @@
     <EmbeddedResource Include="FORM\PAGE2\frmVender.resx">
       <DependentUpon>frmVender.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBOMPrice_Msgbox.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.resx">
       <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerFile.resx">
+      <DependentUpon>frmCustomerFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProofing.resx">
+      <DependentUpon>frmProofing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProofing_Inq.resx">
+      <DependentUpon>frmProofing_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProofing_Note.resx">
+      <DependentUpon>frmProofing_Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProofing_Note_Manage.resx">
+      <DependentUpon>frmProofing_Note_Manage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -282,7 +282,7 @@ namespace Price2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-frmMain_Load" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-frmUserManagement_Activated" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         

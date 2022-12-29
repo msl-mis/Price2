@@ -15,7 +15,7 @@ namespace Price2
 {
     public partial class frmRefer : Form
     {
-        public static string whocall;   //判斷從哪個程式來的
+        public static string rstrWho;   //判斷從哪個程式來的
         public static string strID;     //傳入的客號
         public static string strPartID = "";     //傳入的材料
         public static string strQty = "";     //傳入的數量
@@ -91,6 +91,14 @@ namespace Price2
                 toolTip1.SetToolTip(this.btnZ, "選取材料");
                 toolTip1.SetToolTip(this.btnU, "選取材料");
                 toolTip1.SetToolTip(this.btnInq_Customer, "選取客號");
+
+                if(rstrWho=="frmBOMPrice")
+                {
+                    btnInq_Customer.Visible = false;
+                    btnDelete.Visible = false;
+                    btnDelete.Visible = false;
+                    btnSave.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -156,7 +164,7 @@ namespace Price2
             //清除全部
             try
             {
-                if(whocall!="bom")
+                if(rstrWho!="frmBOMPrice")
                 {
                     txtID.Text = "";    //客號
                     lblUser.Text = "";    //用戶：
@@ -557,28 +565,28 @@ namespace Price2
                         lbl_U.Text = "";
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-checkP" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            if(lbl_B.Text=="" && lbl_Z.Text == "" && lbl_U.Text == "" && lbl_R.Text == "" && schk==false)
-            {
-                btnSaveMaterial.Enabled = false;
-                btnUpdateQuote.Enabled = false;
-            }
-            else
-            {
-                btnSaveMaterial.Enabled = true;
-                if (clsGlobal.checkRightFlag("參照法更新報價") == false)
+                
+                if (lbl_B.Text == "" && lbl_Z.Text == "" && lbl_U.Text == "" && lbl_R.Text == "" && schk == false)
                 {
+                    btnSaveMaterial.Enabled = false;
                     btnUpdateQuote.Enabled = false;
                 }
                 else
                 {
-                    btnUpdateQuote.Enabled = true;
+                    btnSaveMaterial.Enabled = true;
+                    if (clsGlobal.checkRightFlag("參照法更新報價") == false)
+                    {
+                        btnUpdateQuote.Enabled = false;
+                    }
+                    else
+                    {
+                        btnUpdateQuote.Enabled = true;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-checkP" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -642,7 +650,7 @@ namespace Price2
                 if (dt.Rows.Count > 0)
                 {
                     //檢查參照法材料名欄位是否空白,如果是自動帶入報價單中的包裝運材料
-                    if (whocall == "bom" && dt.Rows[0]["odi_pripart01"].ToString() == "" && dt.Rows[0]["odi_pripart02"].ToString() == "" && dt.Rows[0]["odi_pripart04"].ToString() == "" && dt.Rows[0]["odi_pripart05"].ToString() == "")
+                    if (rstrWho == "frmBOMPrice" && dt.Rows[0]["odi_pripart01"].ToString() == "" && dt.Rows[0]["odi_pripart02"].ToString() == "" && dt.Rows[0]["odi_pripart04"].ToString() == "" && dt.Rows[0]["odi_pripart05"].ToString() == "")
                     {
                         strSQL = $@"exec odi_chkpri '{txtID.Text}' ";
                         clsDB.Execute(strSQL);
@@ -1472,7 +1480,7 @@ namespace Price2
                 //    MessageBox.Show("產品報價有變更尚未儲存,請先儲存報價再進行更新報價!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //    return;
                 //}
-                if (whocall != "bom")
+                if (rstrWho != "frmBOMPrice")
                 {
                     MessageBox.Show("更新報價請先進入產品報價作業!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
