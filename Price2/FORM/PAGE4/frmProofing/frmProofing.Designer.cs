@@ -357,6 +357,7 @@
             this.btnProofing.TabIndex = 51;
             this.btnProofing.Text = "樣品製作";
             this.btnProofing.UseVisualStyleBackColor = false;
+            this.btnProofing.Click += new System.EventHandler(this.btnProofing_Click);
             // 
             // btnCopy
             // 
@@ -404,6 +405,7 @@
             this.btnSave.TabIndex = 160;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -439,6 +441,7 @@
             this.btnPrint.TabIndex = 54;
             this.btnPrint.Text = "預覽列印";
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // dgvData
             // 

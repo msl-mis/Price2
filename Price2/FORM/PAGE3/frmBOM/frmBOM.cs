@@ -355,6 +355,7 @@ namespace Price2
                                              asp
                                       where  ap3_part = asp_id
                                              and ap3_assy = '{dgvLevel_3.Rows[dgvLevel_3.CurrentCell.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
+                frmReport.ShowInTaskbar = false;//圖示不顯示在工作列
                 frmReport.ShowDialog();
 
             }

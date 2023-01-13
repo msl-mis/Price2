@@ -330,7 +330,48 @@ namespace Price2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            //刪除
+            try
+            {
+                if (txtProofing.Text == "" || txtProofing.Text == "S")
+                {
+                    return;
+                }
 
+                //確認權限
+                if (clsGlobal.checkRightFlag("打樣單刪除") == false)
+                {
+                    MessageBox.Show("您沒有打樣單刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (MessageBox.Show("你確定要刪除該打樣單的全部資料嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"delete dyi
+                                from   dyi,
+                                       dyd
+                                where  dyi_id = dyd_assy
+                                       and dyd_orderid = '{txtProofing.Text.Trim()}'
+                                       and dyi_id not in (select distinct dyd_assy
+                                                          from   dyd
+                                                          where  dyd_orderid <> '{txtProofing.Text.Trim()}') ";
+                    clsDB.Execute(strSQL);
+
+                    strSQL = $@"delete dyd where dyd_orderid = '{txtProofing.Text.Trim()}' ";
+                    clsDB.Execute(strSQL);
+
+                    strSQL = $@"delete dyh where dyh_orderid = '{txtProofing.Text.Trim()}' ";
+                    clsDB.Execute(strSQL);
+                    btnClear_Click(null, null);
+                    MessageBox.Show("已經刪除成功!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnDelete_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCopy_Click(object sender, EventArgs e)
@@ -382,7 +423,129 @@ namespace Price2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-btnNote_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-btnCopy_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //儲存
+            try
+            {
+                if (txtProofing.Text == "" || txtProofing.Text == "S")
+                {
+                    return;
+                }
+
+                //確認權限
+                if (clsGlobal.checkRightFlag("打樣單儲存") == false)
+                {
+                    MessageBox.Show("您沒有打樣單儲存權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (MessageBox.Show("你確定要儲存嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"exec Dyd_save
+                                  '{txtProofing.Text.Trim()}',
+                                  '{txtProofingDate.Text.Trim()}',
+                                  '{txtDeliveryDate.Text.Trim()}',
+                                  '{txtCustomer.Text.Trim()}',
+                                  '{strCustomerName.Trim()}',
+                                  '',
+                                  '',
+                                  '{cboSales.Text.Trim()}',
+                                  '' ";
+                    clsDB.Execute(strSQL);
+
+                    MessageBox.Show("已經儲存完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnSave_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            //預覽列印
+            try
+            {
+                if (txtProofing.Text == "" || txtProofing.Text == "S")
+                {
+                    return;
+                }
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select *
+                            from   dyh,
+                                   dyd,
+                                    dyi
+                            where  dyh_orderid = dyd_orderid
+                                    and dyd_assy = dyi_id
+                                    and dyh_orderid = '{txtProofing.Text.Trim()}' ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if(dt.Rows.Count > 0 )
+                {
+                    frmReport frmReport = new frmReport();
+                    //傳入參數
+                    frmReport.strReportName = "proofing";
+
+                    frmReport.strRP[0] = dt.Rows[0]["dyh_orderid"].ToString();
+                    frmReport.strRP[1] = dt.Rows[0]["dyh_customer"].ToString();
+                    frmReport.strRP[2] = dt.Rows[0]["dyh_sign"].ToString();
+                    frmReport.strRP[3] = dt.Rows[0]["dyh_delivedate"].ToString();
+                    frmReport.strRP[4] = dt.Rows[0]["dyh_tempbz"].ToString();
+                    frmReport.strRP[5] = (string.IsNullOrEmpty(dt.Rows[0]["dyh_bz"].ToString()) ? "" : dt.Rows[0]["dyh_bz"].ToString());
+                    frmReport.strSQL = strSQL;
+                    frmReport.ShowInTaskbar = false;//圖示不顯示在工作列
+                    frmReport.ShowDialog();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnPrint_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnProofing_Click(object sender, EventArgs e)
+        {
+            //樣品製作
+            try
+            {
+                //確認權限
+                if (clsGlobal.checkRightFlag("打樣單樣品製作") == false)
+                {
+                    MessageBox.Show("您沒有打樣單樣品製作權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                frmProofing_CZF frmProofing_CZF = new frmProofing_CZF();
+                frmProofing_CZF.ShowInTaskbar = false;//圖示不顯示在工作列
+                if(dgvData.RowCount>0)
+                {
+                    if(dgvData.CurrentRow.Index>0)
+                    {
+                        frmProofing_CZF.rstrProductID = dgvData.Rows[dgvData.CurrentRow.Index].Cells["產品編號"].Value.ToString().Trim();
+                    }
+                    else
+                    {
+                        frmProofing_CZF.rstrProductID = dgvData.Rows[0].Cells["產品編號"].Value.ToString().Trim();
+                    }
+                }
+                else
+                {
+                    frmProofing_CZF.rstrProductID = "";
+                }
+                frmProofing_CZF.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnProofing_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

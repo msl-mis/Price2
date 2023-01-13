@@ -105,34 +105,46 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmProofing_Note_Manage.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_CZF_Product_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProofing_Note_Manage.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_CZF_Product_Inq.Designer.cs">
+      <DependentUpon>frmProofing_CZF_Product_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_CZF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_CZF.Designer.cs">
+      <DependentUpon>frmProofing_CZF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_Note_Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_Note_Manage.Designer.cs">
       <DependentUpon>frmProofing_Note_Manage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProofing_Note.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_Note.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProofing_Note.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_Note.Designer.cs">
       <DependentUpon>frmProofing_Note.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProofing_Inq.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProofing_Inq.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing_Inq.Designer.cs">
       <DependentUpon>frmProofing_Inq.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProofing.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProofing.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmProofing\frmProofing.Designer.cs">
       <DependentUpon>frmProofing.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomerFile.cs">
+    <Compile Include="FORM\PAGE4\frmCustomerFile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCustomerFile.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmCustomerFile.Designer.cs">
       <DependentUpon>frmCustomerFile.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Inq_Material.cs">
@@ -219,22 +231,22 @@
     <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.Designer.cs">
       <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender_Inq.cs">
+    <Compile Include="FORM\PAGE2\frmVender\frmVender_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender_Inq.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmVender\frmVender_Inq.Designer.cs">
       <DependentUpon>frmVender_Inq.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct_Inq_No.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct_Inq_No.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No.Designer.cs">
       <DependentUpon>frmProduct_Inq_No.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct_InputBox.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct_InputBox.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_InputBox.Designer.cs">
       <DependentUpon>frmProduct_InputBox.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Grid.cs">
@@ -249,34 +261,34 @@
     <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice.Designer.cs">
       <DependentUpon>frmBOMPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmRefer_Inq_Material.cs">
+    <Compile Include="FORM\PAGE4\frmRefer\frmRefer_Inq_Material.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmRefer_Inq_Material.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer\frmRefer_Inq_Material.Designer.cs">
       <DependentUpon>frmRefer_Inq_Material.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmRefer_Inq_Customer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer\frmRefer_Inq_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmRefer_Inq_Customer.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer\frmRefer_Inq_Customer.Designer.cs">
       <DependentUpon>frmRefer_Inq_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmRefer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer\frmRefer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmRefer.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmRefer\frmRefer.Designer.cs">
       <DependentUpon>frmRefer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct_History.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_History.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct_History.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_History.Designer.cs">
       <DependentUpon>frmProduct_History.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_TrackChanges.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_TrackChanges.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_TrackChanges.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_TrackChanges.Designer.cs">
       <DependentUpon>frmBOM_TrackChanges.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\frmReport.cs">
@@ -285,94 +297,94 @@
     <Compile Include="FORM\frmReport.Designer.cs">
       <DependentUpon>frmReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_Level3.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_Level3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_Level3.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_Level3.Designer.cs">
       <DependentUpon>frmBOM_Level3.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_Level2.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_Level2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_Level2.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_Level2.Designer.cs">
       <DependentUpon>frmBOM_Level2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_Level1.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_Level1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM_Level1.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM_Level1.Designer.cs">
       <DependentUpon>frmBOM_Level1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmBOM.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmBOM\frmBOM.Designer.cs">
       <DependentUpon>frmBOM.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE3\frmProduct.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender.cs">
+    <Compile Include="FORM\PAGE2\frmVender\frmVender.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmVender\frmVender.Designer.cs">
       <DependentUpon>frmVender.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Country.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Country.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Country.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Country.Designer.cs">
       <DependentUpon>frmCustomer_Inq_Country.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Tel.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Tel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Tel.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Tel.Designer.cs">
       <DependentUpon>frmCustomer_Inq_Tel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_ShortName.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_ShortName.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_ShortName.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_ShortName.Designer.cs">
       <DependentUpon>frmCustomer_Inq_ShortName.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_BankInfo.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_BankInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_BankInfo.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_BankInfo.Designer.cs">
       <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Customer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer_Inq_Customer.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Customer.Designer.cs">
       <DependentUpon>frmCustomer_Inq_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmCustomer.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmTelephone_Inq.cs">
+    <Compile Include="FORM\PAGE2\frmTelephone\frmTelephone_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmTelephone_Inq.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmTelephone\frmTelephone_Inq.Designer.cs">
       <DependentUpon>frmTelephone_Inq.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmTelephone_RenameType.cs">
+    <Compile Include="FORM\PAGE2\frmTelephone\frmTelephone_RenameType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmTelephone_RenameType.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmTelephone\frmTelephone_RenameType.Designer.cs">
       <DependentUpon>frmTelephone_RenameType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmTelephone.cs">
+    <Compile Include="FORM\PAGE2\frmTelephone\frmTelephone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmTelephone.Designer.cs">
+    <Compile Include="FORM\PAGE2\frmTelephone\frmTelephone.Designer.cs">
       <DependentUpon>frmTelephone.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE1\frmUserStatus.cs">
@@ -416,6 +428,9 @@
     </Compile>
     <Compile Include="FORM\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceDataSet.cs">
+      <DependentUpon>PriceDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PriceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -468,19 +483,19 @@
     <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Grid.resx">
       <DependentUpon>frmBOMPrice_Grid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_BankInfo.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer\frmCustomer_BankInfo.resx">
       <DependentUpon>frmCustomer_BankInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Country.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Country.resx">
       <DependentUpon>frmCustomer_Inq_Country.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Customer.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Customer.resx">
       <DependentUpon>frmCustomer_Inq_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmTelephone_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmTelephone\frmTelephone_Inq.resx">
       <DependentUpon>frmTelephone_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmTelephone_RenameType.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmTelephone\frmTelephone_RenameType.resx">
       <DependentUpon>frmTelephone_RenameType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE1\frmUserStatus.resx">
@@ -505,83 +520,89 @@
     <EmbeddedResource Include="FORM\PAGE1\frmUserLoginChange.resx">
       <DependentUpon>frmUserLoginChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmTelephone.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmTelephone\frmTelephone.resx">
       <DependentUpon>frmTelephone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmCustomer.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_ShortName.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_ShortName.resx">
       <DependentUpon>frmCustomer_Inq_ShortName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmCustomer_Inq_Tel.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Tel.resx">
       <DependentUpon>frmCustomer_Inq_Tel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmBOM.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM\frmBOM.resx">
       <DependentUpon>frmBOM.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmBOM_Level1.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM\frmBOM_Level1.resx">
       <DependentUpon>frmBOM_Level1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmBOM_Level2.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM\frmBOM_Level2.resx">
       <DependentUpon>frmBOM_Level2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmBOM_Level3.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM\frmBOM_Level3.resx">
       <DependentUpon>frmBOM_Level3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmBOM_TrackChanges.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmBOM\frmBOM_TrackChanges.resx">
       <DependentUpon>frmBOM_TrackChanges.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmProduct_History.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct\frmProduct_History.resx">
       <DependentUpon>frmProduct_History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmProduct.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE4\frmRefer.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmRefer\frmRefer.resx">
       <DependentUpon>frmRefer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE4\frmRefer_Inq_Customer.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmRefer\frmRefer_Inq_Customer.resx">
       <DependentUpon>frmRefer_Inq_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE4\frmRefer_Inq_Material.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmRefer\frmRefer_Inq_Material.resx">
       <DependentUpon>frmRefer_Inq_Material.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice.resx">
       <DependentUpon>frmBOMPrice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmProduct_InputBox.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct\frmProduct_InputBox.resx">
       <DependentUpon>frmProduct_InputBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE3\frmProduct_Inq_No.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No.resx">
       <DependentUpon>frmProduct_Inq_No.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmVender_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmVender\frmVender_Inq.resx">
       <DependentUpon>frmVender_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmVender.resx">
+    <EmbeddedResource Include="FORM\PAGE2\frmVender\frmVender.resx">
       <DependentUpon>frmVender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.resx">
       <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerFile.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmCustomerFile.resx">
       <DependentUpon>frmCustomerFile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProofing.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing.resx">
       <DependentUpon>frmProofing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProofing_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing_CZF.resx">
+      <DependentUpon>frmProofing_CZF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing_CZF_Product_Inq.resx">
+      <DependentUpon>frmProofing_CZF_Product_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing_Inq.resx">
       <DependentUpon>frmProofing_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProofing_Note.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing_Note.resx">
       <DependentUpon>frmProofing_Note.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProofing_Note_Manage.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing_Note_Manage.resx">
       <DependentUpon>frmProofing_Note_Manage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -589,7 +610,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="bomlist.rdlc" />
+    <EmbeddedResource Include="RDLC\bomlist.rdlc" />
+    <EmbeddedResource Include="RDLC\proofing.rdlc" />
     <None Include="packages.config" />
     <None Include="Price2_TemporaryKey.pfx" />
     <None Include="PriceDataSet.xsc">

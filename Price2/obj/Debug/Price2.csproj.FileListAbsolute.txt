@@ -294,3 +294,5 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_Inq.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_Note.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_Note_Manage.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_CZF.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_CZF_Product_Inq.resources
