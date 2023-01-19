@@ -137,7 +137,15 @@ namespace Price2
             {
                 txtProofing.Text = rstrProofing;
                 txtCustomer.Text = rstrCustomer;
-                btnInq.PerformClick();
+                if (txtCustomer.Text.Trim() == "" && txtProofing.Text.Trim() == "S")
+                {
+                    
+                }
+                else
+                {
+                    btnInq.PerformClick();
+                }
+
             }
             catch (Exception ex)
             {
@@ -147,10 +155,18 @@ namespace Price2
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtProofing.Text = "S";
-            txtCustomer.Text = "";
-            txtDate_E.Text = "";
-            txtDate_S.Text = "";
+            //清除
+            try
+            {
+                txtProofing.Text = "S";
+                txtCustomer.Text = "";
+                txtDate_E.Text = "";
+                txtDate_S.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnClear_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -96,6 +96,13 @@ namespace Price2
                 tsave = true; //檢查是否已儲存旗標,設為已儲存
                 oldpid = ""; //記錄已讀取的客號
                 len_unit = "PC"; //材料單單位,預設為PC
+
+                if(rstrID!="")
+                {
+                    txtID.Text = rstrID;
+                    txtID_Leave(null, null);
+                    rstrID = "";
+                }
             }
             catch (Exception ex)
             {
@@ -1962,7 +1969,7 @@ namespace Price2
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtID.Text = txtID.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                txtID.Text = txtID.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                 txtName.Focus();
             }
         }
@@ -1986,7 +1993,7 @@ namespace Price2
                 DataTable dt = new DataTable();
                 if (txtID.Text != "")
                 {
-                    txtID.Text = txtID.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                    txtID.Text = txtID.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                     if (chkMaterial.Checked == false)
                     {
                         //檢查有沒有特選材料
@@ -4373,7 +4380,7 @@ namespace Price2
                 DataTable dt = new DataTable();
                 if (txtName.Text != "")
                 {
-                    txtID.Text = txtID.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                    txtID.Text = txtID.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                 }
                 else
                 {

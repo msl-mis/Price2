@@ -50,6 +50,7 @@
             this.menu4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu5 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu6 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,7 +107,7 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.menu4_4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_5 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -265,7 +266,8 @@
             this.menu4_1,
             this.menu4_2,
             this.menu4_3,
-            this.menu4_4});
+            this.menu4_4,
+            this.menu4_5});
             this.menu4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu4.Name = "menu4";
             this.menu4.Size = new System.Drawing.Size(60, 20);
@@ -291,6 +293,13 @@
             this.menu4_3.Size = new System.Drawing.Size(190, 22);
             this.menu4_3.Text = "&3.客人總檔";
             this.menu4_3.Click += new System.EventHandler(this.menu4_3_Click);
+            // 
+            // menu4_4
+            // 
+            this.menu4_4.Name = "menu4_4";
+            this.menu4_4.Size = new System.Drawing.Size(190, 22);
+            this.menu4_4.Text = "&4.打樣單";
+            this.menu4_4.Click += new System.EventHandler(this.menu4_4_Click);
             // 
             // menu5
             // 
@@ -1031,6 +1040,7 @@
             this.btn4_5.Text = "5.客戶報價單";
             this.btn4_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4_5.UseVisualStyleBackColor = true;
+            this.btn4_5.Click += new System.EventHandler(this.btn4_5_Click);
             // 
             // btn4_4
             // 
@@ -1134,12 +1144,12 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // menu4_4
+            // menu4_5
             // 
-            this.menu4_4.Name = "menu4_4";
-            this.menu4_4.Size = new System.Drawing.Size(190, 22);
-            this.menu4_4.Text = "&4.打樣單";
-            this.menu4_4.Click += new System.EventHandler(this.menu4_4_Click);
+            this.menu4_5.Name = "menu4_5";
+            this.menu4_5.Size = new System.Drawing.Size(190, 22);
+            this.menu4_5.Text = "&5.客戶報價單";
+            this.menu4_5.Click += new System.EventHandler(this.menu4_5_Click);
             // 
             // frmMain
             // 
@@ -1261,6 +1271,7 @@
         private System.Windows.Forms.ToolStripMenuItem menu4_2;
         private System.Windows.Forms.ToolStripMenuItem menu4_3;
         private System.Windows.Forms.ToolStripMenuItem menu4_4;
+        private System.Windows.Forms.ToolStripMenuItem menu4_5;
     }
 }
 

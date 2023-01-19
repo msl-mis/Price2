@@ -103,7 +103,7 @@ namespace Price2
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
-                    dgvProofing.DataSource = dt;
+                    dgvProduct.DataSource = dt;
                     lblCount.Text = dt.Rows.Count.ToString();
                 }
             }
@@ -213,13 +213,13 @@ namespace Price2
 
         private void getSelect()
         {
-            if(dgvProofing.CurrentRow != null)
+            if(dgvProduct.CurrentRow != null)
             {
                 //檢查重複選擇
                 int iCount = 0;
                 for (int i = 0; i < dgvData.Rows.Count; i++)
                 {
-                    if (dgvData.Rows[i].Cells["產品編號"].Value == dgvProofing.Rows[dgvProofing.CurrentRow.Index].Cells["dyi_id"].Value.ToString())
+                    if (dgvData.Rows[i].Cells["產品編號"].Value == dgvProduct.Rows[dgvProduct.CurrentRow.Index].Cells["dyi_id"].Value.ToString())
                     {
                         iCount++;
                     }
@@ -233,17 +233,8 @@ namespace Price2
                 //datagridview加入欄位
                 int index = dgvData.Rows.Count;
                 dgvData.Rows.Add();
-                dgvData.Rows[index].Cells["產品編號"].Value = dgvProofing.Rows[dgvProofing.CurrentRow.Index].Cells["dyi_id"].Value.ToString();
-                
-
-            }
-        }
-
-        private void dgvProofing_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                getSelect();
+                dgvData.Rows[index].Cells["產品編號"].Value = dgvProduct.Rows[dgvProduct.CurrentRow.Index].Cells["dyi_id"].Value.ToString();
+                dgvData.Rows[index].Cells["線路"].Value = dgvProduct.Rows[dgvProduct.CurrentRow.Index].Cells["dyi_line"].Value.ToString();
             }
         }
 
@@ -270,12 +261,13 @@ namespace Price2
                 txtProofing.Text = "S";
                 txtDeliveryDate.Text = "越快越好";
                 cboSales.Text = "";
-                //清除dgvProofing
-                if (dgvProofing.Rows.Count>0)
+                lblCount.Text = "";
+                //清除dgvProduct
+                if (dgvProduct.Rows.Count>0)
                 {
-                    DataTable dt = (DataTable)dgvProofing.DataSource;
+                    DataTable dt = (DataTable)dgvProduct.DataSource;
                     dt.Rows.Clear();
-                    dgvProofing.DataSource = dt;
+                    dgvProduct.DataSource = dt;
                 }
                 //清除dgvData
                 dgvData.Rows.Clear();
@@ -448,18 +440,124 @@ namespace Price2
                 {
                     string strSQL = "";
                     DataTable dt = new DataTable();
-                    strSQL = $@"exec Dyd_save
-                                  '{txtProofing.Text.Trim()}',
-                                  '{txtProofingDate.Text.Trim()}',
-                                  '{txtDeliveryDate.Text.Trim()}',
-                                  '{txtCustomer.Text.Trim()}',
-                                  '{strCustomerName.Trim()}',
-                                  '',
-                                  '',
-                                  '{cboSales.Text.Trim()}',
-                                  '' ";
+                    //strSQL = $@"exec dyd_save
+                    //              '{txtProofing.Text.Trim()}',
+                    //              '{txtProofingDate.Text.Trim()}',
+                    //              '{txtDeliveryDate.Text.Trim()}',
+                    //              '{txtCustomer.Text.Trim()}',
+                    //              '{strCustomerName.Trim()}',
+                    //              '',
+                    //              '',
+                    //              '{cboSales.Text.Trim()}',
+                    //              '' ";
+                    //clsDB.Execute(strSQL);
+                    strSQL = $@"delete dyd where dyd_orderid = '{txtProofing.Text.Trim()}' ";
                     clsDB.Execute(strSQL);
 
+                    strSQL = $@"select * from dyh where dyh_orderid = '{txtProofing.Text.Trim()}' ";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if(dt.Rows.Count == 0 )
+                    {
+                        strSQL = $@"insert dyh
+                                           (dyh_orderid,
+                                            dyh_orderdate,
+                                            dyh_delivedate,
+                                            dyh_customer,
+                                            dyh_customername,
+                                            dyh_delivery,
+                                            dyh_shipmark,
+                                            dyh_sign,
+                                            dyh_po)
+                                    values('{txtProofing.Text.Trim()}',
+                                           '{txtProofingDate.Text.Trim()}',
+                                           '{txtDeliveryDate.Text.Trim()}',
+                                           '{txtCustomer.Text.Trim()}',
+                                           '{strCustomerName.Trim()}',
+                                           ''
+                                           '',
+                                           '{cboSales.Text.Trim()}',
+                                           '')  ";
+                        clsDB.Execute(strSQL);
+                    }
+                    else
+                    {
+                        strSQL = $@"update dyh
+                                    set    dyh_orderdate = '{txtProofingDate.Text.Trim()}',
+                                           dyh_delivedate = '{txtDeliveryDate.Text.Trim()}',
+                                           dyh_customer = '{txtCustomer.Text.Trim()}',
+                                           dyh_customername = '{strCustomerName.Trim()}',
+                                           dyh_sign = '{cboSales.Text.Trim()}',
+                                           dyh_adddate = Getdate()
+                                    where  dyh_orderid = '{txtProofing.Text.Trim()}' ";
+                        clsDB.Execute(strSQL);
+                    }
+
+                    //將grid新增到dyd
+                    for (int i = 0; i < dgvData.Rows.Count; i++)
+                    {
+                        strSQL = $@"insert dyd
+                                           (dyd_orderid,
+                                            dyd_assy,
+                                            dyd_qty,
+                                            dyd_customer,
+                                            dyd_line,
+                                            dyd_adddate,
+                                            dyd_date)
+                                    values('{txtProofing.Text.Trim()}',
+                                           '{dgvData.Rows[i].Cells["產品編號"].Value.ToString()}',
+                                           '{dgvData.Rows[i].Cells["數量"].Value.ToString()}',
+                                           '{txtCustomer.Text.Trim()}',
+                                           '{dgvData.Rows[i].Cells["線路"].Value.ToString()}',
+                                           Getdate(),
+                                           '{txtProofingDate.Text.Trim()}') ";
+                        clsDB.Execute(strSQL);
+                    }
+                    //將grid新增到dyi
+                    for (int i = 0; i < dgvData.Rows.Count; i++)
+                    {
+                        //
+
+                        strSQL = $@"select distinct dyi_id from dyi where dyi_id = '{dgvData.Rows[i].Cells["產品編號"].Value.ToString()}' ";
+                        dt = clsDB.sql_select_dt(strSQL);
+                        if (dt.Rows.Count == 0 )
+                        {
+                            strSQL = $@"select odi_czf, odi_line from odi where odi_customerid = '{dgvData.Rows[i].Cells["產品編號"].Value.ToString()}' ";
+                            dt = clsDB.sql_select_dt(strSQL);
+                            if (dt.Rows.Count>0)
+                            {
+                                strSQL = $@"insert dyi
+                                                   (dyi_id,
+                                                    dyi_customer,
+                                                    dyi_czf,
+                                                    dyi_line)
+                                            values('{dgvData.Rows[i].Cells["產品編號"].Value.ToString()}',
+                                                   '{txtCustomer.Text.Trim()}',
+                                                   '{dt.Rows[0]["odi_czf"].ToString()}',
+                                                   '{dt.Rows[0]["odi_line"].ToString()}') ";
+                                clsDB.Execute(strSQL);
+                            }
+                            else
+                            {
+                                strSQL = $@"insert dyi
+                                                   (dyi_id,
+                                                    dyi_customer,
+                                                    dyi_czf,
+                                                    dyi_line)
+                                            values('{dgvData.Rows[i].Cells["產品編號"].Value.ToString()}',
+                                                   '{txtCustomer.Text.Trim()}',
+                                                   '',
+                                                   '') ";
+                                clsDB.Execute(strSQL);
+                            }
+                        }
+                    }
+                    strSQL = $@"update dyd
+                                set    dyd_czf = dyi_czf,
+                                       dyd_line = dyi_line
+                                from   dyd,
+                                       dyi
+                                where  dyd_assy = dyi_id
+                                       and dyd_orderid = '{txtProofing.Text.Trim()}' ";
                     MessageBox.Show("已經儲存完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -483,7 +581,7 @@ namespace Price2
                 strSQL = $@"select *
                             from   dyh,
                                    dyd,
-                                    dyi
+                                   dyi
                             where  dyh_orderid = dyd_orderid
                                     and dyd_assy = dyi_id
                                     and dyh_orderid = '{txtProofing.Text.Trim()}' ";
@@ -546,6 +644,22 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-btnProofing_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvProduct_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                getSelect();
+            }
+        }
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                btnProofing.PerformClick();
             }
         }
     }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Price2
 {
-    public partial class frmProofing_Note : Form
+    public partial class frmQuotation_Note : Form
     {
-        public static string rstrProofing = "";   //傳來的打樣單
+        public static string rstrQuotation = "";   //傳來的報價單
         public static string rstrCustomer = "";   //傳來的客戶
-        public frmProofing_Note()
+
+        public frmQuotation_Note()
         {
             InitializeComponent();
         }
@@ -51,7 +52,7 @@ namespace Price2
             {
                 string strSQL = "";
                 DataTable dt = new DataTable();
-                strSQL = $@"select obz_no '備註代碼' from obz where obz_customer = '{txtCustomer.Text}' order by obz_no ";
+                strSQL = $@"select obz_no '備註代碼' from obz where substring(obz_no,1,1)='Q' and obz_customer = '{txtCustomer.Text}' order by obz_no ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -71,19 +72,19 @@ namespace Price2
             }
         }
 
-        private void frmProofing_Note_Load(object sender, EventArgs e)
+        private void frmQuotation_Note_Load(object sender, EventArgs e)
         {
             //要加入很多初始化東西
             try
             {
-                txtProofing.Text = rstrProofing;
+                txtQuotation.Text = rstrQuotation;
                 txtCustomer.Text = rstrCustomer;
                 getData();
 
-                //取得打樣單備註代碼
+                //取得報價單備註代碼
                 String strSQL = "";
                 DataTable dt = new DataTable();
-                strSQL = $@"select sbz_bzno '備註代碼' from sbz where sbz_orderid = '{txtProofing.Text}' ";
+                strSQL = $@"select sbz_bzno '備註代碼' from sbz where sbz_orderid = '{txtQuotation.Text}' ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
@@ -93,17 +94,17 @@ namespace Price2
                         dgvData_R.Rows[i].Cells["備註代碼"].Value = dt.Rows[i]["備註代碼"].ToString();
                     }
                 }
-                //取得打樣單臨時備註
-                strSQL = $@"select * from dyh where dyh_orderid = '{txtProofing.Text}' ";
+                //取得報價單臨時備註
+                strSQL = $@"select * from odt where odt_orderid = '{txtQuotation.Text}' ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {
-                    txtNote_Tmp.Text = dt.Rows[0]["dyh_tempbz"].ToString();
+                    txtNote_Tmp.Text = dt.Rows[0]["odt_tempinbz"].ToString();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-frmProofing_Load" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-frmQuotation_Note_Load" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -111,7 +112,7 @@ namespace Price2
         {
             try
             {
-                if(e.RowIndex >= 0 && e.ColumnIndex>=0) 
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
                 {
                     string strSQL = "";
                     DataTable dt = new DataTable();
@@ -119,10 +120,10 @@ namespace Price2
                     dt = clsDB.sql_select_dt(strSQL);
                     if (dt.Rows.Count > 0)
                     {
-                        txtNote.Text= dt.Rows[0]["obz_description"].ToString();
+                        txtNote.Text = dt.Rows[0]["obz_description"].ToString();
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -192,7 +193,7 @@ namespace Price2
 
         private void dgvData_S_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex>=0 && e.ColumnIndex>=0)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 getSelect();
             }
@@ -210,16 +211,16 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnDelete_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
         private void getDelete()
         {
             //刪除
             try
             {
                 //確認權限
-                if (clsGlobal.checkRightFlag("打樣單備註刪除") == false)
+                if (clsGlobal.checkRightFlag("客戶報價單備註刪除") == false)
                 {
-                    MessageBox.Show("您沒有打樣單備註刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("您沒有客戶報價單備註刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (dgvData_R.CurrentRow != null)
@@ -236,7 +237,7 @@ namespace Price2
 
         private void dgvData_R_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Delete)
+            if (e.KeyCode == Keys.Delete)
             {
                 getDelete();
             }
@@ -248,31 +249,36 @@ namespace Price2
             try
             {
                 //確認權限
-                if (clsGlobal.checkRightFlag("打樣單備註儲存") == false)
+                if (clsGlobal.checkRightFlag("客戶報價單備註儲存") == false)
                 {
-                    MessageBox.Show("您沒有打樣單備註儲存權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("您沒有客戶報價單備註儲存權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                
+
                 string strSQL = "";
                 DataTable dt = new DataTable();
-                strSQL = $@"delete sbz where sbz_orderid = '{txtProofing.Text.Trim()}' ";
+                strSQL = $@"delete sbz where sbz_orderid = '{txtQuotation.Text.Trim()}' ";
                 clsDB.Execute(strSQL);
-                if(dgvData_R.Rows.Count>0)
+                if (dgvData_R.Rows.Count > 0)
                 {
                     for (int i = 0; i < dgvData_R.Rows.Count; i++)
                     {
-                        strSQL = $@"exec sbz_save '{txtProofing.Text.Trim()}', '{dgvData_R.Rows[i].Cells["備註代碼R"].Value.ToString().Trim()}', 'IN' ";
+                        strSQL = $@"exec sbz_save '{txtQuotation.Text.Trim()}', '{dgvData_R.Rows[i].Cells["備註代碼R"].Value.ToString().Trim()}', 'IN' ";
                         clsDB.Execute(strSQL);
                     }
                 }
 
-                strSQL = $@"exec dyd_calbz '{txtProofing.Text.Trim()}' ";
+                strSQL = $@"exec dyd_calbz '{txtQuotation.Text.Trim()}' ";
                 clsDB.Execute(strSQL);
 
-                strSQL = $@"update dyh set dyh_tempbz = '{txtNote_Tmp.Text.Trim()}' where dyh_orderid = '{txtProofing.Text.Trim()}' ";
+                strSQL = $@"update dyh set dyh_tempbz = '{txtNote_Tmp.Text.Trim()}' where dyh_orderid = '{txtQuotation.Text.Trim()}' ";
                 clsDB.Execute(strSQL);
 
+                strSQL = $@"exec prd_calbz '{txtQuotation.Text.Trim()}' ";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"exec pdt_save '{txtQuotation.Text.Trim()}',  '{txtNote_Tmp.Text.Trim()}' ";
+                clsDB.Execute(strSQL);
                 MessageBox.Show("已經儲存完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

@@ -657,7 +657,7 @@ namespace Price2
             //4_4 打樣單
             try
             {
-                string[] strModule = menu4_3.Text.Split('.');
+                string[] strModule = menu4_4.Text.Split('.');
                 //確認權限
                 if (clsGlobal.checkRightFlag(strModule[1]) == false)
                 {
@@ -690,6 +690,47 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-menu4_4_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_5_Click(object sender, EventArgs e)  //4_5 客戶報價單
+        {
+            //4_5 客戶報價單
+            try
+            {
+                string[] strModule = menu4_5.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                //tabMain.SelectedTab = tabPage4;
+                //gb4.Visible = true;
+                frmQuotation frmQuotation = new frmQuotation();
+                frmQuotation.MdiParent = this;
+                frmQuotation.FormClosed += childForm_FormClosed;
+                frmQuotation.StartPosition = FormStartPosition.CenterScreen;
+
+                frmQuotation.Location = new Point(0, 55);
+                frmQuotation.Width = this.Width - 25;
+                frmQuotation.Height = this.Height - 80;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmQuotation.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_5_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
@@ -778,11 +819,16 @@ namespace Price2
             menu4_3.PerformClick();
         }
 
-
         private void btn4_4_Click(object sender, EventArgs e)
         {
             //4_4.打樣單
             menu4_4.PerformClick();
+        }
+
+        private void btn4_5_Click(object sender, EventArgs e)
+        {
+            //4_5.客戶報價單
+            menu4_5.PerformClick();
         }
         #endregion
 
@@ -990,8 +1036,6 @@ namespace Price2
         {
             gbMain.Visible = true;
         }
-
-        
 
     }
 }

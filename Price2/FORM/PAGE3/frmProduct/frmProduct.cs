@@ -917,7 +917,7 @@ namespace Price2
                 /// strUser
                 strSQL = $@"select wus_name from wus where wus_computername=host_name()";
                 string strUser = clsDB.sql_select_String(strSQL, "wus_name");  // strUser
-                asp_vendormaterialno = asp_vendormaterialno.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                asp_vendormaterialno = asp_vendormaterialno.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
 
                 /// 當材料名儲存時,一起同步多品號內層的資料
                 strSQL = $@"select aspnum_id from aspnum where aspnum_id = '{asp_id}' and aspnum_num = '{asp_vendormaterialno}'";
@@ -2538,7 +2538,7 @@ namespace Price2
                 if (txtID_Q.Text != "")
                 {
                     this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
-                    txtID_Q.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                    txtID_Q.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                     getData();
                     this.Cursor = Cursors.Default;//滑鼠還原預設
                 }
@@ -2561,7 +2561,7 @@ namespace Price2
                 if (txtVenderID_Q.Text != "")
                 {
                     this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
-                    txtVenderID_Q.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                    txtVenderID_Q.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                     getData();
                     this.Cursor = Cursors.Default;//滑鼠還原預設
                 }
@@ -2583,7 +2583,7 @@ namespace Price2
             {
                 if (txtNo_Q.Text != "")
                 {
-                    txtNo_Q.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                    txtNo_Q.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                     getData();
                 }
             }
@@ -2611,7 +2611,7 @@ namespace Price2
             {
                 if (txtID.Text != "")
                 {
-                    txtID.Text = txtID.Text.TrimEnd((char[])"/n/r".ToCharArray()).Trim();  //去ENTER 換行 空白
+                    txtID.Text = txtID.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                 }
                 if (txtID.Text.Length > 30)
                 {

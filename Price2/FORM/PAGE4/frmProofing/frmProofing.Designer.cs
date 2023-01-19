@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtProofing = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvProofing = new System.Windows.Forms.DataGridView();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.dyi_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dyi_line = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCount = new System.Windows.Forms.Label();
@@ -62,8 +62,9 @@
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.產品編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.線路 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProofing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.groupBox.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -179,44 +180,44 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dgvProofing);
+            this.panel1.Controls.Add(this.dgvProduct);
             this.panel1.Controls.Add(this.lblCount);
             this.panel1.Location = new System.Drawing.Point(26, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(406, 630);
             this.panel1.TabIndex = 162;
             // 
-            // dgvProofing
+            // dgvProduct
             // 
-            this.dgvProofing.AllowUserToAddRows = false;
-            this.dgvProofing.AllowUserToDeleteRows = false;
-            this.dgvProofing.AllowUserToOrderColumns = true;
-            this.dgvProofing.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProofing.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProofing.ColumnHeadersHeight = 25;
-            this.dgvProofing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProofing.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.AllowUserToDeleteRows = false;
+            this.dgvProduct.AllowUserToOrderColumns = true;
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProduct.ColumnHeadersHeight = 25;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dyi_id,
             this.dyi_line});
-            this.dgvProofing.EnableHeadersVisualStyles = false;
-            this.dgvProofing.Location = new System.Drawing.Point(1, 10);
-            this.dgvProofing.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvProofing.Name = "dgvProofing";
-            this.dgvProofing.ReadOnly = true;
-            this.dgvProofing.RowHeadersVisible = false;
-            this.dgvProofing.RowHeadersWidth = 51;
-            this.dgvProofing.RowTemplate.Height = 21;
-            this.dgvProofing.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProofing.Size = new System.Drawing.Size(404, 520);
-            this.dgvProofing.TabIndex = 156;
-            this.dgvProofing.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProofing_CellDoubleClick);
+            this.dgvProduct.EnableHeadersVisualStyles = false;
+            this.dgvProduct.Location = new System.Drawing.Point(1, 10);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.RowHeadersVisible = false;
+            this.dgvProduct.RowHeadersWidth = 51;
+            this.dgvProduct.RowTemplate.Height = 21;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProduct.Size = new System.Drawing.Size(404, 520);
+            this.dgvProduct.TabIndex = 156;
+            this.dgvProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellDoubleClick);
             // 
             // dyi_id
             // 
@@ -448,19 +449,20 @@
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToOrderColumns = true;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.ColumnHeadersHeight = 25;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.產品編號,
-            this.數量});
+            this.數量,
+            this.線路});
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(145, 10);
             this.dgvData.Margin = new System.Windows.Forms.Padding(2);
@@ -471,6 +473,7 @@
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(405, 520);
             this.dgvData.TabIndex = 162;
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // 產品編號
             // 
@@ -488,6 +491,13 @@
             this.數量.Name = "數量";
             this.數量.Width = 150;
             // 
+            // 線路
+            // 
+            this.線路.DataPropertyName = "線路";
+            this.線路.HeaderText = "線路";
+            this.線路.Name = "線路";
+            this.線路.Visible = false;
+            // 
             // frmProofing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -501,7 +511,7 @@
             this.Activated += new System.EventHandler(this.frmProofing_Activated);
             this.Load += new System.EventHandler(this.frmProofing_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProofing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -525,7 +535,7 @@
         private System.Windows.Forms.TextBox txtProofing;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.DataGridView dgvProofing;
+        private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.Panel panel2;
@@ -545,5 +555,6 @@
         private System.Windows.Forms.Button btnProofing_Inq;
         private System.Windows.Forms.DataGridViewTextBoxColumn 產品編號;
         private System.Windows.Forms.DataGridViewTextBoxColumn 數量;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 線路;
     }
 }

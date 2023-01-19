@@ -33,7 +33,7 @@ namespace Price2
             {
                 case "bomlist":
                     //載入rdlc
-                    localReport.ReportEmbeddedResource = "Price2.bomlist.rdlc";
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.bomlist.rdlc";
                     //載入參數
                     ReportParameter var1 = new ReportParameter("rpLevel1", strRP[0]);
                     ReportParameter var2 = new ReportParameter("rpLevel2", strRP[1]);
@@ -42,7 +42,7 @@ namespace Price2
                     break;
                 case "proofing":
                     //載入rdlc
-                    localReport.ReportEmbeddedResource = "Price2.proofing.rdlc";
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.proofing.rdlc";
                     //載入參數
                     ReportParameter proofing1 = new ReportParameter("Proofing", strRP[0]);
                     ReportParameter proofing2 = new ReportParameter("Customer", strRP[1]);
@@ -51,6 +51,19 @@ namespace Price2
                     ReportParameter proofing5 = new ReportParameter("tempbz", strRP[4]);
                     ReportParameter proofing6 = new ReportParameter("bz", strRP[5]);
                     reportViewer1.LocalReport.SetParameters(new ReportParameter[] { proofing1, proofing2, proofing3, proofing4, proofing5, proofing6 });
+                    break;
+                case "quotation":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.quotation.rdlc";
+                    //載入參數
+                    ReportParameter quotation1 = new ReportParameter("name", strRP[0]);
+                    ReportParameter quotation2 = new ReportParameter("orderid", strRP[1]);
+                    ReportParameter quotation3 = new ReportParameter("orderdate", strRP[2]);
+                    ReportParameter quotation4 = new ReportParameter("tempinbz", strRP[3]);
+                    ReportParameter quotation5 = new ReportParameter("tempoutbz", strRP[4]);
+                    ReportParameter quotation6 = new ReportParameter("bz", strRP[5]);
+                    ReportParameter quotation7 = new ReportParameter("sign", strRP[6]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { quotation1, quotation2, quotation3, quotation4, quotation5, quotation6, quotation7 });
                     break;
                 default:
                     break;
