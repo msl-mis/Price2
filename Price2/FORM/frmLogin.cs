@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace Price2
 {
@@ -193,6 +195,8 @@ namespace Price2
                 //取得Local IP
                 System.Net.IPAddress SvrIP = new System.Net.IPAddress(Dns.GetHostByName(Dns.GetHostName()).AddressList[0].Address);
                 clsGlobal.strG_LocalIP = SvrIP.ToString();
+
+                this.Text = ("用戶驗證 (報價系統--" + "Ver：" + FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion.ToString() + ")");
                 txtUser.Focus();
             }
             catch (Exception ex)

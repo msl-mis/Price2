@@ -1037,5 +1037,40 @@ namespace Price2
             gbMain.Visible = true;
         }
 
+        private void btnReturn_gb3_8_Click(object sender, EventArgs e)
+        {
+            gb3_8.Visible= false;
+            gb3.Visible= true;
+        }
+
+        private void btnReturn_gb3_7_Click(object sender, EventArgs e)
+        {
+            gb3_7.Visible = false;
+            gb3.Visible = true;
+        }
+
+        private void btnReturn_gb3_6_Click(object sender, EventArgs e)
+        {
+            gb3_6.Visible = false;
+            gb3.Visible = true;
+        }
+
+        private void btn3_6_Click(object sender, EventArgs e)
+        {
+            gb3.Visible = false;
+            gb3_6.Visible = true;
+        }
+
+        private void btn3_7_Click(object sender, EventArgs e)
+        {
+            gb3.Visible = false;
+            gb3_7.Visible = true;
+        }
+
+        private void btn3_8_Click(object sender, EventArgs e)
+        {
+            gb3.Visible = false;
+            gb3_8.Visible = true;
+        }
     }
 }
