@@ -299,3 +299,5 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofing_CZF_Product_Inq.resour
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmQuotation.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmQuotation_Inq.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmQuotation_Note.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Inq.resources

@@ -79,8 +79,12 @@ namespace Price2
                 #region 加入第4頁
                 gb4.Visible = true;
                 #endregion
-
-
+                #region 加入第5頁
+                gb5.Visible = true;
+                #endregion
+                #region 加入第6頁
+                gb6.Visible = true;
+                #endregion
 
                 #endregion
 
@@ -733,6 +737,47 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu4_5_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void menu4_6_Click(object sender, EventArgs e)  //4_6 訂單管理
+        {
+            //4_6 訂單管理
+            try
+            {
+                string[] strModule = menu4_6.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                //tabMain.SelectedTab = tabPage4;
+                //gb4.Visible = true;
+                frmOrder frmOrder = new frmOrder();
+                frmOrder.MdiParent = this;
+                frmOrder.FormClosed += childForm_FormClosed;
+                frmOrder.StartPosition = FormStartPosition.CenterScreen;
+
+                frmOrder.Location = new Point(0, 55);
+                frmOrder.Width = this.Width - 25;
+                frmOrder.Height = this.Height - 80;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmOrder.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_6_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Page1(系統)
@@ -830,6 +875,13 @@ namespace Price2
             //4_5.客戶報價單
             menu4_5.PerformClick();
         }
+
+        private void btn4_6_Click(object sender, EventArgs e)
+        {
+            //4_6.訂單管理
+            menu4_6.PerformClick();
+        }
+
         #endregion
 
         private void startSocket()
@@ -1072,5 +1124,7 @@ namespace Price2
             gb3.Visible = false;
             gb3_8.Visible = true;
         }
+
+        
     }
 }

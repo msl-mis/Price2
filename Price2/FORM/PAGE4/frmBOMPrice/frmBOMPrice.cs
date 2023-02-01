@@ -80,6 +80,16 @@ namespace Price2
             //要加入初始化的東西
             try
             {
+                //float dpiX;
+                //float dpiY;
+                //Graphics graphics = this.CreateGraphics();
+                //dpiX = graphics.DpiX;
+                //dpiY = graphics.DpiY;
+                //int intPercent = (dpiX == 96) ? 100 : (dpiX == 120) ? 125 : 150;
+
+                //// 針對字體變更Form的大小
+                //this.Height = this.Height * intPercent / 100;
+
                 //加入第一層名稱
                 string strSQL = "";
                 DataTable dt = new DataTable();

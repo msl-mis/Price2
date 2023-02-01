@@ -44,10 +44,8 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(586, 322);
+            this.groupBox.Size = new System.Drawing.Size(879, 483);
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             // 
@@ -66,8 +64,7 @@
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(11, 11);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvData.Location = new System.Drawing.Point(16, 16);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
@@ -75,17 +72,16 @@
             this.dgvData.RowTemplate.Height = 27;
             this.dgvData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(500, 300);
+            this.dgvData.Size = new System.Drawing.Size(750, 450);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // btnExport
             // 
             this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnExport.Location = new System.Drawing.Point(515, 11);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExport.Location = new System.Drawing.Point(772, 16);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(63, 34);
+            this.btnExport.Size = new System.Drawing.Size(94, 51);
             this.btnExport.TabIndex = 14;
             this.btnExport.Text = "導出";
             this.btnExport.UseVisualStyleBackColor = false;
@@ -93,11 +89,12 @@
             // 
             // frmBOMPrice_Grid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(586, 322);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(879, 483);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBOMPrice_Grid";
             this.Text = "選擇材料品號";
             this.Activated += new System.EventHandler(this.frmBOMPrice_Grid_Activated);

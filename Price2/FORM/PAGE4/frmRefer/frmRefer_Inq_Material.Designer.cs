@@ -47,7 +47,7 @@
             this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox.Name = "groupBox";
             this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(333, 450);
+            this.groupBox.Size = new System.Drawing.Size(375, 540);
             this.groupBox.TabIndex = 3;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "報價材料項目";
@@ -56,6 +56,8 @@
             // 
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -71,7 +73,7 @@
             this.數量});
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(3, 23);
+            this.dgvData.Location = new System.Drawing.Point(3, 27);
             this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
@@ -80,7 +82,7 @@
             this.dgvData.RowTemplate.Height = 27;
             this.dgvData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(327, 425);
+            this.dgvData.Size = new System.Drawing.Size(369, 511);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
@@ -91,7 +93,6 @@
             this.材料名項目.MinimumWidth = 6;
             this.材料名項目.Name = "材料名項目";
             this.材料名項目.ReadOnly = true;
-            this.材料名項目.Width = 225;
             // 
             // 數量
             // 
@@ -103,10 +104,11 @@
             // 
             // frmRefer_Inq_Material
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 450);
+            this.ClientSize = new System.Drawing.Size(375, 540);
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRefer_Inq_Material";

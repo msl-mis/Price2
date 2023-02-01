@@ -58,17 +58,17 @@
             this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox.Name = "groupBox";
             this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(798, 449);
+            this.groupBox.Size = new System.Drawing.Size(898, 539);
             this.groupBox.TabIndex = 4;
             this.groupBox.TabStop = false;
             // 
             // btnModify
             // 
             this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnModify.Location = new System.Drawing.Point(389, 294);
+            this.btnModify.Location = new System.Drawing.Point(438, 353);
             this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(84, 42);
+            this.btnModify.Size = new System.Drawing.Size(94, 50);
             this.btnModify.TabIndex = 54;
             this.btnModify.Text = "修改";
             this.btnModify.UseVisualStyleBackColor = false;
@@ -77,10 +77,10 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnAdd.Location = new System.Drawing.Point(389, 234);
+            this.btnAdd.Location = new System.Drawing.Point(438, 281);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(84, 42);
+            this.btnAdd.Size = new System.Drawing.Size(94, 50);
             this.btnAdd.TabIndex = 52;
             this.btnAdd.Text = "新增";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -89,10 +89,10 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDelete.Location = new System.Drawing.Point(389, 354);
+            this.btnDelete.Location = new System.Drawing.Point(438, 425);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(84, 42);
+            this.btnDelete.Size = new System.Drawing.Size(94, 50);
             this.btnDelete.TabIndex = 51;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -103,6 +103,8 @@
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.AllowUserToOrderColumns = true;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -116,7 +118,7 @@
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ap1_assy});
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(39, 45);
+            this.dgvData.Location = new System.Drawing.Point(44, 54);
             this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
@@ -124,7 +126,7 @@
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 27;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(328, 351);
+            this.dgvData.Size = new System.Drawing.Size(369, 421);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
@@ -137,14 +139,13 @@
             this.ap1_assy.MinimumWidth = 6;
             this.ap1_assy.Name = "ap1_assy";
             this.ap1_assy.ReadOnly = true;
-            this.ap1_assy.Width = 300;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(384, 45);
+            this.label2.Location = new System.Drawing.Point(432, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 34);
+            this.label2.Size = new System.Drawing.Size(153, 41);
             this.label2.TabIndex = 36;
             this.label2.Text = "第一層名稱：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,19 +153,19 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtID.Location = new System.Drawing.Point(526, 45);
+            this.txtID.Location = new System.Drawing.Point(592, 54);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(200, 34);
+            this.txtID.Size = new System.Drawing.Size(224, 39);
             this.txtID.TabIndex = 3;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(642, 354);
+            this.btnClose.Location = new System.Drawing.Point(722, 425);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(84, 42);
+            this.btnClose.Size = new System.Drawing.Size(94, 50);
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -172,11 +173,12 @@
             // 
             // frmBOM_Level1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 540);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBOM_Level1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BOM產品結構建立第一層";

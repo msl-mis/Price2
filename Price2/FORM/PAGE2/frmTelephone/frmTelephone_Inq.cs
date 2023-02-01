@@ -165,7 +165,22 @@ namespace Price2
             //要加入初始化的東西
             try
             {
-                
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select distinct tel_type
+                            from   tel
+                            where  tel_username = '{strUserName}'
+                                    and Rtrim(tel_type) not in ( '(ALL)' ) ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if(dt.Rows.Count>0)
+                {
+                    cboType.Items.Clear();
+                    cboType.Items.Add("(ALL)");
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        cboType.Items.Add(dt.Rows[i]["tel_type"].ToString());
+                    }
+                }
             }
             catch (Exception ex)
             {

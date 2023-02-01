@@ -31,34 +31,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtShortName = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnInq = new System.Windows.Forms.Button();
             this.cus_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_shortname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtShortName = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnInq = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox
             // 
-            this.groupBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox.Controls.Add(this.dgvData);
             this.groupBox.Controls.Add(this.label2);
             this.groupBox.Controls.Add(this.txtShortName);
             this.groupBox.Controls.Add(this.btnClose);
             this.groupBox.Controls.Add(this.btnInq);
+            this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(656, 415);
+            this.groupBox.Size = new System.Drawing.Size(984, 620);
             this.groupBox.TabIndex = 2;
             this.groupBox.TabStop = false;
             // 
@@ -83,17 +81,57 @@
             this.cus_contact,
             this.cus_tel});
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(16, 62);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvData.Location = new System.Drawing.Point(24, 93);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 27;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(623, 333);
+            this.dgvData.Size = new System.Drawing.Size(934, 500);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(26, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 40);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "搜尋簡稱：";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtShortName
+            // 
+            this.txtShortName.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtShortName.Location = new System.Drawing.Point(162, 33);
+            this.txtShortName.Name = "txtShortName";
+            this.txtShortName.Size = new System.Drawing.Size(224, 36);
+            this.txtShortName.TabIndex = 3;
+            this.txtShortName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtShortName_KeyDown);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnClose.Location = new System.Drawing.Point(866, 33);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(94, 51);
+            this.btnClose.TabIndex = 20;
+            this.btnClose.Text = "結束";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnInq
+            // 
+            this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnInq.Location = new System.Drawing.Point(663, 33);
+            this.btnInq.Name = "btnInq";
+            this.btnInq.Size = new System.Drawing.Size(94, 51);
+            this.btnInq.TabIndex = 14;
+            this.btnInq.Text = "搜尋";
+            this.btnInq.UseVisualStyleBackColor = false;
+            this.btnInq.Click += new System.EventHandler(this.btnInq_Click);
             // 
             // cus_id
             // 
@@ -102,7 +140,7 @@
             this.cus_id.MinimumWidth = 6;
             this.cus_id.Name = "cus_id";
             this.cus_id.ReadOnly = true;
-            this.cus_id.Width = 125;
+            this.cus_id.Width = 150;
             // 
             // cus_name
             // 
@@ -111,7 +149,7 @@
             this.cus_name.MinimumWidth = 6;
             this.cus_name.Name = "cus_name";
             this.cus_name.ReadOnly = true;
-            this.cus_name.Width = 200;
+            this.cus_name.Width = 300;
             // 
             // cus_shortname
             // 
@@ -140,59 +178,13 @@
             this.cus_tel.ReadOnly = true;
             this.cus_tel.Width = 200;
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(17, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 27);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "搜尋簡稱：";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtShortName
-            // 
-            this.txtShortName.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtShortName.Location = new System.Drawing.Point(108, 22);
-            this.txtShortName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtShortName.Name = "txtShortName";
-            this.txtShortName.Size = new System.Drawing.Size(151, 27);
-            this.txtShortName.TabIndex = 3;
-            this.txtShortName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtShortName_KeyDown);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(577, 22);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(63, 34);
-            this.btnClose.TabIndex = 20;
-            this.btnClose.Text = "結束";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnInq
-            // 
-            this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq.Location = new System.Drawing.Point(442, 22);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(63, 34);
-            this.btnInq.TabIndex = 14;
-            this.btnInq.Text = "搜尋";
-            this.btnInq.UseVisualStyleBackColor = false;
-            this.btnInq.Click += new System.EventHandler(this.btnInq_Click);
-            // 
             // frmCustomer_Inq_ShortName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 413);
+            this.ClientSize = new System.Drawing.Size(984, 620);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCustomer_Inq_ShortName";
             this.Text = "選擇客戶的簡稱";
             this.groupBox.ResumeLayout(false);

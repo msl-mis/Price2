@@ -42,8 +42,6 @@
             this.txtProofing = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.dyi_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dyi_line = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCount = new System.Windows.Forms.Label();
             this.btnSelect = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
@@ -60,6 +58,8 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.dyi_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dyi_line = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.產品編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.線路 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,10 +74,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(23, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(34, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 27);
+            this.label2.Size = new System.Drawing.Size(164, 40);
             this.label2.TabIndex = 36;
             this.label2.Text = "客戶：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -85,10 +84,9 @@
             // txtCustomer
             // 
             this.txtCustomer.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCustomer.Location = new System.Drawing.Point(137, 22);
-            this.txtCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomer.Location = new System.Drawing.Point(206, 33);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(125, 27);
+            this.txtCustomer.Size = new System.Drawing.Size(186, 36);
             this.txtCustomer.TabIndex = 70;
             this.txtCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCustomer_KeyDown);
             this.txtCustomer.Leave += new System.EventHandler(this.txtCustomer_Leave);
@@ -96,10 +94,9 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(368, 22);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(552, 33);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 27);
+            this.label6.Size = new System.Drawing.Size(160, 40);
             this.label6.TabIndex = 80;
             this.label6.Text = "打樣單日期：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -107,19 +104,17 @@
             // txtProofingDate
             // 
             this.txtProofingDate.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtProofingDate.Location = new System.Drawing.Point(480, 22);
-            this.txtProofingDate.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProofingDate.Location = new System.Drawing.Point(720, 33);
             this.txtProofingDate.Name = "txtProofingDate";
-            this.txtProofingDate.Size = new System.Drawing.Size(125, 27);
+            this.txtProofingDate.Size = new System.Drawing.Size(186, 36);
             this.txtProofingDate.TabIndex = 82;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(778, 22);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(1167, 33);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 27);
+            this.label13.Size = new System.Drawing.Size(114, 40);
             this.label13.TabIndex = 136;
             this.label13.Text = "業務：";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -127,20 +122,18 @@
             // cboSales
             // 
             this.cboSales.FormattingEnabled = true;
-            this.cboSales.ItemHeight = 16;
-            this.cboSales.Location = new System.Drawing.Point(858, 22);
-            this.cboSales.Margin = new System.Windows.Forms.Padding(2);
+            this.cboSales.ItemHeight = 24;
+            this.cboSales.Location = new System.Drawing.Point(1287, 33);
             this.cboSales.Name = "cboSales";
-            this.cboSales.Size = new System.Drawing.Size(126, 24);
+            this.cboSales.Size = new System.Drawing.Size(187, 32);
             this.cboSales.TabIndex = 137;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(368, 54);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(552, 81);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 27);
+            this.label8.Size = new System.Drawing.Size(160, 40);
             this.label8.TabIndex = 145;
             this.label8.Text = "交期：";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,20 +141,18 @@
             // txtDeliveryDate
             // 
             this.txtDeliveryDate.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtDeliveryDate.Location = new System.Drawing.Point(480, 54);
-            this.txtDeliveryDate.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDeliveryDate.Location = new System.Drawing.Point(720, 81);
             this.txtDeliveryDate.Name = "txtDeliveryDate";
-            this.txtDeliveryDate.Size = new System.Drawing.Size(125, 27);
+            this.txtDeliveryDate.Size = new System.Drawing.Size(186, 36);
             this.txtDeliveryDate.TabIndex = 147;
             this.txtDeliveryDate.Text = "越快越好";
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(20, 54);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(30, 81);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 27);
+            this.label12.Size = new System.Drawing.Size(168, 40);
             this.label12.TabIndex = 150;
             this.label12.Text = "打樣單編號：";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -169,10 +160,9 @@
             // txtProofing
             // 
             this.txtProofing.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtProofing.Location = new System.Drawing.Point(137, 54);
-            this.txtProofing.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProofing.Location = new System.Drawing.Point(206, 81);
             this.txtProofing.Name = "txtProofing";
-            this.txtProofing.Size = new System.Drawing.Size(125, 27);
+            this.txtProofing.Size = new System.Drawing.Size(186, 36);
             this.txtProofing.TabIndex = 152;
             this.txtProofing.Text = "S";
             this.txtProofing.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProofing_KeyDown);
@@ -182,9 +172,10 @@
             // 
             this.panel1.Controls.Add(this.dgvProduct);
             this.panel1.Controls.Add(this.lblCount);
-            this.panel1.Location = new System.Drawing.Point(26, 100);
+            this.panel1.Location = new System.Drawing.Point(39, 150);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 630);
+            this.panel1.Size = new System.Drawing.Size(609, 945);
             this.panel1.TabIndex = 162;
             // 
             // dgvProduct
@@ -192,6 +183,8 @@
             this.dgvProduct.AllowUserToAddRows = false;
             this.dgvProduct.AllowUserToDeleteRows = false;
             this.dgvProduct.AllowUserToOrderColumns = true;
+            this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -201,49 +194,29 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProduct.ColumnHeadersHeight = 25;
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dyi_id,
             this.dyi_line});
             this.dgvProduct.EnableHeadersVisualStyles = false;
-            this.dgvProduct.Location = new System.Drawing.Point(1, 10);
-            this.dgvProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProduct.Location = new System.Drawing.Point(2, 15);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.RowHeadersWidth = 51;
             this.dgvProduct.RowTemplate.Height = 21;
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduct.Size = new System.Drawing.Size(404, 520);
+            this.dgvProduct.Size = new System.Drawing.Size(606, 780);
             this.dgvProduct.TabIndex = 156;
             this.dgvProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellDoubleClick);
-            // 
-            // dyi_id
-            // 
-            this.dyi_id.DataPropertyName = "dyi_id";
-            this.dyi_id.HeaderText = "產品編號";
-            this.dyi_id.MinimumWidth = 6;
-            this.dyi_id.Name = "dyi_id";
-            this.dyi_id.ReadOnly = true;
-            this.dyi_id.Width = 250;
-            // 
-            // dyi_line
-            // 
-            this.dyi_line.DataPropertyName = "dyi_line";
-            this.dyi_line.HeaderText = "線路";
-            this.dyi_line.Name = "dyi_line";
-            this.dyi_line.ReadOnly = true;
-            this.dyi_line.Width = 150;
             // 
             // lblCount
             // 
             this.lblCount.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblCount.ForeColor = System.Drawing.Color.Red;
-            this.lblCount.Location = new System.Drawing.Point(353, 559);
-            this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCount.Location = new System.Drawing.Point(530, 838);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(50, 27);
+            this.lblCount.Size = new System.Drawing.Size(75, 40);
             this.lblCount.TabIndex = 155;
             this.lblCount.Text = "0";
             this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,10 +224,9 @@
             // btnSelect
             // 
             this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSelect.Location = new System.Drawing.Point(28, 235);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelect.Location = new System.Drawing.Point(42, 352);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(92, 34);
+            this.btnSelect.Size = new System.Drawing.Size(138, 51);
             this.btnSelect.TabIndex = 157;
             this.btnSelect.Text = "選取";
             this.btnSelect.UseVisualStyleBackColor = false;
@@ -279,20 +251,17 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(1559, 781);
+            this.groupBox.Size = new System.Drawing.Size(1924, 1050);
             this.groupBox.TabIndex = 9;
             this.groupBox.TabStop = false;
             // 
             // btnProofing_Inq
             // 
             this.btnProofing_Inq.BackColor = System.Drawing.Color.Lime;
-            this.btnProofing_Inq.Location = new System.Drawing.Point(283, 54);
-            this.btnProofing_Inq.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProofing_Inq.Location = new System.Drawing.Point(424, 81);
             this.btnProofing_Inq.Name = "btnProofing_Inq";
-            this.btnProofing_Inq.Size = new System.Drawing.Size(32, 29);
+            this.btnProofing_Inq.Size = new System.Drawing.Size(48, 44);
             this.btnProofing_Inq.TabIndex = 164;
             this.btnProofing_Inq.Text = "...";
             this.btnProofing_Inq.UseVisualStyleBackColor = false;
@@ -303,23 +272,24 @@
             this.panel2.Controls.Add(this.btnSelect);
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Controls.Add(this.dgvData);
-            this.panel2.Location = new System.Drawing.Point(434, 100);
+            this.panel2.Location = new System.Drawing.Point(651, 150);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 630);
+            this.panel2.Size = new System.Drawing.Size(900, 945);
             this.panel2.TabIndex = 163;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 9;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel1.Controls.Add(this.btnNote, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnProofing, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCopy, 6, 0);
@@ -329,20 +299,20 @@
             this.tableLayoutPanel1.Controls.Add(this.btnClear, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnClose, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnPrint, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 560);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 840);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(540, 60);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 90);
             this.tableLayoutPanel1.TabIndex = 163;
             // 
             // btnNote
             // 
             this.btnNote.BackColor = System.Drawing.Color.White;
-            this.btnNote.Location = new System.Drawing.Point(422, 2);
-            this.btnNote.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNote.Location = new System.Drawing.Point(633, 3);
             this.btnNote.Name = "btnNote";
-            this.btnNote.Size = new System.Drawing.Size(56, 56);
+            this.btnNote.Size = new System.Drawing.Size(84, 84);
             this.btnNote.TabIndex = 162;
             this.btnNote.Text = "選取備註";
             this.btnNote.UseVisualStyleBackColor = false;
@@ -351,10 +321,9 @@
             // btnProofing
             // 
             this.btnProofing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnProofing.Location = new System.Drawing.Point(2, 2);
-            this.btnProofing.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProofing.Location = new System.Drawing.Point(3, 3);
             this.btnProofing.Name = "btnProofing";
-            this.btnProofing.Size = new System.Drawing.Size(56, 56);
+            this.btnProofing.Size = new System.Drawing.Size(84, 84);
             this.btnProofing.TabIndex = 51;
             this.btnProofing.Text = "樣品製作";
             this.btnProofing.UseVisualStyleBackColor = false;
@@ -363,10 +332,9 @@
             // btnCopy
             // 
             this.btnCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnCopy.Location = new System.Drawing.Point(362, 2);
-            this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCopy.Location = new System.Drawing.Point(543, 3);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(56, 56);
+            this.btnCopy.Size = new System.Drawing.Size(84, 84);
             this.btnCopy.TabIndex = 156;
             this.btnCopy.Text = "複製";
             this.btnCopy.UseVisualStyleBackColor = false;
@@ -375,10 +343,9 @@
             // btnInq
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnInq.Location = new System.Drawing.Point(302, 2);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq.Location = new System.Drawing.Point(453, 3);
             this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(56, 56);
+            this.btnInq.Size = new System.Drawing.Size(84, 84);
             this.btnInq.TabIndex = 157;
             this.btnInq.Text = "查詢";
             this.btnInq.UseVisualStyleBackColor = false;
@@ -387,10 +354,9 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.Location = new System.Drawing.Point(242, 2);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(363, 3);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(56, 56);
+            this.btnDelete.Size = new System.Drawing.Size(84, 84);
             this.btnDelete.TabIndex = 158;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -399,10 +365,9 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnSave.Location = new System.Drawing.Point(62, 2);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(93, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(56, 56);
+            this.btnSave.Size = new System.Drawing.Size(84, 84);
             this.btnSave.TabIndex = 160;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -411,10 +376,9 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClear.Location = new System.Drawing.Point(122, 2);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Location = new System.Drawing.Point(183, 3);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(56, 56);
+            this.btnClear.Size = new System.Drawing.Size(84, 84);
             this.btnClear.TabIndex = 87;
             this.btnClear.Text = "清除";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -423,10 +387,9 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(482, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(723, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(56, 56);
+            this.btnClose.Size = new System.Drawing.Size(84, 84);
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -435,10 +398,9 @@
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnPrint.Location = new System.Drawing.Point(182, 2);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrint.Location = new System.Drawing.Point(273, 3);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(56, 56);
+            this.btnPrint.Size = new System.Drawing.Size(84, 84);
             this.btnPrint.TabIndex = 54;
             this.btnPrint.Text = "預覽列印";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -448,6 +410,8 @@
             // 
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToOrderColumns = true;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -457,54 +421,72 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvData.ColumnHeadersHeight = 25;
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.產品編號,
             this.數量,
             this.線路});
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(145, 10);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvData.Location = new System.Drawing.Point(218, 15);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 25;
             this.dgvData.RowTemplate.Height = 21;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(405, 520);
+            this.dgvData.Size = new System.Drawing.Size(608, 780);
             this.dgvData.TabIndex = 162;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            // 
+            // dyi_id
+            // 
+            this.dyi_id.DataPropertyName = "dyi_id";
+            this.dyi_id.FillWeight = 143.1818F;
+            this.dyi_id.HeaderText = "產品編號";
+            this.dyi_id.MinimumWidth = 6;
+            this.dyi_id.Name = "dyi_id";
+            this.dyi_id.ReadOnly = true;
+            // 
+            // dyi_line
+            // 
+            this.dyi_line.DataPropertyName = "dyi_line";
+            this.dyi_line.FillWeight = 56.81818F;
+            this.dyi_line.HeaderText = "線路";
+            this.dyi_line.MinimumWidth = 8;
+            this.dyi_line.Name = "dyi_line";
+            this.dyi_line.ReadOnly = true;
             // 
             // 產品編號
             // 
             this.產品編號.DataPropertyName = "產品編號";
+            this.產品編號.FillWeight = 143.1818F;
             this.產品編號.HeaderText = "產品編號";
             this.產品編號.MinimumWidth = 6;
             this.產品編號.Name = "產品編號";
-            this.產品編號.Width = 250;
             // 
             // 數量
             // 
             this.數量.DataPropertyName = "數量";
+            this.數量.FillWeight = 56.81818F;
             this.數量.HeaderText = "數量";
             this.數量.MinimumWidth = 6;
             this.數量.Name = "數量";
-            this.數量.Width = 150;
             // 
             // 線路
             // 
             this.線路.DataPropertyName = "線路";
             this.線路.HeaderText = "線路";
+            this.線路.MinimumWidth = 8;
             this.線路.Name = "線路";
             this.線路.Visible = false;
             // 
             // frmProofing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1559, 781);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProofing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "打樣單";
@@ -550,9 +532,9 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.Button btnProofing_Inq;
         private System.Windows.Forms.DataGridViewTextBoxColumn dyi_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn dyi_line;
-        private System.Windows.Forms.Button btnProofing_Inq;
         private System.Windows.Forms.DataGridViewTextBoxColumn 產品編號;
         private System.Windows.Forms.DataGridViewTextBoxColumn 數量;
         private System.Windows.Forms.DataGridViewTextBoxColumn 線路;

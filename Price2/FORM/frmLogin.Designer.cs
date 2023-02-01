@@ -49,10 +49,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(167, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(209, 162);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 31);
+            this.label1.Size = new System.Drawing.Size(125, 39);
             this.label1.TabIndex = 5;
             this.label1.Text = "用戶名 :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -60,20 +60,20 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtUser.Location = new System.Drawing.Point(268, 130);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Location = new System.Drawing.Point(335, 162);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(134, 27);
+            this.txtUser.Size = new System.Drawing.Size(166, 36);
             this.txtUser.TabIndex = 0;
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPassword.Location = new System.Drawing.Point(268, 180);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(335, 225);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(134, 27);
+            this.txtPassword.Size = new System.Drawing.Size(166, 36);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -81,10 +81,10 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(167, 180);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(209, 225);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 31);
+            this.label2.Size = new System.Drawing.Size(125, 39);
             this.label2.TabIndex = 6;
             this.label2.Text = "密   碼 :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -93,10 +93,10 @@
             // 
             this.btnOK.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnOK.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOK.Location = new System.Drawing.Point(125, 280);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOK.Location = new System.Drawing.Point(156, 350);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(90, 38);
+            this.btnOK.Size = new System.Drawing.Size(112, 48);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "進入";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -106,10 +106,10 @@
             // 
             this.btnEnd.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEnd.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnEnd.Location = new System.Drawing.Point(312, 280);
-            this.btnEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEnd.Location = new System.Drawing.Point(390, 350);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(90, 38);
+            this.btnEnd.Size = new System.Drawing.Size(112, 48);
             this.btnEnd.TabIndex = 4;
             this.btnEnd.Text = "結束";
             this.btnEnd.UseVisualStyleBackColor = false;
@@ -120,13 +120,13 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 98);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 122);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(530, 5);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(662, 6);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // label3
@@ -134,10 +134,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(90, 38);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(112, 48);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(346, 45);
+            this.label3.Size = new System.Drawing.Size(526, 67);
             this.label3.TabIndex = 8;
             this.label3.Text = "MSL-PRICE報價系統";
             // 
@@ -145,7 +145,7 @@
             // 
             this.picuser.Image = global::Price2.Properties.Resources.user;
             this.picuser.InitialImage = ((System.Drawing.Image)(resources.GetObject("picuser.InitialImage")));
-            this.picuser.Location = new System.Drawing.Point(125, 130);
+            this.picuser.Location = new System.Drawing.Point(156, 162);
             this.picuser.Margin = new System.Windows.Forms.Padding(2);
             this.picuser.Name = "picuser";
             this.picuser.Size = new System.Drawing.Size(32, 32);
@@ -156,7 +156,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(125, 180);
+            this.pictureBox1.Location = new System.Drawing.Point(156, 225);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -168,9 +168,10 @@
             // 
             this.radioOffical.AutoSize = true;
             this.radioOffical.Checked = true;
-            this.radioOffical.Location = new System.Drawing.Point(125, 230);
+            this.radioOffical.Location = new System.Drawing.Point(156, 288);
+            this.radioOffical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioOffical.Name = "radioOffical";
-            this.radioOffical.Size = new System.Drawing.Size(75, 24);
+            this.radioOffical.Size = new System.Drawing.Size(110, 34);
             this.radioOffical.TabIndex = 112;
             this.radioOffical.TabStop = true;
             this.radioOffical.Text = "正式區";
@@ -179,9 +180,10 @@
             // radioTest
             // 
             this.radioTest.AutoSize = true;
-            this.radioTest.Location = new System.Drawing.Point(309, 230);
+            this.radioTest.Location = new System.Drawing.Point(386, 288);
+            this.radioTest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioTest.Name = "radioTest";
-            this.radioTest.Size = new System.Drawing.Size(75, 24);
+            this.radioTest.Size = new System.Drawing.Size(110, 34);
             this.radioTest.TabIndex = 113;
             this.radioTest.Text = "測試區";
             this.radioTest.UseVisualStyleBackColor = true;
@@ -189,9 +191,10 @@
             // chkRemember
             // 
             this.chkRemember.AutoSize = true;
-            this.chkRemember.Location = new System.Drawing.Point(425, 183);
+            this.chkRemember.Location = new System.Drawing.Point(531, 229);
+            this.chkRemember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkRemember.Name = "chkRemember";
-            this.chkRemember.Size = new System.Drawing.Size(92, 24);
+            this.chkRemember.Size = new System.Drawing.Size(135, 34);
             this.chkRemember.TabIndex = 114;
             this.chkRemember.Text = "記住密碼";
             this.chkRemember.UseVisualStyleBackColor = true;
@@ -199,10 +202,10 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(544, 364);
+            this.ClientSize = new System.Drawing.Size(680, 455);
             this.ControlBox = false;
             this.Controls.Add(this.chkRemember);
             this.Controls.Add(this.radioTest);
@@ -218,7 +221,7 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
