@@ -680,9 +680,9 @@ namespace Price2
                 frmProofing.FormClosed += childForm_FormClosed;
                 frmProofing.StartPosition = FormStartPosition.CenterScreen;
 
-                frmProofing.Location = new Point(0, 55);
-                frmProofing.Width = this.Width - 25;
-                frmProofing.Height = this.Height - 80;
+                //frmProofing.Location = new Point(0, 55);
+                //frmProofing.Width = this.Width - 25;
+                //frmProofing.Height = this.Height - 80;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
                 {
@@ -721,9 +721,9 @@ namespace Price2
                 frmQuotation.FormClosed += childForm_FormClosed;
                 frmQuotation.StartPosition = FormStartPosition.CenterScreen;
 
-                frmQuotation.Location = new Point(0, 55);
-                frmQuotation.Width = this.Width - 25;
-                frmQuotation.Height = this.Height - 80;
+                //frmQuotation.Location = new Point(0, 55);
+                //frmQuotation.Width = this.Width - 25;
+                //frmQuotation.Height = this.Height - 80;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
                 {
@@ -762,9 +762,9 @@ namespace Price2
                 frmOrder.FormClosed += childForm_FormClosed;
                 frmOrder.StartPosition = FormStartPosition.CenterScreen;
 
-                frmOrder.Location = new Point(0, 55);
-                frmOrder.Width = this.Width - 25;
-                frmOrder.Height = this.Height - 80;
+                //frmOrder.Location = new Point(0, 55);
+                //frmOrder.Width = this.Width - 25;
+                //frmOrder.Height = this.Height - 80;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
                 {
