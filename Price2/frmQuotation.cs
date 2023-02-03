@@ -72,7 +72,7 @@ namespace Price2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-getData_Proofing" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-getData_Customer" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -95,76 +95,90 @@ namespace Price2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-btnProofing_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-btnQuotation_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void getData_Quotation()
         {
-            if (txtQuotationID.Text == "" || txtQuotationID.Text == "Q")
+            try
             {
-                return;
-            }
-            string strSQL = "";
-            DataTable dt = new DataTable();
-            strSQL = $@"select * from pdh where pdh_orderid = '{txtQuotationID.Text.Trim()}'";
-            dt = clsDB.sql_select_dt(strSQL);
-            if (dt.Rows.Count == 0)
-            {
-                strSQL = $@"select * from dyh where dyh_orderid = '{txtQuotationID.Text.Trim()}'";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
+                if (txtQuotationID.Text == "" || txtQuotationID.Text == "Q")
                 {
-                    MessageBox.Show("這個單號已被打樣單所用,請重新分配一個訂單號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                else
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select * from pdh where pdh_orderid = '{txtQuotationID.Text.Trim()}'";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count == 0)
                 {
-                    if (MessageBox.Show("並沒有找到該訂單資料,你希望創建一個新訂單資料嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    strSQL = $@"select * from dyh where dyh_orderid = '{txtQuotationID.Text.Trim()}'";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
                     {
+                        MessageBox.Show("這個單號已被打樣單所用,請重新分配一個訂單號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Cursor = Cursors.Default;//滑鼠還原預設
                         return;
                     }
                     else
                     {
-                        return;
+                        if (MessageBox.Show("並沒有找到該訂單資料,你希望創建一個新訂單資料嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            txtQuotationDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                            this.Cursor = Cursors.Default;//滑鼠還原預設
+                            return;
+                        }
+                        else
+                        {
+                            this.Cursor = Cursors.Default;//滑鼠還原預設
+                            return;
+                        }
                     }
                 }
-            }
-            else
-            {
-                txtQuotationID.Text = dt.Rows[0]["pdh_orderid"].ToString();
-                txtQuotationDate.Text = Convert.ToDateTime(dt.Rows[0]["pdh_orderdate"]).ToString("yyyy/MM/dd");
-
-                delivedate = dt.Rows[0]["pdh_delivedate"].ToString(); ;
-                customername = dt.Rows[0]["pdh_customername"].ToString(); ;
-                delivery = dt.Rows[0]["pdh_delivery"].ToString(); ;
-                shipmark = dt.Rows[0]["pdh_shipmark"].ToString(); ;
-                po = dt.Rows[0]["pdh_po"].ToString(); ;
-                zm1 = dt.Rows[0]["pdh_zm1"].ToString(); ;
-                zm2 = dt.Rows[0]["pdh_zm2"].ToString(); ;
-                zm3 = dt.Rows[0]["pdh_zm3"].ToString(); ;
-                cm = dt.Rows[0]["pdh_cm"].ToString(); ;
-
-
-                txtCustomer.Text = dt.Rows[0]["pdh_customer"].ToString();
-                txtSign.Text = dt.Rows[0]["pdh_sign"].ToString();
-                lblUser.Text = dt.Rows[0]["pdh_username"].ToString();
-                lblSaveDate.Text = dt.Rows[0]["pdh_adddate"].ToString();
-                strSQL = $@"select prd_assy 產品編號, prd_price 價格 from prd where prd_orderid = '{txtQuotationID.Text.Trim()}'";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
+                else
                 {
-                    //dgvData.DataSource = dt;
-                    //清除GRID
-                    dgvData.Rows.Clear();
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    txtQuotationID.Text = dt.Rows[0]["pdh_orderid"].ToString();
+                    txtQuotationDate.Text = Convert.ToDateTime(dt.Rows[0]["pdh_orderdate"]).ToString("yyyy/MM/dd");
+
+                    delivedate = dt.Rows[0]["pdh_delivedate"].ToString(); ;
+                    customername = dt.Rows[0]["pdh_customername"].ToString(); ;
+                    delivery = dt.Rows[0]["pdh_delivery"].ToString(); ;
+                    shipmark = dt.Rows[0]["pdh_shipmark"].ToString(); ;
+                    po = dt.Rows[0]["pdh_po"].ToString(); ;
+                    zm1 = dt.Rows[0]["pdh_zm1"].ToString(); ;
+                    zm2 = dt.Rows[0]["pdh_zm2"].ToString(); ;
+                    zm3 = dt.Rows[0]["pdh_zm3"].ToString(); ;
+                    cm = dt.Rows[0]["pdh_cm"].ToString(); ;
+
+
+                    txtCustomer.Text = dt.Rows[0]["pdh_customer"].ToString();
+                    txtSign.Text = dt.Rows[0]["pdh_sign"].ToString();
+                    lblUser.Text = dt.Rows[0]["pdh_username"].ToString();
+                    lblSaveDate.Text = dt.Rows[0]["pdh_adddate"].ToString();
+                    strSQL = $@"select prd_assy 產品編號, prd_price 價格 from prd where prd_orderid = '{txtQuotationID.Text.Trim()}'";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
                     {
-                        dgvData.Rows.Add();
-                        dgvData.Rows[i].Cells["產品編號"].Value = dt.Rows[i]["產品編號"].ToString();
-                        dgvData.Rows[i].Cells["價格"].Value = dt.Rows[i]["價格"].ToString();
+                        //dgvData.DataSource = dt;
+                        //清除GRID
+                        dgvData.Rows.Clear();
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            dgvData.Rows.Add();
+                            dgvData.Rows[i].Cells["產品編號"].Value = dt.Rows[i]["產品編號"].ToString();
+                            dgvData.Rows[i].Cells["價格"].Value = dt.Rows[i]["價格"].ToString();
+                        }
                     }
+                    getData_Customer();
                 }
-                getData_Customer();
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+            }
+            catch (Exception ex)
+            {
+                this.Cursor = Cursors.Default;//滑鼠還原預設
+                MessageBox.Show(this.Name + "-getData_Quotation" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

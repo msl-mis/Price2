@@ -4930,7 +4930,7 @@ namespace Price2
                 }
                 frmRefer frmRefer = new frmRefer();
                 frmRefer.rstrWho = "frmBOMPrice";
-
+                frmRefer.strID=txtID.Text;
                 frmRefer.ShowInTaskbar = false;    //圖示不顯示在工作列
                 frmRefer.ShowDialog();
                 if (checkOdi(txtID.Text).Substring(0, 1) != "0")

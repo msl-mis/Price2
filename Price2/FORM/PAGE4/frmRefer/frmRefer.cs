@@ -98,6 +98,9 @@ namespace Price2
                     btnDelete.Visible = false;
                     btnDelete.Visible = false;
                     btnSave.Enabled = false;
+                    txtID.Text = strID;
+                    getData();
+                    strID = "";
                 }
             }
             catch (Exception ex)

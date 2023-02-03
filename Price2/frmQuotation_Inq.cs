@@ -190,12 +190,12 @@ namespace Price2
                     MessageBox.Show("你沒有客戶報價單單號查詢刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (MessageBox.Show(this, "你確定要刪除該訂單嗎[" + dgvData.Rows[dgvData.CurrentRow.Index].Cells["打樣單號"].Value.ToString() + "]?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(this, "你確定要刪除該報價單嗎[" + dgvData.Rows[dgvData.CurrentRow.Index].Cells["報價單號"].Value.ToString() + "]?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string strSQL = "";
-                    strSQL = $@"delete pdh where pdh_orderid='{dgvData.Rows[dgvData.CurrentRow.Index].Cells["打樣單號"].Value.ToString()}' ";
+                    strSQL = $@"delete pdh where pdh_orderid='{dgvData.Rows[dgvData.CurrentRow.Index].Cells["報價單號"].Value.ToString()}' ";
                     clsDB.Execute(strSQL);
-                    strSQL = $@"delete prd where prd_orderid='{dgvData.Rows[dgvData.CurrentRow.Index].Cells["打樣單號"].Value.ToString()}' ";
+                    strSQL = $@"delete prd where prd_orderid='{dgvData.Rows[dgvData.CurrentRow.Index].Cells["報價單號"].Value.ToString()}' ";
                     clsDB.Execute(strSQL);
                     MessageBox.Show("刪除完畢!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnInq.PerformClick();

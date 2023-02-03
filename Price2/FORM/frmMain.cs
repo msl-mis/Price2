@@ -640,8 +640,8 @@ namespace Price2
                 frmCustomerFile.StartPosition = FormStartPosition.CenterScreen;
 
                 frmCustomerFile.Location = new Point(0, 55);
-                frmCustomerFile.Width = this.Width-25;
-                frmCustomerFile.Height = this.Height-80;
+                frmCustomerFile.Width = this.Width - 25;
+                frmCustomerFile.Height = this.Height - 80;
 
                 foreach (Control ctl in this.Controls.OfType<MdiClient>())
                 {
