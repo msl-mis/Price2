@@ -165,7 +165,7 @@
             this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
             this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(1047, 662);
+            this.groupBox.Size = new System.Drawing.Size(1125, 667);
             this.groupBox.TabIndex = 5;
             this.groupBox.TabStop = false;
             // 
@@ -174,13 +174,12 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Red;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(651, 338);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(556, 270);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 4F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(373, 4);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 3F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(307, 3);
             this.tableLayoutPanel1.TabIndex = 102;
             // 
             // panel3
@@ -198,20 +197,21 @@
             this.panel3.Controls.Add(this.btnInq);
             this.panel3.Controls.Add(this.btnClear);
             this.panel3.Controls.Add(this.btnCFZ);
-            this.panel3.Location = new System.Drawing.Point(631, 538);
+            this.panel3.Location = new System.Drawing.Point(556, 449);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(409, 92);
+            this.panel3.Size = new System.Drawing.Size(307, 75);
             this.panel3.TabIndex = 101;
             // 
             // btnDownLevel
             // 
             this.btnDownLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDownLevel.Location = new System.Drawing.Point(149, 2);
+            this.btnDownLevel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDownLevel.Location = new System.Drawing.Point(112, 2);
             this.btnDownLevel.Margin = new System.Windows.Forms.Padding(2);
             this.btnDownLevel.Name = "btnDownLevel";
             this.btnDownLevel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnDownLevel.Size = new System.Drawing.Size(140, 27);
+            this.btnDownLevel.Size = new System.Drawing.Size(105, 22);
             this.btnDownLevel.TabIndex = 103;
             this.btnDownLevel.Text = "下層材料單";
             this.btnDownLevel.UseVisualStyleBackColor = false;
@@ -221,10 +221,11 @@
             // chkMaterial
             // 
             this.chkMaterial.BackColor = System.Drawing.Color.Transparent;
-            this.chkMaterial.Location = new System.Drawing.Point(304, 2);
+            this.chkMaterial.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkMaterial.Location = new System.Drawing.Point(229, 2);
             this.chkMaterial.Margin = new System.Windows.Forms.Padding(2);
             this.chkMaterial.Name = "chkMaterial";
-            this.chkMaterial.Size = new System.Drawing.Size(76, 27);
+            this.chkMaterial.Size = new System.Drawing.Size(57, 22);
             this.chkMaterial.TabIndex = 102;
             this.chkMaterial.Text = "材料";
             this.chkMaterial.UseVisualStyleBackColor = false;
@@ -234,11 +235,12 @@
             // btnUpLevel
             // 
             this.btnUpLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnUpLevel.Location = new System.Drawing.Point(7, 2);
+            this.btnUpLevel.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnUpLevel.Location = new System.Drawing.Point(5, 2);
             this.btnUpLevel.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpLevel.Name = "btnUpLevel";
             this.btnUpLevel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnUpLevel.Size = new System.Drawing.Size(140, 27);
+            this.btnUpLevel.Size = new System.Drawing.Size(105, 22);
             this.btnUpLevel.TabIndex = 101;
             this.btnUpLevel.Text = "上層材料單";
             this.btnUpLevel.UseVisualStyleBackColor = false;
@@ -247,11 +249,12 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCopy.Location = new System.Drawing.Point(292, 33);
+            this.btnCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCopy.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCopy.Location = new System.Drawing.Point(251, 26);
             this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(69, 27);
+            this.btnCopy.Size = new System.Drawing.Size(50, 22);
             this.btnCopy.TabIndex = 100;
             this.btnCopy.Text = "複製";
             this.btnCopy.UseVisualStyleBackColor = false;
@@ -259,11 +262,12 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(292, 62);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClose.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(251, 50);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(69, 27);
+            this.btnClose.Size = new System.Drawing.Size(50, 22);
             this.btnClose.TabIndex = 99;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -271,12 +275,12 @@
             // 
             // btnHistory
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnHistory.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnHistory.Location = new System.Drawing.Point(149, 62);
+            this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnHistory.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnHistory.Location = new System.Drawing.Point(115, 50);
             this.btnHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(69, 27);
+            this.btnHistory.Size = new System.Drawing.Size(63, 22);
             this.btnHistory.TabIndex = 98;
             this.btnHistory.Text = "查價史";
             this.btnHistory.UseVisualStyleBackColor = false;
@@ -284,11 +288,12 @@
             // 
             // btnExport
             // 
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnExport.Location = new System.Drawing.Point(7, 62);
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnExport.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnExport.Location = new System.Drawing.Point(5, 50);
             this.btnExport.Margin = new System.Windows.Forms.Padding(2);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(69, 27);
+            this.btnExport.Size = new System.Drawing.Size(50, 22);
             this.btnExport.TabIndex = 97;
             this.btnExport.Text = "列印";
             this.btnExport.UseVisualStyleBackColor = false;
@@ -296,11 +301,12 @@
             // 
             // btnFind
             // 
-            this.btnFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnFind.Location = new System.Drawing.Point(220, 62);
+            this.btnFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnFind.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnFind.Location = new System.Drawing.Point(183, 50);
             this.btnFind.Margin = new System.Windows.Forms.Padding(2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(69, 27);
+            this.btnFind.Size = new System.Drawing.Size(63, 22);
             this.btnFind.TabIndex = 96;
             this.btnFind.Text = "尋找";
             this.btnFind.UseVisualStyleBackColor = false;
@@ -309,10 +315,11 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Yellow;
-            this.btnSave.Location = new System.Drawing.Point(78, 62);
+            this.btnSave.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSave.Location = new System.Drawing.Point(60, 50);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(69, 27);
+            this.btnSave.Size = new System.Drawing.Size(50, 22);
             this.btnSave.TabIndex = 95;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -320,11 +327,12 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnOrder.Location = new System.Drawing.Point(78, 33);
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnOrder.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOrder.Location = new System.Drawing.Point(60, 26);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(69, 27);
+            this.btnOrder.Size = new System.Drawing.Size(50, 22);
             this.btnOrder.TabIndex = 94;
             this.btnOrder.Text = "訂單";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -332,11 +340,12 @@
             // 
             // btnInq
             // 
-            this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq.Location = new System.Drawing.Point(7, 33);
+            this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnInq.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnInq.Location = new System.Drawing.Point(5, 26);
             this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(69, 27);
+            this.btnInq.Size = new System.Drawing.Size(50, 22);
             this.btnInq.TabIndex = 93;
             this.btnInq.Text = "搜尋";
             this.btnInq.UseVisualStyleBackColor = false;
@@ -344,11 +353,12 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnClear.Location = new System.Drawing.Point(149, 33);
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnClear.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClear.Location = new System.Drawing.Point(115, 26);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(69, 27);
+            this.btnClear.Size = new System.Drawing.Size(63, 22);
             this.btnClear.TabIndex = 92;
             this.btnClear.Text = "清除";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -356,12 +366,12 @@
             // 
             // btnCFZ
             // 
-            this.btnCFZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCFZ.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCFZ.Location = new System.Drawing.Point(220, 33);
+            this.btnCFZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnCFZ.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCFZ.Location = new System.Drawing.Point(183, 26);
             this.btnCFZ.Margin = new System.Windows.Forms.Padding(2);
             this.btnCFZ.Name = "btnCFZ";
-            this.btnCFZ.Size = new System.Drawing.Size(69, 27);
+            this.btnCFZ.Size = new System.Drawing.Size(63, 22);
             this.btnCFZ.TabIndex = 91;
             this.btnCFZ.Text = "參照法";
             this.btnCFZ.UseVisualStyleBackColor = false;
@@ -379,18 +389,19 @@
             this.panel1.Controls.Add(this.chkSpecial);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtQty);
-            this.panel1.Location = new System.Drawing.Point(631, 262);
+            this.panel1.Location = new System.Drawing.Point(556, 210);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 75);
+            this.panel1.Size = new System.Drawing.Size(307, 60);
             this.panel1.TabIndex = 99;
             // 
             // radioInch
             // 
-            this.radioInch.Location = new System.Drawing.Point(9, 52);
+            this.radioInch.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioInch.Location = new System.Drawing.Point(7, 42);
             this.radioInch.Margin = new System.Windows.Forms.Padding(2);
             this.radioInch.Name = "radioInch";
-            this.radioInch.Size = new System.Drawing.Size(71, 21);
+            this.radioInch.Size = new System.Drawing.Size(56, 17);
             this.radioInch.TabIndex = 79;
             this.radioInch.TabStop = true;
             this.radioInch.Text = "Inch";
@@ -398,10 +409,11 @@
             // 
             // radioMeter
             // 
-            this.radioMeter.Location = new System.Drawing.Point(9, 27);
+            this.radioMeter.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioMeter.Location = new System.Drawing.Point(7, 22);
             this.radioMeter.Margin = new System.Windows.Forms.Padding(2);
             this.radioMeter.Name = "radioMeter";
-            this.radioMeter.Size = new System.Drawing.Size(71, 21);
+            this.radioMeter.Size = new System.Drawing.Size(59, 17);
             this.radioMeter.TabIndex = 78;
             this.radioMeter.TabStop = true;
             this.radioMeter.Text = "Meter";
@@ -410,10 +422,11 @@
             // radioFeet
             // 
             this.radioFeet.Checked = true;
-            this.radioFeet.Location = new System.Drawing.Point(9, 2);
+            this.radioFeet.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioFeet.Location = new System.Drawing.Point(7, 2);
             this.radioFeet.Margin = new System.Windows.Forms.Padding(2);
             this.radioFeet.Name = "radioFeet";
-            this.radioFeet.Size = new System.Drawing.Size(71, 21);
+            this.radioFeet.Size = new System.Drawing.Size(53, 17);
             this.radioFeet.TabIndex = 77;
             this.radioFeet.TabStop = true;
             this.radioFeet.Text = "Feet";
@@ -422,10 +435,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(73, 42);
+            this.label1.Location = new System.Drawing.Point(55, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 28);
+            this.label1.Size = new System.Drawing.Size(53, 22);
             this.label1.TabIndex = 76;
             this.label1.Text = "成本";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -433,22 +446,24 @@
             // txtTBCost
             // 
             this.txtTBCost.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtTBCost.Location = new System.Drawing.Point(149, 42);
+            this.txtTBCost.Location = new System.Drawing.Point(112, 34);
             this.txtTBCost.Margin = new System.Windows.Forms.Padding(2);
             this.txtTBCost.Name = "txtTBCost";
             this.txtTBCost.ReadOnly = true;
-            this.txtTBCost.Size = new System.Drawing.Size(139, 31);
+            this.txtTBCost.Size = new System.Drawing.Size(105, 27);
             this.txtTBCost.TabIndex = 75;
             this.txtTBCost.Text = "0";
             this.txtTBCost.TextChanged += new System.EventHandler(this.txtCost_TextChanged);
             // 
             // btnGet
             // 
-            this.btnGet.BackColor = System.Drawing.Color.Lime;
-            this.btnGet.Location = new System.Drawing.Point(304, 8);
+            this.btnGet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnGet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGet.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnGet.Location = new System.Drawing.Point(228, 6);
             this.btnGet.Margin = new System.Windows.Forms.Padding(2);
             this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(69, 27);
+            this.btnGet.Size = new System.Drawing.Size(52, 22);
             this.btnGet.TabIndex = 74;
             this.btnGet.Text = "選取";
             this.btnGet.UseVisualStyleBackColor = false;
@@ -458,10 +473,11 @@
             // 
             this.chkSpecial.AutoCheck = false;
             this.chkSpecial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkSpecial.Location = new System.Drawing.Point(304, 42);
+            this.chkSpecial.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkSpecial.Location = new System.Drawing.Point(228, 34);
             this.chkSpecial.Margin = new System.Windows.Forms.Padding(2);
             this.chkSpecial.Name = "chkSpecial";
-            this.chkSpecial.Size = new System.Drawing.Size(76, 27);
+            this.chkSpecial.Size = new System.Drawing.Size(57, 22);
             this.chkSpecial.TabIndex = 73;
             this.chkSpecial.Text = "特選";
             this.chkSpecial.UseVisualStyleBackColor = false;
@@ -470,11 +486,11 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(73, 8);
+            this.label2.Location = new System.Drawing.Point(55, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label2.Size = new System.Drawing.Size(71, 28);
+            this.label2.Size = new System.Drawing.Size(53, 22);
             this.label2.TabIndex = 72;
             this.label2.Text = "數量";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -482,10 +498,10 @@
             // txtQty
             // 
             this.txtQty.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtQty.Location = new System.Drawing.Point(149, 8);
+            this.txtQty.Location = new System.Drawing.Point(112, 6);
             this.txtQty.Margin = new System.Windows.Forms.Padding(2);
             this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(139, 31);
+            this.txtQty.Size = new System.Drawing.Size(105, 27);
             this.txtQty.TabIndex = 71;
             this.txtQty.Text = "1";
             this.txtQty.Enter += new System.EventHandler(this.txtQty_Enter);
@@ -496,13 +512,14 @@
             // dgvData
             // 
             this.dgvData.AllowUserToOrderColumns = true;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -521,11 +538,11 @@
             this.asp_vnpcs,
             this.pri_um});
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(9, 262);
+            this.dgvData.Location = new System.Drawing.Point(7, 210);
             this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -535,7 +552,7 @@
             this.dgvData.RowHeadersWidth = 25;
             this.dgvData.RowTemplate.Height = 21;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(618, 367);
+            this.dgvData.Size = new System.Drawing.Size(547, 314);
             this.dgvData.TabIndex = 80;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
@@ -547,18 +564,18 @@
             // pri_part
             // 
             this.pri_part.DataPropertyName = "pri_part";
+            this.pri_part.FillWeight = 500F;
             this.pri_part.HeaderText = "材料名";
             this.pri_part.MinimumWidth = 6;
             this.pri_part.Name = "pri_part";
-            this.pri_part.Width = 300;
             // 
             // pri_tbprice
             // 
             this.pri_tbprice.DataPropertyName = "pri_tbprice";
+            this.pri_tbprice.FillWeight = 150F;
             this.pri_tbprice.HeaderText = "台幣單價";
             this.pri_tbprice.MinimumWidth = 6;
             this.pri_tbprice.Name = "pri_tbprice";
-            this.pri_tbprice.Width = 150;
             // 
             // pri_perqty
             // 
@@ -566,7 +583,6 @@
             this.pri_perqty.HeaderText = "數量";
             this.pri_perqty.MinimumWidth = 6;
             this.pri_perqty.Name = "pri_perqty";
-            this.pri_perqty.Width = 125;
             // 
             // pri_cost
             // 
@@ -574,15 +590,14 @@
             this.pri_cost.HeaderText = "金額";
             this.pri_cost.MinimumWidth = 6;
             this.pri_cost.Name = "pri_cost";
-            this.pri_cost.Width = 125;
             // 
             // ptx_chk
             // 
             this.ptx_chk.DataPropertyName = "ptx_chk";
+            this.ptx_chk.FillWeight = 40F;
             this.ptx_chk.HeaderText = "註";
             this.ptx_chk.MinimumWidth = 6;
             this.ptx_chk.Name = "ptx_chk";
-            this.ptx_chk.Width = 70;
             // 
             // pri_firstname
             // 
@@ -591,7 +606,6 @@
             this.pri_firstname.MinimumWidth = 8;
             this.pri_firstname.Name = "pri_firstname";
             this.pri_firstname.Visible = false;
-            this.pri_firstname.Width = 150;
             // 
             // pri_perqtycal
             // 
@@ -600,7 +614,6 @@
             this.pri_perqtycal.MinimumWidth = 8;
             this.pri_perqtycal.Name = "pri_perqtycal";
             this.pri_perqtycal.Visible = false;
-            this.pri_perqtycal.Width = 150;
             // 
             // asp_line
             // 
@@ -609,7 +622,6 @@
             this.asp_line.MinimumWidth = 8;
             this.asp_line.Name = "asp_line";
             this.asp_line.Visible = false;
-            this.asp_line.Width = 150;
             // 
             // asp_name
             // 
@@ -618,7 +630,6 @@
             this.asp_name.MinimumWidth = 8;
             this.asp_name.Name = "asp_name";
             this.asp_name.Visible = false;
-            this.asp_name.Width = 150;
             // 
             // asp_vnweight
             // 
@@ -626,7 +637,7 @@
             this.asp_vnweight.HeaderText = "na5_vnweight";
             this.asp_vnweight.MinimumWidth = 8;
             this.asp_vnweight.Name = "asp_vnweight";
-            this.asp_vnweight.Width = 150;
+            this.asp_vnweight.Visible = false;
             // 
             // asp_vnpcs
             // 
@@ -634,7 +645,7 @@
             this.asp_vnpcs.HeaderText = "na5_vnpcs";
             this.asp_vnpcs.MinimumWidth = 8;
             this.asp_vnpcs.Name = "asp_vnpcs";
-            this.asp_vnpcs.Width = 150;
+            this.asp_vnpcs.Visible = false;
             // 
             // pri_um
             // 
@@ -643,7 +654,6 @@
             this.pri_um.MinimumWidth = 8;
             this.pri_um.Name = "pri_um";
             this.pri_um.Visible = false;
-            this.pri_um.Width = 150;
             // 
             // dgvLevel_4
             // 
@@ -652,12 +662,12 @@
             this.dgvLevel_4.AllowUserToOrderColumns = true;
             this.dgvLevel_4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLevel_4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLevel_4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvLevel_4.BackgroundColor = System.Drawing.Color.Azure;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -666,7 +676,7 @@
             this.ap3_part,
             this.ap3_tbprice});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Azure;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -674,23 +684,23 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_4.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLevel_4.EnableHeadersVisualStyles = false;
-            this.dgvLevel_4.Location = new System.Drawing.Point(631, 8);
+            this.dgvLevel_4.Location = new System.Drawing.Point(473, 6);
             this.dgvLevel_4.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_4.Name = "dgvLevel_4";
             this.dgvLevel_4.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_4.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvLevel_4.RowHeadersWidth = 25;
             this.dgvLevel_4.RowTemplate.Height = 21;
             this.dgvLevel_4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_4.Size = new System.Drawing.Size(409, 250);
+            this.dgvLevel_4.Size = new System.Drawing.Size(390, 200);
             this.dgvLevel_4.TabIndex = 57;
             this.dgvLevel_4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_4_CellClick);
             this.dgvLevel_4.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_4_CellDoubleClick);
@@ -698,6 +708,7 @@
             // ap3_part
             // 
             this.ap3_part.DataPropertyName = "ap3_part";
+            this.ap3_part.FillWeight = 130F;
             this.ap3_part.HeaderText = "第四層名稱";
             this.ap3_part.MinimumWidth = 6;
             this.ap3_part.Name = "ap3_part";
@@ -706,6 +717,7 @@
             // ap3_tbprice
             // 
             this.ap3_tbprice.DataPropertyName = "ap3_tbprice";
+            this.ap3_tbprice.FillWeight = 47.71573F;
             this.ap3_tbprice.HeaderText = "台幣單價";
             this.ap3_tbprice.MinimumWidth = 6;
             this.ap3_tbprice.Name = "ap3_tbprice";
@@ -718,12 +730,12 @@
             this.dgvLevel_3.AllowUserToOrderColumns = true;
             this.dgvLevel_3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLevel_3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLevel_3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvLevel_3.BackgroundColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
@@ -731,7 +743,7 @@
             this.dgvLevel_3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ap2_part});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Honeydew;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -739,23 +751,23 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_3.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLevel_3.EnableHeadersVisualStyles = false;
-            this.dgvLevel_3.Location = new System.Drawing.Point(418, 8);
+            this.dgvLevel_3.Location = new System.Drawing.Point(314, 6);
             this.dgvLevel_3.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_3.Name = "dgvLevel_3";
             this.dgvLevel_3.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_3.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvLevel_3.RowHeadersWidth = 25;
             this.dgvLevel_3.RowTemplate.Height = 21;
             this.dgvLevel_3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_3.Size = new System.Drawing.Size(213, 250);
+            this.dgvLevel_3.Size = new System.Drawing.Size(160, 200);
             this.dgvLevel_3.TabIndex = 56;
             this.dgvLevel_3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_3_CellClick);
             // 
@@ -774,12 +786,12 @@
             this.dgvLevel_2.AllowUserToOrderColumns = true;
             this.dgvLevel_2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLevel_2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLevel_2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvLevel_2.BackgroundColor = System.Drawing.Color.OldLace;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
@@ -787,31 +799,31 @@
             this.dgvLevel_2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ap1_part});
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.OldLace;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Moccasin;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_2.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvLevel_2.EnableHeadersVisualStyles = false;
-            this.dgvLevel_2.Location = new System.Drawing.Point(204, 8);
+            this.dgvLevel_2.Location = new System.Drawing.Point(153, 6);
             this.dgvLevel_2.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_2.Name = "dgvLevel_2";
             this.dgvLevel_2.ReadOnly = true;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_2.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvLevel_2.RowHeadersWidth = 25;
             this.dgvLevel_2.RowTemplate.Height = 21;
             this.dgvLevel_2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_2.Size = new System.Drawing.Size(213, 250);
+            this.dgvLevel_2.Size = new System.Drawing.Size(160, 200);
             this.dgvLevel_2.TabIndex = 55;
             this.dgvLevel_2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_2_CellClick);
             // 
@@ -830,12 +842,12 @@
             this.dgvLevel_1.AllowUserToOrderColumns = true;
             this.dgvLevel_1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLevel_1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLevel_1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgvLevel_1.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle12.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
@@ -843,31 +855,31 @@
             this.dgvLevel_1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ap1_assy});
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_1.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvLevel_1.EnableHeadersVisualStyles = false;
-            this.dgvLevel_1.Location = new System.Drawing.Point(9, 8);
+            this.dgvLevel_1.Location = new System.Drawing.Point(7, 6);
             this.dgvLevel_1.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_1.Name = "dgvLevel_1";
             this.dgvLevel_1.ReadOnly = true;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle14.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvLevel_1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvLevel_1.RowHeadersWidth = 25;
             this.dgvLevel_1.RowTemplate.Height = 21;
             this.dgvLevel_1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_1.Size = new System.Drawing.Size(196, 250);
+            this.dgvLevel_1.Size = new System.Drawing.Size(147, 200);
             this.dgvLevel_1.TabIndex = 50;
             this.dgvLevel_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_1_CellClick);
             // 
@@ -909,28 +921,28 @@
             this.panel.Controls.Add(this.label7);
             this.panel.Controls.Add(this.label9);
             this.panel.Controls.Add(this.label8);
-            this.panel.Location = new System.Drawing.Point(631, 340);
+            this.panel.Location = new System.Drawing.Point(556, 274);
             this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(409, 198);
+            this.panel.Size = new System.Drawing.Size(307, 173);
             this.panel.TabIndex = 100;
             // 
             // txtVender
             // 
             this.txtVender.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtVender.Location = new System.Drawing.Point(309, 163);
+            this.txtVender.Location = new System.Drawing.Point(226, 123);
             this.txtVender.Margin = new System.Windows.Forms.Padding(2);
             this.txtVender.Name = "txtVender";
-            this.txtVender.Size = new System.Drawing.Size(64, 31);
+            this.txtVender.Size = new System.Drawing.Size(49, 27);
             this.txtVender.TabIndex = 127;
             // 
             // pnlName
             // 
             this.pnlName.Controls.Add(this.txtName);
-            this.pnlName.Location = new System.Drawing.Point(204, 68);
-            this.pnlName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlName.Location = new System.Drawing.Point(153, 54);
+            this.pnlName.Margin = new System.Windows.Forms.Padding(2);
             this.pnlName.Name = "pnlName";
-            this.pnlName.Size = new System.Drawing.Size(176, 28);
+            this.pnlName.Size = new System.Drawing.Size(132, 22);
             this.pnlName.TabIndex = 126;
             // 
             // txtName
@@ -940,7 +952,7 @@
             this.txtName.Location = new System.Drawing.Point(0, 0);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(176, 31);
+            this.txtName.Size = new System.Drawing.Size(132, 27);
             this.txtName.TabIndex = 107;
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
@@ -948,10 +960,10 @@
             // pnlID
             // 
             this.pnlID.Controls.Add(this.txtID);
-            this.pnlID.Location = new System.Drawing.Point(204, 35);
-            this.pnlID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlID.Location = new System.Drawing.Point(153, 28);
+            this.pnlID.Margin = new System.Windows.Forms.Padding(2);
             this.pnlID.Name = "pnlID";
-            this.pnlID.Size = new System.Drawing.Size(176, 28);
+            this.pnlID.Size = new System.Drawing.Size(132, 22);
             this.pnlID.TabIndex = 125;
             // 
             // txtID
@@ -961,7 +973,7 @@
             this.txtID.Location = new System.Drawing.Point(0, 0);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(176, 31);
+            this.txtID.Size = new System.Drawing.Size(132, 27);
             this.txtID.TabIndex = 105;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
@@ -970,42 +982,42 @@
             // 
             // lblCZF
             // 
-            this.lblCZF.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblCZF.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblCZF.ForeColor = System.Drawing.Color.Red;
-            this.lblCZF.Location = new System.Drawing.Point(58, 163);
+            this.lblCZF.Location = new System.Drawing.Point(47, 151);
             this.lblCZF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCZF.Name = "lblCZF";
-            this.lblCZF.Size = new System.Drawing.Size(133, 28);
+            this.lblCZF.Size = new System.Drawing.Size(100, 20);
             this.lblCZF.TabIndex = 124;
             this.lblCZF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtLength
             // 
             this.txtLength.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtLength.Location = new System.Drawing.Point(67, 68);
+            this.txtLength.Location = new System.Drawing.Point(50, 60);
             this.txtLength.Margin = new System.Windows.Forms.Padding(2);
             this.txtLength.Name = "txtLength";
-            this.txtLength.Size = new System.Drawing.Size(50, 31);
+            this.txtLength.Size = new System.Drawing.Size(38, 27);
             this.txtLength.TabIndex = 123;
             // 
             // label11
             // 
-            this.label11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(191, 132);
+            this.label11.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label11.Location = new System.Drawing.Point(144, 126);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(25, 28);
+            this.label11.Size = new System.Drawing.Size(19, 22);
             this.label11.TabIndex = 122;
             this.label11.Text = "%";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(191, 100);
+            this.label10.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.Location = new System.Drawing.Point(144, 93);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(25, 28);
+            this.label10.Size = new System.Drawing.Size(19, 22);
             this.label10.TabIndex = 121;
             this.label10.Text = "%";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1013,10 +1025,10 @@
             // txtQuote_Rate
             // 
             this.txtQuote_Rate.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtQuote_Rate.Location = new System.Drawing.Point(135, 131);
+            this.txtQuote_Rate.Location = new System.Drawing.Point(101, 123);
             this.txtQuote_Rate.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuote_Rate.Name = "txtQuote_Rate";
-            this.txtQuote_Rate.Size = new System.Drawing.Size(56, 31);
+            this.txtQuote_Rate.Size = new System.Drawing.Size(43, 27);
             this.txtQuote_Rate.TabIndex = 120;
             this.txtQuote_Rate.Text = "0";
             this.txtQuote_Rate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuote_Rate_KeyDown);
@@ -1025,21 +1037,21 @@
             // txtHopePrice_Rate
             // 
             this.txtHopePrice_Rate.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtHopePrice_Rate.Location = new System.Drawing.Point(135, 99);
+            this.txtHopePrice_Rate.Location = new System.Drawing.Point(101, 91);
             this.txtHopePrice_Rate.Margin = new System.Windows.Forms.Padding(2);
             this.txtHopePrice_Rate.Name = "txtHopePrice_Rate";
             this.txtHopePrice_Rate.ReadOnly = true;
-            this.txtHopePrice_Rate.Size = new System.Drawing.Size(56, 31);
+            this.txtHopePrice_Rate.Size = new System.Drawing.Size(43, 27);
             this.txtHopePrice_Rate.TabIndex = 119;
             this.txtHopePrice_Rate.Text = "0";
             // 
             // txtQuote
             // 
             this.txtQuote.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtQuote.Location = new System.Drawing.Point(67, 131);
+            this.txtQuote.Location = new System.Drawing.Point(50, 123);
             this.txtQuote.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuote.Name = "txtQuote";
-            this.txtQuote.Size = new System.Drawing.Size(64, 31);
+            this.txtQuote.Size = new System.Drawing.Size(49, 27);
             this.txtQuote.TabIndex = 117;
             this.txtQuote.Text = "0";
             this.txtQuote.Enter += new System.EventHandler(this.txtQuote_Enter);
@@ -1049,10 +1061,10 @@
             // txtHopePrice
             // 
             this.txtHopePrice.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtHopePrice.Location = new System.Drawing.Point(67, 99);
+            this.txtHopePrice.Location = new System.Drawing.Point(50, 91);
             this.txtHopePrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtHopePrice.Name = "txtHopePrice";
-            this.txtHopePrice.Size = new System.Drawing.Size(64, 31);
+            this.txtHopePrice.Size = new System.Drawing.Size(49, 27);
             this.txtHopePrice.TabIndex = 115;
             this.txtHopePrice.Text = "0";
             this.txtHopePrice.Enter += new System.EventHandler(this.txtHopePrice_Enter);
@@ -1064,10 +1076,11 @@
             this.chkLarge.AutoCheck = false;
             this.chkLarge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.chkLarge.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.chkLarge.Location = new System.Drawing.Point(220, 131);
+            this.chkLarge.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkLarge.Location = new System.Drawing.Point(165, 107);
             this.chkLarge.Margin = new System.Windows.Forms.Padding(2);
             this.chkLarge.Name = "chkLarge";
-            this.chkLarge.Size = new System.Drawing.Size(76, 27);
+            this.chkLarge.Size = new System.Drawing.Size(57, 22);
             this.chkLarge.TabIndex = 114;
             this.chkLarge.Text = "量大";
             this.chkLarge.UseVisualStyleBackColor = false;
@@ -1076,10 +1089,11 @@
             // chkOutsourcing
             // 
             this.chkOutsourcing.BackColor = System.Drawing.Color.Transparent;
-            this.chkOutsourcing.Location = new System.Drawing.Point(220, 163);
+            this.chkOutsourcing.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkOutsourcing.Location = new System.Drawing.Point(165, 129);
             this.chkOutsourcing.Margin = new System.Windows.Forms.Padding(2);
             this.chkOutsourcing.Name = "chkOutsourcing";
-            this.chkOutsourcing.Size = new System.Drawing.Size(76, 27);
+            this.chkOutsourcing.Size = new System.Drawing.Size(57, 22);
             this.chkOutsourcing.TabIndex = 113;
             this.chkOutsourcing.Text = "外購";
             this.chkOutsourcing.UseVisualStyleBackColor = false;
@@ -1088,10 +1102,11 @@
             // chkPower
             // 
             this.chkPower.BackColor = System.Drawing.Color.Transparent;
-            this.chkPower.Location = new System.Drawing.Point(304, 99);
+            this.chkPower.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkPower.Location = new System.Drawing.Point(228, 85);
             this.chkPower.Margin = new System.Windows.Forms.Padding(2);
             this.chkPower.Name = "chkPower";
-            this.chkPower.Size = new System.Drawing.Size(76, 27);
+            this.chkPower.Size = new System.Drawing.Size(57, 22);
             this.chkPower.TabIndex = 112;
             this.chkPower.Text = "電源";
             this.chkPower.UseVisualStyleBackColor = false;
@@ -1100,10 +1115,11 @@
             // chkCheck
             // 
             this.chkCheck.BackColor = System.Drawing.Color.Transparent;
-            this.chkCheck.Location = new System.Drawing.Point(220, 99);
+            this.chkCheck.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkCheck.Location = new System.Drawing.Point(165, 85);
             this.chkCheck.Margin = new System.Windows.Forms.Padding(2);
             this.chkCheck.Name = "chkCheck";
-            this.chkCheck.Size = new System.Drawing.Size(76, 27);
+            this.chkCheck.Size = new System.Drawing.Size(57, 22);
             this.chkCheck.TabIndex = 111;
             this.chkCheck.Text = "審核";
             this.chkCheck.UseVisualStyleBackColor = false;
@@ -1112,30 +1128,30 @@
             // txtCustomer
             // 
             this.txtCustomer.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCustomer.Location = new System.Drawing.Point(67, 36);
+            this.txtCustomer.Location = new System.Drawing.Point(50, 31);
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(50, 31);
+            this.txtCustomer.Size = new System.Drawing.Size(38, 27);
             this.txtCustomer.TabIndex = 108;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(135, 68);
+            this.label4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(101, 54);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 28);
+            this.label4.Size = new System.Drawing.Size(40, 22);
             this.label4.TabIndex = 107;
             this.label4.Text = "線路";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(135, 37);
+            this.label5.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(101, 30);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 28);
+            this.label5.Size = new System.Drawing.Size(40, 22);
             this.label5.TabIndex = 105;
             this.label5.Text = "客號";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1143,27 +1159,27 @@
             // cboCurrency
             // 
             this.cboCurrency.FormattingEnabled = true;
-            this.cboCurrency.ItemHeight = 20;
+            this.cboCurrency.ItemHeight = 16;
             this.cboCurrency.Items.AddRange(new object[] {
             "RMB",
             "US$",
             "HK$",
             "NT$",
             "GBP"});
-            this.cboCurrency.Location = new System.Drawing.Point(67, 5);
+            this.cboCurrency.Location = new System.Drawing.Point(50, 4);
             this.cboCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.cboCurrency.Name = "cboCurrency";
-            this.cboCurrency.Size = new System.Drawing.Size(64, 28);
+            this.cboCurrency.Size = new System.Drawing.Size(49, 24);
             this.cboCurrency.TabIndex = 103;
             this.cboCurrency.Text = "US$";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(7, 5);
+            this.label3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(5, 4);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 28);
+            this.label3.Size = new System.Drawing.Size(40, 22);
             this.label3.TabIndex = 102;
             this.label3.Text = "成本";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1171,11 +1187,11 @@
             // txtCost
             // 
             this.txtCost.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCost.Location = new System.Drawing.Point(135, 4);
+            this.txtCost.Location = new System.Drawing.Point(101, 3);
             this.txtCost.Margin = new System.Windows.Forms.Padding(2);
             this.txtCost.Name = "txtCost";
             this.txtCost.ReadOnly = true;
-            this.txtCost.Size = new System.Drawing.Size(64, 31);
+            this.txtCost.Size = new System.Drawing.Size(49, 27);
             this.txtCost.TabIndex = 101;
             this.txtCost.Text = "0";
             // 
@@ -1183,10 +1199,11 @@
             // 
             this.chkNote.AutoCheck = false;
             this.chkNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkNote.Location = new System.Drawing.Point(220, 4);
+            this.chkNote.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkNote.Location = new System.Drawing.Point(165, 3);
             this.chkNote.Margin = new System.Windows.Forms.Padding(2);
             this.chkNote.Name = "chkNote";
-            this.chkNote.Size = new System.Drawing.Size(76, 27);
+            this.chkNote.Size = new System.Drawing.Size(57, 22);
             this.chkNote.TabIndex = 100;
             this.chkNote.Text = "備註";
             this.chkNote.UseVisualStyleBackColor = false;
@@ -1196,10 +1213,11 @@
             // 
             this.chkClassify.AutoCheck = false;
             this.chkClassify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.chkClassify.Location = new System.Drawing.Point(304, 4);
+            this.chkClassify.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkClassify.Location = new System.Drawing.Point(228, 3);
             this.chkClassify.Margin = new System.Windows.Forms.Padding(2);
             this.chkClassify.Name = "chkClassify";
-            this.chkClassify.Size = new System.Drawing.Size(76, 27);
+            this.chkClassify.Size = new System.Drawing.Size(57, 22);
             this.chkClassify.TabIndex = 99;
             this.chkClassify.Text = "分類";
             this.chkClassify.UseVisualStyleBackColor = false;
@@ -1207,44 +1225,44 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(7, 37);
+            this.label6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(5, 33);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 28);
+            this.label6.Size = new System.Drawing.Size(40, 22);
             this.label6.TabIndex = 109;
             this.label6.Text = "客戶";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(7, 68);
+            this.label7.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(5, 62);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 28);
+            this.label7.Size = new System.Drawing.Size(40, 22);
             this.label7.TabIndex = 110;
             this.label7.Text = "線長";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(7, 132);
+            this.label9.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(5, 125);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 28);
+            this.label9.Size = new System.Drawing.Size(40, 22);
             this.label9.TabIndex = 118;
             this.label9.Text = "報價";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(7, 100);
+            this.label8.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.Location = new System.Drawing.Point(4, 88);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 33);
+            this.label8.Size = new System.Drawing.Size(42, 32);
             this.label8.TabIndex = 116;
             this.label8.Text = "希望買價";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1260,33 +1278,33 @@
             this.panel_M.Controls.Add(this.label15);
             this.panel_M.Controls.Add(this.cboUnit);
             this.panel_M.Controls.Add(this.label16);
-            this.panel_M.Location = new System.Drawing.Point(631, 340);
+            this.panel_M.Location = new System.Drawing.Point(556, 272);
             this.panel_M.Margin = new System.Windows.Forms.Padding(2);
             this.panel_M.Name = "panel_M";
-            this.panel_M.Size = new System.Drawing.Size(409, 198);
+            this.panel_M.Size = new System.Drawing.Size(307, 174);
             this.panel_M.TabIndex = 103;
             this.panel_M.Visible = false;
             // 
             // pnlName_M
             // 
-            this.pnlName_M.Location = new System.Drawing.Point(95, 68);
-            this.pnlName_M.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlName_M.Location = new System.Drawing.Point(71, 54);
+            this.pnlName_M.Margin = new System.Windows.Forms.Padding(2);
             this.pnlName_M.Name = "pnlName_M";
-            this.pnlName_M.Size = new System.Drawing.Size(242, 28);
+            this.pnlName_M.Size = new System.Drawing.Size(182, 22);
             this.pnlName_M.TabIndex = 111;
             // 
             // pnlID_M
             // 
-            this.pnlID_M.Location = new System.Drawing.Point(95, 21);
-            this.pnlID_M.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlID_M.Location = new System.Drawing.Point(71, 17);
+            this.pnlID_M.Margin = new System.Windows.Forms.Padding(2);
             this.pnlID_M.Name = "pnlID_M";
-            this.pnlID_M.Size = new System.Drawing.Size(242, 28);
+            this.pnlID_M.Size = new System.Drawing.Size(182, 22);
             this.pnlID_M.TabIndex = 110;
             // 
             // cboCostMode
             // 
             this.cboCostMode.FormattingEnabled = true;
-            this.cboCostMode.ItemHeight = 20;
+            this.cboCostMode.ItemHeight = 16;
             this.cboCostMode.Items.AddRange(new object[] {
             "一般成本",
             "膠粒成本",
@@ -1295,20 +1313,20 @@
             "鋁箔附加",
             "銅箔附加",
             "平均成本"});
-            this.cboCostMode.Location = new System.Drawing.Point(224, 140);
+            this.cboCostMode.Location = new System.Drawing.Point(168, 112);
             this.cboCostMode.Margin = new System.Windows.Forms.Padding(2);
             this.cboCostMode.Name = "cboCostMode";
-            this.cboCostMode.Size = new System.Drawing.Size(111, 28);
+            this.cboCostMode.Size = new System.Drawing.Size(84, 24);
             this.cboCostMode.TabIndex = 109;
             this.cboCostMode.Leave += new System.EventHandler(this.cboCostMode_Leave);
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(224, 110);
+            this.label12.Location = new System.Drawing.Point(168, 88);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(111, 28);
+            this.label12.Size = new System.Drawing.Size(83, 22);
             this.label12.TabIndex = 108;
             this.label12.Text = "成本模式";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1316,10 +1334,10 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label14.Location = new System.Drawing.Point(18, 68);
+            this.label14.Location = new System.Drawing.Point(14, 54);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 28);
+            this.label14.Size = new System.Drawing.Size(53, 22);
             this.label14.TabIndex = 107;
             this.label14.Text = "品號";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1327,10 +1345,10 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label15.Location = new System.Drawing.Point(18, 21);
+            this.label15.Location = new System.Drawing.Point(14, 17);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 28);
+            this.label15.Size = new System.Drawing.Size(53, 22);
             this.label15.TabIndex = 105;
             this.label15.Text = "材料名";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1338,7 +1356,7 @@
             // cboUnit
             // 
             this.cboUnit.FormattingEnabled = true;
-            this.cboUnit.ItemHeight = 20;
+            this.cboUnit.ItemHeight = 16;
             this.cboUnit.Items.AddRange(new object[] {
             "Meter",
             "Feet",
@@ -1347,31 +1365,31 @@
             "MM",
             "CM",
             "PC"});
-            this.cboUnit.Location = new System.Drawing.Point(95, 140);
+            this.cboUnit.Location = new System.Drawing.Point(71, 112);
             this.cboUnit.Margin = new System.Windows.Forms.Padding(2);
             this.cboUnit.Name = "cboUnit";
-            this.cboUnit.Size = new System.Drawing.Size(111, 28);
+            this.cboUnit.Size = new System.Drawing.Size(84, 24);
             this.cboUnit.TabIndex = 103;
             this.cboUnit.Leave += new System.EventHandler(this.cboUnit_Leave);
             // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label16.Location = new System.Drawing.Point(95, 110);
+            this.label16.Location = new System.Drawing.Point(71, 88);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(111, 28);
+            this.label16.Size = new System.Drawing.Size(83, 22);
             this.label16.TabIndex = 102;
             this.label16.Text = "單位";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmBOMPrice
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1047, 662);
+            this.ClientSize = new System.Drawing.Size(1125, 667);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1459,8 +1477,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ap1_part;
         private System.Windows.Forms.DataGridViewTextBoxColumn ap1_assy;
         private System.Windows.Forms.DataGridViewTextBoxColumn ap2_part;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ap3_part;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ap3_tbprice;
         private System.Windows.Forms.Panel panel_M;
         private System.Windows.Forms.ComboBox cboCostMode;
         private System.Windows.Forms.Label label12;
@@ -1477,6 +1493,8 @@
         private System.Windows.Forms.Panel pnlName_M;
         private System.Windows.Forms.Panel pnlID_M;
         private System.Windows.Forms.TextBox txtVender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ap3_part;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ap3_tbprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_part;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_tbprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_perqty;

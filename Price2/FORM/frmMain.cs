@@ -93,7 +93,8 @@ namespace Price2
 
                 //tabMain.ItemSize= New Size(20, 100)
                 tabMain.SizeMode = TabSizeMode.Fixed;
-                tabMain.ItemSize = new Size((tabMain.Width-6)/6,0);
+                tabMain.ItemSize = new Size((tabMain.Width - 6) / 6, 0);
+                tabMain.Location=new Point((gbMain.Width-tabMain.Width)/2, (gbMain.Height - tabMain.Height) / 2);
             }
             catch (Exception ex)
             {
@@ -1125,6 +1126,10 @@ namespace Price2
             gb3_8.Visible = true;
         }
 
-        
+        private void gb1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

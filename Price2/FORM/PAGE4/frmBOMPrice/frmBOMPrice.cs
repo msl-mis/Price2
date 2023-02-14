@@ -175,20 +175,24 @@ namespace Price2
             //加入第三層名稱
             try
             {
-                //先將後面二層清除
-                clear_dgvLevel_3();
-                clear_dgvLevel_4();
-                string strSQL = "";
-                DataTable dt = new DataTable();
-                strSQL = $@"select ap2_part
+                if (e.RowIndex >= 0)
+                {
+                    //先將後面二層清除
+                    clear_dgvLevel_3();
+                    clear_dgvLevel_4();
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"select ap2_part
                             from   ap2
                             where  ap2_assy = '{dgvLevel_2.Rows[e.RowIndex].Cells["ap1_part"].Value.ToString()}'
                             order  by ap2_part ";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    dgvLevel_3.DataSource = dt;
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        dgvLevel_3.DataSource = dt;
+                    }
                 }
+                    
             }
             catch (Exception ex)
             {
@@ -201,19 +205,23 @@ namespace Price2
             //加入第四層名稱
             try
             {
-                //先將後面一層清除
-                clear_dgvLevel_4();
-                string strSQL = "";
-                DataTable dt = new DataTable();
-                strSQL = $@"select ap3_part,
+                if (e.RowIndex >= 0)
+                {
+                    //先將後面一層清除
+                    clear_dgvLevel_4();
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"select ap3_part,
                                    ap3_tbprice 
                             from   ap3
                             where  ap3_assy = '{dgvLevel_3.Rows[e.RowIndex].Cells["ap2_part"].Value.ToString()}' ";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    dgvLevel_4.DataSource = dt;
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        dgvLevel_4.DataSource = dt;
+                    }
                 }
+                    
             }
             catch (Exception ex)
             {
@@ -226,7 +234,11 @@ namespace Price2
             //紀錄第四層材料名稱
             try
             {
-                strLevel4_ID = dgvLevel_4.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
+                if (e.RowIndex >= 0)
+                {
+                    strLevel4_ID = dgvLevel_4.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
+                }
+                    
             }
             catch (Exception ex)
             {
@@ -2197,8 +2209,13 @@ namespace Price2
             //顯示目前點選第幾項
             try
             {
-                //if (string.IsNullOrEmpty( dgvData.Rows[e.RowIndex].Cells["pri_part"].Value.ToString())==false)
-                if (dgvData.Rows.Count == 1 || e.RowIndex == dgvData.Rows.Count - 1)    //空白GRID防呆不動作
+
+                if (e.RowIndex == -1)
+                {
+                    return;
+                }
+                    //if (string.IsNullOrEmpty( dgvData.Rows[e.RowIndex].Cells["pri_part"].Value.ToString())==false)
+                    if (dgvData.Rows.Count == 1 || e.RowIndex == dgvData.Rows.Count - 1)    //空白GRID防呆不動作
                 {
                     return;
                 }
@@ -2427,9 +2444,10 @@ namespace Price2
                                 string[] tmp = { "Y" + txtID.Text, txtName.Text };
                                 listID.Add(tmp);
                             }
-                            txtID.Text = dgvData.Rows[e.RowIndex].Cells[0].Value.ToString();
+                            string tmpID = dgvData.Rows[e.RowIndex].Cells[0].Value.ToString();
                             txtName.Text = "";
                             chkMaterial.Checked = true;
+                            txtID.Text = tmpID;
                             GetData();
                         }
                     }
@@ -4194,7 +4212,7 @@ namespace Price2
                 dgvData.Rows[intRow].Cells["pri_tbprice"].Value = dgvLevel_4.Rows[dgvLevel_4.CurrentCell.RowIndex].Cells["ap3_tbprice"].Value.ToString();
                 dgvData.Rows[intRow].Cells["pri_perqty"].Value = (Convert.ToDouble(txtQty.Text) * tper).ToString("0.######");
                 dgvData.Rows[intRow].Cells["pri_firstname"].Value = dgvLevel_1.Rows[dgvLevel_1.CurrentCell.RowIndex].Cells["ap1_assy"].Value.ToString();
-
+                //dgvData.Rows[intRow].Cells["pri_cost"].Value = dgvLevel_4.Rows[dgvLevel_4.CurrentCell.RowIndex].Cells["ap3_tbprice"].Value.ToString();
                 //檢查材料是否有越南運費計重註記
                 strSQL = $@"select asp_line,isnull(asp_name,'') 'asp_name',asp_vnweight,asp_vnpcs,asp_um from asp where asp_id='{dgvData.Rows[intRow].Cells["pri_part"].Value.ToString()}'";
                 dt = clsDB.sql_select_dt(strSQL);
@@ -4287,11 +4305,11 @@ namespace Price2
                         //包裝紙箱計算是以單價除以數量
                         if (dgvData.Rows[intRow].Cells["pri_part"].Value.ToString().Substring(dgvData.Rows[intRow].Cells["pri_part"].Value.ToString().Length - 1, 1) == "才")
                         {
-                            dgvData.Rows[intRow].Cells["pri_cost"].Value = (Convert.ToDouble(dgvData.Rows[intRow].Cells["pri_tbprice"].Value)/(Convert.ToDouble(txtQuote.Text) * tper ) ).ToString("0.######");
+                            dgvData.Rows[intRow].Cells["pri_cost"].Value = (Convert.ToDouble(dgvData.Rows[intRow].Cells["pri_tbprice"].Value)/(Convert.ToDouble(txtQty.Text) * tper ) ).ToString("0.######");
                         }
                         else
                         {
-                            dgvData.Rows[intRow].Cells["pri_cost"].Value = (Convert.ToDouble(dgvData.Rows[intRow].Cells["pri_tbprice"].Value) * (Convert.ToDouble(txtQuote.Text) * tper)).ToString("0.######");
+                            dgvData.Rows[intRow].Cells["pri_cost"].Value = (Convert.ToDouble(dgvData.Rows[intRow].Cells["pri_tbprice"].Value) * (Convert.ToDouble(txtQty.Text) * tper)).ToString("0.######");
                         }
                     }
                     
