@@ -91,7 +91,7 @@ namespace Price2
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         dgvData_R.Rows.Add();
-                        dgvData_R.Rows[i].Cells["備註代碼"].Value = dt.Rows[i]["備註代碼"].ToString();
+                        dgvData_R.Rows[i].Cells["備註代碼R"].Value = dt.Rows[i]["備註代碼"].ToString();
                     }
                 }
                 //取得報價單臨時備註

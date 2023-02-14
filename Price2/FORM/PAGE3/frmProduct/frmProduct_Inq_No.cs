@@ -78,21 +78,22 @@ namespace Price2
             if (dt.Rows.Count > 0)
             {
                 dgvData.DataSource = dt;
+                #region 計算57和304價格相差比率;目前沒有304所以沒用
                 //計算57和304價格相差比率
                 double dblVen57 = 0;
                 double dblVen304 = 0;
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if (dt.Rows[i]["廠商"].ToString()=="57")
+                    if (dt.Rows[i]["廠商"].ToString() == "57")
                     {
-                        if(dt.Rows[i]["單位"].ToString().Substring(0,1)=="M")
+                        if (dt.Rows[i]["單位"].ToString().Substring(0, 1) == "M")
                         {
                             dblVen57 = Convert.ToDouble(dt.Rows[i]["最新價格"].ToString()) / 3.28;   //單位轉換=>米->呎
                         }
                         else
                         {
-                            dblVen57 = Convert.ToDouble( dt.Rows[i]["最新價格"].ToString());
-                        }  
+                            dblVen57 = Convert.ToDouble(dt.Rows[i]["最新價格"].ToString());
+                        }
                     }
                     if (dt.Rows[i]["廠商"].ToString() == "304")
                     {
@@ -106,13 +107,13 @@ namespace Price2
                         }
                     }
                 }
-                if(dblVen57 > 0 && dblVen304 > 0)
+                if (dblVen57 > 0 && dblVen304 > 0)
                 {
-                    if(dblVen304 > dblVen57)
+                    if (dblVen304 > dblVen57)
                     {
                         lblPriceDiff.Text = "價格相差比率: " + ((dblVen304 - dblVen57) / dblVen57 * 100).ToString("0.##") + "%";
                     }
-                    else if(dblVen57 > dblVen304)
+                    else if (dblVen57 > dblVen304)
                     {
                         lblPriceDiff.Text = "價格相差比率: " + ((dblVen57 - dblVen304) / dblVen304 * 100).ToString("0.##") + "%";
                     }
@@ -120,7 +121,8 @@ namespace Price2
                     {
                         lblPriceDiff.Text = "價格相差比率: 0%";
                     }
-                }
+                } 
+                #endregion
             }
             else
             {

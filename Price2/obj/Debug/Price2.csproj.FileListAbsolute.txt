@@ -397,3 +397,5 @@ D:\Price2\Price2\obj\Debug\Price2.frmQuotation_Inq.resources
 D:\Price2\Price2\obj\Debug\Price2.frmQuotation_Note.resources
 D:\Price2\Price2\bin\Debug\SunnyUI.Common.dll
 D:\Price2\Price2\bin\Debug\SunnyUI.dll
+D:\Source Code\Price2\Price2\bin\Debug\SunnyUI.Common.dll
+D:\Source Code\Price2\Price2\bin\Debug\SunnyUI.dll
