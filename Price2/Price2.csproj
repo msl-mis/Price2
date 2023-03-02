@@ -113,34 +113,88 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmOrder_Inq.cs">
+    <Compile Include="frmPriceSetting_Others.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrder_Inq.Designer.cs">
-      <DependentUpon>frmOrder_Inq.cs</DependentUpon>
+    <Compile Include="frmPriceSetting_Others.Designer.cs">
+      <DependentUpon>frmPriceSetting_Others.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOrder.cs">
+    <Compile Include="frmPriceSetting_Copper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrder.Designer.cs">
+    <Compile Include="frmPriceSetting_Copper.Designer.cs">
+      <DependentUpon>frmPriceSetting_Copper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModify_CZF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModify_CZF.Designer.cs">
+      <DependentUpon>frmModify_CZF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReName_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReName_Material.Designer.cs">
+      <DependentUpon>frmReName_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmReName_Quotation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmReName_Quotation.Designer.cs">
+      <DependentUpon>frmReName_Quotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmInq_Material_Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmInq_Material_Status.Designer.cs">
+      <DependentUpon>frmInq_Material_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmInq_Material_Detial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmInq_Material_Detial.Designer.cs">
+      <DependentUpon>frmInq_Material_Detial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProofingFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProofingFile.Designer.cs">
+      <DependentUpon>frmProofingFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder.designer.cs">
       <DependentUpon>frmOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuotation_Note.cs">
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Complaint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuotation_Note.Designer.cs">
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Complaint.designer.cs">
+      <DependentUpon>frmOrder_Complaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq.Designer.cs">
+      <DependentUpon>frmOrder_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Quotation\frmQuotation_Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Quotation\frmQuotation_Note.Designer.cs">
       <DependentUpon>frmQuotation_Note.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuotation_Inq.cs">
+    <Compile Include="FORM\PAGE4\Quotation\frmQuotation_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuotation_Inq.Designer.cs">
+    <Compile Include="FORM\PAGE4\Quotation\frmQuotation_Inq.Designer.cs">
       <DependentUpon>frmQuotation_Inq.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuotation.cs">
+    <Compile Include="FORM\PAGE4\Quotation\frmQuotation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuotation.Designer.cs">
+    <Compile Include="FORM\PAGE4\Quotation\frmQuotation.Designer.cs">
       <DependentUpon>frmQuotation.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE4\frmProofing\frmProofing_CZF_Product_Inq.cs">
@@ -467,6 +521,48 @@
     <Compile Include="FORM\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Complaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Complaint.designer.cs">
+      <DependentUpon>frmOrder_Inq_Complaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Modify.designer.cs">
+      <DependentUpon>frmOrder_Inq_Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Order.designer.cs">
+      <DependentUpon>frmOrder_Inq_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Order_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Inq_Order_P.designer.cs">
+      <DependentUpon>frmOrder_Inq_Order_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_Note.designer.cs">
+      <DependentUpon>frmOrder_Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_OtherPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_OtherPay.designer.cs">
+      <DependentUpon>frmOrder_OtherPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_RefreshPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\Order\frmOrder_RefreshPrice.designer.cs">
+      <DependentUpon>frmOrder_RefreshPrice.cs</DependentUpon>
+    </Compile>
     <Compile Include="PriceDataSet.cs">
       <DependentUpon>PriceDataSet.xsd</DependentUpon>
     </Compile>
@@ -483,7 +579,32 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="frmOrder_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmInq_Material_Status.resx">
+      <DependentUpon>frmInq_Material_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmReName_Quotation.resx">
+      <DependentUpon>frmReName_Quotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModify_CZF.resx">
+      <DependentUpon>frmModify_CZF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPriceSetting_Copper.resx">
+      <DependentUpon>frmPriceSetting_Copper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPriceSetting_Others.resx">
+      <DependentUpon>frmPriceSetting_Others.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReName_Material.resx">
+      <DependentUpon>frmReName_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\bomuse.rdlc" />
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Complaint.resx">
+      <DependentUpon>frmOrder_Complaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Inq.resx">
       <DependentUpon>frmOrder_Inq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Class.resx">
@@ -651,18 +772,49 @@
     <EmbeddedResource Include="FORM\PAGE4\frmProofing\frmProofing_Note_Manage.resx">
       <DependentUpon>frmProofing_Note_Manage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOrder.resx">
-      <DependentUpon>frmOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmQuotation.resx">
+    <EmbeddedResource Include="FORM\PAGE4\Quotation\frmQuotation.resx">
       <DependentUpon>frmQuotation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuotation_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE4\Quotation\frmQuotation_Inq.resx">
       <DependentUpon>frmQuotation_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuotation_Note.resx">
+    <EmbeddedResource Include="FORM\PAGE4\Quotation\frmQuotation_Note.resx">
       <DependentUpon>frmQuotation_Note.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Inq_Complaint.resx">
+      <DependentUpon>frmOrder_Inq_Complaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Inq_Modify.resx">
+      <DependentUpon>frmOrder_Inq_Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Inq_Order.resx">
+      <DependentUpon>frmOrder_Inq_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Inq_Order_P.resx">
+      <DependentUpon>frmOrder_Inq_Order_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_Note.resx">
+      <DependentUpon>frmOrder_Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_OtherPay.resx">
+      <DependentUpon>frmOrder_OtherPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_RefreshPrice.resx">
+      <DependentUpon>frmOrder_RefreshPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmInq_Material_Detial.resx">
+      <DependentUpon>frmInq_Material_Detial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmProofingFile.resx">
+      <DependentUpon>frmProofingFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\pincnymsl.rdlc" />
+    <EmbeddedResource Include="RDLC\pinvoice.rdlc" />
+    <EmbeddedResource Include="RDLC\pinvoicecb.rdlc" />
+    <EmbeddedResource Include="RDLC\pinvoicecbi.rdlc" />
+    <EmbeddedResource Include="RDLC\pinvoicei.rdlc" />
+    <EmbeddedResource Include="RDLC\piother.rdlc" />
+    <EmbeddedResource Include="RDLC\piotheri.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -671,6 +823,18 @@
     <EmbeddedResource Include="RDLC\bomlist.rdlc" />
     <EmbeddedResource Include="RDLC\proofing.rdlc" />
     <EmbeddedResource Include="RDLC\quotation.rdlc" />
+    <EmbeddedResource Include="RDLC\workod.rdlc" />
+    <EmbeddedResource Include="RDLC\workoda.rdlc" />
+    <EmbeddedResource Include="RDLC\workodf.rdlc" />
+    <EmbeddedResource Include="RDLC\workodfa.rdlc" />
+    <EmbeddedResource Include="RDLC\workodgc.rdlc" />
+    <EmbeddedResource Include="RDLC\workodgca.rdlc" />
+    <EmbeddedResource Include="RDLC\workodgp.rdlc" />
+    <EmbeddedResource Include="RDLC\workodgpa.rdlc" />
+    <EmbeddedResource Include="RDLC\workodp.rdlc" />
+    <EmbeddedResource Include="RDLC\workodpa.rdlc" />
+    <EmbeddedResource Include="RDLC\workods.rdlc" />
+    <EmbeddedResource Include="RDLC\workodsa.rdlc" />
     <None Include="packages.config" />
     <None Include="Price2_TemporaryKey.pfx" />
     <None Include="PriceDataSet.xsc">

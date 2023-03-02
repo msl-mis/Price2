@@ -399,3 +399,18 @@ D:\Price2\Price2\bin\Debug\SunnyUI.Common.dll
 D:\Price2\Price2\bin\Debug\SunnyUI.dll
 D:\Source Code\Price2\Price2\bin\Debug\SunnyUI.Common.dll
 D:\Source Code\Price2\Price2\bin\Debug\SunnyUI.dll
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Complaint.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Complaint.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Modify.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Order.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Order_P.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Note.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_OtherPay.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_RefreshPrice.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProofingFile.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmInq_Material_Detial.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmInq_Material_Status.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmReName_Quotation.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmReName_Material.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmModify_CZF.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPriceSetting_Copper.resources

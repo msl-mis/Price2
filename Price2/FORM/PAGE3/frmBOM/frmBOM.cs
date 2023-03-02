@@ -14,6 +14,7 @@ namespace Price2
     {
         public static Boolean blnHighlight; //判斷是否唯讀
         public static Boolean blnInquery; //判斷是否查詢
+        public static Boolean blnInq_Material; //判斷是否查材料名使用情形傳來(frmInq_Material_Status)
         string strUpd01="";    //第一層上傳字串
         Boolean blnUpdchk1=false; //檢查第一層上資料是否有被修改
         Boolean blnDgv1=false;  //資料載入完成
@@ -54,6 +55,27 @@ namespace Price2
                     
                 }
                 else if(blnInquery)
+                {
+                    btnAdd.Visible = false;
+                    btnDelete.Visible = false;
+                    btnModify_L1.Visible = false;
+                    btnModify_L2.Visible = false;
+                    btnModify_L3.Visible = false;
+                    label3.Visible = false;
+                    label4.Visible = false;
+                    label5.Visible = false;
+                    label6.Visible = false;
+                    label7.Visible = false;
+                    txtID.Visible = false;
+                    txtPurprice.Visible = false;
+                    txtVendorid.Visible = false;
+                    txtCurrency.Visible = false;
+                    txtTbprice.Visible = false;
+                    this.Text = "查詢BOM產品結構資料";
+                    lblHighlight.Visible = false;
+                    btnTrackChanges.Visible = false;
+                }
+                else if (blnInq_Material)
                 {
                     btnAdd.Visible = false;
                     btnDelete.Visible = false;
@@ -249,6 +271,12 @@ namespace Price2
                     {
                         frmProduct.strProductID = dgvData.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
                         blnInquery = false;
+                        this.Close();
+                    }
+                    else if(blnInq_Material)
+                    {
+                        frmInq_Material_Status.rstrMaterialID = dgvData.Rows[e.RowIndex].Cells["ap3_part"].Value.ToString();
+                        blnInq_Material = false;
                         this.Close();
                     }
                     else

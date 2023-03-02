@@ -391,6 +391,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmOrder_Inq";
             this.Text = "訂單查詢";
+            this.Load += new System.EventHandler(this.frmOrder_Inq_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();

@@ -295,6 +295,7 @@ namespace Price2
                 Excel.Workbook workBook = excelApp.Workbooks.Add(true);
                 Excel.Worksheet workSheet = workBook.ActiveSheet as Excel.Worksheet;    //new a worksheet
                 workSheet = (Excel.Worksheet)workBook.Worksheets.get_Item(1);   //獲得第i個sheet，準備寫入
+                workSheet.Cells.NumberFormat = "@"; //還沒空清楚定義，但大概是遇到數字的，強迫以文字來儲存。
                 //Excel.Worksheet workSheet = (Excel.Worksheet)workBook.Worksheets[1];
                 // 設定標題
                 Excel.Range range = workSheet.get_Range(excelApp.Cells[1, 1], excelApp.Cells[1, ColCount]); //標題所佔的單元格數與DataGridView中的列數相同
@@ -332,7 +333,7 @@ namespace Price2
                 // 寫入Excel
                 range = workSheet.get_Range(excelApp.Cells[3, 1], excelApp.Cells[RowCount+3, ColCount]);
                 range.Value2 = objData;
-
+                //range.NumberFormatLocal= "@";
                 workSheet.get_Range(excelApp.Cells[3, 1], excelApp.Cells[3+RowCount, ColCount]).Borders.LineStyle = Excel.XlLineStyle.xlContinuous; //外框
 
                 //workSheet.Range["A3:H8"].HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;   //對齊
@@ -389,6 +390,68 @@ namespace Price2
                     tempLen += 1;
             }
             return tempLen;
+        }
+
+        public static string MulitSelect(string rs, string txtInput)
+        {
+            //多條件搜尋
+            string strWhere = "";
+            strWhere = "and (( ";
+            if (txtInput.IndexOf(":") >= 0)//冒號多條件搜尋
+            {
+                string[] strOut = txtInput.Split(':');
+                for (int i = 0; i < strOut.Length; i++)
+                {
+                    if (strOut[i].IndexOf(";") >= 0)//分號多條件搜尋
+                    {
+                        string[] strIn = strOut[i].Split(';');
+                        for (int j = 0; j < strIn.Length; j++)
+                        {
+                            strWhere = strWhere + rs + $@" like '%{strIn[j].Trim()}%' ";
+                            if (j < strIn.Length-1)
+                            {
+                                strWhere = strWhere + $@"and ";
+                            }
+                            else
+                            {
+                                strWhere = strWhere + $@") or ( ";
+                            }
+                        }
+                    }
+                    else
+                    {
+                        strWhere = strWhere + rs +$@" like '%{strOut[i].Trim()}%' ";
+                        if (i < strOut.Length-1)
+                        {
+                            strWhere = strWhere + $@") or ( ";
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (txtInput.IndexOf(";") >= 0)//分號多條件搜尋
+                {
+                    string[] str = txtInput.Split(';');
+                    for (int i = 0; i < str.Length; i++)
+                    {
+                        str[i] = str[i].Trim();
+                        strWhere = strWhere + rs +$@" like '%{str[i].Trim()}%' ";
+                        if(i < str.Length-1)
+                        {
+                            strWhere = strWhere + "and ";
+                        }
+                    }
+                }
+                else
+                {
+                    strWhere = strWhere + rs + $@" like '%{txtInput.Trim()}%' "; ;
+                }
+            }
+            strWhere = strWhere + ")) ";
+            //移除可能會多餘的查詢字串
+            strWhere = strWhere.Replace("or ( )", "");
+            return strWhere;
         }
     }
 }

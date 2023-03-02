@@ -52,8 +52,12 @@ namespace Price2
             try
             {
                 txtProofingDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
-               
-
+                if (rstrProofing != "")
+                {
+                    txtProofing.Text = rstrProofing;
+                    getData_Proofing();
+                    rstrProofing = "";
+                }
             }
             catch (Exception ex)
             {

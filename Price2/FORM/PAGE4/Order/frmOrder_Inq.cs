@@ -245,5 +245,11 @@ namespace Price2
                 MessageBox.Show(this.Name + "-dgvData_CellDoubleClick" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmOrder_Inq_Load(object sender, EventArgs e)
+        {
+            txtDate_S.Text = DateTime.Now.AddDays(-3).ToString("yyyy/MM/dd");
+            txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+        }
     }
 }

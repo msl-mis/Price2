@@ -2900,6 +2900,15 @@ namespace Price2
                     txtPurprice.Text = oldprice;
                 }
             }
+            if (txtID.Text == "填充劑中性碳酸鈣XD-2" && txtPurprice.Text != "" && oldprice != "")
+            {
+                if (txtPurprice.Text != oldprice)
+                {
+                    MessageBox.Show("此材料名已有材料單對應或設定處理,不可變更單價!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtPurprice.Text = oldprice;
+                }
+            }
+            
         }
 
         private void chkShippingFee_VN_CheckedChanged(object sender, EventArgs e)
