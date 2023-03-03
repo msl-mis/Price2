@@ -58,7 +58,7 @@ namespace Price2
                     clsDB._ServerName = "msl-price";
                     clsDB._DB_id = "sa";
                     clsDB._DB_password = "yzf";
-                    clsDB._DB_name = "Test";
+                    clsDB._DB_name = "Price";
     }
                 else
                 {

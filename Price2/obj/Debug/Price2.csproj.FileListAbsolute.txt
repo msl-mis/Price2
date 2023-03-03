@@ -414,3 +414,19 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmReName_Quotation.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmReName_Material.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmModify_CZF.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPriceSetting_Copper.resources
+D:\Price2\Price2\obj\Debug\Price2.frmInq_Material_Status.resources
+D:\Price2\Price2\obj\Debug\Price2.frmReName_Quotation.resources
+D:\Price2\Price2\obj\Debug\Price2.frmModify_CZF.resources
+D:\Price2\Price2\obj\Debug\Price2.frmPriceSetting_Copper.resources
+D:\Price2\Price2\obj\Debug\Price2.frmPriceSetting_Others.resources
+D:\Price2\Price2\obj\Debug\Price2.frmReName_Material.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_Complaint.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Complaint.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Modify.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Order.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_Inq_Order_P.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_Note.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_OtherPay.resources
+D:\Price2\Price2\obj\Debug\Price2.frmOrder_RefreshPrice.resources
+D:\Price2\Price2\obj\Debug\Price2.frmInq_Material_Detial.resources
+D:\Price2\Price2\obj\Debug\Price2.frmProofingFile.resources

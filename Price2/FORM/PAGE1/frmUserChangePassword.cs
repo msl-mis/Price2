@@ -67,5 +67,7 @@ namespace Price2
                 MessageBox.Show(this.Name + "-_btnClose_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }
