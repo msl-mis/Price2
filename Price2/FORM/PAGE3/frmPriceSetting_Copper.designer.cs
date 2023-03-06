@@ -31,22 +31,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.採購日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.採購單號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.廠商 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.規格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.銅價未稅 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.金額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClear_Order = new System.Windows.Forms.Button();
             this.btnInq_Order = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtOrderDate = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnModify = new System.Windows.Forms.Button();
@@ -76,7 +83,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtLME = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAvgPrice = new System.Windows.Forms.Label();
             this.lblAvgTotal = new System.Windows.Forms.Label();
@@ -85,7 +91,6 @@
             this.lblAVG_MONTH = new System.Windows.Forms.Label();
             this.lblSHFE_NTD = new System.Windows.Forms.Label();
             this.lblLME_NTD = new System.Windows.Forms.Label();
-            this.txtAvgDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnInq_Avg = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -101,14 +106,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.採購日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.採購單號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.廠商 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.規格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.銅價未稅 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.金額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpAvgDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -141,13 +141,13 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox3.Controls.Add(this.dtpOrderDate);
             this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Controls.Add(this.btnClear_Order);
             this.groupBox3.Controls.Add(this.btnInq_Order);
             this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.txtOrderDate);
             this.groupBox3.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox3.Location = new System.Drawing.Point(0, 410);
             this.groupBox3.Name = "groupBox3";
@@ -244,6 +244,94 @@
             this.dgvOrder.Size = new System.Drawing.Size(1020, 163);
             this.dgvOrder.TabIndex = 164;
             // 
+            // 採購日期
+            // 
+            this.採購日期.DataPropertyName = "採購日期";
+            this.採購日期.FillWeight = 150F;
+            this.採購日期.HeaderText = "採購日期";
+            this.採購日期.MinimumWidth = 125;
+            this.採購日期.Name = "採購日期";
+            this.採購日期.ReadOnly = true;
+            this.採購日期.Width = 125;
+            // 
+            // 採購單號
+            // 
+            this.採購單號.DataPropertyName = "採購單號";
+            this.採購單號.FillWeight = 150F;
+            this.採購單號.HeaderText = "採購單號";
+            this.採購單號.MinimumWidth = 125;
+            this.採購單號.Name = "採購單號";
+            this.採購單號.ReadOnly = true;
+            this.採購單號.Width = 125;
+            // 
+            // 廠商
+            // 
+            this.廠商.DataPropertyName = "廠商";
+            this.廠商.FillWeight = 150F;
+            this.廠商.HeaderText = "廠商";
+            this.廠商.MinimumWidth = 125;
+            this.廠商.Name = "廠商";
+            this.廠商.ReadOnly = true;
+            this.廠商.Width = 125;
+            // 
+            // 規格
+            // 
+            this.規格.DataPropertyName = "規格";
+            this.規格.FillWeight = 150F;
+            this.規格.HeaderText = "規格";
+            this.規格.MinimumWidth = 125;
+            this.規格.Name = "規格";
+            this.規格.ReadOnly = true;
+            this.規格.Width = 125;
+            // 
+            // 銅價未稅
+            // 
+            this.銅價未稅.DataPropertyName = "銅價未稅";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.銅價未稅.DefaultCellStyle = dataGridViewCellStyle2;
+            this.銅價未稅.FillWeight = 150F;
+            this.銅價未稅.HeaderText = "銅價未稅/kg";
+            this.銅價未稅.MinimumWidth = 100;
+            this.銅價未稅.Name = "銅價未稅";
+            this.銅價未稅.ReadOnly = true;
+            this.銅價未稅.Width = 114;
+            // 
+            // 數量
+            // 
+            this.數量.DataPropertyName = "數量";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.數量.DefaultCellStyle = dataGridViewCellStyle3;
+            this.數量.FillWeight = 150F;
+            this.數量.HeaderText = "數量/kg";
+            this.數量.MinimumWidth = 100;
+            this.數量.Name = "數量";
+            this.數量.ReadOnly = true;
+            // 
+            // 金額
+            // 
+            this.金額.DataPropertyName = "金額";
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.金額.DefaultCellStyle = dataGridViewCellStyle4;
+            this.金額.FillWeight = 150F;
+            this.金額.HeaderText = "金額(NTD)";
+            this.金額.MinimumWidth = 100;
+            this.金額.Name = "金額";
+            this.金額.ReadOnly = true;
+            this.金額.Width = 105;
+            // 
+            // 備註
+            // 
+            this.備註.DataPropertyName = "備註";
+            this.備註.FillWeight = 334F;
+            this.備註.HeaderText = "備註";
+            this.備註.MinimumWidth = 334;
+            this.備註.Name = "備註";
+            this.備註.ReadOnly = true;
+            this.備註.Width = 334;
+            // 
             // btnClear_Order
             // 
             this.btnClear_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -279,15 +367,6 @@
             this.label25.TabIndex = 161;
             this.label25.Text = "採購月份";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtOrderDate
-            // 
-            this.txtOrderDate.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtOrderDate.Location = new System.Drawing.Point(161, 22);
-            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOrderDate.Name = "txtOrderDate";
-            this.txtOrderDate.Size = new System.Drawing.Size(109, 29);
-            this.txtOrderDate.TabIndex = 160;
             // 
             // groupBox2
             // 
@@ -383,6 +462,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.dtpDate);
             this.panel1.Controls.Add(this.lblSHFE_avg);
             this.panel1.Controls.Add(this.lblLME_avg);
             this.panel1.Controls.Add(this.panel4);
@@ -397,7 +477,6 @@
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.txtLME);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.txtDate);
             this.panel1.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel1.Location = new System.Drawing.Point(11, 18);
             this.panel1.Name = "panel1";
@@ -649,19 +728,10 @@
             this.label15.Text = "新增日期";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtDate
-            // 
-            this.txtDate.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtDate.Location = new System.Drawing.Point(22, 47);
-            this.txtDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(109, 29);
-            this.txtDate.TabIndex = 146;
-            this.txtDate.Click += new System.EventHandler(this.txtDate_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.dtpAvgDate);
             this.groupBox1.Controls.Add(this.lblAvgPrice);
             this.groupBox1.Controls.Add(this.lblAvgTotal);
             this.groupBox1.Controls.Add(this.lblExpectedTrend);
@@ -669,7 +739,6 @@
             this.groupBox1.Controls.Add(this.lblAVG_MONTH);
             this.groupBox1.Controls.Add(this.lblSHFE_NTD);
             this.groupBox1.Controls.Add(this.lblLME_NTD);
-            this.groupBox1.Controls.Add(this.txtAvgDate);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.btnInq_Avg);
             this.groupBox1.Controls.Add(this.btnSave);
@@ -769,15 +838,6 @@
             this.lblLME_NTD.Size = new System.Drawing.Size(109, 29);
             this.lblLME_NTD.TabIndex = 147;
             this.lblLME_NTD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtAvgDate
-            // 
-            this.txtAvgDate.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtAvgDate.Location = new System.Drawing.Point(326, 18);
-            this.txtAvgDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtAvgDate.Name = "txtAvgDate";
-            this.txtAvgDate.Size = new System.Drawing.Size(109, 29);
-            this.txtAvgDate.TabIndex = 146;
             // 
             // label14
             // 
@@ -946,93 +1006,35 @@
             this.label1.Text = "銅桿OD2.6mm/kg";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // 採購日期
+            // dtpAvgDate
             // 
-            this.採購日期.DataPropertyName = "採購日期";
-            this.採購日期.FillWeight = 150F;
-            this.採購日期.HeaderText = "採購日期";
-            this.採購日期.MinimumWidth = 125;
-            this.採購日期.Name = "採購日期";
-            this.採購日期.ReadOnly = true;
-            this.採購日期.Width = 125;
+            this.dtpAvgDate.CustomFormat = "yyyy/MM";
+            this.dtpAvgDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAvgDate.Location = new System.Drawing.Point(326, 18);
+            this.dtpAvgDate.Name = "dtpAvgDate";
+            this.dtpAvgDate.ShowUpDown = true;
+            this.dtpAvgDate.Size = new System.Drawing.Size(110, 29);
+            this.dtpAvgDate.TabIndex = 154;
             // 
-            // 採購單號
+            // dtpOrderDate
             // 
-            this.採購單號.DataPropertyName = "採購單號";
-            this.採購單號.FillWeight = 150F;
-            this.採購單號.HeaderText = "採購單號";
-            this.採購單號.MinimumWidth = 125;
-            this.採購單號.Name = "採購單號";
-            this.採購單號.ReadOnly = true;
-            this.採購單號.Width = 125;
+            this.dtpOrderDate.CustomFormat = "yyyy/MM";
+            this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpOrderDate.Location = new System.Drawing.Point(161, 22);
+            this.dtpOrderDate.Name = "dtpOrderDate";
+            this.dtpOrderDate.ShowUpDown = true;
+            this.dtpOrderDate.Size = new System.Drawing.Size(110, 29);
+            this.dtpOrderDate.TabIndex = 166;
             // 
-            // 廠商
+            // dtpDate
             // 
-            this.廠商.DataPropertyName = "廠商";
-            this.廠商.FillWeight = 150F;
-            this.廠商.HeaderText = "廠商";
-            this.廠商.MinimumWidth = 125;
-            this.廠商.Name = "廠商";
-            this.廠商.ReadOnly = true;
-            this.廠商.Width = 125;
-            // 
-            // 規格
-            // 
-            this.規格.DataPropertyName = "規格";
-            this.規格.FillWeight = 150F;
-            this.規格.HeaderText = "規格";
-            this.規格.MinimumWidth = 125;
-            this.規格.Name = "規格";
-            this.規格.ReadOnly = true;
-            this.規格.Width = 125;
-            // 
-            // 銅價未稅
-            // 
-            this.銅價未稅.DataPropertyName = "銅價未稅";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.銅價未稅.DefaultCellStyle = dataGridViewCellStyle2;
-            this.銅價未稅.FillWeight = 150F;
-            this.銅價未稅.HeaderText = "銅價未稅/kg";
-            this.銅價未稅.MinimumWidth = 100;
-            this.銅價未稅.Name = "銅價未稅";
-            this.銅價未稅.ReadOnly = true;
-            this.銅價未稅.Width = 114;
-            // 
-            // 數量
-            // 
-            this.數量.DataPropertyName = "數量";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.數量.DefaultCellStyle = dataGridViewCellStyle3;
-            this.數量.FillWeight = 150F;
-            this.數量.HeaderText = "數量/kg";
-            this.數量.MinimumWidth = 100;
-            this.數量.Name = "數量";
-            this.數量.ReadOnly = true;
-            // 
-            // 金額
-            // 
-            this.金額.DataPropertyName = "金額";
-            dataGridViewCellStyle4.Format = "N0";
-            dataGridViewCellStyle4.NullValue = null;
-            this.金額.DefaultCellStyle = dataGridViewCellStyle4;
-            this.金額.FillWeight = 150F;
-            this.金額.HeaderText = "金額(NTD)";
-            this.金額.MinimumWidth = 100;
-            this.金額.Name = "金額";
-            this.金額.ReadOnly = true;
-            this.金額.Width = 105;
-            // 
-            // 備註
-            // 
-            this.備註.DataPropertyName = "備註";
-            this.備註.FillWeight = 334F;
-            this.備註.HeaderText = "備註";
-            this.備註.MinimumWidth = 334;
-            this.備註.Name = "備註";
-            this.備註.ReadOnly = true;
-            this.備註.Width = 334;
+            this.dtpDate.CustomFormat = "yyyy/MM/dd";
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDate.Location = new System.Drawing.Point(22, 47);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.ShowUpDown = true;
+            this.dtpDate.Size = new System.Drawing.Size(110, 29);
+            this.dtpDate.TabIndex = 161;
             // 
             // frmPriceSetting_Copper
             // 
@@ -1080,7 +1082,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtLME;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnInq_Avg;
@@ -1100,7 +1101,6 @@
         private System.Windows.Forms.Button btnClear_Order;
         private System.Windows.Forms.Button btnInq_Order;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtOrderDate;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnHistory;
@@ -1112,7 +1112,6 @@
         private System.Windows.Forms.DataGridView dgvPrice;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtAvgDate;
         private System.Windows.Forms.Label lblSHFE_avg;
         private System.Windows.Forms.Label lblLME_avg;
         private System.Windows.Forms.Label lblAvgPrice;
@@ -1138,5 +1137,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 數量;
         private System.Windows.Forms.DataGridViewTextBoxColumn 金額;
         private System.Windows.Forms.DataGridViewTextBoxColumn 備註;
+        private System.Windows.Forms.DateTimePicker dtpOrderDate;
+        private System.Windows.Forms.DateTimePicker dtpAvgDate;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }

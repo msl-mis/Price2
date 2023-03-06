@@ -59,8 +59,8 @@ namespace Price2
             //要加入很多初始化東西
             try
             {
-                txtAvgDate.Text = DateTime.Now.ToString("yyyy/MM");
-                txtOrderDate.Text = DateTime.Now.ToString("yyyy/MM");
+                dtpAvgDate.Text = DateTime.Now.ToString("yyyy/MM");
+                dtpOrderDate.Text = DateTime.Now.ToString("yyyy/MM");
 
 
             }
@@ -110,7 +110,7 @@ namespace Price2
                 dblSHFE = GetCopper("SHFE");
                 if (dblLME == 0 && dblSHFE == 0)
                 {
-                    MessageBox.Show("每月銅現價" + Convert.ToDateTime(txtAvgDate.Text).ToString("yyyy/MM") + "查不到資料", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("每月銅現價" + Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyy/MM") + "查不到資料", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Cursor = Cursors.Default;//滑鼠還原預設
                     return;
                 }
@@ -127,7 +127,7 @@ namespace Price2
                 PriceIqr();
 
                 //銅價採購成交價查詢
-                txtOrderDate.Text = txtAvgDate.Text;
+                dtpOrderDate.Text = dtpAvgDate.Text;
 
                 //當月平均成交價=(數量/kg)總和/金額(NTD)總和
                 dblAvgMonth = GetCopperAvgMonth();
@@ -188,7 +188,7 @@ namespace Price2
                                                Avg(lme_copper)  lme,
                                                Avg(shfe_copper) shfe
                                         from   copper_price_detail
-                                        where  login_date_from = '{Convert.ToDateTime(txtAvgDate.Text).ToString("yyyy/MM")}'
+                                        where  login_date_from = '{Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyy/MM")}'
                                         group  by login_date_from) t1
                                        left join copper_price t2
                                               on t1.login_date_from = t2.login_date ";
@@ -218,7 +218,7 @@ namespace Price2
             string strSQL = $@"select cum_convert
                                 from   cum
                                 where  cum_code='{strCurrency}'
-                                and    cum_adddate= (　select max(cum_adddate) from cum where cum_code='{strCurrency}' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(txtAvgDate.Text).ToString("yyyyMM")}') ";
+                                and    cum_adddate= (　select max(cum_adddate) from cum where cum_code='{strCurrency}' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyyMM")}') ";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
             if (dt.Rows.Count > 0)
@@ -242,7 +242,7 @@ namespace Price2
                                                Avg(lme_copper)  lme,
                                                Avg(shfe_copper) shfe
                                         from   copper_price_detail
-                                        where  login_date_from = '{Convert.ToDateTime(txtAvgDate.Text).AddMonths(-1).ToString("yyyy/MM")}'
+                                        where  login_date_from = '{Convert.ToDateTime(dtpAvgDate.Text).AddMonths(-1).ToString("yyyy/MM")}'
                                         group  by login_date_from) t1
                                        left join copper_price t2
                                               on t1.login_date_from = t2.login_date ";
@@ -272,7 +272,7 @@ namespace Price2
             string strSQL = $@"select cum_convert
                                 from   cum
                                 where  cum_code='{strCurrency}'
-                                and    cum_adddate= (　select max(cum_adddate) from cum where cum_code='{strCurrency}' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(txtAvgDate.Text).AddMonths(-1).ToString("yyyyMM")}') ";
+                                and    cum_adddate= (　select max(cum_adddate) from cum where cum_code='{strCurrency}' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpAvgDate.Text).AddMonths(-1).ToString("yyyyMM")}') ";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
             if (dt.Rows.Count > 0)
@@ -307,8 +307,8 @@ namespace Price2
                                 and        ( PURTD.TD004 like N'A6HA01%' )
                                 and        ( cum_code = '人民幣' )
                                 and        ( PURTC.TC014 = 'Y' )
-                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='人民幣' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(txtOrderDate.Text).AddDays(0).ToString("yyyyMM")}')
-                                and        ( PURTC.TC003 between '{Convert.ToDateTime(txtOrderDate.Text).AddMonths(-1).ToString("yyyyMM26")}' and '{Convert.ToDateTime(txtOrderDate.Text).AddMonths(0).ToString("yyyyMM25")}' )
+                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='人民幣' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpOrderDate.Text).AddDays(0).ToString("yyyyMM")}')
+                                and        ( PURTC.TC003 between '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(-1).ToString("yyyyMM26")}' and '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(0).ToString("yyyyMM25")}' )
                                 union all
                                 select     PURTC.TC003                                      as 採購日期,
                                            PURTC.TC002                                      as 採購單號,
@@ -329,8 +329,8 @@ namespace Price2
                                 and        ( PURTD.TD004 like N'A6HA01%' )
                                 and        ( cum_code = '美金' )
                                 and        ( PURTC.TC014 = 'Y' )
-                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='美金' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(txtOrderDate.Text).AddDays(0).ToString("yyyyMM")}')
-                                and        ( PURTC.TC003 between '{Convert.ToDateTime(txtOrderDate.Text).AddMonths(-1).ToString("yyyyMM26")}' and '{Convert.ToDateTime(txtOrderDate.Text).AddMonths(0).ToString("yyyyMM25")}' )
+                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='美金' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpOrderDate.Text).AddDays(0).ToString("yyyyMM")}')
+                                and        ( PURTC.TC003 between '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(-1).ToString("yyyyMM26")}' and '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(0).ToString("yyyyMM25")}' )
                                 order by   採購單號";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
@@ -369,7 +369,7 @@ namespace Price2
                                        and asb_changedate = (select Max(asb_changedate)
                                                              from   asb
                                                              where  asb_id = '{strID}'
-                                                                    and Format(asb_changedate, 'yyyyMM') <= '{Convert.ToDateTime(txtAvgDate.Text).ToString("yyyyMM")}')";
+                                                                    and Format(asb_changedate, 'yyyyMM') <= '{Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyyMM")}')";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
             if (dt.Rows.Count > 0)
@@ -392,7 +392,7 @@ namespace Price2
                                        working_USD,
                                        working_RMB
                                 from   copper_price
-                                where  login_date = '{Convert.ToDateTime(txtAvgDate.Text).ToString("yyyy/MM")}' ";
+                                where  login_date = '{Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyy/MM")}' ";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
             if (dt.Rows.Count > 0)
@@ -404,8 +404,8 @@ namespace Price2
 
         private void PriceIqr()     //查詢每日登錄銅價
         {
-            string strYYYYMM_S = Convert.ToDateTime(txtAvgDate.Text).ToString("yyyy/MM") + "/01";
-            string strYYYYMM_E = Convert.ToDateTime(txtAvgDate.Text).ToString("yyyy/MM") + "/31";
+            string strYYYYMM_S = Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyy/MM") + "/01";
+            string strYYYYMM_E = Convert.ToDateTime(dtpAvgDate.Text).ToString("yyyy/MM") + "/31";
             string strSQL = $@"select login_date '日期',
                                        lme_copper 'LME銅板現貨',
                                        shfe_copper 'SHFE銅板現貨',
@@ -562,7 +562,7 @@ namespace Price2
                     strSHFE = txtSHFE.Text;
                 }
 
-                strDate = Convert.ToDateTime(txtDate.Text).ToString("yyyy/MM/dd");
+                strDate = Convert.ToDateTime(dtpDate.Text).ToString("yyyy/MM/dd");
 
                 //先查詢是否有值
                 strSQL = $@"select * from copper_price_detail where login_date = '{strDate}' ";
@@ -594,7 +594,7 @@ namespace Price2
                                              Getdate()) ";
                     clsDB.Execute(strSQL);
                     //輸入後顯示查詢
-                    txtAvgDate.Text = Convert.ToDateTime(txtDate.Text).ToString("yyyy/MM");
+                    dtpAvgDate.Text = Convert.ToDateTime(dtpDate.Text).ToString("yyyy/MM");
                     getData_Avg();
                     //清除欄位
                     txtLME.Text = "";
@@ -628,7 +628,7 @@ namespace Price2
                 }
 
 
-                strDate = Convert.ToDateTime(txtDate.Text).ToString("yyyy/MM/dd");
+                strDate = Convert.ToDateTime(dtpDate.Text).ToString("yyyy/MM/dd");
 
                 if (MessageBox.Show("確定要修改嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
@@ -662,7 +662,7 @@ namespace Price2
                                    '{Convert.ToDateTime(strCreatedate).ToString("yyyyMMddHHmmss")}' ";
                 clsDB.Execute(strSQL);
                 //輸入後顯示查詢
-                txtAvgDate.Text = Convert.ToDateTime(txtDate.Text).ToString("yyyy/MM");
+                dtpAvgDate.Text = Convert.ToDateTime(dtpDate.Text).ToString("yyyy/MM");
                 getData_Avg();
                 //清除欄位
                 txtLME.Text = "";
@@ -695,7 +695,7 @@ namespace Price2
                     return;
                 }
 
-                strDate = Convert.ToDateTime(txtDate.Text).ToString("yyyy/MM/dd");
+                strDate = Convert.ToDateTime(dtpDate.Text).ToString("yyyy/MM/dd");
 
                 if (MessageBox.Show("確定要刪除嗎?", "Check", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
@@ -706,7 +706,7 @@ namespace Price2
                                    '{Convert.ToDateTime(strCreatedate).ToString("yyyyMMddHHmmss")}' ";
                 clsDB.Execute(strSQL);
                 //輸入後顯示查詢
-                txtAvgDate.Text = Convert.ToDateTime(txtDate.Text).ToString("yyyy/MM");
+                dtpAvgDate.Text = Convert.ToDateTime(dtpDate.Text).ToString("yyyy/MM");
                 getData_Avg();
                 //清除欄位
                 txtLME.Text = "";
@@ -737,7 +737,7 @@ namespace Price2
         private void dgvPrice_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //更新畫面中的欄位資料
-            txtDate.Text = dgvPrice.Rows[e.RowIndex].Cells["日期"].Value.ToString();            //採購日期
+            dtpDate.Text = dgvPrice.Rows[e.RowIndex].Cells["日期"].Value.ToString();            //採購日期
             txtLME.Text = dgvPrice.Rows[e.RowIndex].Cells["LME銅板現貨"].Value.ToString();          //LME銅板現貨
             txtSHFE.Text = dgvPrice.Rows[e.RowIndex].Cells["SHFE銅板現貨"].Value.ToString();        //SHFE銅板現貨
             strCreatedate = dgvPrice.Rows[e.RowIndex].Cells["create_date"].Value.ToString();        //create_date
@@ -1395,13 +1395,6 @@ namespace Price2
             }
         }
 
-        private void txtDate_Click(object sender, EventArgs e)
-        {
-            if (txtDate.Text == "")
-            {
-                txtDate.Text = DateTime.Now.ToString("yyyy/MM/dd");
-            }
-        }
     }
     struct Values
     {

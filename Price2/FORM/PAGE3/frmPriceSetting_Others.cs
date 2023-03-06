@@ -54,7 +54,7 @@ namespace Price2
             //要加入很多初始化東西
             try
             {
-                txtOrderDate.Text = DateTime.Now.ToString("yyyy/MM");
+                dtpOrderDate.Text = DateTime.Now.ToString("yyyy/MM");
             }
             catch (Exception ex)
             {
@@ -124,9 +124,9 @@ namespace Price2
                                                       cum_code = '人民幣' )
                                 and        (
                                                       PURTC.TC014 = 'Y' )
-                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='人民幣' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(txtOrderDate.Text).ToString("yyyyMM")}')
+                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='人民幣' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}')
                                 and        (
-                                                      substring(PURTC.TC003,1,6) = '{Convert.ToDateTime(txtOrderDate.Text).ToString("yyyyMM")}' )
+                                                      substring(PURTC.TC003,1,6) = '{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}' )
                                 union all
                                 select     PURTC.TC003                               as 採購日期,
                                            PURTC.TC002                               as 採購單號,
@@ -151,9 +151,9 @@ namespace Price2
                                                       cum_code = '美金' )
                                 and        (
                                                       PURTC.TC014 = 'Y' )
-                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='美金' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(txtOrderDate.Text).ToString("yyyyMM")}')
+                                and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='美金' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}')
                                 and        (
-                                                      substring(PURTC.TC003,1,6) = '{Convert.ToDateTime(txtOrderDate.Text).ToString("yyyyMM")}' )
+                                                      substring(PURTC.TC003,1,6) = '{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}' )
                                 order by   採購單號";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
