@@ -54,6 +54,7 @@
             this.menu3_5_3 = new System.Windows.Forms.ToolStripMenuItem();
             this.控管材料設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu3_6_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_6_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -174,7 +175,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.menu3_6_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.安規費與USB年費設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_7_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_7_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_7_3 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -327,7 +331,8 @@
             this.menu3_3,
             this.menu3_4,
             this.menu3_5,
-            this.控管材料設定ToolStripMenuItem});
+            this.控管材料設定ToolStripMenuItem,
+            this.安規費與USB年費設定ToolStripMenuItem});
             this.menu3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu3.Name = "menu3";
             this.menu3.Size = new System.Drawing.Size(77, 24);
@@ -336,28 +341,28 @@
             // menu3_1
             // 
             this.menu3_1.Name = "menu3_1";
-            this.menu3_1.Size = new System.Drawing.Size(276, 26);
+            this.menu3_1.Size = new System.Drawing.Size(292, 26);
             this.menu3_1.Text = "&1.火車頭資料建立";
             this.menu3_1.Click += new System.EventHandler(this.menu3_1_Click);
             // 
             // menu3_2
             // 
             this.menu3_2.Name = "menu3_2";
-            this.menu3_2.Size = new System.Drawing.Size(276, 26);
+            this.menu3_2.Size = new System.Drawing.Size(292, 26);
             this.menu3_2.Text = "&2.BOM產品結構建立";
             this.menu3_2.Click += new System.EventHandler(this.menu3_2_Click);
             // 
             // menu3_3
             // 
             this.menu3_3.Name = "menu3_3";
-            this.menu3_3.Size = new System.Drawing.Size(276, 26);
+            this.menu3_3.Size = new System.Drawing.Size(292, 26);
             this.menu3_3.Text = "&3.查材料名位置明細表";
             this.menu3_3.Click += new System.EventHandler(this.menu3_3_Click);
             // 
             // menu3_4
             // 
             this.menu3_4.Name = "menu3_4";
-            this.menu3_4.Size = new System.Drawing.Size(276, 26);
+            this.menu3_4.Size = new System.Drawing.Size(292, 26);
             this.menu3_4.Text = "&4.查材料名使用情形";
             this.menu3_4.Click += new System.EventHandler(this.menu3_4_Click);
             // 
@@ -368,7 +373,7 @@
             this.menu3_5_2,
             this.menu3_5_3});
             this.menu3_5.Name = "menu3_5";
-            this.menu3_5.Size = new System.Drawing.Size(276, 26);
+            this.menu3_5.Size = new System.Drawing.Size(292, 26);
             this.menu3_5.Text = "&5.更名";
             // 
             // menu3_5_1
@@ -398,7 +403,7 @@
             this.menu3_6_1,
             this.menu3_6_2});
             this.控管材料設定ToolStripMenuItem.Name = "控管材料設定ToolStripMenuItem";
-            this.控管材料設定ToolStripMenuItem.Size = new System.Drawing.Size(276, 26);
+            this.控管材料設定ToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
             this.控管材料設定ToolStripMenuItem.Text = "&6.控管材料設定";
             // 
             // menu3_6_1
@@ -407,6 +412,13 @@
             this.menu3_6_1.Size = new System.Drawing.Size(237, 26);
             this.menu3_6_1.Text = "6_&1.銅桿價設定";
             this.menu3_6_1.Click += new System.EventHandler(this.menu3_6_1_Click);
+            // 
+            // menu3_6_2
+            // 
+            this.menu3_6_2.Name = "menu3_6_2";
+            this.menu3_6_2.Size = new System.Drawing.Size(237, 26);
+            this.menu3_6_2.Text = "6_&2.材料採購明細";
+            this.menu3_6_2.Click += new System.EventHandler(this.menu3_6_2_Click);
             // 
             // menu4
             // 
@@ -1294,6 +1306,7 @@
             this.btn3_7_1.Text = "1.每月安規費用登錄";
             this.btn3_7_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_7_1.UseVisualStyleBackColor = true;
+            this.btn3_7_1.Click += new System.EventHandler(this.btn3_7_1_Click);
             // 
             // btn3_7_2
             // 
@@ -1310,6 +1323,7 @@
             this.btn3_7_2.Text = "2.安規費用分攤統計表";
             this.btn3_7_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_7_2.UseVisualStyleBackColor = true;
+            this.btn3_7_2.Click += new System.EventHandler(this.btn3_7_2_Click);
             // 
             // btn3_7_3
             // 
@@ -1326,6 +1340,7 @@
             this.btn3_7_3.Text = "3.USB2.0協會年費分攤";
             this.btn3_7_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_7_3.UseVisualStyleBackColor = true;
+            this.btn3_7_3.Click += new System.EventHandler(this.btn3_7_3_Click);
             // 
             // btnReturn_gb3_7
             // 
@@ -2245,12 +2260,36 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // menu3_6_2
+            // 安規費與USB年費設定ToolStripMenuItem
             // 
-            this.menu3_6_2.Name = "menu3_6_2";
-            this.menu3_6_2.Size = new System.Drawing.Size(237, 26);
-            this.menu3_6_2.Text = "6_&2.材料採購明細";
-            this.menu3_6_2.Click += new System.EventHandler(this.menu3_6_2_Click);
+            this.安規費與USB年費設定ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu3_7_1,
+            this.menu3_7_2,
+            this.menu3_7_3});
+            this.安規費與USB年費設定ToolStripMenuItem.Name = "安規費與USB年費設定ToolStripMenuItem";
+            this.安規費與USB年費設定ToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.安規費與USB年費設定ToolStripMenuItem.Text = "&7.安規費與USB年費設定";
+            // 
+            // menu3_7_1
+            // 
+            this.menu3_7_1.Name = "menu3_7_1";
+            this.menu3_7_1.Size = new System.Drawing.Size(294, 26);
+            this.menu3_7_1.Text = "7_&1.每月安規費用登錄";
+            this.menu3_7_1.Click += new System.EventHandler(this.menu3_7_1_Click);
+            // 
+            // menu3_7_2
+            // 
+            this.menu3_7_2.Name = "menu3_7_2";
+            this.menu3_7_2.Size = new System.Drawing.Size(294, 26);
+            this.menu3_7_2.Text = "7_&2.安規費用分攤統計表";
+            this.menu3_7_2.Click += new System.EventHandler(this.menu3_7_2_Click);
+            // 
+            // menu3_7_3
+            // 
+            this.menu3_7_3.Name = "menu3_7_3";
+            this.menu3_7_3.Size = new System.Drawing.Size(294, 26);
+            this.menu3_7_3.Text = "7_&3.USB2.0協會年費分攤";
+            this.menu3_7_3.Click += new System.EventHandler(this.menu3_7_3_Click);
             // 
             // frmMain
             // 
@@ -2464,6 +2503,10 @@
         private System.Windows.Forms.ToolStripMenuItem 控管材料設定ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menu3_6_1;
         private System.Windows.Forms.ToolStripMenuItem menu3_6_2;
+        private System.Windows.Forms.ToolStripMenuItem 安規費與USB年費設定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu3_7_1;
+        private System.Windows.Forms.ToolStripMenuItem menu3_7_2;
+        private System.Windows.Forms.ToolStripMenuItem menu3_7_3;
     }
 }
 

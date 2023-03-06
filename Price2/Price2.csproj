@@ -569,6 +569,12 @@
     <Compile Include="FORM\PAGE4\Order\frmOrder_RefreshPrice.designer.cs">
       <DependentUpon>frmOrder_RefreshPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSafetyFees_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSafetyFees_Input.designer.cs">
+      <DependentUpon>frmSafetyFees_Input.cs</DependentUpon>
+    </Compile>
     <Compile Include="PriceDataSet.cs">
       <DependentUpon>PriceDataSet.xsd</DependentUpon>
     </Compile>
@@ -605,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE3\frmReName_Material.resx">
       <DependentUpon>frmReName_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSafetyFees_Input.resx">
+      <DependentUpon>frmSafetyFees_Input.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\bomuse.rdlc" />
     <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder.resx">

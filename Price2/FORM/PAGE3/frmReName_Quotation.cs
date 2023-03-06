@@ -499,7 +499,7 @@ namespace Price2
                                        Getdate(),
                                        asp_purprice,
                                        asp_vendorid,
-                                       '"" & pricemdi.puser & ""',
+                                       '{ clsGlobal.strG_User}',
                                        asp_currency,
                                        '[更名] 原材料名->{txtName1.Text.Trim()}',
                                        asp_pricecal

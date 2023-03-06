@@ -432,3 +432,4 @@ D:\Price2\Price2\obj\Debug\Price2.frmInq_Material_Detial.resources
 D:\Price2\Price2\obj\Debug\Price2.frmProofingFile.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmInq_History_Working.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPriceSetting_Others.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSafetyFees_Input.resources
