@@ -224,5 +224,23 @@ namespace Price2
 
             return strWhere;
         }
+
+        private void txtDate_S_Click(object sender, EventArgs e)
+        {
+            if (txtDate_S.Text == "")
+            {
+                txtDate_S.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }
+        }
+
+        private void txtDate_E_Click(object sender, EventArgs e)
+        {
+            if (txtDate_E.Text == "")
+            {
+                txtDate_S.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }
+        }
     }
 }
