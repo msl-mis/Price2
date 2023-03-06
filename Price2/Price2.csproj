@@ -113,52 +113,52 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmInq_History_Working.cs">
+    <Compile Include="FORM\PAGE3\frmInq_History_Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmInq_History_Working.designer.cs">
+    <Compile Include="FORM\PAGE3\frmInq_History_Working.designer.cs">
       <DependentUpon>frmInq_History_Working.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModify_CZF.cs">
+    <Compile Include="FORM\PAGE3\frmModify_CZF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModify_CZF.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmModify_CZF.Designer.cs">
       <DependentUpon>frmModify_CZF.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPriceSetting_Copper.cs">
+    <Compile Include="FORM\PAGE3\frmPriceSetting_Copper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPriceSetting_Copper.designer.cs">
+    <Compile Include="FORM\PAGE3\frmPriceSetting_Copper.designer.cs">
       <DependentUpon>frmPriceSetting_Copper.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPriceSetting_Others.cs">
+    <Compile Include="FORM\PAGE3\frmPriceSetting_Others.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPriceSetting_Others.designer.cs">
+    <Compile Include="FORM\PAGE3\frmPriceSetting_Others.designer.cs">
       <DependentUpon>frmPriceSetting_Others.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReName_Material.cs">
+    <Compile Include="FORM\PAGE3\frmReName_Material.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReName_Material.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmReName_Material.Designer.cs">
       <DependentUpon>frmReName_Material.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmReName_Quotation.cs">
+    <Compile Include="FORM\PAGE3\frmReName_Quotation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmReName_Quotation.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmReName_Quotation.Designer.cs">
       <DependentUpon>frmReName_Quotation.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmInq_Material_Status.cs">
+    <Compile Include="FORM\PAGE3\frmInq_Material_Status.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmInq_Material_Status.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmInq_Material_Status.Designer.cs">
       <DependentUpon>frmInq_Material_Status.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmInq_Material_Detial.cs">
+    <Compile Include="FORM\PAGE3\frmInq_Material_Detial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE4\frmInq_Material_Detial.Designer.cs">
+    <Compile Include="FORM\PAGE3\frmInq_Material_Detial.Designer.cs">
       <DependentUpon>frmInq_Material_Detial.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE4\frmProofingFile.cs">
@@ -585,25 +585,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="FORM\PAGE4\frmInq_Material_Status.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmInq_Material_Status.resx">
       <DependentUpon>frmInq_Material_Status.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE4\frmReName_Quotation.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmReName_Quotation.resx">
       <DependentUpon>frmReName_Quotation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInq_History_Working.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmInq_History_Working.resx">
       <DependentUpon>frmInq_History_Working.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModify_CZF.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmModify_CZF.resx">
       <DependentUpon>frmModify_CZF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPriceSetting_Copper.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmPriceSetting_Copper.resx">
       <DependentUpon>frmPriceSetting_Copper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPriceSetting_Others.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmPriceSetting_Others.resx">
       <DependentUpon>frmPriceSetting_Others.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReName_Material.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmReName_Material.resx">
       <DependentUpon>frmReName_Material.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\bomuse.rdlc" />
@@ -811,7 +811,7 @@
     <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder_RefreshPrice.resx">
       <DependentUpon>frmOrder_RefreshPrice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE4\frmInq_Material_Detial.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmInq_Material_Detial.resx">
       <DependentUpon>frmInq_Material_Detial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmProofingFile.resx">
