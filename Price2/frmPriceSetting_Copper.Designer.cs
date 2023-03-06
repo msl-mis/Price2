@@ -28,26 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
-            this.採購日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.採購單號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.廠商 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.規格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.銅價未稅 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.金額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClear_Order = new System.Windows.Forms.Button();
             this.btnInq_Order = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
@@ -106,6 +101,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.採購日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.採購單號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.廠商 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.規格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.銅價未稅 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.金額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -138,7 +141,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnClose);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Controls.Add(this.btnClear_Order);
@@ -153,18 +156,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "銅價採購成交價(未稅)";
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(948, 226);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 28);
-            this.button1.TabIndex = 165;
-            this.button1.Text = "結束";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnClose.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(948, 226);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(67, 28);
+            this.btnClose.TabIndex = 165;
+            this.btnClose.Text = "結束";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label4
             // 
@@ -194,14 +197,14 @@
             this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrder.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.採購日期,
@@ -212,113 +215,34 @@
             this.數量,
             this.金額,
             this.備註});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrder.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrder.EnableHeadersVisualStyles = false;
             this.dgvOrder.Location = new System.Drawing.Point(0, 0);
             this.dgvOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvOrder.RowHeadersVisible = false;
             this.dgvOrder.RowHeadersWidth = 25;
             this.dgvOrder.RowTemplate.Height = 21;
             this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrder.Size = new System.Drawing.Size(1020, 163);
             this.dgvOrder.TabIndex = 164;
-            // 
-            // 採購日期
-            // 
-            this.採購日期.DataPropertyName = "採購日期";
-            this.採購日期.FillWeight = 150F;
-            this.採購日期.HeaderText = "採購日期";
-            this.採購日期.MinimumWidth = 125;
-            this.採購日期.Name = "採購日期";
-            this.採購日期.ReadOnly = true;
-            this.採購日期.Width = 125;
-            // 
-            // 採購單號
-            // 
-            this.採購單號.DataPropertyName = "採購單號";
-            this.採購單號.FillWeight = 150F;
-            this.採購單號.HeaderText = "採購單號";
-            this.採購單號.MinimumWidth = 125;
-            this.採購單號.Name = "採購單號";
-            this.採購單號.ReadOnly = true;
-            this.採購單號.Width = 125;
-            // 
-            // 廠商
-            // 
-            this.廠商.DataPropertyName = "廠商";
-            this.廠商.FillWeight = 150F;
-            this.廠商.HeaderText = "廠商";
-            this.廠商.MinimumWidth = 125;
-            this.廠商.Name = "廠商";
-            this.廠商.ReadOnly = true;
-            this.廠商.Width = 125;
-            // 
-            // 規格
-            // 
-            this.規格.DataPropertyName = "規格";
-            this.規格.FillWeight = 150F;
-            this.規格.HeaderText = "規格";
-            this.規格.MinimumWidth = 125;
-            this.規格.Name = "規格";
-            this.規格.ReadOnly = true;
-            this.規格.Width = 125;
-            // 
-            // 銅價未稅
-            // 
-            this.銅價未稅.DataPropertyName = "銅價未稅";
-            this.銅價未稅.FillWeight = 150F;
-            this.銅價未稅.HeaderText = "銅價未稅/kg";
-            this.銅價未稅.MinimumWidth = 100;
-            this.銅價未稅.Name = "銅價未稅";
-            this.銅價未稅.ReadOnly = true;
-            this.銅價未稅.Width = 114;
-            // 
-            // 數量
-            // 
-            this.數量.DataPropertyName = "數量";
-            this.數量.FillWeight = 150F;
-            this.數量.HeaderText = "數量/kg";
-            this.數量.MinimumWidth = 100;
-            this.數量.Name = "數量";
-            this.數量.ReadOnly = true;
-            // 
-            // 金額
-            // 
-            this.金額.DataPropertyName = "金額";
-            this.金額.FillWeight = 150F;
-            this.金額.HeaderText = "金額(NTD)";
-            this.金額.MinimumWidth = 100;
-            this.金額.Name = "金額";
-            this.金額.ReadOnly = true;
-            this.金額.Width = 105;
-            // 
-            // 備註
-            // 
-            this.備註.DataPropertyName = "備註";
-            this.備註.FillWeight = 334F;
-            this.備註.HeaderText = "備註";
-            this.備註.MinimumWidth = 334;
-            this.備註.Name = "備註";
-            this.備註.ReadOnly = true;
-            this.備註.Width = 334;
             // 
             // btnClear_Order
             // 
@@ -403,6 +327,7 @@
             this.btnModify.TabIndex = 142;
             this.btnModify.Text = "修改";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnHistory
             // 
@@ -415,6 +340,7 @@
             this.btnHistory.TabIndex = 152;
             this.btnHistory.Text = "查價史";
             this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // label16
             // 
@@ -517,14 +443,14 @@
             this.dgvPrice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPrice.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("新細明體", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("新細明體", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPrice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.日期,
@@ -532,34 +458,35 @@
             this.SHFE銅板現貨,
             this.修改人員,
             this.create_date});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrice.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrice.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPrice.EnableHeadersVisualStyles = false;
             this.dgvPrice.Location = new System.Drawing.Point(0, 0);
             this.dgvPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("新細明體", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrice.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("新細明體", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrice.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPrice.RowHeadersVisible = false;
             this.dgvPrice.RowHeadersWidth = 25;
             this.dgvPrice.RowTemplate.Height = 21;
             this.dgvPrice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrice.Size = new System.Drawing.Size(339, 165);
             this.dgvPrice.TabIndex = 159;
+            this.dgvPrice.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrice_CellDoubleClick);
             // 
             // 日期
             // 
@@ -633,6 +560,7 @@
             this.btnClear_Price.TabIndex = 153;
             this.btnClear_Price.Text = "清除";
             this.btnClear_Price.UseVisualStyleBackColor = false;
+            this.btnClear_Price.Click += new System.EventHandler(this.btnClear_Price_Click);
             // 
             // btnModify_Price
             // 
@@ -645,6 +573,7 @@
             this.btnModify_Price.TabIndex = 142;
             this.btnModify_Price.Text = "修改";
             this.btnModify_Price.UseVisualStyleBackColor = false;
+            this.btnModify_Price.Click += new System.EventHandler(this.btnModify_Price_Click);
             // 
             // btnDelete_Price
             // 
@@ -657,6 +586,7 @@
             this.btnDelete_Price.TabIndex = 141;
             this.btnDelete_Price.Text = "刪除";
             this.btnDelete_Price.UseVisualStyleBackColor = false;
+            this.btnDelete_Price.Click += new System.EventHandler(this.btnDelete_Price_Click);
             // 
             // btnAdd_Price
             // 
@@ -669,6 +599,7 @@
             this.btnAdd_Price.TabIndex = 152;
             this.btnAdd_Price.Text = "新增";
             this.btnAdd_Price.UseVisualStyleBackColor = false;
+            this.btnAdd_Price.Click += new System.EventHandler(this.btnAdd_Price_Click);
             // 
             // label21
             // 
@@ -726,6 +657,7 @@
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(109, 29);
             this.txtDate.TabIndex = 146;
+            this.txtDate.Click += new System.EventHandler(this.txtDate_Click);
             // 
             // groupBox1
             // 
@@ -872,7 +804,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSave.BackColor = System.Drawing.Color.Red;
             this.btnSave.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnSave.Location = new System.Drawing.Point(441, 270);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -881,6 +813,7 @@
             this.btnSave.TabIndex = 142;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
@@ -1013,6 +946,94 @@
             this.label1.Text = "銅桿OD2.6mm/kg";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // 採購日期
+            // 
+            this.採購日期.DataPropertyName = "採購日期";
+            this.採購日期.FillWeight = 150F;
+            this.採購日期.HeaderText = "採購日期";
+            this.採購日期.MinimumWidth = 125;
+            this.採購日期.Name = "採購日期";
+            this.採購日期.ReadOnly = true;
+            this.採購日期.Width = 125;
+            // 
+            // 採購單號
+            // 
+            this.採購單號.DataPropertyName = "採購單號";
+            this.採購單號.FillWeight = 150F;
+            this.採購單號.HeaderText = "採購單號";
+            this.採購單號.MinimumWidth = 125;
+            this.採購單號.Name = "採購單號";
+            this.採購單號.ReadOnly = true;
+            this.採購單號.Width = 125;
+            // 
+            // 廠商
+            // 
+            this.廠商.DataPropertyName = "廠商";
+            this.廠商.FillWeight = 150F;
+            this.廠商.HeaderText = "廠商";
+            this.廠商.MinimumWidth = 125;
+            this.廠商.Name = "廠商";
+            this.廠商.ReadOnly = true;
+            this.廠商.Width = 125;
+            // 
+            // 規格
+            // 
+            this.規格.DataPropertyName = "規格";
+            this.規格.FillWeight = 150F;
+            this.規格.HeaderText = "規格";
+            this.規格.MinimumWidth = 125;
+            this.規格.Name = "規格";
+            this.規格.ReadOnly = true;
+            this.規格.Width = 125;
+            // 
+            // 銅價未稅
+            // 
+            this.銅價未稅.DataPropertyName = "銅價未稅";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.銅價未稅.DefaultCellStyle = dataGridViewCellStyle2;
+            this.銅價未稅.FillWeight = 150F;
+            this.銅價未稅.HeaderText = "銅價未稅/kg";
+            this.銅價未稅.MinimumWidth = 100;
+            this.銅價未稅.Name = "銅價未稅";
+            this.銅價未稅.ReadOnly = true;
+            this.銅價未稅.Width = 114;
+            // 
+            // 數量
+            // 
+            this.數量.DataPropertyName = "數量";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.數量.DefaultCellStyle = dataGridViewCellStyle3;
+            this.數量.FillWeight = 150F;
+            this.數量.HeaderText = "數量/kg";
+            this.數量.MinimumWidth = 100;
+            this.數量.Name = "數量";
+            this.數量.ReadOnly = true;
+            // 
+            // 金額
+            // 
+            this.金額.DataPropertyName = "金額";
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.金額.DefaultCellStyle = dataGridViewCellStyle4;
+            this.金額.FillWeight = 150F;
+            this.金額.HeaderText = "金額(NTD)";
+            this.金額.MinimumWidth = 100;
+            this.金額.Name = "金額";
+            this.金額.ReadOnly = true;
+            this.金額.Width = 105;
+            // 
+            // 備註
+            // 
+            this.備註.DataPropertyName = "備註";
+            this.備註.FillWeight = 334F;
+            this.備註.HeaderText = "備註";
+            this.備註.MinimumWidth = 334;
+            this.備註.Name = "備註";
+            this.備註.ReadOnly = true;
+            this.備註.Width = 334;
+            // 
             // frmPriceSetting_Copper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1102,6 +1123,13 @@
         private System.Windows.Forms.Label lblSHFE_NTD;
         private System.Windows.Forms.Label lblLME_NTD;
         private System.Windows.Forms.DataGridView dgvOrder;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 日期;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LME銅板現貨;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SHFE銅板現貨;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 修改人員;
+        private System.Windows.Forms.DataGridViewTextBoxColumn create_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn 採購日期;
         private System.Windows.Forms.DataGridViewTextBoxColumn 採購單號;
         private System.Windows.Forms.DataGridViewTextBoxColumn 廠商;
@@ -1110,12 +1138,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 數量;
         private System.Windows.Forms.DataGridViewTextBoxColumn 金額;
         private System.Windows.Forms.DataGridViewTextBoxColumn 備註;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 日期;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LME銅板現貨;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SHFE銅板現貨;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 修改人員;
-        private System.Windows.Forms.DataGridViewTextBoxColumn create_date;
     }
 }

@@ -113,23 +113,29 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmPriceSetting_Others.cs">
+    <Compile Include="frmInq_History_Working.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPriceSetting_Others.Designer.cs">
-      <DependentUpon>frmPriceSetting_Others.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPriceSetting_Copper.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPriceSetting_Copper.Designer.cs">
-      <DependentUpon>frmPriceSetting_Copper.cs</DependentUpon>
+    <Compile Include="frmInq_History_Working.designer.cs">
+      <DependentUpon>frmInq_History_Working.cs</DependentUpon>
     </Compile>
     <Compile Include="frmModify_CZF.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmModify_CZF.Designer.cs">
       <DependentUpon>frmModify_CZF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPriceSetting_Copper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceSetting_Copper.designer.cs">
+      <DependentUpon>frmPriceSetting_Copper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPriceSetting_Others.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceSetting_Others.designer.cs">
+      <DependentUpon>frmPriceSetting_Others.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReName_Material.cs">
       <SubType>Form</SubType>
@@ -584,6 +590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmReName_Quotation.resx">
       <DependentUpon>frmReName_Quotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInq_History_Working.resx">
+      <DependentUpon>frmInq_History_Working.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModify_CZF.resx">
       <DependentUpon>frmModify_CZF.cs</DependentUpon>
