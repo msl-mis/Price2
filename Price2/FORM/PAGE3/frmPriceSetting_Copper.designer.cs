@@ -39,6 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,6 +64,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtUSD_working = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblSHFE_avg = new System.Windows.Forms.Label();
             this.lblLME_avg = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -84,6 +86,7 @@
             this.txtLME = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpAvgDate = new System.Windows.Forms.DateTimePicker();
             this.lblAvgPrice = new System.Windows.Forms.Label();
             this.lblAvgTotal = new System.Windows.Forms.Label();
             this.lblExpectedTrend = new System.Windows.Forms.Label();
@@ -106,9 +109,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpAvgDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -134,7 +134,7 @@
             this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox.Name = "groupBox";
             this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(1044, 673);
+            this.groupBox.Size = new System.Drawing.Size(1058, 666);
             this.groupBox.TabIndex = 8;
             this.groupBox.TabStop = false;
             // 
@@ -149,18 +149,28 @@
             this.groupBox3.Controls.Add(this.btnInq_Order);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 410);
+            this.groupBox3.Location = new System.Drawing.Point(6, 421);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1040, 260);
+            this.groupBox3.Size = new System.Drawing.Size(1046, 237);
             this.groupBox3.TabIndex = 130;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "銅價採購成交價(未稅)";
+            // 
+            // dtpOrderDate
+            // 
+            this.dtpOrderDate.CustomFormat = "yyyy/MM";
+            this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpOrderDate.Location = new System.Drawing.Point(161, 22);
+            this.dtpOrderDate.Name = "dtpOrderDate";
+            this.dtpOrderDate.ShowUpDown = true;
+            this.dtpOrderDate.Size = new System.Drawing.Size(110, 29);
+            this.dtpOrderDate.TabIndex = 166;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(948, 226);
+            this.btnClose.Location = new System.Drawing.Point(948, 196);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(67, 28);
@@ -172,7 +182,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(6, 223);
+            this.label4.Location = new System.Drawing.Point(6, 193);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(288, 31);
             this.label4.TabIndex = 164;
@@ -186,7 +196,7 @@
             this.panel3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel3.Location = new System.Drawing.Point(6, 58);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1020, 163);
+            this.panel3.Size = new System.Drawing.Size(1020, 130);
             this.panel3.TabIndex = 163;
             // 
             // dgvOrder
@@ -194,8 +204,6 @@
             this.dgvOrder.AllowUserToAddRows = false;
             this.dgvOrder.AllowUserToDeleteRows = false;
             this.dgvOrder.AllowUserToOrderColumns = true;
-            this.dgvOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrder.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -241,7 +249,7 @@
             this.dgvOrder.RowHeadersWidth = 25;
             this.dgvOrder.RowTemplate.Height = 21;
             this.dgvOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOrder.Size = new System.Drawing.Size(1020, 163);
+            this.dgvOrder.Size = new System.Drawing.Size(1020, 130);
             this.dgvOrder.TabIndex = 164;
             // 
             // 採購日期
@@ -295,7 +303,6 @@
             this.銅價未稅.MinimumWidth = 100;
             this.銅價未稅.Name = "銅價未稅";
             this.銅價未稅.ReadOnly = true;
-            this.銅價未稅.Width = 114;
             // 
             // 數量
             // 
@@ -320,7 +327,6 @@
             this.金額.MinimumWidth = 100;
             this.金額.Name = "金額";
             this.金額.ReadOnly = true;
-            this.金額.Width = 105;
             // 
             // 備註
             // 
@@ -374,7 +380,7 @@
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox2.Location = new System.Drawing.Point(560, 0);
+            this.groupBox2.Location = new System.Drawing.Point(572, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(480, 410);
             this.groupBox2.TabIndex = 129;
@@ -482,6 +488,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(457, 306);
             this.panel1.TabIndex = 130;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.CustomFormat = "yyyy/MM/dd";
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDate.Location = new System.Drawing.Point(22, 47);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.ShowUpDown = true;
+            this.dtpDate.Size = new System.Drawing.Size(110, 29);
+            this.dtpDate.TabIndex = 161;
             // 
             // lblSHFE_avg
             // 
@@ -755,12 +771,22 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(6, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(560, 410);
             this.groupBox1.TabIndex = 128;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "2.6mm平均銅價(未稅)";
+            // 
+            // dtpAvgDate
+            // 
+            this.dtpAvgDate.CustomFormat = "yyyy/MM";
+            this.dtpAvgDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpAvgDate.Location = new System.Drawing.Point(326, 18);
+            this.dtpAvgDate.Name = "dtpAvgDate";
+            this.dtpAvgDate.ShowUpDown = true;
+            this.dtpAvgDate.Size = new System.Drawing.Size(110, 29);
+            this.dtpAvgDate.TabIndex = 154;
             // 
             // lblAvgPrice
             // 
@@ -1006,41 +1032,11 @@
             this.label1.Text = "銅桿OD2.6mm/kg";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dtpAvgDate
-            // 
-            this.dtpAvgDate.CustomFormat = "yyyy/MM";
-            this.dtpAvgDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAvgDate.Location = new System.Drawing.Point(326, 18);
-            this.dtpAvgDate.Name = "dtpAvgDate";
-            this.dtpAvgDate.ShowUpDown = true;
-            this.dtpAvgDate.Size = new System.Drawing.Size(110, 29);
-            this.dtpAvgDate.TabIndex = 154;
-            // 
-            // dtpOrderDate
-            // 
-            this.dtpOrderDate.CustomFormat = "yyyy/MM";
-            this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpOrderDate.Location = new System.Drawing.Point(161, 22);
-            this.dtpOrderDate.Name = "dtpOrderDate";
-            this.dtpOrderDate.ShowUpDown = true;
-            this.dtpOrderDate.Size = new System.Drawing.Size(110, 29);
-            this.dtpOrderDate.TabIndex = 166;
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.CustomFormat = "yyyy/MM/dd";
-            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDate.Location = new System.Drawing.Point(22, 47);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.ShowUpDown = true;
-            this.dtpDate.Size = new System.Drawing.Size(110, 29);
-            this.dtpDate.TabIndex = 161;
-            // 
             // frmPriceSetting_Copper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 673);
+            this.ClientSize = new System.Drawing.Size(1058, 666);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.Name = "frmPriceSetting_Copper";

@@ -433,3 +433,11 @@ D:\Price2\Price2\obj\Debug\Price2.frmProofingFile.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmInq_History_Working.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPriceSetting_Others.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSafetyFees_Input.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSafetyFees_Report.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmUSB2_Input.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmLabel_UL_Input.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmLabel_UL817_Input.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_Inq_No2.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmWorking_Adjust.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmWorking_Adjust_Spec.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmMaterial_Adjust.resources

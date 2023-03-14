@@ -55,6 +55,13 @@
             this.控管材料設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu3_6_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu3_6_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.安規費與USB年費設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_7_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_7_2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_7_3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.uL標籤與費用設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_8_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu3_8_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,8 +70,10 @@
             this.menu4_5 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_6 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu4_7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_11 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu5 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.共用資料 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.gbMain = new System.Windows.Forms.GroupBox();
             this.tabMain = new System.Windows.Forms.TabControl();
@@ -137,14 +146,14 @@
             this.btn4_5 = new System.Windows.Forms.Button();
             this.btn4_6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn4_17 = new System.Windows.Forms.Button();
+            this.btn4_16 = new System.Windows.Forms.Button();
+            this.btn4_15 = new System.Windows.Forms.Button();
+            this.btn4_14 = new System.Windows.Forms.Button();
+            this.btn4_13 = new System.Windows.Forms.Button();
+            this.btn4_12 = new System.Windows.Forms.Button();
+            this.btn4_11 = new System.Windows.Forms.Button();
+            this.btn4_10 = new System.Windows.Forms.Button();
             this.btn4_9 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -158,27 +167,32 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.gb6 = new System.Windows.Forms.GroupBox();
-            this.btn6_14 = new System.Windows.Forms.Button();
-            this.btn6_7 = new System.Windows.Forms.Button();
-            this.btn6_13 = new System.Windows.Forms.Button();
-            this.btn6_6 = new System.Windows.Forms.Button();
-            this.btn6_12 = new System.Windows.Forms.Button();
-            this.btn6_5 = new System.Windows.Forms.Button();
-            this.btn6_11 = new System.Windows.Forms.Button();
-            this.btn6_4 = new System.Windows.Forms.Button();
-            this.btn6_8 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.btn6_1 = new System.Windows.Forms.Button();
-            this.btn6_9 = new System.Windows.Forms.Button();
             this.btn6_2 = new System.Windows.Forms.Button();
-            this.btn6_10 = new System.Windows.Forms.Button();
             this.btn6_3 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.gb7 = new System.Windows.Forms.GroupBox();
+            this.btn7_14 = new System.Windows.Forms.Button();
+            this.btn7_7 = new System.Windows.Forms.Button();
+            this.btn7_13 = new System.Windows.Forms.Button();
+            this.btn7_6 = new System.Windows.Forms.Button();
+            this.btn7_12 = new System.Windows.Forms.Button();
+            this.btn7_5 = new System.Windows.Forms.Button();
+            this.btn7_11 = new System.Windows.Forms.Button();
+            this.btn7_4 = new System.Windows.Forms.Button();
+            this.btn7_8 = new System.Windows.Forms.Button();
+            this.btn7_1 = new System.Windows.Forms.Button();
+            this.btn7_9 = new System.Windows.Forms.Button();
+            this.btn7_2 = new System.Windows.Forms.Button();
+            this.btn7_10 = new System.Windows.Forms.Button();
+            this.btn7_3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.安規費與USB年費設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu3_7_1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu3_7_2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu3_7_3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu4_12 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.gbMain.SuspendLayout();
             this.tabMain.SuspendLayout();
@@ -208,6 +222,9 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.gb6.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.gb7.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMain
@@ -221,11 +238,12 @@
             this.menu4,
             this.menu5,
             this.menu6,
+            this.共用資料,
             this.menu_Exit});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mnuMain.Size = new System.Drawing.Size(1113, 30);
+            this.mnuMain.Size = new System.Drawing.Size(1113, 27);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
             // 
@@ -332,7 +350,8 @@
             this.menu3_4,
             this.menu3_5,
             this.控管材料設定ToolStripMenuItem,
-            this.安規費與USB年費設定ToolStripMenuItem});
+            this.安規費與USB年費設定ToolStripMenuItem,
+            this.uL標籤與費用設定ToolStripMenuItem});
             this.menu3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu3.Name = "menu3";
             this.menu3.Size = new System.Drawing.Size(77, 24);
@@ -420,6 +439,60 @@
             this.menu3_6_2.Text = "6_&2.材料採購明細";
             this.menu3_6_2.Click += new System.EventHandler(this.menu3_6_2_Click);
             // 
+            // 安規費與USB年費設定ToolStripMenuItem
+            // 
+            this.安規費與USB年費設定ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu3_7_1,
+            this.menu3_7_2,
+            this.menu3_7_3});
+            this.安規費與USB年費設定ToolStripMenuItem.Name = "安規費與USB年費設定ToolStripMenuItem";
+            this.安規費與USB年費設定ToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.安規費與USB年費設定ToolStripMenuItem.Text = "&7.安規費與USB年費設定";
+            // 
+            // menu3_7_1
+            // 
+            this.menu3_7_1.Name = "menu3_7_1";
+            this.menu3_7_1.Size = new System.Drawing.Size(294, 26);
+            this.menu3_7_1.Text = "7_&1.每月安規費用登錄";
+            this.menu3_7_1.Click += new System.EventHandler(this.menu3_7_1_Click);
+            // 
+            // menu3_7_2
+            // 
+            this.menu3_7_2.Name = "menu3_7_2";
+            this.menu3_7_2.Size = new System.Drawing.Size(294, 26);
+            this.menu3_7_2.Text = "7_&2.安規費用數量統計";
+            this.menu3_7_2.Click += new System.EventHandler(this.menu3_7_2_Click);
+            // 
+            // menu3_7_3
+            // 
+            this.menu3_7_3.Name = "menu3_7_3";
+            this.menu3_7_3.Size = new System.Drawing.Size(294, 26);
+            this.menu3_7_3.Text = "7_&3.USB2.0協會年費分攤";
+            this.menu3_7_3.Click += new System.EventHandler(this.menu3_7_3_Click);
+            // 
+            // uL標籤與費用設定ToolStripMenuItem
+            // 
+            this.uL標籤與費用設定ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu3_8_1,
+            this.menu3_8_2});
+            this.uL標籤與費用設定ToolStripMenuItem.Name = "uL標籤與費用設定ToolStripMenuItem";
+            this.uL標籤與費用設定ToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
+            this.uL標籤與費用設定ToolStripMenuItem.Text = "&8.UL標籤與費用設定";
+            // 
+            // menu3_8_1
+            // 
+            this.menu3_8_1.Name = "menu3_8_1";
+            this.menu3_8_1.Size = new System.Drawing.Size(345, 26);
+            this.menu3_8_1.Text = "8_&1.UL標籤費用與成本登錄";
+            this.menu3_8_1.Click += new System.EventHandler(this.menu3_8_1_Click);
+            // 
+            // menu3_8_2
+            // 
+            this.menu3_8_2.Name = "menu3_8_2";
+            this.menu3_8_2.Size = new System.Drawing.Size(345, 26);
+            this.menu3_8_2.Text = "8_&2.UL817標籤數量與價格登錄";
+            this.menu3_8_2.Click += new System.EventHandler(this.menu3_8_2_Click);
+            // 
             // menu4
             // 
             this.menu4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -429,7 +502,9 @@
             this.menu4_4,
             this.menu4_5,
             this.menu4_6,
-            this.menu4_7});
+            this.menu4_7,
+            this.menu4_11,
+            this.menu4_12});
             this.menu4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu4.Name = "menu4";
             this.menu4.Size = new System.Drawing.Size(74, 24);
@@ -438,51 +513,58 @@
             // menu4_1
             // 
             this.menu4_1.Name = "menu4_1";
-            this.menu4_1.Size = new System.Drawing.Size(238, 26);
+            this.menu4_1.Size = new System.Drawing.Size(309, 26);
             this.menu4_1.Text = "&1.參照法資料輸入";
             this.menu4_1.Click += new System.EventHandler(this.menu4_1_Click);
             // 
             // menu4_2
             // 
             this.menu4_2.Name = "menu4_2";
-            this.menu4_2.Size = new System.Drawing.Size(238, 26);
+            this.menu4_2.Size = new System.Drawing.Size(309, 26);
             this.menu4_2.Text = "&2.報價管理";
             this.menu4_2.Click += new System.EventHandler(this.menu4_2_Click);
             // 
             // menu4_3
             // 
             this.menu4_3.Name = "menu4_3";
-            this.menu4_3.Size = new System.Drawing.Size(238, 26);
+            this.menu4_3.Size = new System.Drawing.Size(309, 26);
             this.menu4_3.Text = "&3.客人總檔";
             this.menu4_3.Click += new System.EventHandler(this.menu4_3_Click);
             // 
             // menu4_4
             // 
             this.menu4_4.Name = "menu4_4";
-            this.menu4_4.Size = new System.Drawing.Size(238, 26);
+            this.menu4_4.Size = new System.Drawing.Size(309, 26);
             this.menu4_4.Text = "&4.打樣單";
             this.menu4_4.Click += new System.EventHandler(this.menu4_4_Click);
             // 
             // menu4_5
             // 
             this.menu4_5.Name = "menu4_5";
-            this.menu4_5.Size = new System.Drawing.Size(238, 26);
+            this.menu4_5.Size = new System.Drawing.Size(309, 26);
             this.menu4_5.Text = "&5.客戶報價單";
             this.menu4_5.Click += new System.EventHandler(this.menu4_5_Click);
             // 
             // menu4_6
             // 
             this.menu4_6.Name = "menu4_6";
-            this.menu4_6.Size = new System.Drawing.Size(238, 26);
+            this.menu4_6.Size = new System.Drawing.Size(309, 26);
             this.menu4_6.Text = "&6.訂單管理";
             this.menu4_6.Click += new System.EventHandler(this.menu4_6_Click);
             // 
             // menu4_7
             // 
             this.menu4_7.Name = "menu4_7";
-            this.menu4_7.Size = new System.Drawing.Size(238, 26);
+            this.menu4_7.Size = new System.Drawing.Size(309, 26);
             this.menu4_7.Text = "&7.客戶打樣總檔";
             this.menu4_7.Click += new System.EventHandler(this.menu4_7_Click);
+            // 
+            // menu4_11
+            // 
+            this.menu4_11.Name = "menu4_11";
+            this.menu4_11.Size = new System.Drawing.Size(309, 26);
+            this.menu4_11.Text = "&11.調整報價加工分/不良率";
+            this.menu4_11.Click += new System.EventHandler(this.menu4_11_Click);
             // 
             // menu5
             // 
@@ -495,14 +577,21 @@
             // 
             this.menu6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu6.Name = "menu6";
-            this.menu6.Size = new System.Drawing.Size(112, 24);
-            this.menu6.Text = "&6.共用資料";
+            this.menu6.Size = new System.Drawing.Size(74, 24);
+            this.menu6.Text = "&6.業務";
+            // 
+            // 共用資料
+            // 
+            this.共用資料.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.共用資料.Name = "共用資料";
+            this.共用資料.Size = new System.Drawing.Size(106, 24);
+            this.共用資料.Text = "&7.共用資料";
             // 
             // menu_Exit
             // 
-            this.menu_Exit.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.menu_Exit.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu_Exit.Name = "menu_Exit";
-            this.menu_Exit.Size = new System.Drawing.Size(78, 24);
+            this.menu_Exit.Size = new System.Drawing.Size(74, 24);
             this.menu_Exit.Text = "&X.結束";
             this.menu_Exit.Click += new System.EventHandler(this.menu_Exit_Click);
             // 
@@ -511,11 +600,11 @@
             this.gbMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gbMain.Controls.Add(this.tabMain);
             this.gbMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbMain.Location = new System.Drawing.Point(0, 30);
+            this.gbMain.Location = new System.Drawing.Point(0, 27);
             this.gbMain.Margin = new System.Windows.Forms.Padding(2);
             this.gbMain.Name = "gbMain";
             this.gbMain.Padding = new System.Windows.Forms.Padding(2);
-            this.gbMain.Size = new System.Drawing.Size(1113, 592);
+            this.gbMain.Size = new System.Drawing.Size(1113, 595);
             this.gbMain.TabIndex = 3;
             this.gbMain.TabStop = false;
             // 
@@ -528,9 +617,10 @@
             this.tabMain.Controls.Add(this.tabPage4);
             this.tabMain.Controls.Add(this.tabPage5);
             this.tabMain.Controls.Add(this.tabPage6);
+            this.tabMain.Controls.Add(this.tabPage7);
             this.tabMain.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabMain.ItemSize = new System.Drawing.Size(130, 30);
-            this.tabMain.Location = new System.Drawing.Point(121, 23);
+            this.tabMain.Location = new System.Drawing.Point(121, 26);
             this.tabMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -1101,6 +1191,7 @@
             this.btn3_8_1.Text = "1.UL標籤費用與成本登錄";
             this.btn3_8_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_8_1.UseVisualStyleBackColor = true;
+            this.btn3_8_1.Click += new System.EventHandler(this.btn3_8_1_Click);
             // 
             // btn3_8_2
             // 
@@ -1117,6 +1208,7 @@
             this.btn3_8_2.Text = "2.UL817標籤數量與價格登錄";
             this.btn3_8_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn3_8_2.UseVisualStyleBackColor = true;
+            this.btn3_8_2.Click += new System.EventHandler(this.btn3_8_2_Click);
             // 
             // btnReturn_gb3_8
             // 
@@ -1667,14 +1759,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.button9, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button8, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button7, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_17, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_16, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_15, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_14, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_13, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_12, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_11, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn4_10, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn4_9, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 381);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -1687,133 +1779,135 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 102);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
-            // button9
+            // btn4_17
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button9.Location = new System.Drawing.Point(2, 70);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(211, 30);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "17.備註資料輸入";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button9.UseCompatibleTextRendering = true;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn4_17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_17.FlatAppearance.BorderSize = 0;
+            this.btn4_17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_17.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_17.Location = new System.Drawing.Point(2, 70);
+            this.btn4_17.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_17.Name = "btn4_17";
+            this.btn4_17.Size = new System.Drawing.Size(211, 30);
+            this.btn4_17.TabIndex = 9;
+            this.btn4_17.Text = "17.備註資料輸入";
+            this.btn4_17.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_17.UseCompatibleTextRendering = true;
+            this.btn4_17.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn4_16
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button8.Location = new System.Drawing.Point(647, 36);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(213, 30);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "16.銅價試算";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button8.UseCompatibleTextRendering = true;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn4_16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_16.FlatAppearance.BorderSize = 0;
+            this.btn4_16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_16.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_16.Location = new System.Drawing.Point(647, 36);
+            this.btn4_16.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_16.Name = "btn4_16";
+            this.btn4_16.Size = new System.Drawing.Size(213, 30);
+            this.btn4_16.TabIndex = 8;
+            this.btn4_16.Text = "16.銅價試算";
+            this.btn4_16.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_16.UseCompatibleTextRendering = true;
+            this.btn4_16.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn4_15
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button7.Location = new System.Drawing.Point(432, 36);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(211, 30);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "15.特別支出";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button7.UseCompatibleTextRendering = true;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn4_15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_15.FlatAppearance.BorderSize = 0;
+            this.btn4_15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_15.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_15.Location = new System.Drawing.Point(432, 36);
+            this.btn4_15.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_15.Name = "btn4_15";
+            this.btn4_15.Size = new System.Drawing.Size(211, 30);
+            this.btn4_15.TabIndex = 7;
+            this.btn4_15.Text = "15.特別支出";
+            this.btn4_15.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_15.UseCompatibleTextRendering = true;
+            this.btn4_15.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn4_14
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button6.Location = new System.Drawing.Point(217, 36);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(211, 30);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "14.特選材料查詢更名";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.UseCompatibleTextRendering = true;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn4_14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_14.FlatAppearance.BorderSize = 0;
+            this.btn4_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_14.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_14.Location = new System.Drawing.Point(217, 36);
+            this.btn4_14.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_14.Name = "btn4_14";
+            this.btn4_14.Size = new System.Drawing.Size(211, 30);
+            this.btn4_14.TabIndex = 6;
+            this.btn4_14.Text = "14.特選材料查詢更名";
+            this.btn4_14.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_14.UseCompatibleTextRendering = true;
+            this.btn4_14.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn4_13
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.Location = new System.Drawing.Point(2, 36);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(211, 30);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "13.量大資料查詢";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.UseCompatibleTextRendering = true;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn4_13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_13.FlatAppearance.BorderSize = 0;
+            this.btn4_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_13.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_13.Location = new System.Drawing.Point(2, 36);
+            this.btn4_13.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_13.Name = "btn4_13";
+            this.btn4_13.Size = new System.Drawing.Size(211, 30);
+            this.btn4_13.TabIndex = 5;
+            this.btn4_13.Text = "13.量大資料查詢";
+            this.btn4_13.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_13.UseCompatibleTextRendering = true;
+            this.btn4_13.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn4_12
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(647, 2);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(213, 30);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "12.調整報價材料";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.UseCompatibleTextRendering = true;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn4_12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_12.FlatAppearance.BorderSize = 0;
+            this.btn4_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_12.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_12.Location = new System.Drawing.Point(647, 2);
+            this.btn4_12.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_12.Name = "btn4_12";
+            this.btn4_12.Size = new System.Drawing.Size(213, 30);
+            this.btn4_12.TabIndex = 4;
+            this.btn4_12.Text = "12.調整報價材料";
+            this.btn4_12.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_12.UseCompatibleTextRendering = true;
+            this.btn4_12.UseVisualStyleBackColor = true;
+            this.btn4_12.Click += new System.EventHandler(this.btn4_12_Click);
             // 
-            // button3
+            // btn4_11
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(432, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "11.調整報價加工分/不良率";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.UseCompatibleTextRendering = true;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn4_11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_11.FlatAppearance.BorderSize = 0;
+            this.btn4_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_11.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_11.Location = new System.Drawing.Point(432, 2);
+            this.btn4_11.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_11.Name = "btn4_11";
+            this.btn4_11.Size = new System.Drawing.Size(211, 30);
+            this.btn4_11.TabIndex = 3;
+            this.btn4_11.Text = "11.調整報價加工分/不良率";
+            this.btn4_11.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_11.UseCompatibleTextRendering = true;
+            this.btn4_11.UseVisualStyleBackColor = true;
+            this.btn4_11.Click += new System.EventHandler(this.btn4_11_Click);
             // 
-            // button2
+            // btn4_10
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(217, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 30);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "10.客戶客訴查詢";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.UseCompatibleTextRendering = true;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn4_10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4_10.FlatAppearance.BorderSize = 0;
+            this.btn4_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4_10.Font = new System.Drawing.Font("新細明體", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn4_10.Location = new System.Drawing.Point(217, 2);
+            this.btn4_10.Margin = new System.Windows.Forms.Padding(2);
+            this.btn4_10.Name = "btn4_10";
+            this.btn4_10.Size = new System.Drawing.Size(211, 30);
+            this.btn4_10.TabIndex = 2;
+            this.btn4_10.Text = "10.客戶客訴查詢";
+            this.btn4_10.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn4_10.UseCompatibleTextRendering = true;
+            this.btn4_10.UseVisualStyleBackColor = true;
             // 
             // btn4_9
             // 
@@ -1994,247 +2088,370 @@
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(877, 498);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "6.公用資料";
+            this.tabPage6.Text = "6.業務";
             // 
             // gb6
             // 
-            this.gb6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.gb6.Controls.Add(this.btn6_14);
-            this.gb6.Controls.Add(this.btn6_7);
-            this.gb6.Controls.Add(this.btn6_13);
-            this.gb6.Controls.Add(this.btn6_6);
-            this.gb6.Controls.Add(this.btn6_12);
-            this.gb6.Controls.Add(this.btn6_5);
-            this.gb6.Controls.Add(this.btn6_11);
-            this.gb6.Controls.Add(this.btn6_4);
-            this.gb6.Controls.Add(this.btn6_8);
-            this.gb6.Controls.Add(this.btn6_1);
-            this.gb6.Controls.Add(this.btn6_9);
-            this.gb6.Controls.Add(this.btn6_2);
-            this.gb6.Controls.Add(this.btn6_10);
-            this.gb6.Controls.Add(this.btn6_3);
-            this.gb6.Controls.Add(this.label6);
+            this.gb6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(192)))));
+            this.gb6.Controls.Add(this.tableLayoutPanel11);
+            this.gb6.Controls.Add(this.label11);
+            this.gb6.Controls.Add(this.button12);
             this.gb6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gb6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.gb6.Location = new System.Drawing.Point(0, 0);
-            this.gb6.Margin = new System.Windows.Forms.Padding(2);
+            this.gb6.Margin = new System.Windows.Forms.Padding(0);
             this.gb6.Name = "gb6";
             this.gb6.Padding = new System.Windows.Forms.Padding(2);
             this.gb6.Size = new System.Drawing.Size(877, 498);
-            this.gb6.TabIndex = 8;
+            this.gb6.TabIndex = 5;
             this.gb6.TabStop = false;
             this.gb6.Visible = false;
             // 
-            // btn6_14
+            // tableLayoutPanel11
             // 
-            this.btn6_14.FlatAppearance.BorderSize = 0;
-            this.btn6_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_14.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_14.Location = new System.Drawing.Point(459, 342);
-            this.btn6_14.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_14.Name = "btn6_14";
-            this.btn6_14.Size = new System.Drawing.Size(380, 40);
-            this.btn6_14.TabIndex = 34;
-            this.btn6_14.Text = "14.檢查已成交57A及304材料在火車頭";
-            this.btn6_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_14.UseVisualStyleBackColor = true;
-            this.btn6_14.Visible = false;
-            // 
-            // btn6_7
-            // 
-            this.btn6_7.FlatAppearance.BorderSize = 0;
-            this.btn6_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_7.Location = new System.Drawing.Point(34, 342);
-            this.btn6_7.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_7.Name = "btn6_7";
-            this.btn6_7.Size = new System.Drawing.Size(380, 40);
-            this.btn6_7.TabIndex = 33;
-            this.btn6_7.Text = "7.檢查報價單中有二個包裝材料";
-            this.btn6_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_7.UseVisualStyleBackColor = true;
-            // 
-            // btn6_13
-            // 
-            this.btn6_13.FlatAppearance.BorderSize = 0;
-            this.btn6_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_13.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_13.Location = new System.Drawing.Point(459, 294);
-            this.btn6_13.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_13.Name = "btn6_13";
-            this.btn6_13.Size = new System.Drawing.Size(380, 40);
-            this.btn6_13.TabIndex = 32;
-            this.btn6_13.Text = "13.304材料在火車頭外層檢查表";
-            this.btn6_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_13.UseVisualStyleBackColor = true;
-            // 
-            // btn6_6
-            // 
-            this.btn6_6.FlatAppearance.BorderSize = 0;
-            this.btn6_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_6.Location = new System.Drawing.Point(34, 294);
-            this.btn6_6.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_6.Name = "btn6_6";
-            this.btn6_6.Size = new System.Drawing.Size(380, 40);
-            this.btn6_6.TabIndex = 31;
-            this.btn6_6.Text = "6.參照法異動未更新報價檢查表";
-            this.btn6_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_6.UseVisualStyleBackColor = true;
-            // 
-            // btn6_12
-            // 
-            this.btn6_12.FlatAppearance.BorderSize = 0;
-            this.btn6_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_12.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_12.Location = new System.Drawing.Point(459, 246);
-            this.btn6_12.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_12.Name = "btn6_12";
-            this.btn6_12.Size = new System.Drawing.Size(380, 40);
-            this.btn6_12.TabIndex = 30;
-            this.btn6_12.Text = "12.有鼎新採購品號卻無Price品號";
-            this.btn6_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_12.UseVisualStyleBackColor = true;
-            // 
-            // btn6_5
-            // 
-            this.btn6_5.FlatAppearance.BorderSize = 0;
-            this.btn6_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_5.Location = new System.Drawing.Point(34, 246);
-            this.btn6_5.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_5.Name = "btn6_5";
-            this.btn6_5.Size = new System.Drawing.Size(380, 40);
-            this.btn6_5.TabIndex = 29;
-            this.btn6_5.Text = "5.檢查品號前六碼不一致";
-            this.btn6_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_5.UseVisualStyleBackColor = true;
-            // 
-            // btn6_11
-            // 
-            this.btn6_11.FlatAppearance.BorderSize = 0;
-            this.btn6_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_11.Location = new System.Drawing.Point(459, 198);
-            this.btn6_11.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_11.Name = "btn6_11";
-            this.btn6_11.Size = new System.Drawing.Size(380, 40);
-            this.btn6_11.TabIndex = 28;
-            this.btn6_11.Text = "11.報價低於成本價檢查表";
-            this.btn6_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_11.UseVisualStyleBackColor = true;
-            // 
-            // btn6_4
-            // 
-            this.btn6_4.FlatAppearance.BorderSize = 0;
-            this.btn6_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_4.Location = new System.Drawing.Point(34, 198);
-            this.btn6_4.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_4.Name = "btn6_4";
-            this.btn6_4.Size = new System.Drawing.Size(380, 40);
-            this.btn6_4.TabIndex = 27;
-            this.btn6_4.Text = "4.檢查是否有包裝運開頭自訂材料名";
-            this.btn6_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_4.UseVisualStyleBackColor = true;
-            // 
-            // btn6_8
-            // 
-            this.btn6_8.FlatAppearance.BorderSize = 0;
-            this.btn6_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_8.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_8.Location = new System.Drawing.Point(459, 54);
-            this.btn6_8.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_8.Name = "btn6_8";
-            this.btn6_8.Size = new System.Drawing.Size(380, 40);
-            this.btn6_8.TabIndex = 26;
-            this.btn6_8.Text = "8.檢查報價單材料不在火車頭和特選";
-            this.btn6_8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_8.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel11.ColumnCount = 3;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.Controls.Add(this.btn6_1, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btn6_2, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.btn6_3, 2, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(6, 62);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(862, 294);
+            this.tableLayoutPanel11.TabIndex = 15;
             // 
             // btn6_1
             // 
+            this.btn6_1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn6_1.FlatAppearance.BorderSize = 0;
             this.btn6_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6_1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_1.Location = new System.Drawing.Point(34, 54);
+            this.btn6_1.Image = global::Price2.Properties.Resources._2_1phonebook;
+            this.btn6_1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn6_1.Location = new System.Drawing.Point(4, 4);
             this.btn6_1.Margin = new System.Windows.Forms.Padding(4);
             this.btn6_1.Name = "btn6_1";
-            this.btn6_1.Size = new System.Drawing.Size(380, 40);
-            this.btn6_1.TabIndex = 25;
-            this.btn6_1.Text = "1.查詢有訂單無品號的材料";
-            this.btn6_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_1.Size = new System.Drawing.Size(279, 118);
+            this.btn6_1.TabIndex = 7;
+            this.btn6_1.Text = "1.客號材積箱量與重量輸入";
+            this.btn6_1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6_1.UseVisualStyleBackColor = true;
-            // 
-            // btn6_9
-            // 
-            this.btn6_9.FlatAppearance.BorderSize = 0;
-            this.btn6_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_9.Location = new System.Drawing.Point(459, 102);
-            this.btn6_9.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_9.Name = "btn6_9";
-            this.btn6_9.Size = new System.Drawing.Size(380, 40);
-            this.btn6_9.TabIndex = 24;
-            this.btn6_9.Text = "9.客戶成交查詢異常資料檢查表";
-            this.btn6_9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_9.UseVisualStyleBackColor = true;
             // 
             // btn6_2
             // 
+            this.btn6_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn6_2.FlatAppearance.BorderSize = 0;
             this.btn6_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6_2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_2.Location = new System.Drawing.Point(34, 102);
+            this.btn6_2.Image = global::Price2.Properties.Resources._2_2customeradd;
+            this.btn6_2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn6_2.Location = new System.Drawing.Point(291, 4);
             this.btn6_2.Margin = new System.Windows.Forms.Padding(4);
             this.btn6_2.Name = "btn6_2";
-            this.btn6_2.Size = new System.Drawing.Size(380, 40);
-            this.btn6_2.TabIndex = 23;
-            this.btn6_2.Text = "2.檢查品號對應多材料名";
-            this.btn6_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_2.Size = new System.Drawing.Size(279, 118);
+            this.btn6_2.TabIndex = 8;
+            this.btn6_2.Text = "2.出貨箱號列印";
+            this.btn6_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6_2.UseVisualStyleBackColor = true;
-            // 
-            // btn6_10
-            // 
-            this.btn6_10.FlatAppearance.BorderSize = 0;
-            this.btn6_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn6_10.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_10.Location = new System.Drawing.Point(459, 150);
-            this.btn6_10.Margin = new System.Windows.Forms.Padding(4);
-            this.btn6_10.Name = "btn6_10";
-            this.btn6_10.Size = new System.Drawing.Size(380, 40);
-            this.btn6_10.TabIndex = 22;
-            this.btn6_10.Text = "10.安規線材火車頭設定檢查表";
-            this.btn6_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_10.UseVisualStyleBackColor = true;
             // 
             // btn6_3
             // 
+            this.btn6_3.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn6_3.FlatAppearance.BorderSize = 0;
             this.btn6_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6_3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn6_3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn6_3.Location = new System.Drawing.Point(34, 150);
+            this.btn6_3.Image = global::Price2.Properties.Resources._2_3firmadd;
+            this.btn6_3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn6_3.Location = new System.Drawing.Point(578, 4);
             this.btn6_3.Margin = new System.Windows.Forms.Padding(4);
             this.btn6_3.Name = "btn6_3";
-            this.btn6_3.Size = new System.Drawing.Size(380, 40);
-            this.btn6_3.TabIndex = 21;
-            this.btn6_3.Text = "3.檢查材料單回寫品號是否不一致";
-            this.btn6_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn6_3.Size = new System.Drawing.Size(280, 118);
+            this.btn6_3.TabIndex = 9;
+            this.btn6_3.Text = "3.出貨計劃列印";
+            this.btn6_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6_3.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(0, 10);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 20);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "業務";
+            // 
+            // button12
+            // 
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("新細明體", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button12.Location = new System.Drawing.Point(44, 384);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(224, 138);
+            this.button12.TabIndex = 14;
+            this.button12.Text = "4.產品資料清單明細表";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.tabPage7.Controls.Add(this.gb7);
+            this.tabPage7.Location = new System.Drawing.Point(4, 34);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(877, 498);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "7.公用資料";
+            // 
+            // gb7
+            // 
+            this.gb7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.gb7.Controls.Add(this.btn7_14);
+            this.gb7.Controls.Add(this.btn7_7);
+            this.gb7.Controls.Add(this.btn7_13);
+            this.gb7.Controls.Add(this.btn7_6);
+            this.gb7.Controls.Add(this.btn7_12);
+            this.gb7.Controls.Add(this.btn7_5);
+            this.gb7.Controls.Add(this.btn7_11);
+            this.gb7.Controls.Add(this.btn7_4);
+            this.gb7.Controls.Add(this.btn7_8);
+            this.gb7.Controls.Add(this.btn7_1);
+            this.gb7.Controls.Add(this.btn7_9);
+            this.gb7.Controls.Add(this.btn7_2);
+            this.gb7.Controls.Add(this.btn7_10);
+            this.gb7.Controls.Add(this.btn7_3);
+            this.gb7.Controls.Add(this.label6);
+            this.gb7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gb7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.gb7.Location = new System.Drawing.Point(0, 0);
+            this.gb7.Margin = new System.Windows.Forms.Padding(2);
+            this.gb7.Name = "gb7";
+            this.gb7.Padding = new System.Windows.Forms.Padding(2);
+            this.gb7.Size = new System.Drawing.Size(877, 498);
+            this.gb7.TabIndex = 9;
+            this.gb7.TabStop = false;
+            this.gb7.Visible = false;
+            // 
+            // btn7_14
+            // 
+            this.btn7_14.FlatAppearance.BorderSize = 0;
+            this.btn7_14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_14.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_14.Location = new System.Drawing.Point(459, 342);
+            this.btn7_14.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_14.Name = "btn7_14";
+            this.btn7_14.Size = new System.Drawing.Size(380, 40);
+            this.btn7_14.TabIndex = 34;
+            this.btn7_14.Text = "14.檢查已成交57A及304材料在火車頭";
+            this.btn7_14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_14.UseVisualStyleBackColor = true;
+            this.btn7_14.Visible = false;
+            // 
+            // btn7_7
+            // 
+            this.btn7_7.FlatAppearance.BorderSize = 0;
+            this.btn7_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_7.Location = new System.Drawing.Point(34, 342);
+            this.btn7_7.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_7.Name = "btn7_7";
+            this.btn7_7.Size = new System.Drawing.Size(380, 40);
+            this.btn7_7.TabIndex = 33;
+            this.btn7_7.Text = "7.檢查報價單中有二個包裝材料";
+            this.btn7_7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_7.UseVisualStyleBackColor = true;
+            // 
+            // btn7_13
+            // 
+            this.btn7_13.FlatAppearance.BorderSize = 0;
+            this.btn7_13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_13.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_13.Location = new System.Drawing.Point(459, 294);
+            this.btn7_13.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_13.Name = "btn7_13";
+            this.btn7_13.Size = new System.Drawing.Size(380, 40);
+            this.btn7_13.TabIndex = 32;
+            this.btn7_13.Text = "13.304材料在火車頭外層檢查表";
+            this.btn7_13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_13.UseVisualStyleBackColor = true;
+            // 
+            // btn7_6
+            // 
+            this.btn7_6.FlatAppearance.BorderSize = 0;
+            this.btn7_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_6.Location = new System.Drawing.Point(34, 294);
+            this.btn7_6.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_6.Name = "btn7_6";
+            this.btn7_6.Size = new System.Drawing.Size(380, 40);
+            this.btn7_6.TabIndex = 31;
+            this.btn7_6.Text = "6.參照法異動未更新報價檢查表";
+            this.btn7_6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_6.UseVisualStyleBackColor = true;
+            // 
+            // btn7_12
+            // 
+            this.btn7_12.FlatAppearance.BorderSize = 0;
+            this.btn7_12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_12.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_12.Location = new System.Drawing.Point(459, 246);
+            this.btn7_12.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_12.Name = "btn7_12";
+            this.btn7_12.Size = new System.Drawing.Size(380, 40);
+            this.btn7_12.TabIndex = 30;
+            this.btn7_12.Text = "12.有鼎新採購品號卻無Price品號";
+            this.btn7_12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_12.UseVisualStyleBackColor = true;
+            // 
+            // btn7_5
+            // 
+            this.btn7_5.FlatAppearance.BorderSize = 0;
+            this.btn7_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_5.Location = new System.Drawing.Point(34, 246);
+            this.btn7_5.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_5.Name = "btn7_5";
+            this.btn7_5.Size = new System.Drawing.Size(380, 40);
+            this.btn7_5.TabIndex = 29;
+            this.btn7_5.Text = "5.檢查品號前六碼不一致";
+            this.btn7_5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_5.UseVisualStyleBackColor = true;
+            // 
+            // btn7_11
+            // 
+            this.btn7_11.FlatAppearance.BorderSize = 0;
+            this.btn7_11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_11.Location = new System.Drawing.Point(459, 198);
+            this.btn7_11.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_11.Name = "btn7_11";
+            this.btn7_11.Size = new System.Drawing.Size(380, 40);
+            this.btn7_11.TabIndex = 28;
+            this.btn7_11.Text = "11.報價低於成本價檢查表";
+            this.btn7_11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_11.UseVisualStyleBackColor = true;
+            // 
+            // btn7_4
+            // 
+            this.btn7_4.FlatAppearance.BorderSize = 0;
+            this.btn7_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_4.Location = new System.Drawing.Point(34, 198);
+            this.btn7_4.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_4.Name = "btn7_4";
+            this.btn7_4.Size = new System.Drawing.Size(380, 40);
+            this.btn7_4.TabIndex = 27;
+            this.btn7_4.Text = "4.檢查是否有包裝運開頭自訂材料名";
+            this.btn7_4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_4.UseVisualStyleBackColor = true;
+            // 
+            // btn7_8
+            // 
+            this.btn7_8.FlatAppearance.BorderSize = 0;
+            this.btn7_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_8.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_8.Location = new System.Drawing.Point(459, 54);
+            this.btn7_8.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_8.Name = "btn7_8";
+            this.btn7_8.Size = new System.Drawing.Size(380, 40);
+            this.btn7_8.TabIndex = 26;
+            this.btn7_8.Text = "8.檢查報價單材料不在火車頭和特選";
+            this.btn7_8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_8.UseVisualStyleBackColor = true;
+            // 
+            // btn7_1
+            // 
+            this.btn7_1.FlatAppearance.BorderSize = 0;
+            this.btn7_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_1.Location = new System.Drawing.Point(34, 54);
+            this.btn7_1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_1.Name = "btn7_1";
+            this.btn7_1.Size = new System.Drawing.Size(380, 40);
+            this.btn7_1.TabIndex = 25;
+            this.btn7_1.Text = "1.查詢有訂單無品號的材料";
+            this.btn7_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_1.UseVisualStyleBackColor = true;
+            // 
+            // btn7_9
+            // 
+            this.btn7_9.FlatAppearance.BorderSize = 0;
+            this.btn7_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_9.Location = new System.Drawing.Point(459, 102);
+            this.btn7_9.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_9.Name = "btn7_9";
+            this.btn7_9.Size = new System.Drawing.Size(380, 40);
+            this.btn7_9.TabIndex = 24;
+            this.btn7_9.Text = "9.客戶成交查詢異常資料檢查表";
+            this.btn7_9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_9.UseVisualStyleBackColor = true;
+            // 
+            // btn7_2
+            // 
+            this.btn7_2.FlatAppearance.BorderSize = 0;
+            this.btn7_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_2.Location = new System.Drawing.Point(34, 102);
+            this.btn7_2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_2.Name = "btn7_2";
+            this.btn7_2.Size = new System.Drawing.Size(380, 40);
+            this.btn7_2.TabIndex = 23;
+            this.btn7_2.Text = "2.檢查品號對應多材料名";
+            this.btn7_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_2.UseVisualStyleBackColor = true;
+            // 
+            // btn7_10
+            // 
+            this.btn7_10.FlatAppearance.BorderSize = 0;
+            this.btn7_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_10.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_10.Location = new System.Drawing.Point(459, 150);
+            this.btn7_10.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_10.Name = "btn7_10";
+            this.btn7_10.Size = new System.Drawing.Size(380, 40);
+            this.btn7_10.TabIndex = 22;
+            this.btn7_10.Text = "10.安規線材火車頭設定檢查表";
+            this.btn7_10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_10.UseVisualStyleBackColor = true;
+            // 
+            // btn7_3
+            // 
+            this.btn7_3.FlatAppearance.BorderSize = 0;
+            this.btn7_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn7_3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btn7_3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_3.Location = new System.Drawing.Point(34, 150);
+            this.btn7_3.Margin = new System.Windows.Forms.Padding(4);
+            this.btn7_3.Name = "btn7_3";
+            this.btn7_3.Size = new System.Drawing.Size(380, 40);
+            this.btn7_3.TabIndex = 21;
+            this.btn7_3.Text = "3.檢查材料單回寫品號是否不一致";
+            this.btn7_3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn7_3.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -2260,36 +2477,12 @@
             this.timer.Interval = 10000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // 安規費與USB年費設定ToolStripMenuItem
+            // menu4_12
             // 
-            this.安規費與USB年費設定ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu3_7_1,
-            this.menu3_7_2,
-            this.menu3_7_3});
-            this.安規費與USB年費設定ToolStripMenuItem.Name = "安規費與USB年費設定ToolStripMenuItem";
-            this.安規費與USB年費設定ToolStripMenuItem.Size = new System.Drawing.Size(292, 26);
-            this.安規費與USB年費設定ToolStripMenuItem.Text = "&7.安規費與USB年費設定";
-            // 
-            // menu3_7_1
-            // 
-            this.menu3_7_1.Name = "menu3_7_1";
-            this.menu3_7_1.Size = new System.Drawing.Size(294, 26);
-            this.menu3_7_1.Text = "7_&1.每月安規費用登錄";
-            this.menu3_7_1.Click += new System.EventHandler(this.menu3_7_1_Click);
-            // 
-            // menu3_7_2
-            // 
-            this.menu3_7_2.Name = "menu3_7_2";
-            this.menu3_7_2.Size = new System.Drawing.Size(294, 26);
-            this.menu3_7_2.Text = "7_&2.安規費用分攤統計表";
-            this.menu3_7_2.Click += new System.EventHandler(this.menu3_7_2_Click);
-            // 
-            // menu3_7_3
-            // 
-            this.menu3_7_3.Name = "menu3_7_3";
-            this.menu3_7_3.Size = new System.Drawing.Size(294, 26);
-            this.menu3_7_3.Text = "7_&3.USB2.0協會年費分攤";
-            this.menu3_7_3.Click += new System.EventHandler(this.menu3_7_3_Click);
+            this.menu4_12.Name = "menu4_12";
+            this.menu4_12.Size = new System.Drawing.Size(309, 26);
+            this.menu4_12.Text = "&12.調整報價材料";
+            this.menu4_12.Click += new System.EventHandler(this.menu4_12_Click);
             // 
             // frmMain
             // 
@@ -2352,6 +2545,10 @@
             this.tabPage6.ResumeLayout(false);
             this.gb6.ResumeLayout(false);
             this.gb6.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.gb7.ResumeLayout(false);
+            this.gb7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2364,7 +2561,7 @@
         private System.Windows.Forms.ToolStripMenuItem menu4;
         private System.Windows.Forms.ToolStripMenuItem menu5;
         private System.Windows.Forms.ToolStripMenuItem menu6;
-        private System.Windows.Forms.ToolStripMenuItem menu_Exit;
+        private System.Windows.Forms.ToolStripMenuItem 共用資料;
         private System.Windows.Forms.GroupBox gb1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gb3;
@@ -2413,14 +2610,14 @@
         private System.Windows.Forms.Button btn4_3;
         private System.Windows.Forms.Button btn4_2;
         private System.Windows.Forms.Button btn4_1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn4_17;
+        private System.Windows.Forms.Button btn4_16;
+        private System.Windows.Forms.Button btn4_15;
+        private System.Windows.Forms.Button btn4_14;
+        private System.Windows.Forms.Button btn4_13;
+        private System.Windows.Forms.Button btn4_12;
+        private System.Windows.Forms.Button btn4_11;
+        private System.Windows.Forms.Button btn4_10;
         private System.Windows.Forms.Button btn4_9;
         private System.Windows.Forms.ToolStripMenuItem menu4_1;
         private System.Windows.Forms.TabControl tabMain;
@@ -2436,22 +2633,6 @@
         private System.Windows.Forms.Button btn5_3;
         private System.Windows.Forms.Button btn5_2;
         private System.Windows.Forms.Button btn5_1;
-        private System.Windows.Forms.GroupBox gb6;
-        private System.Windows.Forms.Button btn6_14;
-        private System.Windows.Forms.Button btn6_7;
-        private System.Windows.Forms.Button btn6_13;
-        private System.Windows.Forms.Button btn6_6;
-        private System.Windows.Forms.Button btn6_12;
-        private System.Windows.Forms.Button btn6_5;
-        private System.Windows.Forms.Button btn6_11;
-        private System.Windows.Forms.Button btn6_4;
-        private System.Windows.Forms.Button btn6_8;
-        private System.Windows.Forms.Button btn6_1;
-        private System.Windows.Forms.Button btn6_9;
-        private System.Windows.Forms.Button btn6_2;
-        private System.Windows.Forms.Button btn6_10;
-        private System.Windows.Forms.Button btn6_3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn3_8;
         private System.Windows.Forms.Button btn3_7;
         private System.Windows.Forms.Button btn3_6;
@@ -2507,6 +2688,36 @@
         private System.Windows.Forms.ToolStripMenuItem menu3_7_1;
         private System.Windows.Forms.ToolStripMenuItem menu3_7_2;
         private System.Windows.Forms.ToolStripMenuItem menu3_7_3;
+        private System.Windows.Forms.ToolStripMenuItem uL標籤與費用設定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu3_8_1;
+        private System.Windows.Forms.ToolStripMenuItem menu3_8_2;
+        private System.Windows.Forms.ToolStripMenuItem menu_Exit;
+        private System.Windows.Forms.GroupBox gb6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Button btn6_1;
+        private System.Windows.Forms.Button btn6_2;
+        private System.Windows.Forms.Button btn6_3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.GroupBox gb7;
+        private System.Windows.Forms.Button btn7_14;
+        private System.Windows.Forms.Button btn7_7;
+        private System.Windows.Forms.Button btn7_13;
+        private System.Windows.Forms.Button btn7_6;
+        private System.Windows.Forms.Button btn7_12;
+        private System.Windows.Forms.Button btn7_5;
+        private System.Windows.Forms.Button btn7_11;
+        private System.Windows.Forms.Button btn7_4;
+        private System.Windows.Forms.Button btn7_8;
+        private System.Windows.Forms.Button btn7_1;
+        private System.Windows.Forms.Button btn7_9;
+        private System.Windows.Forms.Button btn7_2;
+        private System.Windows.Forms.Button btn7_10;
+        private System.Windows.Forms.Button btn7_3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem menu4_11;
+        private System.Windows.Forms.ToolStripMenuItem menu4_12;
     }
 }
 

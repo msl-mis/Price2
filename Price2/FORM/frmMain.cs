@@ -85,7 +85,9 @@ namespace Price2
                 #region 加入第6頁
                 gb6.Visible = true;
                 #endregion
-
+                #region 加入第7頁
+                gb7.Visible = true;
+                #endregion
                 #endregion
 
                 //顯示tabPage
@@ -93,7 +95,7 @@ namespace Price2
 
                 //tabMain.ItemSize= New Size(20, 100)
                 tabMain.SizeMode = TabSizeMode.Fixed;
-                tabMain.ItemSize = new Size((tabMain.Width - 6) / 6, 0);
+                tabMain.ItemSize = new Size((tabMain.Width - 6) / 7, 0);
                 tabMain.Location=new Point((gbMain.Width-tabMain.Width)/2, (gbMain.Height - tabMain.Height) / 2);
             }
             catch (Exception ex)
@@ -135,6 +137,7 @@ namespace Price2
             //離開
             this.Close();
         }
+
         public void menu1_1_Click(object sender, EventArgs e)   //1_1.用戶管理
         {
             //1_1.用戶管理
@@ -475,7 +478,7 @@ namespace Price2
             }
         }
 
-        private void menu3_2_Click(object sender, EventArgs e)
+        private void menu3_2_Click(object sender, EventArgs e)  //3_2 BOM產品結構建立
         {
             //3_2 BOM產品結構建立
             try
@@ -822,6 +825,147 @@ namespace Price2
             }
         }
 
+        private void menu3_7_2_Click(object sender, EventArgs e)    //3_7_2 安規費用分攤統計表
+        {
+            //3_7_2 安規費用分攤統計表
+            try
+            {
+                string[] strModule = menu3_7_2.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                frmSafetyFees_Report frmSafetyFees_Report = new frmSafetyFees_Report();
+                frmSafetyFees_Report.MdiParent = this;
+                frmSafetyFees_Report.FormClosed += childForm_FormClosed;
+                frmSafetyFees_Report.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmSafetyFees_Report.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu3_7_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu3_7_3_Click(object sender, EventArgs e)    //3_7_3 USB2.0協會年費分攤
+        {
+            //3_7_3 USB2.0協會年費分攤
+            try
+            {
+                //string[] strModule = menu3_7_3.Text.Split('.');
+                //確認權限
+                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                if (clsGlobal.checkRightFlag("USB2.0協會年費分攤") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                frmUSB2_Input frmUSB2_Input = new frmUSB2_Input();
+                frmUSB2_Input.MdiParent = this;
+                frmUSB2_Input.FormClosed += childForm_FormClosed;
+                frmUSB2_Input.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmUSB2_Input.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu3_7_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu3_8_1_Click(object sender, EventArgs e)    //3_8_1 UL標籤費用與成本登錄
+        {
+            //3_8_1 UL標籤費用與成本登錄
+            try
+            {
+                string[] strModule = menu3_8_1.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                frmLabel_UL_Input frmLabel_UL_Input = new frmLabel_UL_Input();
+                frmLabel_UL_Input.MdiParent = this;
+                frmLabel_UL_Input.FormClosed += childForm_FormClosed;
+                frmLabel_UL_Input.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmLabel_UL_Input.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu3_8_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu3_8_2_Click(object sender, EventArgs e)    //3_8_2 UL817標籤數量與價格登錄
+        {
+            //3_8_2 UL817標籤數量與價格登錄
+            try
+            {
+                string[] strModule = menu3_8_2.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                //顯示tabPage
+                frmLabel_UL817_Input frmLabel_UL817_Input = new frmLabel_UL817_Input();
+                frmLabel_UL817_Input.MdiParent = this;
+                frmLabel_UL817_Input.FormClosed += childForm_FormClosed;
+                frmLabel_UL817_Input.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmLabel_UL817_Input.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu3_8_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void menu4_1_Click(object sender, EventArgs e)  //4_1 參照法資料輸入
         {
             //4_1 參照法資料輸入
@@ -1094,6 +1238,76 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu4_7_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void menu4_11_Click(object sender, EventArgs e) //4_11 調整報價加工分/不良率
+        {
+            //4_11 調整報價加工分/不良率
+            try
+            {
+                string[] strModule = menu4_11.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmWorking_Adjust frmWorking_Adjust = new frmWorking_Adjust();
+                frmWorking_Adjust.MdiParent = this;
+                frmWorking_Adjust.FormClosed += childForm_FormClosed;
+                frmWorking_Adjust.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmWorking_Adjust.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_11_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_12_Click(object sender, EventArgs e) //4_12 調整報價材料
+        {
+            //4_12 調整報價材料
+            try
+            {
+                string[] strModule = menu4_12.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmMaterial_Adjust frmMaterial_Adjust = new frmMaterial_Adjust();
+                frmMaterial_Adjust.MdiParent = this;
+                frmMaterial_Adjust.FormClosed += childForm_FormClosed;
+                frmMaterial_Adjust.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmMaterial_Adjust.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_12_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         #endregion
 
         #region Page1(系統)
@@ -1196,7 +1410,7 @@ namespace Price2
             menu3_6_1.PerformClick();
         }
 
-        private void btn3_6_2_Click(object sender, EventArgs e)
+        private void btn3_6_2_Click(object sender, EventArgs e) //3_6_2.材料採購明細
         {
             //3_6_2.材料採購明細
             menu3_6_2.PerformClick();
@@ -1212,6 +1426,24 @@ namespace Price2
         {
             //3_7_2.安規費用分攤統計表
             menu3_7_2.PerformClick();
+        }
+
+        private void btn3_7_3_Click(object sender, EventArgs e) //3_7_3.USB2.0協會年費分攤
+        {
+            //3_7_3.USB2.0協會年費分攤
+            menu3_7_3.PerformClick();
+        }
+
+        private void btn3_8_1_Click(object sender, EventArgs e) //3_8_1.UL標籤費用與成本登錄
+        {
+            //3_8_1.UL標籤費用與成本登錄
+            menu3_8_1.PerformClick();
+        }
+
+        private void btn3_8_2_Click(object sender, EventArgs e) //3_8_2.UL817標籤數量與價格登錄
+        {
+            //3_8_2.UL817標籤數量與價格登錄
+            menu3_8_2.PerformClick();
         }
         #endregion
 
@@ -1258,6 +1490,17 @@ namespace Price2
             menu4_7.PerformClick();
         }
 
+        private void btn4_11_Click(object sender, EventArgs e)  //4_11.調整報價加工分/不良率
+        {
+            //4_11.調整報價加工分/不良率
+            menu4_11.PerformClick();
+        }
+
+        private void btn4_12_Click(object sender, EventArgs e)  //4_12.調整報價材料
+        {
+            //4_12.調整報價材料
+            menu4_12.PerformClick();
+        }
         #endregion
 
         private void startSocket()
@@ -1505,86 +1748,6 @@ namespace Price2
         }
 
         
-
-        
-
-        private void menu3_7_2_Click(object sender, EventArgs e)    //3_7_2 安規費用分攤統計表
-        {
-            //3_7_2 安規費用分攤統計表
-            try
-            {
-                string[] strModule = menu3_7_2.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag(strModule[1]) == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-                //顯示tabPage
-                frmPriceSetting_Others frmPriceSetting_Others = new frmPriceSetting_Others();
-                frmPriceSetting_Others.MdiParent = this;
-                frmPriceSetting_Others.FormClosed += childForm_FormClosed;
-                frmPriceSetting_Others.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmPriceSetting_Others.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu3_7_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        
-
-        private void menu3_7_3_Click(object sender, EventArgs e)    //3_7_3 USB2.0協會年費分攤
-        {
-            //3_7_3 USB2.0協會年費分攤
-            try
-            {
-                string[] strModule = menu3_7_3.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag(strModule[1]) == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-                //顯示tabPage
-                frmPriceSetting_Others frmPriceSetting_Others = new frmPriceSetting_Others();
-                frmPriceSetting_Others.MdiParent = this;
-                frmPriceSetting_Others.FormClosed += childForm_FormClosed;
-                frmPriceSetting_Others.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmPriceSetting_Others.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu3_7_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn3_7_3_Click(object sender, EventArgs e) //3_7_3.USB2.0協會年費分攤
-        {
-            //3_7_3.USB2.0協會年費分攤
-            menu3_7_3.PerformClick();
-        }
     }
 }
 

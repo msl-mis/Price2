@@ -72,6 +72,7 @@ namespace Price2
 
         public static string strProductID = "";
         public static string rstrNo = "";     //回傳的品號
+        public static string rstrID = "";     //回傳的ID
         public static string rstrVenderID = "";     //回傳的廠號
         public static string rstrVenderName = "";     //回傳的廠商
         public static string rstrResult = "";     //回傳的結果
@@ -4340,6 +4341,38 @@ namespace Price2
             strPricecal = txtPurprice.Text;
             //計算式  計算機 引用using System.Data
             txtPurprice.Text = Convert.ToDouble(new DataTable().Compute(txtPurprice.Text, null)).ToString("0.######");
+        }
+
+        private void txtNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txtSpec.Focus();
+            }
+        }
+
+        private void txtNo_Leave(object sender, EventArgs e)
+        {
+            txtNo.Text = txtNo.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
+            if (txtNo.Text!="")
+            {
+                if (txtID.Text == "")
+                {
+                    frmProduct_Inq_No2 frmProduct_Inq_No2 = new frmProduct_Inq_No2();
+                    frmProduct_Inq_No2.ShowInTaskbar = false;//圖示不顯示在工作列
+                    frmProduct_Inq_No2.rstrNo = txtNo.Text.Trim();
+                    frmProduct_Inq_No2.ShowDialog();
+                    if(rstrID!="")
+                    {
+                        txtID.Text = rstrID;
+                        getID();
+                        rstrID = "";
+                        txtNo.Focus();
+                    }
+                    
+                }
+            }
+            
         }
     }
 }

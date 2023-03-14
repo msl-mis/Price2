@@ -228,9 +228,9 @@ namespace Price2
             try
             {
                 //確認權限
-                if (clsGlobal.checkRightFlag("銅桿價設定儲存權限") == false)
+                if (clsGlobal.checkRightFlag("材料採購明細儲存權限") == false)
                 {
-                    MessageBox.Show("您沒有銅桿價設定儲存權限權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("您沒有材料採購明細儲存權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (txtAVG.Text == "")

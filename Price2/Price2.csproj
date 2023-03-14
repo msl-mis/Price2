@@ -113,6 +113,54 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
+    <Compile Include="frmMaterial_Adjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterial_Adjust.Designer.cs">
+      <DependentUpon>frmMaterial_Adjust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorking_Adjust_Spec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorking_Adjust_Spec.Designer.cs">
+      <DependentUpon>frmWorking_Adjust_Spec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorking_Adjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorking_Adjust.Designer.cs">
+      <DependentUpon>frmWorking_Adjust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No2.Designer.cs">
+      <DependentUpon>frmProduct_Inq_No2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmLabel_UL817_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmLabel_UL817_Input.Designer.cs">
+      <DependentUpon>frmLabel_UL817_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmLabel_UL_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmLabel_UL_Input.Designer.cs">
+      <DependentUpon>frmLabel_UL_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmUSB2_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmUSB2_Input.Designer.cs">
+      <DependentUpon>frmUSB2_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmSafetyFees_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE3\frmSafetyFees_Report.Designer.cs">
+      <DependentUpon>frmSafetyFees_Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\PAGE3\frmInq_History_Working.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -569,10 +617,10 @@
     <Compile Include="FORM\PAGE4\Order\frmOrder_RefreshPrice.designer.cs">
       <DependentUpon>frmOrder_RefreshPrice.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSafetyFees_Input.cs">
+    <Compile Include="FORM\PAGE3\frmSafetyFees_Input.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSafetyFees_Input.designer.cs">
+    <Compile Include="FORM\PAGE3\frmSafetyFees_Input.designer.cs">
       <DependentUpon>frmSafetyFees_Input.cs</DependentUpon>
     </Compile>
     <Compile Include="PriceDataSet.cs">
@@ -591,6 +639,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="FORM\PAGE3\frmLabel_UL817_Input.resx">
+      <DependentUpon>frmLabel_UL817_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE3\frmLabel_UL_Input.resx">
+      <DependentUpon>frmLabel_UL_Input.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE3\frmInq_Material_Status.resx">
       <DependentUpon>frmInq_Material_Status.cs</DependentUpon>
     </EmbeddedResource>
@@ -612,8 +666,26 @@
     <EmbeddedResource Include="FORM\PAGE3\frmReName_Material.resx">
       <DependentUpon>frmReName_Material.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSafetyFees_Input.resx">
+    <EmbeddedResource Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No2.resx">
+      <DependentUpon>frmProduct_Inq_No2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE3\frmSafetyFees_Input.resx">
       <DependentUpon>frmSafetyFees_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE3\frmSafetyFees_Report.resx">
+      <DependentUpon>frmSafetyFees_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE3\frmUSB2_Input.resx">
+      <DependentUpon>frmUSB2_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterial_Adjust.resx">
+      <DependentUpon>frmMaterial_Adjust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorking_Adjust.resx">
+      <DependentUpon>frmWorking_Adjust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorking_Adjust_Spec.resx">
+      <DependentUpon>frmWorking_Adjust_Spec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\bomuse.rdlc" />
     <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder.resx">
