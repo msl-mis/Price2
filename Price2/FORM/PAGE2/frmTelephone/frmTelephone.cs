@@ -492,18 +492,81 @@ namespace Price2
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                
+                txtCompany_CN.Focus();
             }
         }
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+         private void txtCompany_CN_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (keyData == Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                SendKeys.Send("{TAB}");
-                return true;
+                txtHome_TW.Focus();
             }
-            return base.ProcessCmdKey(ref msg, keyData);
+            
         }
+
+        private void txtHome_TW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtHome_CN.Focus();
+            }
+
+        }
+
+        private void txtHome_CN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtEmail_TW.Focus();
+            }
+
+        }
+
+        private void txtEmail_TW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtEmail_CN.Focus();
+            }
+
+        }
+
+        private void txtEmail_CN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtAddress_TW.Focus();
+            }
+
+        }
+
+        private void txtAddress_TW_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtAddress_CN.Focus();
+            }
+
+        }
+        private void txtAddress_CN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtNote.Focus();
+            }
+
+        }
+
+
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+        //    if (keyData == Keys.Enter)
+        //    {
+        //        SendKeys.Send("{TAB}");
+        //        return true;
+        //    }
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
         private void getData()  //取得與姓名相關資料
         {
             //取得與姓名相關資料
@@ -561,5 +624,6 @@ namespace Price2
                 MessageBox.Show(this.Name + "-cboName_SelectedIndexChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
