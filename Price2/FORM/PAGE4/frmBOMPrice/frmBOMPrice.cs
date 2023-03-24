@@ -981,7 +981,7 @@ namespace Price2
                     {
                         chkPower.Checked = true;
                     }
-                    txtVender.Text = tvendorid;
+                    txtVendor.Text = tvendorid;
                     //檢查報價單身的價格加總
                     checkPrice();
                     txtQuote.Text = tpricost;
@@ -3450,7 +3450,7 @@ namespace Price2
                 double _convcost = Convert.ToDouble(txtCost.Text);
                 string _customerid = txtID.Text.Trim();
                 int _wg = (chkOutsourcing.Checked ? 1 : (chkPower.Checked ? 2 : 0));
-                string _vendorid = txtVender.Text.Trim();
+                string _vendorid = txtVendor.Text.Trim();
                 int _bzflag = (chkNote.Checked ? 1 : 0);
                 string _username = clsGlobal.strG_User;
                 int _ld = (chkLarge.Checked ? 1 : 0); ;
@@ -4421,12 +4421,12 @@ namespace Price2
                     {
                         chkOutsourcing.Checked = true;
                     }
-                    string strVenderID = txtName.Text.Trim().Substring(1, txtName.Text.Length-1);
-                    strSQL = $@"select ven_shortname from ven where ven_id='{strVenderID}'";
+                    string strVendorID = txtName.Text.Trim().Substring(1, txtName.Text.Length-1);
+                    strSQL = $@"select ven_shortname from ven where ven_id='{strVendorID}'";
                     dt= clsDB.sql_select_dt(strSQL);
                     if(dt.Rows.Count > 0)
                     {
-                        txtVender.Text = dt.Rows[0]["ven_shortname"].ToString();
+                        txtVendor.Text = dt.Rows[0]["ven_shortname"].ToString();
                     }
                 }
             }
@@ -4591,7 +4591,7 @@ namespace Price2
             //電源
             try
             {
-                if(chkPower.Checked && txtVender.Text != "冠源")
+                if(chkPower.Checked && txtVendor.Text != "冠源")
                 {
                     chkOutsourcing.Checked = false;
                     pfenlei = "7 Power cord";

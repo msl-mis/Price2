@@ -36,7 +36,7 @@ namespace Price2
                 txtMemo.Text = dgvData.Rows[0].Cells["參照法"].Value.ToString();
                 txtSpec.Text = dgvData.Rows[0].Cells["規格"].Value.ToString();
                 strCal = dgvData.Rows[0].Cells["計算式"].Value.ToString();
-                txtVender.Text = dgvData.Rows[0].Cells["廠商"].Value.ToString();
+                txtVendor.Text = dgvData.Rows[0].Cells["廠商"].Value.ToString();
                 cboUnit.Text = dgvData.Rows[0].Cells["單位"].Value.ToString();
             }
             btnDelete.Enabled = false;
@@ -151,7 +151,7 @@ namespace Price2
             txtPrice.Text = "";
             strPrice = "";
             txtSpec.Text = "";
-            txtVender.Text = "";
+            txtVendor.Text = "";
             txtMemo.Text = "";
             cboCurrency.Text = "";
             cboUnit.Text = "";
@@ -269,7 +269,7 @@ namespace Price2
                                            aspnum_currency = '{cboCurrency.Text.Trim()}',
                                            aspnum_memo = '{txtMemo.Text.Trim()}',
                                            aspnum_pricecal = '{strCal}',
-                                           aspnum_vendorid = '{txtVender.Text.Trim()}',
+                                           aspnum_vendorid = '{txtVendor.Text.Trim()}',
                                            aspnum_spec = '{txtSpec.Text.Trim()}',
                                            aspnum_um = '{cboUnit.Text.Trim()}'
                                     where  aspnum_id = '{txtID.Text.Trim()}'
@@ -297,7 +297,7 @@ namespace Price2
                                                  '{cboCurrency.Text.Trim()}',
                                                  '{txtMemo.Text.Trim()}',
                                                  '{strCal}',
-                                                 '{txtVender.Text.Trim()}',
+                                                 '{txtVendor.Text.Trim()}',
                                                  '{txtSpec.Text.Trim()}',
                                                  '{cboUnit.Text.Trim()}') ";
                         clsDB.Execute(strSQL);
@@ -336,7 +336,7 @@ namespace Price2
                 txtMemo.Text = dgvData.Rows[e.RowIndex].Cells["參照法"].Value.ToString();
                 txtSpec.Text = dgvData.Rows[e.RowIndex].Cells["規格"].Value.ToString();
                 strCal = dgvData.Rows[e.RowIndex].Cells["計算式"].Value.ToString();
-                txtVender.Text = dgvData.Rows[e.RowIndex].Cells["廠商"].Value.ToString();
+                txtVendor.Text = dgvData.Rows[e.RowIndex].Cells["廠商"].Value.ToString();
                 cboUnit.Text = dgvData.Rows[e.RowIndex].Cells["單位"].Value.ToString();
                 strNo = dgvData.Rows[e.RowIndex].Cells["品號"].Value.ToString();
                 btnDelete.Enabled = true;
@@ -483,7 +483,7 @@ namespace Price2
         {
             if(e.KeyCode == Keys.Enter)
             {
-                txtVender.Focus();
+                txtVendor.Focus();
             }
         }
     }

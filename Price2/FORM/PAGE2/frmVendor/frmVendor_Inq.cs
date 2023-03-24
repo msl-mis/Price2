@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Price2
 {
-    public partial class frmVender_Inq : Form
+    public partial class frmVendor_Inq : Form
     {
         public static string strWhoCall;    //傳入的form
-        public frmVender_Inq()
+        public frmVendor_Inq()
         {
             InitializeComponent();
         }
@@ -139,15 +139,15 @@ namespace Price2
         {
             if(e.RowIndex >= 0 && e.ColumnIndex >=0)
             {
-                if(strWhoCall=="frmVender")
+                if(strWhoCall=="frmVendor")
                 {
-                    frmVender.rstrID=dgvData.Rows[e.RowIndex].Cells["廠號"].Value.ToString();
+                    frmVendor.rstrID=dgvData.Rows[e.RowIndex].Cells["廠號"].Value.ToString();
                     this.Close();
                 }
                 if (strWhoCall == "frmProduct")
                 {
-                    frmProduct.rstrVenderID = dgvData.Rows[e.RowIndex].Cells["廠號"].Value.ToString();
-                    frmProduct.rstrVenderName = dgvData.Rows[e.RowIndex].Cells["廠商"].Value.ToString();
+                    frmProduct.rstrVendorID = dgvData.Rows[e.RowIndex].Cells["廠號"].Value.ToString();
+                    frmProduct.rstrVendorName = dgvData.Rows[e.RowIndex].Cells["廠商"].Value.ToString();
                     this.Close();
                 }
             }

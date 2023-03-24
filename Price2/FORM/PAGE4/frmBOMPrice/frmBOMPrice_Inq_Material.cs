@@ -246,7 +246,7 @@ namespace Price2
             //光纖
             strWhere = strWhere + (chkFiber.Checked ? "and pri_fenlei = '14 Fiber Cable' " : "");
             //廠商
-            strWhere = strWhere + (chkVender.Checked ? "" : $@"and pri_vendorid = '{txtVender.Text.Trim()}' ");
+            strWhere = strWhere + (chkVendor.Checked ? "" : $@"and pri_vendorid = '{txtVendor.Text.Trim()}' ");
             //單位
             strWhere = strWhere + (cboUnit.Text == "(ALL)" ? "" : $@"and pri_um = '{cboUnit.Text.Trim()}' ");
 
@@ -277,7 +277,7 @@ namespace Price2
 
                 chkID.Checked = true;
                 chkPart.Checked = true;
-                chkVender.Checked = true;
+                chkVendor.Checked = true;
 
                 cboUnit.Text = "(ALL)";
                 lblCount.Text = "0";

@@ -103,7 +103,7 @@ namespace Price2
             //訂單編號
             strWhere = strWhere + (txtOrderID.Text=="" ? "" : $@"and a.odh_orderid like '%{txtOrderID.Text}%' ");
             //客戶
-            strWhere = (txtCustomer.Text=="" ? "" : (txtCustomer.Text == "4-" ? "and a.odh_customer like '%4-%' " : (txtCustomer.Text == "4" ? "and (a.odh_customer = '4' or substring(a.odh_customer,1,2) = '4-') " : $@"and a.odh_customer = '{txtCustomer.Text.Trim()}' ")));
+            strWhere = strWhere + (txtCustomer.Text=="" ? "" : (txtCustomer.Text == "4-" ? "and a.odh_customer like '%4-%' " : (txtCustomer.Text == "4" ? "and (a.odh_customer = '4' or substring(a.odh_customer,1,2) = '4-') " : $@"and a.odh_customer = '{txtCustomer.Text.Trim()}' ")));
             //新增日期
             strWhere = strWhere + (txtDate_S.Text=="" ? "" : $@"and a.odh_newdate between '{txtDate_S.Text}' and '{txtDate_E.Text}' ");
             

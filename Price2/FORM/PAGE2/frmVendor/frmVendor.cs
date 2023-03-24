@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Price2
 {
-    public partial class frmVender : Form
+    public partial class frmVendor : Form
     {
         public static string rstrID;     //傳入的廠號
-        public frmVender()
+        public frmVendor()
         {
             InitializeComponent();
         }
@@ -39,10 +39,10 @@ namespace Price2
             try
             {
                 rstrID = "";
-                frmVender_Inq frmVender_Inq = new frmVender_Inq();
-                frmVender_Inq.ShowInTaskbar = false;    //圖示不顯示在工作列
-                frmVender_Inq.strWhoCall = "frmVender";
-                frmVender_Inq.ShowDialog();
+                frmVendor_Inq frmVendor_Inq = new frmVendor_Inq();
+                frmVendor_Inq.ShowInTaskbar = false;    //圖示不顯示在工作列
+                frmVendor_Inq.strWhoCall = "frmVendor";
+                frmVendor_Inq.ShowDialog();
 
                 if (rstrID != "")
                 {

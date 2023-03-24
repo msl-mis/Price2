@@ -1,6 +1,6 @@
 ﻿namespace Price2
 {
-    partial class frmVender_Inq
+    partial class frmVendor_Inq
     {
         /// <summary>
         /// Required designer variable.

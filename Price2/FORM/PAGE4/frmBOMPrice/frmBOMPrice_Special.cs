@@ -25,60 +25,6 @@ namespace Price2
             InitializeComponent();
         }
 
-        private void txtVenderID_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                txtVenderName.Focus();
-            }
-        }
-
-        private void txtVenderID_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                string strSQL = "";
-                DataTable dt = new DataTable();
-                strSQL = $@"select isnull(ven_shortname,'') '廠號' from ven where ven_id='{txtVenderID.Text}'";
-                dt = clsDB.sql_select_dt(strSQL);
-                if(dt.Rows.Count > 0)
-                {
-                    txtVenderName.Text = dt.Rows[0]["廠號"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-txtVenderID_Leave" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void txtVenderName_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtVenderID.Focus();
-            }
-        }
-
-        private void txtVenderName_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                string strSQL = "";
-                DataTable dt = new DataTable();
-                strSQL = $@"select isnull(ven_id,'') '廠商' from ven where ven_shortname = '{txtVenderName.Text}'";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
-                {
-                    txtVenderID.Text = dt.Rows[0]["廠商"].ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-txtVenderName_Leave" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void txtPerPrice_Leave(object sender, EventArgs e)
         {
             try
@@ -133,7 +79,7 @@ namespace Price2
         {
             if(e.KeyCode == Keys.Enter && radioSpecial.Checked)
             {
-                txtVenderName.Focus();
+                txtVendorName.Focus();
             }
         }
 
@@ -233,7 +179,7 @@ namespace Price2
                 {
                     txtPerPrice.Text = dt.Rows[0]["ptx_tbdj"].ToString();
                     txtQty.Text = dt.Rows[0]["ptx_qty"].ToString();
-                    txtVenderID.Text = (string.IsNullOrEmpty(dt.Rows[0]["ptx_vendorid"].ToString()) ? "" : dt.Rows[0]["ptx_vendorid"].ToString());
+                    txtVendorID.Text = (string.IsNullOrEmpty(dt.Rows[0]["ptx_vendorid"].ToString()) ? "" : dt.Rows[0]["ptx_vendorid"].ToString());
                     cboCurrency.Text = dt.Rows[0]["ptx_yfcurrency"].ToString();
                     if(dt.Rows[0]["ptx_tbdjcal"].ToString()!="")
                     {
@@ -311,8 +257,8 @@ namespace Price2
                 txtID.Text = "";
                 txtPerPrice.Text = "0";
                 txtQty.Text = "0";
-                txtVenderID.Text = "";
-                txtVenderName.Text = "";
+                txtVendorID.Text = "";
+                txtVendorName.Text = "";
                 cboCurrency.Text = "臺幣";
                 lblTbPrice.Text = "";
                 btnDelete.Visible = false;
@@ -437,10 +383,10 @@ namespace Price2
                                         0,
                                         0,
                                         '{cboCurrency.Text}',
-                                        '{txtVenderID.Text}',
+                                        '{txtVendorID.Text}',
                                         '{rstrID}',
                                         '{lblTbPrice.Text}',
-                                        '{txtVenderName.Text}',
+                                        '{txtVendorName.Text}',
                                         '{ptx_type}',
                                         '{strCal_Qty}',
                                         '{ptx_assy}') ";
@@ -457,10 +403,10 @@ namespace Price2
                                        ptx_perweight = 0,
                                        ptx_perky = 0,
                                        ptx_yfcurrency = '{cboCurrency.Text}',
-                                       ptx_vendorid = '{txtVenderID.Text}',
+                                       ptx_vendorid = '{txtVendorID.Text}',
                                        ptx_adddate = Getdate(),
                                        ptx_tbdjcal = '{lblTbPrice.Text}',
-                                       ptx_venshortname = '{txtVenderName}',
+                                       ptx_venshortname = '{txtVendorName}',
                                        ptx_type = '{ptx_type}',
                                        ptx_perqtycal = '{strCal_Qty}'
                                 where  ptx_name = '{txtID.Text}'
@@ -492,17 +438,17 @@ namespace Price2
         {
             if(radioSpecial.Checked)
             {
-                lblVenderID.Visible = true;
-                lblVenderName.Visible = true;
-                txtVenderID.Visible = true;
-                txtVenderName.Visible = true;   
+                lblVendorID.Visible = true;
+                lblVendorName.Visible = true;
+                txtVendorID.Visible = true;
+                txtVendorName.Visible = true;   
             }
             else
             {
-                lblVenderID.Visible = false;
-                lblVenderName.Visible = false;
-                txtVenderID.Visible = false;
-                txtVenderName.Visible = false;
+                lblVendorID.Visible = false;
+                lblVendorName.Visible = false;
+                txtVendorID.Visible = false;
+                txtVendorName.Visible = false;
             }
         }
 
@@ -541,8 +487,8 @@ namespace Price2
                             {
                                 radioNote.Checked=true;
                             }
-                            txtVenderID.Text = (string.IsNullOrEmpty(dt.Rows[0]["ptx_vendorid"].ToString()) ? "" : dt.Rows[0]["ptx_vendorid"].ToString());
-                            txtVenderName.Text = (string.IsNullOrEmpty(dt.Rows[0]["ptx_venshortname"].ToString()) ? "" : dt.Rows[0]["ptx_venshortname"].ToString());
+                            txtVendorID.Text = (string.IsNullOrEmpty(dt.Rows[0]["ptx_vendorid"].ToString()) ? "" : dt.Rows[0]["ptx_vendorid"].ToString());
+                            txtVendorName.Text = (string.IsNullOrEmpty(dt.Rows[0]["ptx_venshortname"].ToString()) ? "" : dt.Rows[0]["ptx_venshortname"].ToString());
                             cboCurrency.Text = dt.Rows[0]["ptx_yfcurrency"].ToString();
                             lblTime.Text= dt.Rows[0]["ptx_adddate"].ToString();
                             strCal_PrePrice= (dt.Rows[0]["ptx_tbdjcal"].ToString()!="" ? dt.Rows[0]["ptx_tbdjcal"].ToString() : dt.Rows[0]["ptx_tbdj"].ToString());
@@ -556,6 +502,60 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-frmBOMPrice_Special_Load" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtVendorID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtVendorName.Focus();
+            }
+        }
+
+        private void txtVendorID_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select isnull(ven_shortname,'') '廠號' from ven where ven_id='{txtVendorID.Text}'";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    txtVendorName.Text = dt.Rows[0]["廠號"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-txtVendorID_Leave" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtVendorName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtVendorID.Focus();
+            }
+        }
+
+        private void txtVendorName_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select isnull(ven_id,'') '廠商' from ven where ven_shortname = '{txtVendorName.Text}'";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    txtVendorID.Text = dt.Rows[0]["廠商"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-txtVendorName_Leave" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE.dll" size="255936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EnvDTE.dll" size="255888">
       <assemblyIdentity name="EnvDTE" version="8.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vFIYD2ZUiVTwaq9C2MPgk4lLYwOPwIougEqgSRUGuy0=</dsig:DigestValue>
+        <dsig:DigestValue>KzkictevMW2f3nPh7x4zucJbG44tusMtmKvMnh1fmYo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -619,14 +619,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Price2.exe" size="5471648">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Price2.exe" size="5781408">
       <assemblyIdentity name="Price2" version="1.0.0.17" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SaO1JIJ6ehh82WmCp4B+Dd8/ZG5Ywasb28yl2oItm60=</dsig:DigestValue>
+        <dsig:DigestValue>WB5C0bMGCrX2qlStYezZ4maqSC1lOljmiVggBCfymdc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

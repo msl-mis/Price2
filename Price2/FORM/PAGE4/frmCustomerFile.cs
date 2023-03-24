@@ -14,6 +14,7 @@ namespace Price2
 {
     public partial class frmCustomerFile : Form
     {
+        
         public frmCustomerFile()
         {
             InitializeComponent();
@@ -492,7 +493,7 @@ namespace Price2
             //利潤
             strWhere = strWhere + (txtLL.Text == "" || txtLL.Text == "0" ? "" : $@"and pri_ll<= '{txtLL.Text.Trim()}' ");
             //廠商
-            strWhere = strWhere + (txtVender.Text == "" ? "" : $@"and pri_vendorid = '{txtVender.Text.Trim()}' ");
+            strWhere = strWhere + (txtVendor.Text == "" ? "" : $@"and pri_vendorid = '{txtVendor.Text.Trim()}' ");
             //最後儲存日期
             strWhere = strWhere + (txtNewDate_S.Text == "" ? "" : $@"and pri_date between '{txtNewDate_S.Text}' and '{txtNewDate_E.Text}' ");
             //報價單號
@@ -548,7 +549,7 @@ namespace Price2
                 txtLength.Text = "";
                 txtCustomer.Text = "";
                 txtCZF.Text = "";
-                txtVender.Text = "";
+                txtVendor.Text = "";
                 txtOrderDate_S.Text = "";
                 txtPriceNO.Text = "";
                 txtNote.Text = "";

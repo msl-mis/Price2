@@ -256,7 +256,7 @@ namespace Price2
             //光纖
             strWhere = strWhere + (chkFiber.Checked ? "and pri_fenlei = '14 Fiber Cable' " : "");
             //廠商
-            strWhere = strWhere + (chkVender.Checked ? "" : $@"and pri_vendorid = '{txtVender.Text.Trim()}' ");
+            strWhere = strWhere + (chkVendor.Checked ? "" : $@"and pri_vendorid = '{txtVendor.Text.Trim()}' ");
             //用戶
             strWhere = strWhere + (cboUser.Text == "(ALL)" ? "" : $@"and pri_username = '{cboUser.Text.Trim()}' ");
             //國別
@@ -359,7 +359,7 @@ namespace Price2
                 chkLength.Checked = true;
                 chkID.Checked = true;
                 chkPart.Checked = true;
-                chkVender.Checked = true;
+                chkVendor.Checked = true;
                 cboChecker.Text = "(ALL)";
                 cboUser.Text = "(ALL)";
                 cboCountry.Text = "(ALL)";
@@ -518,18 +518,6 @@ namespace Price2
             else
             {
                 txtCustomer.Text = "";
-            }
-        }
-
-        private void chkVender_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkVender.Checked)
-            {
-                txtVender.Text = "(ALL)";
-            }
-            else
-            {
-                txtVender.Text = "";
             }
         }
 
@@ -803,9 +791,21 @@ namespace Price2
             chkCheck.Checked = false;
         }
 
-        private void txtVender_Enter(object sender, EventArgs e)
+        private void txtVendor_Enter(object sender, EventArgs e)
         {
-            chkVender.Checked = false;
+            chkVendor.Checked = false;
+        }
+
+        private void chkVendor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkVendor.Checked)
+            {
+                txtVendor.Text = "(ALL)";
+            }
+            else
+            {
+                txtVendor.Text = "";
+            }
         }
     }
 }

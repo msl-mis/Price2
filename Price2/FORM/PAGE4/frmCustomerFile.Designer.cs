@@ -67,7 +67,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cboClass = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtVender = new System.Windows.Forms.TextBox();
+            this.txtVendor = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -148,7 +148,7 @@
             this.groupBox.Controls.Add(this.label11);
             this.groupBox.Controls.Add(this.cboClass);
             this.groupBox.Controls.Add(this.label10);
-            this.groupBox.Controls.Add(this.txtVender);
+            this.groupBox.Controls.Add(this.txtVendor);
             this.groupBox.Controls.Add(this.label9);
             this.groupBox.Controls.Add(this.btnClear);
             this.groupBox.Controls.Add(this.txtID);
@@ -250,7 +250,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
             this.tableLayoutPanel3.Controls.Add(this.radioAdjustment, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtSpecify, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.radioSpecify, 1, 0);
@@ -670,14 +670,14 @@
             this.label10.Text = "分類：";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtVender
+            // txtVendor
             // 
-            this.txtVender.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtVender.Location = new System.Drawing.Point(1096, 62);
-            this.txtVender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtVender.Name = "txtVender";
-            this.txtVender.Size = new System.Drawing.Size(166, 31);
-            this.txtVender.TabIndex = 91;
+            this.txtVendor.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtVendor.Location = new System.Drawing.Point(1096, 62);
+            this.txtVendor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVendor.Name = "txtVendor";
+            this.txtVendor.Size = new System.Drawing.Size(166, 31);
+            this.txtVendor.TabIndex = 91;
             // 
             // label9
             // 
@@ -1275,7 +1275,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox cboClass;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtVender;
+        private System.Windows.Forms.TextBox txtVendor;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnExec;
         private System.Windows.Forms.Button btnClear;

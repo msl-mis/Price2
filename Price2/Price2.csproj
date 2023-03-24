@@ -113,22 +113,82 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmMaterial_Adjust.cs">
+    <Compile Include="frmLaborCost_CN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMaterial_Adjust.Designer.cs">
+    <Compile Include="frmLaborCost_CN.Designer.cs">
+      <DependentUpon>frmLaborCost_CN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmTaxRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmTaxRate.Designer.cs">
+      <DependentUpon>frmTaxRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmWelderAllowance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmWelderAllowance.Designer.cs">
+      <DependentUpon>frmWelderAllowance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmExangeRate_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmExangeRate_History.Designer.cs">
+      <DependentUpon>frmExangeRate_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmExangeRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmExangeRate.Designer.cs">
+      <DependentUpon>frmExangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmCopper_Price_Calculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmCopper_Price_Calculate.Designer.cs">
+      <DependentUpon>frmCopper_Price_Calculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmTemporary_Replace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmTemporary_Replace.Designer.cs">
+      <DependentUpon>frmTemporary_Replace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmInq_Large.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmInq_Large.designer.cs">
+      <DependentUpon>frmInq_Large.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmMaterial_Adjust.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmMaterial_Adjust.designer.cs">
       <DependentUpon>frmMaterial_Adjust.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorking_Adjust_Spec.cs">
+    <Compile Include="FORM\PAGE4\frmSpecialExpenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorking_Adjust_Spec.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmSpecialExpenes.designer.cs">
+      <DependentUpon>frmSpecialExpenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmSpecialExpenes_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmSpecialExpenes_Item.designer.cs">
+      <DependentUpon>frmSpecialExpenes_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmWorking_Adjust_Spec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmWorking_Adjust_Spec.Designer.cs">
       <DependentUpon>frmWorking_Adjust_Spec.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWorking_Adjust.cs">
+    <Compile Include="FORM\PAGE4\frmWorking_Adjust.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWorking_Adjust.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmWorking_Adjust.Designer.cs">
       <DependentUpon>frmWorking_Adjust.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No2.cs">
@@ -377,11 +437,11 @@
     <Compile Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.Designer.cs">
       <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender\frmVender_Inq.cs">
+    <Compile Include="FORM\PAGE2\frmVendor\frmVendor_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender\frmVender_Inq.Designer.cs">
-      <DependentUpon>frmVender_Inq.cs</DependentUpon>
+    <Compile Include="FORM\PAGE2\frmVendor\frmVendor_Inq.Designer.cs">
+      <DependentUpon>frmVendor_Inq.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No.cs">
       <SubType>Form</SubType>
@@ -473,11 +533,11 @@
     <Compile Include="FORM\PAGE3\frmProduct\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender\frmVender.cs">
+    <Compile Include="FORM\PAGE2\frmVendor\frmVendor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\PAGE2\frmVender\frmVender.Designer.cs">
-      <DependentUpon>frmVender.cs</DependentUpon>
+    <Compile Include="FORM\PAGE2\frmVendor\frmVendor.Designer.cs">
+      <DependentUpon>frmVendor.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE2\frmCustomer\frmCustomer_Inq_Country.cs">
       <SubType>Form</SubType>
@@ -678,14 +738,44 @@
     <EmbeddedResource Include="FORM\PAGE3\frmUSB2_Input.resx">
       <DependentUpon>frmUSB2_Input.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMaterial_Adjust.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmInq_Large.resx">
+      <DependentUpon>frmInq_Large.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmMaterial_Adjust.resx">
       <DependentUpon>frmMaterial_Adjust.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWorking_Adjust.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmSpecialExpenes.resx">
+      <DependentUpon>frmSpecialExpenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmSpecialExpenes_Item.resx">
+      <DependentUpon>frmSpecialExpenes_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmWorking_Adjust.resx">
       <DependentUpon>frmWorking_Adjust.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWorking_Adjust_Spec.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmWorking_Adjust_Spec.resx">
       <DependentUpon>frmWorking_Adjust_Spec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmCopper_Price_Calculate.resx">
+      <DependentUpon>frmCopper_Price_Calculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmTemporary_Replace.resx">
+      <DependentUpon>frmTemporary_Replace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE5\frmExangeRate.resx">
+      <DependentUpon>frmExangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE5\frmExangeRate_History.resx">
+      <DependentUpon>frmExangeRate_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLaborCost_CN.resx">
+      <DependentUpon>frmLaborCost_CN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE5\frmTaxRate.resx">
+      <DependentUpon>frmTaxRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE5\frmWelderAllowance.resx">
+      <DependentUpon>frmWelderAllowance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\bomuse.rdlc" />
     <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder.resx">
@@ -832,11 +922,11 @@
     <EmbeddedResource Include="FORM\PAGE3\frmProduct\frmProduct_Inq_No.resx">
       <DependentUpon>frmProduct_Inq_No.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmVender\frmVender_Inq.resx">
-      <DependentUpon>frmVender_Inq.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\PAGE2\frmVendor\frmVendor_Inq.resx">
+      <DependentUpon>frmVendor_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\PAGE2\frmVender\frmVender.resx">
-      <DependentUpon>frmVender.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\PAGE2\frmVendor\frmVendor.resx">
+      <DependentUpon>frmVendor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmBOMPrice\frmBOMPrice_Msgbox.resx">
       <DependentUpon>frmBOMPrice_Msgbox.cs</DependentUpon>

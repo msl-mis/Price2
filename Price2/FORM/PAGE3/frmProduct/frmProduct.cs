@@ -73,8 +73,8 @@ namespace Price2
         public static string strProductID = "";
         public static string rstrNo = "";     //回傳的品號
         public static string rstrID = "";     //回傳的ID
-        public static string rstrVenderID = "";     //回傳的廠號
-        public static string rstrVenderName = "";     //回傳的廠商
+        public static string rstrVendorID = "";     //回傳的廠號
+        public static string rstrVendorName = "";     //回傳的廠商
         public static string rstrResult = "";     //回傳的結果
         public frmProduct()
         {
@@ -256,13 +256,13 @@ namespace Price2
                 }
                 strSQL0_where = strSQL0_where + strSQL_tmp;
 
-                if (txtVenderID_Q.Text == "")   //廠號
+                if (txtVendorID_Q.Text == "")   //廠號
                 {
                     strSQL_tmp = "";
                 }
                 else
                 {
-                    strSQL_tmp = " and asp_vendorid like '" + txtVenderID_Q.Text.Trim() + "'";
+                    strSQL_tmp = " and asp_vendorid like '" + txtVendorID_Q.Text.Trim() + "'";
                 }
                 strSQL0_where = strSQL0_where + strSQL_tmp;
 
@@ -279,13 +279,13 @@ namespace Price2
                 }
                 strSQL1_where = strSQL1_where + strSQL_tmp;
 
-                if (txtVenderID_Q.Text == "")   //廠號
+                if (txtVendorID_Q.Text == "")   //廠號
                 {
                     strSQL_tmp = "";
                 }
                 else
                 {
-                    strSQL_tmp = " and aspnum_vendorid like '" + txtVenderID_Q.Text.Trim() + "' And aspnum.aspnum_vendorid <> asp_vendorid";
+                    strSQL_tmp = " and aspnum_vendorid like '" + txtVendorID_Q.Text.Trim() + "' And aspnum.aspnum_vendorid <> asp_vendorid";
                 }
                 strSQL1_where = strSQL1_where + strSQL_tmp;
 
@@ -299,13 +299,13 @@ namespace Price2
                 }
                 strSQL2_where = strSQL2_where + strSQL_tmp;
 
-                if (txtVenderID_Q.Text == "")   //廠號
+                if (txtVendorID_Q.Text == "")   //廠號
                 {
                     strSQL_tmp = "";
                 }
                 else
                 {
-                    strSQL_tmp = " and (asp_vendorid like '" + txtVenderID_Q.Text.Trim() + "' or (aspnum_vendorid like '" + txtVenderID_Q.Text.Trim() + "' And aspnum.aspnum_vendorid <> asp_vendorid))";
+                    strSQL_tmp = " and (asp_vendorid like '" + txtVendorID_Q.Text.Trim() + "' or (aspnum_vendorid like '" + txtVendorID_Q.Text.Trim() + "' And aspnum.aspnum_vendorid <> asp_vendorid))";
                 }
                 strSQL2_where = strSQL2_where + strSQL_tmp;
 
@@ -563,7 +563,7 @@ namespace Price2
                     }
                     oldprice = txtPurprice.Text;    //先記錄單價到oldprice一份
                     strStandprice = dt.Rows[0]["asp_standprice"].ToString();
-                    txtVenderID.Text = dt.Rows[0]["asp_vendorid"].ToString();
+                    txtVendorID.Text = dt.Rows[0]["asp_vendorid"].ToString();
                     cboCurrency.Text = dt.Rows[0]["asp_currency"].ToString();
                     txtCzf.Text = dt.Rows[0]["asp_czf"].ToString();
                     if (string.IsNullOrEmpty(dt.Rows[0]["asp_multinum"].ToString()))
@@ -688,9 +688,9 @@ namespace Price2
                         chkMaterial_VN.Checked = false;
                     }
                         
-                    if (txtVenderID.Text != "")
+                    if (txtVendorID.Text != "")
                     {
-                        lblVender.Text = getVender(txtVenderID.Text);
+                        lblVendor.Text = getVendor(txtVendorID.Text);
                     }
                 }
                 else
@@ -700,7 +700,7 @@ namespace Price2
 
                         strName = "";   //Text3.Text = ""是否為材料單的旗標
                         strStandprice = "";                //待查Text5.Text = ""
-                        txtVenderID.Text = "";
+                        txtVendorID.Text = "";
                         txtPurprice.Text = "";
                         oldprice = "";
                         c8chg = "";
@@ -747,7 +747,7 @@ namespace Price2
                         lblUser.Text = "";
                         lblDate.Text = "";
                         strPricecal = "";    //Label35計算式
-                        lblVender.Text = "";
+                        lblVendor.Text = "";
                     }
                     else
                     {
@@ -762,15 +762,15 @@ namespace Price2
 
         }
 
-        private string getVender(string ven_id)
+        private string getVendor(string ven_id)
         {
             String strSQL = $@"select ven_shortname from ven where ven_id='{ven_id}'";
             string rs = clsDB.sql_select_String(strSQL, "ven_shortname");
             if (rs == "")
             {
                 MessageBox.Show("沒有這個廠商,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtVenderID.Text = "";
-                txtVenderID.Focus();
+                txtVendorID.Text = "";
+                txtVendorID.Focus();
             }
 
             return rs;
@@ -2337,7 +2337,7 @@ namespace Price2
                     asp_um = cboUnit.Text;
                     asp_purprice = Convert.ToDouble(txtPurprice.Text);
                     asp_standprice = Convert.ToDouble(strStandprice);
-                    asp_vendorid = txtVenderID.Text;
+                    asp_vendorid = txtVendorID.Text;
                     asp_currency = cboCurrency.Text;
                     asp_czf = txtCzf.Text;
                     asp_tjjz = Convert.ToDouble(strTjjz);
@@ -2445,7 +2445,7 @@ namespace Price2
             {
                 txtID_Q.Text = "";
                 txtNo_Q.Text = "";
-                txtVenderID_Q.Text = "";
+                txtVendorID_Q.Text = "";
                 txtDate_S.Text = "";
                 txtDate_E.Text = "";
                 chkUseless_Q.Checked = false;
@@ -2540,29 +2540,6 @@ namespace Price2
                 {
                     this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
                     txtID_Q.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
-                    getData();
-                    this.Cursor = Cursors.Default;//滑鼠還原預設
-                }
-            }
-        }
-
-        private void txtVenderID_Q_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 39)
-            {
-                MessageBox.Show("不可輸入特殊字元< ' >!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                e.KeyChar = (char)0;   //處理非法字符
-            }
-        }
-
-        private void txtVenderID_Q_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (txtVenderID_Q.Text != "")
-                {
-                    this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
-                    txtVenderID_Q.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
                     getData();
                     this.Cursor = Cursors.Default;//滑鼠還原預設
                 }
@@ -2690,7 +2667,7 @@ namespace Price2
                 txtID.Text = "";
                 strName = "";   //待查Text3.Text = ""是否為材料單的旗標
                 strStandprice = "";                //待查Text5.Text = ""
-                txtVenderID.Text = "";
+                txtVendorID.Text = "";
                 txtPurprice.Text = "";
                 oldprice = "";
                 c8chg = "";
@@ -2737,7 +2714,7 @@ namespace Price2
                 lblUser.Text = "";
                 lblDate.Text = "";
                 strPricecal = "";    //Label35計算式
-                lblVender.Text = "";
+                lblVendor.Text = "";
                 btnInq_No.BackColor = Color.FromArgb(0, 255, 0);
             }
             catch (Exception ex)
@@ -2790,23 +2767,6 @@ namespace Price2
             txtCzf.Visible = false;
         }
 
-        private void txtVenderID_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                if (txtVenderID.Text != "")
-                {
-                    lblVender.Text = getVender(txtVenderID.Text);
-                    if (lblVender.Text != "")
-                    {
-                        String strSQL = $@"select ven_currency from ven where ven_id='{lblVender.Text}'";
-                        string rs = clsDB.sql_select_String(strSQL, "ven_currency");
-                        cboCurrency.Text = rs;
-                    }
-                }
-            }
-        }
-
         private void txtPurprice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 39)
@@ -2820,7 +2780,7 @@ namespace Price2
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtVenderID.Focus();
+                txtVendorID.Focus();
             }
         }
 
@@ -3595,7 +3555,7 @@ namespace Price2
                 if(txtNo.Text!="" && txtNo.Text.Length>=6)
                 {
                     rstrNo = "";
-                    rstrVenderID = "";
+                    rstrVendorID = "";
                     frmProduct_InputBox frmProduct_InputBox = new frmProduct_InputBox();
                     frmProduct_InputBox.ShowInTaskbar = false;//圖示不顯示在工作列
                     frmProduct_InputBox.txtName.Text = txtNo.Text;
@@ -3603,7 +3563,7 @@ namespace Price2
                    
                     if (rstrResult=="OK")
                     {
-                        if (rstrNo != "" && rstrVenderID !="")
+                        if (rstrNo != "" && rstrVendorID !="")
                         {
                             //string strNo = input.GetMsg().Trim().ToUpper();
                             if (rstrNo != txtNo.Text)
@@ -3637,20 +3597,20 @@ namespace Price2
                                 }
 
                                 strSQL = $@"update ap3
-                                            set    ap3_vendorid = '{rstrVenderID}'
+                                            set    ap3_vendorid = '{rstrVendorID}'
                                             where  ap3_part = '{txtID.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
 
                                 strSQL = $@"update avt
                                             set    avt_vendormaterialno = '{rstrNo}',
-                                                   avt_vendorid = '{rstrVenderID}'
+                                                   avt_vendorid = '{rstrVendorID}'
                                             where  avt_id = '{txtID.Text.Trim()}'
                                                    and avt_vendormaterialno = '{txtNo.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
 
                                 strSQL = $@"update asp
                                             set    asp_vendormaterialno = '{rstrNo}',
-                                                   asp_vendorid = '{rstrVenderID}',
+                                                   asp_vendorid = '{rstrVendorID}',
                                                    asp_user = Isnull((select wus_name
                                                                        from wus
                                                                        where wus_computername = Host_name()),
@@ -3661,14 +3621,14 @@ namespace Price2
 
                                 strSQL = $@"update aspnum
                                             set    aspnum_num = '{rstrNo}', 
-                                                   asp_vendorid = '{rstrVenderID}'
+                                                   asp_vendorid = '{rstrVendorID}'
                                             where aspnum_id = '{txtID.Text.Trim()}'
                                                     and aspnum_num = '{txtNo.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
 
                                 strSQL = $@"update asm
                                             set    asm_vendormaterialno = '{rstrNo}',
-                                                   asm_vendorid = '{rstrVenderID}'
+                                                   asm_vendorid = '{rstrVendorID}'
                                             where  asm_id = '{txtID.Text.Trim()}'
                                                    and asm_vendormaterialno = '{txtNo.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
@@ -4025,7 +3985,7 @@ namespace Price2
                                     values (N'{strNewID}',
                                             Getdate(),
                                             '{txtPurprice.Text}',
-                                            '{txtVenderID.Text}',
+                                            '{txtVendorID.Text}',
                                             '{clsGlobal.strG_User}',
                                             '{cboCurrency.Text}',
                                             N'[更名] 原材料名->{strOldID}',
@@ -4111,7 +4071,7 @@ namespace Price2
                                              '{cboCurrency.Text.Trim()}',
                                              '{txtCzf.Text.Trim()}',
                                              '{strPricecal}',
-                                             '{txtVenderID.Text.Trim()}',
+                                             '{txtVendorID.Text.Trim()}',
                                              '{txtSpec.Text.Trim()}',
                                              '{cboUnit.Text.Trim()}') ";
                     clsDB.Execute(strSQL);
@@ -4145,7 +4105,7 @@ namespace Price2
                         txtNo.Text = dt.Rows[0]["品號"].ToString();
                         txtPurprice.Text = dt.Rows[0]["最新價格"].ToString();
                         oldprice = txtPurprice.Text;
-                        txtVenderID.Text = dt.Rows[0]["廠商"].ToString();
+                        txtVendorID.Text = dt.Rows[0]["廠商"].ToString();
                         cboCurrency.Text = dt.Rows[0]["幣種"].ToString();
                         cboUnit.Text = dt.Rows[0]["單位"].ToString();
                         txtCzf.Text = dt.Rows[0]["參照法"].ToString();
@@ -4174,7 +4134,7 @@ namespace Price2
                         txtNo.Text = dt.Rows[0]["品號"].ToString();
                         txtPurprice.Text = dt.Rows[0]["最新價格"].ToString();
                         oldprice = txtPurprice.Text;
-                        txtVenderID.Text = dt.Rows[0]["廠商"].ToString();
+                        txtVendorID.Text = dt.Rows[0]["廠商"].ToString();
                         cboCurrency.Text = dt.Rows[0]["幣種"].ToString();
                         cboUnit.Text = dt.Rows[0]["單位"].ToString();
                         txtCzf.Text = dt.Rows[0]["參照法"].ToString();
@@ -4186,30 +4146,6 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-btnBOM_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnInq_Vender_Click(object sender, EventArgs e)    //呼叫"廠商查詢",並將結果傳入廠號廠商
-        {
-            //呼叫"廠商查詢",並將結果傳入廠號廠商
-            try
-            {
-                rstrVenderID = "";
-                rstrVenderName = "";
-                frmVender_Inq frmVender_Inq = new frmVender_Inq();
-                frmVender_Inq.ShowInTaskbar = false;    //圖示不顯示在工作列
-                frmVender_Inq.strWhoCall = "frmProduct";
-                frmVender_Inq.ShowDialog();
-
-                if (rstrVenderID != "")
-                {
-                    txtVenderID.Text = rstrVenderID;
-                    lblVender.Text= rstrVenderName;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-btnInq_Customer_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -4295,7 +4231,7 @@ namespace Price2
                 asp_um = cboUnit.Text;
                 asp_purprice = Convert.ToDouble(txtPurprice.Text);
                 asp_standprice = Convert.ToDouble(strStandprice);
-                asp_vendorid = txtVenderID.Text;
+                asp_vendorid = txtVendorID.Text;
                 asp_currency = cboCurrency.Text;
                 asp_czf = txtCzf.Text;
                 asp_tjjz = Convert.ToDouble(strTjjz);
@@ -4373,6 +4309,70 @@ namespace Price2
                 }
             }
             
+        }
+
+        private void btnInq_Vendor_Click(object sender, EventArgs e)
+        {
+            //呼叫"廠商查詢",並將結果傳入廠號廠商
+            try
+            {
+                rstrVendorID = "";
+                rstrVendorName = "";
+                frmVendor_Inq frmVendor_Inq = new frmVendor_Inq();
+                frmVendor_Inq.ShowInTaskbar = false;    //圖示不顯示在工作列
+                frmVendor_Inq.strWhoCall = "frmProduct";
+                frmVendor_Inq.ShowDialog();
+
+                if (rstrVendorID != "")
+                {
+                    txtVendorID.Text = rstrVendorID;
+                    lblVendor.Text = rstrVendorName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-btnInq_Vendor_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtVendorID_Q_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtVendorID_Q.Text != "")
+                {
+                    this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                    txtVendorID_Q.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
+                    getData();
+                    this.Cursor = Cursors.Default;//滑鼠還原預設
+                }
+            }
+        }
+
+        private void txtVendorID_Q_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 39)
+            {
+                MessageBox.Show("不可輸入特殊字元< ' >!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.KeyChar = (char)0;   //處理非法字符
+            }
+        }
+
+        private void txtVendorID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtVendorID.Text != "")
+                {
+                    lblVendor.Text = getVendor(txtVendorID.Text);
+                    if (lblVendor.Text != "")
+                    {
+                        String strSQL = $@"select ven_currency from ven where ven_id='{lblVendor.Text}'";
+                        string rs = clsDB.sql_select_String(strSQL, "ven_currency");
+                        cboCurrency.Text = rs;
+                    }
+                }
+            }
         }
     }
 }

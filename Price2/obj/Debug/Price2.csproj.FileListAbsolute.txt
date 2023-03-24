@@ -168,8 +168,6 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Grid.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_InputBox.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProduct_Inq_No.resources
-D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVender_Inq.resources
-D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVender.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Msgbox.resources
 D:\User\Desktop\Price2\Price2\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\User\Desktop\Price2\Price2\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
@@ -451,3 +449,15 @@ D:\Price2\Price2\obj\Debug\Price2.frmUSB2_Input.resources
 D:\Price2\Price2\obj\Debug\Price2.frmMaterial_Adjust.resources
 D:\Price2\Price2\obj\Debug\Price2.frmWorking_Adjust.resources
 D:\Price2\Price2\obj\Debug\Price2.frmWorking_Adjust_Spec.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmInq_Large.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSpecialExpenes.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSpecialExpenes_Item.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVendor_Inq.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmVendor.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTemporary_Replace.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmCopper_Price_Calculate.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmExangeRate.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmExangeRate_History.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmWelderAllowance.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTaxRate.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmLaborCost_CN.resources

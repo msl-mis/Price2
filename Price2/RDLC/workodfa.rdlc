@@ -932,7 +932,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=Parameters!orderid.Value</Value>
+                      <Value>=Parameters!orderid.Value+"FO"</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
                       </Style>

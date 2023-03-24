@@ -27,37 +27,37 @@ namespace Price2
         {
             frmProduct.rstrResult = "OK";
             frmProduct.rstrNo = txtName.Text.Trim();
-            frmProduct.rstrVenderID = txtVender.Text.Trim();
+            frmProduct.rstrVendorID = txtVendor.Text.Trim();
             this.Close();
         }
 
-        private void checkVender()
+        private void checkVendor()
         {
             string strSQL = "";
             DataTable dt = new DataTable();
-            strSQL = $@"select ven_id,ven_currency,ven_shortname from ven where ven_id='{txtVender.Text.Trim()}'";
+            strSQL = $@"select ven_id,ven_currency,ven_shortname from ven where ven_id='{txtVendor.Text.Trim()}'";
             dt=clsDB.sql_select_dt(strSQL);
             if(dt.Rows.Count == 0)
             {
                 MessageBox.Show("沒有這個廠商,請重新輸入!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtVender.Focus();
+                txtVendor.Focus();
             }
             
         }
 
-        private void txtVender_KeyDown(object sender, KeyEventArgs e)
+        private void txtVendor_Leave(object sender, EventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (txtVendor.Text != "")
             {
-                checkVender();
+                checkVendor();
             }
         }
 
-        private void txtVender_Leave(object sender, EventArgs e)
+        private void txtVendor_KeyDown(object sender, KeyEventArgs e)
         {
-            if(txtVender.Text!="")
+            if (e.KeyCode == Keys.Enter)
             {
-                checkVender();
+                checkVendor();
             }
         }
     }

@@ -92,7 +92,7 @@
             this.dgvLevel_1 = new System.Windows.Forms.DataGridView();
             this.ap1_assy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel = new System.Windows.Forms.Panel();
-            this.txtVender = new System.Windows.Forms.TextBox();
+            this.txtVendor = new System.Windows.Forms.TextBox();
             this.pnlName = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlID = new System.Windows.Forms.Panel();
@@ -893,7 +893,7 @@
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel.Controls.Add(this.txtVender);
+            this.panel.Controls.Add(this.txtVendor);
             this.panel.Controls.Add(this.pnlName);
             this.panel.Controls.Add(this.pnlID);
             this.panel.Controls.Add(this.lblCZF);
@@ -927,14 +927,14 @@
             this.panel.Size = new System.Drawing.Size(409, 216);
             this.panel.TabIndex = 100;
             // 
-            // txtVender
+            // txtVendor
             // 
-            this.txtVender.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtVender.Location = new System.Drawing.Point(301, 154);
-            this.txtVender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtVender.Name = "txtVender";
-            this.txtVender.Size = new System.Drawing.Size(64, 27);
-            this.txtVender.TabIndex = 127;
+            this.txtVendor.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtVendor.Location = new System.Drawing.Point(301, 154);
+            this.txtVendor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVendor.Name = "txtVendor";
+            this.txtVendor.Size = new System.Drawing.Size(64, 27);
+            this.txtVendor.TabIndex = 127;
             // 
             // pnlName
             // 
@@ -1481,7 +1481,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel pnlName_M;
         private System.Windows.Forms.Panel pnlID_M;
-        private System.Windows.Forms.TextBox txtVender;
+        private System.Windows.Forms.TextBox txtVendor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ap3_part;
         private System.Windows.Forms.DataGridViewTextBoxColumn ap3_tbprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn pri_part;
