@@ -25,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://192.168.10.205:8083/</InstallUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>17</ApplicationRevision>
-    <ApplicationVersion>1.0.0.17</ApplicationVersion>
+    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationVersion>1.0.0.18</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -113,10 +113,34 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmLaborCost_CN.cs">
+    <Compile Include="frmPackage_Input_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLaborCost_CN.Designer.cs">
+    <Compile Include="frmPackage_Input_Inq.Designer.cs">
+      <DependentUpon>frmPackage_Input_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackage_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackage_Input.Designer.cs">
+      <DependentUpon>frmPackage_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipPlan_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipPlan_Print.Designer.cs">
+      <DependentUpon>frmShipPlan_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipBox_Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipBox_Print.Designer.cs">
+      <DependentUpon>frmShipBox_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmLaborCost_CN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE5\frmLaborCost_CN.Designer.cs">
       <DependentUpon>frmLaborCost_CN.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE5\frmTaxRate.cs">
@@ -699,6 +723,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmPackage_Input.resx">
+      <DependentUpon>frmPackage_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackage_Input_Inq.resx">
+      <DependentUpon>frmPackage_Input_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\ordch.rdlc" />
+    <EmbeddedResource Include="frmShipPlan_Print.resx">
+      <DependentUpon>frmShipPlan_Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\chxhgc.rdlc" />
+    <EmbeddedResource Include="RDLC\chxhgp.rdlc" />
+    <EmbeddedResource Include="RDLC\chxhf.rdlc" />
+    <EmbeddedResource Include="RDLC\chxhp.rdlc" />
+    <EmbeddedResource Include="RDLC\chxhs.rdlc" />
     <EmbeddedResource Include="FORM\PAGE3\frmLabel_UL817_Input.resx">
       <DependentUpon>frmLabel_UL817_Input.cs</DependentUpon>
     </EmbeddedResource>
@@ -768,7 +807,7 @@
     <EmbeddedResource Include="FORM\PAGE5\frmExangeRate_History.resx">
       <DependentUpon>frmExangeRate_History.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLaborCost_CN.resx">
+    <EmbeddedResource Include="FORM\PAGE5\frmLaborCost_CN.resx">
       <DependentUpon>frmLaborCost_CN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE5\frmTaxRate.resx">
@@ -776,6 +815,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE5\frmWelderAllowance.resx">
       <DependentUpon>frmWelderAllowance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipBox_Print.resx">
+      <DependentUpon>frmShipBox_Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\bomuse.rdlc" />
     <EmbeddedResource Include="FORM\PAGE4\Order\frmOrder.resx">
@@ -1015,6 +1057,7 @@
     <EmbeddedResource Include="RDLC\workodpa.rdlc" />
     <EmbeddedResource Include="RDLC\workods.rdlc" />
     <EmbeddedResource Include="RDLC\workodsa.rdlc" />
+    <EmbeddedResource Include="RDLC\chxh.rdlc" />
     <None Include="packages.config" />
     <None Include="Price2_TemporaryKey.pfx" />
     <None Include="PriceDataSet.xsc">

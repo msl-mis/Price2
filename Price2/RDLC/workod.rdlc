@@ -241,7 +241,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1309,7 +1308,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
-              <Top>1.97639cm</Top>
+              <Top>1.95522cm</Top>
               <Height>0.6cm</Height>
               <Width>1.5cm</Width>
               <ZIndex>15</ZIndex>
@@ -1376,7 +1375,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox11</rd:DefaultName>
-              <Top>3.17639cm</Top>
+              <Top>3.15522cm</Top>
               <Height>0.6cm</Height>
               <Width>1.5cm</Width>
               <ZIndex>17</ZIndex>
@@ -1473,7 +1472,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox17</rd:DefaultName>
-              <Top>3.17639cm</Top>
+              <Top>3.15522cm</Top>
               <Left>1.5cm</Left>
               <Height>0.6cm</Height>
               <Width>4cm</Width>

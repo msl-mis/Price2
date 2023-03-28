@@ -49,7 +49,7 @@ namespace Price2
             {
                 frmOrder_Inq frmOrder_Inq = new frmOrder_Inq();
                 frmOrder_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
-                //frmOrder_Inq.rstrCustomer = txtCustomer.Text.Trim();
+                frmOrder_Inq.rstrForm = "frmOrder";
                 //frmOrder_Inq.rstrOrderID = txtOrderID.Text.Trim();
                 frmOrder_Inq.ShowDialog();
                 if (rstrOrderID != "")
@@ -62,7 +62,7 @@ namespace Price2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-btnProofing_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-btnOrder_Inq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

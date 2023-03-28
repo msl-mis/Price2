@@ -7,5 +7,8 @@ namespace Price2
 
     partial class PriceDataSet
     {
+        partial class chxhDataTable
+        {
+        }
     }
 }

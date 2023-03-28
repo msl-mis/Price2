@@ -461,3 +461,7 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmExangeRate_History.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmWelderAllowance.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTaxRate.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmLaborCost_CN.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmShipBox_Print.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmShipPlan_Print.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPackage_Input.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPackage_Input_Inq.resources

@@ -14,6 +14,7 @@ namespace Price2
     {
         public static string rstrOrderID = "";   //傳來的訂單編號
         public static string rstrCustomer = "";   //傳來的客戶
+        public static string rstrForm = "";   //傳來的表單
         public frmOrder_Inq()
         {
             InitializeComponent();
@@ -236,7 +237,18 @@ namespace Price2
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.RowIndex!= dgvData.Rows.Count-1)
                 {
-                    frmOrder.rstrOrderID = dgvData.Rows[e.RowIndex].Cells["訂單編號"].Value.ToString();
+                    if(rstrForm== "frmOrder")
+                    {
+                        frmOrder.rstrOrderID = dgvData.Rows[e.RowIndex].Cells["訂單編號"].Value.ToString();
+                    }
+                    if (rstrForm == "frmShipBox_Print")
+                    {
+                        frmShipBox_Print.rstrOrderID = dgvData.Rows[e.RowIndex].Cells["訂單編號"].Value.ToString();
+                    }
+                    if (rstrForm == "frmShipPlan_Print")
+                    {
+                        frmShipPlan_Print.rstrOrderID = dgvData.Rows[e.RowIndex].Cells["訂單編號"].Value.ToString();
+                    }
                     this.Close();
                 }
             }

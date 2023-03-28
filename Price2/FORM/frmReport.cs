@@ -410,6 +410,70 @@ namespace Price2
 
                     reportViewer1.LocalReport.SetParameters(new ReportParameter[] { bomuse1, bomuse2, bomuse3, bomuse4 });
                     break;
+                case "chxh":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.chxh.rdlc";
+                    //載入參數
+                    ReportParameter chxh1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter chxh2 = new ReportParameter("customer", strRP[1]);
+                    ReportParameter chxh3 = new ReportParameter("delivedate", strRP[2]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { chxh1, chxh2, chxh3 });
+                    break;
+                case "chxhs":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.chxhs.rdlc";
+                    //載入參數
+                    ReportParameter chxhs1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter chxhs2 = new ReportParameter("customer", strRP[1]);
+                    ReportParameter chxhs3 = new ReportParameter("delivedate", strRP[2]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { chxhs1, chxhs2, chxhs3 });
+                    break;
+                case "chxhp":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.chxhp.rdlc";
+                    //載入參數
+                    ReportParameter chxhp1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter chxhp2 = new ReportParameter("customer", strRP[1]);
+                    ReportParameter chxhp3 = new ReportParameter("delivedate", strRP[2]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { chxhp1, chxhp2, chxhp3 });
+                    break;
+                case "chxhf":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.chxhf.rdlc";
+                    //載入參數
+                    ReportParameter chxhf1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter chxhf2 = new ReportParameter("customer", strRP[1]);
+                    ReportParameter chxhf3 = new ReportParameter("delivedate", strRP[2]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { chxhf1, chxhf2, chxhf3 });
+                    break;
+                case "chxhgp":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.chxhgp.rdlc";
+                    //載入參數
+                    ReportParameter chxhgp1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter chxhgp2 = new ReportParameter("customer", strRP[1]);
+                    ReportParameter chxhgp3 = new ReportParameter("delivedate", strRP[2]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { chxhgp1, chxhgp2, chxhgp3 });
+                    break;
+                case "chxhgc":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.chxhgc.rdlc";
+                    //載入參數
+                    ReportParameter chxhgc1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter chxhgc2 = new ReportParameter("customer", strRP[1]);
+                    ReportParameter chxhgc3 = new ReportParameter("delivedate", strRP[2]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { chxhgc1, chxhgc2, chxhgc3 });
+                    break;
+                case "ordch":
+                    //載入rdlc
+                    localReport.ReportEmbeddedResource = "Price2.RDLC.ordch.rdlc";
+                    //載入參數
+                    ReportParameter ordch1 = new ReportParameter("orderid", strRP[0]);
+                    ReportParameter ordch2 = new ReportParameter("delivedate", strRP[1]);
+                    ReportParameter ordch3 = new ReportParameter("zm1", strRP[2]);
+                    ReportParameter ordch4 = new ReportParameter("cm", strRP[3]);
+                    reportViewer1.LocalReport.SetParameters(new ReportParameter[] { ordch1, ordch2, ordch3, ordch4 });
+                    break;
                 default:
                     break;
             }
