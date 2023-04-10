@@ -441,7 +441,13 @@ namespace Price2
                     txtCustomerID.Focus();
                     return;
                 }
-                if(cboCode.Text=="")
+                if (cboYw.Text == "")
+                {
+                    MessageBox.Show("請選擇業務!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cboYw.Focus();
+                    return;
+                }
+                if (cboCode.Text=="")
                 {
                     cboCode.Text = "A";
                 }

@@ -99,6 +99,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -113,28 +114,46 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmPackage_Input_Inq.cs">
+    <Compile Include="frmSalesReport_Grid_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPackage_Input_Inq.Designer.cs">
+    <Compile Include="frmSalesReport_Grid_Inq.Designer.cs">
+      <DependentUpon>frmSalesReport_Grid_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesReport_Grid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesReport_Grid.Designer.cs">
+      <DependentUpon>frmSalesReport_Grid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesReport.Designer.cs">
+      <DependentUpon>frmSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE6\frmPackage_Input_Inq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE6\frmPackage_Input_Inq.Designer.cs">
       <DependentUpon>frmPackage_Input_Inq.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPackage_Input.cs">
+    <Compile Include="FORM\PAGE6\frmPackage_Input.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPackage_Input.Designer.cs">
+    <Compile Include="FORM\PAGE6\frmPackage_Input.Designer.cs">
       <DependentUpon>frmPackage_Input.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShipPlan_Print.cs">
+    <Compile Include="FORM\PAGE6\frmShipPlan_Print.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShipPlan_Print.Designer.cs">
+    <Compile Include="FORM\PAGE6\frmShipPlan_Print.Designer.cs">
       <DependentUpon>frmShipPlan_Print.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmShipBox_Print.cs">
+    <Compile Include="FORM\PAGE6\frmShipBox_Print.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShipBox_Print.Designer.cs">
+    <Compile Include="FORM\PAGE6\frmShipBox_Print.Designer.cs">
       <DependentUpon>frmShipBox_Print.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE5\frmLaborCost_CN.cs">
@@ -723,14 +742,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="frmPackage_Input.resx">
+    <EmbeddedResource Include="FORM\PAGE6\frmPackage_Input.resx">
       <DependentUpon>frmPackage_Input.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPackage_Input_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE6\frmPackage_Input_Inq.resx">
       <DependentUpon>frmPackage_Input_Inq.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesReport.resx">
+      <DependentUpon>frmSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesReport_Grid.resx">
+      <DependentUpon>frmSalesReport_Grid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesReport_Grid_Inq.resx">
+      <DependentUpon>frmSalesReport_Grid_Inq.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RDLC\ordch.rdlc" />
-    <EmbeddedResource Include="frmShipPlan_Print.resx">
+    <EmbeddedResource Include="FORM\PAGE6\frmShipPlan_Print.resx">
       <DependentUpon>frmShipPlan_Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\chxhgc.rdlc" />
@@ -816,7 +844,7 @@
     <EmbeddedResource Include="FORM\PAGE5\frmWelderAllowance.resx">
       <DependentUpon>frmWelderAllowance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmShipBox_Print.resx">
+    <EmbeddedResource Include="FORM\PAGE6\frmShipBox_Print.resx">
       <DependentUpon>frmShipBox_Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\bomuse.rdlc" />

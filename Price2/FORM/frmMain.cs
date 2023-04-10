@@ -1239,6 +1239,11 @@ namespace Price2
             }
         }
 
+        private void menu4_9_Click(object sender, EventArgs e)  //4_9 客戶成交查詢
+        {
+            
+        }
+
         private void menu4_11_Click(object sender, EventArgs e) //4_11 調整報價加工分/不良率
         {
             //4_11 調整報價加工分/不良率
@@ -1695,6 +1700,483 @@ namespace Price2
         }
         #endregion
 
+        #region Menu7(共用資料)
+        private void menu7_1_Click(object sender, EventArgs e)  //7_1 查詢有訂單無品號的材料
+        {
+            //7_1 查詢有訂單無品號的材料
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select asp_id         材料名,
+                                   pri_customerid 客號,
+                                   ord_orderid    訂單號,
+                                   pri_username   修改人
+                            from   asp,
+                                   pri,
+                                   ord
+                            where  asp_vendormaterialno = ''
+                                   and asp_id = pri_part
+                                   and pri_customerid = ord_assy
+                                   and asp_id in (select distinct asp_id
+                                                  from   asp,
+                                                         pri,
+                                                         ord
+                                                  where  asp_vendormaterialno = ''
+                                                         and asp_id = pri_part
+                                                         and pri_customerid = ord_assy)
+                            order  by asp_id, ord_orderid desc ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("有訂單無品號的材料名檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_2_Click(object sender, EventArgs e)  //7_2 檢查品號對應多材料名
+        {
+            //7_2 檢查品號對應多材料名
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_pid_pnum";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id 品號,
+                                   na67_customerid 次數,
+                                   na67_orderid 材料名
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("品號對應多材料名檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void menu7_3_Click(object sender, EventArgs e)  //7_3 檢查材料單回寫品號是否不一致
+        {
+            //7_3 檢查材料單回寫品號是否不一致
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_aspid_pricustomerid";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id         材料名,
+                                   na67_customerid 材料單品號,
+                                   na67_orderid    火車頭外層品號,
+                                   na67_idnum      火車頭內層品號
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("材料單回寫品號是否不一致檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_4_Click(object sender, EventArgs e)  //7_4 檢查是否有包裝運開頭自訂材料名
+        {
+            //7_4 檢查是否有包裝運開頭自訂材料名
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_pri_part";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id 客戶,
+                                   na67_customerid 客號,
+                                   na67_orderid 材料名
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("包裝運開頭自訂材料名檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_4_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void menu7_5_Click(object sender, EventArgs e)  //7_5 檢查品號前六碼不一致
+        {
+            //7_5 檢查品號前六碼不一致
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_pid_6";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id 材料名,
+                                   na67_customerid 位置,
+                                   na67_idnum 品號
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("檢查品號前六碼不一致", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_5_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_6_Click(object sender, EventArgs e)  //7_6 參照法異動未更新報價檢查表
+        {
+            //7_6 參照法異動未更新報價檢查表
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_odimodify";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_orderid    客戶,
+                                   na67_id         客號,
+                                   na67_datetime   異動時間,
+                                   na67_customerid 修改人,
+                                   na67_idnum      業務
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_customerid,
+                                      na67_orderid ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("參照法異動未更新報價檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_6_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_7_Click(object sender, EventArgs e)  //7_7 檢查報價單中有二個包裝材料
+        {
+            //7_7 檢查報價單中有二個包裝材料
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_bp_pnum";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id         客號,
+                                   na67_idnum      客戶,
+                                   na67_customerid 包數量
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("報價單中有二個包裝材料檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_7_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_8_Click(object sender, EventArgs e)  //7_8 檢查報價單材料不在火車頭和特選
+        {
+            //7_8 檢查報價單材料不在火車頭和特選
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_bp_nonpid";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id         客戶,
+                                   na67_customerid 客號,
+                                   na67_orderid    材料名
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("報價單中材料不在火車頭和特選檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_8_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_9_Click(object sender, EventArgs e)  //7_9 客戶成交查詢異常資料檢查表
+        {
+            //7_9 客戶成交查詢異常資料檢查表
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_order_price {DateTime.Now.ToString("yyyy")} ";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id         '訂單號',
+                                   na67_customerid '客號',
+                                   na67_qtysum     '報價',
+                                   na67_lengthsum  '轉換價',
+                                   na67_idnum      '利潤%'
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_id,
+                                      na67_idnum desc ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("客戶成交查詢異常資料檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_9_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_10_Click(object sender, EventArgs e) //7_10 安規線材火車頭設定檢查表
+        {
+            //7_10 安規線材火車頭設定檢查表
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_ULSET ";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select na67_id         材料名,
+                                   na67_customerid 單位,
+                                   na67_orderid    廠商,
+                                   na67_idnum      錯誤原因
+                            from   na67
+                            where  na67_computername = Host_name()
+                            order  by na67_idnum desc,
+                                      na67_id ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("安規線材火車頭設定檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_10_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_11_Click(object sender, EventArgs e) //7_11 報價低於成本價檢查表(未完成)
+        {
+            //7_11 報價低於成本價檢查表
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                clsDB.Execute(strSQL);
+
+                //strSQL = $@"select distinct pri_customer       '客戶編號' ,
+                //                                    pld_customerid     '客號',
+                //                                    pld_name           '量大數量',
+                //                                    pld_pricost        '差別報價',
+                //                                    pri_convcost       '成本價',
+                //                                    Round(( ( pld_pricost - pri_convcost ) / pri_convcost ) * 100, 3 ) '負利潤%',
+                //                                    pld_date           '建立日期'
+                //                    from   pld
+                //                           left join pri
+                //                                  on pri_customerid = pld_customerid
+                //                    where  pld_name <> '一般價'
+                //                           and pld_pricost < pri_convcost ";
+                strSQL = $@"";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("安規線材火車頭設定檢查表", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_11_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_12_Click(object sender, EventArgs e)
+        {
+            //7_12 有鼎新採購品號卻無Price品號
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                strSQL = $@"exec chk_ULSET ";
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select distinct asp_id               '材料名',
+                                            asp_vendormaterialno '品號',
+                                            MB001                '鼎新品號'
+                            from   asp
+                                   left join [ERPDB].MSLCN.dbo.INVMB
+                                          on MB002 = asp_id collate Chinese_Taiwan_Stroke_CI_AS
+                            where  asp_vendormaterialno = ''
+                                   and MB001 <> ''
+                            order  by asp_id,
+                                      MB001 ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("有鼎新採購品號卻無Price品號", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_12_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu7_13_Click(object sender, EventArgs e) //7_13 304材料在火車頭外層檢查表
+        {
+            //7_13 304材料在火車頭外層檢查表
+            try
+            {
+                string strSQL = "";
+                DataTable dt = new DataTable();
+
+                clsDB.Execute(strSQL);
+
+                strSQL = $@"select asp_id               材料名,
+                                   asp_vendormaterialno 品號,
+                                   asp_vendorid         廠商,
+                                   asp_user             用戶
+                            from   asp
+                            where  asp_vendorid = '304' ";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    dgvData.DataSource = dt;
+                    clsGlobal.ExportExcel("有鼎新採購品號卻無Price品號", dgvData);
+                }
+                else
+                {
+                    MessageBox.Show("查無資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu7_13_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
         #region Page1(系統)
         private void btn1_1_Click(object sender, EventArgs e)   //1.用戶管理
         {
@@ -1875,6 +2357,13 @@ namespace Price2
             menu4_7.PerformClick();
         }
 
+        private void btn4_9_Click(object sender, EventArgs e)
+        {
+            //4_9.客戶成交查詢
+            gb4.Visible = false;
+            gb4_9.Visible = true;
+        }
+
         private void btn4_11_Click(object sender, EventArgs e)  //4_11.調整報價加工分/不良率
         {
             //4_11.調整報價加工分/不良率
@@ -1959,6 +2448,85 @@ namespace Price2
         }
         #endregion
 
+        #region Page7(公用資料)
+        private void btn7_1_Click(object sender, EventArgs e)   //7_1.查詢有訂單無品號的材料
+        {
+            //7_1.查詢有訂單無品號的材料
+            menu7_1.PerformClick();
+        }
+
+        private void btn7_2_Click(object sender, EventArgs e)   //7_2.檢查品號對應多材料名
+        {
+            //7_2.檢查品號對應多材料名
+            menu7_2.PerformClick();
+        }
+
+        private void btn7_3_Click(object sender, EventArgs e)   //7_3.檢查材料單回寫品號是否不一致
+        {
+            //7_3.檢查材料單回寫品號是否不一致
+            menu7_3.PerformClick();
+        }
+
+        private void btn7_4_Click(object sender, EventArgs e)   //7_4.檢查是否有包裝運開頭自訂材料名
+        {
+            //7_4.檢查是否有包裝運開頭自訂材料名
+            menu7_4.PerformClick();
+        }
+
+        private void btn7_5_Click(object sender, EventArgs e)   //7_5.檢查品號前六碼不一致
+        {
+            //7_5.檢查品號前六碼不一致
+            menu7_5.PerformClick();
+        }
+
+        private void btn7_6_Click(object sender, EventArgs e)   //7_6.參照法異動未更新報價檢查表
+        {
+            //7_6.參照法異動未更新報價檢查表
+            menu7_6.PerformClick();
+        }
+
+        private void btn7_7_Click(object sender, EventArgs e)   //7_7.檢查報價單中有二個包裝材料
+        {
+            //7_7.檢查報價單中有二個包裝材料
+            menu7_7.PerformClick();
+        }
+
+        private void btn7_8_Click(object sender, EventArgs e)   //7_8.檢查報價單材料不在火車頭和特選
+        {
+            //7_8.檢查報價單材料不在火車頭和特選
+            menu7_8.PerformClick();
+        }
+
+        private void btn7_9_Click(object sender, EventArgs e)   //7_9.客戶成交查詢異常資料檢查表
+        {
+            //7_9.客戶成交查詢異常資料檢查表
+            menu7_9.PerformClick();
+        }
+
+        private void btn7_10_Click(object sender, EventArgs e)  //7_10.安規線材火車頭設定檢查表
+        {
+            //7_10.安規線材火車頭設定檢查表
+            menu7_10.PerformClick();
+        }
+
+        private void btn7_11_Click(object sender, EventArgs e)  //7_11.報價低於成本價檢查表
+        {
+            //7_11.報價低於成本價檢查表
+            menu7_11.PerformClick();
+        }
+
+        private void btn7_12_Click(object sender, EventArgs e)  //7_12.有鼎新採購品號卻無Price品號
+        {
+            //7_12.有鼎新採購品號卻無Price品號
+            menu7_12.PerformClick();
+        }
+
+        private void btn7_13_Click(object sender, EventArgs e)  //7_13.304材料在火車頭外層檢查表
+        {
+            //7_13.304材料在火車頭外層檢查表
+            menu7_13.PerformClick();
+        }
+        #endregion
         private void startSocket()
         {
             try
@@ -2270,9 +2838,93 @@ namespace Price2
             menu5_4_1.PerformClick();
         }
 
-        
+        private void btnReturn_gb4_9_Click(object sender, EventArgs e)
+        {
+            gb4_9.Visible = false;
+            gb4.Visible = true;
+        }
 
-        
+        private void menu4_9_1_Click(object sender, EventArgs e)    //4_9_1 成交查詢_CHART
+        {
+            //4_9_1 成交查詢_CHART
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmSalesReport frmSalesReport = new frmSalesReport();
+                frmSalesReport.MdiParent = this;
+                frmSalesReport.FormClosed += childForm_FormClosed;
+                frmSalesReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmSalesReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn4_9_1_Click(object sender, EventArgs e) //4_9_1.成交查詢_CHART
+        {
+            //4_9_1.成交查詢_CHART
+            menu4_9_1.PerformClick();
+        }
+
+        private void btn4_9_2_Click(object sender, EventArgs e) //4_9_2.成交查詢_GRID
+        {
+            //4_9_2.成交查詢_GRID
+            menu4_9_2.PerformClick();
+        }
+
+        private void menu4_9_2_Click(object sender, EventArgs e)    //4_9_2 成交查詢_GRID
+        {
+            //4_9_2 成交查詢_GRID
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmSalesReport_Grid frmSalesReport_Grid = new frmSalesReport_Grid();
+                frmSalesReport_Grid.MdiParent = this;
+                frmSalesReport_Grid.FormClosed += childForm_FormClosed;
+                frmSalesReport_Grid.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmSalesReport_Grid.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

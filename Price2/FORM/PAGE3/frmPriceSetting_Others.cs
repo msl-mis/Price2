@@ -85,7 +85,7 @@ namespace Price2
                     erp_vendormaterialno = "A5CB01%";
                     break;
                 case "芯線料/HDPE 9007(3364)/kg":
-                    erp_vendormaterialno = "A5BA09%";
+                    erp_vendormaterialno = "A5BA09%' or PURTD.TD004 like N'A5BA18%";
                     break;
                 case "可塑劑 DOTP":
                     erp_vendormaterialno = "A5DA07%";

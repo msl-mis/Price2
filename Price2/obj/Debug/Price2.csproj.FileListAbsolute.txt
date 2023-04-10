@@ -465,3 +465,6 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmShipBox_Print.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmShipPlan_Print.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPackage_Input.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPackage_Input_Inq.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSalesReport.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSalesReport_Grid.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSalesReport_Grid_Inq.resources
