@@ -379,8 +379,6 @@ D:\Price2\Price2\obj\Debug\Price2.frmRefer_Inq_Material.resources
 D:\Price2\Price2\obj\Debug\Price2.frmBOMPrice.resources
 D:\Price2\Price2\obj\Debug\Price2.frmProduct_InputBox.resources
 D:\Price2\Price2\obj\Debug\Price2.frmProduct_Inq_No.resources
-D:\Price2\Price2\obj\Debug\Price2.frmVender_Inq.resources
-D:\Price2\Price2\obj\Debug\Price2.frmVender.resources
 D:\Price2\Price2\obj\Debug\Price2.frmBOMPrice_Msgbox.resources
 D:\Price2\Price2\obj\Debug\Price2.frmCustomerFile.resources
 D:\Price2\Price2\obj\Debug\Price2.frmProofing.resources
@@ -468,3 +466,22 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmPackage_Input_Inq.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSalesReport.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSalesReport_Grid.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmSalesReport_Grid_Inq.resources
+D:\Price2\Price2\obj\Debug\Price2.frmPackage_Input.resources
+D:\Price2\Price2\obj\Debug\Price2.frmPackage_Input_Inq.resources
+D:\Price2\Price2\obj\Debug\Price2.frmSalesReport.resources
+D:\Price2\Price2\obj\Debug\Price2.frmSalesReport_Grid.resources
+D:\Price2\Price2\obj\Debug\Price2.frmSalesReport_Grid_Inq.resources
+D:\Price2\Price2\obj\Debug\Price2.frmShipPlan_Print.resources
+D:\Price2\Price2\obj\Debug\Price2.frmInq_Large.resources
+D:\Price2\Price2\obj\Debug\Price2.frmSpecialExpenes.resources
+D:\Price2\Price2\obj\Debug\Price2.frmSpecialExpenes_Item.resources
+D:\Price2\Price2\obj\Debug\Price2.frmCopper_Price_Calculate.resources
+D:\Price2\Price2\obj\Debug\Price2.frmTemporary_Replace.resources
+D:\Price2\Price2\obj\Debug\Price2.frmExangeRate.resources
+D:\Price2\Price2\obj\Debug\Price2.frmExangeRate_History.resources
+D:\Price2\Price2\obj\Debug\Price2.frmLaborCost_CN.resources
+D:\Price2\Price2\obj\Debug\Price2.frmTaxRate.resources
+D:\Price2\Price2\obj\Debug\Price2.frmWelderAllowance.resources
+D:\Price2\Price2\obj\Debug\Price2.frmShipBox_Print.resources
+D:\Price2\Price2\obj\Debug\Price2.frmVendor_Inq.resources
+D:\Price2\Price2\obj\Debug\Price2.frmVendor.resources

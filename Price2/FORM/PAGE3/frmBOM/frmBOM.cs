@@ -671,6 +671,7 @@ namespace Price2
                 DataTable dt = (DataTable)dgvData.DataSource;
                 dt.Rows.Clear();
                 dgvData.DataSource = dt;
+                //dgvData.Rows.Clear();
             }
         }
 
@@ -758,6 +759,11 @@ namespace Price2
             {
                 MessageBox.Show(this.Name + "-cboLevel3_TextChanged" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
