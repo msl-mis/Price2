@@ -109,8 +109,11 @@ namespace Price2
 
                 //日期
                 dtpDateS.Value = new DateTime(DateTime.Now.Year, 1, 1); //本年年初;
-                dtpDateE.Value = new DateTime(DateTime.Now.Year, 12, 31); //本年年尾;
-
+                //dtpDateE.Value = new DateTime(DateTime.Now.Year, 12, 31); //本年年尾;
+                dtpDateE.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpDateE.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpYear.Text = DateTime.Now.ToString("yyyy");
                 //Chart
                 setChart();
             }
@@ -239,10 +242,10 @@ namespace Price2
             DataTable dt = new DataTable();
             for (int i = 0; i<=5 ; i++)
             {
-                strDateS[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
-                strDateE[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
-                
-
+                //strDateS[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
+                //strDateE[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
+                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
                 strSQL = $@"select Sum(tab.ord_qty)                   QTY,
                                    ( Sum(tab.ord_pricost* tab.ord_qty) / Sum(tab.ord_convprice* tab.ord_qty) - 1 )                   PROFIT_RATE,
                                    Sum(tab.ord_pricost * tab.ord_qty) REVENUE
@@ -442,9 +445,10 @@ namespace Price2
             DataTable dt = new DataTable();
             for (int i = 0; i <= 5; i++)
             {
-                strDateS[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
-                strDateE[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
-
+                //strDateS[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
+                //strDateE[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
+                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
                 strSQL = $@"select Sum(tab.ord_qty)                   QTY,
                                    ( Sum(tab.ord_pricost* tab.ord_qty) / Sum(tab.ord_convprice* tab.ord_qty) - 1 )                   PROFIT_RATE,
                                    Sum(tab.ord_pricost * tab.ord_qty) REVENUE
@@ -943,7 +947,7 @@ namespace Price2
             PPD.Document.PrintPage += new PrintPageEventHandler(PD_PrintPage);
             PPD.Document.QueryPageSettings += new QueryPageSettingsEventHandler(PD_QueryPageSettings);
             PPD.Document.BeginPrint += new PrintEventHandler(PD_BeginPrint);
-            if (PPD.ShowDialog(this) == DialogResult.OK) { }
+            //if (PPD.ShowDialog(this) == DialogResult.OK) { }
 
 
             ////寫到 += 的時候按下Tab鍵會自動跳出後面的內容

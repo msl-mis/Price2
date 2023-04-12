@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalesReport));
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.cboJ = new System.Windows.Forms.ComboBox();
@@ -83,6 +83,8 @@
             this.PD = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.dtpYear = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -91,6 +93,8 @@
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox.Controls.Add(this.dtpYear);
+            this.groupBox.Controls.Add(this.label3);
             this.groupBox.Controls.Add(this.cboJ);
             this.groupBox.Controls.Add(this.btnClear);
             this.groupBox.Controls.Add(this.label1);
@@ -133,7 +137,7 @@
             this.cboJ.Items.AddRange(new object[] {
             "NO.1",
             "其他"});
-            this.cboJ.Location = new System.Drawing.Point(288, 220);
+            this.cboJ.Location = new System.Drawing.Point(288, 182);
             this.cboJ.Name = "cboJ";
             this.cboJ.Size = new System.Drawing.Size(116, 26);
             this.cboJ.TabIndex = 229;
@@ -470,6 +474,7 @@
             this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateE.Location = new System.Drawing.Point(222, 338);
             this.dtpDateE.Name = "dtpDateE";
+            this.dtpDateE.ShowUpDown = true;
             this.dtpDateE.Size = new System.Drawing.Size(60, 27);
             this.dtpDateE.TabIndex = 225;
             this.dtpDateE.Enter += new System.EventHandler(this.dtpDateE_Enter);
@@ -480,6 +485,7 @@
             this.dtpDateS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateS.Location = new System.Drawing.Point(110, 338);
             this.dtpDateS.Name = "dtpDateS";
+            this.dtpDateS.ShowUpDown = true;
             this.dtpDateS.Size = new System.Drawing.Size(60, 27);
             this.dtpDateS.TabIndex = 224;
             this.dtpDateS.Enter += new System.EventHandler(this.dtpDateS_Enter);
@@ -487,8 +493,6 @@
             // chkAll_year
             // 
             this.chkAll_year.AutoSize = true;
-            this.chkAll_year.Checked = true;
-            this.chkAll_year.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAll_year.Location = new System.Drawing.Point(288, 340);
             this.chkAll_year.Name = "chkAll_year";
             this.chkAll_year.Size = new System.Drawing.Size(81, 21);
@@ -499,11 +503,11 @@
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Enabled = false;
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(442, 37);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(700, 366);
@@ -514,7 +518,7 @@
             // 
             this.cboSales.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboSales.FormattingEnabled = true;
-            this.cboSales.Location = new System.Drawing.Point(110, 220);
+            this.cboSales.Location = new System.Drawing.Point(110, 182);
             this.cboSales.Name = "cboSales";
             this.cboSales.Size = new System.Drawing.Size(172, 26);
             this.cboSales.TabIndex = 220;
@@ -524,7 +528,7 @@
             // 
             this.cboClass.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboClass.FormattingEnabled = true;
-            this.cboClass.Location = new System.Drawing.Point(110, 258);
+            this.cboClass.Location = new System.Drawing.Point(110, 220);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(172, 26);
             this.cboClass.TabIndex = 219;
@@ -533,7 +537,7 @@
             // 
             this.cboDivision.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboDivision.FormattingEnabled = true;
-            this.cboDivision.Location = new System.Drawing.Point(110, 178);
+            this.cboDivision.Location = new System.Drawing.Point(110, 140);
             this.cboDivision.Name = "cboDivision";
             this.cboDivision.Size = new System.Drawing.Size(172, 26);
             this.cboDivision.TabIndex = 218;
@@ -589,7 +593,7 @@
             // 
             this.cboVendorID.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboVendorID.FormattingEnabled = true;
-            this.cboVendorID.Location = new System.Drawing.Point(110, 297);
+            this.cboVendorID.Location = new System.Drawing.Point(110, 259);
             this.cboVendorID.Name = "cboVendorID";
             this.cboVendorID.Size = new System.Drawing.Size(172, 26);
             this.cboVendorID.TabIndex = 186;
@@ -608,7 +612,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(14, 295);
+            this.label2.Location = new System.Drawing.Point(14, 257);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 31);
             this.label2.TabIndex = 126;
@@ -618,7 +622,7 @@
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label18.Location = new System.Drawing.Point(14, 175);
+            this.label18.Location = new System.Drawing.Point(14, 137);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(90, 31);
             this.label18.TabIndex = 120;
@@ -641,7 +645,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(14, 255);
+            this.label5.Location = new System.Drawing.Point(14, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 31);
             this.label5.TabIndex = 110;
@@ -664,7 +668,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(14, 217);
+            this.label6.Location = new System.Drawing.Point(14, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 31);
             this.label6.TabIndex = 113;
@@ -704,6 +708,27 @@
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // dtpYear
+            // 
+            this.dtpYear.CustomFormat = "yyyy";
+            this.dtpYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpYear.Location = new System.Drawing.Point(110, 307);
+            this.dtpYear.Name = "dtpYear";
+            this.dtpYear.ShowUpDown = true;
+            this.dtpYear.Size = new System.Drawing.Size(60, 27);
+            this.dtpYear.TabIndex = 233;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(17, 304);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(87, 31);
+            this.label3.TabIndex = 232;
+            this.label3.Text = "年份：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmSalesReport
             // 
@@ -778,5 +803,7 @@
         private System.Drawing.Printing.PrintDocument PD;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.DateTimePicker dtpYear;
+        private System.Windows.Forms.Label label3;
     }
 }

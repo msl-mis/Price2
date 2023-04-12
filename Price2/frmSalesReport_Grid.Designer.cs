@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.txtT3 = new System.Windows.Forms.TextBox();
             this.txtT4 = new System.Windows.Forms.TextBox();
@@ -59,6 +59,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dtpYear = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +68,8 @@
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox.Controls.Add(this.dtpYear);
+            this.groupBox.Controls.Add(this.label3);
             this.groupBox.Controls.Add(this.txtT3);
             this.groupBox.Controls.Add(this.txtT4);
             this.groupBox.Controls.Add(this.txtT2);
@@ -167,12 +171,10 @@
             // radio3
             // 
             this.radio3.AutoSize = true;
-            this.radio3.Checked = true;
             this.radio3.Location = new System.Drawing.Point(51, 83);
             this.radio3.Name = "radio3";
             this.radio3.Size = new System.Drawing.Size(114, 21);
             this.radio3.TabIndex = 231;
-            this.radio3.TabStop = true;
             this.radio3.Text = "國內營業額";
             this.radio3.UseVisualStyleBackColor = true;
             // 
@@ -184,28 +186,28 @@
             this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("新細明體", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(468, 37);
             this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("新細明體", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 25;
             this.dgvData.RowTemplate.Height = 21;
@@ -234,6 +236,7 @@
             this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateE.Location = new System.Drawing.Point(222, 338);
             this.dtpDateE.Name = "dtpDateE";
+            this.dtpDateE.ShowUpDown = true;
             this.dtpDateE.Size = new System.Drawing.Size(60, 27);
             this.dtpDateE.TabIndex = 225;
             this.dtpDateE.Enter += new System.EventHandler(this.dtpDateE_Enter);
@@ -244,6 +247,7 @@
             this.dtpDateS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateS.Location = new System.Drawing.Point(110, 338);
             this.dtpDateS.Name = "dtpDateS";
+            this.dtpDateS.ShowUpDown = true;
             this.dtpDateS.Size = new System.Drawing.Size(60, 27);
             this.dtpDateS.TabIndex = 224;
             this.dtpDateS.Enter += new System.EventHandler(this.dtpDateS_Enter);
@@ -251,8 +255,6 @@
             // chkAll_year
             // 
             this.chkAll_year.AutoSize = true;
-            this.chkAll_year.Checked = true;
-            this.chkAll_year.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAll_year.Location = new System.Drawing.Point(288, 340);
             this.chkAll_year.Name = "chkAll_year";
             this.chkAll_year.Size = new System.Drawing.Size(81, 21);
@@ -265,7 +267,7 @@
             // 
             this.cboSales.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboSales.FormattingEnabled = true;
-            this.cboSales.Location = new System.Drawing.Point(110, 220);
+            this.cboSales.Location = new System.Drawing.Point(110, 172);
             this.cboSales.Name = "cboSales";
             this.cboSales.Size = new System.Drawing.Size(172, 26);
             this.cboSales.TabIndex = 220;
@@ -275,7 +277,7 @@
             // 
             this.cboClass.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboClass.FormattingEnabled = true;
-            this.cboClass.Location = new System.Drawing.Point(110, 258);
+            this.cboClass.Location = new System.Drawing.Point(110, 210);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(172, 26);
             this.cboClass.TabIndex = 219;
@@ -328,7 +330,7 @@
             // 
             this.cboVendorID.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboVendorID.FormattingEnabled = true;
-            this.cboVendorID.Location = new System.Drawing.Point(110, 297);
+            this.cboVendorID.Location = new System.Drawing.Point(110, 249);
             this.cboVendorID.Name = "cboVendorID";
             this.cboVendorID.Size = new System.Drawing.Size(172, 26);
             this.cboVendorID.TabIndex = 186;
@@ -347,7 +349,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(14, 295);
+            this.label2.Location = new System.Drawing.Point(14, 247);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 31);
             this.label2.TabIndex = 126;
@@ -370,7 +372,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(14, 255);
+            this.label5.Location = new System.Drawing.Point(14, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 31);
             this.label5.TabIndex = 110;
@@ -393,7 +395,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(14, 217);
+            this.label6.Location = new System.Drawing.Point(14, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 31);
             this.label6.TabIndex = 113;
@@ -418,6 +420,27 @@
             this.toolTip1.AutoPopDelay = 5000;
             this.toolTip1.InitialDelay = 5;
             this.toolTip1.ReshowDelay = 100;
+            // 
+            // dtpYear
+            // 
+            this.dtpYear.CustomFormat = "yyyy";
+            this.dtpYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpYear.Location = new System.Drawing.Point(110, 307);
+            this.dtpYear.Name = "dtpYear";
+            this.dtpYear.ShowUpDown = true;
+            this.dtpYear.Size = new System.Drawing.Size(60, 27);
+            this.dtpYear.TabIndex = 239;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(17, 304);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label3.Size = new System.Drawing.Size(87, 31);
+            this.label3.TabIndex = 238;
+            this.label3.Text = "年份：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmSalesReport_Grid
             // 
@@ -467,5 +490,7 @@
         private System.Windows.Forms.TextBox txt;
         private System.Windows.Forms.TextBox txtT3;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DateTimePicker dtpYear;
+        private System.Windows.Forms.Label label3;
     }
 }

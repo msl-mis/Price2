@@ -214,6 +214,7 @@ namespace Price2
             {
                 frmBOM_Level2 frmBOM_Level2 = new frmBOM_Level2();
                 frmBOM_Level2.ShowInTaskbar = false;//圖示不顯示在工作列
+                frmBOM_Level2.ID1 = dgvLevel_1.Rows[dgvLevel_1.CurrentRow.Index].Cells["ap1_assy"].Value.ToString();
                 frmBOM_Level2.ShowDialog();
                 //item清空,重新查詢
                 clear_dgvLevel_2();
@@ -234,6 +235,8 @@ namespace Price2
             {
                 frmBOM_Level3 frmBOM_Level3 = new frmBOM_Level3();
                 frmBOM_Level3.ShowInTaskbar = false;//圖示不顯示在工作列
+                frmBOM_Level3.ID1 = dgvLevel_1.Rows[dgvLevel_1.CurrentRow.Index].Cells["ap1_assy"].Value.ToString();
+                frmBOM_Level3.ID2 = dgvLevel_2.Rows[dgvLevel_2.CurrentRow.Index].Cells["ap1_part"].Value.ToString();
                 frmBOM_Level3.ShowDialog();
                 //item清空,重新查詢
                 clear_dgvLevel_3();

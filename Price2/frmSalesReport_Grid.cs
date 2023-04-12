@@ -125,10 +125,13 @@ namespace Price2
                     }
                 }
 
-
                 //日期
                 dtpDateS.Value = new DateTime(DateTime.Now.Year, 1, 1); //本年年初;
-                dtpDateE.Value = new DateTime(DateTime.Now.Year, 12, 31); //本年年尾;
+                //dtpDateE.Value = new DateTime(DateTime.Now.Year, 12, 31); //本年年尾;
+                dtpDateE.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpDateE.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpYear.Text = DateTime.Now.ToString("yyyy");
             }
             catch (Exception ex)
             {
@@ -214,13 +217,50 @@ namespace Price2
             {
                 for(int i = 0; i<=1; i++)
                 {
-                    strDateS[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
-                    strDateE[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
+                    //strDateS[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
+                    //strDateE[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
+                    strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                    strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
                 }
                 string strSQL = "";
                 DataTable dt = new DataTable();
                 if (radio1.Checked)
                 {
+                    //strSQL = $@"select a.odh_customer                            '客戶',
+                    //                   round(a.YEAR_1, 0)                    '營業額',
+                    //                   round(a.YEAR_1 / Sum(a.YEAR_1)
+                    //                                       over() * 100, 2) '總比例%',
+                    //                   round(Isnull(b.YEAR_0, 0), 0)         '去年營業額',
+                    //                   round(Isnull(( a.YEAR_1 - b.YEAR_0 ) / b.YEAR_0 * 100, 0), 2)
+                    //                                                             '同期比較%',
+                    //                   (select pas_username
+                    //                    from   pas
+                    //                    where  pas_ywcode = a.ord_ywcode)        '業務'
+                    //            from   (select Isnull(Round(Sum(ord_qty * ord_pricost), 2), 0) YEAR_1,
+                    //                           odh_customer,
+                    //                           ord_ywcode
+                    //                    from   ord,
+                    //                           odh,
+                    //                           odi
+                    //                    where  ord_assy = odi_customerid
+                    //                           and ord_orderid = odh_orderid
+                    //                           and odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                    //                    + Get_strWhere()
+                    //                    + $@"  group  by odh_customer,
+                    //                              ord_ywcode) a
+                    //                   left join (select Isnull(Round(Sum(ord_qty * ord_pricost), 2), 0) YEAR_0,
+                    //                                     odh_customer,
+                    //                                     ord_ywcode
+                    //                              from   ord,
+                    //                                     odh,
+                    //                                     odi
+                    //                              where  ord_assy = odi_customerid
+                    //                                     and ord_orderid = odh_orderid
+                    //                                     and odh_newdate between '{strDateS[0]}' and '{strDateE[0]}' "
+                    //                    + Get_strWhere()
+                    //                    + $@"     group  by odh_customer,
+                    //                                        ord_ywcode) b
+                    //                          on a.odh_customer = b.odh_customer ";
                     strSQL = $@"select a.odh_customer                            '客戶',
                                        round(a.YEAR_1, 0)                    '營業額',
                                        round(a.YEAR_1 / Sum(a.YEAR_1)
@@ -231,9 +271,19 @@ namespace Price2
                                        (select pas_username
                                         from   pas
                                         where  pas_ywcode = a.ord_ywcode)        '業務'
-                                from   (select Isnull(Round(Sum(ord_qty * ord_pricost), 2), 0) YEAR_1,
-                                               odh_customer,
-                                               ord_ywcode
+                                from   (select Isnull(Round(Sum(ord_qty * ord_pricost), 2), 0) YEAR_1, odh_customer, ord_ywcode from( select
+                                               case  when odh_customer='4' or substring(odh_customer,1,2)='4-' then '4'
+				when odh_customer in ('53B','53A') then '53A'
+				when odh_customer in ('88','88A') then '88'
+				when odh_customer in ('108','108A','108B','108C','108D','108E','108F','108G') then '108'
+				when odh_customer in ('1','1B','1C','1G','1GG','1K','1S','1X','1W','1M') then '1'
+				else  odh_customer end odh_customer,ord_qty , ord_pricost,
+                                               case  when odh_customer='4' or substring(odh_customer,1,2)='4-' then 'RH'
+				when odh_customer in ('53B','53A') then 'JC'
+				when odh_customer in ('88','88A') then 'AL'
+				when odh_customer in ('108','108A','108B','108C','108D','108E','108F','108G') then 'IK'
+				when odh_customer in ('1','1B','1C','1G','1GG','1K','1S','1X','1W','1M') then 'JC'
+				else  ord_ywcode end ord_ywcode
                                         from   ord,
                                                odh,
                                                odi
@@ -241,11 +291,21 @@ namespace Price2
                                                and ord_orderid = odh_orderid
                                                and odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
                                         + Get_strWhere()
-                                        + $@"  group  by odh_customer,
+                                        + $@" ) aa group  by odh_customer,
                                                   ord_ywcode) a
-                                       left join (select Isnull(Round(Sum(ord_qty * ord_pricost), 2), 0) YEAR_0,
-                                                         odh_customer,
-                                                         ord_ywcode
+                                       left join (select Isnull(Round(Sum(ord_qty * ord_pricost), 2), 0) YEAR_0, odh_customer, ord_ywcode from( select
+                                                         case  when odh_customer='4' or substring(odh_customer,1,2)='4-' then '4'
+				when odh_customer in ('53B','53A') then '53A'
+				when odh_customer in ('88','88A') then '88'
+				when odh_customer in ('108','108A','108B','108C','108D','108E','108F','108G') then '108'
+				when odh_customer in ('1','1B','1C','1G','1GG','1K','1S','1X','1W','1M') then '1'
+				else  odh_customer end odh_customer,ord_qty , ord_pricost,
+                                                         case  when odh_customer='4' or substring(odh_customer,1,2)='4-' then 'RH'
+				when odh_customer in ('53B','53A') then 'JC'
+				when odh_customer in ('88','88A') then 'AL'
+				when odh_customer in ('108','108A','108B','108C','108D','108E','108F','108G') then 'IK'
+				when odh_customer in ('1','1B','1C','1G','1GG','1K','1S','1X','1W','1M') then 'JC'
+				else  ord_ywcode end ord_ywcode
                                                   from   ord,
                                                          odh,
                                                          odi
@@ -253,12 +313,12 @@ namespace Price2
                                                          and ord_orderid = odh_orderid
                                                          and odh_newdate between '{strDateS[0]}' and '{strDateE[0]}' "
                                         + Get_strWhere()
-                                        + $@"     group  by odh_customer,
+                                        + $@" ) bb  group  by odh_customer,
                                                             ord_ywcode) b
-                                              on a.odh_customer = b.odh_customer ";
+                                              on a.odh_customer = b.odh_customer and a.ord_ywcode=b.ord_ywcode";
                 }
 
-                if (radio4.Checked)
+                if (radio2.Checked)
                 {
                     strSQL = $@"select a.odh_customer                                                '客戶',
                                        Round(a.YEAR_1, 0)                                            '盈虧',
@@ -490,25 +550,350 @@ namespace Price2
         {
             for (int i = 0; i <= 1; i++)
             {
-                strDateS[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
-                strDateE[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
+                //strDateS[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
+                //strDateE[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
+                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
             }
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
             {
                 string strSQL = "";
-                if (radio1.Checked || radio3.Checked)
+                if (radio1.Checked)
                 {
                     frmSalesReport_Grid_Inq frmSalesReport_Grid_Inq = new frmSalesReport_Grid_Inq();
                     frmSalesReport_Grid_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
-                    strSQL = $@"";
+                    if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "4")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             (odi_customer='4' or Substring(odi_customer,1,2)='4-') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "53A")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('53B','53A') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "88")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('88','88A') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "108")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('108','108A','108B','108C','108D','108E','108F','108G') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "1")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('1','1B','1C','1G','1GG','1K','1S','1X','1W','1M') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer = '{dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString()}' 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    
                     frmSalesReport_Grid_Inq.rstrSQL = strSQL;
                     frmSalesReport_Grid_Inq.ShowDialog();
                 }
-                else
+
+                if (radio2.Checked)
                 {
                     frmSalesReport_Grid_Inq frmSalesReport_Grid_Inq = new frmSalesReport_Grid_Inq();
                     frmSalesReport_Grid_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
-                    strSQL = $@"";
+                    if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "4")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             (odi_customer='4' or Substring(odi_customer,1,2)='4-') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "53A")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('53B','53A') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "88")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('88','88A') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "108")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('108','108A','108B','108C','108D','108E','108F','108G') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else if (dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString() == "1")
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer in ('1','1B','1C','1G','1GG','1K','1S','1X','1W','1M') 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+                    else
+                    {
+                        strSQL = $@"select distinct odi_customer'客戶',
+                                                    odh_orderid'訂單編號',
+                                                    dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                    odh_newdate'新建日期',
+                                                    ord_currency'幣種'
+                                    from            ord,
+                                                    odh,
+                                                    odi
+                                    where           ord_assy=odi_customerid
+                                    and             ord_orderid=odh_orderid
+                                    and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                    and             odi_customer = '{dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString()}' 
+                                    group by        odi_customer,
+                                                    odh_orderid,
+                                                    odh_newdate,
+                                                    ord_currency,
+                                                    odh_ks";
+                    }
+
+                    frmSalesReport_Grid_Inq.rstrSQL = strSQL;
+                    frmSalesReport_Grid_Inq.ShowDialog();
+                }
+
+                if ( radio3.Checked)
+                {
+                    frmSalesReport_Grid_Inq frmSalesReport_Grid_Inq = new frmSalesReport_Grid_Inq();
+                    frmSalesReport_Grid_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
+                    strSQL = $@"select distinct odi_customer'客戶',
+                                                odh_orderid'訂單編號',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                odh_newdate'新建日期',
+                                                ord_currency'幣種'
+                                from            ord,
+                                                odh,
+                                                odi
+                                where           ord_assy=odi_customerid
+                                and             ord_orderid=odh_orderid
+                                and             odi_customer='{dgvData.Rows[dgvData.CurrentRow.Index].Cells[0].Value.ToString()}'
+                                and             odh_newdate between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                group by        odi_customer,
+                                                odh_orderid,
+                                                odh_newdate,
+                                                ord_currency";
+                    frmSalesReport_Grid_Inq.rstrSQL = strSQL;
+                    frmSalesReport_Grid_Inq.ShowDialog();
+                }
+                if (radio4.Checked)
+                {
+                    frmSalesReport_Grid_Inq frmSalesReport_Grid_Inq = new frmSalesReport_Grid_Inq();
+                    frmSalesReport_Grid_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
+                    strSQL = $@"select distinct odi_customer'客戶',
+                                                odh_orderid'訂單編號',
+                                                dbo.Formatstr(Isnull(Round(Sum((ord_pricost-ord_convprice)*ord_qty),1),0)+odh_ks,0)'盈虧',
+                                                odh_newdate'新建日期',
+                                                ord_currency'幣種'
+                                from            ord,
+                                                odh,
+                                                odi
+                                where           ord_assy=odi_customerid
+                                and             ord_orderid=odh_orderid
+                                and             odi_customer between '{strDateS[1]}' and '{strDateE[1]}' "
+                                        + Get_strWhere()
+                                        + $@"
+                                group by        odi_customer,
+                                                odh_orderid,
+                                                odh_newdate,
+                                                ord_currency,
+                                                odh_ks";
                     frmSalesReport_Grid_Inq.rstrSQL = strSQL;
                     frmSalesReport_Grid_Inq.ShowDialog();
                 }

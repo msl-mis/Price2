@@ -485,3 +485,4 @@ D:\Price2\Price2\obj\Debug\Price2.frmWelderAllowance.resources
 D:\Price2\Price2\obj\Debug\Price2.frmShipBox_Print.resources
 D:\Price2\Price2\obj\Debug\Price2.frmVendor_Inq.resources
 D:\Price2\Price2\obj\Debug\Price2.frmVendor.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmClassReport.resources

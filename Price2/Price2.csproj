@@ -114,6 +114,12 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
+    <Compile Include="frmClassReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassReport.designer.cs">
+      <DependentUpon>frmClassReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSalesReport_Grid_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -747,6 +753,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE6\frmPackage_Input_Inq.resx">
       <DependentUpon>frmPackage_Input_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassReport.resx">
+      <DependentUpon>frmClassReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalesReport.resx">
       <DependentUpon>frmSalesReport.cs</DependentUpon>

@@ -12,6 +12,8 @@ namespace Price2
 {
     public partial class frmBOM_Level3 : Form
     {
+        public static string ID1 = "";
+        public static string ID2 = "";
         string strID = ""; //第三層名稱
         public frmBOM_Level3()
         {
@@ -43,6 +45,8 @@ namespace Price2
                             where  1!=1 ";
                 dt = clsDB.sql_select_dt(strSQL);
                 dgvData.DataSource = dt;
+                cboLevel1.Text = ID1;
+                cboLevel2.Text = ID2;
                 cboLevel1.Focus();
             }
             catch (Exception ex)

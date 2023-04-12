@@ -2925,6 +2925,47 @@ namespace Price2
                 MessageBox.Show(this.Name + "-menu4_9_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn4_9_3_Click(object sender, EventArgs e)     //4_9_3.分類利潤查詢
+        {
+            //4_9_3.分類利潤查詢
+            menu4_9_3.PerformClick();
+        }
+
+        private void menu4_9_3_Click(object sender, EventArgs e)    //4_9_3 分類利潤報表
+        {
+            //4_9_3 分類利潤報表
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmClassReport frmClassReport = new frmClassReport();
+                frmClassReport.MdiParent = this;
+                frmClassReport.FormClosed += childForm_FormClosed;
+                frmClassReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmClassReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
