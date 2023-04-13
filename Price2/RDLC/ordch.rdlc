@@ -111,7 +111,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=RowNumber("DataSet1")</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -140,7 +142,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ord_assy.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -169,7 +173,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ord_mo.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -201,7 +207,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ord_cz.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -233,7 +241,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ord_qty.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -262,7 +272,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!odi_xz.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -293,7 +305,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=IIf( Fields!ord_qty.Value=0 or Fields!odi_xz.Value=0 , 0 , IIf( Fields!ord_qty.Value / Fields!odi_xz.Value&gt;Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) , Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0)+1 , Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0)))</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -325,6 +339,7 @@
                                 <TextRun>
                                   <Value>=Fields!odi_zx.Value</Value>
                                   <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
                                     <Format>0.000;(0.000)</Format>
                                   </Style>
                                 </TextRun>
@@ -358,6 +373,7 @@
                                 <TextRun>
                                   <Value>=Round(IIf( Fields!ord_qty.Value=0 or Fields!odi_xz.Value=0 ,0 , IIf( Fields!ord_qty.Value / Fields!odi_xz.Value &lt;&gt; Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) ,Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) * Fields!odi_zx.Value + (IIf( (Fields!ord_qty.Value-Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) * Fields!odi_xz.Value)/Fields!odi_xz.Value&lt;0 , (-0.26) , 0.7)), Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0)* Fields!odi_zx.Value)),2)</Value>
                                   <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
                                     <Format>0.000;(0.000)</Format>
                                   </Style>
                                 </TextRun>
@@ -391,6 +407,7 @@
                                 <TextRun>
                                   <Value>=Fields!odi_jz.Value</Value>
                                   <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
                                     <Format>0.00;(0.00)</Format>
                                   </Style>
                                 </TextRun>
@@ -424,6 +441,7 @@
                                 <TextRun>
                                   <Value>=Round((IIf( Fields!ord_qty.Value=0 or Fields!odi_xz.Value=0 , 0 , IIf( Fields!ord_qty.Value / Fields!odi_xz.Value&lt;&gt;Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) , Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 2) , Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0)) )* Fields!odi_jz.Value),2)</Value>
                                   <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
                                     <Format>0.00;(0.00)</Format>
                                   </Style>
                                 </TextRun>
@@ -982,7 +1000,7 @@
                     <TextRun>
                       <Value>MSL冠志電子廠</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -1015,11 +1033,10 @@
                     <TextRun>
                       <Value>包  裝  計  劃</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
                         <FontSize>16pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
+                        <FontWeight>Bold</FontWeight>
                         <TextDecoration>Underline</TextDecoration>
-                        <Color>Tomato</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>

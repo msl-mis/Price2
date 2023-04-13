@@ -320,7 +320,7 @@ namespace Price2
                                               else ''
                                             end                                                         '材料單',
                                             Isnull(ab.pri_vendorid, '')                                 '外購',
-                                            Cast(convert(DECIMAL(18, 6), asp_purprice) as VARCHAR(16))  '單價',
+                                            asp_purprice  '單價',
                                             asp_pricecal                                                '計算式',
                                             asp_currency                                                '幣種',
                                             Round(asp_purprice * cur_convert, 6)                        '台幣',
@@ -2715,7 +2715,7 @@ namespace Price2
                 lblDate.Text = "";
                 strPricecal = "";    //Label35計算式
                 lblVendor.Text = "";
-                btnInq_No.BackColor = Color.FromArgb(0, 255, 0);
+                btnInq_No.BackColor = Color.FromArgb(192, 255, 192);
             }
             catch (Exception ex)
             {
@@ -4373,6 +4373,16 @@ namespace Price2
                     }
                 }
             }
+        }
+
+        private void frmProduct_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

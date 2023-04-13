@@ -275,7 +275,7 @@
                     <TextRun>
                       <Value>MSL冠志電子廠</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -308,11 +308,10 @@
                     <TextRun>
                       <Value>包  裝  計  劃</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
                         <FontSize>16pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
+                        <FontWeight>Bold</FontWeight>
                         <TextDecoration>Underline</TextDecoration>
-                        <Color>Tomato</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>

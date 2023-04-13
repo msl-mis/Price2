@@ -53,10 +53,10 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 10F);
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox.Size = new System.Drawing.Size(399, 193);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox.Size = new System.Drawing.Size(379, 163);
             this.groupBox.TabIndex = 14;
             this.groupBox.TabStop = false;
             // 
@@ -66,7 +66,7 @@
             this.btnOrder_Inq.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnOrder_Inq.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnOrder_Inq.Location = new System.Drawing.Point(321, 35);
-            this.btnOrder_Inq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrder_Inq.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder_Inq.Name = "btnOrder_Inq";
             this.btnOrder_Inq.Size = new System.Drawing.Size(28, 24);
             this.btnOrder_Inq.TabIndex = 165;
@@ -79,24 +79,22 @@
             this.chkBeginNo.AutoSize = true;
             this.chkBeginNo.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.chkBeginNo.ForeColor = System.Drawing.Color.Red;
-            this.chkBeginNo.Location = new System.Drawing.Point(47, 73);
-            this.chkBeginNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkBeginNo.Location = new System.Drawing.Point(53, 75);
+            this.chkBeginNo.Margin = new System.Windows.Forms.Padding(2);
             this.chkBeginNo.Name = "chkBeginNo";
             this.chkBeginNo.Size = new System.Drawing.Size(146, 19);
             this.chkBeginNo.TabIndex = 139;
             this.chkBeginNo.Text = "需要輸入開始箱號";
             this.chkBeginNo.UseVisualStyleBackColor = true;
-            this.chkBeginNo.Visible = false;
             // 
             // txtBeginNo
             // 
             this.txtBeginNo.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtBeginNo.Location = new System.Drawing.Point(203, 71);
-            this.txtBeginNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBeginNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBeginNo.Name = "txtBeginNo";
             this.txtBeginNo.Size = new System.Drawing.Size(114, 27);
             this.txtBeginNo.TabIndex = 138;
-            this.txtBeginNo.Visible = false;
             // 
             // label4
             // 
@@ -117,7 +115,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(212, 118);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 25);
             this.btnClose.TabIndex = 99;
@@ -131,7 +129,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPrint.Location = new System.Drawing.Point(117, 118);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(53, 25);
             this.btnPrint.TabIndex = 123;
@@ -143,22 +141,25 @@
             // 
             this.txtOrderID.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtOrderID.Location = new System.Drawing.Point(203, 35);
-            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(114, 27);
             this.txtOrderID.TabIndex = 131;
+            this.txtOrderID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrderID_KeyDown);
             // 
             // frmShipPlan_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 193);
+            this.ClientSize = new System.Drawing.Size(379, 163);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmShipPlan_Print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "出貨計畫列印";
+            this.Activated += new System.EventHandler(this.frmShipPlan_Print_Activated);
+            this.Load += new System.EventHandler(this.frmShipPlan_Print_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);

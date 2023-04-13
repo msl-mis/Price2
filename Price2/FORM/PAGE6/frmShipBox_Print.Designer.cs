@@ -53,10 +53,10 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 10F);
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox.Size = new System.Drawing.Size(389, 167);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox.Size = new System.Drawing.Size(375, 154);
             this.groupBox.TabIndex = 13;
             this.groupBox.TabStop = false;
             // 
@@ -66,7 +66,7 @@
             this.btnOrder_Inq.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnOrder_Inq.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnOrder_Inq.Location = new System.Drawing.Point(320, 33);
-            this.btnOrder_Inq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrder_Inq.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder_Inq.Name = "btnOrder_Inq";
             this.btnOrder_Inq.Size = new System.Drawing.Size(28, 24);
             this.btnOrder_Inq.TabIndex = 165;
@@ -79,8 +79,8 @@
             this.chkBeginNo.AutoSize = true;
             this.chkBeginNo.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.chkBeginNo.ForeColor = System.Drawing.Color.Red;
-            this.chkBeginNo.Location = new System.Drawing.Point(25, 69);
-            this.chkBeginNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkBeginNo.Location = new System.Drawing.Point(52, 69);
+            this.chkBeginNo.Margin = new System.Windows.Forms.Padding(2);
             this.chkBeginNo.Name = "chkBeginNo";
             this.chkBeginNo.Size = new System.Drawing.Size(146, 19);
             this.chkBeginNo.TabIndex = 139;
@@ -91,7 +91,7 @@
             // 
             this.txtBeginNo.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtBeginNo.Location = new System.Drawing.Point(202, 69);
-            this.txtBeginNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBeginNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBeginNo.Name = "txtBeginNo";
             this.txtBeginNo.Size = new System.Drawing.Size(114, 27);
             this.txtBeginNo.TabIndex = 138;
@@ -114,8 +114,8 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(202, 114);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(192, 111);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(52, 28);
             this.btnClose.TabIndex = 99;
@@ -128,8 +128,8 @@
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPrint.Location = new System.Drawing.Point(119, 114);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Location = new System.Drawing.Point(109, 111);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(52, 28);
             this.btnPrint.TabIndex = 123;
@@ -141,22 +141,25 @@
             // 
             this.txtOrderID.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtOrderID.Location = new System.Drawing.Point(202, 33);
-            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(114, 27);
             this.txtOrderID.TabIndex = 131;
+            this.txtOrderID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrderID_KeyDown);
             // 
             // frmShipBox_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 167);
+            this.ClientSize = new System.Drawing.Size(375, 154);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmShipBox_Print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "出貨箱號列印";
+            this.Activated += new System.EventHandler(this.frmShipBox_Print_Activated);
+            this.Load += new System.EventHandler(this.frmShipBox_Print_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.ResumeLayout(false);

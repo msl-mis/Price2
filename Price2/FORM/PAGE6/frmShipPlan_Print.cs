@@ -278,5 +278,23 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnPrint_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmShipPlan_Print_Load(object sender, EventArgs e)
+        {
+            txtOrderID.Focus();
+        }
+
+        private void frmShipPlan_Print_Activated(object sender, EventArgs e)
+        {
+            txtOrderID.Focus();
+        }
+
+        private void txtOrderID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnPrint.Focus();
+            }
+        }
     }
 }

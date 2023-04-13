@@ -259,7 +259,7 @@
         <Height>1in</Height>
         <Style />
       </Body>
-      <Width>8.26772in</Width>
+      <Width>8.28161in</Width>
       <Page>
         <PageHeader>
           <Height>3.615cm</Height>
@@ -275,7 +275,8 @@
                     <TextRun>
                       <Value>MSL冠志電子廠</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Times New Roman</FontFamily>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -308,11 +309,11 @@
                     <TextRun>
                       <Value>包  裝  計  劃</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Times New Roman</FontFamily>
                         <FontSize>16pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
+                        <FontWeight>Bold</FontWeight>
                         <TextDecoration>Underline</TextDecoration>
-                        <Color>Tomato</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -592,9 +593,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox15</rd:DefaultName>
               <Top>2.215cm</Top>
-              <Left>17.5cm</Left>
+              <Left>17.53528cm</Left>
               <Height>0.6cm</Height>
-              <Width>3.5cm</Width>
+              <Width>3.15604cm</Width>
               <ZIndex>9</ZIndex>
               <Style>
                 <Border>

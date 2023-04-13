@@ -184,5 +184,15 @@ namespace Price2
                 MessageBox.Show(this.Name + "-getData" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmPackage_Input_Load(object sender, EventArgs e)
+        {
+            txtCustomerID.Focus();
+        }
+
+        private void frmPackage_Input_Activated(object sender, EventArgs e)
+        {
+            txtCustomerID.Focus();
+        }
     }
 }

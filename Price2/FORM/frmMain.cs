@@ -1601,11 +1601,11 @@ namespace Price2
             {
                 string[] strModule = menu6_1.Text.Split('.');
                 //確認權限
-                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
-                //{
-                //    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    return;
-                //}
+                if (clsGlobal.checkRightFlag("業務") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (ActiveMdiChild != null)
                 {
                     ActiveMdiChild.Close();
@@ -1636,11 +1636,11 @@ namespace Price2
             {
                 string[] strModule = menu6_2.Text.Split('.');
                 //確認權限
-                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
-                //{
-                //    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    return;
-                //}
+                if (clsGlobal.checkRightFlag("業務") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (ActiveMdiChild != null)
                 {
                     ActiveMdiChild.Close();
@@ -1671,11 +1671,11 @@ namespace Price2
             {
                 string[] strModule = menu6_2.Text.Split('.');
                 //確認權限
-                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
-                //{
-                //    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    return;
-                //}
+                if (clsGlobal.checkRightFlag("業務") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (ActiveMdiChild != null)
                 {
                     ActiveMdiChild.Close();

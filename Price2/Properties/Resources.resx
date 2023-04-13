@@ -139,14 +139,14 @@
   <data name="4-3cusserach" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-3cusserach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="POSTL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POSTL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2-1phonebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2-1 phonebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-5cusquotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-5cusquotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KEY04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEY04.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HANDSHAK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HANDSHAK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="erpicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\erpicon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,29 +154,29 @@
   <data name="3-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3-3list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2-1phonebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2-1 phonebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="COPY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\COPY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-4Sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-4Sample.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NOTE033" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NOTE033.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FILES10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FILES10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-7samserach" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-7samserach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FILES10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FILES10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2-2customeradd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2-2 customeradd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-6order" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-6order.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NOTE033" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NOTE033.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KEY04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEY04.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3-1data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3-1data.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,14 +190,8 @@
   <data name="circle_f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle_f1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HANDSHAK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HANDSHAK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1-5Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1-5 Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2-2customeradd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2-2 customeradd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-1CZF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-1CZF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,17 +205,26 @@
   <data name="1-2pwchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1-2 pwchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3-2BOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3-2BOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1-5Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1-5 Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="POSTL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POSTL.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-2quotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-2quotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5_1exchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5-1exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3-4use" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3-4use.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1-6computeruser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1-6 computeruser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5-3tax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5-3tax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3-3location" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3-3location.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,13 +235,19 @@
   <data name="1-1Userfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1-1 Userfile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PriceLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PriceLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-2BOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-2BOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2-3firmadd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2-3 firmadd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VOLUME01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VOLUME01.ICO;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PriceLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PriceLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5-2subsidy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5-2subsidy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

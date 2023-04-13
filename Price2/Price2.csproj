@@ -25,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://192.168.10.205:8083/</InstallUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>18</ApplicationRevision>
-    <ApplicationVersion>1.0.0.18</ApplicationVersion>
+    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationVersion>1.0.0.22</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Aha-Soft-Standard-Portfolio-Price.ico</ApplicationIcon>
+    <ApplicationIcon>Price_icon02.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>3AC1C395F833512F44122A4758B35CB26F8A6F9C</ManifestCertificateThumbprint>
@@ -1169,6 +1169,11 @@
     <None Include="Resources\4-6order.png" />
     <None Include="Resources\4-5cusquotion.png" />
     <None Include="Resources\PriceLogin.png" />
+    <Content Include="Price_icon01.ico" />
+    <Content Include="Price_icon02.ico" />
+    <None Include="Resources\5-1exchange.png" />
+    <None Include="Resources\5-3tax.png" />
+    <None Include="Resources\5-2subsidy.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

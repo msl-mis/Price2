@@ -490,5 +490,23 @@ namespace Price2
                 }
             }
         }
+
+        private void frmShipBox_Print_Load(object sender, EventArgs e)
+        {
+            txtOrderID.Focus();
+        }
+
+        private void frmShipBox_Print_Activated(object sender, EventArgs e)
+        {
+            txtOrderID.Focus();
+        }
+
+        private void txtOrderID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnPrint.Focus();
+            }
+        }
     }
 }
