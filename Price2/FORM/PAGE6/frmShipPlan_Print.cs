@@ -36,10 +36,10 @@ namespace Price2
             //查詢訂單
             try
             {
-                frmOrder_Inq frmOrder_Inq = new frmOrder_Inq();
-                frmOrder_Inq.ShowInTaskbar = false;//圖示不顯示在工作列
-                frmOrder_Inq.rstrForm = "frmShipPlan_Print";
-                frmOrder_Inq.ShowDialog();
+                frmOrder_Inq2 frmOrder_Inq2 = new frmOrder_Inq2();
+                frmOrder_Inq2.ShowInTaskbar = false;//圖示不顯示在工作列
+                frmOrder_Inq2.rstrForm = "frmShipPlan_Print";
+                frmOrder_Inq2.ShowDialog();
                 if (rstrOrderID != "")
                 {
                     txtOrderID.Text = rstrOrderID;
