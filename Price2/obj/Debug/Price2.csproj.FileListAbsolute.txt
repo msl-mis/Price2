@@ -489,3 +489,6 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmClassReport.resources
 D:\Price2\Price2\obj\Debug\Price2.frmClassReport.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmOrder_Inq2.resources
 D:\Price2\Price2\obj\Debug\Price2.frmOrder_Inq2.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmRevenueReport.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmDealReport.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmProcurementReport.resources

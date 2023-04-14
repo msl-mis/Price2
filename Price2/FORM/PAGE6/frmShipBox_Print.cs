@@ -67,12 +67,23 @@ namespace Price2
                 {
                     //strSQL = $@"exec cal_orderbeginxx '{txtOrderID.Text.Trim()}',{ txtBeginNo.Text} ";
                     //clsDB.Execute(strSQL);
-                    do_InsertTable(Convert.ToInt32(txtBeginNo.Text));
+                    if (clsGlobal.ValidateString(txtBeginNo.Text,2))
+                    {
+                        do_InsertTable(Convert.ToInt32(txtBeginNo.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show("請填入開始箱號", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtBeginNo.Focus();
+                        return;
+                    }
+                        
                 }
                 else
                 {
                     //strSQL = $@"exec cal_orderxx '{txtOrderID.Text.Trim()}' ";
                     //clsDB.Execute(strSQL);
+                    
                     do_InsertTable(0);
                 }
 

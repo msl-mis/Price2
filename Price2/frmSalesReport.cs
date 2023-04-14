@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
 using System.Drawing.Printing;
+using System.Reflection;
 
 namespace Price2
 {
@@ -119,7 +120,7 @@ namespace Price2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this.Name + "-frmSpecialExpenes_Load" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this.Name + "-frmSalesReport_Load" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -941,26 +942,26 @@ namespace Price2
             Graphics memoryGraphics = Graphics.FromImage(memoryImage);
             memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, s);
 
+            //建立列印物件
+            PD = new PrintDocument();
+            //加入列印事件(當要送出資料列印時觸發)
+            PD.QueryPageSettings += new QueryPageSettingsEventHandler(PD_QueryPageSettings);
+            PD.PrintPage += new PrintPageEventHandler(PD_PrintPage);
 
-            PrintPreviewDialog PPD = new PrintPreviewDialog();
-            PPD.Document = new PrintDocument();
-            PPD.Document.PrintPage += new PrintPageEventHandler(PD_PrintPage);
-            PPD.Document.QueryPageSettings += new QueryPageSettingsEventHandler(PD_QueryPageSettings);
-            PPD.Document.BeginPrint += new PrintEventHandler(PD_BeginPrint);
+
+
+            //PrintPreviewDialog PPD = new PrintPreviewDialog();
+            //PPD.Document = new PrintDocument();
+
+            //PPD.Document.PrintPage += new PrintPageEventHandler(PD_PrintPage);
+            //PPD.Document.QueryPageSettings += new QueryPageSettingsEventHandler(PD_QueryPageSettings);
+            //PPD.Document.BeginPrint += new PrintEventHandler(PD_BeginPrint);
+
+
             //if (PPD.ShowDialog(this) == DialogResult.OK) { }
 
 
-            ////寫到 += 的時候按下Tab鍵會自動跳出後面的內容
 
-            //// 並且出現void PD_PrintPage(...)的列印事件
-
-            //PD.PrintPage += new PrintPageEventHandler(PD_PrintPage);
-
-            //PrintPreviewDialog PPD = new PrintPreviewDialog();
-
-            //PPD.Document = PD;
-
-            //PPD.ShowDialog();
 
             PD.PrintController = new StandardPrintController();//不顯示對話框
 
@@ -971,7 +972,9 @@ namespace Price2
 
         private void PD_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(memoryImage, 0, 0);
+            //e.Graphics.DrawImage(memoryImage, 0, 0);
+            //e.Graphics.DrawImage(memoryImage, e.PageBounds);
+            e.Graphics.DrawImage(memoryImage, e.MarginBounds);
         }
         private void PD_QueryPageSettings(object sender, QueryPageSettingsEventArgs e)
         {

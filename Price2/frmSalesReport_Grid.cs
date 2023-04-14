@@ -567,7 +567,7 @@ namespace Price2
                         strSQL = $@"select distinct odi_customer'客戶',
                                                     odh_orderid'訂單編號',
                                                     dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                     odh_newdate'新建日期',
                                                     ord_currency'幣種'
                                     from            ord,
@@ -590,7 +590,7 @@ namespace Price2
                         strSQL = $@"select distinct odi_customer'客戶',
                                                     odh_orderid'訂單編號',
                                                     dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                     odh_newdate'新建日期',
                                                     ord_currency'幣種'
                                     from            ord,
@@ -613,7 +613,7 @@ namespace Price2
                         strSQL = $@"select distinct odi_customer'客戶',
                                                     odh_orderid'訂單編號',
                                                     dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                     odh_newdate'新建日期',
                                                     ord_currency'幣種'
                                     from            ord,
@@ -636,7 +636,7 @@ namespace Price2
                         strSQL = $@"select distinct odi_customer'客戶',
                                                     odh_orderid'訂單編號',
                                                     dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                     odh_newdate'新建日期',
                                                     ord_currency'幣種'
                                     from            ord,
@@ -659,7 +659,7 @@ namespace Price2
                         strSQL = $@"select distinct odi_customer'客戶',
                                                     odh_orderid'訂單編號',
                                                     dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                     odh_newdate'新建日期',
                                                     ord_currency'幣種'
                                     from            ord,
@@ -682,7 +682,7 @@ namespace Price2
                         strSQL = $@"select distinct odi_customer'客戶',
                                                     odh_orderid'訂單編號',
                                                     dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                     odh_newdate'新建日期',
                                                     ord_currency'幣種'
                                     from            ord,
@@ -853,7 +853,7 @@ namespace Price2
                     strSQL = $@"select distinct odi_customer'客戶',
                                                 odh_orderid'訂單編號',
                                                 dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price),0),0),0)'原幣金額',
-                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_price*ord_convert),0),0),0)'臺幣金額',
+                                                dbo.Formatstr(Isnull(Round(Sum(ord_qty*ord_pricost),0),0),0)'臺幣金額',
                                                 odh_newdate'新建日期',
                                                 ord_currency'幣種'
                                 from            ord,

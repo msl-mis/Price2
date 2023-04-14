@@ -25,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://192.168.10.205:8083/</InstallUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>22</ApplicationRevision>
-    <ApplicationVersion>1.0.0.22</ApplicationVersion>
+    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationVersion>1.0.0.23</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -114,6 +114,18 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
+    <Compile Include="frmProcurementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcurementReport.Designer.cs">
+      <DependentUpon>frmProcurementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDealReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDealReport.Designer.cs">
+      <DependentUpon>frmDealReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClassReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="frmOrder_Inq2.designer.cs">
       <DependentUpon>frmOrder_Inq2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRevenueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRevenueReport.designer.cs">
+      <DependentUpon>frmRevenueReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSalesReport_Grid_Inq.cs">
       <SubType>Form</SubType>
@@ -763,8 +781,17 @@
     <EmbeddedResource Include="frmClassReport.resx">
       <DependentUpon>frmClassReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDealReport.resx">
+      <DependentUpon>frmDealReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOrder_Inq2.resx">
       <DependentUpon>frmOrder_Inq2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcurementReport.resx">
+      <DependentUpon>frmProcurementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRevenueReport.resx">
+      <DependentUpon>frmRevenueReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalesReport.resx">
       <DependentUpon>frmSalesReport.cs</DependentUpon>

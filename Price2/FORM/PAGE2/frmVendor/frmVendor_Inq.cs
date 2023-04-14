@@ -150,6 +150,12 @@ namespace Price2
                     frmProduct.rstrVendorName = dgvData.Rows[e.RowIndex].Cells["廠商"].Value.ToString();
                     this.Close();
                 }
+                if (strWhoCall == "frmProcurementReport")
+                {
+                    frmProcurementReport.rstrVendorID = dgvData.Rows[e.RowIndex].Cells["廠號"].Value.ToString();
+                    frmProcurementReport.rstrVendorName = dgvData.Rows[e.RowIndex].Cells["廠商"].Value.ToString();
+                    this.Close();
+                }
             }
         }
     }
