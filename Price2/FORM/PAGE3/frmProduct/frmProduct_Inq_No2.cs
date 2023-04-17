@@ -84,19 +84,19 @@ namespace Price2
             string strWhere = "";
 
             //
-            strWhere = strWhere + (chkIn.Checked || chkOut.Checked || chkCZF.Checked ? $@"where asp_id <> 'yzf' and " : $@"where asp_id = 'yzf' ");
+            strWhere = strWhere + (chkOut.Checked || chkCZF.Checked || chkSame.Checked ? $@"where asp_id <> 'yzf' and " : $@"where asp_id = 'yzf' ");
             //
-            strWhere = strWhere + (chkIn.Checked ? $@"(asp_vendormaterialno like '%{txtNo.Text.Trim()}%'  {(chkSame.Checked ? "or " : "")} " : "");
+            strWhere = strWhere + (chkOut.Checked ? $@"(asp_vendormaterialno like '%{txtNo.Text.Trim()}%'  {(chkSame.Checked ? "or " : "")} " : "");
 
             strWhere = strWhere + (chkSame.Checked ? $@"asp_multinum like '%{txtNo.Text.Trim()}%' " : "");
 
-            strWhere = strWhere + (chkCZF.Checked ? (chkIn.Checked ? "or " : "") + $@"asp_czf like '%{txtNo.Text.Trim()}%' " : "");
+            strWhere = strWhere + (chkCZF.Checked ? (chkOut.Checked ? "or " : "") + $@"asp_czf like '%{txtNo.Text.Trim()}%' " : "");
 
-            strWhere = strWhere + (chkIn.Checked ? $@") " : "");
+            strWhere = strWhere + (chkOut.Checked ? $@") " : "");
 
-            strWhere = strWhere + $@"union all select aspnum_id as 材料名,aspnum_num as 品號,'(內層品號)' as 參照法 from aspnum, asp where "; 
+            strWhere = strWhere + $@"union all select aspnum_id as 材料名,aspnum_num as 品號,'(內層品號)' as 參照法 from aspnum, asp where ";
 
-            strWhere = strWhere + (chkOut.Checked? $@"aspnum_num like '%{txtNo.Text.Trim()}%' and asp_id=aspnum_id and aspnum_num <> asp_vendormaterialno " : "aspnum_num='yzf' ");
+            strWhere = strWhere + (chkIn.Checked ? $@"aspnum_num like '%{txtNo.Text.Trim()}%' and asp_id=aspnum_id and aspnum_num <> asp_vendormaterialno " : "aspnum_num='yzf' ");
 
             strWhere = strWhere + ") as aa order by aa.品號, aa.材料名 ";
             return strWhere;

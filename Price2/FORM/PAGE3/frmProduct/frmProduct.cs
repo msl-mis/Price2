@@ -252,7 +252,7 @@ namespace Price2
                 }
                 else
                 {
-                    strSQL_tmp = " and ( " + SplitWhere("asp_vendormaterialno", txtNo_Q.Text) + " or " + SplitWhere("asp_czf", txtNo_Q.Text) + " or " + SplitWhere("asp_multinum", txtNo_Q.Text) + ")";
+                    strSQL_tmp = " and ( " + SplitWhere("asp_vendormaterialno", txtNo_Q.Text) + " or " + SplitWhere("aspnum.aspnum_num", txtNo_Q.Text) + " or " + SplitWhere("asp_czf", txtNo_Q.Text) + " or " + SplitWhere("asp_multinum", txtNo_Q.Text) + ")";
                 }
                 strSQL0_where = strSQL0_where + strSQL_tmp;
 
@@ -267,7 +267,7 @@ namespace Price2
                 strSQL0_where = strSQL0_where + strSQL_tmp;
 
                 strSQL1_where = strSQL1_where + " And aspnum.aspnum_vendorid <> asp_vendorid";
-                
+
 
                 if (txtNo_Q.Text == "")   //品號
                 {
@@ -794,7 +794,7 @@ namespace Price2
                 }
                 else
                 {
-                    btnInq_No.BackColor = Color.FromArgb(0, 255, 0);
+                    btnInq_No.BackColor = Color.FromArgb(192, 255, 192);
                 }
             }
             catch (Exception ex)
