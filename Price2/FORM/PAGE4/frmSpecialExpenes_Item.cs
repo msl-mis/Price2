@@ -159,12 +159,14 @@ namespace Price2
                     return;
                 }
                 //先取得item_id
-                strSQL = $@"select * from odca_item where type_id = '{strTypeID}' ";
+                //strSQL = $@"select * from odca_item where type_id = '{strTypeID}' ";
+                strSQL = $@"select MAX( item_id ) as No from odca_item where type_id = '{strTypeID}' ";
                 dt = clsDB.sql_select_dt(strSQL);
                 string strID = "000";
                 if (dt.Rows.Count > 0)
                 {
-                    strID = dt.Rows.Count.ToString("000");
+                    //strID = dt.Rows.Count.ToString("000");
+                    strID = (Convert.ToInt32(dt.Rows[0]["No"].ToString())+1).ToString("000");
                 }
 
                 //新增

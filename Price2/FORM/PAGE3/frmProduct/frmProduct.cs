@@ -3621,7 +3621,7 @@ namespace Price2
 
                                 strSQL = $@"update aspnum
                                             set    aspnum_num = '{rstrNo}', 
-                                                   asp_vendorid = '{rstrVendorID}'
+                                                   aspnum_vendorid = '{rstrVendorID}'
                                             where aspnum_id = '{txtID.Text.Trim()}'
                                                     and aspnum_num = '{txtNo.Text.Trim()}' ";
                                 clsDB.Execute(strSQL);
@@ -4292,20 +4292,41 @@ namespace Price2
             txtNo.Text = txtNo.Text.Replace("\n", "").Replace("\r", "").Trim();  //去ENTER 換行 空白
             if (txtNo.Text!="")
             {
+               
                 if (txtID.Text == "")
                 {
-                    frmProduct_Inq_No2 frmProduct_Inq_No2 = new frmProduct_Inq_No2();
-                    frmProduct_Inq_No2.ShowInTaskbar = false;//圖示不顯示在工作列
-                    frmProduct_Inq_No2.rstrNo = txtNo.Text.Trim();
-                    frmProduct_Inq_No2.ShowDialog();
-                    if(rstrID!="")
+                    String strSQL = "";
+                    DataTable dt = new DataTable();
+                    //檢查
+                    strSQL = $@"select distinct asp_id
+                            from   asp
+                                   left join aspnum as aspnum
+                                          on aspnum.aspnum_id = asp.asp_id
+                            where  asp_vendormaterialno like '%{txtNo.Text.Trim()}%%'
+                                    or asp_czf like '%%{txtNo.Text.Trim()}%%'
+                                    or aspnum.aspnum_num like '%{txtNo.Text.Trim()}%%'
+                                    or asp_multinum like '%{txtNo.Text.Trim()}%'";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 1)
                     {
-                        txtID.Text = rstrID;
-                        getID();
-                        rstrID = "";
-                        txtNo.Focus();
+                        frmProduct_Inq_No2 frmProduct_Inq_No2 = new frmProduct_Inq_No2();
+                        frmProduct_Inq_No2.ShowInTaskbar = false;//圖示不顯示在工作列
+                        frmProduct_Inq_No2.rstrNo = txtNo.Text.Trim();
+                        frmProduct_Inq_No2.ShowDialog();
+                        if (rstrID != "")
+                        {
+                            txtID.Text = rstrID;
+                            getID();
+                            rstrID = "";
+                            txtNo.Focus();
+                        }
                     }
-                    
+                    else
+                    {
+                        txtID.Text = dt.Rows[0]["asp_id"].ToString();
+                        getID();
+                    }
+
                 }
             }
             
@@ -4380,9 +4401,22 @@ namespace Price2
 
         }
 
-        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void txtDate_S_Click(object sender, EventArgs e)
         {
+            if (txtDate_S.Text == "")
+            {
+                txtDate_S.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }
+        }
 
+        private void txtDate_E_Click(object sender, EventArgs e)
+        {
+            if (txtDate_S.Text == "")
+            {
+                txtDate_S.Text = DateTime.Now.ToString("yyyy/MM/dd");
+                txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }
         }
     }
 }
