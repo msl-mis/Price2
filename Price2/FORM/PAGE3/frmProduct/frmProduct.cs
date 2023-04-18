@@ -3331,7 +3331,14 @@ namespace Price2
 
         private void btnInq_Material_Q_Click(object sender, EventArgs e)
         {
-
+            
+            frmBOMPrice frmBOMPrice = new frmBOMPrice();
+            frmBOMPrice.ShowInTaskbar = false;//圖示不顯示在工作列
+            frmBOMPrice.ShowInTaskbar = false;
+            frmBOMPrice.rstrID = dgvData.Rows[dgvData.CurrentRow.Index].Cells["材料名"].Value.ToString();
+            frmBOMPrice.rstrWho = "frmProduct";
+            frmBOMPrice.ShowDialog();
+            
         }
 
         private void btnInq_PositionInBOM_Click(object sender, EventArgs e) //查詢材料在BOM的位置
@@ -4321,7 +4328,7 @@ namespace Price2
                             txtNo.Focus();
                         }
                     }
-                    else
+                    else if(dt.Rows.Count == 1)
                     {
                         txtID.Text = dt.Rows[0]["asp_id"].ToString();
                         getID();
@@ -4416,6 +4423,21 @@ namespace Price2
             {
                 txtDate_S.Text = DateTime.Now.ToString("yyyy/MM/dd");
                 txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
+            }
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex>=0 &e.ColumnIndex>=0)
+            {
+                if (dgvData.Rows[dgvData.CurrentRow.Index].Cells["材料單"].Value.ToString()=="V")
+                {
+                    btnInq_Material_Q.Enabled = true;
+                }
+                else
+                {
+                    btnInq_Material_Q.Enabled = false;
+                }
             }
         }
     }

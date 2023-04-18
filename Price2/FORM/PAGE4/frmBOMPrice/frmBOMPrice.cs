@@ -109,10 +109,28 @@ namespace Price2
 
                 if(rstrID!="")
                 {
-                    txtID.Text = rstrID;
-                    txtID_Leave(null, null);
-                    rstrID = "";
+                    if (rstrWho == "frmProduct")
+                    {
+                        chkMaterial.Checked= true;
+                        txtID.Text = rstrID;
+                        txtID_Leave(null, null);
+                        rstrID = "";
+                    }
+                    else
+                    {
+                        txtID.Text = rstrID;
+                        txtID_Leave(null, null);
+                        rstrID = "";
+                    }
+                    
                 }
+
+                //if(rstrWho=="frmProduct")
+                //{
+                //    txtID.Text = rstrID;
+                //    txtID_Leave(null, null);
+                //    rstrID = "";
+                //}
             }
             catch (Exception ex)
             {

@@ -127,14 +127,14 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.60656F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 631);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -150,7 +150,7 @@
             this.label3.Location = new System.Drawing.Point(3, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(334, 39);
+            this.label3.Size = new System.Drawing.Size(332, 39);
             this.label3.TabIndex = 76;
             this.label3.Text = "第四層名稱";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,7 +161,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(342, 1);
+            this.label4.Location = new System.Drawing.Point(340, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 39);
@@ -175,10 +175,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(631, 1);
+            this.label7.Location = new System.Drawing.Point(629, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 39);
+            this.label7.Size = new System.Drawing.Size(127, 39);
             this.label7.TabIndex = 84;
             this.label7.Text = "台幣單價";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,7 +189,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(447, 1);
+            this.label5.Location = new System.Drawing.Point(445, 1);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 39);
@@ -203,7 +203,7 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(528, 1);
+            this.label6.Location = new System.Drawing.Point(526, 1);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 39);
@@ -220,7 +220,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.Controls.Add(this.txtID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPurprice, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtVendorid, 2, 0);
@@ -244,7 +244,7 @@
             this.txtID.Location = new System.Drawing.Point(3, 3);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(333, 24);
+            this.txtID.Size = new System.Drawing.Size(332, 24);
             this.txtID.TabIndex = 77;
             this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
             // 
@@ -253,10 +253,10 @@
             this.txtPurprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPurprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPurprice.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPurprice.Location = new System.Drawing.Point(341, 3);
+            this.txtPurprice.Location = new System.Drawing.Point(340, 3);
             this.txtPurprice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurprice.Name = "txtPurprice";
-            this.txtPurprice.Size = new System.Drawing.Size(101, 24);
+            this.txtPurprice.Size = new System.Drawing.Size(100, 24);
             this.txtPurprice.TabIndex = 90;
             this.txtPurprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -267,7 +267,7 @@
             this.txtVendorid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVendorid.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtVendorid.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtVendorid.Location = new System.Drawing.Point(447, 3);
+            this.txtVendorid.Location = new System.Drawing.Point(445, 3);
             this.txtVendorid.Margin = new System.Windows.Forms.Padding(2);
             this.txtVendorid.Name = "txtVendorid";
             this.txtVendorid.ReadOnly = true;
@@ -282,11 +282,11 @@
             this.txtTbprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTbprice.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtTbprice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTbprice.Location = new System.Drawing.Point(631, 3);
+            this.txtTbprice.Location = new System.Drawing.Point(629, 3);
             this.txtTbprice.Margin = new System.Windows.Forms.Padding(2);
             this.txtTbprice.Name = "txtTbprice";
             this.txtTbprice.ReadOnly = true;
-            this.txtTbprice.Size = new System.Drawing.Size(125, 24);
+            this.txtTbprice.Size = new System.Drawing.Size(127, 24);
             this.txtTbprice.TabIndex = 85;
             this.txtTbprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -297,7 +297,7 @@
             this.txtCurrency.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCurrency.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCurrency.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCurrency.Location = new System.Drawing.Point(528, 3);
+            this.txtCurrency.Location = new System.Drawing.Point(526, 3);
             this.txtCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrency.Name = "txtCurrency";
             this.txtCurrency.ReadOnly = true;

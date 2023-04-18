@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox_Q = new System.Windows.Forms.GroupBox();
             this.btnDelete_Q = new System.Windows.Forms.Button();
             this.btnForceUpdate = new System.Windows.Forms.Button();
@@ -571,14 +571,14 @@
             this.dgvData.AllowUserToOrderColumns = true;
             this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.材料名,
@@ -613,6 +613,7 @@
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(676, 348);
             this.dgvData.TabIndex = 97;
+            this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // 材料名
@@ -638,8 +639,8 @@
             // 內層
             // 
             this.內層.DataPropertyName = "內層";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.內層.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.內層.DefaultCellStyle = dataGridViewCellStyle2;
             this.內層.FillWeight = 65F;
             this.內層.HeaderText = "內層";
             this.內層.MinimumWidth = 20;
@@ -651,8 +652,8 @@
             // 材料單
             // 
             this.材料單.DataPropertyName = "材料單";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.材料單.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.材料單.DefaultCellStyle = dataGridViewCellStyle3;
             this.材料單.HeaderText = "材料單";
             this.材料單.MinimumWidth = 20;
             this.材料單.Name = "材料單";
@@ -663,8 +664,8 @@
             // 外購
             // 
             this.外購.DataPropertyName = "外購";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.外購.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.外購.DefaultCellStyle = dataGridViewCellStyle4;
             this.外購.FillWeight = 70F;
             this.外購.HeaderText = "外購";
             this.外購.MinimumWidth = 20;
@@ -676,9 +677,9 @@
             // 單價
             // 
             this.單價.DataPropertyName = "單價";
-            dataGridViewCellStyle23.Format = "#,##0.#####";
-            dataGridViewCellStyle23.NullValue = null;
-            this.單價.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Format = "#,##0.#####";
+            dataGridViewCellStyle5.NullValue = null;
+            this.單價.DefaultCellStyle = dataGridViewCellStyle5;
             this.單價.FillWeight = 150F;
             this.單價.HeaderText = "單價";
             this.單價.MinimumWidth = 6;
@@ -700,8 +701,8 @@
             // 幣種
             // 
             this.幣種.DataPropertyName = "幣種";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.幣種.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.幣種.DefaultCellStyle = dataGridViewCellStyle6;
             this.幣種.HeaderText = "幣種";
             this.幣種.MinimumWidth = 6;
             this.幣種.Name = "幣種";
@@ -712,8 +713,8 @@
             // 台幣
             // 
             this.台幣.DataPropertyName = "台幣";
-            dataGridViewCellStyle25.Format = "#,##0.######";
-            this.台幣.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.Format = "#,##0.######";
+            this.台幣.DefaultCellStyle = dataGridViewCellStyle7;
             this.台幣.FillWeight = 110F;
             this.台幣.HeaderText = "台幣";
             this.台幣.MinimumWidth = 20;
@@ -809,8 +810,8 @@
             // 越南材料
             // 
             this.越南材料.DataPropertyName = "越南材料";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.越南材料.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.越南材料.DefaultCellStyle = dataGridViewCellStyle8;
             this.越南材料.FillWeight = 75F;
             this.越南材料.HeaderText = "越南材料";
             this.越南材料.MinimumWidth = 6;
@@ -833,8 +834,8 @@
             // BOM登錄
             // 
             this.BOM登錄.DataPropertyName = "BOM登錄";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.BOM登錄.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.BOM登錄.DefaultCellStyle = dataGridViewCellStyle9;
             this.BOM登錄.FillWeight = 75F;
             this.BOM登錄.HeaderText = "BOM登錄";
             this.BOM登錄.MinimumWidth = 6;

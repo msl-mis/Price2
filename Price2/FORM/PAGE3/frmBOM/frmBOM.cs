@@ -74,6 +74,8 @@ namespace Price2
                     this.Text = "查詢BOM產品結構資料";
                     lblHighlight.Visible = false;
                     btnTrackChanges.Visible = false;
+                    tableLayoutPanel1.Visible= false;
+                    tableLayoutPanel2.Visible = false;
                 }
                 else if (blnInq_Material)
                 {
