@@ -97,6 +97,8 @@ namespace Price2
                     this.Text = "查詢BOM產品結構資料";
                     lblHighlight.Visible = false;
                     btnTrackChanges.Visible = false;
+                    tableLayoutPanel1.Visible = false;
+                    tableLayoutPanel2.Visible = false;
                 }
                 else
                 {
@@ -154,7 +156,7 @@ namespace Price2
             //結束
             try
             {
-                if (blnInquery!=true)
+                if (blnInquery!=true &&blnInq_Material!=true)
                 {
                     frmMain frmMain = (frmMain)this.MdiParent;
                     frmMain.gbMain.Visible = true;

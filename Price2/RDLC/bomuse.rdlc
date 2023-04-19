@@ -61,7 +61,7 @@
       <Width>21cm</Width>
       <Page>
         <PageHeader>
-          <Height>9cm</Height>
+          <Height>5.87792cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -75,9 +75,8 @@
                       <Value>查某一零件位置明細表</Value>
                       <Style>
                         <FontFamily>標楷體</FontFamily>
-                        <FontSize>16pt</FontSize>
+                        <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <TextDecoration>Underline</TextDecoration>
                         <Color>Blue</Color>
                       </Style>
                     </TextRun>
@@ -121,10 +120,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>4cm</Top>
-              <Left>3.05452cm</Left>
+              <Top>3.22361cm</Top>
+              <Left>0.51924cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
+              <Width>2.89688cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -154,8 +153,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>4cm</Top>
-              <Left>5.5898cm</Left>
+              <Top>3.22361cm</Top>
+              <Left>3.4514cm</Left>
               <Height>0.6cm</Height>
               <Width>8.32457cm</Width>
               <ZIndex>2</ZIndex>
@@ -187,8 +186,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>8cm</Top>
-              <Left>10.5898cm</Left>
+              <Top>3.96472cm</Top>
+              <Left>6.63931cm</Left>
               <Height>0.6cm</Height>
               <Width>8.32457cm</Width>
               <ZIndex>3</ZIndex>
@@ -222,10 +221,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>8cm</Top>
-              <Left>8.0898cm</Left>
+              <Top>3.96472cm</Top>
+              <Left>3.4514cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
+              <Width>3.18792cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -257,10 +256,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>6cm</Top>
-              <Left>5.5898cm</Left>
+              <Top>4.74111cm</Top>
+              <Left>6.63931cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
+              <Width>2.94979cm</Width>
               <ZIndex>5</ZIndex>
               <Style>
                 <Border>
@@ -290,8 +289,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>6cm</Top>
-              <Left>8.0898cm</Left>
+              <Top>4.74111cm</Top>
+              <Left>9.5891cm</Left>
               <Height>0.6cm</Height>
               <Width>8.32457cm</Width>
               <ZIndex>6</ZIndex>

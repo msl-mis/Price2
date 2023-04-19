@@ -242,5 +242,10 @@ namespace Price2
                 txtDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
             }
         }
+
+        private void txtDate_S_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

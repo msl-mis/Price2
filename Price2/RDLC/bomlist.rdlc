@@ -579,13 +579,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.06482cm</Height>
+        <Height>0.8267cm</Height>
         <Style />
       </Body>
       <Width>29.6cm</Width>
       <Page>
         <PageHeader>
-          <Height>5cm</Height>
+          <Height>4.81479cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -596,9 +596,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>產品ＢＯＭ組成表</Value>
+                      <Value>產品BOM組成表</Value>
                       <Style>
-                        <FontSize>20pt</FontSize>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>28pt</FontSize>
                         <TextDecoration>Underline</TextDecoration>
                       </Style>
                     </TextRun>
@@ -608,9 +609,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.40272cm</Top>
-              <Left>14.70236cm</Left>
-              <Height>0.89633cm</Height>
-              <Width>6.20417cm</Width>
+              <Left>13.56465cm</Left>
+              <Height>1.16091cm</Height>
+              <Width>8.50604cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -628,10 +629,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>ＭＳＬ</Value>
+                      <Value>MSL</Value>
                       <Style>
-                        <FontFamily>新細明體</FontFamily>
-                        <FontSize>22pt</FontSize>
+                        <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>28pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                         <Color>Blue</Color>
                       </Style>
@@ -642,8 +643,8 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.40272cm</Top>
-              <Left>11.63031cm</Left>
-              <Height>0.89633cm</Height>
+              <Left>10.4926cm</Left>
+              <Height>1.16091cm</Height>
               <Width>2.77219cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
@@ -673,7 +674,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>1.6cm</Top>
+              <Top>1.9175cm</Top>
               <Left>1.89652cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
@@ -705,7 +706,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>1.6cm</Top>
+              <Top>1.9175cm</Top>
               <Left>4.4318cm</Left>
               <Height>0.6cm</Height>
               <Width>4.78974cm</Width>
@@ -737,7 +738,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.2cm</Top>
+              <Top>2.5175cm</Top>
               <Left>4.4318cm</Left>
               <Height>0.6cm</Height>
               <Width>4.78974cm</Width>
@@ -769,7 +770,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.2cm</Top>
+              <Top>2.5175cm</Top>
               <Left>1.89652cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
@@ -801,7 +802,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.8cm</Top>
+              <Top>3.1175cm</Top>
               <Left>1.89652cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
@@ -833,7 +834,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>2.8cm</Top>
+              <Top>3.1175cm</Top>
               <Left>4.4318cm</Left>
               <Height>0.6cm</Height>
               <Width>4.78974cm</Width>
@@ -857,11 +858,14 @@
                     <TextRun>
                       <Value>序號</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -889,11 +893,14 @@
                     <TextRun>
                       <Value>第　四　層　名　稱　</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -921,11 +928,14 @@
                     <TextRun>
                       <Value>品號</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -953,12 +963,13 @@
                     <TextRun>
                       <Value>單　價</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
@@ -987,7 +998,8 @@
                     <TextRun>
                       <Value>幣種</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1021,12 +1033,13 @@
                     <TextRun>
                       <Value>台幣金額</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Right</TextAlign>
+                    <TextAlign>Center</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
@@ -1055,7 +1068,8 @@
                     <TextRun>
                       <Value>供應商</Value>
                       <Style>
-                        <FontFamily>標楷體</FontFamily>
+                        <FontFamily>新細明體</FontFamily>
+                        <FontSize>12pt</FontSize>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1131,8 +1145,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.75cm</Top>
-              <Left>1.40505cm</Left>
+              <Top>0.55039cm</Top>
+              <Left>1.14047cm</Left>
               <Height>0.6cm</Height>
               <Width>2cm</Width>
               <Style>
@@ -1160,8 +1174,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox26</rd:DefaultName>
-              <Top>0.75cm</Top>
-              <Left>3.51088cm</Left>
+              <Top>0.55039cm</Top>
+              <Left>3.2463cm</Left>
               <Height>0.6cm</Height>
               <Width>3.28317cm</Width>
               <ZIndex>1</ZIndex>
@@ -1190,8 +1204,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox3</rd:DefaultName>
-              <Top>0.75cm</Top>
-              <Left>16.14666cm</Left>
+              <Top>0.55039cm</Top>
+              <Left>24.96565cm</Left>
               <Height>0.6cm</Height>
               <Width>0.9205cm</Width>
               <ZIndex>2</ZIndex>
@@ -1222,8 +1236,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.75cm</Top>
-              <Left>17.24355cm</Left>
+              <Top>0.55039cm</Top>
+              <Left>26.06254cm</Left>
               <Height>0.6cm</Height>
               <Width>2.67288cm</Width>
               <ZIndex>3</ZIndex>
