@@ -1244,6 +1244,250 @@ namespace Price2
             
         }
 
+        private void menu4_9_1_Click(object sender, EventArgs e)    //4_9_1 成交查詢_CHART
+        {
+            //4_9_1 成交查詢_CHART
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmSalesReport frmSalesReport = new frmSalesReport();
+                frmSalesReport.MdiParent = this;
+                frmSalesReport.FormClosed += childForm_FormClosed;
+                frmSalesReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmSalesReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_9_2_Click(object sender, EventArgs e)    //4_9_2 成交查詢_GRID
+        {
+            //4_9_2 成交查詢_GRID
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmSalesReport_Grid frmSalesReport_Grid = new frmSalesReport_Grid();
+                frmSalesReport_Grid.MdiParent = this;
+                frmSalesReport_Grid.FormClosed += childForm_FormClosed;
+                frmSalesReport_Grid.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmSalesReport_Grid.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_9_3_Click(object sender, EventArgs e)    //4_9_3 分類利潤報表
+        {
+            //4_9_3 分類利潤報表
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmClassReport frmClassReport = new frmClassReport();
+                frmClassReport.MdiParent = this;
+                frmClassReport.FormClosed += childForm_FormClosed;
+                frmClassReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmClassReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_9_4_Click(object sender, EventArgs e)    //4_9_4 月份營業額報表
+        {
+            //4_9_4 月份營業額報表
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmRevenueReport frmRevenueReport = new frmRevenueReport();
+                frmRevenueReport.MdiParent = this;
+                frmRevenueReport.FormClosed += childForm_FormClosed;
+                frmRevenueReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmRevenueReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_4_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_9_5_Click(object sender, EventArgs e)    //4_9_5 產品成交查詢
+        {
+            //4_9_5 產品成交查詢
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmDealReport frmDealReport = new frmDealReport();
+                frmDealReport.MdiParent = this;
+                frmDealReport.FormClosed += childForm_FormClosed;
+                frmDealReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmDealReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_5_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_9_6_Click(object sender, EventArgs e)    //4_9_6 廠商採購查詢
+        {
+            //4_9_6 廠商採購查詢
+            try
+            {
+                string[] strModule = menu4_9.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag("成交查詢") == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmProcurementReport frmProcurementReport = new frmProcurementReport();
+                frmProcurementReport.MdiParent = this;
+                frmProcurementReport.FormClosed += childForm_FormClosed;
+                frmProcurementReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmProcurementReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_9_6_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu4_10_Click(object sender, EventArgs e) //4_10 客戶客訴查詢
+        {
+            //4_10 客戶客訴查詢
+            try
+            {
+                string[] strModule = menu4_10.Text.Split('.');
+                //確認權限
+                if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                {
+                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmComplaintReport frmComplaintReport = new frmComplaintReport();
+                frmComplaintReport.MdiParent = this;
+                frmComplaintReport.FormClosed += childForm_FormClosed;
+                frmComplaintReport.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmComplaintReport.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu4_10_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void menu4_11_Click(object sender, EventArgs e) //4_11 調整報價加工分/不良率
         {
             //4_11 調整報價加工分/不良率
@@ -1591,6 +1835,41 @@ namespace Price2
             catch (Exception ex)
             {
                 MessageBox.Show(this.Name + "-menu5_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void menu5_4_1_Click(object sender, EventArgs e)    //5_4_1 人工成本/CN設定
+        {
+            //5_4_1 人工成本/CN設定
+            try
+            {
+                string[] strModule = menu5_4_1.Text.Split('.');
+                //確認權限
+                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                //{
+                //    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    return;
+                //}
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+
+                frmLaborCost_CN frmLaborCost_CN = new frmLaborCost_CN();
+                frmLaborCost_CN.MdiParent = this;
+                frmLaborCost_CN.FormClosed += childForm_FormClosed;
+                frmLaborCost_CN.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmLaborCost_CN.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu5_4_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -2364,6 +2643,48 @@ namespace Price2
             gb4_9.Visible = true;
         }
 
+        private void btn4_9_1_Click(object sender, EventArgs e) //4_9_1.成交查詢_CHART
+        {
+            //4_9_1.成交查詢_CHART
+            menu4_9_1.PerformClick();
+        }
+
+        private void btn4_9_2_Click(object sender, EventArgs e) //4_9_2.成交查詢_GRID
+        {
+            //4_9_2.成交查詢_GRID
+            menu4_9_2.PerformClick();
+        }
+
+        private void btn4_9_3_Click(object sender, EventArgs e)     //4_9_3.分類利潤查詢
+        {
+            //4_9_3.分類利潤查詢
+            menu4_9_3.PerformClick();
+        }
+
+        private void btn4_9_4_Click(object sender, EventArgs e) //4_9_4.月分營業額報表
+        {
+            //4_9_4.月分營業額報表
+            menu4_9_4.PerformClick();
+        }
+
+        private void btn4_9_5_Click(object sender, EventArgs e) //4_9_5.產品成交查詢
+        {
+            //4_9_5.產品成交查詢
+            menu4_9_5.PerformClick();
+        }
+
+        private void btn4_9_6_Click(object sender, EventArgs e) //4_9_6.廠商採購查詢
+        {
+            //4_9_6.廠商採購查詢
+            menu4_9_6.PerformClick();
+        }
+
+        private void btn4_10_Click(object sender, EventArgs e)  //4_10.客戶客訴查詢
+        {
+            //4_10.客戶客訴查詢
+            menu4_10.PerformClick();
+        }
+
         private void btn4_11_Click(object sender, EventArgs e)  //4_11.調整報價加工分/不良率
         {
             //4_11.調整報價加工分/不良率
@@ -2424,6 +2745,12 @@ namespace Price2
         {
             //5_3.國稅設定
             menu5_3.PerformClick();
+        }
+
+        private void btn5_4_1_Click(object sender, EventArgs e) //5_4_1.人工成本/CN設定
+        {
+            //5_4_1.人工成本/CN設定
+            menu5_4_1.PerformClick();
         }
 
         #endregion
@@ -2797,298 +3124,14 @@ namespace Price2
             gb5_5.Visible = true;
         }
 
-        private void menu5_4_1_Click(object sender, EventArgs e)
-        {
-            //5_4_1 人工成本/CN設定
-            try
-            {
-                string[] strModule = menu5_4_1.Text.Split('.');
-                //確認權限
-                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
-                //{
-                //    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    return;
-                //}
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-
-                frmLaborCost_CN frmLaborCost_CN = new frmLaborCost_CN();
-                frmLaborCost_CN.MdiParent = this;
-                frmLaborCost_CN.FormClosed += childForm_FormClosed;
-                frmLaborCost_CN.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmLaborCost_CN.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu5_4_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn5_4_1_Click(object sender, EventArgs e) //5_4_1.人工成本/CN設定
-        {
-            //5_4_1.人工成本/CN設定
-            menu5_4_1.PerformClick();
-        }
-
         private void btnReturn_gb4_9_Click(object sender, EventArgs e)
         {
             gb4_9.Visible = false;
             gb4.Visible = true;
         }
 
-        private void menu4_9_1_Click(object sender, EventArgs e)    //4_9_1 成交查詢_CHART
-        {
-            //4_9_1 成交查詢_CHART
-            try
-            {
-                string[] strModule = menu4_9.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag("成交查詢") == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
 
-                frmSalesReport frmSalesReport = new frmSalesReport();
-                frmSalesReport.MdiParent = this;
-                frmSalesReport.FormClosed += childForm_FormClosed;
-                frmSalesReport.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmSalesReport.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu4_9_1_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn4_9_1_Click(object sender, EventArgs e) //4_9_1.成交查詢_CHART
-        {
-            //4_9_1.成交查詢_CHART
-            menu4_9_1.PerformClick();
-        }
-
-        private void btn4_9_2_Click(object sender, EventArgs e) //4_9_2.成交查詢_GRID
-        {
-            //4_9_2.成交查詢_GRID
-            menu4_9_2.PerformClick();
-        }
-
-        private void menu4_9_2_Click(object sender, EventArgs e)    //4_9_2 成交查詢_GRID
-        {
-            //4_9_2 成交查詢_GRID
-            try
-            {
-                string[] strModule = menu4_9.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag("成交查詢") == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-
-                frmSalesReport_Grid frmSalesReport_Grid = new frmSalesReport_Grid();
-                frmSalesReport_Grid.MdiParent = this;
-                frmSalesReport_Grid.FormClosed += childForm_FormClosed;
-                frmSalesReport_Grid.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmSalesReport_Grid.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu4_9_2_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn4_9_3_Click(object sender, EventArgs e)     //4_9_3.分類利潤查詢
-        {
-            //4_9_3.分類利潤查詢
-            menu4_9_3.PerformClick();
-        }
-
-        private void menu4_9_3_Click(object sender, EventArgs e)    //4_9_3 分類利潤報表
-        {
-            //4_9_3 分類利潤報表
-            try
-            {
-                string[] strModule = menu4_9.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag("成交查詢") == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-
-                frmClassReport frmClassReport = new frmClassReport();
-                frmClassReport.MdiParent = this;
-                frmClassReport.FormClosed += childForm_FormClosed;
-                frmClassReport.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmClassReport.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu4_9_3_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void menu4_9_4_Click(object sender, EventArgs e)    //4_9_4 月份營業額報表
-        {
-            //4_9_4 月份營業額報表
-            try
-            {
-                string[] strModule = menu4_9.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag("成交查詢") == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-
-                frmRevenueReport frmRevenueReport = new frmRevenueReport();
-                frmRevenueReport.MdiParent = this;
-                frmRevenueReport.FormClosed += childForm_FormClosed;
-                frmRevenueReport.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmRevenueReport.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu4_9_4_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn4_9_4_Click(object sender, EventArgs e) //4_9_4.月分營業額報表
-        {
-            //4_9_4.月分營業額報表
-            menu4_9_4.PerformClick();
-        }
-
-        private void menu4_9_5_Click(object sender, EventArgs e)    //4_9_5 產品成交查詢
-        {
-            //4_9_5 產品成交查詢
-            try
-            {
-                string[] strModule = menu4_9.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag("成交查詢") == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-
-                frmDealReport frmDealReport = new frmDealReport();
-                frmDealReport.MdiParent = this;
-                frmDealReport.FormClosed += childForm_FormClosed;
-                frmDealReport.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmDealReport.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu4_9_5_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn4_9_5_Click(object sender, EventArgs e) //4_9_5.產品成交查詢
-        {
-            //4_9_5.產品成交查詢
-            menu4_9_5.PerformClick();
-        }
-
-        private void menu4_9_6_Click(object sender, EventArgs e)    //4_9_6 廠商採購查詢
-        {
-            //4_9_6 廠商採購查詢
-            try
-            {
-                string[] strModule = menu4_9.Text.Split('.');
-                //確認權限
-                if (clsGlobal.checkRightFlag("成交查詢") == false)
-                {
-                    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ActiveMdiChild != null)
-                {
-                    ActiveMdiChild.Close();
-                }
-
-                frmProcurementReport frmProcurementReport = new frmProcurementReport();
-                frmProcurementReport.MdiParent = this;
-                frmProcurementReport.FormClosed += childForm_FormClosed;
-                frmProcurementReport.StartPosition = FormStartPosition.CenterScreen;
-
-                foreach (Control ctl in this.Controls.OfType<MdiClient>())
-                {
-                    ctl.BackColor = Color.FromArgb(192, 255, 255);
-                }
-                gbMain.Visible = false;
-                frmProcurementReport.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(this.Name + "-menu4_9_6_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn4_9_6_Click(object sender, EventArgs e) //4_9_6.廠商採購查詢
-        {
-            //4_9_6.廠商採購查詢
-            menu4_9_6.PerformClick();
-        }
+        
     }
 }
 

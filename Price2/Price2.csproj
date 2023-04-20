@@ -114,52 +114,64 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmProcurementReport.cs">
+    <Compile Include="FORM\PAGE4\frmComplaintReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProcurementReport.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmComplaintReport.designer.cs">
+      <DependentUpon>frmComplaintReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmComplaintReport_Inq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmComplaintReport_Inq.designer.cs">
+      <DependentUpon>frmComplaintReport_Inq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProcurementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\PAGE4\frmProcurementReport.Designer.cs">
       <DependentUpon>frmProcurementReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDealReport.cs">
+    <Compile Include="FORM\PAGE4\frmDealReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDealReport.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmDealReport.Designer.cs">
       <DependentUpon>frmDealReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmClassReport.cs">
+    <Compile Include="FORM\PAGE4\frmClassReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClassReport.designer.cs">
+    <Compile Include="FORM\PAGE4\frmClassReport.designer.cs">
       <DependentUpon>frmClassReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOrder_Inq2.cs">
+    <Compile Include="FORM\PAGE6\frmOrder_Inq2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrder_Inq2.designer.cs">
+    <Compile Include="FORM\PAGE6\frmOrder_Inq2.designer.cs">
       <DependentUpon>frmOrder_Inq2.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRevenueReport.cs">
+    <Compile Include="FORM\PAGE4\frmRevenueReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRevenueReport.designer.cs">
+    <Compile Include="FORM\PAGE4\frmRevenueReport.designer.cs">
       <DependentUpon>frmRevenueReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSalesReport_Grid_Inq.cs">
+    <Compile Include="FORM\PAGE4\frmSalesReport_Grid_Inq.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSalesReport_Grid_Inq.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmSalesReport_Grid_Inq.Designer.cs">
       <DependentUpon>frmSalesReport_Grid_Inq.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSalesReport_Grid.cs">
+    <Compile Include="FORM\PAGE4\frmSalesReport_Grid.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSalesReport_Grid.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmSalesReport_Grid.Designer.cs">
       <DependentUpon>frmSalesReport_Grid.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSalesReport.cs">
+    <Compile Include="FORM\PAGE4\frmSalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSalesReport.Designer.cs">
+    <Compile Include="FORM\PAGE4\frmSalesReport.Designer.cs">
       <DependentUpon>frmSalesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE6\frmPackage_Input_Inq.cs">
@@ -778,28 +790,34 @@
     <EmbeddedResource Include="FORM\PAGE6\frmPackage_Input_Inq.resx">
       <DependentUpon>frmPackage_Input_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClassReport.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmClassReport.resx">
       <DependentUpon>frmClassReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDealReport.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmComplaintReport.resx">
+      <DependentUpon>frmComplaintReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmComplaintReport_Inq.resx">
+      <DependentUpon>frmComplaintReport_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\PAGE4\frmDealReport.resx">
       <DependentUpon>frmDealReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOrder_Inq2.resx">
+    <EmbeddedResource Include="FORM\PAGE6\frmOrder_Inq2.resx">
       <DependentUpon>frmOrder_Inq2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProcurementReport.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmProcurementReport.resx">
       <DependentUpon>frmProcurementReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRevenueReport.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmRevenueReport.resx">
       <DependentUpon>frmRevenueReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSalesReport.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmSalesReport.resx">
       <DependentUpon>frmSalesReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSalesReport_Grid.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmSalesReport_Grid.resx">
       <DependentUpon>frmSalesReport_Grid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSalesReport_Grid_Inq.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmSalesReport_Grid_Inq.resx">
       <DependentUpon>frmSalesReport_Grid_Inq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\ordch.rdlc" />
