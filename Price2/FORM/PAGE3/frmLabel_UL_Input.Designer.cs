@@ -31,6 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -88,11 +92,7 @@
             this.cboID = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -100,7 +100,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.factory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.product_category = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,6 +126,7 @@
             this.r2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.q3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.r3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -200,6 +200,52 @@
             this.groupBox.Size = new System.Drawing.Size(1016, 609);
             this.groupBox.TabIndex = 9;
             this.groupBox.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label12.Location = new System.Drawing.Point(138, 523);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(562, 18);
+            this.label12.TabIndex = 133;
+            this.label12.Text = "     N ->(標籤印刷費+手續費)/(10*5%*1000+50*20%*1000+100*75%*1000)+標誌服務費";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(138, 505);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(562, 20);
+            this.label7.TabIndex = 129;
+            this.label7.Text = "(標籤印刷費*卷數+手續費)/1000*卷數+(按產量收費/1000)*線材長度";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(6, 505);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 18);
+            this.label3.TabIndex = 128;
+            this.label3.Text = "貼紙費用/PC 計算式：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.Location = new System.Drawing.Point(138, 540);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(562, 18);
+            this.label10.TabIndex = 132;
+            this.label10.Text = "(1-N)->(標籤印刷費+手續費)/(  5*5%*1000+50*20%*1000+100*75%*1000)+標誌服務費";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
@@ -878,30 +924,6 @@
             this.label14.Text = "按照部件計算，4個以下部件使用 1-N 標籤，超過4個部件則使用 N 標籤；手續費為USD: 35元；運費約USD: 5元";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(138, 523);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(562, 18);
-            this.label12.TabIndex = 133;
-            this.label12.Text = "     N ->(標籤印刷費+手續費)/(10*5%*1000+50*20%*1000+100*75%*1000)+標誌服務費";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(138, 540);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(562, 18);
-            this.label10.TabIndex = 132;
-            this.label10.Text = "(1-N)->(標籤印刷費+手續費)/(  5*5%*1000+50*20%*1000+100*75%*1000)+標誌服務費";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -912,28 +934,6 @@
             this.label8.TabIndex = 130;
             this.label8.Text = "箱貼費用/PC 計算式：";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(138, 505);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(562, 20);
-            this.label7.TabIndex = 129;
-            this.label7.Text = "(標籤印刷費*卷數+手續費)/1000*卷數+(按產量收費/1000)*線材長度";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(6, 505);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 18);
-            this.label3.TabIndex = 128;
-            this.label3.Text = "貼紙費用/PC 計算式：";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblCount
             // 
@@ -1076,17 +1076,6 @@
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             this.dgvData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvData_KeyDown);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(691, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 25);
-            this.label4.TabIndex = 107;
-            this.label4.Text = "廠區";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // factory
             // 
@@ -1360,6 +1349,17 @@
             this.r3.ReadOnly = true;
             this.r3.Visible = false;
             this.r3.Width = 50;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(691, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 25);
+            this.label4.TabIndex = 107;
+            this.label4.Text = "廠區";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmLabel_UL_Input
             // 

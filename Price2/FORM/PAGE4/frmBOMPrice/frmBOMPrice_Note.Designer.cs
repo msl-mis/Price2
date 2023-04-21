@@ -39,7 +39,7 @@
             // 
             // groupBox
             // 
-            this.groupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox.Controls.Add(this.rtxtNote);
             this.groupBox.Controls.Add(this.lblID);
             this.groupBox.Controls.Add(this.label3);
@@ -48,36 +48,39 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(630, 549);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Size = new System.Drawing.Size(420, 366);
             this.groupBox.TabIndex = 7;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "報價備註";
             // 
             // rtxtNote
             // 
-            this.rtxtNote.Location = new System.Drawing.Point(18, 110);
-            this.rtxtNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtxtNote.Location = new System.Drawing.Point(12, 73);
             this.rtxtNote.Name = "rtxtNote";
-            this.rtxtNote.Size = new System.Drawing.Size(580, 404);
+            this.rtxtNote.Size = new System.Drawing.Size(388, 271);
             this.rtxtNote.TabIndex = 132;
             this.rtxtNote.Text = "";
             // 
             // lblID
             // 
             this.lblID.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblID.Location = new System.Drawing.Point(104, 42);
+            this.lblID.Location = new System.Drawing.Point(69, 28);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(240, 40);
+            this.lblID.Size = new System.Drawing.Size(160, 27);
             this.lblID.TabIndex = 131;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(9, 42);
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 40);
+            this.label3.Size = new System.Drawing.Size(59, 27);
             this.label3.TabIndex = 130;
             this.label3.Text = "客號：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -85,9 +88,11 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnClose.Location = new System.Drawing.Point(506, 36);
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClose.Location = new System.Drawing.Point(337, 24);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(94, 51);
+            this.btnClose.Size = new System.Drawing.Size(63, 34);
             this.btnClose.TabIndex = 88;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -96,9 +101,11 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSave.Location = new System.Drawing.Point(392, 36);
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSave.Location = new System.Drawing.Point(261, 24);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 51);
+            this.btnSave.Size = new System.Drawing.Size(63, 34);
             this.btnSave.TabIndex = 87;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -106,12 +113,11 @@
             // 
             // frmBOMPrice_Note
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 549);
+            this.ClientSize = new System.Drawing.Size(420, 366);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBOMPrice_Note";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "輸入報價備註";
