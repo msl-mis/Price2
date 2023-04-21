@@ -499,3 +499,4 @@ D:\Source Code\Price2\Price2\obj\Debug\Price2.frmComplaintReport.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmComplaintReport_Inq.resources
 D:\Price2\Price2\obj\Debug\Price2.frmComplaintReport.resources
 D:\Price2\Price2\obj\Debug\Price2.frmComplaintReport_Inq.resources
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmEPS.resources

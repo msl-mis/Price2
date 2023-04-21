@@ -768,6 +768,12 @@
     <Compile Include="FORM\PAGE3\frmSafetyFees_Input.designer.cs">
       <DependentUpon>frmSafetyFees_Input.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEPS.designer.cs">
+      <DependentUpon>frmEPS.cs</DependentUpon>
+    </Compile>
     <Compile Include="PriceDataSet.cs">
       <DependentUpon>PriceDataSet.xsd</DependentUpon>
     </Compile>
@@ -819,6 +825,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\PAGE4\frmSalesReport_Grid_Inq.resx">
       <DependentUpon>frmSalesReport_Grid_Inq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEPS.resx">
+      <DependentUpon>frmEPS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\ordch.rdlc" />
     <EmbeddedResource Include="FORM\PAGE6\frmShipPlan_Print.resx">

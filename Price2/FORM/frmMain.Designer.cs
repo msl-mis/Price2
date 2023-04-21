@@ -703,6 +703,7 @@
             this.menu4_9_7.Name = "menu4_9_7";
             this.menu4_9_7.Size = new System.Drawing.Size(269, 26);
             this.menu4_9_7.Text = "9_&7.EPS";
+            this.menu4_9_7.Click += new System.EventHandler(this.menu4_9_7_Click);
             // 
             // menu4_10
             // 
@@ -2498,6 +2499,7 @@
             this.btn4_9_7.Text = "EPS";
             this.btn4_9_7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn4_9_7.UseVisualStyleBackColor = true;
+            this.btn4_9_7.Click += new System.EventHandler(this.btn4_9_7_Click);
             // 
             // btn4_9_4
             // 

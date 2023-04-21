@@ -126,7 +126,7 @@ namespace Price2
                                                       PURTC.TC014 = 'Y' )
                                 and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='人民幣' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}')
                                 and        (
-                                                      substring(PURTC.TC003,1,6) = '{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}' )
+                                                      PURTC.TC003 between '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(-1).ToString("yyyyMM26")}' and '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(0).ToString("yyyyMM25")}' )
                                 union all
                                 select     PURTC.TC003                               as 採購日期,
                                            PURTC.TC002                               as 採購單號,
@@ -153,7 +153,7 @@ namespace Price2
                                                       PURTC.TC014 = 'Y' )
                                 and        cum_adddate= (　select MAX(cum_adddate) from cum where cum_code='美金' and　format(cum_adddate,'yyyyMM')<='{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}')
                                 and        (
-                                                      substring(PURTC.TC003,1,6) = '{Convert.ToDateTime(dtpOrderDate.Text).ToString("yyyyMM")}' )
+                                                      PURTC.TC003 between '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(-1).ToString("yyyyMM26")}' and '{Convert.ToDateTime(dtpOrderDate.Text).AddMonths(0).ToString("yyyyMM25")}' )
                                 order by   採購單號";
             DataTable dt = new DataTable();
             dt = clsDB.sql_select_dt(strSQL);
