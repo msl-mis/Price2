@@ -122,5 +122,20 @@ namespace Price2
             txtCustomerID.Text = rstrCustomerID;
             txtCustomer.Text = rstrCustomer;
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            //要求新增清除鍵
+            txtCustomer.Text = "";
+            txtCustomerID.Text = "";
+
+            if (dgvData.Rows.Count > 0)
+            {
+                DataTable dt = new DataTable();
+                dt = (DataTable)dgvData.DataSource;
+                dt.Rows.Clear();
+                dgvData.DataSource = dt;
+            }
+        }
     }
 }

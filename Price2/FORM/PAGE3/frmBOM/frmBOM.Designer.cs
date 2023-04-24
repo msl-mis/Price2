@@ -114,7 +114,7 @@
             this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
             this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(705, 580);
+            this.groupBox.Size = new System.Drawing.Size(881, 725);
             this.groupBox.TabIndex = 3;
             this.groupBox.TabStop = false;
             // 
@@ -125,19 +125,20 @@
             this.tableLayoutPanel2.ColumnCount = 5;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.39344F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.60656F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.label5, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label6, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(19, 505);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 631);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(607, 33);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(759, 41);
             this.tableLayoutPanel2.TabIndex = 92;
             // 
             // label3
@@ -149,7 +150,7 @@
             this.label3.Location = new System.Drawing.Point(3, 1);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(261, 31);
+            this.label3.Size = new System.Drawing.Size(326, 39);
             this.label3.TabIndex = 76;
             this.label3.Text = "第四層名稱";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,10 +161,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(269, 1);
+            this.label4.Location = new System.Drawing.Point(334, 1);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 31);
+            this.label4.Size = new System.Drawing.Size(98, 39);
             this.label4.TabIndex = 78;
             this.label4.Text = "單價";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -174,10 +175,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(499, 1);
+            this.label7.Location = new System.Drawing.Point(621, 1);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 31);
+            this.label7.Size = new System.Drawing.Size(135, 39);
             this.label7.TabIndex = 84;
             this.label7.Text = "台幣單價";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,10 +189,10 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(351, 1);
+            this.label5.Location = new System.Drawing.Point(437, 1);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 31);
+            this.label5.Size = new System.Drawing.Size(76, 39);
             this.label5.TabIndex = 80;
             this.label5.Text = "廠商";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,10 +203,10 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(416, 1);
+            this.label6.Location = new System.Drawing.Point(518, 1);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 31);
+            this.label6.Size = new System.Drawing.Size(98, 39);
             this.label6.TabIndex = 82;
             this.label6.Text = "幣種";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,20 +218,20 @@
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.28571F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.71428F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
             this.tableLayoutPanel1.Controls.Add(this.txtID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPurprice, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtVendorid, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtTbprice, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtCurrency, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 537);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 671);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(607, 30);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(759, 38);
             this.tableLayoutPanel1.TabIndex = 91;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -243,7 +244,7 @@
             this.txtID.Location = new System.Drawing.Point(3, 3);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(260, 20);
+            this.txtID.Size = new System.Drawing.Size(326, 24);
             this.txtID.TabIndex = 77;
             this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
             // 
@@ -252,10 +253,10 @@
             this.txtPurprice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPurprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPurprice.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPurprice.Location = new System.Drawing.Point(268, 3);
+            this.txtPurprice.Location = new System.Drawing.Point(334, 3);
             this.txtPurprice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurprice.Name = "txtPurprice";
-            this.txtPurprice.Size = new System.Drawing.Size(78, 20);
+            this.txtPurprice.Size = new System.Drawing.Size(98, 24);
             this.txtPurprice.TabIndex = 90;
             this.txtPurprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -266,11 +267,11 @@
             this.txtVendorid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtVendorid.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtVendorid.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtVendorid.Location = new System.Drawing.Point(351, 3);
+            this.txtVendorid.Location = new System.Drawing.Point(437, 3);
             this.txtVendorid.Margin = new System.Windows.Forms.Padding(2);
             this.txtVendorid.Name = "txtVendorid";
             this.txtVendorid.ReadOnly = true;
-            this.txtVendorid.Size = new System.Drawing.Size(60, 20);
+            this.txtVendorid.Size = new System.Drawing.Size(76, 24);
             this.txtVendorid.TabIndex = 81;
             this.txtVendorid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -281,11 +282,11 @@
             this.txtTbprice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTbprice.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtTbprice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTbprice.Location = new System.Drawing.Point(499, 3);
+            this.txtTbprice.Location = new System.Drawing.Point(621, 3);
             this.txtTbprice.Margin = new System.Windows.Forms.Padding(2);
             this.txtTbprice.Name = "txtTbprice";
             this.txtTbprice.ReadOnly = true;
-            this.txtTbprice.Size = new System.Drawing.Size(105, 20);
+            this.txtTbprice.Size = new System.Drawing.Size(135, 24);
             this.txtTbprice.TabIndex = 85;
             this.txtTbprice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -296,11 +297,11 @@
             this.txtCurrency.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCurrency.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCurrency.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtCurrency.Location = new System.Drawing.Point(416, 3);
+            this.txtCurrency.Location = new System.Drawing.Point(518, 3);
             this.txtCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrency.Name = "txtCurrency";
             this.txtCurrency.ReadOnly = true;
-            this.txtCurrency.Size = new System.Drawing.Size(78, 20);
+            this.txtCurrency.Size = new System.Drawing.Size(98, 24);
             this.txtCurrency.TabIndex = 83;
             this.txtCurrency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -332,7 +333,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_3.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLevel_3.EnableHeadersVisualStyles = false;
-            this.dgvLevel_3.Location = new System.Drawing.Point(424, 42);
+            this.dgvLevel_3.Location = new System.Drawing.Point(530, 52);
             this.dgvLevel_3.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_3.Name = "dgvLevel_3";
             this.dgvLevel_3.ReadOnly = true;
@@ -348,7 +349,7 @@
             this.dgvLevel_3.RowTemplate.Height = 21;
             this.dgvLevel_3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_3.Size = new System.Drawing.Size(202, 264);
+            this.dgvLevel_3.Size = new System.Drawing.Size(252, 330);
             this.dgvLevel_3.TabIndex = 89;
             this.dgvLevel_3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_3_CellClick);
             // 
@@ -388,7 +389,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_2.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvLevel_2.EnableHeadersVisualStyles = false;
-            this.dgvLevel_2.Location = new System.Drawing.Point(221, 42);
+            this.dgvLevel_2.Location = new System.Drawing.Point(276, 52);
             this.dgvLevel_2.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_2.Name = "dgvLevel_2";
             this.dgvLevel_2.ReadOnly = true;
@@ -404,7 +405,7 @@
             this.dgvLevel_2.RowTemplate.Height = 21;
             this.dgvLevel_2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_2.Size = new System.Drawing.Size(209, 264);
+            this.dgvLevel_2.Size = new System.Drawing.Size(261, 330);
             this.dgvLevel_2.TabIndex = 88;
             this.dgvLevel_2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_2_CellClick);
             // 
@@ -444,7 +445,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLevel_1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvLevel_1.EnableHeadersVisualStyles = false;
-            this.dgvLevel_1.Location = new System.Drawing.Point(18, 42);
+            this.dgvLevel_1.Location = new System.Drawing.Point(22, 52);
             this.dgvLevel_1.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLevel_1.Name = "dgvLevel_1";
             this.dgvLevel_1.ReadOnly = true;
@@ -460,7 +461,7 @@
             this.dgvLevel_1.RowTemplate.Height = 21;
             this.dgvLevel_1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvLevel_1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLevel_1.Size = new System.Drawing.Size(204, 264);
+            this.dgvLevel_1.Size = new System.Drawing.Size(255, 330);
             this.dgvLevel_1.TabIndex = 87;
             this.dgvLevel_1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLevel_1_CellClick);
             // 
@@ -477,10 +478,10 @@
             this.btnTrackChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnTrackChanges.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnTrackChanges.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnTrackChanges.Location = new System.Drawing.Point(632, 80);
+            this.btnTrackChanges.Location = new System.Drawing.Point(790, 100);
             this.btnTrackChanges.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrackChanges.Name = "btnTrackChanges";
-            this.btnTrackChanges.Size = new System.Drawing.Size(66, 34);
+            this.btnTrackChanges.Size = new System.Drawing.Size(82, 42);
             this.btnTrackChanges.TabIndex = 86;
             this.btnTrackChanges.Text = "修改紀錄";
             this.btnTrackChanges.UseVisualStyleBackColor = false;
@@ -491,10 +492,10 @@
             this.btnModify_L3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnModify_L3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModify_L3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnModify_L3.Location = new System.Drawing.Point(430, 12);
+            this.btnModify_L3.Location = new System.Drawing.Point(538, 15);
             this.btnModify_L3.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify_L3.Name = "btnModify_L3";
-            this.btnModify_L3.Size = new System.Drawing.Size(100, 26);
+            this.btnModify_L3.Size = new System.Drawing.Size(125, 32);
             this.btnModify_L3.TabIndex = 75;
             this.btnModify_L3.Text = "第三層修改";
             this.btnModify_L3.UseVisualStyleBackColor = false;
@@ -505,10 +506,10 @@
             this.btnModify_L2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnModify_L2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModify_L2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnModify_L2.Location = new System.Drawing.Point(224, 12);
+            this.btnModify_L2.Location = new System.Drawing.Point(280, 15);
             this.btnModify_L2.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify_L2.Name = "btnModify_L2";
-            this.btnModify_L2.Size = new System.Drawing.Size(100, 26);
+            this.btnModify_L2.Size = new System.Drawing.Size(125, 32);
             this.btnModify_L2.TabIndex = 74;
             this.btnModify_L2.Text = "第二層修改";
             this.btnModify_L2.UseVisualStyleBackColor = false;
@@ -520,10 +521,10 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnClose.Location = new System.Drawing.Point(635, 469);
+            this.btnClose.Location = new System.Drawing.Point(794, 586);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(63, 34);
+            this.btnClose.Size = new System.Drawing.Size(79, 42);
             this.btnClose.TabIndex = 56;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -534,10 +535,10 @@
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPrint.Location = new System.Drawing.Point(632, 124);
+            this.btnPrint.Location = new System.Drawing.Point(790, 155);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(66, 34);
+            this.btnPrint.Size = new System.Drawing.Size(82, 42);
             this.btnPrint.TabIndex = 54;
             this.btnPrint.Text = "列印BOM";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -548,10 +549,10 @@
             this.btnModify_L1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnModify_L1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModify_L1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnModify_L1.Location = new System.Drawing.Point(24, 12);
+            this.btnModify_L1.Location = new System.Drawing.Point(30, 15);
             this.btnModify_L1.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify_L1.Name = "btnModify_L1";
-            this.btnModify_L1.Size = new System.Drawing.Size(100, 26);
+            this.btnModify_L1.Size = new System.Drawing.Size(125, 32);
             this.btnModify_L1.TabIndex = 53;
             this.btnModify_L1.Text = "第一層修改";
             this.btnModify_L1.UseVisualStyleBackColor = false;
@@ -590,7 +591,7 @@
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvData.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(20, 311);
+            this.dgvData.Location = new System.Drawing.Point(25, 389);
             this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
@@ -605,7 +606,7 @@
             this.dgvData.RowHeadersWidth = 25;
             this.dgvData.RowTemplate.Height = 21;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(606, 189);
+            this.dgvData.Size = new System.Drawing.Size(758, 236);
             this.dgvData.TabIndex = 50;
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
@@ -689,10 +690,10 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnDelete.Location = new System.Drawing.Point(635, 431);
+            this.btnDelete.Location = new System.Drawing.Point(794, 539);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(63, 34);
+            this.btnDelete.Size = new System.Drawing.Size(79, 42);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -704,10 +705,10 @@
             this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnAdd.Location = new System.Drawing.Point(635, 393);
+            this.btnAdd.Location = new System.Drawing.Point(794, 491);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(63, 34);
+            this.btnAdd.Size = new System.Drawing.Size(79, 42);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "新增";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -719,10 +720,10 @@
             this.lblHighlight.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblHighlight.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblHighlight.ForeColor = System.Drawing.Color.Red;
-            this.lblHighlight.Location = new System.Drawing.Point(637, 42);
+            this.lblHighlight.Location = new System.Drawing.Point(796, 52);
             this.lblHighlight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHighlight.Name = "lblHighlight";
-            this.lblHighlight.Size = new System.Drawing.Size(63, 26);
+            this.lblHighlight.Size = new System.Drawing.Size(79, 32);
             this.lblHighlight.TabIndex = 35;
             this.lblHighlight.Text = "唯讀";
             this.lblHighlight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -734,9 +735,9 @@
             // 
             // frmBOM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(705, 580);
+            this.ClientSize = new System.Drawing.Size(881, 725);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -140,7 +140,11 @@ namespace Price2
 
         private void txtCustomerID_Leave(object sender, EventArgs e)
         {
-            getData();
+            if(txtCustomerID.Text!="")
+            {
+                //要求確認ID是否存在
+                getData();
+            }
         }
 
         private void getData()
@@ -175,6 +179,12 @@ namespace Price2
                     txtLine.Text = dt.Rows[0]["線路"].ToString();
                     lblUser.Text = dt.Rows[0]["用戶"].ToString();
                     lblDate.Text = Convert.ToDateTime(dt.Rows[0]["儲存日期"]).ToString("yyyy/MM/dd");
+                }
+                else
+                {
+                    MessageBox.Show("沒有這個產品號!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtCustomerID.Focus();
+                    return;
                 }
                 
                 this.Cursor = Cursors.Default;//滑鼠還原預設
