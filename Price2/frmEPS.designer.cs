@@ -193,7 +193,6 @@
             this.dtpYear.ShowUpDown = true;
             this.dtpYear.Size = new System.Drawing.Size(60, 29);
             this.dtpYear.TabIndex = 241;
-            this.dtpYear.Leave += new System.EventHandler(this.dtpYear_Leave);
             // 
             // label3
             // 

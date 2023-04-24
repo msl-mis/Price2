@@ -88,11 +88,6 @@ namespace Price2
             }
         }
 
-        private void dtpYear_Leave(object sender, EventArgs e)
-        {
-            
-        }
-
         private void radio1_CheckedChanged(object sender, EventArgs e)
         {
             panel1.Visible = radio1.Checked;
@@ -113,6 +108,7 @@ namespace Price2
             //查詢
             try
             {
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
                 //日期欄位
                 for (int i = 1; i <= 5; i++)
                 {
@@ -129,9 +125,11 @@ namespace Price2
                 getYear();
                 getHalf();
                 getQuarter();
+                this.Cursor = Cursors.Default;//滑鼠還原預設
             }
             catch (Exception ex)
             {
+                this.Cursor = Cursors.Default;//滑鼠還原預設
                 MessageBox.Show(this.Name + "-btnInq_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -371,9 +369,5 @@ namespace Price2
 
             return strProfit_Result;
         }
-
-        
-
-        
     }
 }

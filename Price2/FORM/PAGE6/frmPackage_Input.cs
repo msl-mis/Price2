@@ -121,7 +121,8 @@ namespace Price2
                 clsDB.Execute(strSQL);
                 getData();
                 MessageBox.Show("儲存完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                //使用者要求修改完後按確認了、清空上一個數據
+                btnClear.PerformClick();
             }
             catch (Exception ex)
             {
@@ -131,9 +132,9 @@ namespace Price2
 
         private void txtCustomerID_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if(e.KeyCode == Keys.Enter)//使用者要求按ENTER自動跳下一行
             {
-                txtXZ.Focus();
+                txtZX.Focus();
             }
         }
 
@@ -193,6 +194,38 @@ namespace Price2
         private void frmPackage_Input_Activated(object sender, EventArgs e)
         {
             txtCustomerID.Focus();
+        }
+
+        private void txtZX_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)//使用者要求按ENTER自動跳下一行
+            {
+                txtXZ.Focus();
+            }
+        }
+
+        private void txtXZ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)//使用者要求按ENTER自動跳下一行
+            {
+                txtJZ.Focus();
+            }
+        }
+
+        private void txtJZ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)//使用者要求按ENTER自動跳下一行
+            {
+                txtMZ.Focus();
+            }
+        }
+
+        private void txtMZ_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)//使用者要求按ENTER自動跳下一行
+            {
+                btnSave.Focus();
+            }
         }
     }
 }
