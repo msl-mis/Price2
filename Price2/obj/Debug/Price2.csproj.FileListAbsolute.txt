@@ -502,3 +502,4 @@ D:\Price2\Price2\obj\Debug\Price2.frmComplaintReport_Inq.resources
 D:\Source Code\Price2\Price2\obj\Debug\Price2.frmEPS.resources
 D:\Price2\Price2\obj\Debug\Price2.frmEPS.resources
 D:\Price2\Price2\obj\Debug\Price2.TrustInfo.xml
+D:\Source Code\Price2\Price2\obj\Debug\Price2.TrustInfo.xml
