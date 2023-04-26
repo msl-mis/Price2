@@ -50,9 +50,10 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(2, 9);
+            this.label3.Location = new System.Drawing.Point(2, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(376, 47);
+            this.label3.Size = new System.Drawing.Size(470, 59);
             this.label3.TabIndex = 117;
             this.label3.Text = "MSL-PRICE 報價系統";
             // 
@@ -61,7 +62,7 @@
             this.picuser.BackColor = System.Drawing.Color.Transparent;
             this.picuser.Image = global::Price2.Properties.Resources.user;
             this.picuser.InitialImage = ((System.Drawing.Image)(resources.GetObject("picuser.InitialImage")));
-            this.picuser.Location = new System.Drawing.Point(426, 166);
+            this.picuser.Location = new System.Drawing.Point(532, 208);
             this.picuser.Margin = new System.Windows.Forms.Padding(2);
             this.picuser.Name = "picuser";
             this.picuser.Size = new System.Drawing.Size(32, 32);
@@ -73,7 +74,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(426, 208);
+            this.pictureBox1.Location = new System.Drawing.Point(532, 260);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -87,10 +88,10 @@
             this.radioOffical.BackColor = System.Drawing.Color.Transparent;
             this.radioOffical.Checked = true;
             this.radioOffical.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioOffical.Location = new System.Drawing.Point(432, 283);
-            this.radioOffical.Margin = new System.Windows.Forms.Padding(4);
+            this.radioOffical.Location = new System.Drawing.Point(540, 354);
+            this.radioOffical.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.radioOffical.Name = "radioOffical";
-            this.radioOffical.Size = new System.Drawing.Size(75, 24);
+            this.radioOffical.Size = new System.Drawing.Size(93, 29);
             this.radioOffical.TabIndex = 112;
             this.radioOffical.TabStop = true;
             this.radioOffical.Text = "正式區";
@@ -101,10 +102,10 @@
             this.radioTest.AutoSize = true;
             this.radioTest.BackColor = System.Drawing.Color.Transparent;
             this.radioTest.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioTest.Location = new System.Drawing.Point(525, 283);
-            this.radioTest.Margin = new System.Windows.Forms.Padding(4);
+            this.radioTest.Location = new System.Drawing.Point(656, 354);
+            this.radioTest.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.radioTest.Name = "radioTest";
-            this.radioTest.Size = new System.Drawing.Size(75, 24);
+            this.radioTest.Size = new System.Drawing.Size(93, 29);
             this.radioTest.TabIndex = 113;
             this.radioTest.Text = "測試區";
             this.radioTest.UseVisualStyleBackColor = false;
@@ -114,10 +115,10 @@
             this.chkRemember.AutoSize = true;
             this.chkRemember.BackColor = System.Drawing.Color.Transparent;
             this.chkRemember.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.chkRemember.Location = new System.Drawing.Point(484, 248);
-            this.chkRemember.Margin = new System.Windows.Forms.Padding(4);
+            this.chkRemember.Location = new System.Drawing.Point(605, 310);
+            this.chkRemember.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.chkRemember.Name = "chkRemember";
-            this.chkRemember.Size = new System.Drawing.Size(92, 24);
+            this.chkRemember.Size = new System.Drawing.Size(114, 29);
             this.chkRemember.TabIndex = 114;
             this.chkRemember.Text = "記住密碼";
             this.chkRemember.UseVisualStyleBackColor = false;
@@ -127,10 +128,11 @@
             // 
             this.btnOK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOK.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btnOK.Location = new System.Drawing.Point(430, 317);
+            this.btnOK.Location = new System.Drawing.Point(538, 396);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOK.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(76, 30);
+            this.btnOK.Size = new System.Drawing.Size(95, 38);
             this.btnOK.Style = Sunny.UI.UIStyle.Custom;
             this.btnOK.StyleCustomMode = true;
             this.btnOK.TabIndex = 118;
@@ -148,14 +150,15 @@
             this.btnEnd.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEnd.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEnd.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btnEnd.Location = new System.Drawing.Point(528, 317);
+            this.btnEnd.Location = new System.Drawing.Point(660, 396);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnEnd.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(115)))), ((int)(((byte)(115)))));
             this.btnEnd.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEnd.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnEnd.Size = new System.Drawing.Size(76, 30);
+            this.btnEnd.Size = new System.Drawing.Size(95, 38);
             this.btnEnd.Style = Sunny.UI.UIStyle.Red;
             this.btnEnd.StyleCustomMode = true;
             this.btnEnd.Symbol = 61453;
@@ -169,12 +172,12 @@
             // 
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.txtUser.Location = new System.Drawing.Point(465, 168);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtUser.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtUser.Location = new System.Drawing.Point(581, 210);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtUser.MinimumSize = new System.Drawing.Size(1, 20);
             this.txtUser.Name = "txtUser";
             this.txtUser.ShowText = false;
-            this.txtUser.Size = new System.Drawing.Size(150, 29);
+            this.txtUser.Size = new System.Drawing.Size(188, 36);
             this.txtUser.TabIndex = 120;
             this.txtUser.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtUser.Watermark = "請輸入帳號";
@@ -185,13 +188,13 @@
             // 
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.txtPassword.Location = new System.Drawing.Point(465, 210);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtPassword.Location = new System.Drawing.Point(581, 262);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtPassword.MinimumSize = new System.Drawing.Size(1, 20);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.ShowText = false;
-            this.txtPassword.Size = new System.Drawing.Size(150, 29);
+            this.txtPassword.Size = new System.Drawing.Size(188, 36);
             this.txtPassword.TabIndex = 121;
             this.txtPassword.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtPassword.Watermark = "請輸入密碼";
@@ -203,10 +206,11 @@
             this.userlogin.FillColor = System.Drawing.Color.Transparent;
             this.userlogin.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.userlogin.LineColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.userlogin.Location = new System.Drawing.Point(407, 122);
+            this.userlogin.Location = new System.Drawing.Point(509, 152);
+            this.userlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userlogin.MinimumSize = new System.Drawing.Size(1, 1);
             this.userlogin.Name = "userlogin";
-            this.userlogin.Size = new System.Drawing.Size(217, 29);
+            this.userlogin.Size = new System.Drawing.Size(271, 36);
             this.userlogin.Style = Sunny.UI.UIStyle.Custom;
             this.userlogin.TabIndex = 122;
             this.userlogin.Text = "用戶登錄";
@@ -216,21 +220,22 @@
             // 
             this.V.BackColor = System.Drawing.Color.Transparent;
             this.V.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.V.Location = new System.Drawing.Point(393, 413);
+            this.V.Location = new System.Drawing.Point(491, 516);
+            this.V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.V.Name = "V";
-            this.V.Size = new System.Drawing.Size(324, 16);
+            this.V.Size = new System.Drawing.Size(405, 20);
             this.V.TabIndex = 123;
             this.V.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.V.Click += new System.EventHandler(this.V_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Price2.Properties.Resources.PriceLogin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(729, 438);
+            this.ClientSize = new System.Drawing.Size(911, 548);
             this.ControlBox = false;
             this.Controls.Add(this.V);
             this.Controls.Add(this.userlogin);
@@ -245,7 +250,7 @@
             this.Controls.Add(this.picuser);
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -341,7 +341,7 @@ namespace Price2
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo; j++)
+                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo-1; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo-1; j++)
                     {
                         strSQL = $@"insert into na32
                                                 (na32_orderid,
@@ -380,7 +380,7 @@ namespace Price2
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo; j++)
+                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo-1; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo-1; j++)
                     {
                         strSQL = $@"insert into na33
                                                 (na33_orderid,
@@ -416,7 +416,7 @@ namespace Price2
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo; j++)
+                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo-1; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo-1; j++)
                     {
                         strSQL = $@"insert into na34
                                                 (na34_orderid,
@@ -453,7 +453,7 @@ namespace Price2
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo; j++)
+                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo-1; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo-1; j++)
                     {
                         strSQL = $@"insert into na35
                                                 (na35_orderid,
@@ -490,7 +490,7 @@ namespace Price2
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo; j++)
+                    for (int j = Convert.ToInt32(dt.Rows[i]["ord_beginxx"]) + iNo-1; j <= Convert.ToInt32(dt.Rows[i]["ord_endxx"]) + iNo-1; j++)
                     {
                         strSQL = $@"insert into na36
                                                 (na36_orderid,
