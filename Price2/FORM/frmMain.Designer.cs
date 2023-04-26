@@ -333,7 +333,7 @@
             this.menu1_6});
             this.menu1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(74, 24);
+            this.menu1.Size = new System.Drawing.Size(74, 23);
             this.menu1.Text = "&1.系統";
             // 
             // menu1_1
@@ -386,7 +386,7 @@
             this.menu2_4});
             this.menu2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu2.Name = "menu2";
-            this.menu2.Size = new System.Drawing.Size(74, 24);
+            this.menu2.Size = new System.Drawing.Size(74, 23);
             this.menu2.Text = "&2.基礎";
             // 
             // menu2_1
@@ -429,7 +429,7 @@
             this.uL標籤與費用設定ToolStripMenuItem});
             this.menu3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu3.Name = "menu3";
-            this.menu3.Size = new System.Drawing.Size(77, 24);
+            this.menu3.Size = new System.Drawing.Size(77, 23);
             this.menu3.Text = "&3.BOM";
             // 
             // menu3_1
@@ -589,7 +589,7 @@
             this.menu4_17});
             this.menu4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu4.Name = "menu4";
-            this.menu4.Size = new System.Drawing.Size(74, 24);
+            this.menu4.Size = new System.Drawing.Size(74, 23);
             this.menu4.Text = "&4.報價";
             // 
             // menu4_1
@@ -771,7 +771,7 @@
             this.加工分VN設定ToolStripMenuItem});
             this.menu5.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu5.Name = "menu5";
-            this.menu5.Size = new System.Drawing.Size(74, 24);
+            this.menu5.Size = new System.Drawing.Size(74, 23);
             this.menu5.Text = "&5.設定";
             // 
             // menu5_1
@@ -862,7 +862,7 @@
             this.menu6_3});
             this.menu6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu6.Name = "menu6";
-            this.menu6.Size = new System.Drawing.Size(74, 24);
+            this.menu6.Size = new System.Drawing.Size(74, 23);
             this.menu6.Text = "&6.業務";
             // 
             // menu6_1
@@ -876,7 +876,7 @@
             // 
             this.menu6_2.Name = "menu6_2";
             this.menu6_2.Size = new System.Drawing.Size(314, 26);
-            this.menu6_2.Text = "&2.出貨箱號列印";
+            this.menu6_2.Text = "&2.出貨箱號和計畫列印";
             this.menu6_2.Click += new System.EventHandler(this.menu6_2_Click);
             // 
             // menu6_3
@@ -884,6 +884,7 @@
             this.menu6_3.Name = "menu6_3";
             this.menu6_3.Size = new System.Drawing.Size(314, 26);
             this.menu6_3.Text = "&3.出貨計畫列印";
+            this.menu6_3.Visible = false;
             this.menu6_3.Click += new System.EventHandler(this.menu6_3_Click);
             // 
             // 共用資料
@@ -904,7 +905,7 @@
             this.menu7_13});
             this.共用資料.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.共用資料.Name = "共用資料";
-            this.共用資料.Size = new System.Drawing.Size(106, 24);
+            this.共用資料.Size = new System.Drawing.Size(106, 23);
             this.共用資料.Text = "&7.共用資料";
             // 
             // menu7_1
@@ -1002,7 +1003,7 @@
             // 
             this.menu_Exit.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu_Exit.Name = "menu_Exit";
-            this.menu_Exit.Size = new System.Drawing.Size(74, 24);
+            this.menu_Exit.Size = new System.Drawing.Size(74, 23);
             this.menu_Exit.Text = "&X.結束";
             this.menu_Exit.Click += new System.EventHandler(this.menu_Exit_Click);
             // 
@@ -3033,7 +3034,7 @@
             this.btn6_2.Name = "btn6_2";
             this.btn6_2.Size = new System.Drawing.Size(279, 118);
             this.btn6_2.TabIndex = 8;
-            this.btn6_2.Text = "2.出貨箱號列印";
+            this.btn6_2.Text = "2.出貨箱號和計畫列印";
             this.btn6_2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6_2.UseVisualStyleBackColor = true;
             this.btn6_2.Click += new System.EventHandler(this.btn6_2_Click);
@@ -3054,6 +3055,7 @@
             this.btn6_3.Text = "3.出貨計劃列印";
             this.btn6_3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn6_3.UseVisualStyleBackColor = true;
+            this.btn6_3.Visible = false;
             this.btn6_3.Click += new System.EventHandler(this.btn6_3_Click);
             // 
             // label11

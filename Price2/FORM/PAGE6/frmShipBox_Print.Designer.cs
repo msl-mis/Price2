@@ -36,12 +36,14 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.txtOrderID = new System.Windows.Forms.TextBox();
+            this.btnPlan = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox.Controls.Add(this.btnPlan);
             this.groupBox.Controls.Add(this.btnOrder_Inq);
             this.groupBox.Controls.Add(this.chkBeginNo);
             this.groupBox.Controls.Add(this.txtBeginNo);
@@ -113,7 +115,7 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(256, 139);
+            this.btnClose.Location = new System.Drawing.Point(395, 139);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(69, 35);
@@ -127,12 +129,12 @@
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPrint.Location = new System.Drawing.Point(145, 139);
+            this.btnPrint.Location = new System.Drawing.Point(53, 139);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(69, 35);
+            this.btnPrint.Size = new System.Drawing.Size(110, 35);
             this.btnPrint.TabIndex = 123;
-            this.btnPrint.Text = "列印";
+            this.btnPrint.Text = "箱號列印";
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -146,6 +148,20 @@
             this.txtOrderID.TabIndex = 131;
             this.txtOrderID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOrderID_KeyDown);
             // 
+            // btnPlan
+            // 
+            this.btnPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPlan.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnPlan.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnPlan.Location = new System.Drawing.Point(200, 139);
+            this.btnPlan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlan.Name = "btnPlan";
+            this.btnPlan.Size = new System.Drawing.Size(110, 35);
+            this.btnPlan.TabIndex = 166;
+            this.btnPlan.Text = "計畫列印";
+            this.btnPlan.UseVisualStyleBackColor = false;
+            this.btnPlan.Click += new System.EventHandler(this.btnPlan_Click);
+            // 
             // frmShipBox_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -156,7 +172,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmShipBox_Print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "出貨箱號列印";
+            this.Text = "出貨箱號和計畫列印";
             this.Activated += new System.EventHandler(this.frmShipBox_Print_Activated);
             this.Load += new System.EventHandler(this.frmShipBox_Print_Load);
             this.groupBox.ResumeLayout(false);
@@ -175,5 +191,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Button btnOrder_Inq;
+        private System.Windows.Forms.Button btnPlan;
     }
 }
