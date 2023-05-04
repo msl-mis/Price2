@@ -2,8 +2,8 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
-    <PublishUrlHistory>\\192.168.10.205\Price\|C:\Users\thomas\Desktop\Price2\|publish\</PublishUrlHistory>
-    <InstallUrlHistory>http://192.168.10.205:8083/|\\192.168.10.205\Price\</InstallUrlHistory>
+    <PublishUrlHistory>\\192.168.10.205\Price2\|\\192.168.10.9\Price2\|C:\inetpub\wwwroot\PRICETEST\|\\TW-RDS\Price2\|\\192.168.10.205\Price\</PublishUrlHistory>
+    <InstallUrlHistory>http://192.168.10.205:8084/|http://192.168.10.9:7000/|http://192.168.10.213:7000/|http://192.168.10.205:8083/|\\192.168.10.205\Price\</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
