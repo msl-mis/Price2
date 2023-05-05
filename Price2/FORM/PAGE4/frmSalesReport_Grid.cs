@@ -456,12 +456,12 @@ namespace Price2
                     if(radio1.Checked ||radio3.Checked)
                     {
                         txtT1.Text = Convert.ToDouble(dt.Compute("SUM([營業額])", "")).ToString("N0");
-                        txtT3.Text = Convert.ToDouble(dt.Compute("SUM([去年營業額])", "")).ToString();
+                        txtT3.Text = Convert.ToDouble(dt.Compute("SUM([去年營業額])", "")).ToString("N0");
                     }
                     else
                     {
                         txtT1.Text = Convert.ToDouble(dt.Compute("SUM([盈虧])", "")).ToString("N0");
-                        txtT3.Text = Convert.ToDouble(dt.Compute("SUM([去年盈虧])", "")).ToString();
+                        txtT3.Text = Convert.ToDouble(dt.Compute("SUM([去年盈虧])", "")).ToString("N0");
                     }
                     txtT2.Text = dt.Compute("SUM([總比例%] )", "").ToString();
                     

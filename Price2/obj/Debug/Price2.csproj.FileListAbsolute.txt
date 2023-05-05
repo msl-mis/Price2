@@ -687,3 +687,5 @@ D:\User\Desktop\Price2自動更新改版\改版後\Price2\Price2\obj\Debug\Price
 D:\User\Desktop\Price2自動更新改版\改版後\Price2\Price2\obj\Debug\Price2.exe.manifest
 D:\User\Desktop\Price2自動更新改版\改版後\Price2\Price2\obj\Debug\Price2.application
 D:\User\Desktop\Price2自動更新改版\改版後\Price2\Price2\obj\Debug\Price2.csproj.CopyComplete
+D:\Source Code\Price2\Price2\bin\Debug\AutoUpdater.exe
+D:\Source Code\Price2\Price2\obj\Debug\Price2.frmTodo_List.resources

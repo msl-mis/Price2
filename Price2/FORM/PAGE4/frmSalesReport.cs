@@ -278,17 +278,17 @@ namespace Price2
 
             //欄位輸入
             //數量/萬
-            lblQty1.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[1]) ? "0" : strQty[1])) / 10000).ToString("0");
-            lblQty2.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[2]) ? "0" : strQty[2])) / 10000).ToString("0");
-            lblQty3.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[3]) ? "0" : strQty[3])) / 10000).ToString("0");
-            lblQty4.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[4]) ? "0" : strQty[4])) / 10000).ToString("0");
-            lblQty5.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[5]) ? "0" : strQty[5])) / 10000).ToString("0");
+            lblQty1.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[1]) ? "0" : strQty[1])) / 10000).ToString("N0");
+            lblQty2.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[2]) ? "0" : strQty[2])) / 10000).ToString("N0");
+            lblQty3.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[3]) ? "0" : strQty[3])) / 10000).ToString("N0");
+            lblQty4.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[4]) ? "0" : strQty[4])) / 10000).ToString("N0");
+            lblQty5.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[5]) ? "0" : strQty[5])) / 10000).ToString("N0");
             //成交/萬
-            lblR1.Text = (Convert.ToDouble(strRevenue[1]) / 10000).ToString("0");
-            lblR2.Text = (Convert.ToDouble(strRevenue[2]) / 10000).ToString("0");
-            lblR3.Text = (Convert.ToDouble(strRevenue[3]) / 10000).ToString("0");
-            lblR4.Text = (Convert.ToDouble(strRevenue[4]) / 10000).ToString("0");
-            lblR5.Text = (Convert.ToDouble(strRevenue[5]) / 10000).ToString("0");
+            lblR1.Text = (Convert.ToDouble(strRevenue[1]) / 10000).ToString("N0");
+            lblR2.Text = (Convert.ToDouble(strRevenue[2]) / 10000).ToString("N0");
+            lblR3.Text = (Convert.ToDouble(strRevenue[3]) / 10000).ToString("N0");
+            lblR4.Text = (Convert.ToDouble(strRevenue[4]) / 10000).ToString("N0");
+            lblR5.Text = (Convert.ToDouble(strRevenue[5]) / 10000).ToString("N0");
             //毛利
             if ((Convert.ToDouble(strProfit_Rate[1]) * 100) > 0)
             {
@@ -607,17 +607,17 @@ namespace Price2
 
             //欄位輸入
             //數量/萬
-            lblQty1.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[1]) ? "0" : strQty[1])) / 10000).ToString("0");
-            lblQty2.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[2]) ? "0" : strQty[2])) / 10000).ToString("0");
-            lblQty3.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[3]) ? "0" : strQty[3])) / 10000).ToString("0");
-            lblQty4.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[4]) ? "0" : strQty[4])) / 10000).ToString("0");
-            lblQty5.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[5]) ? "0" : strQty[5])) / 10000).ToString("0");
+            lblQty1.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[1]) ? "N0" : strQty[1])) / 10000).ToString("0");
+            lblQty2.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[2]) ? "N0" : strQty[2])) / 10000).ToString("0");
+            lblQty3.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[3]) ? "N0" : strQty[3])) / 10000).ToString("0");
+            lblQty4.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[4]) ? "N0" : strQty[4])) / 10000).ToString("0");
+            lblQty5.Text = (Convert.ToDouble((string.IsNullOrEmpty(strQty[5]) ? "N0" : strQty[5])) / 10000).ToString("0");
             //成交/萬
-            lblR1.Text = (Convert.ToDouble(strProfit_Result[1]) / 10000).ToString("0");
-            lblR2.Text = (Convert.ToDouble(strProfit_Result[2]) / 10000).ToString("0");
-            lblR3.Text = (Convert.ToDouble(strProfit_Result[3]) / 10000).ToString("0");
-            lblR4.Text = (Convert.ToDouble(strProfit_Result[4]) / 10000).ToString("0");
-            lblR5.Text = (Convert.ToDouble(strProfit_Result[5]) / 10000).ToString("0");
+            lblR1.Text = (Convert.ToDouble(strProfit_Result[1]) / 10000).ToString("N0");
+            lblR2.Text = (Convert.ToDouble(strProfit_Result[2]) / 10000).ToString("N0");
+            lblR3.Text = (Convert.ToDouble(strProfit_Result[3]) / 10000).ToString("N0");
+            lblR4.Text = (Convert.ToDouble(strProfit_Result[4]) / 10000).ToString("N0");
+            lblR5.Text = (Convert.ToDouble(strProfit_Result[5]) / 10000).ToString("N0");
             //毛利率
             if ((Convert.ToDouble(strProfit_Rate[1]) * 100) > 0)
             {

@@ -26,8 +26,8 @@
     <InstallUrl>http://192.168.10.205:8084/</InstallUrl>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.0.0.2</ApplicationVersion>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.3</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -124,6 +124,12 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
+    <Compile Include="frmTodo_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTodo_List.Designer.cs">
+      <DependentUpon>frmTodo_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\PAGE4\frmComplaintReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -838,6 +844,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEPS.resx">
       <DependentUpon>frmEPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTodo_List.resx">
+      <DependentUpon>frmTodo_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\ordch.rdlc" />
     <EmbeddedResource Include="FORM\PAGE6\frmShipPlan_Print.resx">

@@ -3170,6 +3170,46 @@ namespace Price2
             //4_9_7.EPS查詢
             menu4_9_7.PerformClick();
         }
+
+        private void menu1_5_Click(object sender, EventArgs e)  //1_5 代辦事項
+        {
+            //1_5 代辦事項
+            try
+            {
+                string[] strModule = menu1_5.Text.Split('.');
+                //確認權限
+                //if (clsGlobal.checkRightFlag(strModule[1]) == false)
+                //{
+                //    MessageBox.Show("你沒有權限進入該塊!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    return;
+                //}
+                if (ActiveMdiChild != null)
+                {
+                    ActiveMdiChild.Close();
+                }
+                frmTodo_List frmTodo_List = new frmTodo_List();
+                frmTodo_List.MdiParent = this;
+                frmTodo_List.FormClosed += childForm_FormClosed;
+                frmTodo_List.StartPosition = FormStartPosition.CenterScreen;
+
+                foreach (Control ctl in this.Controls.OfType<MdiClient>())
+                {
+                    ctl.BackColor = Color.FromArgb(192, 255, 255);
+                }
+                gbMain.Visible = false;
+                frmTodo_List.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this.Name + "-menu1_5_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn1_5_Click(object sender, EventArgs e)   //1_5.代辦事項
+        {
+            //1_5.代辦事項
+            menu1_5.PerformClick();
+        }
     }
 }
 

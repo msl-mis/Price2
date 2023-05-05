@@ -333,7 +333,7 @@
             this.menu1_6});
             this.menu1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.menu1.Name = "menu1";
-            this.menu1.Size = new System.Drawing.Size(74, 23);
+            this.menu1.Size = new System.Drawing.Size(74, 24);
             this.menu1.Text = "&1.系統";
             // 
             // menu1_1
@@ -368,7 +368,8 @@
             // 
             this.menu1_5.Name = "menu1_5";
             this.menu1_5.Size = new System.Drawing.Size(276, 26);
-            this.menu1_5.Text = "&5.系統更新資料";
+            this.menu1_5.Text = "&5.代辦事項";
+            this.menu1_5.Click += new System.EventHandler(this.menu1_5_Click);
             // 
             // menu1_6
             // 
@@ -1189,9 +1190,10 @@
             this.btn1_5.Name = "btn1_5";
             this.btn1_5.Size = new System.Drawing.Size(286, 124);
             this.btn1_5.TabIndex = 13;
-            this.btn1_5.Text = "5.系統更新資料";
+            this.btn1_5.Text = "5.待辦事項";
             this.btn1_5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn1_5.UseVisualStyleBackColor = true;
+            this.btn1_5.Click += new System.EventHandler(this.btn1_5_Click);
             // 
             // btn1_4
             // 
