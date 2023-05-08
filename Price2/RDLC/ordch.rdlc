@@ -17,8 +17,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ord_assy">
-          <DataField>ord_assy</DataField>
+        <Field Name="ord_assyadd">
+          <DataField>ord_assyadd</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ord_cz">
@@ -134,23 +134,25 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ord_assy">
+                        <Textbox Name="ord_assyadd">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ord_assy.Value</Value>
+                                  <Value>=Fields!ord_assyadd.Value</Value>
                                   <Style>
                                     <FontFamily>Times New Roman</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ord_assy</rd:DefaultName>
+                          <rd:DefaultName>ord_assyadd</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -161,6 +163,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

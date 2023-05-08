@@ -587,6 +587,14 @@ namespace Price2
                         MessageBox.Show("該客號已有成交工單記錄,不能被刪除!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
+                    //20230505 modify by thomas 檢查有沒有報價
+                    strSQL = $@"select * from prd where prd_assy='{dgvData.Rows[dgvData.CurrentRow.Index].Cells["客號"].Value.ToString()}'";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("該客號已有4_5報價單記錄,不能被刪除!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
                     else
                     {
                         strSQL = $@"delete pri
@@ -655,33 +663,41 @@ namespace Price2
                         MessageBox.Show("這些客號中已有成交工單記錄,不能被刪除全部,請重設條件!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-                    else
+
+                    //20230505 modify by thomas 檢查有沒有報價
+                    strSQL = $@"select * from prd,pri where prd_assy = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
                     {
-                        strSQL = $@"delete pri
-                                    where  pri_newcostchk like 'N%' ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        strSQL = $@"delete pld from pld, pri where pld_customerid = pri_customerid ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        strSQL = $@"delete prb from prb, pri where prb_customerid = pri_customerid ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        strSQL = $@"delete dyi from dyi, pri where dyi_id = pri_customerid ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        strSQL = $@"delete odi from odi, pri where  odi_customerid = pri_customerid ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        strSQL = $@"delete ptx from ptx, pri where ptx_customerid <> '' and ptx_customerid = pri_customerid ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        strSQL = $@"delete pmd from pmd, pri where pmd_customerid <> '' and pmd_customerid = pri_customerid ";
-                        strSQL = strSQL + Get_strWhere();
-                        clsDB.Execute(strSQL);
-                        MessageBox.Show("已刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        GetInq();
+                        MessageBox.Show("這些客號中已有4_5報價單記錄,不能被刪除全部,請重設條件!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
+
+                    strSQL = $@"delete pri
+                                    where  pri_newcostchk like 'N%' ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete pld from pld, pri where pld_customerid = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete prb from prb, pri where prb_customerid = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete dyi from dyi, pri where dyi_id = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete odi from odi, pri where  odi_customerid = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete ptx from ptx, pri where ptx_customerid <> '' and ptx_customerid = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    strSQL = $@"delete pmd from pmd, pri where pmd_customerid <> '' and pmd_customerid = pri_customerid ";
+                    strSQL = strSQL + Get_strWhere();
+                    clsDB.Execute(strSQL);
+                    MessageBox.Show("已刪除完成!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GetInq();
                 }
             }
             catch (Exception ex)

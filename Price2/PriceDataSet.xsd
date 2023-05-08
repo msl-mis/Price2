@@ -159,13 +159,13 @@
         <xs:element name="ordch" msprop:Generator_RowEvHandlerName="ordchRowChangeEventHandler" msprop:Generator_RowDeletedName="ordchRowDeleted" msprop:Generator_RowDeletingName="ordchRowDeleting" msprop:Generator_RowEvArgName="ordchRowChangeEvent" msprop:Generator_TablePropName="ordch" msprop:Generator_RowChangedName="ordchRowChanged" msprop:Generator_UserTableName="ordch" msprop:Generator_RowChangingName="ordchRowChanging" msprop:Generator_RowClassName="ordchRow" msprop:Generator_TableClassName="ordchDataTable" msprop:Generator_TableVarName="tableordch">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ord_assy" msprop:Generator_ColumnPropNameInTable="ord_assyColumn" msprop:Generator_ColumnPropNameInRow="ord_assy" msprop:Generator_UserColumnName="ord_assy" msprop:Generator_ColumnVarNameInTable="columnord_assy" type="xs:string" minOccurs="0" />
+              <xs:element name="ord_assyadd" msprop:Generator_ColumnPropNameInTable="ord_assyaddColumn" msprop:Generator_ColumnPropNameInRow="ord_assyadd" msprop:Generator_UserColumnName="ord_assyadd" msprop:Generator_ColumnVarNameInTable="columnord_assyadd" type="xs:string" minOccurs="0" />
               <xs:element name="ord_cz" msprop:Generator_ColumnPropNameInTable="ord_czColumn" msprop:Generator_ColumnPropNameInRow="ord_cz" msprop:Generator_UserColumnName="ord_cz" msprop:Generator_ColumnVarNameInTable="columnord_cz" type="xs:string" minOccurs="0" />
               <xs:element name="ord_qty" msprop:Generator_ColumnPropNameInTable="ord_qtyColumn" msprop:Generator_ColumnPropNameInRow="ord_qty" msprop:Generator_UserColumnName="ord_qty" msprop:Generator_ColumnVarNameInTable="columnord_qty" type="xs:string" minOccurs="0" />
               <xs:element name="odi_xz" msprop:Generator_ColumnPropNameInTable="odi_xzColumn" msprop:Generator_ColumnPropNameInRow="odi_xz" msprop:Generator_UserColumnName="odi_xz" msprop:Generator_ColumnVarNameInTable="columnodi_xz" type="xs:string" minOccurs="0" />
               <xs:element name="odi_zx" msprop:Generator_ColumnPropNameInTable="odi_zxColumn" msprop:Generator_ColumnPropNameInRow="odi_zx" msprop:Generator_UserColumnName="odi_zx" msprop:Generator_ColumnVarNameInTable="columnodi_zx" type="xs:string" minOccurs="0" />
               <xs:element name="odi_jz" msprop:Generator_ColumnPropNameInTable="odi_jzColumn" msprop:Generator_ColumnPropNameInRow="odi_jz" msprop:Generator_UserColumnName="odi_jz" msprop:Generator_ColumnVarNameInTable="columnodi_jz" type="xs:string" minOccurs="0" />
-              <xs:element name="ord_mo" msprop:Generator_ColumnPropNameInRow="ord_mo" msprop:Generator_ColumnPropNameInTable="ord_moColumn" msprop:Generator_ColumnVarNameInTable="columnord_mo" msprop:Generator_UserColumnName="ord_mo" type="xs:string" minOccurs="0" />
+              <xs:element name="ord_mo" msprop:Generator_UserColumnName="ord_mo" msprop:Generator_ColumnPropNameInTable="ord_moColumn" msprop:Generator_ColumnPropNameInRow="ord_mo" msprop:Generator_ColumnVarNameInTable="columnord_mo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

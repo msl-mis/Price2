@@ -4673,7 +4673,7 @@ namespace Price2 {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ordchDataTable : global::System.Data.TypedTableBase<ordchRow> {
             
-            private global::System.Data.DataColumn columnord_assy;
+            private global::System.Data.DataColumn columnord_assyadd;
             
             private global::System.Data.DataColumn columnord_cz;
             
@@ -4722,9 +4722,9 @@ namespace Price2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ord_assyColumn {
+            public global::System.Data.DataColumn ord_assyaddColumn {
                 get {
-                    return this.columnord_assy;
+                    return this.columnord_assyadd;
                 }
             }
             
@@ -4813,10 +4813,10 @@ namespace Price2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ordchRow AddordchRow(string ord_assy, string ord_cz, string ord_qty, string odi_xz, string odi_zx, string odi_jz, string ord_mo) {
+            public ordchRow AddordchRow(string ord_assyadd, string ord_cz, string ord_qty, string odi_xz, string odi_zx, string odi_jz, string ord_mo) {
                 ordchRow rowordchRow = ((ordchRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ord_assy,
+                        ord_assyadd,
                         ord_cz,
                         ord_qty,
                         odi_xz,
@@ -4845,7 +4845,7 @@ namespace Price2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnord_assy = base.Columns["ord_assy"];
+                this.columnord_assyadd = base.Columns["ord_assyadd"];
                 this.columnord_cz = base.Columns["ord_cz"];
                 this.columnord_qty = base.Columns["ord_qty"];
                 this.columnodi_xz = base.Columns["odi_xz"];
@@ -4857,8 +4857,8 @@ namespace Price2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnord_assy = new global::System.Data.DataColumn("ord_assy", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnord_assy);
+                this.columnord_assyadd = new global::System.Data.DataColumn("ord_assyadd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnord_assyadd);
                 this.columnord_cz = new global::System.Data.DataColumn("ord_cz", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnord_cz);
                 this.columnord_qty = new global::System.Data.DataColumn("ord_qty", typeof(string), null, global::System.Data.MappingType.Element);
@@ -7000,17 +7000,17 @@ namespace Price2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ord_assy {
+            public string ord_assyadd {
                 get {
                     try {
-                        return ((string)(this[this.tableordch.ord_assyColumn]));
+                        return ((string)(this[this.tableordch.ord_assyaddColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("資料表 \'ordch\' 中資料行 \'ord_assy\' 的值是 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("資料表 \'ordch\' 中資料行 \'ord_assyadd\' 的值是 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableordch.ord_assyColumn] = value;
+                    this[this.tableordch.ord_assyaddColumn] = value;
                 }
             }
             
@@ -7112,14 +7112,14 @@ namespace Price2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Isord_assyNull() {
-                return this.IsNull(this.tableordch.ord_assyColumn);
+            public bool Isord_assyaddNull() {
+                return this.IsNull(this.tableordch.ord_assyaddColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setord_assyNull() {
-                this[this.tableordch.ord_assyColumn] = global::System.Convert.DBNull;
+            public void Setord_assyaddNull() {
+                this[this.tableordch.ord_assyaddColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

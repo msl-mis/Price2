@@ -534,6 +534,10 @@ namespace Price2
                 }
                 string strSQL = "";
                 DataTable dt = new DataTable();
+                strSQL = $@"exec cal_orderxx '{txtOrderID.Text}'";
+                clsDB.Execute(strSQL);
+                strSQL = $@"exec cal_reorderweix '{txtOrderID.Text}'";
+                clsDB.Execute(strSQL);
                 if (chkBeginNo.Checked)
                 {
                     //strSQL = $@"exec cal_orderbeginxx '{txtOrderID.Text.Trim()}',{ txtBeginNo.Text} ";
