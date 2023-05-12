@@ -46,10 +46,10 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox.Size = new System.Drawing.Size(418, 71);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Size = new System.Drawing.Size(557, 89);
             this.groupBox.TabIndex = 6;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "報價分類";
@@ -57,7 +57,7 @@
             // cboClass
             // 
             this.cboClass.FormattingEnabled = true;
-            this.cboClass.ItemHeight = 16;
+            this.cboClass.ItemHeight = 20;
             this.cboClass.Items.AddRange(new object[] {
             "1 一般電腦線",
             "2 HDMI Cable",
@@ -65,21 +65,28 @@
             "4 DP Cable",
             "5 RGB Cable",
             "6 Lan Cable",
-            "7 Power cord"});
-            this.cboClass.Location = new System.Drawing.Point(69, 30);
-            this.cboClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            "7 Power cord",
+            "8 USB Cable",
+            "9 SATA Cable",
+            "10 Flat Cable",
+            "11 Wire Harness",
+            "12 Audio/Video Cable",
+            "13 TC Cable",
+            "14 Fiber Cable",
+            "15 Others"});
+            this.cboClass.Location = new System.Drawing.Point(92, 38);
+            this.cboClass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboClass.Name = "cboClass";
-            this.cboClass.Size = new System.Drawing.Size(177, 24);
+            this.cboClass.Size = new System.Drawing.Size(235, 28);
             this.cboClass.TabIndex = 131;
             this.cboClass.Text = "1 一般電腦線";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(6, 28);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(8, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 27);
+            this.label3.Size = new System.Drawing.Size(79, 34);
             this.label3.TabIndex = 130;
             this.label3.Text = "分類：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -88,10 +95,10 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnClose.Location = new System.Drawing.Point(337, 24);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(449, 30);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(63, 34);
+            this.btnClose.Size = new System.Drawing.Size(84, 42);
             this.btnClose.TabIndex = 88;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -101,10 +108,10 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSave.Location = new System.Drawing.Point(261, 24);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(348, 30);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(63, 34);
+            this.btnSave.Size = new System.Drawing.Size(84, 42);
             this.btnSave.TabIndex = 87;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -112,11 +119,12 @@
             // 
             // frmBOMPrice_Class
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 71);
+            this.ClientSize = new System.Drawing.Size(557, 89);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBOMPrice_Class";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "輸入報價分類";
