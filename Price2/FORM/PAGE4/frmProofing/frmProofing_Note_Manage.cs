@@ -114,7 +114,7 @@ namespace Price2
         private void getDelete()
         {
             //確認權限
-            if (clsGlobal.checkRightFlag("備註代碼刪除") == false)
+            if (clsGlobal.checkRightFlag("打樣單管理備註代碼刪除") == false)
             {
                 MessageBox.Show("您沒有備註代碼刪除權限!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -243,6 +243,11 @@ namespace Price2
             {
                 MessageBox.Show(this.Name + "-btnAdd_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

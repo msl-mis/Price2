@@ -304,5 +304,6 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnNote_Manage_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

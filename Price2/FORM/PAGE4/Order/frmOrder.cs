@@ -1657,7 +1657,7 @@ namespace Price2
                 int index = dgvData.Rows.Count;
                 dgvData.Rows.Add();
                 dgvData.Rows[index].Cells["產品編號"].Value = dgvProduct.Rows[dgvProduct.CurrentRow.Index].Cells["odi_customerid"].Value.ToString();
-
+                dgvData.Rows[index].Cells["數量"].Value = 0;
                 strSQL = $@"select cus_yw from odi,cus where cus_id=odi_customer and odi_customerid = '{dgvProduct.Rows[dgvProduct.CurrentRow.Index].Cells["odi_customerid"].Value.ToString()}' ";
 
                 dt = clsDB.sql_select_dt(strSQL);
@@ -1872,6 +1872,11 @@ namespace Price2
             {
                 MessageBox.Show(this.Name + "-btnInq_Order_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void chkReplenish_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

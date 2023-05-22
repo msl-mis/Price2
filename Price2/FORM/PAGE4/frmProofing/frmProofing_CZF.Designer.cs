@@ -82,22 +82,22 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(583, 409);
             this.groupBox.TabIndex = 7;
             this.groupBox.TabStop = false;
             // 
             // btnProofing_CZF_Product_Inq
             // 
-            this.btnProofing_CZF_Product_Inq.BackColor = System.Drawing.Color.LightGreen;
+            this.btnProofing_CZF_Product_Inq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnProofing_CZF_Product_Inq.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnProofing_CZF_Product_Inq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProofing_CZF_Product_Inq.Location = new System.Drawing.Point(373, 21);
-            this.btnProofing_CZF_Product_Inq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProofing_CZF_Product_Inq.Location = new System.Drawing.Point(359, 20);
+            this.btnProofing_CZF_Product_Inq.Margin = new System.Windows.Forms.Padding(2);
             this.btnProofing_CZF_Product_Inq.Name = "btnProofing_CZF_Product_Inq";
-            this.btnProofing_CZF_Product_Inq.Size = new System.Drawing.Size(32, 29);
+            this.btnProofing_CZF_Product_Inq.Size = new System.Drawing.Size(31, 29);
             this.btnProofing_CZF_Product_Inq.TabIndex = 165;
             this.btnProofing_CZF_Product_Inq.Text = "...";
             this.btnProofing_CZF_Product_Inq.UseVisualStyleBackColor = false;
@@ -117,7 +117,7 @@
             // lblSaveDate
             // 
             this.lblSaveDate.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblSaveDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblSaveDate.ForeColor = System.Drawing.Color.Blue;
             this.lblSaveDate.Location = new System.Drawing.Point(356, 326);
             this.lblSaveDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSaveDate.Name = "lblSaveDate";
@@ -141,7 +141,7 @@
             this.btnCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCopy.Location = new System.Drawing.Point(274, 355);
-            this.btnCopy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(63, 34);
             this.btnCopy.TabIndex = 139;
@@ -154,7 +154,7 @@
             this.cboSales.FormattingEnabled = true;
             this.cboSales.ItemHeight = 16;
             this.cboSales.Location = new System.Drawing.Point(325, 54);
-            this.cboSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboSales.Margin = new System.Windows.Forms.Padding(2);
             this.cboSales.Name = "cboSales";
             this.cboSales.Size = new System.Drawing.Size(126, 24);
             this.cboSales.TabIndex = 138;
@@ -209,7 +209,7 @@
             this.txtProductID.BackColor = System.Drawing.Color.White;
             this.txtProductID.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtProductID.Location = new System.Drawing.Point(114, 21);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductID.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(238, 27);
             this.txtProductID.TabIndex = 60;
@@ -219,7 +219,7 @@
             // lblUser
             // 
             this.lblUser.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblUser.ForeColor = System.Drawing.Color.Blue;
             this.lblUser.Location = new System.Drawing.Point(356, 299);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
@@ -242,7 +242,7 @@
             // 
             this.txtMO.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtMO.Location = new System.Drawing.Point(62, 130);
-            this.txtMO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMO.Margin = new System.Windows.Forms.Padding(2);
             this.txtMO.Name = "txtMO";
             this.txtMO.Size = new System.Drawing.Size(48, 27);
             this.txtMO.TabIndex = 57;
@@ -262,7 +262,7 @@
             // 
             this.txtLine.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtLine.Location = new System.Drawing.Point(114, 299);
-            this.txtLine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLine.Margin = new System.Windows.Forms.Padding(2);
             this.txtLine.Name = "txtLine";
             this.txtLine.Size = new System.Drawing.Size(103, 27);
             this.txtLine.TabIndex = 55;
@@ -272,7 +272,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSave.Location = new System.Drawing.Point(114, 355);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 34);
             this.btnSave.TabIndex = 54;
@@ -285,7 +285,7 @@
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.Location = new System.Drawing.Point(194, 355);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(63, 34);
             this.btnClear.TabIndex = 52;
@@ -298,7 +298,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.Location = new System.Drawing.Point(354, 355);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(63, 34);
             this.btnDelete.TabIndex = 51;
@@ -322,7 +322,7 @@
             this.txtCustomer.BackColor = System.Drawing.Color.White;
             this.txtCustomer.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCustomer.Location = new System.Drawing.Point(114, 52);
-            this.txtCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(103, 27);
             this.txtCustomer.TabIndex = 3;
@@ -334,7 +334,7 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Location = new System.Drawing.Point(434, 355);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(63, 34);
             this.btnClose.TabIndex = 20;

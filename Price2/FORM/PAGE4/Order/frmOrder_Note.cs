@@ -368,5 +368,6 @@ namespace Price2
                 getDelete();
             }
         }
+
     }
 }

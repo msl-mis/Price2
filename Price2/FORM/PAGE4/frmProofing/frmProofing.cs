@@ -666,5 +666,6 @@ namespace Price2
                 btnProofing.PerformClick();
             }
         }
+
     }
 }
