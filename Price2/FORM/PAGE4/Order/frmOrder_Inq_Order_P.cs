@@ -257,8 +257,8 @@ namespace Price2
                 if (dt.Rows.Count > 0)
                 {
                     yk = dt.Rows[0]["yk"].ToString();
-                    lblSum_Profit.Text = "總利潤："+ Convert.ToDouble(tks+yk).ToString("N0");
-                    lblProfit_Sum.Text = "利潤加總：" + Convert.ToDouble(tks + yk).ToString("N0");
+                    lblSum_Profit.Text = "總利潤："+ (Convert.ToDouble(tks) + Convert.ToDouble(yk)).ToString("N0");
+                    lblProfit_Sum.Text = "利潤加總：" + (Convert.ToDouble(tks) + Convert.ToDouble(yk)).ToString("N0");
 
                 }
                 else
