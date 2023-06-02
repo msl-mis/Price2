@@ -899,5 +899,10 @@ namespace Price2
                 }
             }
         }
+
+        private void groupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

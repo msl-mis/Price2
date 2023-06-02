@@ -53,6 +53,7 @@ namespace Price2
                 string strSQL = "";
                 DataTable dt = new DataTable();
                 strSQL = $@"select obz_no '備註代碼' from obz where substring(obz_no,1,1)='Q' and obz_customer = '{txtCustomer.Text}' order by obz_no ";
+                //strSQL = $@"select obz_no '備註代碼' from obz where  obz_customer = '{txtCustomer.Text}' order by obz_no ";
                 dt = clsDB.sql_select_dt(strSQL);
                 if (dt.Rows.Count > 0)
                 {

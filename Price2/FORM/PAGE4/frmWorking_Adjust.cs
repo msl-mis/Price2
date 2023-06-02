@@ -133,7 +133,7 @@ namespace Price2
                 }
             }
             strSQL = $@"select distinct aa.pri_assy '線路',
-                                        ab.pri_perqty '加工/分',
+                                        ab.pri_perqty '加工分',
                                         ac.pri_perqty '不良率',
                                         aa.pri_customer '客戶',
                                         aa.pri_customerid'客號',

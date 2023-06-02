@@ -1034,5 +1034,10 @@ namespace Price2
                 txtOrderDate_E.Text = DateTime.Now.ToString("yyyy/MM/dd");
             }
         }
+
+        private void frmCustomerFile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

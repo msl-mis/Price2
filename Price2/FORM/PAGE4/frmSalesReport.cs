@@ -587,11 +587,11 @@ namespace Price2
 
             //畫CHART
             //準備數據
-            string[] X = { strDateS[1] + "\n" + "至" + "\n" + strDateE[1],
-                           strDateS[2] + "\n" + "至" + "\n" + strDateE[2],
-                           strDateS[3] + "\n" + "至" + "\n" + strDateE[3],
-                           strDateS[4] + "\n" + "至" + "\n" + strDateE[4],
-                           strDateS[5] + "\n" + "至" + "\n" + strDateE[5] };
+            string[] X = { strDateS[1] +  "至" + "\n" + strDateE[1],
+                           strDateS[2] +  "至" + "\n" + strDateE[2],
+                           strDateS[3] +  "至" + "\n" + strDateE[3],
+                           strDateS[4] +  "至" + "\n" + strDateE[4],
+                           strDateS[5] +  "至" + "\n" + strDateE[5] };
             double[] Y = { Convert.ToDouble((string.IsNullOrEmpty(strProfit_Result[1]) ? "0":strProfit_Result[1])),
                            Convert.ToDouble((string.IsNullOrEmpty(strProfit_Result[2]) ? "0":strProfit_Result[2])),
                            Convert.ToDouble((string.IsNullOrEmpty(strProfit_Result[3]) ? "0":strProfit_Result[3])),
@@ -834,11 +834,11 @@ namespace Price2
         private void getChart()
         {
             //準備數據
-            string[] X = { strDateS[1] + "\n" + "至" + "\n" + strDateE[1],
-                           strDateS[2] + "\n" + "至" + "\n" + strDateE[2],
-                           strDateS[3] + "\n" + "至" + "\n" + strDateE[3],
-                           strDateS[4] + "\n" + "至" + "\n" + strDateE[4],
-                           strDateS[5] + "\n" + "至" + "\n" + strDateE[5] };
+            string[] X = { strDateS[1] + "至" + "\n" + strDateE[1],
+                           strDateS[2] + "至" + "\n" + strDateE[2],
+                           strDateS[3] + "至" + "\n" + strDateE[3],
+                           strDateS[4] + "至" + "\n" + strDateE[4],
+                           strDateS[5] + "至" + "\n" + strDateE[5] };
             double[] Y = { Convert.ToDouble((string.IsNullOrEmpty(strRevenue[1]) ? "0":strRevenue[1])),
                            Convert.ToDouble((string.IsNullOrEmpty(strRevenue[2]) ? "0":strRevenue[2])),
                            Convert.ToDouble((string.IsNullOrEmpty(strRevenue[3]) ? "0":strRevenue[3])),
@@ -982,6 +982,16 @@ namespace Price2
         }
 
         private void PD_BeginPrint(object sender, PrintEventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }

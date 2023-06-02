@@ -104,6 +104,8 @@ namespace Price2
             {
                 strWhere = strWhere + clsGlobal.MulitSelect("pri_customerid", txtCustomerID.Text.Trim());
             }
+            //客戶
+            strWhere = strWhere + (txtCustomer.Text == "" ? "" : $@"and pri_customer like '{txtCustomer.Text.Trim()}%' ");
             //特選材料名
             strWhere = strWhere + (txtID_Temp.Text == ""  ? "" : $@"and pri_part like '%{txtID_Temp.Text.Trim()}%' ");
             //廠號
@@ -313,6 +315,16 @@ namespace Price2
                 this.Cursor = Cursors.Default;//滑鼠還原預設
                 MessageBox.Show(this.Name + "-btnReplace_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLine_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.btnSelect = new System.Windows.Forms.PictureBox();
             this.radioIn = new System.Windows.Forms.RadioButton();
@@ -95,9 +93,9 @@
             // btnSelect
             // 
             this.btnSelect.Image = global::Price2.Properties.Resources.forward;
-            this.btnSelect.Location = new System.Drawing.Point(161, 231);
+            this.btnSelect.Location = new System.Drawing.Point(166, 228);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(37, 37);
+            this.btnSelect.Size = new System.Drawing.Size(32, 37);
             this.btnSelect.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSelect.TabIndex = 72;
             this.btnSelect.TabStop = false;
@@ -161,16 +159,8 @@
             this.dgvData_R.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData_R.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.備註代碼R});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData_R.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData_R.EnableHeadersVisualStyles = false;
-            this.dgvData_R.Location = new System.Drawing.Point(213, 114);
+            this.dgvData_R.Location = new System.Drawing.Point(203, 114);
             this.dgvData_R.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData_R.Name = "dgvData_R";
             this.dgvData_R.ReadOnly = true;
@@ -178,7 +168,7 @@
             this.dgvData_R.RowHeadersWidth = 51;
             this.dgvData_R.RowTemplate.Height = 27;
             this.dgvData_R.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData_R.Size = new System.Drawing.Size(139, 274);
+            this.dgvData_R.Size = new System.Drawing.Size(147, 274);
             this.dgvData_R.TabIndex = 67;
             this.dgvData_R.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_R_CellClick);
             this.dgvData_R.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvData_R_KeyDown);
@@ -192,13 +182,13 @@
             // 
             // btnNote_Manage
             // 
-            this.btnNote_Manage.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.btnNote_Manage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnNote_Manage.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNote_Manage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNote_Manage.Location = new System.Drawing.Point(16, 390);
+            this.btnNote_Manage.Location = new System.Drawing.Point(16, 394);
             this.btnNote_Manage.Margin = new System.Windows.Forms.Padding(2);
             this.btnNote_Manage.Name = "btnNote_Manage";
-            this.btnNote_Manage.Size = new System.Drawing.Size(130, 34);
+            this.btnNote_Manage.Size = new System.Drawing.Size(130, 31);
             this.btnNote_Manage.TabIndex = 66;
             this.btnNote_Manage.Text = "管理備註代碼";
             this.btnNote_Manage.UseVisualStyleBackColor = false;
@@ -291,10 +281,10 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSave.Location = new System.Drawing.Point(154, 390);
+            this.btnSave.Location = new System.Drawing.Point(154, 394);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(63, 34);
+            this.btnSave.Size = new System.Drawing.Size(63, 31);
             this.btnSave.TabIndex = 52;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -304,10 +294,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnDelete.Location = new System.Drawing.Point(222, 390);
+            this.btnDelete.Location = new System.Drawing.Point(222, 394);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(63, 34);
+            this.btnDelete.Size = new System.Drawing.Size(63, 31);
             this.btnDelete.TabIndex = 51;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -321,25 +311,17 @@
             this.dgvData_S.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData_S.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData_S.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData_S.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData_S.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData_S.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData_S.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.備註代碼});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData_S.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvData_S.EnableHeadersVisualStyles = false;
             this.dgvData_S.Location = new System.Drawing.Point(16, 114);
             this.dgvData_S.Margin = new System.Windows.Forms.Padding(2);
@@ -349,7 +331,7 @@
             this.dgvData_S.RowHeadersWidth = 51;
             this.dgvData_S.RowTemplate.Height = 27;
             this.dgvData_S.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData_S.Size = new System.Drawing.Size(130, 274);
+            this.dgvData_S.Size = new System.Drawing.Size(146, 274);
             this.dgvData_S.TabIndex = 50;
             this.dgvData_S.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_S_CellClick);
             this.dgvData_S.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_S_CellDoubleClick);
@@ -386,10 +368,10 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnClose.Location = new System.Drawing.Point(290, 390);
+            this.btnClose.Location = new System.Drawing.Point(290, 394);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(63, 34);
+            this.btnClose.Size = new System.Drawing.Size(63, 31);
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;

@@ -140,7 +140,7 @@ namespace Price2
                                 from            pdh
                                 where           pdh_orderid like'%{txtQuotation.Text.Trim()}%' "
                                 + (txtCustomer.Text.Trim() == "" ? "" : $@"and pdh_customer = '{txtCustomer.Text.Trim()}' ")
-                                + $@"and             dyh_orderdate between '{strDate_S}' and '{strDate_E}' ";
+                                + $@"and             pdh_orderdate between '{strDate_S}' and '{strDate_E}' ";
 
                 }
                 dt = clsDB.sql_select_dt(strSQL);

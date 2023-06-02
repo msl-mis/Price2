@@ -1345,11 +1345,11 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tabPage3.Controls.Add(this.gb3);
-            this.tabPage3.Controls.Add(this.gb3_8);
             this.tabPage3.Controls.Add(this.gb3_5);
             this.tabPage3.Controls.Add(this.gb3_7);
             this.tabPage3.Controls.Add(this.gb3_6);
+            this.tabPage3.Controls.Add(this.gb3);
+            this.tabPage3.Controls.Add(this.gb3_8);
             this.tabPage3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
