@@ -1314,7 +1314,51 @@ namespace Price2
 
         private void frmLabel_UL_Input_Activated(object sender, EventArgs e)
         {
-            getData();
+            this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+            string strSQL = "";
+            DataTable dt = new DataTable();
+            strSQL = $@"select factory,
+                               class,
+                               product_category,
+                               id,
+                               no,
+                               invoice_no,
+                               invoice_date,
+                               label_type,
+                               length,
+                               quantity,
+                               fees_yield,
+                               fees_pcs,
+                               fees_1000pcs,
+                               fees_handling,
+                               fees_service,
+                               fees_label,
+                               tb_price,
+                               note,
+                               user_id,
+                               create_date,
+                               q1,
+                               r1,
+                               q2,
+                               r2,
+                               q3,
+                               r3
+                        from   ul_label";
+
+            strSQL = strSQL + " order by invoice_date";
+            dt = clsDB.sql_select_dt(strSQL);
+            if (dt.Rows.Count > 0)
+            {
+                lblCount.Text = "資料筆數：" + dt.Rows.Count.ToString();
+                dgvData.DataSource = dt;
+            }
+            else
+            {
+                lblCount.Text = "資料筆數：0";
+                MessageBox.Show("查不到資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            this.Cursor = Cursors.Default;//滑鼠還原預設
         }
 
         private void label12_Click(object sender, EventArgs e)

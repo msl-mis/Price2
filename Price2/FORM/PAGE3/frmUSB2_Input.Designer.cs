@@ -67,9 +67,9 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(409, 250);
             this.groupBox.TabIndex = 130;
             this.groupBox.TabStop = false;
@@ -77,11 +77,11 @@
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(300, 113);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(84, 26);
+            this.txtPrice.Size = new System.Drawing.Size(84, 25);
             this.txtPrice.TabIndex = 189;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -98,11 +98,11 @@
             // 
             // txtUSB_Fees
             // 
-            this.txtUSB_Fees.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUSB_Fees.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUSB_Fees.Location = new System.Drawing.Point(300, 83);
-            this.txtUSB_Fees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUSB_Fees.Margin = new System.Windows.Forms.Padding(2);
             this.txtUSB_Fees.Name = "txtUSB_Fees";
-            this.txtUSB_Fees.Size = new System.Drawing.Size(84, 26);
+            this.txtUSB_Fees.Size = new System.Drawing.Size(84, 25);
             this.txtUSB_Fees.TabIndex = 187;
             this.txtUSB_Fees.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -136,9 +136,9 @@
             this.groupBox1.Controls.Add(this.txtYear_1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 64);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(164, 82);
             this.groupBox1.TabIndex = 184;
             this.groupBox1.TabStop = false;
@@ -146,11 +146,11 @@
             // 
             // txtYear_2
             // 
-            this.txtYear_2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear_2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear_2.Location = new System.Drawing.Point(61, 49);
-            this.txtYear_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear_2.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear_2.Name = "txtYear_2";
-            this.txtYear_2.Size = new System.Drawing.Size(84, 26);
+            this.txtYear_2.Size = new System.Drawing.Size(84, 25);
             this.txtYear_2.TabIndex = 184;
             this.txtYear_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -167,11 +167,11 @@
             // 
             // txtYear_1
             // 
-            this.txtYear_1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtYear_1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear_1.Location = new System.Drawing.Point(61, 19);
-            this.txtYear_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear_1.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear_1.Name = "txtYear_1";
-            this.txtYear_1.Size = new System.Drawing.Size(84, 26);
+            this.txtYear_1.Size = new System.Drawing.Size(84, 25);
             this.txtYear_1.TabIndex = 182;
             this.txtYear_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -190,8 +190,8 @@
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnInq.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnInq.Location = new System.Drawing.Point(193, 20);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Location = new System.Drawing.Point(173, 20);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(50, 27);
             this.btnInq.TabIndex = 183;
@@ -204,10 +204,10 @@
             this.dtpDate.CustomFormat = "yyyy";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(98, 21);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShowUpDown = true;
-            this.dtpDate.Size = new System.Drawing.Size(84, 25);
+            this.dtpDate.Size = new System.Drawing.Size(56, 25);
             this.dtpDate.TabIndex = 182;
             // 
             // label25
@@ -239,9 +239,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(332, 174);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(52, 27);
+            this.btnClose.Size = new System.Drawing.Size(54, 30);
             this.btnClose.TabIndex = 177;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -253,9 +253,9 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSave.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnSave.Location = new System.Drawing.Point(260, 174);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(52, 27);
+            this.btnSave.Size = new System.Drawing.Size(54, 30);
             this.btnSave.TabIndex = 170;
             this.btnSave.Text = "儲存";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -268,7 +268,7 @@
             this.ClientSize = new System.Drawing.Size(409, 250);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUSB2_Input";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "USB2.0協會年費分攤";

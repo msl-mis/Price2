@@ -130,8 +130,14 @@
   <data name="KEY041" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KEY04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3-5-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-5-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CONTACTL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CONTACTL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-7-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-7-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FILER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FILER.ICO;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +148,14 @@
   <data name="2-1phonebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2-1 phonebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4-5cusquotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4-5cusquotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HANDSHAK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HANDSHAK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="erpicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\erpicon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KEY04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEY04.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3-3list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-7-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-7-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5-2subsidy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5-2subsidy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,23 +181,44 @@
   <data name="NOTE033" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NOTE033.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KEY04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEY04.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_3_8_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-8-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-6-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-6-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="3-1data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3-1data.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3-5-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-5-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-7-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-7-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-2BOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-2BOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3-6-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-6-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FILES04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FILES04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CLASSLIB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CLASSLIB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="erpicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erpicon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="circle_f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circle_f1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HANDSHAK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HANDSHAK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3_8_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-8-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CLASSLIB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CLASSLIB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4-1CZF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4-1CZF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +250,8 @@
   <data name="1-6computeruser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1-6 computeruser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5-3tax" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5-3tax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle_f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle_f1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,19 +262,28 @@
   <data name="Price-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Price-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="3-5-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-5-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1-1Userfile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1-1 Userfile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PriceLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PriceLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3-2BOM" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3-2BOM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="2-3firmadd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2-3 firmadd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="5-3tax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5-3tax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4-5cusquotion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4-5cusquotion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VOLUME01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VOLUME01.ICO;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

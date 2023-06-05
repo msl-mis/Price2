@@ -55,8 +55,44 @@ namespace Price2
             //要加入很多初始化東西
             try
             {
-                getData();
-
+                //getData();
+                this.Cursor = Cursors.WaitCursor;//滑鼠漏斗指標
+                string strSQL = "";
+                DataTable dt = new DataTable();
+                strSQL = $@"select factory,
+                               Format(order_date, 'yyyy/MM/dd') as order_date,
+                               label_type,
+                               quantity,
+                               purprice,
+                               fees_label,
+                               fees_shipping,
+                               fees_handling,
+                               usd_price,
+                               tb_price,
+                               label_type_25,
+                               label_type_50,
+                               label_type_100,
+                               label_type_cordset,
+                               note,
+                               user_id,
+                               create_date
+                        from   ul817_label
+                        ";
+                strSQL = strSQL + Get_strWhere() + " order by order_date";
+                dt = clsDB.sql_select_dt(strSQL);
+                if (dt.Rows.Count > 0)
+                {
+                    lblCount.Text = "資料筆數：" + dt.Rows.Count.ToString();
+                    dgvData.DataSource = dt;
+                }
+                else
+                {
+                    lblCount.Text = "資料筆數：0";
+                    dgvData.DataSource = dt;
+                    MessageBox.Show("查不到資料!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                this.Cursor = Cursors.Default;//滑鼠還原預設
             }
             catch (Exception ex)
             {

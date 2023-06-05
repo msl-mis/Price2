@@ -77,7 +77,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.工廠別 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.電源線材分類 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.費用類別 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +92,7 @@
             this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PCal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.create_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -148,9 +148,9 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(962, 522);
             this.groupBox.TabIndex = 8;
             this.groupBox.TabStop = false;
@@ -161,7 +161,7 @@
             this.dtpDateE.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateE.Location = new System.Drawing.Point(687, 85);
-            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateE.Name = "dtpDateE";
             this.dtpDateE.ShowUpDown = true;
             this.dtpDateE.Size = new System.Drawing.Size(88, 25);
@@ -184,7 +184,7 @@
             this.dtpDateS.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateS.Location = new System.Drawing.Point(570, 85);
-            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateS.Name = "dtpDateS";
             this.dtpDateS.ShowUpDown = true;
             this.dtpDateS.Size = new System.Drawing.Size(92, 25);
@@ -205,7 +205,7 @@
             // 
             this.txtNote.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNote.Location = new System.Drawing.Point(331, 85);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(2);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(156, 25);
             this.txtNote.TabIndex = 170;
@@ -225,7 +225,7 @@
             // 
             this.txtPurprice.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPurprice.Location = new System.Drawing.Point(202, 85);
-            this.txtPurprice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPurprice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurprice.Name = "txtPurprice";
             this.txtPurprice.Size = new System.Drawing.Size(76, 25);
             this.txtPurprice.TabIndex = 168;
@@ -258,7 +258,7 @@
             "港幣",
             "越南盾"});
             this.cboCurrency.Location = new System.Drawing.Point(73, 85);
-            this.cboCurrency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCurrency.Margin = new System.Windows.Forms.Padding(2);
             this.cboCurrency.Name = "cboCurrency";
             this.cboCurrency.Size = new System.Drawing.Size(76, 25);
             this.cboCurrency.TabIndex = 166;
@@ -289,7 +289,7 @@
             // 
             this.txtInvoiceNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInvoiceNo.Location = new System.Drawing.Point(622, 53);
-            this.txtInvoiceNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInvoiceNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtInvoiceNo.Name = "txtInvoiceNo";
             this.txtInvoiceNo.Size = new System.Drawing.Size(106, 25);
             this.txtInvoiceNo.TabIndex = 163;
@@ -300,7 +300,7 @@
             this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(452, 53);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShowUpDown = true;
             this.dtpDate.Size = new System.Drawing.Size(88, 25);
@@ -333,7 +333,7 @@
             this.cboAgency.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAgency.FormattingEnabled = true;
             this.cboAgency.Location = new System.Drawing.Point(622, 20);
-            this.cboAgency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboAgency.Margin = new System.Windows.Forms.Padding(2);
             this.cboAgency.Name = "cboAgency";
             this.cboAgency.Size = new System.Drawing.Size(106, 25);
             this.cboAgency.TabIndex = 145;
@@ -362,7 +362,7 @@
             "其他",
             "外校"});
             this.cboSpec.Location = new System.Drawing.Point(490, 20);
-            this.cboSpec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboSpec.Margin = new System.Windows.Forms.Padding(2);
             this.cboSpec.Name = "cboSpec";
             this.cboSpec.Size = new System.Drawing.Size(46, 25);
             this.cboSpec.TabIndex = 143;
@@ -381,7 +381,7 @@
             "E",
             "F"});
             this.cboCategory.Location = new System.Drawing.Point(391, 20);
-            this.cboCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(46, 25);
             this.cboCategory.TabIndex = 142;
@@ -395,7 +395,7 @@
             "電源線材",
             "一般線材"});
             this.cboCable.Location = new System.Drawing.Point(232, 20);
-            this.cboCable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCable.Margin = new System.Windows.Forms.Padding(2);
             this.cboCable.Name = "cboCable";
             this.cboCable.Size = new System.Drawing.Size(76, 25);
             this.cboCable.TabIndex = 141;
@@ -406,7 +406,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPrint.Location = new System.Drawing.Point(794, 51);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(50, 26);
             this.btnPrint.TabIndex = 140;
@@ -420,7 +420,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnDelete.Location = new System.Drawing.Point(903, 21);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(50, 26);
             this.btnDelete.TabIndex = 139;
@@ -434,7 +434,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAdd.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnAdd.Location = new System.Drawing.Point(739, 22);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(50, 26);
             this.btnAdd.TabIndex = 138;
@@ -450,7 +450,7 @@
             "CN",
             "VN"});
             this.cboFactory.Location = new System.Drawing.Point(73, 20);
-            this.cboFactory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboFactory.Margin = new System.Windows.Forms.Padding(2);
             this.cboFactory.Name = "cboFactory";
             this.cboFactory.Size = new System.Drawing.Size(46, 25);
             this.cboFactory.TabIndex = 137;
@@ -558,7 +558,7 @@
             // 
             this.txtItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItem.Location = new System.Drawing.Point(73, 53);
-            this.txtItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtItem.Margin = new System.Windows.Forms.Padding(2);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(278, 25);
             this.txtItem.TabIndex = 127;
@@ -567,11 +567,11 @@
             // 
             this.lblCount.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblCount.ForeColor = System.Drawing.Color.Blue;
-            this.lblCount.Location = new System.Drawing.Point(830, 90);
+            this.lblCount.Location = new System.Drawing.Point(794, 90);
             this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount.Name = "lblCount";
             this.lblCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCount.Size = new System.Drawing.Size(97, 25);
+            this.lblCount.Size = new System.Drawing.Size(133, 25);
             this.lblCount.TabIndex = 123;
             this.lblCount.Text = "資料筆數：0";
             this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -593,7 +593,7 @@
             this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModify.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnModify.Location = new System.Drawing.Point(848, 21);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(50, 26);
             this.btnModify.TabIndex = 100;
@@ -607,7 +607,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(848, 51);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 26);
             this.btnClose.TabIndex = 99;
@@ -632,7 +632,7 @@
             this.btnInq.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnInq.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq.Location = new System.Drawing.Point(794, 21);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(50, 26);
             this.btnInq.TabIndex = 93;
@@ -657,7 +657,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear.Location = new System.Drawing.Point(739, 52);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(50, 26);
             this.btnClear.TabIndex = 92;
@@ -699,7 +699,7 @@
             this.create_date});
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(11, 117);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -719,17 +719,6 @@
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             this.dgvData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvData_KeyDown);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(312, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 25);
-            this.label4.TabIndex = 107;
-            this.label4.Text = "費用類別";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // 工廠別
             // 
@@ -877,6 +866,17 @@
             this.create_date.ReadOnly = true;
             this.create_date.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(312, 20);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 25);
+            this.label4.TabIndex = 107;
+            this.label4.Text = "費用類別";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmSafetyFees_Input
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -884,7 +884,7 @@
             this.ClientSize = new System.Drawing.Size(962, 522);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSafetyFees_Input";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "每月安規費用登錄";
