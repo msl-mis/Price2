@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace Price2
     {
         string strVendor = "";  //廠商
         string strSales = "";   //業務
+        string strYear = "";    //年分
         public frmClassReport()
         {
             InitializeComponent();
@@ -123,7 +125,8 @@ namespace Price2
                 //dtpDateE.Value = new DateTime(DateTime.Now.Year, 12, 31); //本年年尾;
                 dtpDateE.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                 //dtpDateE.Text = DateTime.Now.ToString("yyyy/MM/dd");
-                dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                strYear = DateTime.Now.Year.ToString();
+                //dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                 //dtpYear.Text = DateTime.Now.ToString("yyyy");
 
                 //Chart
@@ -211,10 +214,10 @@ namespace Price2
             //取得日期
             for (int i = 0; i <= 1; i++)
             {
-                //strDateS[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
-                //strDateE[i] = DateTime.Now.AddYears(-1 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
+                //strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                //strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 1 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
+                strDateS[i] = (Convert.ToInt32(strYear) - 1 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                strDateE[i] = (Convert.ToInt32(strYear) - 1 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
             }
             string strSQL = "";
             DataTable dt = new DataTable();

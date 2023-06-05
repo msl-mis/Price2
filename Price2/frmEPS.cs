@@ -13,6 +13,7 @@ namespace Price2
 {
     public partial class frmEPS : Form
     {
+        string strYear = "";    //年分
         public frmEPS()
         {
             InitializeComponent();
@@ -26,20 +27,23 @@ namespace Price2
                 string strSQL = "";
                 DataTable dt = new DataTable();
                 //日期
-                dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                strYear = DateTime.Now.Year.ToString();
                 //日期欄位
                 for (int i = 1; i <= 5; i++)
                 {
                     //年
                     Label label_Y = (Label)tlp1.GetControlFromPosition(i, 0);
-                    label_Y.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    //label_Y.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    label_Y.Text = (Convert.ToInt32(strYear) - 5 + i).ToString() + "年";
                     //半年
                     Label label_H = (Label)tlp2.GetControlFromPosition(i, 0);
-                    label_H.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    //label_H.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    label_H.Text = (Convert.ToInt32(strYear) - 5 + i).ToString() + "年";
                     //季
                     Label label_Q = (Label)tlp3.GetControlFromPosition(i, 0);
-                    label_Q.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
-
+                    //label_Q.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    label_Q.Text = (Convert.ToInt32(strYear) - 5 + i).ToString() + "年";
                 }
                 getClear();
                 panel1.Visible = true;
@@ -114,13 +118,13 @@ namespace Price2
                 {
                     //年
                     Label label_Y = (Label)tlp1.GetControlFromPosition(i, 0);
-                    label_Y.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    label_Y.Text = (Convert.ToInt32(strYear) - 5 + i).ToString() + "年";
                     //半年
                     Label label_H = (Label)tlp2.GetControlFromPosition(i, 0);
-                    label_H.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    label_H.Text = (Convert.ToInt32(strYear) - 5 + i).ToString() + "年";
                     //季
                     Label label_Q = (Label)tlp3.GetControlFromPosition(i, 0);
-                    label_Q.Text = (Convert.ToInt32(dtpYear.Value.ToString("yyyy")) - 5 + i).ToString() + "年";
+                    label_Q.Text = (Convert.ToInt32(strYear) - 5 + i).ToString() + "年";
                 }
                 getYear();
                 getHalf();
@@ -169,8 +173,8 @@ namespace Price2
 
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/01/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/12/31";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/01/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/12/31";
                 Label label_Profit = (Label)tlp1.GetControlFromPosition(i, 1);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp1.GetControlFromPosition(i, 2);
@@ -184,8 +188,8 @@ namespace Price2
 
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/01/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/06/30";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/01/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/06/30";
                 Label label_Profit = (Label)tlp2.GetControlFromPosition(i, 1);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp2.GetControlFromPosition(i, 2);
@@ -193,8 +197,8 @@ namespace Price2
             }
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/07/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/12/31";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/07/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/12/31";
                 Label label_Profit = (Label)tlp2.GetControlFromPosition(i, 3);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp2.GetControlFromPosition(i, 4);
@@ -209,8 +213,8 @@ namespace Price2
 
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/01/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/03/31";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/01/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/03/31";
                 Label label_Profit = (Label)tlp3.GetControlFromPosition(i, 1);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp3.GetControlFromPosition(i, 2);
@@ -218,8 +222,8 @@ namespace Price2
             }
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/04/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/06/30";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/04/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/06/30";
                 Label label_Profit = (Label)tlp3.GetControlFromPosition(i, 3);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp3.GetControlFromPosition(i, 4);
@@ -227,8 +231,8 @@ namespace Price2
             }
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/07/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/09/30";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/07/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/09/30";
                 Label label_Profit = (Label)tlp3.GetControlFromPosition(i, 5);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp3.GetControlFromPosition(i, 6);
@@ -236,8 +240,8 @@ namespace Price2
             }
             for (int i = 1; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/10/01";
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/12/31";
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/10/01";
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/12/31";
                 Label label_Profit = (Label)tlp3.GetControlFromPosition(i, 7);
                 label_Profit.Text = getProfit(strDateS[i], strDateE[i]);
                 Label label_ESP = (Label)tlp3.GetControlFromPosition(i, 8);

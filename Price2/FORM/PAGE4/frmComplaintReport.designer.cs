@@ -187,6 +187,7 @@
             this.label2.TabIndex = 232;
             this.label2.Text = "年份：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Visible = false;
             // 
             // dtpYear2
             // 
@@ -197,6 +198,7 @@
             this.dtpYear2.ShowUpDown = true;
             this.dtpYear2.Size = new System.Drawing.Size(60, 27);
             this.dtpYear2.TabIndex = 233;
+            this.dtpYear2.Visible = false;
             // 
             // label4
             // 
@@ -277,6 +279,7 @@
             this.label3.TabIndex = 232;
             this.label3.Text = "年份：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Visible = false;
             // 
             // dtpYear
             // 
@@ -287,6 +290,7 @@
             this.dtpYear.ShowUpDown = true;
             this.dtpYear.Size = new System.Drawing.Size(60, 27);
             this.dtpYear.TabIndex = 233;
+            this.dtpYear.Visible = false;
             // 
             // label13
             // 

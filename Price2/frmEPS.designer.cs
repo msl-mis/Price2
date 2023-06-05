@@ -193,6 +193,7 @@
             this.dtpYear.ShowUpDown = true;
             this.dtpYear.Size = new System.Drawing.Size(60, 29);
             this.dtpYear.TabIndex = 241;
+            this.dtpYear.Visible = false;
             // 
             // label3
             // 
@@ -204,6 +205,7 @@
             this.label3.TabIndex = 240;
             this.label3.Text = "年份：";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Visible = false;
             // 
             // radio3
             // 

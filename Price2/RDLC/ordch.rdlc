@@ -163,7 +163,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -885,7 +884,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Round(IIf( Fields!ord_qty.Value=0 or Fields!odi_xz.Value=0 ,0 , IIf( Fields!ord_qty.Value / Fields!odi_xz.Value &lt;&gt; Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) ,Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) * Fields!odi_zx.Value + (IIf( (Fields!ord_qty.Value-Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) * Fields!odi_xz.Value)/Fields!odi_xz.Value&lt;0 , (-0.26) , 0.7)), Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0)* Fields!odi_zx.Value)),2))</Value>
+                    <Value>=Sum(IIf( Fields!ord_qty.Value=0 or Fields!odi_xz.Value=0 ,0 , IIf( Fields!ord_qty.Value / Fields!odi_xz.Value &lt;&gt; Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) ,Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) * Fields!odi_zx.Value + (IIf( (Fields!ord_qty.Value-Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0) * Fields!odi_xz.Value)/Fields!odi_xz.Value&lt;0 , (-0.26) , 0.7)), Round (Fields!ord_qty.Value / Fields!odi_xz.Value, 0)* Fields!odi_zx.Value)))</Value>
                     <Style>
                       <FontFamily>Times New Roman</FontFamily>
                       <Format>0.000;(0.000)</Format>

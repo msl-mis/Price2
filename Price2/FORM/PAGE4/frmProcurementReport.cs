@@ -17,6 +17,7 @@ namespace Price2
     {
         public static string rstrVendorID = "";     //傳入的廠號
         public static string rstrVendorName = "";     //傳入的廠商
+        string strYear = "";    //年分
         public frmProcurementReport()
         {
             InitializeComponent();
@@ -31,7 +32,8 @@ namespace Price2
                 dtpDateS.Value = new DateTime(DateTime.Now.Year, 1, 1); //本年年初;
                 //dtpDateE.Value = new DateTime(DateTime.Now.Year, 12, 31); //本年年尾;
                 dtpDateE.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                strYear = DateTime.Now.Year.ToString();
                 //Chart
                 setChart();
             }
@@ -194,10 +196,10 @@ namespace Price2
             DataTable dt = new DataTable();
             for (int i = 0; i <= 5; i++)
             {
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() +  dtpDateS.Value.ToString("MMdd");
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() +  dtpDateE.Value.ToString("MMdd");
-                //strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
-                //strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
+                //strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() +  dtpDateS.Value.ToString("MMdd");
+                //strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() +  dtpDateE.Value.ToString("MMdd");
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + dtpDateS.Value.ToString("MMdd");
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + dtpDateE.Value.ToString("MMdd");
                 strSQL = $@"select Isnull(Sum(tab.TB),0) TB
                             from   (
                                           select TC001,

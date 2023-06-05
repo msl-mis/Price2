@@ -20,6 +20,7 @@ namespace Price2
 {
     public partial class frmComplaintReport : Form
     {
+        string strYear = "";    //年分
         public frmComplaintReport()
         {
             InitializeComponent();
@@ -39,11 +40,12 @@ namespace Price2
                 //日期
                 dtpDateS.Value = new DateTime(DateTime.Now.Year, 1, 1); //本年年初;
                 dtpDateE.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpYear.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                strYear = DateTime.Now.Year.ToString();
 
                 dtpDate2S.Value = new DateTime(DateTime.Now.Year, 1, 1); //本年年初;
                 dtpDate2E.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                dtpYear2.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                //dtpYear2.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
 
                 //Chart
                 setChart();
@@ -156,10 +158,10 @@ namespace Price2
             DataTable dt = new DataTable();
             for (int i = 0; i <= 5; i++)
             {
-                //strDateS[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateS.Value.ToString("MM/dd");
-                //strDateE[i] = DateTime.Now.AddYears(-5 + i).ToString("yyyy") + "/" + dtpDateE.Value.ToString("MM/dd");
-                strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
-                strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
+                //strDateS[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                //strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
+                strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
+                strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
                 strSQL = $@"select Isnull(Round(Sum(odc_qty * odc_convert), 0), 0)                   as
                                    CT,
                                    Isnull(Round(Sum(odc_cszr * odc_convert), 0), 0)                   as
@@ -194,8 +196,10 @@ namespace Price2
             DataTable dt = new DataTable();
             for (int i = 0; i <= 5; i++)
             {
-                strDate2S[i] = (Convert.ToInt32(dtpYear2.Text) - 5 + i).ToString() + "/" + dtpDate2S.Value.ToString("MM/dd");
-                strDate2E[i] = (Convert.ToInt32(dtpYear2.Text) - 5 + i).ToString() + "/" + dtpDate2E.Value.ToString("MM/dd");
+                //strDate2S[i] = (Convert.ToInt32(dtpYear2.Text) - 5 + i).ToString() + "/" + dtpDate2S.Value.ToString("MM/dd");
+                //strDate2E[i] = (Convert.ToInt32(dtpYear2.Text) - 5 + i).ToString() + "/" + dtpDate2E.Value.ToString("MM/dd");
+                strDate2S[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/" + dtpDate2S.Value.ToString("MM/dd");
+                strDate2E[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/" + dtpDate2E.Value.ToString("MM/dd");
                 strSQL = $@"select Isnull(Round(( ab.toc - aa.tocc ) * 0.2 / (select cur_convert
                                                                               from   cur
                                                                               where  cur_code = '人民幣')
