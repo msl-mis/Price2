@@ -236,6 +236,7 @@ namespace Price2
 
         string[] strQty = new string[6];        //數量
         string[] strRevenue = new string[6];    //成交
+        string[] strCost = new string[6];    //成本
         string[] strProfit_Rate = new string[6];     //毛利率
         string[] strDateS = new string[6];      //起始日
         string[] strDateE = new string[6];      //結束日
@@ -452,9 +453,10 @@ namespace Price2
                 //strDateE[i] = (Convert.ToInt32(dtpYear.Text) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
                 strDateS[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/" + dtpDateS.Value.ToString("MM/dd");
                 strDateE[i] = (Convert.ToInt32(strYear) - 5 + i).ToString() + "/" + dtpDateE.Value.ToString("MM/dd");
-                strSQL = $@"select Sum(tab.ord_qty)                   QTY,
-                                   ( Sum(tab.ord_pricost* tab.ord_qty) / Sum(tab.ord_convprice* tab.ord_qty) - 1 )                   PROFIT_RATE,
-                                   Sum(tab.ord_pricost * tab.ord_qty) REVENUE
+                strSQL = $@"select Sum(tab.ord_qty) QTY,
+                                   ( Sum(tab.ord_pricost* tab.ord_qty) / Sum(tab.ord_convprice* tab.ord_qty) - 1 ) PROFIT_RATE,
+                                    Sum(tab.ord_convprice* tab.ord_qty) COST,                                   
+                                    Sum(tab.ord_pricost * tab.ord_qty) REVENUE
                             from   (
                                           select ord_qty,
                                                  ord_price,
@@ -475,6 +477,7 @@ namespace Price2
                     strRevenue[i] = (string.IsNullOrEmpty(dt.Rows[0]["REVENUE"].ToString()) ? "0" : dt.Rows[0]["REVENUE"].ToString());
                     strQty[i] = (string.IsNullOrEmpty(dt.Rows[0]["QTY"].ToString()) ? "0" : dt.Rows[0]["QTY"].ToString());
                     strProfit_Rate[i] = (string.IsNullOrEmpty(dt.Rows[0]["PROFIT_RATE"].ToString()) ? "0" : dt.Rows[0]["PROFIT_RATE"].ToString());
+                    strCost[i] = (string.IsNullOrEmpty(dt.Rows[0]["COST"].ToString()) ? "0" : dt.Rows[0]["COST"].ToString());
                 }
 
 
@@ -621,65 +624,105 @@ namespace Price2
             lblR4.Text = (Convert.ToDouble(strProfit_Result[4]) / 10000).ToString("N0");
             lblR5.Text = (Convert.ToDouble(strProfit_Result[5]) / 10000).ToString("N0");
             //毛利率
-            if ((Convert.ToDouble(strProfit_Rate[1]) * 100) > 0)
+            if(string.IsNullOrEmpty(strCost[1]) == false)
             {
-                lblM1.ForeColor = Color.Red;
+                if ((Convert.ToDouble(strProfit_Result[1]) / Convert.ToDouble(strCost[1]) * 100) > 0)
+                {
+                    lblM1.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblM1.ForeColor = Color.Green;
+                }
+                lblM1.Text = (Convert.ToDouble(strProfit_Result[1]) / Convert.ToDouble(strCost[1]) * 100).ToString("0.##") + "%";
             }
             else
             {
                 lblM1.ForeColor = Color.Green;
+                lblM1.Text = "N0";
             }
-            lblM1.Text = (Convert.ToDouble(strProfit_Rate[1]) * 100).ToString("0.##") + "%";
 
-            if ((Convert.ToDouble(strProfit_Rate[2]) * 100) > 0)
+            if (string.IsNullOrEmpty(strCost[2]) == false)
             {
-                lblM2.ForeColor = Color.Red;
+                if ((Convert.ToDouble(strProfit_Result[2]) / Convert.ToDouble(strCost[2]) * 100) > 0)
+                {
+                    lblM2.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblM2.ForeColor = Color.Green;
+                }
+                lblM2.Text = (Convert.ToDouble(strProfit_Result[2]) / Convert.ToDouble(strCost[2]) * 100).ToString("0.##") + "%";
             }
             else
             {
                 lblM2.ForeColor = Color.Green;
+                lblM2.Text = "N0";
             }
-            lblM2.Text = (Convert.ToDouble(strProfit_Rate[2]) * 100).ToString("0.##") + "%";
 
-            if ((Convert.ToDouble(strProfit_Rate[3]) * 100) > 0)
+            if (string.IsNullOrEmpty(strCost[3]) == false)
             {
-                lblM3.ForeColor = Color.Red;
+                if ((Convert.ToDouble(strProfit_Result[3]) / Convert.ToDouble(strCost[3]) * 100) > 0)
+                {
+                    lblM3.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblM3.ForeColor = Color.Green;
+                }
+                lblM3.Text = (Convert.ToDouble(strProfit_Result[3]) / Convert.ToDouble(strCost[3]) * 100).ToString("0.##") + "%";
             }
             else
             {
                 lblM3.ForeColor = Color.Green;
+                lblM3.Text = "N0";
             }
-            lblM3.Text = (Convert.ToDouble(strProfit_Rate[3]) * 100).ToString("0.##") + "%";
 
-            if ((Convert.ToDouble(strProfit_Rate[4]) * 100) > 0)
+            if (string.IsNullOrEmpty(strCost[4]) == false)
             {
-                lblM4.ForeColor = Color.Red;
+                if ((Convert.ToDouble(strProfit_Result[4]) / Convert.ToDouble(strCost[4]) * 100) > 0)
+                {
+                    lblM4.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblM4.ForeColor = Color.Green;
+                }
+                lblM4.Text = (Convert.ToDouble(strProfit_Result[4]) / Convert.ToDouble(strCost[4]) * 100).ToString("0.##") + "%";
             }
             else
             {
                 lblM4.ForeColor = Color.Green;
+                lblM4.Text = "N0";
             }
-            lblM4.Text = (Convert.ToDouble(strProfit_Rate[4]) * 100).ToString("0.##") + "%";
 
-            if ((Convert.ToDouble(strProfit_Rate[5]) * 100) > 0)
+            if (string.IsNullOrEmpty(strCost[5]) == false)
             {
-                lblM5.ForeColor = Color.Red;
+                if ((Convert.ToDouble(strProfit_Result[5]) / Convert.ToDouble(strCost[5]) * 100) > 0)
+                {
+                    lblM5.ForeColor = Color.Red;
+                }
+                else
+                {
+                    lblM5.ForeColor = Color.Green;
+                }
+                lblM5.Text = (Convert.ToDouble(strProfit_Result[5]) / Convert.ToDouble(strCost[5]) * 100).ToString("0.##") + "%";
             }
             else
             {
                 lblM5.ForeColor = Color.Green;
+                lblM5.Text = "N0";
             }
-            lblM5.Text = (Convert.ToDouble(strProfit_Rate[5]) * 100).ToString("0.##") + "%";
 
             //年增率
-            if (Convert.ToDouble(strRevenue[0]) == 0)
+            if (Convert.ToDouble(strProfit_Result[0]) == 0)
             {
                 lblY1.Text = "0" + "%";
                 lblY1.ForeColor = Color.Green;
             }
             else
             {
-                if ((Convert.ToDouble(strRevenue[1]) - Convert.ToDouble(strRevenue[0])) / Convert.ToDouble(strRevenue[0]) * 100 > 0)
+                if ((Convert.ToDouble(strProfit_Result[1]) - Convert.ToDouble(strProfit_Result[0])) / Convert.ToDouble(strProfit_Result[0]) * 100 > 0)
                 {
                     lblY1.ForeColor = Color.Red;
                 }
@@ -687,17 +730,17 @@ namespace Price2
                 {
                     lblY1.ForeColor = Color.Green;
                 }
-                lblY1.Text = ((Convert.ToDouble(strRevenue[1]) - Convert.ToDouble(strRevenue[0])) / Convert.ToDouble(strRevenue[0]) * 100).ToString("0.##") + "%";
+                lblY1.Text = ((Convert.ToDouble(strProfit_Result[1]) - Convert.ToDouble(strProfit_Result[0])) / Convert.ToDouble(strProfit_Result[0]) * 100).ToString("0.##") + "%";
             }
 
-            if (Convert.ToDouble(strRevenue[1]) == 0)
+            if (Convert.ToDouble(strProfit_Result[1]) == 0)
             {
                 lblY2.Text = "0" + "%";
                 lblY2.ForeColor = Color.Green;
             }
             else
             {
-                if ((Convert.ToDouble(strRevenue[2]) - Convert.ToDouble(strRevenue[1])) / Convert.ToDouble(strRevenue[1]) * 100 > 0)
+                if ((Convert.ToDouble(strProfit_Result[2]) - Convert.ToDouble(strProfit_Result[1])) / Convert.ToDouble(strProfit_Result[1]) * 100 > 0)
                 {
                     lblY2.ForeColor = Color.Red;
                 }
@@ -705,17 +748,17 @@ namespace Price2
                 {
                     lblY2.ForeColor = Color.Green;
                 }
-                lblY2.Text = ((Convert.ToDouble(strRevenue[2]) - Convert.ToDouble(strRevenue[1])) / Convert.ToDouble(strRevenue[1]) * 100).ToString("0.##") + "%";
+                lblY2.Text = ((Convert.ToDouble(strProfit_Result[2]) - Convert.ToDouble(strProfit_Result[1])) / Convert.ToDouble(strProfit_Result[1]) * 100).ToString("0.##") + "%";
             }
 
-            if (Convert.ToDouble(strRevenue[2]) == 0)
+            if (Convert.ToDouble(strProfit_Result[2]) == 0)
             {
                 lblY3.Text = "0" + "%";
                 lblY3.ForeColor = Color.Green;
             }
             else
             {
-                if ((Convert.ToDouble(strRevenue[3]) - Convert.ToDouble(strRevenue[2])) / Convert.ToDouble(strRevenue[2]) * 100 > 0)
+                if ((Convert.ToDouble(strProfit_Result[3]) - Convert.ToDouble(strProfit_Result[2])) / Convert.ToDouble(strProfit_Result[2]) * 100 > 0)
                 {
                     lblY3.ForeColor = Color.Red;
                 }
@@ -723,17 +766,17 @@ namespace Price2
                 {
                     lblY3.ForeColor = Color.Green;
                 }
-                lblY3.Text = ((Convert.ToDouble(strRevenue[3]) - Convert.ToDouble(strRevenue[2])) / Convert.ToDouble(strRevenue[2]) * 100).ToString("0.##") + "%";
+                lblY3.Text = ((Convert.ToDouble(strProfit_Result[3]) - Convert.ToDouble(strProfit_Result[2])) / Convert.ToDouble(strProfit_Result[2]) * 100).ToString("0.##") + "%";
             }
 
-            if (Convert.ToDouble(strRevenue[3]) == 0)
+            if (Convert.ToDouble(strProfit_Result[3]) == 0)
             {
                 lblY4.Text = "0" + "%";
                 lblY4.ForeColor = Color.Green;
             }
             else
             {
-                if ((Convert.ToDouble(strRevenue[4]) - Convert.ToDouble(strRevenue[3])) / Convert.ToDouble(strRevenue[3]) * 100 > 0)
+                if ((Convert.ToDouble(strProfit_Result[4]) - Convert.ToDouble(strProfit_Result[3])) / Convert.ToDouble(strProfit_Result[3]) * 100 > 0)
                 {
                     lblY4.ForeColor = Color.Red;
                 }
@@ -741,17 +784,17 @@ namespace Price2
                 {
                     lblY4.ForeColor = Color.Green;
                 }
-                lblY4.Text = ((Convert.ToDouble(strRevenue[4]) - Convert.ToDouble(strRevenue[3])) / Convert.ToDouble(strRevenue[3]) * 100).ToString("0.##") + "%";
+                lblY4.Text = ((Convert.ToDouble(strProfit_Result[4]) - Convert.ToDouble(strProfit_Result[3])) / Convert.ToDouble(strProfit_Result[3]) * 100).ToString("0.##") + "%";
             }
 
-            if (Convert.ToDouble(strRevenue[4]) == 0)
+            if (Convert.ToDouble(strProfit_Result[4]) == 0)
             {
                 lblY5.Text = "0" + "%";
                 lblY5.ForeColor = Color.Green;
             }
             else
             {
-                if ((Convert.ToDouble(strRevenue[5]) - Convert.ToDouble(strRevenue[4])) / Convert.ToDouble(strRevenue[4]) * 100 > 0)
+                if ((Convert.ToDouble(strProfit_Result[5]) - Convert.ToDouble(strProfit_Result[4])) / Convert.ToDouble(strProfit_Result[4]) * 100 > 0)
                 {
                     lblY5.ForeColor = Color.Red;
                 }
@@ -759,7 +802,7 @@ namespace Price2
                 {
                     lblY5.ForeColor = Color.Green;
                 }
-                lblY5.Text = ((Convert.ToDouble(strRevenue[5]) - Convert.ToDouble(strRevenue[4])) / Convert.ToDouble(strRevenue[4]) * 100).ToString("0.##") + "%";
+                lblY5.Text = ((Convert.ToDouble(strProfit_Result[5]) - Convert.ToDouble(strProfit_Result[4])) / Convert.ToDouble(strProfit_Result[4]) * 100).ToString("0.##") + "%";
             }
         }
 
@@ -879,6 +922,7 @@ namespace Price2
             if(radio1.Checked)
             {
                 lbl2.Text = "成交/萬:";
+                btnClass_Inq.Visible = false;
                 getClear();
             }
         }
@@ -888,6 +932,7 @@ namespace Price2
             if (radio2.Checked)
             {
                 lbl2.Text = "利潤/萬:";
+                btnClass_Inq.Visible= true;
                 getClear();
             }
         }
@@ -996,6 +1041,20 @@ namespace Price2
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRevenue_Inq_Click(object sender, EventArgs e)
+        {
+            frmRevenueReport frm = new frmRevenueReport();
+            frm.ShowInTaskbar = false;//圖示不顯示在工作列
+            frm.ShowDialog();
+        }
+
+        private void btnClass_Inq_Click(object sender, EventArgs e)
+        {
+            frmClassReport frm = new frmClassReport();
+            frm.ShowInTaskbar = false;//圖示不顯示在工作列
+            frm.ShowDialog();
         }
     }
 }
