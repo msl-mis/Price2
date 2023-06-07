@@ -124,10 +124,10 @@
     <Compile Include="CLASS\clsIniManager.cs" />
     <Compile Include="CLASS\clsGlobal.cs" />
     <Compile Include="CLASS\clsDB.cs" />
-    <Compile Include="frmTodo_List.cs">
+    <Compile Include="FORM\PAGE1\frmTodo_List.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTodo_List.Designer.cs">
+    <Compile Include="FORM\PAGE1\frmTodo_List.Designer.cs">
       <DependentUpon>frmTodo_List.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\PAGE4\frmComplaintReport.cs">
@@ -784,10 +784,10 @@
     <Compile Include="FORM\PAGE3\frmSafetyFees_Input.designer.cs">
       <DependentUpon>frmSafetyFees_Input.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEPS.cs">
+    <Compile Include="FORM\PAGE4\frmEPS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEPS.designer.cs">
+    <Compile Include="FORM\PAGE4\frmEPS.designer.cs">
       <DependentUpon>frmEPS.cs</DependentUpon>
     </Compile>
     <Compile Include="PriceDataSet.cs">
@@ -842,10 +842,10 @@
     <EmbeddedResource Include="FORM\PAGE4\frmSalesReport_Grid_Inq.resx">
       <DependentUpon>frmSalesReport_Grid_Inq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEPS.resx">
+    <EmbeddedResource Include="FORM\PAGE4\frmEPS.resx">
       <DependentUpon>frmEPS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTodo_List.resx">
+    <EmbeddedResource Include="FORM\PAGE1\frmTodo_List.resx">
       <DependentUpon>frmTodo_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\ordch.rdlc" />
