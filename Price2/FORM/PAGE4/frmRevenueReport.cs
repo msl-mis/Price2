@@ -129,7 +129,7 @@ namespace Price2
             //設置XY軸上的標籤
             //chart1.ChartAreas[0].AxisX.Title = "年分";
             //chart1.ChartAreas[0].AxisY.Title = "萬";
-            //設置Y軸數值不顯示
+                        //設置Y軸數值不顯示
             chart1.ChartAreas[0].AxisY.Enabled = AxisEnabled.False;
             chart1.ChartAreas[0].AxisX.Enabled = AxisEnabled.True;
             //設定 X 軸線不要線
@@ -146,7 +146,7 @@ namespace Price2
             chart1.Series["C"].Color = Color.Blue;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["C"].BorderWidth = 1;
-            chart1.Series["C"]["PointWidth"] = "0.3";
+            chart1.Series["C"]["PointWidth"] = "0.7";
             //設置XY軸上的值類型
             //chart1.Series["C"].XValueType = ChartValueType.String;
             //chart1.Series["C"].YValueType = ChartValueType.Double;
@@ -164,7 +164,7 @@ namespace Price2
             //綁定數據
             chart1.Series["C"].Points.DataBindXY(Y, X);
             //顏色不同,不指定顏色
-            chart1.Series["C"].Palette = ChartColorPalette.Bright;
+            chart1.Series["C"].Palette = ChartColorPalette.BrightPastel;
             
         }
 
@@ -369,5 +369,6 @@ namespace Price2
 
             chart1.Series["C"].Points.Clear();
         }
+
     }
 }

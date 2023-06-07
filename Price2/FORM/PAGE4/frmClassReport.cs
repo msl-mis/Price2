@@ -162,7 +162,7 @@ namespace Price2
             chart1.Series["C"].Color = Color.Blue;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["C"].BorderWidth = 1;
-            chart1.Series["C"]["PointWidth"] = "0.3";
+            chart1.Series["C"]["PointWidth"] = "0.6";
             //設置XY軸上的值類型
             //chart1.Series["C"].XValueType = ChartValueType.String;
             //chart1.Series["C"].YValueType = ChartValueType.Double;

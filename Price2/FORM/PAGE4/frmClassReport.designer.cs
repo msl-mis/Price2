@@ -122,6 +122,7 @@
             this.PD = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -155,14 +156,15 @@
             this.groupBox.Controls.Add(this.btnInq);
             this.groupBox.Controls.Add(this.label6);
             this.groupBox.Controls.Add(this.btnPrint);
+            this.groupBox.Controls.Add(this.groupBox1);
             this.groupBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 10F);
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox.Size = new System.Drawing.Size(824, 378);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox.Size = new System.Drawing.Size(759, 378);
             this.groupBox.TabIndex = 10;
             this.groupBox.TabStop = false;
             // 
@@ -171,8 +173,8 @@
             this.dtpYear.CustomFormat = "yyyy";
             this.dtpYear.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpYear.Location = new System.Drawing.Point(80, 263);
-            this.dtpYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpYear.Location = new System.Drawing.Point(67, 263);
+            this.dtpYear.Margin = new System.Windows.Forms.Padding(2);
             this.dtpYear.Name = "dtpYear";
             this.dtpYear.ShowUpDown = true;
             this.dtpYear.Size = new System.Drawing.Size(52, 25);
@@ -182,7 +184,7 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(11, 263);
+            this.label3.Location = new System.Drawing.Point(3, 263);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -247,8 +249,8 @@
             this.tableLayoutPanel2.Controls.Add(this.lbl1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbl3, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(652, 40);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(575, 35);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 17;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
@@ -267,15 +269,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(160, 316);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(160, 319);
             this.tableLayoutPanel2.TabIndex = 233;
             // 
             // lblR15
             // 
             this.lblR15.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR15.ForeColor = System.Drawing.Color.Blue;
-            this.lblR15.Location = new System.Drawing.Point(108, 273);
+            this.lblR15.Location = new System.Drawing.Point(108, 287);
             this.lblR15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR15.Name = "lblR15";
             this.lblR15.Size = new System.Drawing.Size(45, 18);
@@ -286,7 +288,7 @@
             // 
             this.lblP15.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP15.ForeColor = System.Drawing.Color.Blue;
-            this.lblP15.Location = new System.Drawing.Point(55, 273);
+            this.lblP15.Location = new System.Drawing.Point(55, 287);
             this.lblP15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP15.Name = "lblP15";
             this.lblP15.Size = new System.Drawing.Size(45, 18);
@@ -297,7 +299,7 @@
             // 
             this.lblQ15.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ15.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ15.Location = new System.Drawing.Point(2, 273);
+            this.lblQ15.Location = new System.Drawing.Point(2, 287);
             this.lblQ15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ15.Name = "lblQ15";
             this.lblQ15.Size = new System.Drawing.Size(45, 18);
@@ -308,7 +310,7 @@
             // 
             this.lblR14.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR14.ForeColor = System.Drawing.Color.Blue;
-            this.lblR14.Location = new System.Drawing.Point(108, 255);
+            this.lblR14.Location = new System.Drawing.Point(108, 268);
             this.lblR14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR14.Name = "lblR14";
             this.lblR14.Size = new System.Drawing.Size(45, 18);
@@ -319,7 +321,7 @@
             // 
             this.lblP14.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP14.ForeColor = System.Drawing.Color.Blue;
-            this.lblP14.Location = new System.Drawing.Point(55, 255);
+            this.lblP14.Location = new System.Drawing.Point(55, 268);
             this.lblP14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP14.Name = "lblP14";
             this.lblP14.Size = new System.Drawing.Size(45, 18);
@@ -330,7 +332,7 @@
             // 
             this.lblQ14.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ14.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ14.Location = new System.Drawing.Point(2, 255);
+            this.lblQ14.Location = new System.Drawing.Point(2, 268);
             this.lblQ14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ14.Name = "lblQ14";
             this.lblQ14.Size = new System.Drawing.Size(45, 18);
@@ -341,7 +343,7 @@
             // 
             this.lblR13.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR13.ForeColor = System.Drawing.Color.Blue;
-            this.lblR13.Location = new System.Drawing.Point(108, 237);
+            this.lblR13.Location = new System.Drawing.Point(108, 249);
             this.lblR13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR13.Name = "lblR13";
             this.lblR13.Size = new System.Drawing.Size(45, 18);
@@ -352,7 +354,7 @@
             // 
             this.lblP13.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP13.ForeColor = System.Drawing.Color.Blue;
-            this.lblP13.Location = new System.Drawing.Point(55, 237);
+            this.lblP13.Location = new System.Drawing.Point(55, 249);
             this.lblP13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP13.Name = "lblP13";
             this.lblP13.Size = new System.Drawing.Size(45, 18);
@@ -363,7 +365,7 @@
             // 
             this.lblQ13.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ13.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ13.Location = new System.Drawing.Point(2, 237);
+            this.lblQ13.Location = new System.Drawing.Point(2, 249);
             this.lblQ13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ13.Name = "lblQ13";
             this.lblQ13.Size = new System.Drawing.Size(45, 18);
@@ -374,7 +376,7 @@
             // 
             this.lblR12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR12.ForeColor = System.Drawing.Color.Blue;
-            this.lblR12.Location = new System.Drawing.Point(108, 219);
+            this.lblR12.Location = new System.Drawing.Point(108, 230);
             this.lblR12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR12.Name = "lblR12";
             this.lblR12.Size = new System.Drawing.Size(45, 18);
@@ -385,7 +387,7 @@
             // 
             this.lblP12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP12.ForeColor = System.Drawing.Color.Blue;
-            this.lblP12.Location = new System.Drawing.Point(55, 219);
+            this.lblP12.Location = new System.Drawing.Point(55, 230);
             this.lblP12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP12.Name = "lblP12";
             this.lblP12.Size = new System.Drawing.Size(45, 18);
@@ -396,7 +398,7 @@
             // 
             this.lblQ12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ12.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ12.Location = new System.Drawing.Point(2, 219);
+            this.lblQ12.Location = new System.Drawing.Point(2, 230);
             this.lblQ12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ12.Name = "lblQ12";
             this.lblQ12.Size = new System.Drawing.Size(45, 18);
@@ -407,7 +409,7 @@
             // 
             this.lblR11.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR11.ForeColor = System.Drawing.Color.Blue;
-            this.lblR11.Location = new System.Drawing.Point(108, 201);
+            this.lblR11.Location = new System.Drawing.Point(108, 211);
             this.lblR11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR11.Name = "lblR11";
             this.lblR11.Size = new System.Drawing.Size(45, 18);
@@ -418,7 +420,7 @@
             // 
             this.lblP11.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP11.ForeColor = System.Drawing.Color.Blue;
-            this.lblP11.Location = new System.Drawing.Point(55, 201);
+            this.lblP11.Location = new System.Drawing.Point(55, 211);
             this.lblP11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP11.Name = "lblP11";
             this.lblP11.Size = new System.Drawing.Size(45, 18);
@@ -429,7 +431,7 @@
             // 
             this.lblQ11.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ11.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ11.Location = new System.Drawing.Point(2, 201);
+            this.lblQ11.Location = new System.Drawing.Point(2, 211);
             this.lblQ11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ11.Name = "lblQ11";
             this.lblQ11.Size = new System.Drawing.Size(45, 18);
@@ -440,7 +442,7 @@
             // 
             this.lblR10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR10.ForeColor = System.Drawing.Color.Blue;
-            this.lblR10.Location = new System.Drawing.Point(108, 183);
+            this.lblR10.Location = new System.Drawing.Point(108, 192);
             this.lblR10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR10.Name = "lblR10";
             this.lblR10.Size = new System.Drawing.Size(45, 18);
@@ -451,7 +453,7 @@
             // 
             this.lblP10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP10.ForeColor = System.Drawing.Color.Blue;
-            this.lblP10.Location = new System.Drawing.Point(55, 183);
+            this.lblP10.Location = new System.Drawing.Point(55, 192);
             this.lblP10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP10.Name = "lblP10";
             this.lblP10.Size = new System.Drawing.Size(45, 18);
@@ -462,7 +464,7 @@
             // 
             this.lblQ10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ10.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ10.Location = new System.Drawing.Point(2, 183);
+            this.lblQ10.Location = new System.Drawing.Point(2, 192);
             this.lblQ10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ10.Name = "lblQ10";
             this.lblQ10.Size = new System.Drawing.Size(45, 18);
@@ -473,7 +475,7 @@
             // 
             this.lblR9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR9.ForeColor = System.Drawing.Color.Blue;
-            this.lblR9.Location = new System.Drawing.Point(108, 165);
+            this.lblR9.Location = new System.Drawing.Point(108, 173);
             this.lblR9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR9.Name = "lblR9";
             this.lblR9.Size = new System.Drawing.Size(45, 18);
@@ -484,7 +486,7 @@
             // 
             this.lblP9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP9.ForeColor = System.Drawing.Color.Blue;
-            this.lblP9.Location = new System.Drawing.Point(55, 165);
+            this.lblP9.Location = new System.Drawing.Point(55, 173);
             this.lblP9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP9.Name = "lblP9";
             this.lblP9.Size = new System.Drawing.Size(45, 18);
@@ -495,7 +497,7 @@
             // 
             this.lblQ9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ9.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ9.Location = new System.Drawing.Point(2, 165);
+            this.lblQ9.Location = new System.Drawing.Point(2, 173);
             this.lblQ9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ9.Name = "lblQ9";
             this.lblQ9.Size = new System.Drawing.Size(45, 18);
@@ -506,7 +508,7 @@
             // 
             this.lblR8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR8.ForeColor = System.Drawing.Color.Blue;
-            this.lblR8.Location = new System.Drawing.Point(108, 147);
+            this.lblR8.Location = new System.Drawing.Point(108, 154);
             this.lblR8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR8.Name = "lblR8";
             this.lblR8.Size = new System.Drawing.Size(45, 18);
@@ -517,7 +519,7 @@
             // 
             this.lblP8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP8.ForeColor = System.Drawing.Color.Blue;
-            this.lblP8.Location = new System.Drawing.Point(55, 147);
+            this.lblP8.Location = new System.Drawing.Point(55, 154);
             this.lblP8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP8.Name = "lblP8";
             this.lblP8.Size = new System.Drawing.Size(45, 18);
@@ -528,7 +530,7 @@
             // 
             this.lblQ8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ8.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ8.Location = new System.Drawing.Point(2, 147);
+            this.lblQ8.Location = new System.Drawing.Point(2, 154);
             this.lblQ8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ8.Name = "lblQ8";
             this.lblQ8.Size = new System.Drawing.Size(45, 18);
@@ -539,7 +541,7 @@
             // 
             this.lblR7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR7.ForeColor = System.Drawing.Color.Blue;
-            this.lblR7.Location = new System.Drawing.Point(108, 129);
+            this.lblR7.Location = new System.Drawing.Point(108, 135);
             this.lblR7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR7.Name = "lblR7";
             this.lblR7.Size = new System.Drawing.Size(45, 18);
@@ -550,7 +552,7 @@
             // 
             this.lblP7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP7.ForeColor = System.Drawing.Color.Blue;
-            this.lblP7.Location = new System.Drawing.Point(55, 129);
+            this.lblP7.Location = new System.Drawing.Point(55, 135);
             this.lblP7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP7.Name = "lblP7";
             this.lblP7.Size = new System.Drawing.Size(45, 18);
@@ -561,7 +563,7 @@
             // 
             this.lblQ7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ7.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ7.Location = new System.Drawing.Point(2, 129);
+            this.lblQ7.Location = new System.Drawing.Point(2, 135);
             this.lblQ7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ7.Name = "lblQ7";
             this.lblQ7.Size = new System.Drawing.Size(45, 18);
@@ -572,7 +574,7 @@
             // 
             this.lblR6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR6.ForeColor = System.Drawing.Color.Blue;
-            this.lblR6.Location = new System.Drawing.Point(108, 111);
+            this.lblR6.Location = new System.Drawing.Point(108, 116);
             this.lblR6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR6.Name = "lblR6";
             this.lblR6.Size = new System.Drawing.Size(45, 18);
@@ -583,7 +585,7 @@
             // 
             this.lblP6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP6.ForeColor = System.Drawing.Color.Blue;
-            this.lblP6.Location = new System.Drawing.Point(55, 111);
+            this.lblP6.Location = new System.Drawing.Point(55, 116);
             this.lblP6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP6.Name = "lblP6";
             this.lblP6.Size = new System.Drawing.Size(45, 18);
@@ -594,7 +596,7 @@
             // 
             this.lblQ6.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ6.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ6.Location = new System.Drawing.Point(2, 111);
+            this.lblQ6.Location = new System.Drawing.Point(2, 116);
             this.lblQ6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ6.Name = "lblQ6";
             this.lblQ6.Size = new System.Drawing.Size(45, 18);
@@ -605,7 +607,7 @@
             // 
             this.lblR5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR5.ForeColor = System.Drawing.Color.Blue;
-            this.lblR5.Location = new System.Drawing.Point(108, 93);
+            this.lblR5.Location = new System.Drawing.Point(108, 97);
             this.lblR5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR5.Name = "lblR5";
             this.lblR5.Size = new System.Drawing.Size(45, 18);
@@ -616,7 +618,7 @@
             // 
             this.lblP5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP5.ForeColor = System.Drawing.Color.Blue;
-            this.lblP5.Location = new System.Drawing.Point(55, 93);
+            this.lblP5.Location = new System.Drawing.Point(55, 97);
             this.lblP5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP5.Name = "lblP5";
             this.lblP5.Size = new System.Drawing.Size(45, 18);
@@ -627,7 +629,7 @@
             // 
             this.lblQ5.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ5.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ5.Location = new System.Drawing.Point(2, 93);
+            this.lblQ5.Location = new System.Drawing.Point(2, 97);
             this.lblQ5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ5.Name = "lblQ5";
             this.lblQ5.Size = new System.Drawing.Size(45, 18);
@@ -638,7 +640,7 @@
             // 
             this.lblR4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR4.ForeColor = System.Drawing.Color.Blue;
-            this.lblR4.Location = new System.Drawing.Point(108, 75);
+            this.lblR4.Location = new System.Drawing.Point(108, 78);
             this.lblR4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR4.Name = "lblR4";
             this.lblR4.Size = new System.Drawing.Size(45, 18);
@@ -649,7 +651,7 @@
             // 
             this.lblP4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP4.ForeColor = System.Drawing.Color.Blue;
-            this.lblP4.Location = new System.Drawing.Point(55, 75);
+            this.lblP4.Location = new System.Drawing.Point(55, 78);
             this.lblP4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP4.Name = "lblP4";
             this.lblP4.Size = new System.Drawing.Size(45, 18);
@@ -660,7 +662,7 @@
             // 
             this.lblQ4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ4.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ4.Location = new System.Drawing.Point(2, 75);
+            this.lblQ4.Location = new System.Drawing.Point(2, 78);
             this.lblQ4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ4.Name = "lblQ4";
             this.lblQ4.Size = new System.Drawing.Size(45, 18);
@@ -671,7 +673,7 @@
             // 
             this.lblR3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR3.ForeColor = System.Drawing.Color.Blue;
-            this.lblR3.Location = new System.Drawing.Point(108, 57);
+            this.lblR3.Location = new System.Drawing.Point(108, 59);
             this.lblR3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR3.Name = "lblR3";
             this.lblR3.Size = new System.Drawing.Size(45, 18);
@@ -682,7 +684,7 @@
             // 
             this.lblP3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP3.ForeColor = System.Drawing.Color.Blue;
-            this.lblP3.Location = new System.Drawing.Point(55, 57);
+            this.lblP3.Location = new System.Drawing.Point(55, 59);
             this.lblP3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP3.Name = "lblP3";
             this.lblP3.Size = new System.Drawing.Size(45, 18);
@@ -693,7 +695,7 @@
             // 
             this.lblQ3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ3.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ3.Location = new System.Drawing.Point(2, 57);
+            this.lblQ3.Location = new System.Drawing.Point(2, 59);
             this.lblQ3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ3.Name = "lblQ3";
             this.lblQ3.Size = new System.Drawing.Size(45, 18);
@@ -704,7 +706,7 @@
             // 
             this.lblR2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblR2.ForeColor = System.Drawing.Color.Blue;
-            this.lblR2.Location = new System.Drawing.Point(108, 39);
+            this.lblR2.Location = new System.Drawing.Point(108, 40);
             this.lblR2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblR2.Name = "lblR2";
             this.lblR2.Size = new System.Drawing.Size(45, 18);
@@ -715,7 +717,7 @@
             // 
             this.lblP2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblP2.ForeColor = System.Drawing.Color.Blue;
-            this.lblP2.Location = new System.Drawing.Point(55, 39);
+            this.lblP2.Location = new System.Drawing.Point(55, 40);
             this.lblP2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblP2.Name = "lblP2";
             this.lblP2.Size = new System.Drawing.Size(45, 18);
@@ -726,7 +728,7 @@
             // 
             this.lblQ2.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblQ2.ForeColor = System.Drawing.Color.Blue;
-            this.lblQ2.Location = new System.Drawing.Point(2, 39);
+            this.lblQ2.Location = new System.Drawing.Point(2, 40);
             this.lblQ2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQ2.Name = "lblQ2";
             this.lblQ2.Size = new System.Drawing.Size(45, 18);
@@ -797,7 +799,7 @@
             this.lbl3.Location = new System.Drawing.Point(108, 0);
             this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(49, 20);
+            this.lbl3.Size = new System.Drawing.Size(48, 20);
             this.lbl3.TabIndex = 123;
             this.lbl3.Text = "年增率";
             this.lbl3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -806,7 +808,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(484, 359);
+            this.label1.Location = new System.Drawing.Point(164, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 18);
@@ -833,11 +835,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label15, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 8);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(281, 40);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(259, 35);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 17;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
@@ -851,17 +853,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(116, 317);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.643357F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.993007F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(126, 319);
             this.tableLayoutPanel1.TabIndex = 232;
             // 
             // label23
             // 
             this.label23.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label23.ForeColor = System.Drawing.Color.Blue;
-            this.label23.Location = new System.Drawing.Point(2, 285);
+            this.label23.Location = new System.Drawing.Point(2, 287);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(110, 16);
@@ -873,7 +875,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(2, 19);
+            this.label7.Location = new System.Drawing.Point(2, 21);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 16);
@@ -885,7 +887,7 @@
             // 
             this.label22.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label22.ForeColor = System.Drawing.Color.Blue;
-            this.label22.Location = new System.Drawing.Point(2, 266);
+            this.label22.Location = new System.Drawing.Point(2, 268);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(110, 16);
@@ -897,7 +899,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(2, 57);
+            this.label8.Location = new System.Drawing.Point(2, 59);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 16);
@@ -909,7 +911,7 @@
             // 
             this.label21.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label21.ForeColor = System.Drawing.Color.Blue;
-            this.label21.Location = new System.Drawing.Point(2, 247);
+            this.label21.Location = new System.Drawing.Point(2, 249);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(110, 16);
@@ -921,7 +923,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(2, 38);
+            this.label4.Location = new System.Drawing.Point(2, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 16);
@@ -933,7 +935,7 @@
             // 
             this.label20.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label20.ForeColor = System.Drawing.Color.Blue;
-            this.label20.Location = new System.Drawing.Point(2, 228);
+            this.label20.Location = new System.Drawing.Point(2, 230);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(110, 16);
@@ -945,7 +947,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(2, 76);
+            this.label9.Location = new System.Drawing.Point(2, 78);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 16);
@@ -957,7 +959,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label19.ForeColor = System.Drawing.Color.Blue;
-            this.label19.Location = new System.Drawing.Point(2, 209);
+            this.label19.Location = new System.Drawing.Point(2, 211);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(110, 16);
@@ -969,7 +971,7 @@
             // 
             this.label10.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label10.ForeColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(2, 95);
+            this.label10.Location = new System.Drawing.Point(2, 97);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 16);
@@ -981,7 +983,7 @@
             // 
             this.label16.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label16.ForeColor = System.Drawing.Color.Blue;
-            this.label16.Location = new System.Drawing.Point(2, 190);
+            this.label16.Location = new System.Drawing.Point(2, 192);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(110, 16);
@@ -993,7 +995,7 @@
             // 
             this.label12.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label12.ForeColor = System.Drawing.Color.Blue;
-            this.label12.Location = new System.Drawing.Point(2, 114);
+            this.label12.Location = new System.Drawing.Point(2, 116);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(110, 16);
@@ -1005,7 +1007,7 @@
             // 
             this.label15.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label15.ForeColor = System.Drawing.Color.Blue;
-            this.label15.Location = new System.Drawing.Point(2, 171);
+            this.label15.Location = new System.Drawing.Point(2, 173);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(110, 16);
@@ -1017,7 +1019,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label11.ForeColor = System.Drawing.Color.Blue;
-            this.label11.Location = new System.Drawing.Point(2, 133);
+            this.label11.Location = new System.Drawing.Point(2, 135);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 16);
@@ -1029,7 +1031,7 @@
             // 
             this.label14.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label14.ForeColor = System.Drawing.Color.Blue;
-            this.label14.Location = new System.Drawing.Point(2, 152);
+            this.label14.Location = new System.Drawing.Point(2, 154);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(110, 16);
@@ -1042,7 +1044,7 @@
             this.radio2.AutoSize = true;
             this.radio2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.radio2.Location = new System.Drawing.Point(145, 42);
-            this.radio2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio2.Margin = new System.Windows.Forms.Padding(2);
             this.radio2.Name = "radio2";
             this.radio2.Size = new System.Drawing.Size(70, 19);
             this.radio2.TabIndex = 231;
@@ -1056,7 +1058,7 @@
             this.radio1.Checked = true;
             this.radio1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.radio1.Location = new System.Drawing.Point(31, 42);
-            this.radio1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radio1.Margin = new System.Windows.Forms.Padding(2);
             this.radio1.Name = "radio1";
             this.radio1.Size = new System.Drawing.Size(70, 19);
             this.radio1.TabIndex = 230;
@@ -1070,8 +1072,8 @@
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClear.Location = new System.Drawing.Point(87, 320);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Location = new System.Drawing.Point(72, 320);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(55, 29);
             this.btnClear.TabIndex = 228;
@@ -1084,8 +1086,8 @@
             this.dtpDateE.CustomFormat = "MM/dd";
             this.dtpDateE.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateE.Location = new System.Drawing.Point(152, 183);
-            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateE.Location = new System.Drawing.Point(152, 149);
+            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateE.Name = "dtpDateE";
             this.dtpDateE.ShowUpDown = true;
             this.dtpDateE.Size = new System.Drawing.Size(57, 25);
@@ -1097,8 +1099,8 @@
             this.dtpDateS.CustomFormat = "MM/dd";
             this.dtpDateS.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpDateS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateS.Location = new System.Drawing.Point(68, 183);
-            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateS.Location = new System.Drawing.Point(68, 149);
+            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateS.Name = "dtpDateS";
             this.dtpDateS.ShowUpDown = true;
             this.dtpDateS.Size = new System.Drawing.Size(57, 25);
@@ -1110,8 +1112,8 @@
             this.chkAll_year.AutoSize = true;
             this.chkAll_year.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.chkAll_year.ForeColor = System.Drawing.Color.Magenta;
-            this.chkAll_year.Location = new System.Drawing.Point(218, 186);
-            this.chkAll_year.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkAll_year.Location = new System.Drawing.Point(68, 179);
+            this.chkAll_year.Margin = new System.Windows.Forms.Padding(2);
             this.chkAll_year.Name = "chkAll_year";
             this.chkAll_year.Size = new System.Drawing.Size(52, 17);
             this.chkAll_year.TabIndex = 222;
@@ -1128,10 +1130,10 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(398, 40);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart1.Location = new System.Drawing.Point(353, 35);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(255, 317);
+            this.chart1.Size = new System.Drawing.Size(242, 319);
             this.chart1.TabIndex = 221;
             this.chart1.Text = "chart1";
             // 
@@ -1140,7 +1142,7 @@
             this.cboSales.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboSales.FormattingEnabled = true;
             this.cboSales.Location = new System.Drawing.Point(68, 113);
-            this.cboSales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboSales.Margin = new System.Windows.Forms.Padding(2);
             this.cboSales.Name = "cboSales";
             this.cboSales.Size = new System.Drawing.Size(92, 23);
             this.cboSales.TabIndex = 220;
@@ -1151,7 +1153,7 @@
             this.cboDivision.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboDivision.FormattingEnabled = true;
             this.cboDivision.Location = new System.Drawing.Point(68, 77);
-            this.cboDivision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboDivision.Margin = new System.Windows.Forms.Padding(2);
             this.cboDivision.Name = "cboDivision";
             this.cboDivision.Size = new System.Drawing.Size(92, 23);
             this.cboDivision.TabIndex = 218;
@@ -1160,7 +1162,7 @@
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label17.Location = new System.Drawing.Point(127, 183);
+            this.label17.Location = new System.Drawing.Point(127, 149);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1172,7 +1174,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(5, 183);
+            this.label13.Location = new System.Drawing.Point(5, 149);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1185,18 +1187,19 @@
             // 
             this.cboVendorID.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboVendorID.FormattingEnabled = true;
-            this.cboVendorID.Location = new System.Drawing.Point(214, 113);
-            this.cboVendorID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboVendorID.Location = new System.Drawing.Point(68, 234);
+            this.cboVendorID.Margin = new System.Windows.Forms.Padding(2);
             this.cboVendorID.Name = "cboVendorID";
             this.cboVendorID.Size = new System.Drawing.Size(60, 23);
             this.cboVendorID.TabIndex = 186;
+            this.cboVendorID.Visible = false;
             this.cboVendorID.SelectedIndexChanged += new System.EventHandler(this.cboVendorID_SelectedIndexChanged);
             // 
             // lblVendor
             // 
             this.lblVendor.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblVendor.ForeColor = System.Drawing.Color.Red;
-            this.lblVendor.Location = new System.Drawing.Point(786, 9);
+            this.lblVendor.Location = new System.Drawing.Point(69, 11);
             this.lblVendor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVendor.Name = "lblVendor";
             this.lblVendor.Size = new System.Drawing.Size(68, 25);
@@ -1206,13 +1209,14 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(158, 111);
+            this.label2.Location = new System.Drawing.Point(12, 232);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 25);
             this.label2.TabIndex = 126;
             this.label2.Text = "廠號：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Visible = false;
             // 
             // label18
             // 
@@ -1230,8 +1234,8 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(205, 320);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(189, 320);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(55, 29);
             this.btnClose.TabIndex = 99;
@@ -1244,8 +1248,8 @@
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnInq.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnInq.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnInq.Location = new System.Drawing.Point(28, 320);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Location = new System.Drawing.Point(13, 320);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(55, 29);
             this.btnInq.TabIndex = 93;
@@ -1269,8 +1273,8 @@
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPrint.Location = new System.Drawing.Point(146, 320);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Location = new System.Drawing.Point(131, 320);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(55, 29);
             this.btnPrint.TabIndex = 92;
@@ -1298,14 +1302,23 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.groupBox1.Location = new System.Drawing.Point(249, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(495, 340);
+            this.groupBox1.TabIndex = 242;
+            this.groupBox1.TabStop = false;
+            // 
             // frmClassReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 378);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(759, 378);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmClassReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "分類利潤年增率報表";
@@ -1412,5 +1425,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DateTimePicker dtpYear;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

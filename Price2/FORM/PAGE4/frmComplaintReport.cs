@@ -75,9 +75,10 @@ namespace Price2
             chart1.Series["CT"].ChartType = SeriesChartType.Column;
             //設置統計對象顏色
             chart1.Series["CT"].Color = Color.Blue;
+            //chart1.Series["CT"].Palette = ChartColorPalette.BrightPastel;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["CT"].BorderWidth = 1;
-            chart1.Series["CT"]["PointWidth"] = "0.3";
+            chart1.Series["CT"]["PointWidth"] = "0.4";
             //設置XY軸上的值類型
             chart1.Series["CT"].XValueType = ChartValueType.String;
             chart1.Series["CT"].YValueType = ChartValueType.Double;
@@ -88,10 +89,10 @@ namespace Price2
             //設置統計對象統計圖類型
             chart1.Series["CF"].ChartType = SeriesChartType.Column;
             //設置統計對象顏色
-            chart1.Series["CF"].Color = Color.YellowGreen;
+            chart1.Series["CF"].Color = Color.SaddleBrown;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["CF"].BorderWidth = 1;
-            chart1.Series["CF"]["PointWidth"] = "0.3";
+            chart1.Series["CF"]["PointWidth"] = "0.4";
             //設置XY軸上的值類型
             chart1.Series["CF"].XValueType = ChartValueType.String;
             chart1.Series["CF"].YValueType = ChartValueType.Double;
@@ -102,10 +103,10 @@ namespace Price2
             //設置統計對象統計圖類型
             chart1.Series["CV"].ChartType = SeriesChartType.Column;
             //設置統計對象顏色
-            chart1.Series["CV"].Color = Color.Pink;
+            chart1.Series["CV"].Color = Color.Fuchsia;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["CV"].BorderWidth = 1;
-            chart1.Series["CV"]["PointWidth"] = "0.3";
+            chart1.Series["CV"]["PointWidth"] = "0.4";
             //設置XY軸上的值類型
             chart1.Series["CV"].XValueType = ChartValueType.String;
             chart1.Series["CV"].YValueType = ChartValueType.Double;
@@ -119,7 +120,7 @@ namespace Price2
             chart1.Series["CC"].Color = Color.Green;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["CC"].BorderWidth = 1;
-            chart1.Series["CC"]["PointWidth"] = "0.3";
+            chart1.Series["CC"]["PointWidth"] = "0.4";
             //設置XY軸上的值類型
             chart1.Series["CC"].XValueType = ChartValueType.String;
             chart1.Series["CC"].YValueType = ChartValueType.Double;
@@ -137,7 +138,8 @@ namespace Price2
             //設置統計對象統計圖類型
             chart2.Series["C"].ChartType = SeriesChartType.Column;
             //設置統計對象顏色
-            chart2.Series["C"].Color = Color.Blue;
+            //chart2.Series["C"].Color = Color.Blue;
+            chart2.Series["C"].Palette = ChartColorPalette.BrightPastel;
             //設置統計對象粗細, 單位PIXEL
             chart2.Series["C"].BorderWidth = 1;
             chart2.Series["C"]["PointWidth"] = "0.3";
@@ -861,6 +863,15 @@ namespace Price2
                 MessageBox.Show(this.Name + "-btnSave_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

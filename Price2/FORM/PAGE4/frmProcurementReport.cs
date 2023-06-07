@@ -64,7 +64,7 @@ namespace Price2
             chart1.Series["C"].Color = Color.Blue;
             //設置統計對象粗細, 單位PIXEL
             chart1.Series["C"].BorderWidth = 1;
-            chart1.Series["C"]["PointWidth"] = "0.3";
+            chart1.Series["C"]["PointWidth"] = "0.4";
             //設置XY軸上的值類型
             chart1.Series["C"].XValueType = ChartValueType.String;
             chart1.Series["C"].YValueType = ChartValueType.Double;
@@ -335,7 +335,7 @@ namespace Price2
             //綁定數據
             chart1.Series["C"].Points.DataBindXY(X, Y);
             //顏色不同,不指定顏色
-            chart1.Series["C"].Palette = ChartColorPalette.Bright;
+            chart1.Series["C"].Palette = ChartColorPalette.BrightPastel;
             //顏色不同,指定顏色
             //chart1.Series["C"].Points[1].Color = Color.Green;
 
