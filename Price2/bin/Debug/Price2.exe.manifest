@@ -631,14 +631,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Price2.exe" size="6058496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Price2.exe" size="6061056">
       <assemblyIdentity name="Price2" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TcwOutt01CpHREeaA8XzyAbKLY0/hCMomW3hLX8sx9Y=</dsig:DigestValue>
+        <dsig:DigestValue>M66z7uuN5FFBIxCZNmifTsupLRqD5cqEcXyLG58q3uE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

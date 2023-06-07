@@ -183,7 +183,7 @@
             this.lblYwName.Location = new System.Drawing.Point(448, 48);
             this.lblYwName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYwName.Name = "lblYwName";
-            this.lblYwName.Size = new System.Drawing.Size(68, 23);
+            this.lblYwName.Size = new System.Drawing.Size(77, 23);
             this.lblYwName.TabIndex = 91;
             this.lblYwName.Text = "業務名稱";
             this.lblYwName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -452,10 +452,12 @@
             // btnInq_Country
             // 
             this.btnInq_Country.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq_Country.Location = new System.Drawing.Point(208, 383);
-            this.btnInq_Country.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq_Country.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInq_Country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_Country.Location = new System.Drawing.Point(208, 384);
+            this.btnInq_Country.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_Country.Name = "btnInq_Country";
-            this.btnInq_Country.Size = new System.Drawing.Size(32, 29);
+            this.btnInq_Country.Size = new System.Drawing.Size(29, 24);
             this.btnInq_Country.TabIndex = 63;
             this.btnInq_Country.Text = "...";
             this.btnInq_Country.UseVisualStyleBackColor = false;
@@ -529,10 +531,12 @@
             // btnInq_Tel
             // 
             this.btnInq_Tel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq_Tel.Location = new System.Drawing.Point(483, 79);
-            this.btnInq_Tel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq_Tel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInq_Tel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_Tel.Location = new System.Drawing.Point(483, 80);
+            this.btnInq_Tel.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_Tel.Name = "btnInq_Tel";
-            this.btnInq_Tel.Size = new System.Drawing.Size(32, 29);
+            this.btnInq_Tel.Size = new System.Drawing.Size(29, 24);
             this.btnInq_Tel.TabIndex = 59;
             this.btnInq_Tel.Text = "...";
             this.btnInq_Tel.UseVisualStyleBackColor = false;
@@ -665,10 +669,12 @@
             // btnInq_Customer
             // 
             this.btnInq_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq_Customer.Location = new System.Drawing.Point(244, 16);
-            this.btnInq_Customer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq_Customer.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInq_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_Customer.Location = new System.Drawing.Point(244, 17);
+            this.btnInq_Customer.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_Customer.Name = "btnInq_Customer";
-            this.btnInq_Customer.Size = new System.Drawing.Size(32, 29);
+            this.btnInq_Customer.Size = new System.Drawing.Size(29, 24);
             this.btnInq_Customer.TabIndex = 42;
             this.btnInq_Customer.Text = "...";
             this.btnInq_Customer.UseVisualStyleBackColor = false;
@@ -708,10 +714,12 @@
             // btnInq_ShortName
             // 
             this.btnInq_ShortName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInq_ShortName.Location = new System.Drawing.Point(483, 15);
-            this.btnInq_ShortName.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq_ShortName.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInq_ShortName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_ShortName.Location = new System.Drawing.Point(483, 16);
+            this.btnInq_ShortName.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_ShortName.Name = "btnInq_ShortName";
-            this.btnInq_ShortName.Size = new System.Drawing.Size(32, 29);
+            this.btnInq_ShortName.Size = new System.Drawing.Size(29, 24);
             this.btnInq_ShortName.TabIndex = 36;
             this.btnInq_ShortName.Text = "...";
             this.btnInq_ShortName.UseVisualStyleBackColor = false;
@@ -723,8 +731,8 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(305, 480);
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelete.Location = new System.Drawing.Point(295, 480);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(63, 30);
@@ -739,8 +747,8 @@
             this.btnCopy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCopy.Location = new System.Drawing.Point(237, 480);
+            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCopy.Location = new System.Drawing.Point(218, 480);
             this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(63, 30);
@@ -755,8 +763,8 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(170, 480);
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClear.Location = new System.Drawing.Point(141, 480);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(63, 30);
@@ -902,7 +910,7 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Location = new System.Drawing.Point(372, 480);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
@@ -918,8 +926,8 @@
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(102, 480);
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSave.Location = new System.Drawing.Point(64, 480);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 30);

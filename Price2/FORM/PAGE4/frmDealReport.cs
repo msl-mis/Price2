@@ -360,5 +360,15 @@ namespace Price2
         {
             e.PageSettings.Landscape = true;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpYear_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -430,6 +430,22 @@ namespace Price2
         {
         }
 
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnOK.Focus();
+            }
+        }
+
 
 
 

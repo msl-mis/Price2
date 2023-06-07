@@ -73,16 +73,16 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 10F);
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox.Size = new System.Drawing.Size(862, 603);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Size = new System.Drawing.Size(646, 482);
             this.groupBox.TabIndex = 10;
             this.groupBox.TabStop = false;
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBox3.Controls.Add(this.chkT);
             this.groupBox3.Controls.Add(this.chkF);
             this.groupBox3.Controls.Add(this.cboUser);
@@ -93,12 +93,12 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.dgvData);
             this.groupBox3.Controls.Add(this.btnInq);
-            this.groupBox3.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 300);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox3.Location = new System.Drawing.Point(0, 240);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(860, 300);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(645, 240);
             this.groupBox3.TabIndex = 130;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "資料查詢";
@@ -106,9 +106,11 @@
             // chkT
             // 
             this.chkT.AutoSize = true;
-            this.chkT.Location = new System.Drawing.Point(678, 25);
+            this.chkT.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkT.Location = new System.Drawing.Point(500, 18);
+            this.chkT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkT.Name = "chkT";
-            this.chkT.Size = new System.Drawing.Size(81, 21);
+            this.chkT.Size = new System.Drawing.Size(65, 17);
             this.chkT.TabIndex = 233;
             this.chkT.Text = "已完成";
             this.chkT.UseVisualStyleBackColor = true;
@@ -117,9 +119,11 @@
             // chkF
             // 
             this.chkF.AutoSize = true;
-            this.chkF.Location = new System.Drawing.Point(678, 52);
+            this.chkF.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkF.Location = new System.Drawing.Point(500, 40);
+            this.chkF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkF.Name = "chkF";
-            this.chkF.Size = new System.Drawing.Size(81, 21);
+            this.chkF.Size = new System.Drawing.Size(65, 17);
             this.chkF.TabIndex = 232;
             this.chkF.Text = "未完成";
             this.chkF.UseVisualStyleBackColor = true;
@@ -127,19 +131,21 @@
             // 
             // cboUser
             // 
-            this.cboUser.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cboUser.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboUser.FormattingEnabled = true;
-            this.cboUser.Location = new System.Drawing.Point(110, 29);
+            this.cboUser.Location = new System.Drawing.Point(82, 23);
+            this.cboUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboUser.Name = "cboUser";
-            this.cboUser.Size = new System.Drawing.Size(150, 26);
+            this.cboUser.Size = new System.Drawing.Size(100, 23);
             this.cboUser.TabIndex = 231;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(6, 22);
+            this.label2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(4, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 34);
+            this.label2.Size = new System.Drawing.Size(74, 27);
             this.label2.TabIndex = 230;
             this.label2.Text = "使用者：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -147,43 +153,47 @@
             // dtpDateE
             // 
             this.dtpDateE.CustomFormat = "yyyy/MM/dd";
-            this.dtpDateE.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dtpDateE.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateE.Location = new System.Drawing.Point(534, 29);
+            this.dtpDateE.Location = new System.Drawing.Point(400, 23);
+            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDateE.Name = "dtpDateE";
             this.dtpDateE.ShowUpDown = true;
-            this.dtpDateE.Size = new System.Drawing.Size(116, 29);
+            this.dtpDateE.Size = new System.Drawing.Size(88, 25);
             this.dtpDateE.TabIndex = 229;
             // 
             // dtpDateS
             // 
             this.dtpDateS.CustomFormat = "yyyy/MM/dd";
-            this.dtpDateS.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dtpDateS.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpDateS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateS.Location = new System.Drawing.Point(370, 29);
+            this.dtpDateS.Location = new System.Drawing.Point(278, 23);
+            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDateS.Name = "dtpDateS";
             this.dtpDateS.ShowUpDown = true;
-            this.dtpDateS.Size = new System.Drawing.Size(116, 29);
+            this.dtpDateS.Size = new System.Drawing.Size(88, 25);
             this.dtpDateS.TabIndex = 228;
             // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label17.Location = new System.Drawing.Point(492, 26);
+            this.label17.Location = new System.Drawing.Point(369, 21);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label17.Size = new System.Drawing.Size(36, 31);
+            this.label17.Size = new System.Drawing.Size(27, 25);
             this.label17.TabIndex = 227;
             this.label17.Text = "至";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(266, 26);
+            this.label13.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.Location = new System.Drawing.Point(186, 21);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(98, 31);
+            this.label13.Size = new System.Drawing.Size(88, 25);
             this.label13.TabIndex = 226;
             this.label13.Text = "日期區間：";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -198,7 +208,7 @@
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -212,13 +222,13 @@
             this.item,
             this.chk});
             this.dgvData.EnableHeadersVisualStyles = false;
-            this.dgvData.Location = new System.Drawing.Point(20, 83);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvData.Location = new System.Drawing.Point(15, 66);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -227,7 +237,7 @@
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 25;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(812, 204);
+            this.dgvData.Size = new System.Drawing.Size(609, 163);
             this.dgvData.TabIndex = 167;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
@@ -285,10 +295,10 @@
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnInq.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnInq.Location = new System.Drawing.Point(765, 28);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInq.Location = new System.Drawing.Point(574, 22);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInq.Name = "btnInq";
-            this.btnInq.Size = new System.Drawing.Size(67, 35);
+            this.btnInq.Size = new System.Drawing.Size(50, 28);
             this.btnInq.TabIndex = 162;
             this.btnInq.Text = "查詢";
             this.btnInq.UseVisualStyleBackColor = false;
@@ -306,12 +316,12 @@
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.btnModify);
             this.groupBox2.Controls.Add(this.btnClose);
-            this.groupBox2.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(860, 300);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(645, 240);
             this.groupBox2.TabIndex = 129;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "資料建立";
@@ -319,28 +329,32 @@
             // chkOK
             // 
             this.chkOK.AutoSize = true;
-            this.chkOK.Location = new System.Drawing.Point(247, 36);
+            this.chkOK.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.chkOK.Location = new System.Drawing.Point(195, 29);
+            this.chkOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chkOK.Name = "chkOK";
-            this.chkOK.Size = new System.Drawing.Size(64, 21);
+            this.chkOK.Size = new System.Drawing.Size(52, 17);
             this.chkOK.TabIndex = 223;
             this.chkOK.Text = "完成";
             this.chkOK.UseVisualStyleBackColor = true;
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(110, 67);
+            this.txtItem.Location = new System.Drawing.Point(92, 54);
+            this.txtItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtItem.Multiline = true;
             this.txtItem.Name = "txtItem";
             this.txtItem.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtItem.Size = new System.Drawing.Size(582, 205);
+            this.txtItem.Size = new System.Drawing.Size(457, 165);
             this.txtItem.TabIndex = 163;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(6, 28);
+            this.label1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(4, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 34);
+            this.label1.Size = new System.Drawing.Size(83, 27);
             this.label1.TabIndex = 162;
             this.label1.Text = "日期：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -348,11 +362,12 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAdd.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAdd.Location = new System.Drawing.Point(765, 36);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnAdd.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnAdd.Location = new System.Drawing.Point(574, 26);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(67, 35);
+            this.btnAdd.Size = new System.Drawing.Size(50, 28);
             this.btnAdd.TabIndex = 152;
             this.btnAdd.Text = "新增";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -361,23 +376,24 @@
             // dtpDate
             // 
             this.dtpDate.CustomFormat = "yyyy/MM/dd";
-            this.dtpDate.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dtpDate.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDate.Location = new System.Drawing.Point(110, 33);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDate.Location = new System.Drawing.Point(92, 26);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShowUpDown = true;
-            this.dtpDate.Size = new System.Drawing.Size(116, 29);
+            this.dtpDate.Size = new System.Drawing.Size(88, 25);
             this.dtpDate.TabIndex = 161;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnDelete.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDelete.Location = new System.Drawing.Point(765, 126);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDelete.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.Location = new System.Drawing.Point(574, 106);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(67, 35);
+            this.btnDelete.Size = new System.Drawing.Size(50, 28);
             this.btnDelete.TabIndex = 141;
             this.btnDelete.Text = "刪除";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -385,10 +401,11 @@
             // 
             // label22
             // 
-            this.label22.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label22.Location = new System.Drawing.Point(6, 62);
+            this.label22.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label22.Location = new System.Drawing.Point(4, 50);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(98, 34);
+            this.label22.Size = new System.Drawing.Size(83, 27);
             this.label22.TabIndex = 155;
             this.label22.Text = "代辦事項：";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -396,11 +413,12 @@
             // btnModify
             // 
             this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnModify.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnModify.Location = new System.Drawing.Point(765, 80);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnModify.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnModify.Location = new System.Drawing.Point(574, 66);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(67, 35);
+            this.btnModify.Size = new System.Drawing.Size(50, 28);
             this.btnModify.TabIndex = 142;
             this.btnModify.Text = "修改";
             this.btnModify.UseVisualStyleBackColor = false;
@@ -409,11 +427,12 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnClose.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnClose.Location = new System.Drawing.Point(765, 170);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnClose.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(574, 146);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(67, 35);
+            this.btnClose.Size = new System.Drawing.Size(50, 28);
             this.btnClose.TabIndex = 153;
             this.btnClose.Text = "結束";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -421,11 +440,12 @@
             // 
             // frmTodo_List
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 603);
+            this.ClientSize = new System.Drawing.Size(646, 482);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmTodo_List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "待辦事項";

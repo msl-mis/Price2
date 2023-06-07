@@ -166,6 +166,20 @@ namespace Price2
             strOriginalArea = clsGlobal.strG_Area;
         }
 
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnOK.Focus();
+            }
+        }
 
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtPassword.Focus();
+            }
+        }
     }
 }

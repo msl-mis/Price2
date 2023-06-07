@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.radioTest = new System.Windows.Forms.RadioButton();
@@ -37,29 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox
-            // 
-            this.groupBox.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox.Controls.Add(this.btnClose);
-            this.groupBox.Controls.Add(this.btnOK);
-            this.groupBox.Controls.Add(this.radioTest);
-            this.groupBox.Controls.Add(this.radioOffical);
-            this.groupBox.Controls.Add(this.txtPassword);
-            this.groupBox.Controls.Add(this.label2);
-            this.groupBox.Controls.Add(this.txtUser);
-            this.groupBox.Controls.Add(this.label1);
-            this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(378, 231);
-            this.groupBox.TabIndex = 4;
-            this.groupBox.TabStop = false;
             // 
             // btnClose
             // 
@@ -67,10 +44,10 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(208, 184);
+            this.btnClose.Location = new System.Drawing.Point(206, 170);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(64, 32);
             this.btnClose.TabIndex = 119;
@@ -85,9 +62,9 @@
             this.btnOK.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnOK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnOK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnOK.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOK.Location = new System.Drawing.Point(97, 184);
+            this.btnOK.Location = new System.Drawing.Point(95, 170);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(64, 32);
             this.btnOK.TabIndex = 118;
@@ -100,7 +77,7 @@
             // 
             this.radioTest.AutoSize = true;
             this.radioTest.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioTest.Location = new System.Drawing.Point(208, 144);
+            this.radioTest.Location = new System.Drawing.Point(206, 130);
             this.radioTest.Margin = new System.Windows.Forms.Padding(2);
             this.radioTest.Name = "radioTest";
             this.radioTest.Size = new System.Drawing.Size(73, 20);
@@ -113,7 +90,7 @@
             this.radioOffical.AutoSize = true;
             this.radioOffical.Checked = true;
             this.radioOffical.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioOffical.Location = new System.Drawing.Point(88, 144);
+            this.radioOffical.Location = new System.Drawing.Point(86, 130);
             this.radioOffical.Margin = new System.Windows.Forms.Padding(2);
             this.radioOffical.Name = "radioOffical";
             this.radioOffical.Size = new System.Drawing.Size(73, 20);
@@ -125,16 +102,17 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPassword.Location = new System.Drawing.Point(150, 96);
+            this.txtPassword.Location = new System.Drawing.Point(148, 82);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(145, 27);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(59, 96);
+            this.label2.Location = new System.Drawing.Point(57, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 25);
             this.label2.TabIndex = 9;
@@ -144,15 +122,16 @@
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtUser.Location = new System.Drawing.Point(150, 40);
+            this.txtUser.Location = new System.Drawing.Point(148, 26);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(145, 27);
             this.txtUser.TabIndex = 8;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(59, 40);
+            this.label1.Location = new System.Drawing.Point(57, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 7;
@@ -163,24 +142,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(378, 231);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(373, 227);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.radioTest);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.radioOffical);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUserLoginChange";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "其他用戶登入系統";
             this.Activated += new System.EventHandler(this.frmUserLoginChange_Activated);
-            this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUser;

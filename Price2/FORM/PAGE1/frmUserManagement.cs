@@ -589,6 +589,36 @@ namespace Price2
             }
         }
 
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtName.Focus();
+            }
+        }
 
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtBusinessCode.Focus();
+            }
+        }
+
+        private void txtBusinessCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtDepartment.Focus();
+            }
+        }
+
+        private void txtDepartment_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSave.Focus();
+            }
+        }
     }
 }

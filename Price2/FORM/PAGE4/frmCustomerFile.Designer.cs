@@ -253,7 +253,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel3.Controls.Add(this.radioAdjustment, 4, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtSpecify, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.radioSpecify, 1, 0);
@@ -341,7 +341,7 @@
             this.txtDigit.Location = new System.Drawing.Point(556, 3);
             this.txtDigit.Margin = new System.Windows.Forms.Padding(2);
             this.txtDigit.Name = "txtDigit";
-            this.txtDigit.Size = new System.Drawing.Size(58, 23);
+            this.txtDigit.Size = new System.Drawing.Size(59, 23);
             this.txtDigit.TabIndex = 150;
             this.txtDigit.Text = "2";
             // 

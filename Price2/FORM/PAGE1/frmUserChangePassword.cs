@@ -68,6 +68,40 @@ namespace Price2
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void txtOldPwd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNewPwd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOldPwd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                txtNewPwd.Focus();
+            }
+        }
+
+        private void txtNewPwd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnSave.Focus();
+            }
+        }
     }
 }

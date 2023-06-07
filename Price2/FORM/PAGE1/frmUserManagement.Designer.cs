@@ -45,13 +45,13 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.chk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.mod_dispflag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod_modulename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod_menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod_orderflag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +121,7 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Location = new System.Drawing.Point(179, 245);
@@ -138,7 +138,7 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Location = new System.Drawing.Point(124, 245);
@@ -155,7 +155,7 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear.ForeColor = System.Drawing.Color.Black;
             this.btnClear.Location = new System.Drawing.Point(69, 245);
@@ -172,7 +172,7 @@
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSave.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(14, 245);
@@ -203,6 +203,7 @@
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Size = new System.Drawing.Size(125, 27);
             this.txtDepartment.TabIndex = 12;
+            this.txtDepartment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDepartment_KeyPress);
             // 
             // label5
             // 
@@ -223,6 +224,7 @@
             this.txtBusinessCode.Name = "txtBusinessCode";
             this.txtBusinessCode.Size = new System.Drawing.Size(125, 27);
             this.txtBusinessCode.TabIndex = 10;
+            this.txtBusinessCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusinessCode_KeyPress);
             // 
             // label4
             // 
@@ -243,6 +245,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(125, 27);
             this.txtName.TabIndex = 8;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // label3
             // 
@@ -263,6 +266,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(125, 27);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // label2
             // 
@@ -299,27 +303,6 @@
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(471, 392);
             this.dgvUser.TabIndex = 4;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtUserName.Location = new System.Drawing.Point(108, 36);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(125, 27);
-            this.txtUserName.TabIndex = 3;
-            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(5, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 27);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "用戶名：";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // chk
             // 
@@ -368,6 +351,27 @@
             this.mod_orderflag.Name = "mod_orderflag";
             this.mod_orderflag.ReadOnly = true;
             this.mod_orderflag.Visible = false;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtUserName.Location = new System.Drawing.Point(108, 36);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(125, 27);
+            this.txtUserName.TabIndex = 3;
+            this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(5, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 27);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "用戶名：";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmUserManagement
             // 

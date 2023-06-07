@@ -61,9 +61,9 @@
             this.groupBox.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.ForeColor = System.Drawing.Color.Fuchsia;
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(366, 302);
             this.groupBox.TabIndex = 2;
             this.groupBox.TabStop = false;
@@ -85,7 +85,7 @@
             // 
             this.txtCapital.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCapital.Location = new System.Drawing.Point(109, 96);
-            this.txtCapital.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCapital.Margin = new System.Windows.Forms.Padding(2);
             this.txtCapital.Name = "txtCapital";
             this.txtCapital.Size = new System.Drawing.Size(207, 27);
             this.txtCapital.TabIndex = 41;
@@ -106,7 +106,7 @@
             // 
             this.txtBankInfo.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtBankInfo.Location = new System.Drawing.Point(109, 144);
-            this.txtBankInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBankInfo.Margin = new System.Windows.Forms.Padding(2);
             this.txtBankInfo.Name = "txtBankInfo";
             this.txtBankInfo.Size = new System.Drawing.Size(207, 27);
             this.txtBankInfo.TabIndex = 39;
@@ -127,7 +127,7 @@
             // 
             this.txtBankAccount.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtBankAccount.Location = new System.Drawing.Point(109, 192);
-            this.txtBankAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBankAccount.Margin = new System.Windows.Forms.Padding(2);
             this.txtBankAccount.Name = "txtBankAccount";
             this.txtBankAccount.Size = new System.Drawing.Size(207, 27);
             this.txtBankAccount.TabIndex = 37;
@@ -150,7 +150,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.ForeColor = System.Drawing.Color.Black;
             this.btnClear.Location = new System.Drawing.Point(143, 250);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(63, 34);
             this.btnClear.TabIndex = 19;
@@ -162,7 +162,7 @@
             // 
             this.txtPrincipal.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtPrincipal.Location = new System.Drawing.Point(109, 48);
-            this.txtPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrincipal.Name = "txtPrincipal";
             this.txtPrincipal.Size = new System.Drawing.Size(207, 27);
             this.txtPrincipal.TabIndex = 3;
@@ -173,7 +173,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Location = new System.Drawing.Point(226, 250);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(63, 34);
             this.btnClose.TabIndex = 20;
@@ -187,7 +187,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Location = new System.Drawing.Point(60, 250);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(63, 34);
             this.btnSave.TabIndex = 14;
@@ -202,7 +202,7 @@
             this.ClientSize = new System.Drawing.Size(366, 302);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCustomer_BankInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "客戶銀行資料輸入";
