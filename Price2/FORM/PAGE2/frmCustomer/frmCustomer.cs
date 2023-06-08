@@ -33,6 +33,7 @@ namespace Price2
             //要加入初始化的東西
             try
             {
+                txtCustomerID.Focus();
                 lblYwName.Text = "";
                 cboCode.Items.Clear();
                 //cboCountry.Items.Clear();
@@ -594,5 +595,54 @@ namespace Price2
                 btnClear_Click(null, null);
             }
         }
+
+        private void txtShortName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtDigiwinID.Focus();
+            }
+        }
+
+        private void txtDigiwinID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTel1.Focus();
+            }
+        }
+
+        private void txtTel1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtTel2.Focus();
+            }
+        }
+
+        private void txtTel2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtFax1.Focus();
+            }
+        }
+
+        private void txtFax1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtFax2.Focus();
+            }
+        }
+
+        private void txtFax2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtEmail.Focus();
+            }
+        }
+
     }
 }

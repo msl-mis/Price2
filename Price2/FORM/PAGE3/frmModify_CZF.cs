@@ -225,6 +225,35 @@ namespace Price2
             }
         }
 
-        
+        private void frmModify_CZF_Activated(object sender, EventArgs e)
+        {
+            string strSQL = "";
+            DataTable dt = new DataTable();
+
+            strSQL = $@"select distinct odi_customerid 客號,
+                                            odi_customer   客戶,
+                                            odi_line       線路,
+                                            pri_length     線長,
+                                            odi_pripart01  裝材料,
+                                            odi_priqty01   裝數量,
+                                            odi_pripart05  運材料,
+                                            odi_priqty05   運數量
+                            from   pri,
+                                   odi,
+                                   ord
+                            where  1! = 1 ";
+
+            dt = clsDB.sql_select_dt(strSQL);
+            if (dt.Rows.Count > 0)
+            {
+                lblCount.Text = "資料筆數：" + dt.Rows.Count.ToString();
+                dgvData.DataSource = dt;
+            }
+            else
+            {
+                lblCount.Text = "資料筆數：0";
+                dgvData.DataSource = dt;
+            }
+        }
     }
 }

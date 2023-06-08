@@ -138,10 +138,9 @@
             // 
             this.btnInq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInq.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnInq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnInq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnInq.Location = new System.Drawing.Point(395, 22);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq.Location = new System.Drawing.Point(394, 23);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(30, 24);
             this.btnInq.TabIndex = 4;
@@ -155,7 +154,7 @@
             this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnPrint.Location = new System.Drawing.Point(463, 346);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
@@ -172,7 +171,7 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnDelete.Location = new System.Drawing.Point(390, 346);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
@@ -189,7 +188,7 @@
             this.btnCopy.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCopy.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnCopy.Location = new System.Drawing.Point(317, 346);
             this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
@@ -206,7 +205,7 @@
             this.btnRename.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRename.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnRename.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRename.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnRename.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnRename.Location = new System.Drawing.Point(244, 346);
             this.btnRename.Margin = new System.Windows.Forms.Padding(2);
@@ -223,7 +222,7 @@
             this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnClear.Location = new System.Drawing.Point(171, 346);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2);
@@ -547,7 +546,7 @@
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnClose.Location = new System.Drawing.Point(536, 346);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
@@ -564,7 +563,7 @@
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(179)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSave.ForeColor = System.Drawing.SystemColors.WindowText;
             this.btnSave.Location = new System.Drawing.Point(98, 346);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);

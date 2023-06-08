@@ -158,5 +158,37 @@ namespace Price2
                 }
             }
         }
+
+        private void txtID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnInq.Focus();
+            }
+        }
+
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnInq.Focus();
+            }
+        }
+
+        private void txtName_TW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnInq.Focus();
+            }
+        }
+
+        private void txtName_CN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnInq.Focus();
+            }
+        }
     }
 }

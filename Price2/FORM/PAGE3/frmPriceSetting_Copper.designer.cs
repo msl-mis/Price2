@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
@@ -44,23 +44,38 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvOrder = new System.Windows.Forms.DataGridView();
+            this.採購日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.採購單號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.廠商 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.規格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.銅價未稅 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.金額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClear_Order = new System.Windows.Forms.Button();
             this.btnInq_Order = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtRMB_working = new System.Windows.Forms.TextBox();
+            this.txtUSD_working = new System.Windows.Forms.TextBox();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnHistory = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtRMB_working = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtUSD_working = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSHFE = new System.Windows.Forms.TextBox();
+            this.txtLME = new System.Windows.Forms.TextBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.lblSHFE_avg = new System.Windows.Forms.Label();
             this.lblLME_avg = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvPrice = new System.Windows.Forms.DataGridView();
+            this.日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LME銅板現貨 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SHFE銅板現貨 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.修改人員 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.create_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label19 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.btnClear_Price = new System.Windows.Forms.Button();
@@ -68,9 +83,7 @@
             this.btnDelete_Price = new System.Windows.Forms.Button();
             this.btnAdd_Price = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtSHFE = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtLME = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpAvgDate = new System.Windows.Forms.DateTimePicker();
@@ -96,19 +109,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.採購日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.採購單號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.廠商 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.規格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.銅價未稅 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.金額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.備註 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LME銅板現貨 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SHFE銅板現貨 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.修改人員 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.create_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -131,9 +131,9 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 10F);
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(796, 569);
             this.groupBox.TabIndex = 8;
             this.groupBox.TabStop = false;
@@ -150,9 +150,9 @@
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox3.Location = new System.Drawing.Point(4, 356);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(795, 222);
             this.groupBox3.TabIndex = 130;
             this.groupBox3.TabStop = false;
@@ -164,7 +164,7 @@
             this.dtpOrderDate.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpOrderDate.Location = new System.Drawing.Point(121, 18);
-            this.dtpOrderDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpOrderDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpOrderDate.Name = "dtpOrderDate";
             this.dtpOrderDate.ShowUpDown = true;
             this.dtpOrderDate.Size = new System.Drawing.Size(84, 25);
@@ -176,7 +176,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(711, 180);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(52, 27);
             this.btnClose.TabIndex = 165;
@@ -201,7 +201,7 @@
             this.panel3.Controls.Add(this.dgvOrder);
             this.panel3.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel3.Location = new System.Drawing.Point(4, 46);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(765, 130);
             this.panel3.TabIndex = 163;
@@ -241,7 +241,7 @@
             this.dgvOrder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrder.EnableHeadersVisualStyles = false;
             this.dgvOrder.Location = new System.Drawing.Point(0, 0);
-            this.dgvOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvOrder.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOrder.Name = "dgvOrder";
             this.dgvOrder.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -258,12 +258,103 @@
             this.dgvOrder.Size = new System.Drawing.Size(765, 130);
             this.dgvOrder.TabIndex = 164;
             // 
+            // 採購日期
+            // 
+            this.採購日期.DataPropertyName = "採購日期";
+            this.採購日期.FillWeight = 150F;
+            this.採購日期.HeaderText = "採購日期";
+            this.採購日期.MinimumWidth = 125;
+            this.採購日期.Name = "採購日期";
+            this.採購日期.ReadOnly = true;
+            this.採購日期.Width = 125;
+            // 
+            // 採購單號
+            // 
+            this.採購單號.DataPropertyName = "採購單號";
+            this.採購單號.FillWeight = 120F;
+            this.採購單號.HeaderText = "採購單號";
+            this.採購單號.MinimumWidth = 100;
+            this.採購單號.Name = "採購單號";
+            this.採購單號.ReadOnly = true;
+            this.採購單號.Width = 120;
+            // 
+            // 廠商
+            // 
+            this.廠商.DataPropertyName = "廠商";
+            this.廠商.FillWeight = 150F;
+            this.廠商.HeaderText = "廠商";
+            this.廠商.MinimumWidth = 100;
+            this.廠商.Name = "廠商";
+            this.廠商.ReadOnly = true;
+            this.廠商.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.廠商.Width = 125;
+            // 
+            // 規格
+            // 
+            this.規格.DataPropertyName = "規格";
+            this.規格.FillWeight = 150F;
+            this.規格.HeaderText = "規格";
+            this.規格.MinimumWidth = 125;
+            this.規格.Name = "規格";
+            this.規格.ReadOnly = true;
+            this.規格.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.規格.Width = 125;
+            // 
+            // 銅價未稅
+            // 
+            this.銅價未稅.DataPropertyName = "銅價未稅";
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.銅價未稅.DefaultCellStyle = dataGridViewCellStyle2;
+            this.銅價未稅.FillWeight = 150F;
+            this.銅價未稅.HeaderText = "銅價未稅/kg";
+            this.銅價未稅.MinimumWidth = 100;
+            this.銅價未稅.Name = "銅價未稅";
+            this.銅價未稅.ReadOnly = true;
+            this.銅價未稅.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // 數量
+            // 
+            this.數量.DataPropertyName = "數量";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.數量.DefaultCellStyle = dataGridViewCellStyle3;
+            this.數量.FillWeight = 150F;
+            this.數量.HeaderText = "數量/kg";
+            this.數量.MinimumWidth = 100;
+            this.數量.Name = "數量";
+            this.數量.ReadOnly = true;
+            this.數量.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // 金額
+            // 
+            this.金額.DataPropertyName = "金額";
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = null;
+            this.金額.DefaultCellStyle = dataGridViewCellStyle4;
+            this.金額.FillWeight = 150F;
+            this.金額.HeaderText = "金額(NTD)";
+            this.金額.MinimumWidth = 100;
+            this.金額.Name = "金額";
+            this.金額.ReadOnly = true;
+            // 
+            // 備註
+            // 
+            this.備註.DataPropertyName = "備註";
+            this.備註.FillWeight = 334F;
+            this.備註.HeaderText = "備註";
+            this.備註.MinimumWidth = 334;
+            this.備註.Name = "備註";
+            this.備註.ReadOnly = true;
+            this.備註.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.備註.Width = 334;
+            // 
             // btnClear_Order
             // 
             this.btnClear_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClear_Order.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear_Order.Location = new System.Drawing.Point(278, 19);
-            this.btnClear_Order.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear_Order.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear_Order.Name = "btnClear_Order";
             this.btnClear_Order.Size = new System.Drawing.Size(50, 25);
             this.btnClear_Order.TabIndex = 159;
@@ -276,7 +367,7 @@
             this.btnInq_Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnInq_Order.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq_Order.Location = new System.Drawing.Point(215, 19);
-            this.btnInq_Order.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq_Order.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq_Order.Name = "btnInq_Order";
             this.btnInq_Order.Size = new System.Drawing.Size(50, 25);
             this.btnInq_Order.TabIndex = 162;
@@ -302,9 +393,9 @@
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox2.Location = new System.Drawing.Point(439, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(360, 352);
             this.groupBox2.TabIndex = 129;
             this.groupBox2.TabStop = false;
@@ -319,17 +410,37 @@
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Location = new System.Drawing.Point(8, 287);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(343, 60);
             this.panel2.TabIndex = 155;
+            // 
+            // txtRMB_working
+            // 
+            this.txtRMB_working.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRMB_working.Location = new System.Drawing.Point(103, 28);
+            this.txtRMB_working.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRMB_working.Name = "txtRMB_working";
+            this.txtRMB_working.Size = new System.Drawing.Size(83, 26);
+            this.txtRMB_working.TabIndex = 150;
+            this.txtRMB_working.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtUSD_working
+            // 
+            this.txtUSD_working.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUSD_working.Location = new System.Drawing.Point(16, 28);
+            this.txtUSD_working.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUSD_working.Name = "txtUSD_working";
+            this.txtUSD_working.Size = new System.Drawing.Size(83, 26);
+            this.txtUSD_working.TabIndex = 148;
+            this.txtUSD_working.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnModify
             // 
             this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnModify.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModify.Location = new System.Drawing.Point(202, 22);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(52, 28);
             this.btnModify.TabIndex = 142;
@@ -342,7 +453,7 @@
             this.btnHistory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnHistory.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.Location = new System.Drawing.Point(258, 22);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(65, 28);
             this.btnHistory.TabIndex = 152;
@@ -361,16 +472,6 @@
             this.label16.Text = "RMB加工費/T";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtRMB_working
-            // 
-            this.txtRMB_working.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRMB_working.Location = new System.Drawing.Point(103, 28);
-            this.txtRMB_working.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtRMB_working.Name = "txtRMB_working";
-            this.txtRMB_working.Size = new System.Drawing.Size(83, 26);
-            this.txtRMB_working.TabIndex = 150;
-            this.txtRMB_working.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -381,16 +482,6 @@
             this.label17.TabIndex = 149;
             this.label17.Text = "USD加工費/T";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtUSD_working
-            // 
-            this.txtUSD_working.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUSD_working.Location = new System.Drawing.Point(16, 28);
-            this.txtUSD_working.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtUSD_working.Name = "txtUSD_working";
-            this.txtUSD_working.Size = new System.Drawing.Size(83, 26);
-            this.txtUSD_working.TabIndex = 148;
-            this.txtUSD_working.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -411,10 +502,30 @@
             this.panel1.Controls.Add(this.label15);
             this.panel1.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel1.Location = new System.Drawing.Point(8, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 276);
             this.panel1.TabIndex = 130;
+            // 
+            // txtSHFE
+            // 
+            this.txtSHFE.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSHFE.Location = new System.Drawing.Point(197, 29);
+            this.txtSHFE.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSHFE.Name = "txtSHFE";
+            this.txtSHFE.Size = new System.Drawing.Size(64, 25);
+            this.txtSHFE.TabIndex = 150;
+            this.txtSHFE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtLME
+            // 
+            this.txtLME.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLME.Location = new System.Drawing.Point(112, 29);
+            this.txtLME.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLME.Name = "txtLME";
+            this.txtLME.Size = new System.Drawing.Size(76, 25);
+            this.txtLME.TabIndex = 148;
+            this.txtLME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtpDate
             // 
@@ -422,7 +533,7 @@
             this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(16, 27);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShowUpDown = true;
             this.dtpDate.Size = new System.Drawing.Size(88, 25);
@@ -457,7 +568,7 @@
             this.panel4.Controls.Add(this.dgvPrice);
             this.panel4.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel4.Location = new System.Drawing.Point(16, 59);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(265, 174);
             this.panel4.TabIndex = 158;
@@ -495,7 +606,7 @@
             this.dgvPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPrice.EnableHeadersVisualStyles = false;
             this.dgvPrice.Location = new System.Drawing.Point(0, 0);
-            this.dgvPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPrice.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -513,6 +624,56 @@
             this.dgvPrice.Size = new System.Drawing.Size(265, 174);
             this.dgvPrice.TabIndex = 159;
             this.dgvPrice.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrice_CellDoubleClick);
+            // 
+            // 日期
+            // 
+            this.日期.DataPropertyName = "日期";
+            this.日期.FillWeight = 120F;
+            this.日期.HeaderText = "日期";
+            this.日期.MinimumWidth = 20;
+            this.日期.Name = "日期";
+            this.日期.ReadOnly = true;
+            this.日期.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // LME銅板現貨
+            // 
+            this.LME銅板現貨.DataPropertyName = "LME銅板現貨";
+            this.LME銅板現貨.FillWeight = 120F;
+            this.LME銅板現貨.HeaderText = "LME銅板現貨";
+            this.LME銅板現貨.MinimumWidth = 20;
+            this.LME銅板現貨.Name = "LME銅板現貨";
+            this.LME銅板現貨.ReadOnly = true;
+            this.LME銅板現貨.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SHFE銅板現貨
+            // 
+            this.SHFE銅板現貨.DataPropertyName = "SHFE銅板現貨";
+            this.SHFE銅板現貨.FillWeight = 120F;
+            this.SHFE銅板現貨.HeaderText = "SHFE銅板現貨";
+            this.SHFE銅板現貨.MinimumWidth = 20;
+            this.SHFE銅板現貨.Name = "SHFE銅板現貨";
+            this.SHFE銅板現貨.ReadOnly = true;
+            this.SHFE銅板現貨.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // 修改人員
+            // 
+            this.修改人員.DataPropertyName = "修改人員";
+            this.修改人員.HeaderText = "修改人員";
+            this.修改人員.MinimumWidth = 20;
+            this.修改人員.Name = "修改人員";
+            this.修改人員.ReadOnly = true;
+            this.修改人員.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.修改人員.Width = 70;
+            // 
+            // create_date
+            // 
+            this.create_date.DataPropertyName = "create_date";
+            this.create_date.HeaderText = "create_date";
+            this.create_date.MinimumWidth = 6;
+            this.create_date.Name = "create_date";
+            this.create_date.ReadOnly = true;
+            this.create_date.Visible = false;
+            this.create_date.Width = 84;
             // 
             // label19
             // 
@@ -541,7 +702,7 @@
             this.btnClear_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClear_Price.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear_Price.Location = new System.Drawing.Point(285, 170);
-            this.btnClear_Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear_Price.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear_Price.Name = "btnClear_Price";
             this.btnClear_Price.Size = new System.Drawing.Size(50, 31);
             this.btnClear_Price.TabIndex = 153;
@@ -554,7 +715,7 @@
             this.btnModify_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnModify_Price.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnModify_Price.Location = new System.Drawing.Point(285, 98);
-            this.btnModify_Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModify_Price.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify_Price.Name = "btnModify_Price";
             this.btnModify_Price.Size = new System.Drawing.Size(50, 31);
             this.btnModify_Price.TabIndex = 142;
@@ -567,7 +728,7 @@
             this.btnDelete_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDelete_Price.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnDelete_Price.Location = new System.Drawing.Point(285, 134);
-            this.btnDelete_Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete_Price.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete_Price.Name = "btnDelete_Price";
             this.btnDelete_Price.Size = new System.Drawing.Size(50, 31);
             this.btnDelete_Price.TabIndex = 141;
@@ -580,7 +741,7 @@
             this.btnAdd_Price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAdd_Price.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnAdd_Price.Location = new System.Drawing.Point(285, 62);
-            this.btnAdd_Price.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd_Price.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd_Price.Name = "btnAdd_Price";
             this.btnAdd_Price.Size = new System.Drawing.Size(50, 31);
             this.btnAdd_Price.TabIndex = 152;
@@ -599,16 +760,6 @@
             this.label21.Text = "SHFE銅板    現貨";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSHFE
-            // 
-            this.txtSHFE.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSHFE.Location = new System.Drawing.Point(197, 29);
-            this.txtSHFE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtSHFE.Name = "txtSHFE";
-            this.txtSHFE.Size = new System.Drawing.Size(64, 25);
-            this.txtSHFE.TabIndex = 150;
-            this.txtSHFE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label20
             // 
             this.label20.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -619,16 +770,6 @@
             this.label20.TabIndex = 149;
             this.label20.Text = "LME銅板    現貨";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtLME
-            // 
-            this.txtLME.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLME.Location = new System.Drawing.Point(112, 29);
-            this.txtLME.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtLME.Name = "txtLME";
-            this.txtLME.Size = new System.Drawing.Size(76, 25);
-            this.txtLME.TabIndex = 148;
-            this.txtLME.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
@@ -669,9 +810,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(434, 353);
             this.groupBox1.TabIndex = 128;
             this.groupBox1.TabStop = false;
@@ -683,7 +824,7 @@
             this.dtpAvgDate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAvgDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpAvgDate.Location = new System.Drawing.Point(244, 14);
-            this.dtpAvgDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpAvgDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpAvgDate.Name = "dtpAvgDate";
             this.dtpAvgDate.ShowUpDown = true;
             this.dtpAvgDate.Size = new System.Drawing.Size(84, 25);
@@ -789,7 +930,7 @@
             this.btnInq_Avg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnInq_Avg.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq_Avg.Location = new System.Drawing.Point(331, 14);
-            this.btnInq_Avg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq_Avg.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq_Avg.Name = "btnInq_Avg";
             this.btnInq_Avg.Size = new System.Drawing.Size(50, 24);
             this.btnInq_Avg.TabIndex = 144;
@@ -804,7 +945,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnSave.Location = new System.Drawing.Point(345, 229);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 26);
             this.btnSave.TabIndex = 142;
@@ -832,7 +973,7 @@
             this.btnClear_Avg.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear_Avg.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear_Avg.Location = new System.Drawing.Point(285, 229);
-            this.btnClear_Avg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear_Avg.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear_Avg.Name = "btnClear_Avg";
             this.btnClear_Avg.Size = new System.Drawing.Size(50, 26);
             this.btnClear_Avg.TabIndex = 141;
@@ -879,7 +1020,7 @@
             // 
             this.txtAsp_czf.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAsp_czf.Location = new System.Drawing.Point(12, 227);
-            this.txtAsp_czf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAsp_czf.Margin = new System.Windows.Forms.Padding(2);
             this.txtAsp_czf.Multiline = true;
             this.txtAsp_czf.Name = "txtAsp_czf";
             this.txtAsp_czf.Size = new System.Drawing.Size(240, 110);
@@ -957,147 +1098,6 @@
             this.label1.Text = "銅桿OD2.6mm/kg";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // 採購日期
-            // 
-            this.採購日期.DataPropertyName = "採購日期";
-            this.採購日期.FillWeight = 150F;
-            this.採購日期.HeaderText = "採購日期";
-            this.採購日期.MinimumWidth = 125;
-            this.採購日期.Name = "採購日期";
-            this.採購日期.ReadOnly = true;
-            this.採購日期.Width = 125;
-            // 
-            // 採購單號
-            // 
-            this.採購單號.DataPropertyName = "採購單號";
-            this.採購單號.FillWeight = 120F;
-            this.採購單號.HeaderText = "採購單號";
-            this.採購單號.MinimumWidth = 100;
-            this.採購單號.Name = "採購單號";
-            this.採購單號.ReadOnly = true;
-            this.採購單號.Width = 120;
-            // 
-            // 廠商
-            // 
-            this.廠商.DataPropertyName = "廠商";
-            this.廠商.FillWeight = 150F;
-            this.廠商.HeaderText = "廠商";
-            this.廠商.MinimumWidth = 100;
-            this.廠商.Name = "廠商";
-            this.廠商.ReadOnly = true;
-            this.廠商.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.廠商.Width = 125;
-            // 
-            // 規格
-            // 
-            this.規格.DataPropertyName = "規格";
-            this.規格.FillWeight = 150F;
-            this.規格.HeaderText = "規格";
-            this.規格.MinimumWidth = 125;
-            this.規格.Name = "規格";
-            this.規格.ReadOnly = true;
-            this.規格.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.規格.Width = 125;
-            // 
-            // 銅價未稅
-            // 
-            this.銅價未稅.DataPropertyName = "銅價未稅";
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.銅價未稅.DefaultCellStyle = dataGridViewCellStyle2;
-            this.銅價未稅.FillWeight = 150F;
-            this.銅價未稅.HeaderText = "銅價未稅/kg";
-            this.銅價未稅.MinimumWidth = 100;
-            this.銅價未稅.Name = "銅價未稅";
-            this.銅價未稅.ReadOnly = true;
-            this.銅價未稅.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // 數量
-            // 
-            this.數量.DataPropertyName = "數量";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.數量.DefaultCellStyle = dataGridViewCellStyle3;
-            this.數量.FillWeight = 150F;
-            this.數量.HeaderText = "數量/kg";
-            this.數量.MinimumWidth = 100;
-            this.數量.Name = "數量";
-            this.數量.ReadOnly = true;
-            this.數量.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // 金額
-            // 
-            this.金額.DataPropertyName = "金額";
-            dataGridViewCellStyle4.Format = "N0";
-            dataGridViewCellStyle4.NullValue = null;
-            this.金額.DefaultCellStyle = dataGridViewCellStyle4;
-            this.金額.FillWeight = 150F;
-            this.金額.HeaderText = "金額(NTD)";
-            this.金額.MinimumWidth = 100;
-            this.金額.Name = "金額";
-            this.金額.ReadOnly = true;
-            // 
-            // 備註
-            // 
-            this.備註.DataPropertyName = "備註";
-            this.備註.FillWeight = 334F;
-            this.備註.HeaderText = "備註";
-            this.備註.MinimumWidth = 334;
-            this.備註.Name = "備註";
-            this.備註.ReadOnly = true;
-            this.備註.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.備註.Width = 334;
-            // 
-            // 日期
-            // 
-            this.日期.DataPropertyName = "日期";
-            this.日期.FillWeight = 120F;
-            this.日期.HeaderText = "日期";
-            this.日期.MinimumWidth = 20;
-            this.日期.Name = "日期";
-            this.日期.ReadOnly = true;
-            this.日期.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // LME銅板現貨
-            // 
-            this.LME銅板現貨.DataPropertyName = "LME銅板現貨";
-            this.LME銅板現貨.FillWeight = 120F;
-            this.LME銅板現貨.HeaderText = "LME銅板現貨";
-            this.LME銅板現貨.MinimumWidth = 20;
-            this.LME銅板現貨.Name = "LME銅板現貨";
-            this.LME銅板現貨.ReadOnly = true;
-            this.LME銅板現貨.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // SHFE銅板現貨
-            // 
-            this.SHFE銅板現貨.DataPropertyName = "SHFE銅板現貨";
-            this.SHFE銅板現貨.FillWeight = 120F;
-            this.SHFE銅板現貨.HeaderText = "SHFE銅板現貨";
-            this.SHFE銅板現貨.MinimumWidth = 20;
-            this.SHFE銅板現貨.Name = "SHFE銅板現貨";
-            this.SHFE銅板現貨.ReadOnly = true;
-            this.SHFE銅板現貨.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // 修改人員
-            // 
-            this.修改人員.DataPropertyName = "修改人員";
-            this.修改人員.HeaderText = "修改人員";
-            this.修改人員.MinimumWidth = 20;
-            this.修改人員.Name = "修改人員";
-            this.修改人員.ReadOnly = true;
-            this.修改人員.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.修改人員.Width = 70;
-            // 
-            // create_date
-            // 
-            this.create_date.DataPropertyName = "create_date";
-            this.create_date.HeaderText = "create_date";
-            this.create_date.MinimumWidth = 6;
-            this.create_date.Name = "create_date";
-            this.create_date.ReadOnly = true;
-            this.create_date.Visible = false;
-            this.create_date.Width = 84;
-            // 
             // frmPriceSetting_Copper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1105,7 +1105,7 @@
             this.ClientSize = new System.Drawing.Size(796, 569);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPriceSetting_Copper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "銅桿價設定";

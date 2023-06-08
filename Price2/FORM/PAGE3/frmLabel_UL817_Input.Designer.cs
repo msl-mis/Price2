@@ -67,7 +67,6 @@
             this.btnInq = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
             this.factory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.order_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,6 +84,7 @@
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.create_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -133,9 +133,9 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(1016, 522);
             this.groupBox.TabIndex = 10;
             this.groupBox.TabStop = false;
@@ -146,7 +146,7 @@
             this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnModify.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnModify.Location = new System.Drawing.Point(673, 84);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(51, 29);
             this.btnModify.TabIndex = 192;
@@ -156,16 +156,16 @@
             // 
             // txtType_Cordset
             // 
-            this.txtType_Cordset.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtType_Cordset.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtType_Cordset.Location = new System.Drawing.Point(570, 89);
-            this.txtType_Cordset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtType_Cordset.Margin = new System.Windows.Forms.Padding(2);
             this.txtType_Cordset.Name = "txtType_Cordset";
-            this.txtType_Cordset.Size = new System.Drawing.Size(76, 25);
+            this.txtType_Cordset.Size = new System.Drawing.Size(76, 23);
             this.txtType_Cordset.TabIndex = 191;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(492, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -176,16 +176,16 @@
             // 
             // txtType_100
             // 
-            this.txtType_100.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtType_100.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtType_100.Location = new System.Drawing.Point(412, 89);
-            this.txtType_100.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtType_100.Margin = new System.Windows.Forms.Padding(2);
             this.txtType_100.Name = "txtType_100";
-            this.txtType_100.Size = new System.Drawing.Size(76, 25);
+            this.txtType_100.Size = new System.Drawing.Size(76, 23);
             this.txtType_100.TabIndex = 189;
             // 
             // label26
             // 
-            this.label26.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label26.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label26.Location = new System.Drawing.Point(333, 88);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
@@ -196,16 +196,16 @@
             // 
             // txtType_50
             // 
-            this.txtType_50.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtType_50.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtType_50.Location = new System.Drawing.Point(254, 89);
-            this.txtType_50.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtType_50.Margin = new System.Windows.Forms.Padding(2);
             this.txtType_50.Name = "txtType_50";
-            this.txtType_50.Size = new System.Drawing.Size(76, 25);
+            this.txtType_50.Size = new System.Drawing.Size(76, 23);
             this.txtType_50.TabIndex = 187;
             // 
             // label27
             // 
-            this.label27.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label27.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label27.Location = new System.Drawing.Point(174, 88);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
@@ -216,16 +216,16 @@
             // 
             // txtType_25
             // 
-            this.txtType_25.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtType_25.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtType_25.Location = new System.Drawing.Point(94, 89);
-            this.txtType_25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtType_25.Margin = new System.Windows.Forms.Padding(2);
             this.txtType_25.Name = "txtType_25";
-            this.txtType_25.Size = new System.Drawing.Size(76, 25);
+            this.txtType_25.Size = new System.Drawing.Size(76, 23);
             this.txtType_25.TabIndex = 185;
             // 
             // label28
             // 
-            this.label28.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label28.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label28.Location = new System.Drawing.Point(15, 88);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
@@ -236,16 +236,16 @@
             // 
             // txtHandling
             // 
-            this.txtHandling.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtHandling.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtHandling.Location = new System.Drawing.Point(570, 53);
-            this.txtHandling.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHandling.Margin = new System.Windows.Forms.Padding(2);
             this.txtHandling.Name = "txtHandling";
-            this.txtHandling.Size = new System.Drawing.Size(76, 25);
+            this.txtHandling.Size = new System.Drawing.Size(76, 23);
             this.txtHandling.TabIndex = 183;
             // 
             // label25
             // 
-            this.label25.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label25.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label25.Location = new System.Drawing.Point(492, 52);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
@@ -256,16 +256,16 @@
             // 
             // txtShipping
             // 
-            this.txtShipping.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtShipping.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtShipping.Location = new System.Drawing.Point(412, 53);
-            this.txtShipping.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtShipping.Margin = new System.Windows.Forms.Padding(2);
             this.txtShipping.Name = "txtShipping";
-            this.txtShipping.Size = new System.Drawing.Size(76, 25);
+            this.txtShipping.Size = new System.Drawing.Size(76, 23);
             this.txtShipping.TabIndex = 181;
             // 
             // label24
             // 
-            this.label24.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label24.Location = new System.Drawing.Point(333, 52);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
@@ -276,16 +276,16 @@
             // 
             // txtPurprice
             // 
-            this.txtPurprice.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPurprice.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtPurprice.Location = new System.Drawing.Point(254, 53);
-            this.txtPurprice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPurprice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPurprice.Name = "txtPurprice";
-            this.txtPurprice.Size = new System.Drawing.Size(76, 25);
+            this.txtPurprice.Size = new System.Drawing.Size(76, 23);
             this.txtPurprice.TabIndex = 179;
             // 
             // label23
             // 
-            this.label23.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label23.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label23.Location = new System.Drawing.Point(174, 52);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
@@ -296,16 +296,16 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtQuantity.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtQuantity.Location = new System.Drawing.Point(94, 53);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(76, 25);
+            this.txtQuantity.Size = new System.Drawing.Size(76, 23);
             this.txtQuantity.TabIndex = 177;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.Location = new System.Drawing.Point(0, 52);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -316,15 +316,15 @@
             // 
             // cboType
             // 
-            this.cboType.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cboType.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboType.FormattingEnabled = true;
             this.cboType.Items.AddRange(new object[] {
             "外箱標籤",
             "CORD SET"});
             this.cboType.Location = new System.Drawing.Point(416, 18);
-            this.cboType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboType.Margin = new System.Windows.Forms.Padding(2);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(230, 22);
+            this.cboType.Size = new System.Drawing.Size(230, 21);
             this.cboType.TabIndex = 175;
             this.cboType.TextChanged += new System.EventHandler(this.cboType_TextChanged);
             // 
@@ -333,7 +333,7 @@
             this.dtpDateE.CustomFormat = "yyyy/MM/dd";
             this.dtpDateE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateE.Location = new System.Drawing.Point(564, 126);
-            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateE.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateE.Name = "dtpDateE";
             this.dtpDateE.ShowUpDown = true;
             this.dtpDateE.Size = new System.Drawing.Size(84, 23);
@@ -355,7 +355,7 @@
             this.dtpDateS.CustomFormat = "yyyy/MM/dd";
             this.dtpDateS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDateS.Location = new System.Drawing.Point(450, 126);
-            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDateS.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDateS.Name = "dtpDateS";
             this.dtpDateS.ShowUpDown = true;
             this.dtpDateS.Size = new System.Drawing.Size(84, 23);
@@ -363,7 +363,7 @@
             // 
             // label21
             // 
-            this.label21.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label21.Location = new System.Drawing.Point(371, 124);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
@@ -374,16 +374,16 @@
             // 
             // txtNote
             // 
-            this.txtNote.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtNote.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtNote.Location = new System.Drawing.Point(94, 125);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(2);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(273, 25);
+            this.txtNote.Size = new System.Drawing.Size(273, 23);
             this.txtNote.TabIndex = 170;
             // 
             // label20
             // 
-            this.label20.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label20.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label20.Location = new System.Drawing.Point(45, 124);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
@@ -395,9 +395,10 @@
             // dtpDate
             // 
             this.dtpDate.CustomFormat = "yyyy/MM/dd";
+            this.dtpDate.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(235, 18);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShowUpDown = true;
             this.dtpDate.Size = new System.Drawing.Size(84, 23);
@@ -405,7 +406,7 @@
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label17.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label17.Location = new System.Drawing.Point(155, 16);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
@@ -416,7 +417,7 @@
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label16.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label16.Location = new System.Drawing.Point(322, 16);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
@@ -427,16 +428,16 @@
             // 
             // cboFactory
             // 
-            this.cboFactory.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cboFactory.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboFactory.FormattingEnabled = true;
             this.cboFactory.Items.AddRange(new object[] {
             "CN",
             "VN",
             "兩廠"});
             this.cboFactory.Location = new System.Drawing.Point(94, 18);
-            this.cboFactory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboFactory.Margin = new System.Windows.Forms.Padding(2);
             this.cboFactory.Name = "cboFactory";
-            this.cboFactory.Size = new System.Drawing.Size(57, 22);
+            this.cboFactory.Size = new System.Drawing.Size(57, 21);
             this.cboFactory.TabIndex = 142;
             // 
             // btnPrint
@@ -445,7 +446,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPrint.Location = new System.Drawing.Point(728, 52);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(51, 29);
             this.btnPrint.TabIndex = 140;
@@ -459,7 +460,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDelete.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnDelete.Location = new System.Drawing.Point(673, 117);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(51, 29);
             this.btnDelete.TabIndex = 139;
@@ -473,7 +474,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAdd.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnAdd.Location = new System.Drawing.Point(673, 52);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(51, 29);
             this.btnAdd.TabIndex = 138;
@@ -483,7 +484,7 @@
             // 
             // lblCount
             // 
-            this.lblCount.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblCount.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblCount.ForeColor = System.Drawing.Color.Blue;
             this.lblCount.Location = new System.Drawing.Point(790, 133);
             this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -500,7 +501,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(728, 84);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(51, 29);
             this.btnClose.TabIndex = 99;
@@ -514,7 +515,7 @@
             this.btnInq.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnInq.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq.Location = new System.Drawing.Point(673, 19);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(51, 29);
             this.btnInq.TabIndex = 93;
@@ -528,7 +529,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear.Location = new System.Drawing.Point(728, 19);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(51, 29);
             this.btnClear.TabIndex = 92;
@@ -571,7 +572,7 @@
             this.create_date});
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(17, 159);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -591,17 +592,6 @@
             this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             this.dgvData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvData_KeyDown);
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(45, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 25);
-            this.label4.TabIndex = 107;
-            this.label4.Text = "廠區";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // factory
             // 
@@ -787,6 +777,17 @@
             this.create_date.Visible = false;
             this.create_date.Width = 108;
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(45, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 25);
+            this.label4.TabIndex = 107;
+            this.label4.Text = "廠區";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmLabel_UL817_Input
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -794,7 +795,7 @@
             this.ClientSize = new System.Drawing.Size(1016, 522);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLabel_UL817_Input";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UL817標籤數量與價格登錄";

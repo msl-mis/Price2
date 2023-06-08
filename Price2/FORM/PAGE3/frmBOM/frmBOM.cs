@@ -772,5 +772,14 @@ namespace Price2
         {
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            txtPurprice.Text = "";
+            txtTbprice.Text = "";
+            txtCurrency.Text = "";
+            txtVendorid.Text = "";
+        }
     }
 }

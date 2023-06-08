@@ -73,13 +73,13 @@ namespace Price2
                 }
                 else
                 {
-                    strWhere = $@"tel_name like'%{txtKey.Text.Trim()}%' 
+                    strWhere = $@"(tel_name like'%{txtKey.Text.Trim()}%' 
                                     or tel_twphone like'%{txtKey.Text.Trim()}%' 
                                     or tel_twfax like'%{txtKey.Text.Trim()}%' 
                                     or tel_twmobile like'%{txtKey.Text.Trim()}%' 
                                     or tel_dlphone like'%{txtKey.Text.Trim()}%' 
                                     or tel_dlfax like'%{txtKey.Text.Trim()}%' 
-                                    or tel_dlmobile like'%{txtKey.Text.Trim()}%' ";
+                                    or tel_dlmobile like'%{txtKey.Text.Trim()}%') ";
                     //or tel_dlemail like'%{txtKey.Text.Trim()}%' 
                     //or tel_twemail like'%{txtKey.Text.Trim()}%' 
                     //or tel_twaddress like'%{txtKey.Text.Trim()}%' 
@@ -277,6 +277,14 @@ namespace Price2
             //frmTelephone frmTelephone ;
             frmTelephone.strName = dgvData.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.Close();
+        }
+
+        private void txtKey_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnInq.Focus();
+            }
         }
     }
 }

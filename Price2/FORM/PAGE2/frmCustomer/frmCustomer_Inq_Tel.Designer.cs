@@ -31,15 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTel = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnInq = new System.Windows.Forms.Button();
             this.cus_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cus_yw = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnInq = new System.Windows.Forms.Button();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,51 @@
             this.dgvData.TabIndex = 50;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
+            // cus_id
+            // 
+            this.cus_id.DataPropertyName = "cus_id";
+            this.cus_id.FillWeight = 150F;
+            this.cus_id.HeaderText = "客戶編號";
+            this.cus_id.MinimumWidth = 110;
+            this.cus_id.Name = "cus_id";
+            this.cus_id.ReadOnly = true;
+            // 
+            // cus_name
+            // 
+            this.cus_name.DataPropertyName = "cus_name";
+            this.cus_name.FillWeight = 200F;
+            this.cus_name.HeaderText = "客戶名稱";
+            this.cus_name.MinimumWidth = 170;
+            this.cus_name.Name = "cus_name";
+            this.cus_name.ReadOnly = true;
+            // 
+            // cus_contact
+            // 
+            this.cus_contact.DataPropertyName = "cus_contact";
+            this.cus_contact.FillWeight = 150F;
+            this.cus_contact.HeaderText = "聯絡人";
+            this.cus_contact.MinimumWidth = 125;
+            this.cus_contact.Name = "cus_contact";
+            this.cus_contact.ReadOnly = true;
+            // 
+            // cus_tel
+            // 
+            this.cus_tel.DataPropertyName = "cus_tel";
+            this.cus_tel.FillWeight = 200F;
+            this.cus_tel.HeaderText = "電話";
+            this.cus_tel.MinimumWidth = 150;
+            this.cus_tel.Name = "cus_tel";
+            this.cus_tel.ReadOnly = true;
+            // 
+            // cus_yw
+            // 
+            this.cus_yw.DataPropertyName = "cus_yw";
+            this.cus_yw.FillWeight = 120F;
+            this.cus_yw.HeaderText = "業務";
+            this.cus_yw.MinimumWidth = 100;
+            this.cus_yw.Name = "cus_yw";
+            this.cus_yw.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -144,51 +189,6 @@
             this.btnInq.UseVisualStyleBackColor = false;
             this.btnInq.Click += new System.EventHandler(this.btnInq_Click);
             // 
-            // cus_id
-            // 
-            this.cus_id.DataPropertyName = "cus_id";
-            this.cus_id.FillWeight = 150F;
-            this.cus_id.HeaderText = "客戶編號";
-            this.cus_id.MinimumWidth = 110;
-            this.cus_id.Name = "cus_id";
-            this.cus_id.ReadOnly = true;
-            // 
-            // cus_name
-            // 
-            this.cus_name.DataPropertyName = "cus_name";
-            this.cus_name.FillWeight = 200F;
-            this.cus_name.HeaderText = "客戶名稱";
-            this.cus_name.MinimumWidth = 170;
-            this.cus_name.Name = "cus_name";
-            this.cus_name.ReadOnly = true;
-            // 
-            // cus_contact
-            // 
-            this.cus_contact.DataPropertyName = "cus_contact";
-            this.cus_contact.FillWeight = 150F;
-            this.cus_contact.HeaderText = "聯絡人";
-            this.cus_contact.MinimumWidth = 125;
-            this.cus_contact.Name = "cus_contact";
-            this.cus_contact.ReadOnly = true;
-            // 
-            // cus_tel
-            // 
-            this.cus_tel.DataPropertyName = "cus_tel";
-            this.cus_tel.FillWeight = 200F;
-            this.cus_tel.HeaderText = "電話";
-            this.cus_tel.MinimumWidth = 150;
-            this.cus_tel.Name = "cus_tel";
-            this.cus_tel.ReadOnly = true;
-            // 
-            // cus_yw
-            // 
-            this.cus_yw.DataPropertyName = "cus_yw";
-            this.cus_yw.FillWeight = 120F;
-            this.cus_yw.HeaderText = "業務";
-            this.cus_yw.MinimumWidth = 100;
-            this.cus_yw.Name = "cus_yw";
-            this.cus_yw.ReadOnly = true;
-            // 
             // frmCustomer_Inq_Tel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -199,6 +199,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCustomer_Inq_Tel";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "按電話選擇客戶";
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();

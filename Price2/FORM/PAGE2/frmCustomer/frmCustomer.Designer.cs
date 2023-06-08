@@ -454,10 +454,11 @@
             this.btnInq_Country.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInq_Country.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnInq_Country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_Country.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq_Country.Location = new System.Drawing.Point(208, 384);
             this.btnInq_Country.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_Country.Name = "btnInq_Country";
-            this.btnInq_Country.Size = new System.Drawing.Size(29, 24);
+            this.btnInq_Country.Size = new System.Drawing.Size(30, 24);
             this.btnInq_Country.TabIndex = 63;
             this.btnInq_Country.Text = "...";
             this.btnInq_Country.UseVisualStyleBackColor = false;
@@ -533,10 +534,11 @@
             this.btnInq_Tel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInq_Tel.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnInq_Tel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_Tel.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq_Tel.Location = new System.Drawing.Point(483, 80);
             this.btnInq_Tel.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_Tel.Name = "btnInq_Tel";
-            this.btnInq_Tel.Size = new System.Drawing.Size(29, 24);
+            this.btnInq_Tel.Size = new System.Drawing.Size(30, 24);
             this.btnInq_Tel.TabIndex = 59;
             this.btnInq_Tel.Text = "...";
             this.btnInq_Tel.UseVisualStyleBackColor = false;
@@ -645,6 +647,7 @@
             this.txtFax1.Name = "txtFax1";
             this.txtFax1.Size = new System.Drawing.Size(376, 27);
             this.txtFax1.TabIndex = 45;
+            this.txtFax1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFax1_KeyDown);
             // 
             // label9
             // 
@@ -665,16 +668,18 @@
             this.txtTel2.Name = "txtTel2";
             this.txtTel2.Size = new System.Drawing.Size(376, 27);
             this.txtTel2.TabIndex = 43;
+            this.txtTel2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTel2_KeyDown);
             // 
             // btnInq_Customer
             // 
             this.btnInq_Customer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInq_Customer.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnInq_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_Customer.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq_Customer.Location = new System.Drawing.Point(244, 17);
             this.btnInq_Customer.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_Customer.Name = "btnInq_Customer";
-            this.btnInq_Customer.Size = new System.Drawing.Size(29, 24);
+            this.btnInq_Customer.Size = new System.Drawing.Size(30, 24);
             this.btnInq_Customer.TabIndex = 42;
             this.btnInq_Customer.Text = "...";
             this.btnInq_Customer.UseVisualStyleBackColor = false;
@@ -699,6 +704,7 @@
             this.txtShortName.Name = "txtShortName";
             this.txtShortName.Size = new System.Drawing.Size(136, 27);
             this.txtShortName.TabIndex = 38;
+            this.txtShortName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtShortName_KeyDown);
             // 
             // label15
             // 
@@ -716,10 +722,11 @@
             this.btnInq_ShortName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInq_ShortName.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnInq_ShortName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq_ShortName.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq_ShortName.Location = new System.Drawing.Point(483, 16);
             this.btnInq_ShortName.Margin = new System.Windows.Forms.Padding(0);
             this.btnInq_ShortName.Name = "btnInq_ShortName";
-            this.btnInq_ShortName.Size = new System.Drawing.Size(29, 24);
+            this.btnInq_ShortName.Size = new System.Drawing.Size(30, 24);
             this.btnInq_ShortName.TabIndex = 36;
             this.btnInq_ShortName.Text = "...";
             this.btnInq_ShortName.UseVisualStyleBackColor = false;
@@ -781,6 +788,7 @@
             this.txtTel1.Name = "txtTel1";
             this.txtTel1.Size = new System.Drawing.Size(376, 27);
             this.txtTel1.TabIndex = 9;
+            this.txtTel1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTel1_KeyDown);
             // 
             // label10
             // 
@@ -823,6 +831,7 @@
             this.txtDigiwinID.Name = "txtDigiwinID";
             this.txtDigiwinID.Size = new System.Drawing.Size(137, 27);
             this.txtDigiwinID.TabIndex = 3;
+            this.txtDigiwinID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDigiwinID_KeyDown);
             // 
             // label4
             // 

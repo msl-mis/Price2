@@ -66,7 +66,7 @@
             this.groupBox.Controls.Add(this.dgvData);
             this.groupBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
             this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
@@ -250,11 +250,12 @@
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.AllowUserToOrderColumns = true;
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -272,7 +273,7 @@
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -289,32 +290,29 @@
             // 材料名
             // 
             this.材料名.DataPropertyName = "材料名";
-            this.材料名.FillWeight = 89.24592F;
+            this.材料名.FillWeight = 400F;
             this.材料名.HeaderText = "材料名";
-            this.材料名.MinimumWidth = 6;
+            this.材料名.MinimumWidth = 250;
             this.材料名.Name = "材料名";
             this.材料名.ReadOnly = true;
-            this.材料名.Width = 300;
             // 
             // 品號
             // 
             this.品號.DataPropertyName = "品號";
-            this.品號.FillWeight = 200F;
+            this.品號.FillWeight = 300F;
             this.品號.HeaderText = "品號";
-            this.品號.MinimumWidth = 6;
+            this.品號.MinimumWidth = 150;
             this.品號.Name = "品號";
             this.品號.ReadOnly = true;
-            this.品號.Width = 150;
             // 
             // 參照法
             // 
             this.參照法.DataPropertyName = "參照法";
-            this.參照法.FillWeight = 0.09294103F;
+            this.參照法.FillWeight = 500F;
             this.參照法.HeaderText = "參照法";
-            this.參照法.MinimumWidth = 6;
+            this.參照法.MinimumWidth = 250;
             this.參照法.Name = "參照法";
             this.參照法.ReadOnly = true;
-            this.參照法.Width = 400;
             // 
             // frmProduct_Inq_No2
             // 

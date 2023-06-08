@@ -26,6 +26,7 @@ namespace Price2
         private void btnInq_Click(object sender, EventArgs e)   //搜尋
         {
             //搜尋
+            lblCount.Text = "";
             string strSQL = "";
             DataTable dt;
             strSQL = $@"select   cus_name,
@@ -48,6 +49,7 @@ namespace Price2
             if (dt.Rows.Count > 0)
             {
                 dgvData.DataSource = dt;
+                lblCount.Text = "筆數:"+ dt.Rows.Count.ToString();
             }
         }
 

@@ -36,9 +36,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblA3 = new System.Windows.Forms.Label();
@@ -62,12 +64,12 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvCount = new System.Windows.Forms.DataGridView();
-            this.年份 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.安規費用 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.安規數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label22 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
+            this.年份 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.安規費用 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.安規數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,7 +91,7 @@
             this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
             this.groupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox.Size = new System.Drawing.Size(861, 318);
+            this.groupBox.Size = new System.Drawing.Size(837, 305);
             this.groupBox.TabIndex = 9;
             this.groupBox.TabStop = false;
             // 
@@ -106,7 +108,7 @@
             this.groupBox3.Controls.Add(this.btnInq);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(5, 11);
+            this.groupBox3.Location = new System.Drawing.Point(-1, 1);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -162,7 +164,7 @@
             // dtpDate
             // 
             this.dtpDate.CustomFormat = "yyyy";
-            this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDate.Location = new System.Drawing.Point(112, 26);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(2);
@@ -189,11 +191,10 @@
             this.dgvFees.AllowUserToOrderColumns = true;
             this.dgvFees.AllowUserToResizeColumns = false;
             this.dgvFees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvFees.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -320,7 +321,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightGreen;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox2.Controls.Add(this.txtPurprice);
             this.groupBox2.Controls.Add(this.cboMaterial);
             this.groupBox2.Controls.Add(this.label13);
@@ -329,12 +330,12 @@
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Font = new System.Drawing.Font("新細明體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox2.Location = new System.Drawing.Point(470, 11);
+            this.groupBox2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox2.Location = new System.Drawing.Point(461, 1);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(387, 307);
+            this.groupBox2.Size = new System.Drawing.Size(386, 307);
             this.groupBox2.TabIndex = 129;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "安規費用分攤計算";
@@ -406,11 +407,10 @@
             this.dgvCount.AllowUserToDeleteRows = false;
             this.dgvCount.AllowUserToOrderColumns = true;
             this.dgvCount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCount.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCount.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("新細明體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -421,58 +421,34 @@
             this.年份,
             this.安規費用,
             this.安規數量});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCount.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCount.EnableHeadersVisualStyles = false;
             this.dgvCount.Location = new System.Drawing.Point(0, 0);
             this.dgvCount.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCount.Name = "dgvCount";
             this.dgvCount.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("新細明體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCount.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("新細明體", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCount.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCount.RowHeadersVisible = false;
             this.dgvCount.RowHeadersWidth = 25;
             this.dgvCount.RowTemplate.Height = 21;
             this.dgvCount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCount.Size = new System.Drawing.Size(323, 157);
             this.dgvCount.TabIndex = 159;
-            // 
-            // 年份
-            // 
-            this.年份.DataPropertyName = "年份";
-            this.年份.HeaderText = "年份";
-            this.年份.MinimumWidth = 80;
-            this.年份.Name = "年份";
-            this.年份.ReadOnly = true;
-            // 
-            // 安規費用
-            // 
-            this.安規費用.DataPropertyName = "安規費用";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "##,##0.##";
-            this.安規費用.DefaultCellStyle = dataGridViewCellStyle9;
-            this.安規費用.FillWeight = 150F;
-            this.安規費用.HeaderText = "安規費用";
-            this.安規費用.MinimumWidth = 120;
-            this.安規費用.Name = "安規費用";
-            this.安規費用.ReadOnly = true;
-            // 
-            // 安規數量
-            // 
-            this.安規數量.DataPropertyName = "安規數量";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "##,##0.##";
-            this.安規數量.DefaultCellStyle = dataGridViewCellStyle10;
-            this.安規數量.FillWeight = 150F;
-            this.安規數量.HeaderText = "安規數量";
-            this.安規數量.MinimumWidth = 120;
-            this.安規數量.Name = "安規數量";
-            this.安規數量.ReadOnly = true;
             // 
             // label22
             // 
@@ -510,18 +486,52 @@
             this.label21.Text = "材料名";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // 年份
+            // 
+            this.年份.DataPropertyName = "年份";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.年份.DefaultCellStyle = dataGridViewCellStyle9;
+            this.年份.HeaderText = "年份";
+            this.年份.MinimumWidth = 80;
+            this.年份.Name = "年份";
+            this.年份.ReadOnly = true;
+            // 
+            // 安規費用
+            // 
+            this.安規費用.DataPropertyName = "安規費用";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "##,##0.##";
+            this.安規費用.DefaultCellStyle = dataGridViewCellStyle10;
+            this.安規費用.FillWeight = 150F;
+            this.安規費用.HeaderText = "安規費用";
+            this.安規費用.MinimumWidth = 120;
+            this.安規費用.Name = "安規費用";
+            this.安規費用.ReadOnly = true;
+            // 
+            // 安規數量
+            // 
+            this.安規數量.DataPropertyName = "安規數量";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle11.Format = "##,##0.##";
+            this.安規數量.DefaultCellStyle = dataGridViewCellStyle11;
+            this.安規數量.FillWeight = 150F;
+            this.安規數量.HeaderText = "安規數量";
+            this.安規數量.MinimumWidth = 120;
+            this.安規數量.Name = "安規數量";
+            this.安規數量.ReadOnly = true;
+            // 
             // frmSafetyFees_Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 318);
+            this.ClientSize = new System.Drawing.Size(837, 305);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
             this.Font = new System.Drawing.Font("新細明體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmSafetyFees_Report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "安龜費用分攤統計表";
+            this.Text = "安規費用分攤統計表";
             this.Activated += new System.EventHandler(this.frmSafetyFees_Report_Activated);
             this.Load += new System.EventHandler(this.frmSafetyFees_Report_Load);
             this.groupBox.ResumeLayout(false);

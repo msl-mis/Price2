@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.txtContact_CN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -194,6 +195,7 @@
             this.txtName_CN.Name = "txtName_CN";
             this.txtName_CN.Size = new System.Drawing.Size(165, 27);
             this.txtName_CN.TabIndex = 72;
+            this.txtName_CN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_CN_KeyDown);
             // 
             // label5
             // 
@@ -225,6 +227,7 @@
             this.txtName_TW.Name = "txtName_TW";
             this.txtName_TW.Size = new System.Drawing.Size(165, 27);
             this.txtName_TW.TabIndex = 69;
+            this.txtName_TW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_TW_KeyDown);
             // 
             // cboItem
             // 
@@ -290,6 +293,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 27);
             this.txtName.TabIndex = 64;
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
             // label4
             // 
@@ -325,11 +329,12 @@
             this.dgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -347,6 +352,14 @@
             this.大陸電話,
             this.台灣聯絡人,
             this.大陸聯絡人});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(11, 109);
             this.dgvData.Margin = new System.Windows.Forms.Padding(2);
@@ -396,6 +409,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 27);
             this.txtID.TabIndex = 3;
+            this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtID_KeyDown);
             // 
             // btnClose
             // 
@@ -437,17 +451,15 @@
             this.廠號.MinimumWidth = 70;
             this.廠號.Name = "廠號";
             this.廠號.ReadOnly = true;
-            this.廠號.Width = 70;
             // 
             // 廠商
             // 
             this.廠商.DataPropertyName = "廠商";
-            this.廠商.FillWeight = 120F;
+            this.廠商.FillWeight = 150F;
             this.廠商.HeaderText = "廠商";
-            this.廠商.MinimumWidth = 120;
+            this.廠商.MinimumWidth = 100;
             this.廠商.Name = "廠商";
             this.廠商.ReadOnly = true;
-            this.廠商.Width = 120;
             // 
             // 項目
             // 
@@ -457,7 +469,6 @@
             this.項目.MinimumWidth = 130;
             this.項目.Name = "項目";
             this.項目.ReadOnly = true;
-            this.項目.Width = 130;
             // 
             // 台灣名稱
             // 
@@ -467,7 +478,6 @@
             this.台灣名稱.MinimumWidth = 180;
             this.台灣名稱.Name = "台灣名稱";
             this.台灣名稱.ReadOnly = true;
-            this.台灣名稱.Width = 180;
             // 
             // 大陸名稱
             // 
@@ -477,7 +487,6 @@
             this.大陸名稱.MinimumWidth = 180;
             this.大陸名稱.Name = "大陸名稱";
             this.大陸名稱.ReadOnly = true;
-            this.大陸名稱.Width = 180;
             // 
             // 台灣電話
             // 
@@ -487,7 +496,6 @@
             this.台灣電話.MinimumWidth = 130;
             this.台灣電話.Name = "台灣電話";
             this.台灣電話.ReadOnly = true;
-            this.台灣電話.Width = 130;
             // 
             // 大陸電話
             // 
@@ -497,7 +505,6 @@
             this.大陸電話.MinimumWidth = 130;
             this.大陸電話.Name = "大陸電話";
             this.大陸電話.ReadOnly = true;
-            this.大陸電話.Width = 130;
             // 
             // 台灣聯絡人
             // 
@@ -507,17 +514,15 @@
             this.台灣聯絡人.MinimumWidth = 120;
             this.台灣聯絡人.Name = "台灣聯絡人";
             this.台灣聯絡人.ReadOnly = true;
-            this.台灣聯絡人.Width = 120;
             // 
             // 大陸聯絡人
             // 
             this.大陸聯絡人.DataPropertyName = "大陸聯絡人";
-            this.大陸聯絡人.FillWeight = 150F;
+            this.大陸聯絡人.FillWeight = 2000F;
             this.大陸聯絡人.HeaderText = "大陸聯絡人";
-            this.大陸聯絡人.MinimumWidth = 150;
+            this.大陸聯絡人.MinimumWidth = 120;
             this.大陸聯絡人.Name = "大陸聯絡人";
             this.大陸聯絡人.ReadOnly = true;
-            this.大陸聯絡人.Width = 150;
             // 
             // frmVendor_Inq
             // 
