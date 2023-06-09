@@ -4230,6 +4230,7 @@ namespace Price2
                 dgvData.Rows[intRow].Cells["pri_tbprice"].Value = dgvLevel_4.Rows[dgvLevel_4.CurrentCell.RowIndex].Cells["ap3_tbprice"].Value.ToString();
                 dgvData.Rows[intRow].Cells["pri_perqty"].Value = (Convert.ToDouble(txtQty.Text) * tper).ToString("0.######");
                 dgvData.Rows[intRow].Cells["pri_firstname"].Value = dgvLevel_1.Rows[dgvLevel_1.CurrentCell.RowIndex].Cells["ap1_assy"].Value.ToString();
+                dgvData.Rows[intRow].Cells["ptx_chk"].Value = "";
                 //dgvData.Rows[intRow].Cells["pri_cost"].Value = dgvLevel_4.Rows[dgvLevel_4.CurrentCell.RowIndex].Cells["ap3_tbprice"].Value.ToString();
                 //檢查材料是否有越南運費計重註記
                 strSQL = $@"select asp_line,isnull(asp_name,'') 'asp_name',asp_vnweight,asp_vnpcs,asp_um from asp where asp_id='{dgvData.Rows[intRow].Cells["pri_part"].Value.ToString()}'";
@@ -4270,7 +4271,10 @@ namespace Price2
                 {
                     dgvData.Rows[intRow].Cells["pri_perqtycal"].Value = strQTY;
                 }
-
+                else
+                {
+                    dgvData.Rows[intRow].Cells["pri_perqtycal"].Value = "";
+                }
                 //檢查插入材料是否為不良率,若是則要把所有材料加總再乘以不良率,為不良率的金額
                 if (dgvData.Rows[intRow].Cells["pri_part"].Value.ToString().Substring(0, 3) == "不良率")
                 {
@@ -4350,7 +4354,7 @@ namespace Price2
                 //檢查報價單身的價格加總
                 checkPrice();
 
-                string strUM;
+                string strUM = "";
                 if (radioFeet.Checked)
                 {
                     strUM = "Feet"; //Feet 呎
@@ -4368,6 +4372,8 @@ namespace Price2
                 {
                     strUM = "Feet"; //Feet 呎
                 }
+
+                dgvData.Rows[intRow].Cells["pri_um"].Value = strUM;
 
                 if (chkMaterial.Checked == false)
                 {
