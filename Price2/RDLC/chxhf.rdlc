@@ -277,6 +277,7 @@
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -311,9 +312,9 @@
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>新細明體</FontFamily>
-                        <FontSize>16pt</FontSize>
+                        <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <TextDecoration>Underline</TextDecoration>
+                        <TextDecoration>None</TextDecoration>
                       </Style>
                     </TextRun>
                   </TextRuns>

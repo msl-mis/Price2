@@ -183,7 +183,9 @@
                             <TextRuns>
                               <TextRun>
                                 <Value>=Code.GroupCount(Fields!na36_assy.Value)</Value>
-                                <Style />
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                </Style>
                               </TextRun>
                             </TextRuns>
                             <Style />
@@ -277,6 +279,7 @@
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -311,9 +314,9 @@
                       <Style>
                         <FontStyle>Normal</FontStyle>
                         <FontFamily>Times New Roman</FontFamily>
-                        <FontSize>16pt</FontSize>
+                        <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <TextDecoration>Underline</TextDecoration>
+                        <TextDecoration>None</TextDecoration>
                       </Style>
                     </TextRun>
                   </TextRuns>

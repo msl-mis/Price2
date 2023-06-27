@@ -67,7 +67,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!na31_pntxh.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -96,7 +98,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>="______"</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -127,7 +131,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>="______"</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Times New Roman</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
@@ -183,7 +189,9 @@
                             <TextRuns>
                               <TextRun>
                                 <Value>=Code.GroupCount(Fields!na31_assy.Value)</Value>
-                                <Style />
+                                <Style>
+                                  <FontFamily>Times New Roman</FontFamily>
+                                </Style>
                               </TextRun>
                             </TextRuns>
                             <Style />
@@ -215,7 +223,9 @@
                                 <TextRuns>
                                   <TextRun>
                                     <Value>=Fields!na31_assy.Value</Value>
-                                    <Style />
+                                    <Style>
+                                      <FontFamily>Times New Roman</FontFamily>
+                                    </Style>
                                   </TextRun>
                                 </TextRuns>
                                 <Style />
@@ -276,6 +286,7 @@
                       <Value>MSL冠志電子廠</Value>
                       <Style>
                         <FontFamily>Times New Roman</FontFamily>
+                        <FontSize>11pt</FontSize>
                         <FontWeight>Normal</FontWeight>
                       </Style>
                     </TextRun>
@@ -309,9 +320,9 @@
                       <Value>包  裝  計  劃</Value>
                       <Style>
                         <FontFamily>新細明體</FontFamily>
-                        <FontSize>16pt</FontSize>
+                        <FontSize>18pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <TextDecoration>Underline</TextDecoration>
+                        <TextDecoration>None</TextDecoration>
                       </Style>
                     </TextRun>
                   </TextRuns>

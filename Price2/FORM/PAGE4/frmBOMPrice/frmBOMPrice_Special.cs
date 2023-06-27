@@ -343,7 +343,7 @@ namespace Price2
                     ptx_kd = 1;
                     ptx_type = "2";
                 }
-                strSQL = $@"select distinct pri_assy from pri where pri_customerid={rstrID}";
+                strSQL = $@"select distinct pri_assy from pri where pri_customerid='{rstrID}'";
                 dt = clsDB.sql_select_dt(strSQL);
                 string ptx_assy = "";
                 if (dt.Rows.Count > 0)
@@ -406,12 +406,12 @@ namespace Price2
                                        ptx_vendorid = '{txtVendorID.Text}',
                                        ptx_adddate = Getdate(),
                                        ptx_tbdjcal = '{lblTbPrice.Text}',
-                                       ptx_venshortname = '{txtVendorName}',
+                                       ptx_venshortname = '{txtVendorName.Text}',
                                        ptx_type = '{ptx_type}',
                                        ptx_perqtycal = '{strCal_Qty}'
                                 where  ptx_name = '{txtID.Text}'
                                        and ptx_customerid = '{rstrID}'
-                                       and Isnull(ptx_assy, '') = Isnull({ptx_assy}, '') ";
+                                       and Isnull(ptx_assy, '') = '{ptx_assy}' ";
                     clsDB.Execute(strSQL);
                 }
                 //需要新增到ptb嗎???????????????????????
@@ -544,14 +544,18 @@ namespace Price2
         {
             try
             {
-                string strSQL = "";
-                DataTable dt = new DataTable();
-                strSQL = $@"select isnull(ven_id,'') '廠商' from ven where ven_shortname = '{txtVendorName.Text}'";
-                dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
+               if(txtVendorName.Text.Trim().Length > 0)
                 {
-                    txtVendorID.Text = dt.Rows[0]["廠商"].ToString();
+                    string strSQL = "";
+                    DataTable dt = new DataTable();
+                    strSQL = $@"select isnull(ven_id,'') '廠商' from ven where ven_shortname = '{txtVendorName.Text}'";
+                    dt = clsDB.sql_select_dt(strSQL);
+                    if (dt.Rows.Count > 0)
+                    {
+                        txtVendorID.Text = dt.Rows[0]["廠商"].ToString();
+                    }
                 }
+                
             }
             catch (Exception ex)
             {
