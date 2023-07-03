@@ -355,7 +355,7 @@ namespace Price2
                 //存回ptx
                 strSQL = $@"select ptx_name from ptx where ptx_name='{txtID.Text}' and ptx_customerid = '{rstrID}'";
                 dt = clsDB.sql_select_dt(strSQL);
-                if (dt.Rows.Count > 0)
+                if (dt.Rows.Count == 0)
                 {
                     strSQL = $@"insert ptx
                                        (ptx_name,
