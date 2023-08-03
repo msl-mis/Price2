@@ -4011,22 +4011,24 @@ namespace Price2
                                              -100,
                                              {_pricost},
                                              0,
-                                             {_customerid},
+                                             '{_customerid}',
                                              '{_length}',
                                              0,
                                              '{_username}',
-                                             '{_newcost}' ";
+                                             '{_newcost}') ";
                     clsDB.Execute(strSQL);
-                }
 
-                //處理pri_part組合
-                strSQL = $@"update pri
+                    //處理pri_part組合20230803
+                    strSQL = $@"update pri
                             set    pri_parttotal = '{_parttotal}',
                                    pri_adddate = Format(Getdate(), 'yyyy/MM/dd')
                             where  pri_assy = '{_assy}'
                                    and pri_customerid = '{_customerid}'
                                    and pri_newcostchk = '{_newcost}' ";
-                clsDB.Execute(strSQL);
+                    clsDB.Execute(strSQL);
+                }
+
+                
 
                 //處理參照法odi
                 strSQL = $@"update odi
@@ -4367,17 +4369,20 @@ namespace Price2
                 {
                     strUM = "Inch"; //Inch 英吋
                 }
-                
-                if (dgvLevel_1.Rows[dgvLevel_1.CurrentCell.RowIndex].Cells["ap1_assy"].Value.ToString() != "2.線材")
+
+                //20230803
+                if (dgvLevel_1.Rows[dgvLevel_1.CurrentCell.RowIndex].Cells["ap1_assy"].Value.ToString() != "02.線材")
                 {
                     strUM = "Feet"; //Feet 呎
                 }
-
-                dgvData.Rows[intRow].Cells["pri_um"].Value = strUM;
-
                 if (chkMaterial.Checked == false)
                 {
+                    dgvData.Rows[intRow].Cells["pri_um"].Value = strUM;
                     radioFeet.Checked = true;
+                }
+                else
+                {
+                    dgvData.Rows[intRow].Cells["pri_um"].Value = cboUnit.Text;
                 }
 
                 txtQty.Text = "1";

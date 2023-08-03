@@ -1368,7 +1368,8 @@
             "G",
             "MM",
             "CM",
-            "PC"});
+            "PC",
+            "SET"});
             this.cboUnit.Location = new System.Drawing.Point(95, 140);
             this.cboUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboUnit.Name = "cboUnit";
