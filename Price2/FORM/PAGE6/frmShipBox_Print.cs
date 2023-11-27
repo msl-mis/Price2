@@ -295,6 +295,7 @@ namespace Price2
                                and ord_wg = 0
                                and odi_gp = 0
                                and odi_gc = 0
+                                and ord_qty<>'0'
                                and pri_fenlei <> '14 Fiber Cable'
                         order  by ord.ord_beginxx ";
             dt = clsDB.sql_select_dt(strSQL);
@@ -752,6 +753,11 @@ namespace Price2
             {
                 MessageBox.Show(this.Name + "-btnPlan_Click" + "\n" + ex.Message, "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtOrderID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

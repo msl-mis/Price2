@@ -105,6 +105,7 @@
             this.txtUSB_Fees.Size = new System.Drawing.Size(84, 25);
             this.txtUSB_Fees.TabIndex = 187;
             this.txtUSB_Fees.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSB_Fees.MouseLeave += new System.EventHandler(this.btnInq_Click);
             // 
             // label5
             // 

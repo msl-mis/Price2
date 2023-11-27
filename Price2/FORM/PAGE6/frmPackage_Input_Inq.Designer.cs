@@ -71,9 +71,9 @@
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("新細明體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox.Location = new System.Drawing.Point(0, 0);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox.Size = new System.Drawing.Size(843, 417);
             this.groupBox.TabIndex = 9;
             this.groupBox.TabStop = false;
@@ -84,7 +84,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClear.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClear.Location = new System.Drawing.Point(547, 22);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(50, 26);
             this.btnClear.TabIndex = 124;
@@ -111,7 +111,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnClose.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(656, 22);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(50, 26);
             this.btnClose.TabIndex = 99;
@@ -123,7 +123,7 @@
             // 
             this.txtCustomer.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCustomer.Location = new System.Drawing.Point(402, 22);
-            this.txtCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.Size = new System.Drawing.Size(62, 27);
             this.txtCustomer.TabIndex = 112;
@@ -145,7 +145,7 @@
             this.btnInq.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnInq.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnInq.Location = new System.Drawing.Point(492, 21);
-            this.btnInq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInq.Margin = new System.Windows.Forms.Padding(2);
             this.btnInq.Name = "btnInq";
             this.btnInq.Size = new System.Drawing.Size(50, 26);
             this.btnInq.TabIndex = 93;
@@ -170,7 +170,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnPrint.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPrint.Location = new System.Drawing.Point(602, 22);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(50, 26);
             this.btnPrint.TabIndex = 92;
@@ -182,7 +182,7 @@
             // 
             this.txtCustomerID.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtCustomerID.Location = new System.Drawing.Point(100, 22);
-            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomerID.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerID.Name = "txtCustomerID";
             this.txtCustomerID.Size = new System.Drawing.Size(226, 27);
             this.txtCustomerID.TabIndex = 111;
@@ -215,7 +215,7 @@
             this.儲存日期});
             this.dgvData.EnableHeadersVisualStyles = false;
             this.dgvData.Location = new System.Drawing.Point(31, 89);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -327,7 +327,7 @@
             this.ClientSize = new System.Drawing.Size(843, 417);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPackage_Input_Inq";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "產品號查詢";
